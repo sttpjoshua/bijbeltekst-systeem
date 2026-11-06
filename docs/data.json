@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-07T00:10",
+ "gegenereerd": "2026-11-06T23:38",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -154,6 +154,11 @@
    "t": "2026-11-06T23:48",
    "soort": "info",
    "tekst": "Overgestapt van Metricool naar direct posten via GitHub Actions"
+  },
+  {
+   "t": "2026-11-06T23:38",
+   "soort": "info",
+   "tekst": "Verbinding met Instagram werkt (@bibleverse_nl)"
   }
  ],
  "versen_totaal": 116
