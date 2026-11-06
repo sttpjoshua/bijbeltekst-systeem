@@ -114,12 +114,13 @@ def cmd_render(datum):
             print("NIET GERENDERD", p["id"], probleem); fouten += 1; continue
         p["handle"] = cfg.get("handle", "")
         ext = "mp4" if p["variabelen"]["formaat"] == "video" else "jpg"
-        rel = f"media/{datum[:7]}/{p['id']}.{ext}"
+        rel = f"docs/media/{datum[:7]}/{p['id']}.{ext}"
         os.makedirs(os.path.dirname(P(rel)), exist_ok=True)
         (maak_video if ext == "mp4" else maak_afbeelding)(p, P(rel))
         p["media"] = rel
         if cfg.get("github_repo"):
-            p["media_url"] = f"https://raw.githubusercontent.com/{cfg['github_repo']}/main/{rel}"
+            eig, naam = cfg["github_repo"].split("/")
+            p["media_url"] = f"https://{eig}.github.io/{naam}/{rel[len('docs/'):]}"
         p["status"] = "gerenderd"
         print("OK", p["id"], rel)
     bewaar("data/posts.json", posts)
@@ -260,10 +261,11 @@ def cmd_dashboard():
                 tot[k] = tot.get(k, 0) + (s.get(k) or 0)
         lijst.append({"id": p["id"], "datum": p["datum"], "ref": p["ref"], "tekst": p["tekst"], "hook": p["hook"],
                       "status": p["status"], "variabelen": p["variabelen"], "media": p.get("media"), "media_url": p.get("media_url"),
-                      "platformen": list(p.get("metricool", {}).keys()), "totaal": tot, "score": sc.get(p["id"], {})})
+                      "platformen": list(p.get("gepubliceerd", {}).keys()),
+                      "links": {k: v.get("url") for k, v in p.get("gepubliceerd", {}).items()}, "totaal": tot, "score": sc.get(p["id"], {})})
     rapporten = sorted(os.listdir(P("rapporten"))) if os.path.isdir(P("rapporten")) else []
     data = {"gegenereerd": dt.datetime.now().isoformat(timespec="minutes"), "repo": cfg.get("github_repo", ""),
-            "config": {k: cfg[k] for k in ("pauze", "kanaalnaam", "posts_per_dag", "verkenning", "review_modus", "platformen_actief")},
+            "config": {k: cfg.get(k) for k in ("pauze", "kanaalnaam", "posts_per_dag", "verkenning", "platformen_actief")},
             "strategie": strat, "posts": lijst,
             "leergeschiedenis": laad("data/leergeschiedenis.json", []),
             "laatste_rapport": laad(f"rapporten/{rapporten[-1]}") if rapporten else None,
@@ -306,10 +308,10 @@ def cmd_vers(thema, boek, h, v1, v2=None):
 def cmd_check():
     cfg = laad("config.json"); verzen = laad("data/verzen.json")
     ok = True
-    for k in ("metricool_blog_id", "github_repo", "handle"):
+    for k in ("github_repo", "handle"):
         if not cfg.get(k):
             print("ONTBREEKT in config:", k); ok = False
-    print(len(verzen), "versen;", "pauze:", cfg["pauze"], "; review:", cfg["review_modus"])
+    print(len(verzen), "versen;", "pauze:", cfg["pauze"])
     sys.exit(0 if ok else 1)
 
 if __name__ == "__main__":

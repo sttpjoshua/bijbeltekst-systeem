@@ -1,0 +1,54 @@
+name: Publiceren en meten
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"   # elk kwartier: posts online zetten
+    - cron: "17 4 * * *"     # dagelijks: statistieken
+    - cron: "41 3 * * 1"     # maandag: token verversen
+  workflow_dispatch:
+    inputs:
+      taak:
+        description: "posten, statistieken of token"
+        default: "posten"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bijbeltekst
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Taak bepalen
+        id: t
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then echo "taak=${{ inputs.taak }}" >> $GITHUB_OUTPUT
+          elif [ "${{ github.event.schedule }}" = "17 4 * * *" ]; then echo "taak=statistieken" >> $GITHUB_OUTPUT
+          elif [ "${{ github.event.schedule }}" = "41 3 * * 1" ]; then echo "taak=token" >> $GITHUB_OUTPUT
+          else echo "taak=posten" >> $GITHUB_OUTPUT; fi
+      - name: PyNaCl voor token-verversing
+        if: steps.t.outputs.taak == 'token'
+        run: pip install pynacl
+      - name: Uitvoeren
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: python3 src/publiceer.py ${{ steps.t.outputs.taak }}
+      - name: Wijzigingen opslaan
+        if: always()
+        run: |
+          git config user.name "bijbeltekst-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A data docs rapporten strategie.json 2>/dev/null || true
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Automatisch: ${{ steps.t.outputs.taak }}"
+          for i in 1 2 3; do git pull --rebase -X theirs origin main && git push && break; sleep 5; done

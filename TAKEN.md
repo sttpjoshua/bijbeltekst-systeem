@@ -4,7 +4,7 @@ Dit bestand is de handleiding voor Claude bij elke geplande run. Volg het letter
 
 ## Vaste regels (nooit overtreden)
 - Staat `pauze` op `true` in `config.json`: doe niets behalve `python3 src/systeem.py log "Gepauzeerd, niets gedaan"`, commit, push, stop.
-- Alleen posten op het Metricool-merk met `metricool_blog_id` uit `config.json`. Nooit op een ander merk (dat zijn klanten van STTP Media).
+- Nooit iets posten via Metricool of op accounts van STTP Media of klanten. Posten gebeurt alleen via GitHub Actions met de geheimen van de repo.
 - Nooit meer dan `max_posts_per_dag` posts per dag.
 - Verstekst altijd letterlijk uit `data/verzen.json` (Statenvertaling). Nooit een vers zelf typen of "verbeteren".
 - Geen lange streep (het teken U+2014) in captions of hooks.
@@ -28,38 +28,21 @@ Vul in `data/posts.json` deze velden in:
 Schrijf in het Nederlands, warm en eenvoudig, nooit prekerig. Elke hook anders dan die van de afgelopen 14 dagen (kijk in `data/posts.json`).
 
 ## Dagelijkse run
-1. `git pull`. Lees `config.json`. Pauze? Zie regels.
+Het online zetten zelf doet GitHub Actions (`.github/workflows/publiceren.yml`, elk kwartier) en het ophalen van statistieken ook (dagelijks). Deze run maakt alleen de posts van morgen klaar.
+1. `git pull --rebase`. Lees `config.json`. Pauze? Zie regels.
 2. Bereken MORGEN (Europe/Amsterdam). `python3 src/systeem.py kies --datum MORGEN`.
 3. Schrijf de teksten (zie hierboven) in `data/posts.json`.
-4. `python3 src/systeem.py render --datum MORGEN`. Bekijk minstens één gemaakt beeld met Read (bij video: haal een frame op 4 s met ffmpeg). Klopt er iets niet (tekst afgesneden, onleesbaar), verwijder de post uit `data/posts.json` en log het.
-5. `git add -A && git commit -m "Posts MORGEN" && git push`. Controleer daarna met `curl -sI <media_url>` dat elke media_url 200 geeft (wacht zo nodig even).
-6. Plan elke post in Metricool met `createScheduledPost` (blogId uit config):
-   - `publicationDate`: MORGEN + `variabelen.tijdslot`, tijdzone Europe/Amsterdam. Datum mag niet in het verleden liggen.
-   - `media`: [media_url]. `text`: caption + witregel + hashtags.
-   - `draft`: true als `review_modus` true is, anders false. `autoPublish`: true.
-   - Alleen de netwerken in `platformen_actief`, per netwerk de juiste data:
-     - instagram: `{"type": "REEL"}` bij video, `{"type": "POST"}` bij afbeelding.
-     - tiktok: `{"privacyOption": "PUBLIC_TO_EVERYONE"}` (afbeelding wordt een fotopost).
-     - youtube: alleen bij video: `{"title": "<ref>: <eerste woorden>", "type": "short", "privacy": "public", "madeForKids": false}`. Bij een afbeelding YouTube overslaan.
-     - facebook: `{"type": "REEL"}` bij video, `{"type": "POST"}` bij afbeelding.
-     - twitter: `{"tags": []}`; tekst maximaal 280 tekens (gebruik dan alleen hook + referentie + 2 hashtags).
-   - Na succes: `python3 src/systeem.py registreer POST_ID NETWERK METRICOOL_ID PLANNER_URL`.
-7. Statistieken ophalen (zie hieronder) voor posts van 1 dag geleden (moment `24u`) en 7 dagen geleden (moment `7d`).
-8. `python3 src/systeem.py dashboard`, log een regel als "2 posts gepland voor MORGEN (instagram)", commit, push.
-
-## Statistieken ophalen
-- Gebruik `getAnalyticsAvailableMetrics` (network instagram, connector posts en reels; tiktok connector posts; enz.) om de juiste metrics te vinden, en `getAnalyticsDataByMetrics` voor de periode.
-- Koppel elke gemeten post aan onze post via platform + publicatietijd (binnen 15 minuten van datum + tijdslot) en zo nodig de eerste woorden van de tekst.
-- Schrijf een bestand `stats_tmp.json`: lijst van `{post_id, platform, moment, views, reach, likes, comments, shares, saves, follows}` (onbekend = null), en draai `python3 src/systeem.py stats stats_tmp.json`. Verwijder daarna `stats_tmp.json`.
+4. `python3 src/systeem.py render --datum MORGEN`. Bekijk minstens één gemaakt beeld met Read (bij video: haal een frame op 4 s met ffmpeg). Klopt er iets niet (tekst afgesneden, onleesbaar), zet de status van die post op "afgekeurd" en log het.
+5. Kijk in `data/logboek.json` naar fouten van de afgelopen 24 uur (van GitHub Actions). Noem ze in je eindbericht.
+6. `python3 src/systeem.py dashboard`, log een regel als "1 post klaargezet voor MORGEN 20:30", dan `git add -A && git commit -m "Posts MORGEN" && git pull --rebase && git push`.
 
 ## Wekelijkse run (maandag)
-1. Doe stap 1 en 7 van de dagelijkse run (pull, statistieken).
+1. `git pull --rebase`.
 2. `python3 src/systeem.py leer`. Lees het nieuwste bestand in `rapporten/`.
 3. Schrijf 1 tot 3 conclusies in gewone taal in `strategie.json` > `inzichten` als `{"datum": "...", "tekst": "..."}`. Alleen conclusies met genoeg metingen (n van minstens 5). Zeg eerlijk als iets nog onzeker is.
 4. Kijk welke versen goed scoorden. Voeg 10 nieuwe versen toe die passen bij de best scorende thema's: `python3 src/systeem.py vers THEMA "EngelseBoeknaam" HOOFDSTUK VERS [TOTVERS]`. Controleer elke toegevoegde tekst: hij moet zelfstandig te begrijpen zijn.
 5. Uitbreiden, één stap per week, alleen als het logboek van de afgelopen 7 dagen geen fouten heeft:
-   - Week 1 klaar en `review_modus` true: zet `review_modus` op false.
-   - Daarna: verplaats per week één platform van `platformen_later` naar `platformen_actief`, in deze volgorde: tiktok, youtube, facebook, twitter. Alleen als dat netwerk in Metricool aan het merk gekoppeld is (check `getBrandSettings`); anders log dat het nog niet gekoppeld is.
-   - `posts_per_dag` mag naar 3 als de gemiddelde score van de laatste week niet daalt. Nooit hoger dan `max_posts_per_dag`.
+   - `posts_per_dag`: na de eerste foutloze week naar 2. Later mag het naar 3 als de gemiddelde score van de laatste week niet daalt. Nooit hoger dan `max_posts_per_dag`.
+   - Een nieuw platform zet je alleen aan als `src/publiceer.py` het ondersteunt en de geheimen ervoor bestaan. Anders log je dat het klaarstaat voor Joshua.
 6. Daalt het totale bereik twee weken op rij met meer dan 30%: zet `verkenning` op 0.3 en log een waarschuwing.
-7. `python3 src/systeem.py dashboard`, log een samenvatting, commit, push.
+7. `python3 src/systeem.py dashboard`, log een samenvatting, commit, `git pull --rebase`, push.

@@ -2,25 +2,22 @@
   "pauze": false,
   "kanaalnaam": "NOG INVULLEN",
   "handle": "",
-  "metricool_blog_id": "",
   "tijdzone": "Europe/Amsterdam",
   "github_repo": "sttpjoshua/bijbeltekst-systeem",
-  "posts_per_dag": 2,
+  "posts_per_dag": 1,
   "max_posts_per_dag": 3,
   "verkenning": 0.2,
-  "review_modus": true,
   "platformen_actief": [
     "instagram"
   ],
   "platformen_later": [
-    "tiktok",
-    "youtube",
     "facebook",
-    "twitter"
+    "youtube",
+    "tiktok"
   ],
   "vers_niet_herhalen_dagen": 60,
   "min_posts_voor_leren": 6,
   "max_gewicht_verschuiving_per_week": 0.15,
   "hashtags_max": 5,
-  "opmerkingen": "pauze=true zet alle nieuwe posts stil. review_modus=true zet posts als concept in Metricool zodat je ze eerst ziet."
+  "opmerkingen": "pauze=true zet alles stil, ook posts die al klaarstaan. Eerste week 1 post per dag; daarna verhoogt het systeem zelf naar 2."
 }

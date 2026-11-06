@@ -75,7 +75,7 @@ td{padding:8px 6px;border-bottom:1px solid var(--lijn);vertical-align:top}tr:hov
 <div id="tip"></div>
 <script>
 const NAMEN={palet:"Kleurpalet",lettertype:"Lettertype",layout:"Layout",achtergrond:"Achtergrond",thema:"Thema",hook_stijl:"Hook-stijl",hook_op_beeld:"Hook op beeld",formaat:"Formaat",tijdslot:"Tijdstip"};
-const STATUS={wacht_op_tekst:"Wacht op tekst",gerenderd:"Gemaakt",gepland:"Gepland",gepubliceerd:"Gepubliceerd",fout:"Fout"};
+const STATUS={wacht_op_tekst:"Wacht op tekst",gerenderd:"Klaar, gaat online",overgeslagen:"Overgeslagen",gepubliceerd:"Gepubliceerd",fout:"Fout"};
 const fmt=n=>n==null?"–":Number(n).toLocaleString("nl-NL");
 const tip=document.getElementById("tip");
 function toon(e,html){tip.innerHTML=html;tip.style.display="block";tip.style.left=Math.min(e.clientX+12,innerWidth-300)+"px";tip.style.top=(e.clientY+12)+"px"}
@@ -91,7 +91,7 @@ function bouw(){
   const repo=(D.repo||"");
   document.getElementById("status").innerHTML=
     `<span class="pil ${c.pauze?"slecht":"goed"}">${c.pauze?"⏸ Gepauzeerd":"● Actief"}</span>`+
-    `<span class="pil ${c.review_modus?"let":"goed"}">${c.review_modus?"Review-modus":"Automatisch posten"}</span>`+
+    (()=>{const v=D.posts.filter(x=>x.status==="gerenderd").sort((a,b)=>(a.datum+a.variabelen.tijdslot).localeCompare(b.datum+b.variabelen.tijdslot))[0];return `<span class="pil">${v?"Volgende: "+v.datum.slice(5)+" "+v.variabelen.tijdslot:"Geen post klaar"}</span>`})()+
     `<span class="pil">${c.posts_per_dag} per dag · ${c.platformen_actief.join(", ")}</span>`+
     (repo?`<a class="knop" href="https://github.com/${repo}/edit/main/config.json" target="_blank" title="Zet &quot;pauze&quot; op true en sla op">Noodstop</a>`:"");
 
@@ -142,7 +142,7 @@ function tabel(){
     const img=x.media_url&&x.media_url.endsWith(".jpg")?`<img class="thumb" loading="lazy" src="${x.media_url}">`:`<div class="thumb" style="display:grid;place-items:center;color:var(--ink3)">${v(x).formaat==="video"?"▶":""}</div>`;
     return `<tr data-tip="${(x.tekst||"").replace(/"/g,"&quot;")}${x.hook?"<br><br><i>"+x.hook.replace(/"/g,"&quot;")+"</i>":""}">
       <td>${img}</td><td style="white-space:nowrap">${x.datum}<div class="sub">${v(x).tijdslot}</div></td>
-      <td><b>${x.ref}</b><div class="sub">${v(x).thema.replace("_"," ")}</div></td>
+      <td><b>${x.ref}</b><div class="sub">${v(x).thema.replace("_"," ")}${Object.entries(x.links||{}).map(([k,u])=>u?` · <a href="${u}" target="_blank">${k}</a>`:"").join("")}</div></td>
       <td><span class="tag">${v(x).formaat}</span><span class="tag">${v(x).palet}</span><span class="tag">${v(x).lettertype}</span><span class="tag">${v(x).layout}</span><span class="tag">hook: ${v(x).hook_stijl}</span></td>
       <td>${STATUS[x.status]||x.status}</td>
       <td class="num">${fmt(waarde(x,"views"))}</td><td class="num">${fmt(x.totaal.likes)}</td><td class="num">${fmt(x.totaal.saves)}</td><td class="num"><b>${s}</b></td></tr>`}).join("");

@@ -1,12 +1,11 @@
 {
- "gegenereerd": "2026-11-06T23:33",
+ "gegenereerd": "2026-11-06T23:48",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
   "kanaalnaam": "NOG INVULLEN",
-  "posts_per_dag": 2,
+  "posts_per_dag": 1,
   "verkenning": 0.2,
-  "review_modus": true,
   "platformen_actief": [
    "instagram"
   ]
@@ -150,6 +149,11 @@
    "t": "2026-11-06T23:33",
    "soort": "info",
    "tekst": "Systeem geïnstalleerd, wacht op Metricool-merk"
+  },
+  {
+   "t": "2026-11-06T23:48",
+   "soort": "info",
+   "tekst": "Overgestapt van Metricool naar direct posten via GitHub Actions"
   }
  ],
  "versen_totaal": 116
