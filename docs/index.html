@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bijbeltekst-systeem · Dashboard</title>
+<style>
+:root{--bg:#f7f5f0;--kaart:#fff;--ink:#1d1b18;--ink2:#5c574f;--ink3:#8f897e;--lijn:#e7e2d8;--accent:#2f5d8a;--accent-zacht:#c9d6e3;--goed:#2e7d4f;--let:#b7791f;--slecht:#b23a3a}
+@media (prefers-color-scheme:dark){:root{--bg:#141310;--kaart:#1e1c18;--ink:#f1ede4;--ink2:#b9b2a5;--ink3:#857e72;--lijn:#2f2c26;--accent:#7fa9d4;--accent-zacht:#34465a;--goed:#5fbf86;--let:#e0a84a;--slecht:#e07070}}
+*{box-sizing:border-box}body{margin:0;font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;background:var(--bg);color:var(--ink)}
+main{max-width:1180px;margin:0 auto;padding:28px 20px 60px}
+h1{font-size:22px;margin:0}h2{font-size:15px;margin:0 0 12px;color:var(--ink2);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.kop{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;margin-bottom:20px}
+.sub{color:var(--ink3);font-size:13px}
+.status{display:flex;gap:8px;flex-wrap:wrap}.pil{padding:5px 11px;border-radius:999px;font-size:13px;font-weight:600;background:var(--kaart);border:1px solid var(--lijn)}
+.pil.goed{color:var(--goed)}.pil.let{color:var(--let)}.pil.slecht{color:var(--slecht)}
+.knop{display:inline-block;padding:7px 13px;border-radius:8px;background:var(--slecht);color:#fff;text-decoration:none;font-weight:600;font-size:13px}
+.grid{display:grid;gap:14px}.g4{grid-template-columns:repeat(4,1fr)}.g2{grid-template-columns:1fr 1fr}
+@media(max-width:800px){.g4{grid-template-columns:1fr 1fr}.g2{grid-template-columns:1fr}}
+.kaart{background:var(--kaart);border:1px solid var(--lijn);border-radius:12px;padding:16px 18px}
+.tegel .getal{font-size:28px;font-weight:700;font-variant-numeric:tabular-nums}.tegel .label{color:var(--ink2);font-size:13px}
+section{margin-top:22px}
+.dim{margin-bottom:16px}.dim h3{font-size:13px;margin:0 0 6px;color:var(--ink2);font-weight:600}
+.rij{display:grid;grid-template-columns:120px 1fr 96px;align-items:center;gap:8px;height:22px;font-size:13px;position:relative}
+.balk{position:relative;height:12px}.balk .b{position:absolute;top:0;height:12px;border-radius:0 4px 4px 0;background:var(--accent)}
+.balk .b.onder{background:var(--ink3);opacity:.5;border-radius:4px 0 0 4px}
+.balk .ref{position:absolute;top:-4px;bottom:-4px;width:1px;background:var(--ink2)}
+.waarde{white-space:nowrap;color:var(--ink2);font-variant-numeric:tabular-nums;text-align:right}
+.inzicht{padding:10px 0;border-bottom:1px solid var(--lijn)}.inzicht:last-child{border:0}
+table{width:100%;border-collapse:collapse;font-size:13px}th{text-align:left;color:var(--ink3);font-weight:600;padding:8px 6px;border-bottom:1px solid var(--lijn);cursor:pointer;white-space:nowrap}
+td{padding:8px 6px;border-bottom:1px solid var(--lijn);vertical-align:top}tr:hover td{background:var(--bg)}
+.thumb{width:44px;height:55px;object-fit:cover;border-radius:4px;background:var(--lijn);display:block}
+.tag{display:inline-block;font-size:11px;padding:1px 6px;border-radius:4px;background:var(--bg);border:1px solid var(--lijn);margin:1px;color:var(--ink2)}
+.num{text-align:right;font-variant-numeric:tabular-nums}
+.filters{display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap}select,input{font:inherit;font-size:13px;padding:5px 8px;border-radius:6px;border:1px solid var(--lijn);background:var(--kaart);color:var(--ink)}
+.log{font-size:13px;max-height:280px;overflow:auto}.log div{padding:4px 0;border-bottom:1px solid var(--lijn)}.log .t{color:var(--ink3);margin-right:8px;font-variant-numeric:tabular-nums}
+.log .fout{color:var(--slecht)}
+#tip{position:fixed;pointer-events:none;background:var(--ink);color:var(--bg);padding:6px 9px;border-radius:6px;font-size:12px;display:none;max-width:280px;z-index:9}
+.leeg{color:var(--ink3);font-size:13px}
+</style>
+</head>
+<body>
+<main>
+  <div class="kop">
+    <div><h1 id="titel">Bijbeltekst-systeem</h1><div class="sub" id="bijgewerkt">Laden…</div></div>
+    <div class="status" id="status"></div>
+  </div>
+
+  <div class="grid g4" id="tegels"></div>
+
+  <section class="grid g2">
+    <div class="kaart"><h2>Wat het systeem geleerd heeft</h2><div id="inzichten"></div></div>
+    <div class="kaart"><h2>Logboek</h2><div class="log" id="logboek"></div></div>
+  </section>
+
+  <section class="kaart">
+    <h2>Voorkeuren per variabele</h2>
+    <div class="sub" style="margin:-6px 0 14px">1,0 is neutraal. Hoger betekent dat het systeem deze optie vaker kiest. n = aantal gemeten posts.</div>
+    <div class="grid g2" id="gewichten"></div>
+  </section>
+
+  <section class="kaart">
+    <h2>Posts</h2>
+    <div class="filters">
+      <select id="fStatus"><option value="">Alle statussen</option></select>
+      <select id="fThema"><option value="">Alle thema's</option></select>
+      <input id="fZoek" placeholder="Zoek vers of tekst…">
+    </div>
+    <div style="overflow:auto"><table id="tabel"><thead><tr>
+      <th></th><th data-k="datum">Datum</th><th data-k="ref">Vers</th><th>Variabelen</th><th data-k="status">Status</th>
+      <th class="num" data-k="views">Weergaven</th><th class="num" data-k="likes">Likes</th><th class="num" data-k="saves">Opgeslagen</th><th class="num" data-k="score">Score</th>
+    </tr></thead><tbody></tbody></table></div>
+  </section>
+</main>
+<div id="tip"></div>
+<script>
+const NAMEN={palet:"Kleurpalet",lettertype:"Lettertype",layout:"Layout",achtergrond:"Achtergrond",thema:"Thema",hook_stijl:"Hook-stijl",hook_op_beeld:"Hook op beeld",formaat:"Formaat",tijdslot:"Tijdstip"};
+const STATUS={wacht_op_tekst:"Wacht op tekst",gerenderd:"Gemaakt",gepland:"Gepland",gepubliceerd:"Gepubliceerd",fout:"Fout"};
+const fmt=n=>n==null?"–":Number(n).toLocaleString("nl-NL");
+const tip=document.getElementById("tip");
+function toon(e,html){tip.innerHTML=html;tip.style.display="block";tip.style.left=Math.min(e.clientX+12,innerWidth-300)+"px";tip.style.top=(e.clientY+12)+"px"}
+function verberg(){tip.style.display="none"}
+let D,sorteer={k:"datum",r:-1};
+
+fetch("data.json?"+Date.now()).then(r=>r.json()).then(d=>{D=d;bouw()}).catch(()=>{document.getElementById("bijgewerkt").textContent="Nog geen data. De eerste dagelijkse taak maakt die aan."});
+
+function bouw(){
+  const c=D.config,s=D.strategie;
+  document.getElementById("titel").textContent=(c.kanaalnaam&&c.kanaalnaam!=="NOG INVULLEN"?c.kanaalnaam:"Bijbeltekst-systeem")+" · Dashboard";
+  document.getElementById("bijgewerkt").textContent="Bijgewerkt "+new Date(D.gegenereerd).toLocaleString("nl-NL")+" · strategie v"+s.versie+(s.bijgewerkt?" ("+s.bijgewerkt+")":"");
+  const repo=(D.repo||"");
+  document.getElementById("status").innerHTML=
+    `<span class="pil ${c.pauze?"slecht":"goed"}">${c.pauze?"⏸ Gepauzeerd":"● Actief"}</span>`+
+    `<span class="pil ${c.review_modus?"let":"goed"}">${c.review_modus?"Review-modus":"Automatisch posten"}</span>`+
+    `<span class="pil">${c.posts_per_dag} per dag · ${c.platformen_actief.join(", ")}</span>`+
+    (repo?`<a class="knop" href="https://github.com/${repo}/edit/main/config.json" target="_blank" title="Zet &quot;pauze&quot; op true en sla op">Noodstop</a>`:"");
+
+  const p=D.posts, pub=p.filter(x=>x.status==="gepubliceerd");
+  const som=k=>pub.reduce((a,x)=>a+(x.totaal[k]||0),0);
+  const week=p.filter(x=>x.datum>=new Date(Date.now()-7*864e5).toISOString().slice(0,10));
+  const tegels=[["Posts gepubliceerd",fmt(pub.length)],["Weergaven totaal",fmt(som("views")||som("reach"))],["Opgeslagen + gedeeld",fmt(som("saves")+som("shares"))],["Posts afgelopen 7 dagen",fmt(week.length)]];
+  document.getElementById("tegels").innerHTML=tegels.map(([l,g])=>`<div class="kaart tegel"><div class="getal">${g}</div><div class="label">${l}</div></div>`).join("");
+
+  // inzichten
+  const inz=(s.inzichten||[]).slice(-6).reverse();
+  document.getElementById("inzichten").innerHTML=inz.length?inz.map(i=>`<div class="inzicht"><div class="sub">${i.datum}</div>${i.tekst}</div>`).join(""):'<div class="leeg">Na de eerste week met statistieken verschijnen hier de conclusies.</div>';
+
+  // logboek
+  document.getElementById("logboek").innerHTML=(D.logboek||[]).slice().reverse().map(l=>`<div class="${l.soort==="fout"?"fout":""}"><span class="t">${l.t.replace("T"," ")}</span>${l.tekst}</div>`).join("")||'<div class="leeg">Nog niets gelogd.</div>';
+
+  // gewichten
+  const g=document.getElementById("gewichten");g.innerHTML="";
+  for(const dim of Object.keys(NAMEN)){
+    const w=s.gewichten[dim]||{},m=s.metingen[dim]||{};
+    const items=Object.entries(w).sort((a,b)=>b[1]-a[1]);
+    const max=2.5,pos=v=>Math.min(100,v/max*100);
+    const el=document.createElement("div");el.className="dim";
+    el.innerHTML=`<h3>${NAMEN[dim]}</h3>`+items.map(([k,v])=>{
+      const ref=pos(1),x=pos(v);
+      const bar=v>=1?`<div class="b" style="left:${ref}%;width:${x-ref}%"></div>`:`<div class="b onder" style="left:${x}%;width:${ref-x}%"></div>`;
+      return `<div class="rij" data-tip="<b>${k}</b><br>gewicht ${v.toFixed(2)}<br>${m[k]||0} gemeten posts"><span>${k==="true"?"ja":k==="false"?"nee":k.replace("_"," ")}</span><div class="balk"><div class="ref" style="left:${ref}%"></div>${bar}</div><span class="waarde">${v.toFixed(2)} <span style="color:var(--ink3)">n=${m[k]||0}</span></span></div>`}).join("");
+    g.appendChild(el);
+  }
+  g.querySelectorAll(".rij").forEach(r=>{r.onmousemove=e=>toon(e,r.dataset.tip);r.onmouseleave=verberg});
+
+  // filters
+  const fs=document.getElementById("fStatus"),ft=document.getElementById("fThema");
+  [...new Set(p.map(x=>x.status))].forEach(v=>fs.add(new Option(STATUS[v]||v,v)));
+  [...new Set(p.map(x=>x.variabelen.thema))].sort().forEach(v=>ft.add(new Option(v.replace("_"," "),v)));
+  [fs,ft,document.getElementById("fZoek")].forEach(e=>e.oninput=tabel);
+  document.querySelectorAll("th[data-k]").forEach(th=>th.onclick=()=>{sorteer={k:th.dataset.k,r:sorteer.k===th.dataset.k?-sorteer.r:-1};tabel()});
+  tabel();
+}
+function waarde(x,k){if(k==="score"){const v=Object.values(x.score);return v.length?v.reduce((a,b)=>a+b)/v.length:-1}if(["views","likes","saves"].includes(k))return (k==="views"?(x.totaal.views||x.totaal.reach):x.totaal[k])||0;return x[k]}
+function tabel(){
+  const fs=fStatus.value,ft=fThema.value,z=fZoek.value.toLowerCase();
+  let r=D.posts.filter(x=>(!fs||x.status===fs)&&(!ft||x.variabelen.thema===ft)&&(!z||(x.ref+x.tekst+x.hook).toLowerCase().includes(z)));
+  r.sort((a,b)=>{const A=waarde(a,sorteer.k),B=waarde(b,sorteer.k);return (A>B?1:A<B?-1:0)*sorteer.r});
+  const v=x=>x.variabelen;
+  document.querySelector("#tabel tbody").innerHTML=r.slice(0,200).map(x=>{
+    const sc=Object.values(x.score);const s=sc.length?(sc.reduce((a,b)=>a+b)/sc.length).toFixed(2):"–";
+    const img=x.media_url&&x.media_url.endsWith(".jpg")?`<img class="thumb" loading="lazy" src="${x.media_url}">`:`<div class="thumb" style="display:grid;place-items:center;color:var(--ink3)">${v(x).formaat==="video"?"▶":""}</div>`;
+    return `<tr data-tip="${(x.tekst||"").replace(/"/g,"&quot;")}${x.hook?"<br><br><i>"+x.hook.replace(/"/g,"&quot;")+"</i>":""}">
+      <td>${img}</td><td style="white-space:nowrap">${x.datum}<div class="sub">${v(x).tijdslot}</div></td>
+      <td><b>${x.ref}</b><div class="sub">${v(x).thema.replace("_"," ")}</div></td>
+      <td><span class="tag">${v(x).formaat}</span><span class="tag">${v(x).palet}</span><span class="tag">${v(x).lettertype}</span><span class="tag">${v(x).layout}</span><span class="tag">hook: ${v(x).hook_stijl}</span></td>
+      <td>${STATUS[x.status]||x.status}</td>
+      <td class="num">${fmt(waarde(x,"views"))}</td><td class="num">${fmt(x.totaal.likes)}</td><td class="num">${fmt(x.totaal.saves)}</td><td class="num"><b>${s}</b></td></tr>`}).join("");
+  document.querySelectorAll("#tabel tbody tr").forEach(tr=>{tr.onmousemove=e=>toon(e,tr.dataset.tip);tr.onmouseleave=verberg});
+}
+</script>
+</body>
+</html>
