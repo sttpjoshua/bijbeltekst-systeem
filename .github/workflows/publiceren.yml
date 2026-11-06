@@ -5,6 +5,8 @@ on:
     - cron: "*/15 * * * *"   # elk kwartier: posts online zetten
     - cron: "17 4 * * *"     # dagelijks: statistieken
     - cron: "41 3 * * 1"     # maandag: token verversen
+  push:
+    paths: ["controle.txt"]   # Claude kan via dit bestand een verbindingstest starten
   workflow_dispatch:
     inputs:
       taak:
@@ -30,7 +32,8 @@ jobs:
       - name: Taak bepalen
         id: t
         run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then echo "taak=${{ inputs.taak }}" >> $GITHUB_OUTPUT
+          if [ "${{ github.event_name }}" = "push" ]; then echo "taak=token" >> $GITHUB_OUTPUT
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then echo "taak=${{ inputs.taak }}" >> $GITHUB_OUTPUT
           elif [ "${{ github.event.schedule }}" = "17 4 * * *" ]; then echo "taak=statistieken" >> $GITHUB_OUTPUT
           elif [ "${{ github.event.schedule }}" = "41 3 * * 1" ]; then echo "taak=token" >> $GITHUB_OUTPUT
           else echo "taak=posten" >> $GITHUB_OUTPUT; fi
