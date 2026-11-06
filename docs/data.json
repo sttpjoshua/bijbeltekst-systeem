@@ -1,9 +1,9 @@
 {
- "gegenereerd": "2026-11-06T23:48",
+ "gegenereerd": "2026-11-07T00:10",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
-  "kanaalnaam": "NOG INVULLEN",
+  "kanaalnaam": "Bibleverse",
   "posts_per_dag": 1,
   "verkenning": 0.2,
   "platformen_actief": [
