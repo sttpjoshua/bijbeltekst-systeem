@@ -1,0 +1,156 @@
+{
+ "gegenereerd": "2026-11-06T23:33",
+ "repo": "sttpjoshua/bijbeltekst-systeem",
+ "config": {
+  "pauze": false,
+  "kanaalnaam": "NOG INVULLEN",
+  "posts_per_dag": 2,
+  "verkenning": 0.2,
+  "review_modus": true,
+  "platformen_actief": [
+   "instagram"
+  ]
+ },
+ "strategie": {
+  "versie": 1,
+  "bijgewerkt": null,
+  "gewichten": {
+   "palet": {
+    "nacht": 1.0,
+    "zand": 1.0,
+    "salie": 1.0,
+    "zonsopgang": 1.0,
+    "zwart_goud": 1.0,
+    "oceaan": 1.0,
+    "roze_avond": 1.0,
+    "wit": 1.0
+   },
+   "lettertype": {
+    "playfair": 1.0,
+    "cormorant": 1.0,
+    "dmserif": 1.0,
+    "lora": 1.0,
+    "montserrat": 1.0
+   },
+   "layout": {
+    "centraal": 1.0,
+    "citaat": 1.0,
+    "kader": 1.0
+   },
+   "achtergrond": {
+    "effen": 1.0,
+    "verloop": 1.0,
+    "licht": 1.0
+   },
+   "thema": {
+    "troost": 1.0,
+    "moed": 1.0,
+    "liefde": 1.0,
+    "hoop": 1.0,
+    "vertrouwen": 1.0,
+    "wijsheid": 1.0,
+    "humor_herkenbaar": 1.0,
+    "dankbaarheid": 1.0,
+    "identiteit": 1.0,
+    "vrede_rust": 1.0
+   },
+   "hook_stijl": {
+    "vraag": 1.0,
+    "herkenning": 1.0,
+    "uitdaging": 1.0,
+    "rustig": 1.0,
+    "geen": 1.0
+   },
+   "hook_op_beeld": {
+    "True": 1.0,
+    "False": 1.0
+   },
+   "formaat": {
+    "afbeelding": 1.0,
+    "video": 1.0
+   },
+   "tijdslot": {
+    "07:30": 1.0,
+    "12:15": 1.0,
+    "17:45": 1.0,
+    "20:30": 1.0,
+    "22:00": 1.0
+   }
+  },
+  "metingen": {
+   "palet": {
+    "nacht": 0,
+    "zand": 0,
+    "salie": 0,
+    "zonsopgang": 0,
+    "zwart_goud": 0,
+    "oceaan": 0,
+    "roze_avond": 0,
+    "wit": 0
+   },
+   "lettertype": {
+    "playfair": 0,
+    "cormorant": 0,
+    "dmserif": 0,
+    "lora": 0,
+    "montserrat": 0
+   },
+   "layout": {
+    "centraal": 0,
+    "citaat": 0,
+    "kader": 0
+   },
+   "achtergrond": {
+    "effen": 0,
+    "verloop": 0,
+    "licht": 0
+   },
+   "thema": {
+    "troost": 0,
+    "moed": 0,
+    "liefde": 0,
+    "hoop": 0,
+    "vertrouwen": 0,
+    "wijsheid": 0,
+    "humor_herkenbaar": 0,
+    "dankbaarheid": 0,
+    "identiteit": 0,
+    "vrede_rust": 0
+   },
+   "hook_stijl": {
+    "vraag": 0,
+    "herkenning": 0,
+    "uitdaging": 0,
+    "rustig": 0,
+    "geen": 0
+   },
+   "hook_op_beeld": {
+    "True": 0,
+    "False": 0
+   },
+   "formaat": {
+    "afbeelding": 0,
+    "video": 0
+   },
+   "tijdslot": {
+    "07:30": 0,
+    "12:15": 0,
+    "17:45": 0,
+    "20:30": 0,
+    "22:00": 0
+   }
+  },
+  "inzichten": []
+ },
+ "posts": [],
+ "leergeschiedenis": [],
+ "laatste_rapport": null,
+ "logboek": [
+  {
+   "t": "2026-11-06T23:33",
+   "soort": "info",
+   "tekst": "Systeem geïnstalleerd, wacht op Metricool-merk"
+  }
+ ],
+ "versen_totaal": 116
+}
