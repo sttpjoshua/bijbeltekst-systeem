@@ -9,7 +9,9 @@ Commando's (vanuit de projectmap):
   python3 src/systeem.py dashboard                     schrijft docs/data.json voor het dashboard
   python3 src/systeem.py check                         controleert of alles klopt
 """
-import json, os, sys, random, math, datetime as dt, argparse, statistics
+import json, os, sys, random, math, datetime as dt, argparse, statistics, time
+os.environ["TZ"] = "Europe/Amsterdam"  # alle datums en tijden in Nederlandse tijd
+time.tzset()
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "src"))

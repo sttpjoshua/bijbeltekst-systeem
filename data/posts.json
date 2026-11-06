@@ -1,0 +1,46 @@
+[
+ {
+  "id": "2026-11-07-1",
+  "datum": "2026-11-07",
+  "status": "gerenderd",
+  "vers_id": "Colossians-3-15-15",
+  "ref": "Kolossenzen 3:15",
+  "tekst": "En de vrede Gods heerse in uw harten, tot welken gij ook geroepen zijt in een lichaam; en weest dankbaar.",
+  "variabelen": {
+   "palet": "roze_avond",
+   "lettertype": "montserrat",
+   "layout": "centraal",
+   "achtergrond": "licht",
+   "thema": "dankbaarheid",
+   "hook_stijl": "herkenning",
+   "hook_op_beeld": false,
+   "formaat": "video",
+   "tijdslot": "12:15"
+  },
+  "keuzebron": {
+   "palet": "verkenning",
+   "lettertype": "verkenning",
+   "layout": "strategie",
+   "achtergrond": "strategie",
+   "thema": "strategie",
+   "hook_stijl": "strategie",
+   "hook_op_beeld": "strategie",
+   "formaat": "strategie",
+   "tijdslot": "strategie"
+  },
+  "hook": "Voor wie deze week vooral heeft gerend en weinig heeft stilgestaan.",
+  "beeld_hook": "",
+  "caption": "Voor wie deze week vooral heeft gerend en weinig heeft stilgestaan.\n\n\"En de vrede Gods heerse in uw harten, tot welken gij ook geroepen zijt in een lichaam; en weest dankbaar.\"\nKolossenzen 3:15\n\nLaat vandaag de vrede van God het laatste woord hebben, niet je to-do-lijst. En noem eens drie dingen waar je dankbaar voor bent.",
+  "hashtags": [
+   "#bijbeltekst",
+   "#dankbaarheid",
+   "#vrede",
+   "#geloof"
+  ],
+  "media": "docs/media/2026-11/2026-11-07-1.mp4",
+  "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-07-1.mp4",
+  "metricool": {},
+  "stats": {},
+  "handle": "@bibleverse_nl"
+ }
+]

@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-06T23:38",
+ "gegenereerd": "2026-11-07T00:40",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -141,7 +141,33 @@
   },
   "inzichten": []
  },
- "posts": [],
+ "posts": [
+  {
+   "id": "2026-11-07-1",
+   "datum": "2026-11-07",
+   "ref": "Kolossenzen 3:15",
+   "tekst": "En de vrede Gods heerse in uw harten, tot welken gij ook geroepen zijt in een lichaam; en weest dankbaar.",
+   "hook": "Voor wie deze week vooral heeft gerend en weinig heeft stilgestaan.",
+   "status": "gerenderd",
+   "variabelen": {
+    "palet": "roze_avond",
+    "lettertype": "montserrat",
+    "layout": "centraal",
+    "achtergrond": "licht",
+    "thema": "dankbaarheid",
+    "hook_stijl": "herkenning",
+    "hook_op_beeld": false,
+    "formaat": "video",
+    "tijdslot": "12:15"
+   },
+   "media": "docs/media/2026-11/2026-11-07-1.mp4",
+   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-07-1.mp4",
+   "platformen": [],
+   "links": {},
+   "totaal": {},
+   "score": {}
+  }
+ ],
  "leergeschiedenis": [],
  "laatste_rapport": null,
  "logboek": [
@@ -159,6 +185,11 @@
    "t": "2026-11-06T23:38",
    "soort": "info",
    "tekst": "Verbinding met Instagram werkt (@bibleverse_nl)"
+  },
+  {
+   "t": "2026-11-07T00:40",
+   "soort": "info",
+   "tekst": "Eerste post klaargezet: 7 nov 12:15, Kolossenzen 3:15 (video)"
   }
  ],
  "versen_totaal": 116
