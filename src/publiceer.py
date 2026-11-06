@@ -15,7 +15,9 @@ from zoneinfo import ZoneInfo
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import systeem as S
 
-API = "https://graph.instagram.com/v23.0"
+API_IG = "https://graph.instagram.com/v23.0"   # tokens van "Instagram login" (beginnen met IG)
+API_FB = "https://graph.facebook.com/v23.0"    # tokens van "Unified/Facebook login" en system users (beginnen met EAA)
+API = API_IG
 TZ = ZoneInfo("Europe/Amsterdam")
 TE_LAAT = dt.timedelta(hours=3)  # een gemiste post later dan dit wordt overgeslagen
 
@@ -34,9 +36,11 @@ def http(method, url, params=None):
         raise RuntimeError(f"{e.code}: {body[:400]}")
 
 def env():
-    uid, tok = os.environ.get("IG_USER_ID"), os.environ.get("IG_TOKEN")
+    global API
+    uid, tok = os.environ.get("IG_USER_ID", "").strip(), os.environ.get("IG_TOKEN", "").strip()
     if not uid or not tok:
         raise SystemExit("IG_USER_ID of IG_TOKEN ontbreekt in de GitHub-secrets")
+    API = API_IG if tok.startswith("IG") else API_FB
     return uid, tok
 
 def caption(p):
@@ -164,6 +168,11 @@ def cmd_statistieken():
 def cmd_token():
     """Ververst het long-lived token (60 dagen geldig). Zonder GH_PAT alleen een waarschuwing."""
     uid, tok = env()
+    if API == API_FB:
+        # Facebook/system-user token: niet te verversen, wel controleren of het werkt
+        info = http("GET", f"{API}/{uid}", {"fields": "username", "access_token": tok})
+        S.cmd_log(f"Verbinding met Instagram werkt (@{info.get('username')})")
+        S.cmd_dashboard(); return
     r = http("GET", "https://graph.instagram.com/refresh_access_token", {"grant_type": "ig_refresh_token", "access_token": tok})
     dagen = int(r.get("expires_in", 0)) // 86400
     nieuw = r.get("access_token")
