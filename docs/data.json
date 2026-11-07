@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-07T23:38",
+ "gegenereerd": "2026-11-08T00:16",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -639,6 +639,26 @@
    "t": "2026-11-07T23:38",
    "soort": "info",
    "tekst": "Carrousels hebben nu één doorlopende achtergrond over de drie slides; bij een foto loopt die zacht over in een rustige, vervaagde versie."
+  },
+  {
+   "t": "2026-11-08T00:16",
+   "soort": "info",
+   "tekst": "Verbinding met Instagram werkt (@bibleverse_nl)"
+  },
+  {
+   "t": "2026-11-08T00:16",
+   "soort": "info",
+   "tekst": "Token heeft alle rechten, ook voor statistieken"
+  },
+  {
+   "t": "2026-11-08T00:16",
+   "soort": "info",
+   "tekst": "Verbinding met Facebook-pagina werkt (Bibleversenl)"
+  },
+  {
+   "t": "2026-11-08T00:16",
+   "soort": "info",
+   "tekst": "Statistieken lezen werkt"
   }
  ],
  "recente_fouten": [],
@@ -650,26 +670,32 @@
    "detail": "Kolossenzen 3:15 geplaatst"
   },
   "instagram_lezen": {
-   "ok": "2026-11-07T22:48",
+   "ok": "2026-11-08T00:16",
    "laatst_ok": true,
    "detail": "0 volgers"
   },
   "sleutel_instagram": {
    "verloopt": "nooit",
    "geldig": true,
-   "ok": "2026-11-07T22:48",
+   "ok": "2026-11-08T00:16",
    "laatst_ok": true
   },
   "sleutel_facebook": {
    "verloopt": "nooit",
    "geldig": true,
-   "ok": "2026-11-07T22:48",
+   "ok": "2026-11-08T00:16",
    "laatst_ok": true
   }
  },
  "groei": [
   {
    "datum": "2026-11-07",
+   "instagram": 0,
+   "ig_posts": 1,
+   "facebook": 0
+  },
+  {
+   "datum": "2026-11-08",
    "instagram": 0,
    "ig_posts": 1,
    "facebook": 0
@@ -752,7 +778,7 @@
  "snel_leren": {
   "start": "2026-11-07",
   "tot": "2026-11-14",
-  "dag": 1,
+  "dag": 2,
   "dagen": 7,
   "online": 1,
   "gemeten": 0
@@ -2074,6 +2100,181 @@
     "boekgroep": "strategie",
     "lengte": "verkenning",
     "bron": "verkenning",
+    "tijdslot": "strategie"
+   }
+  },
+  {
+   "datum": "2026-11-15",
+   "ref": "Efeze 3:12",
+   "tekst": "In Denwelken wij hebben de vrijmoedigheid, en den toegang met vertrouwen, door het geloof aan Hem.",
+   "vers_id": "Ephesians-3-12-12",
+   "variabelen": {
+    "huisstijl": "salie",
+    "thema": "vertrouwen",
+    "hook_stijl": "rustig",
+    "formaat": "carrousel",
+    "uitleg_op_beeld": true,
+    "achtergrondbron": "verloop",
+    "boekgroep": "brieven",
+    "lengte": "middel",
+    "bron": "ontdekking",
+    "tijdslot": "17:45",
+    "palet": "salie",
+    "lettertype": "cormorant",
+    "layout": "kader",
+    "achtergrond": "effen",
+    "hook_op_beeld": false
+   },
+   "keuzebron": {
+    "huisstijl": "strategie",
+    "thema": "verkenning",
+    "hook_stijl": "strategie",
+    "formaat": "strategie",
+    "uitleg_op_beeld": "strategie",
+    "achtergrondbron": "strategie",
+    "boekgroep": "strategie",
+    "lengte": "strategie",
+    "bron": "verkenning",
+    "tijdslot": "strategie"
+   }
+  },
+  {
+   "datum": "2026-11-15",
+   "ref": "Spreuken 4:7",
+   "tekst": "De wijsheid is het voornaamste; verkrijg dan wijsheid, en verkrijg verstand met al uw bezitting.",
+   "vers_id": "Proverbs-4-7-7",
+   "variabelen": {
+    "huisstijl": "paars",
+    "thema": "wijsheid",
+    "hook_stijl": "geen",
+    "formaat": "carrousel",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "verloop",
+    "boekgroep": "spreuken",
+    "lengte": "middel",
+    "bron": "ontdekking",
+    "tijdslot": "20:30",
+    "palet": "diep_paars",
+    "lettertype": "lora",
+    "layout": "links",
+    "achtergrond": "radiaal",
+    "hook_op_beeld": false
+   },
+   "keuzebron": {
+    "huisstijl": "strategie",
+    "thema": "verkenning",
+    "hook_stijl": "verkenning",
+    "formaat": "strategie",
+    "uitleg_op_beeld": "strategie",
+    "achtergrondbron": "strategie",
+    "boekgroep": "strategie",
+    "lengte": "strategie",
+    "bron": "strategie",
+    "tijdslot": "strategie"
+   }
+  },
+  {
+   "datum": "2026-11-15",
+   "ref": "Romeinen 8:24-25",
+   "tekst": "Want wij zijn in hope zalig geworden. De hoop nu, die gezien wordt, is geen hoop; want hetgeen iemand ziet, waarom zal hij het ook hopen? Maar indien wij hopen, hetgeen wij niet zien, zo verwachten wij het met lijdzaamheid.",
+   "vers_id": "Romans-8-24-25",
+   "variabelen": {
+    "huisstijl": "paars",
+    "thema": "hoop",
+    "hook_stijl": "uitdaging",
+    "formaat": "carrousel",
+    "uitleg_op_beeld": true,
+    "achtergrondbron": "beeld",
+    "boekgroep": "brieven",
+    "lengte": "lang",
+    "bron": "bekend",
+    "tijdslot": "07:30",
+    "palet": "diep_paars",
+    "lettertype": "lora",
+    "layout": "links",
+    "achtergrond": "radiaal",
+    "hook_op_beeld": false
+   },
+   "keuzebron": {
+    "huisstijl": "verkenning",
+    "thema": "verkenning",
+    "hook_stijl": "verkenning",
+    "formaat": "strategie",
+    "uitleg_op_beeld": "strategie",
+    "achtergrondbron": "strategie",
+    "boekgroep": "strategie",
+    "lengte": "verkenning",
+    "bron": "verkenning",
+    "tijdslot": "verkenning"
+   }
+  },
+  {
+   "datum": "2026-11-15",
+   "ref": "Psalm 46:11",
+   "tekst": "Laat af, en weet, dat Ik God ben; Ik zal verhoogd worden onder de heidenen, Ik zal verhoogd worden op de aarde. De HEERE der heirscharen is met ons; de God van Jakob is ons een Hoog Vertrek. Sela.",
+   "vers_id": "Psalms-46-11-11",
+   "variabelen": {
+    "huisstijl": "paars",
+    "thema": "vrede_rust",
+    "hook_stijl": "uitdaging",
+    "formaat": "carrousel",
+    "uitleg_op_beeld": true,
+    "achtergrondbron": "verloop",
+    "boekgroep": "psalmen",
+    "lengte": "lang",
+    "bron": "bekend",
+    "tijdslot": "12:15",
+    "palet": "diep_paars",
+    "lettertype": "lora",
+    "layout": "links",
+    "achtergrond": "radiaal",
+    "hook_op_beeld": false
+   },
+   "keuzebron": {
+    "huisstijl": "strategie",
+    "thema": "strategie",
+    "hook_stijl": "verkenning",
+    "formaat": "strategie",
+    "uitleg_op_beeld": "strategie",
+    "achtergrondbron": "strategie",
+    "boekgroep": "strategie",
+    "lengte": "verkenning",
+    "bron": "verkenning",
+    "tijdslot": "verkenning"
+   }
+  },
+  {
+   "datum": "2026-11-15",
+   "ref": "Psalm 118:9",
+   "tekst": "Het is beter tot den HEERE toevlucht te nemen, dan op prinsen te vertrouwen.",
+   "vers_id": "Psalms-118-9-9",
+   "variabelen": {
+    "huisstijl": "bosgroen",
+    "thema": "vertrouwen",
+    "hook_stijl": "rustig",
+    "formaat": "carrousel",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "verloop",
+    "boekgroep": "psalmen",
+    "lengte": "kort",
+    "bron": "ontdekking",
+    "tijdslot": "22:00",
+    "palet": "bosgroen",
+    "lettertype": "montserrat_zwaar",
+    "layout": "links",
+    "achtergrond": "diagonaal",
+    "hook_op_beeld": false
+   },
+   "keuzebron": {
+    "huisstijl": "strategie",
+    "thema": "verkenning",
+    "hook_stijl": "strategie",
+    "formaat": "strategie",
+    "uitleg_op_beeld": "strategie",
+    "achtergrondbron": "strategie",
+    "boekgroep": "verkenning",
+    "lengte": "strategie",
+    "bron": "strategie",
     "tijdslot": "strategie"
    }
   }

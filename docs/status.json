@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T23:38:36",
+ "updated": "2026-11-08T00:16:57",
  "agents": {
   "verskiezer": {
    "t": "2026-11-07T22:23:58",
@@ -22,7 +22,7 @@
    "state": "done"
   },
   "controller": {
-   "t": "2026-11-07T22:48:31",
+   "t": "2026-11-08T00:16:52",
    "task": "Controleerde de verbindingen",
    "state": "done"
   },
@@ -33,7 +33,7 @@
   }
  },
  "stats": {
-  "posts_today": 1,
+  "posts_today": 0,
   "posts_total": 1,
   "reach_7d": 0,
   "best_time": "nog onbekend",
@@ -51,6 +51,22 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "00:16",
+   "msg": "Statistieken lezen werkt"
+  },
+  {
+   "t": "00:16",
+   "msg": "Verbinding met Facebook-pagina werkt (Bibleversenl)"
+  },
+  {
+   "t": "00:16",
+   "msg": "Token heeft alle rechten, ook voor statistieken"
+  },
+  {
+   "t": "00:16",
+   "msg": "Verbinding met Instagram werkt (@bibleverse_nl)"
+  },
   {
    "t": "23:38",
    "msg": "Carrousels hebben nu één doorlopende achtergrond over de drie slides; bij een foto loopt die zacht over in een"
@@ -82,22 +98,6 @@
   {
    "t": "22:48",
    "msg": "Verbinding met Facebook-pagina werkt (Bibleversenl)"
-  },
-  {
-   "t": "22:48",
-   "msg": "Token heeft alle rechten, ook voor statistieken"
-  },
-  {
-   "t": "22:48",
-   "msg": "Verbinding met Instagram werkt (@bibleverse_nl)"
-  },
-  {
-   "t": "22:30",
-   "msg": "Te weinig posts voor 2026-11-07: verwacht, snel leren ging vandaag pas aan (geen fout)"
-  },
-  {
-   "t": "22:24",
-   "msg": "4 extra posts voor 8 november gemaakt (snel leren stond na de dagelijkse run aan)"
   }
  ],
  "lampen": [
@@ -141,14 +141,15 @@
   "ig": 0,
   "fb": 0,
   "totaal": 0,
-  "week": null,
+  "week": 0,
   "reeks": [
+   0,
    0
   ]
  },
  "top_post": null,
  "snel_leren": {
-  "dag": 1,
+  "dag": 2,
   "dagen": 7,
   "tot": "2026-11-14"
  }
