@@ -1,0 +1,220 @@
+{
+ "reeksen": [
+  {
+   "naam": "Advent",
+   "label": "ADVENT · DAG {n}",
+   "van": "2026-11-29",
+   "tot": "2026-12-24",
+   "tijdslot": "07:30",
+   "verzen": [
+    {
+     "id": "Isaiah-40-3-3",
+     "ref": "Jesaja 40:3",
+     "tekst": "Een stem des roependen in de woestijn: Bereidt den weg des HEEREN, maakt recht in de wildernis een baan voor onzen God!",
+     "thema": "hoop"
+    },
+    {
+     "id": "Psalms-130-6-6",
+     "ref": "Psalm 130:6",
+     "tekst": "Mijn ziel wacht op den HEERE, meer dan de wachters op den morgen; de wachters op den morgen.",
+     "thema": "hoop"
+    },
+    {
+     "id": "Isaiah-60-1-1",
+     "ref": "Jesaja 60:1",
+     "tekst": "Maak u op, word verlicht, want uw Licht komt, en de heerlijkheid des HEEREN gaat over u op.",
+     "thema": "hoop"
+    },
+    {
+     "id": "Isaiah-11-1-1",
+     "ref": "Jesaja 11:1",
+     "tekst": "Want er zal een Rijsje voortkomen uit den afgehouwen tronk van Isai, en een Scheut uit zijn wortelen zal Vrucht voortbrengen.",
+     "thema": "hoop"
+    },
+    {
+     "id": "Psalms-33-20-20",
+     "ref": "Psalm 33:20",
+     "tekst": "Onze ziel verbeidt den HEERE: Hij is onze Hulp en ons Schild.",
+     "thema": "vertrouwen"
+    },
+    {
+     "id": "Isaiah-40-5-5",
+     "ref": "Jesaja 40:5",
+     "tekst": "En de heerlijkheid des HEEREN zal geopenbaard worden; en alle vlees te gelijk zal zien, dat het de mond des HEEREN gesproken heeft.",
+     "thema": "hoop"
+    },
+    {
+     "id": "Romans-13-12-12",
+     "ref": "Romeinen 13:12",
+     "tekst": "De nacht is voorbijgegaan, en de dag is nabij gekomen. Laat ons dan afleggen de werken der duisternis, en aandoen de wapenen des lichts.",
+     "thema": "hoop"
+    },
+    {
+     "id": "Psalms-25-5-5",
+     "ref": "Psalm 25:5",
+     "tekst": "Leid mij in Uw waarheid, en leer mij, want Gij zijt de God mijns heils; U verwacht ik den ganse dag.",
+     "thema": "vertrouwen"
+    },
+    {
+     "id": "John-1-5-5",
+     "ref": "Johannes 1:5",
+     "tekst": "En het Licht schijnt in de duisternis, en de duisternis heeft hetzelve niet begrepen.",
+     "thema": "hoop"
+    },
+    {
+     "id": "Isaiah-7-14-14",
+     "ref": "Jesaja 7:14",
+     "tekst": "Daarom zal de Heere Zelf ulieden een teken geven; ziet, een maagd zal zwanger worden, en zij zal een Zoon baren, en Zijn naam IMMANUEL heten.",
+     "thema": "hoop"
+    },
+    {
+     "id": "Isaiah-60-2-2",
+     "ref": "Jesaja 60:2",
+     "tekst": "Want zie, de duisternis zal de aarde bedekken, en donkerheid de volken; doch over u zal de HEERE opgaan, en Zijn heerlijkheid zal over u gezien worden.",
+     "thema": "hoop"
+    },
+    {
+     "id": "Habakkuk-2-3-3",
+     "ref": "Habakuk 2:3",
+     "tekst": "Want het gezicht zal nog tot een bestemden tijd zijn, dan zal Hij het op het einde voortbrengen, en niet liegen; zo Hij vertoeft, verbeid Hem, want Hij zal gewisselijk komen, Hij zal niet achterblijven.",
+     "thema": "vertrouwen"
+    },
+    {
+     "id": "Luke-1-37-37",
+     "ref": "Lukas 1:37",
+     "tekst": "Want geen ding zal bij God onmogelijk zijn.",
+     "thema": "vertrouwen"
+    },
+    {
+     "id": "Isaiah-25-9-9",
+     "ref": "Jesaja 25:9",
+     "tekst": "En men zal te dien dage zeggen: Ziet, Deze is onze God; wij hebben Hem verwacht, en Hij zal ons zalig maken. Deze is de HEERE, wij hebben Hem verwacht, wij zullen ons verheugen en verblijden in Zijn zaligheid.",
+     "thema": "dankbaarheid"
+    },
+    {
+     "id": "Isaiah-40-31-31",
+     "ref": "Jesaja 40:31",
+     "tekst": "Maar dien den HEERE verwachten, zullen de kracht vernieuwen; zij zullen opvaren met vleugelen, gelijk de arenden; zij zullen lopen, en niet moede worden; zij zullen wandelen, en niet mat worden.",
+     "thema": "moed"
+    },
+    {
+     "id": "Zechariah-9-9-9",
+     "ref": "Zacharia 9:9",
+     "tekst": "Verheug u zeer, gij dochter Sions! juich, gij dochter Jeruzalems! Ziet, uw Koning zal u komen, rechtvaardig, en Hij is een Heiland; arm, en rijdende op een ezel, en op een veulen, een jong der ezelinnen.",
+     "thema": "dankbaarheid"
+    },
+    {
+     "id": "John-1-9-9",
+     "ref": "Johannes 1:9",
+     "tekst": "Dit was het waarachtige Licht, Hetwelk verlicht een iegelijk mens, komende in de wereld.",
+     "thema": "hoop"
+    },
+    {
+     "id": "Isaiah-52-7-7",
+     "ref": "Jesaja 52:7",
+     "tekst": "Hoe liefelijk zijn op de bergen de voeten desgenen, die het goede boodschapt, die den vrede doet horen; desgenen, die goede boodschap brengt van het goede, die heil doet horen; desgenen, die tot Sion zegt: Uw God is Koning.",
+     "thema": "vrede_rust"
+    },
+    {
+     "id": "Psalms-130-5-5",
+     "ref": "Psalm 130:5",
+     "tekst": "Ik verwacht den HEERE; mijn ziel verwacht, en ik hoop op Zijn Woord.",
+     "thema": "hoop"
+    },
+    {
+     "id": "Luke-1-46-47",
+     "ref": "Lukas 1:46-47",
+     "tekst": "En Maria zeide: Mijn ziel maakt groot den Heere; En mijn geest verheugt zich in God, mijn Zaligmaker.",
+     "thema": "dankbaarheid"
+    },
+    {
+     "id": "Matthew-1-21-21",
+     "ref": "Mattheüs 1:21",
+     "tekst": "En zij zal een Zoon baren, en gij zult Zijn naam heten JEZUS; want Hij zal Zijn volk zalig maken van hun zonden.",
+     "thema": "hoop"
+    },
+    {
+     "id": "Luke-1-68-68",
+     "ref": "Lukas 1:68",
+     "tekst": "Geloofd zij de Heere, de God Israels, want Hij heeft bezocht, en verlossing te weeg gebracht Zijn volke.",
+     "thema": "dankbaarheid"
+    },
+    {
+     "id": "Isaiah-30-18-18",
+     "ref": "Jesaja 30:18",
+     "tekst": "En daarom zal de HEERE wachten, opdat Hij u genadig zij, en daarom zal Hij verhoogd worden, opdat Hij Zich over ulieden ontferme, want de HEERE is een God des gerichts; welgelukzalig zijn die allen, die Hem verwachten.",
+     "thema": "troost"
+    },
+    {
+     "id": "Matthew-1-23-23",
+     "ref": "Mattheüs 1:23",
+     "tekst": "Ziet, de maagd zal zwanger worden, en een Zoon baren, en gij zult Zijn naam heten Emmanuel; hetwelk is, overgezet zijnde, God met ons.",
+     "thema": "identiteit"
+    },
+    {
+     "id": "John-1-14-14",
+     "ref": "Johannes 1:14",
+     "tekst": "En het Woord is vlees geworden, en heeft onder ons gewoond (en wij hebben Zijn heerlijkheid aanschouwd, een heerlijkheid als des Eniggeborenen van den Vader), vol van genade en waarheid.",
+     "thema": "liefde"
+    },
+    {
+     "id": "Luke-2-10-10",
+     "ref": "Lukas 2:10",
+     "tekst": "En de engel zeide tot hen: Vreest niet, want, ziet, ik verkondig u grote blijdschap, die al den volke wezen zal.",
+     "thema": "dankbaarheid"
+    }
+   ]
+  },
+  {
+   "naam": "Kerst",
+   "label": "KERST",
+   "van": "2026-12-25",
+   "tot": "2026-12-26",
+   "tijdslot": "07:30",
+   "verzen": [
+    {
+     "id": "Luke-2-11-11",
+     "ref": "Lukas 2:11",
+     "tekst": "Namelijk dat u heden geboren is de Zaligmaker, welke is Christus, de Heere, in de stad Davids.",
+     "thema": "dankbaarheid"
+    },
+    {
+     "id": "Luke-2-14-14",
+     "ref": "Lukas 2:14",
+     "tekst": "Ere zij God in de hoogste hemelen, en vrede op aarde, in de mensen een welbehagen.",
+     "thema": "vrede_rust"
+    }
+   ]
+  },
+  {
+   "naam": "Nieuwjaar",
+   "label": "NIEUWJAAR",
+   "van": "2027-01-01",
+   "tot": "2027-01-01",
+   "tijdslot": "07:30",
+   "verzen": [
+    {
+     "id": "Lamentations-3-22-23",
+     "ref": "Klaagliederen 3:22-23",
+     "tekst": "Het zijn de goedertierenheden des HEEREN, dat wij niet vernield zijn, dat Zijn barmhartigheden geen einde hebben; Zij zijn allen morgen nieuw, Uw trouw is groot.",
+     "thema": "hoop"
+    }
+   ]
+  },
+  {
+   "naam": "Moed voor de week",
+   "label": "MOED VOOR DE WEEK",
+   "weekdag": 0,
+   "tijdslot": "07:30",
+   "thema": "moed"
+  },
+  {
+   "naam": "Vers van de week",
+   "label": "VERS VAN DE WEEK",
+   "weekdag": 6,
+   "tijdslot": "12:15",
+   "beste_van_de_week": true,
+   "thema": "vrede_rust"
+  }
+ ]
+}

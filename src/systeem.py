@@ -57,6 +57,7 @@ DIMENSIES = {
     "boekgroep": ["psalmen", "spreuken", "wijsheid", "profeten", "evangelien", "brieven"],
     "lengte": ["kort", "middel", "lang"],
     "bron": ["bekend", "ontdekking"],
+    "vraag_onderaan": [True, False],
     "tijdslot": ["07:30", "12:15", "17:45", "20:30", "22:00"],
 }
 
@@ -86,8 +87,15 @@ def vul_strategie_aan(strat):
             strat["metingen"][d].setdefault(str(o), 0)
     return strat
 
-def kies_optie(dim, strat, verkenning, rnd, uitsluiten=()):
+def kies_optie(dim, strat, verkenning, rnd, uitsluiten=(), ctx=None):
+    """Kiest een optie. Met ctx (statistieken + experiment) via Thompson sampling:
+    onderdelen in het weekexperiment worden actief getest, de rest volgt vooral wat al werkt."""
     opties = [o for o in DIMENSIES[dim] if o not in uitsluiten]
+    if ctx is not None:
+        factor = verkenning / 0.2  # schuif 'experimenteren' op het dashboard bepaalt hoe breed er gezocht wordt
+        if ctx.get("leermodus") or dim in ctx["experiment"]:
+            return thompson(dim, opties, ctx["stats"], rnd, factor), "experiment"
+        return thompson(dim, opties, ctx["stats"], rnd, factor * 0.35), "strategie"
     if rnd.random() < verkenning:
         return rnd.choice(opties), "verkenning"
     g = strat["gewichten"].get(dim, {})
@@ -198,7 +206,39 @@ def minst_gebruikt(opties, posts, veld, rnd):
     return min(opties, key=lambda o: laatst.get(o, "")) if opties else None
 
 # ---------- Kiezen ----------
-def kies_posts(datum, cfg, strat, posts, verzen, mat, n_start, n, gebruikte_slots, rnd):
+def reeks_voor(datum, posts):
+    """Hoort er op deze dag een post uit een reeks (Advent, Kerst, maandag moed, zondag vers van de week)?"""
+    d = dt.date.fromisoformat(datum)
+    for r in laad("data/reeksen.json", {}).get("reeksen", []):
+        if r.get("van") and not (r["van"] <= datum <= r.get("tot", r["van"])):
+            continue
+        if "weekdag" in r and d.weekday() != r["weekdag"]:
+            continue
+        uit = {"naam": r["naam"], "tijdslot": r["tijdslot"], "thema": r.get("thema"), "vers": None}
+        if r.get("verzen"):
+            i = (d - dt.date.fromisoformat(r["van"])).days
+            uit["vers"] = dict(r["verzen"][i % len(r["verzen"])], bron="bekend", kwaliteit=12)
+            uit["label"] = r["label"].replace("{n}", str(i + 1))
+        else:
+            uit["label"] = r["label"]
+        if r.get("beste_van_de_week"):
+            grens = (d - dt.timedelta(days=8)).isoformat()
+            sc = {}
+            for p, plat, s in post_scores(posts):
+                if p["datum"] >= grens and not p.get("reeks"):
+                    sc.setdefault(p["vers_id"], []).append(s)
+            if sc:
+                beste = max(sc, key=lambda k: sum(sc[k]) / len(sc[k]))
+                v = next((x for x in alle_verzen() if x["id"] == beste), None)
+                if v:
+                    uit["vers"] = v
+        for x in (uit["vers"],):
+            if x:
+                x.setdefault("boekgroep", boekgroep(x["ref"])); x.setdefault("lengte", lengteklas(x["tekst"])); x.setdefault("bron", "bekend")
+        return uit
+    return None
+
+def kies_posts(datum, cfg, strat, posts, verzen, mat, n_start, n, gebruikte_slots, rnd, reeks=True):
     """Kiest n nieuwe posts voor een datum. Raakt geen bestanden aan."""
     grens = (dt.date.fromisoformat(datum) - dt.timedelta(days=cfg["vers_niet_herhalen_dagen"])).isoformat()
     recent = {p["vers_id"] for p in posts if p["datum"] >= grens} | set(cfg.get("verzen_uitsluiten", []))
@@ -209,13 +249,25 @@ def kies_posts(datum, cfg, strat, posts, verzen, mat, n_start, n, gebruikte_slot
     recent -= {p["vers_id"] for p in posts if p["vers_id"] in top and p["datum"] < grens30
                and not any(q["vers_id"] == p["vers_id"] and q["datum"] >= grens30 for q in posts)}
     gebruikte_slots = set(gebruikte_slots)
+    rk = reeks_voor(datum, posts) if reeks else None
+    if rk and (any(p.get("reeks") and p["datum"] == datum for p in posts) or rk["tijdslot"] in gebruikte_slots):
+        rk = None  # de reekspost van vandaag bestaat al
+    ctx = {"stats": optie_stats(posts), "experiment": experiment(cfg, datum), "leermodus": cfg.get("leermodus")}
+    stats_fb = optie_stats(posts, "facebook")
     nieuw = []
     for i in range(n):
         v, bron = {}, {}
         for dim in DIMENSIES:
-            uit = gebruikte_slots if dim == "tijdslot" else ()
-            v[dim], bron[dim] = kies_optie(dim, strat, cfg["verkenning"], rnd, uit)
+            uit = (gebruikte_slots | ({rk["tijdslot"]} if rk else set())) if dim == "tijdslot" else ()
+            v[dim], bron[dim] = kies_optie(dim, strat, cfg["verkenning"], rnd, uit, ctx)
+        reekspost = rk if (rk and i == 0) else None
+        if reekspost:
+            v["tijdslot"], bron["tijdslot"] = reekspost["tijdslot"], "reeks"
+            if reekspost.get("thema"):
+                v["thema"], bron["thema"] = reekspost["thema"], "reeks"
         gebruikte_slots.add(v["tijdslot"])
+        # Facebook krijgt een eigen tijdstip, geleerd uit de Facebook-cijfers
+        v["tijdslot_fb"] = thompson("tijdslot", DIMENSIES["tijdslot"], stats_fb, rnd, cfg["verkenning"] / 0.2)
         v.update(HUISSTIJLEN[v["huisstijl"]])
         v["hook_op_beeld"] = False  # Joshua wil geen hooktekst op het beeld
         # Foto-achtergrond alleen als er beelden zijn en het maximumaandeel niet bereikt is
@@ -227,6 +279,8 @@ def kies_posts(datum, cfg, strat, posts, verzen, mat, n_start, n, gebruikte_slot
                 v["achtergrondbron"], bron["achtergrondbron"] = "verloop", "limiet"
         # Uit de hele Bijbel: eerst alles laten kloppen, dan stap voor stap loslaten
         vrij = [x for x in alle_verzen() if x["id"] not in recent]
+        if reekspost and reekspost.get("vers"):
+            vrij = [reekspost["vers"]]  # vaste reeks: dit vers, ook als het eerder gebruikt is
         kandidaten = []
         for velden in (("thema", "boekgroep", "lengte", "bron"), ("thema", "boekgroep", "bron"), ("thema", "bron"),
                        ("thema", "boekgroep"), ("thema",), ("bron",), ()):
@@ -238,7 +292,8 @@ def kies_posts(datum, cfg, strat, posts, verzen, mat, n_start, n, gebruikte_slot
         for f in ("thema", "boekgroep", "lengte", "bron"):
             v[f] = vers[f]  # wat er echt gepost wordt, telt mee bij het leren
         recent.add(vers["id"])
-        nieuw.append({"id": f"{datum}-{n_start + i + 1}", "datum": datum, "status": "wacht_op_tekst",
+        nieuw.append({**({"reeks": reekspost["naam"], "reeks_label": reekspost["label"]} if reekspost else {}),
+                      "id": f"{datum}-{n_start + i + 1}", "datum": datum, "status": "wacht_op_tekst",
                       "vers_id": vers["id"], "ref": vers["ref"], "tekst": vers["tekst"],
                       "vertaling": vers.get("vertaling", "SV"),
                       "variabelen": v, "keuzebron": bron,
@@ -294,6 +349,8 @@ def cmd_kies(datum):
 def cmd_plan(dagen=7):
     """Voorlopige planning voor de komende dagen, op basis van wat het systeem nu weet.
     Wordt elke nacht en na elke bediening opnieuw gemaakt; de dagelijkse run volgt hem."""
+    if not experiment(laad("config.json"), dt.date.today().isoformat()):
+        cmd_experiment(stil=True)
     cfg, strat = laad("config.json"), vul_strategie_aan(laad("strategie.json") or nieuwe_strategie())
     posts = laad("data/posts.json", [])
     verzen = laad("data/verzen.json")
@@ -342,6 +399,9 @@ def cmd_render(datum):
             (maak_video if ext == "mp4" else maak_afbeelding)(p, P(rel))
             p["media"], p["media_extra"] = rel, []
         p["thumb"] = maak_thumb(P(p["media"]), p["id"])
+        if fmt == "carrousel":
+            from render import maak_story
+            p["story"] = os.path.relpath(maak_story(P(p["media"]), P(rel).replace(".jpg", "-story.jpg")), ROOT)
         for k in ("beeld_pad", "muziek_pad", "geluid_pad"):
             p.pop(k, None)
         if cfg.get("github_repo"):
@@ -349,6 +409,7 @@ def cmd_render(datum):
             url = lambda r: f"https://{eig}.github.io/{naam}/{r[len('docs/'):]}"
             p["media_url"] = url(p["media"])
             p["media_urls"] = [url(r) for r in [p["media"]] + p["media_extra"]]
+            p["story_url"] = url(p["story"]) if p.get("story") else None
         p["status"] = "gerenderd"
         p["goedgekeurd"] = None
         print("OK", p["id"], rel)
@@ -383,7 +444,7 @@ def cmd_opruimen(dagen=30):
                 if not p.get("thumb"):
                     p["thumb"] = maak_thumb(P(p["media"]), p["id"])
                 os.remove(P(p["media"])); weg += 1
-            for extra in p.get("media_extra", []) or []:
+            for extra in (p.get("media_extra", []) or []) + ([p["story"]] if p.get("story") else []):
                 if os.path.exists(P(extra)):
                     os.remove(P(extra))
             p["media"], p["media_extra"] = None, []
@@ -451,6 +512,8 @@ def valideer_tekst(p, cfg):
         return "bronvermelding NBV21 ontbreekt in de caption"
     if p["tekst"][:40] not in p["caption"]:
         return "caption moet de verstekst letterlijk bevatten"
+    if p["variabelen"].get("vraag_onderaan") is True and not p["caption"].rstrip().endswith("?"):
+        return "vraag_onderaan staat aan: eindig de caption met een oprechte, open vraag"
     return None
 
 # ---------- Registreren ----------
@@ -474,7 +537,7 @@ def cmd_stats(pad):
         if not p:
             print("onbekend:", r["post_id"]); continue
         p["stats"].setdefault(r["platform"], {})[r.get("moment", "7d")] = {
-            k: r.get(k) for k in ("views", "reach", "likes", "comments", "shares", "saves", "follows")}
+            k: r.get(k) for k in ("views", "reach", "likes", "comments", "shares", "saves", "follows", "avg_watch_ms")}
         if p["status"] == "gepland":
             p["status"] = "gepubliceerd"
         n += 1
@@ -498,20 +561,98 @@ def post_scores(posts):
             if bereik < 20:
                 continue
             ratio = interactie(s) / bereik
-            per_platform.setdefault(plat, []).append((p, ratio, bereik))
+            # kijkduur: gemiddeld bekeken deel van de video (alleen video, als Instagram het meldt)
+            kijk = None
+            if p["variabelen"].get("formaat") == "video" and s.get("avg_watch_ms"):
+                kijk = min(1.5, s["avg_watch_ms"] / 1000 / max(5, p.get("duur", 9)))
+            per_platform.setdefault(plat, []).append((p, ratio, bereik, kijk))
     uit = []
     for plat, rijen in per_platform.items():
-        bereiken = [b for _, _, b in rijen]
-        med_r = statistics.median([r for _, r, _ in rijen]) or 1e-6
+        bereiken = [b for _, _, b, _ in rijen]
+        med_r = statistics.median([r for _, r, _, _ in rijen]) or 1e-6
         med_b = statistics.median(bereiken) or 1
-        for p, r, b in rijen:
-            # Mix: 70% interactie-kwaliteit, 30% bereik (algoritme vond het goed)
-            score = 0.7 * (r / med_r) + 0.3 * (b / med_b)
+        kijks = [k for _, _, _, k in rijen if k]
+        med_k = statistics.median(kijks) if kijks else None
+        for p, r, b, k in rijen:
+            # Mix: 70% interactie-kwaliteit, 30% bereik (algoritme vond het goed);
+            # bij video met kijkduur: 50% interactie, 20% bereik, 30% kijkduur
+            if k and med_k:
+                score = 0.5 * (r / med_r) + 0.2 * (b / med_b) + 0.3 * (k / med_k)
+            else:
+                score = 0.7 * (r / med_r) + 0.3 * (b / med_b)
             # Uitschieters dempen: boven 1,5 telt de rest maar half mee, en maximaal 3
             if score > 1.5:
                 score = 1.5 + (score - 1.5) * 0.5
             uit.append((p, plat, min(score, 3.0)))
     return uit
+
+# ---------- Slimmer kiezen: Thompson sampling, weekexperiment, per platform ----------
+WEEKDAGEN = ["maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag", "zondag"]
+
+def optie_stats(posts, platform=None):
+    """{dimensie: {optie: [scores]}}; per post het gemiddelde over platformen (of één platform)."""
+    per_post = {}
+    for p, plat, sc in post_scores(posts):
+        if platform and plat != platform:
+            continue
+        per_post.setdefault(p["id"], (p, []))[1].append(sc)
+    uit = {}
+    for p, scs in per_post.values():
+        gem = sum(scs) / len(scs)
+        v = dict(p["variabelen"])
+        v["weekdag"] = WEEKDAGEN[dt.date.fromisoformat(p["datum"]).weekday()]
+        if platform == "facebook" and v.get("tijdslot_fb"):
+            v["tijdslot"] = v["tijdslot_fb"]
+        for dim, o in v.items():
+            uit.setdefault(dim, {}).setdefault(str(o), []).append(gem)
+    return uit
+
+def posterior(vals, k0=2.0):
+    """Gemiddelde en onzekerheid van een optie (begint bij 1,0 = gemiddeld)."""
+    n = len(vals)
+    gem = (sum(vals) + k0 * 1.0) / (n + k0)
+    sd = statistics.pstdev(vals) if n > 1 else 0.5
+    return gem, max(0.2, sd) / math.sqrt(n + k0)
+
+def thompson(dim, opties, stats, rnd, factor=1.0):
+    """Trek per optie een mogelijke score uit wat we weten; de hoogste wint.
+    Onzekere opties krijgen zo vanzelf kansen, duidelijk slechtere steeds minder."""
+    best, bw = None, -1e9
+    for o in opties:
+        gem, sd = posterior(stats.get(dim, {}).get(str(o), []))
+        w = rnd.gauss(gem, sd * factor)
+        if w > bw:
+            best, bw = o, w
+    return best
+
+def experiment(cfg, datum):
+    """Het weekexperiment: welke 2 dingen worden deze week bewust getest. Verloopt na 7 dagen."""
+    e = cfg.get("experiment") or {}
+    if e.get("tot", "") >= datum and e.get("dims"):
+        return e["dims"]
+    return []
+
+def cmd_experiment(stil=False):
+    """Kiest het experiment voor de komende week: de 2 onderdelen waar het systeem het minst zeker over is."""
+    cfg = laad("config.json")
+    stats = optie_stats(laad("data/posts.json", []))
+    kandidaten = [d for d in DIMENSIES if d not in ("tijdslot",)]
+    def onzeker(d):
+        sds = [posterior(stats.get(d, {}).get(str(o), []))[1] for o in DIMENSIES[d]]
+        return sum(sds) / len(sds) * math.log(1 + len(DIMENSIES[d]))
+    vorige = set((cfg.get("experiment") or {}).get("dims", []))
+    keuze = sorted(kandidaten, key=lambda d: (d in vorige, -onzeker(d)))[:2]
+    van = dt.date.today()
+    cfg["experiment"] = {"dims": keuze, "van": van.isoformat(), "tot": (van + dt.timedelta(days=6)).isoformat()}
+    bewaar("config.json", cfg)
+    namen = {"huisstijl": "stijl", "thema": "thema", "hook_stijl": "soort hook", "formaat": "carrousel of video",
+             "uitleg_op_beeld": "uitleg op beeld", "achtergrondbron": "foto of kleur", "boekgroep": "Bijbelboek",
+             "lengte": "lengte van het vers", "bron": "bekend of onbekend vers", "vraag_onderaan": "vraag onderaan"}
+    tekst = "Experiment deze week: " + " en ".join(namen.get(d, d) for d in keuze)
+    cmd_log(tekst)
+    if not stil:
+        print(tekst)
+    return keuze
 
 # ---------- Leren ----------
 def leermodus_uit(cfg):
@@ -593,7 +734,7 @@ def cmd_dashboard():
             for k in ("views", "reach", "likes", "comments", "shares", "saves"):
                 tot[k] = tot.get(k, 0) + (s.get(k) or 0)
         lijst.append({"id": p["id"], "datum": p["datum"], "ref": p["ref"], "tekst": p["tekst"], "hook": p.get("hook", ""),
-                      "status": p["status"], "variabelen": p["variabelen"], "vers_id": p.get("vers_id"), "goedgekeurd": p.get("goedgekeurd"), "reserve_ref": (p.get("reserve") or {}).get("ref") if (p.get("reserve") or {}).get("caption") else None,
+                      "status": p["status"], "variabelen": p["variabelen"], "vers_id": p.get("vers_id"), "goedgekeurd": p.get("goedgekeurd"), "reeks": p.get("reeks"), "reeks_label": p.get("reeks_label"), "reserve_ref": (p.get("reserve") or {}).get("ref") if (p.get("reserve") or {}).get("caption") else None,
                       "caption": p.get("caption", ""), "uitleg": p.get("uitleg", ""), "media": p.get("media"), "media_url": p.get("media_url"), "media_urls": p.get("media_urls"), "thumb": p.get("thumb"),
                       "platformen": list(p.get("gepubliceerd", {}).keys()),
                       "links": {k: v.get("url") for k, v in p.get("gepubliceerd", {}).items()}, "totaal": tot, "per_platform": per, "score": sc.get(p["id"], {}),
@@ -601,7 +742,7 @@ def cmd_dashboard():
     rapporten = sorted(os.listdir(P("rapporten"))) if os.path.isdir(P("rapporten")) else []
     extra = dashboard_extra(cfg, posts)
     data = {"gegenereerd": dt.datetime.now().isoformat(timespec="minutes"), "repo": cfg.get("github_repo", ""),
-            "config": {k: cfg.get(k) for k in ("pauze", "kanaalnaam", "posts_per_dag", "max_posts_per_dag", "verkenning", "platformen_actief", "max_aandeel_beeld", "verzen_uitsluiten", "leermodus", "leermodus_tot", "goedkeuren")},
+            "config": {k: cfg.get(k) for k in ("pauze", "kanaalnaam", "posts_per_dag", "max_posts_per_dag", "verkenning", "platformen_actief", "max_aandeel_beeld", "verzen_uitsluiten", "leermodus", "leermodus_tot", "goedkeuren", "experiment", "stories")},
             "strategie": strat, "posts": lijst,
             "leergeschiedenis": laad("data/leergeschiedenis.json", []),
             "laatste_rapport": laad(f"rapporten/{rapporten[-1]}") if rapporten else None,
@@ -610,7 +751,7 @@ def cmd_dashboard():
                                if l.get("soort") == "fout" and not l.get("opgelost") and l["t"] >= (dt.datetime.now() - dt.timedelta(hours=48)).isoformat(timespec="minutes")],
             "versen_totaal": len(laad("data/verzen.json", [])),
             **extra,
-            "planning": [{k: x[k] for k in ("datum", "ref", "tekst", "vers_id", "variabelen", "keuzebron")}
+            "planning": [{k: x.get(k) for k in ("datum", "ref", "tekst", "vers_id", "variabelen", "keuzebron", "reeks", "reeks_label")}
                          for x in laad("data/planning.json", {}).get("posts", [])]}
     bewaar("docs/data.json", data)
     schrijf_status(cfg, strat, posts, data["recente_fouten"])
@@ -684,7 +825,14 @@ def dashboard_extra(cfg, posts):
                 "per_dag": cfg["posts_per_dag"],
                 "muziek": gebruik("muziek", lijst.get("muziek", [])), "beelden": gebruik("beeld", lijst.get("beelden", [])),
                 "materiaal_bijgewerkt": mat.get("bijgewerkt")}
-    return {"gezondheid": laad("data/gezondheid.json", {}), "groei": laad("data/groei.json", []),
+    def opties_van(stats, dim):
+        return sorted(({"optie": k, "gem": round(posterior(v)[0], 2), "n": len(v)} for k, v in stats.get(dim, {}).items()),
+                      key=lambda x: -x["gem"])
+    st_all, st_ig, st_fb = optie_stats(posts), optie_stats(posts, "instagram"), optie_stats(posts, "facebook")
+    extra_inz = {"weekdag": opties_van(st_all, "weekdag"), "tijd_ig": opties_van(st_ig, "tijdslot"),
+                 "tijd_fb": opties_van(st_fb, "tijdslot"), "formaat_ig": opties_van(st_ig, "formaat"), "formaat_fb": opties_van(st_fb, "formaat")}
+    return {"inzichten_extra": extra_inz, "reeksen": [{k: r.get(k) for k in ("naam", "label", "van", "tot", "weekdag", "tijdslot")} for r in laad("data/reeksen.json", {}).get("reeksen", [])],
+            "gezondheid": laad("data/gezondheid.json", {}), "groei": laad("data/groei.json", []),
             "weken": weken, "inzichten_data": inzichten, "min_posts_voor_leren": cfg.get("min_posts_voor_leren", 6),
             "gemeten_posts": gemeten, "snel_leren": snel, "voorraad": voorraad}
 
@@ -845,7 +993,7 @@ def cmd_vervang(pid, reden=""):
     bewaar("config.json", cfg)
     oud = p["ref"]
     rest = [x for x in posts if x["id"] != pid]
-    nieuw = kies_posts(p["datum"], cfg, strat, rest, laad("data/verzen.json"), None, 0, 1, set(), random.Random(pid + oud))[0]
+    nieuw = kies_posts(p["datum"], cfg, strat, rest, laad("data/verzen.json"), None, 0, 1, set(), random.Random(pid + oud), reeks=False)[0]
     v = nieuw["variabelen"]
     for f in ("thema", "boekgroep", "lengte", "bron"):
         p["variabelen"][f] = v[f]
@@ -865,8 +1013,10 @@ def cmd_reserve(datum):
     for p in posts:
         if p["datum"] != datum or p["status"] not in ("gerenderd", "wacht_op_tekst", "klaar_voor_render") or p.get("reserve", {}).get("caption"):
             continue
+        if p.get("reeks") in ("Advent", "Kerst", "Nieuwjaar"):
+            continue  # vaste reeksverzen krijgen geen reserve
         cfg2 = dict(cfg, verzen_uitsluiten=list(set(cfg.get("verzen_uitsluiten", [])) | gebruikt))
-        alt = kies_posts(datum, cfg2, strat, posts, laad("data/verzen.json"), None, 0, 1, set(), random.Random("reserve" + p["id"]))[0]
+        alt = kies_posts(datum, cfg2, strat, posts, laad("data/verzen.json"), None, 0, 1, set(), random.Random("reserve" + p["id"]), reeks=False)[0]
         r = {k: alt[k] for k in ("vers_id", "ref", "tekst", "vertaling")}
         r.update({f: alt["variabelen"][f] for f in ("thema", "boekgroep", "lengte", "bron")})
         r.update({"hook": "", "caption": "", "hashtags": [], "uitleg": "", "betekenis": "", "toepassing": ""})
@@ -921,6 +1071,7 @@ if __name__ == "__main__":
         "vervang": lambda: cmd_vervang(x.args[0], " ".join(x.args[1:])),
         "kandidaten": lambda: cmd_kandidaten(*(x.args[:1] or [60])),
         "reserve": lambda: cmd_reserve(x.datum),
+        "experiment": lambda: cmd_experiment(),
         "keur": lambda: cmd_keur(x.args[0], x.args[1:]),
      "registreer": lambda: cmd_registreer(*x.args), "stats": lambda: cmd_stats(x.args[0]),
      "leer": cmd_leer, "dashboard": cmd_dashboard, "check": cmd_check,

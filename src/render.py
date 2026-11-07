@@ -164,7 +164,7 @@ def _bg(post, b, h):
         return foto_achtergrond(b, h, post["beeld_pad"], v["palet"])
     return achtergrond(b, h, v["palet"], v["achtergrond"], post["id"])
 
-def tekstlaag(b, h, post, ruimte_boven=0, ruimte_onder=0):
+def tekstlaag(b, h, post, ruimte_boven=0, ruimte_onder=0, geo=None):
     """Transparante laag met vers, referentie, optionele hook-regel en handle."""
     v = post["variabelen"]
     kleur, accent = _kleuren(post)
@@ -182,6 +182,8 @@ def tekstlaag(b, h, post, ruimte_boven=0, ruimte_onder=0):
         extra += int(h * 0.08)
     # Vlak voor tekst + referentie: boven (hook/aanhalingsteken) en onder (handle/kader) vrijhouden
     top = ruimte_boven + int(h * 0.07) + extra
+    if post.get("reeks_label"):
+        top += int(h * 0.05)
     bodem = h - ruimte_onder - int(h * (0.15 if v["layout"] == "kader" else 0.11))
     ref_h = int(b * 0.09)
     uitleg_regels, uf = [], None
@@ -217,6 +219,9 @@ def tekstlaag(b, h, post, ruimte_boven=0, ruimte_onder=0):
     tx, an = (marge, "la") if links else (b // 2, "ma")
     for i, r in enumerate(regels):
         d.text((tx, y0 + i * lh), r, font=f, fill=kleur + (255,), anchor=an)
+        if geo is not None:  # plaats van elke regel, voor het woord-voor-woord verschijnen in video's
+            w = d.textlength(r, font=f)
+            geo.append({"x": tx if links else b // 2 - w / 2, "w": w, "y": y0 + i * lh - int(lh * 0.12), "h": int(lh * 1.12), "tekst": r, "font": f})
 
     rf = _klein_font(int(b * 0.032), b"SemiBold")
     ry = y0 + blok_h + int(b * 0.05)
@@ -235,6 +240,8 @@ def tekstlaag(b, h, post, ruimte_boven=0, ruimte_onder=0):
         hf = _klein_font(int(b * 0.034), b"Medium")
         hook_y = ruimte_boven + (int(b * 0.06) + int(h * 0.03) if v["layout"] == "kader" else int(h * (0.03 if ruimte_boven else 0.07)))
         d.text((b // 2, hook_y), post["beeld_hook"], font=hf, fill=kleur + (200,), anchor="ma")
+    if post.get("reeks_label"):  # reeks (Advent, Moed voor de week, ...) bovenaan
+        _woordmerk(d, b // 2, ruimte_boven + int(h * 0.06), post["reeks_label"], _klein_font(int(b * 0.028), b"Bold"), accent + (255,), int(b * 0.008))
     # Merkblok onderaan: vaste herkenning op elke post (woordmerk + handle)
     hy = h - ruimte_onder - int(h * (0.115 if v["layout"] == "kader" else 0.085))
     _woordmerk(d, b // 2, hy, "BIBLEVERSE", _klein_font(int(b * 0.024), b"Bold"), accent + (235,), int(b * 0.009))
@@ -261,37 +268,89 @@ def maak_afbeelding(post, pad, bg=None):
     img.convert("RGB").save(pad, quality=93)
     return pad
 
-def maak_video(post, pad, duur=9):
-    """Achtergrond met langzame zoom, tekst vrijwel direct in beeld (sterke eerste seconde). Veilige zones voor Reels/TikTok-interface."""
+def _stukjes(woorden, max_w=6):
+    """Verdeelt een vers in korte stukjes (op leestekens, hooguit max_w woorden) die na elkaar verschijnen."""
+    uit, huidig = [], []
+    for w in woorden:
+        huidig.append(w)
+        if w[-1] in ",;:.!?" or len(huidig) >= max_w:
+            uit.append(huidig); huidig = []
+    if huidig:
+        uit.append(huidig)
+    return uit
+
+def maak_video(post, pad, duur=None):
+    """Achtergrond met langzame zoom; het vers verschijnt stukje voor stukje, op leestempo.
+    Het eerste stukje staat er binnen een kwart seconde (sterke eerste seconde). Veilige zones voor Reels."""
     b, h = 1080, 1920
     with tempfile.TemporaryDirectory() as tmp:
         bg = _bg(post, int(b * 1.15), int(h * 1.15))
-        bgp, txp = os.path.join(tmp, "bg.png"), os.path.join(tmp, "tx.png")
+        bgp = os.path.join(tmp, "bg.png")
         bg.save(bgp)
-        tekstlaag(b, h, post, ruimte_boven=220, ruimte_onder=380).save(txp)
+        geo = []
+        vol = tekstlaag(b, h, post, ruimte_boven=220, ruimte_onder=380, geo=geo)
+        woorden = [w for g in geo for w in g["tekst"].split()]
+        stukjes = _stukjes(woorden)
+        d = ImageDraw.Draw(Image.new("L", (1, 1)))
+        def laag_tot(n):
+            """Tekstlaag waarin alleen de eerste n woorden van het vers zichtbaar zijn."""
+            masker = Image.new("L", (b, h), 255)
+            md = ImageDraw.Draw(masker)
+            teller = 0
+            for g in geo:
+                ws = g["tekst"].split()
+                if teller + len(ws) <= n:
+                    teller += len(ws); continue
+                zichtbaar = max(0, n - teller)
+                x0 = g["x"] + (d.textlength(" ".join(ws[:zichtbaar]) + " ", font=g["font"]) if zichtbaar else 0)
+                md.rectangle([x0, g["y"], g["x"] + g["w"] + 12, g["y"] + g["h"]], fill=0)
+                teller += len(ws)
+            alpha = Image.composite(vol.getchannel("A"), Image.new("L", (b, h), 0), masker)
+            l = vol.copy(); l.putalpha(alpha)
+            return l
+        # tijden: elk stukje verschijnt als het vorige gelezen kan zijn (ongeveer 3 woorden per seconde)
+        tijden, t, n_tot = [], 0.15, 0
+        for st in stukjes:
+            tijden.append(round(t, 2)); n_tot += len(st)
+            t += max(0.7, len(st) / 3.0)
+        if duur is None:
+            duur = int(min(18, max(9, t + 3)))
+        post["duur"] = duur
+        lagen = [laag_tot(0)]
+        n_tot = 0
+        for st in stukjes:
+            n_tot += len(st); lagen.append(laag_tot(n_tot))
+        paden = []
+        for i, l in enumerate(lagen):
+            pth = os.path.join(tmp, f"l{i}.png"); l.save(pth); paden.append(pth)
         fps = 30; n = duur * fps
         filt = (f"[0:v]scale={int(b*1.15)}:{int(h*1.15)},zoompan=z='1+0.08*on/{n}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)'"
-                f":d={n}:s={b}x{h}:fps={fps}[bg];"
-                f"[1:v]format=rgba,fade=t=in:st=0:d=0.25:alpha=1[tx];"
-                f"[bg][tx]overlay=0:0,fade=t=out:st={duur-0.6}:d=0.6,format=yuv420p[v]")
+                f":d={n}:s={b}x{h}:fps={fps}[bg];[bg][1:v]overlay=0:0[v0]")
+        for i in range(1, len(paden)):
+            filt += (f";[{i+1}:v]format=rgba,fade=t=in:st={tijden[i-1]}:d=0.35:alpha=1[t{i}]"
+                     f";[v{i-1}][t{i}]overlay=0:0[v{i}]")
+        laatste = len(paden) - 1
+        filt += f";[v{laatste}]fade=t=out:st={duur-0.6}:d=0.6,format=yuv420p[v]"
+        inputs = ["-i", bgp]
+        for pth in paden:
+            inputs += ["-loop", "1", "-framerate", str(fps), "-t", str(duur), "-i", pth]
+        ai = len(paden) + 1
         audio_in = ["-f", "lavfi", "-t", str(duur), "-i", "anullsrc=r=44100:cl=stereo"]
-        audio_map = "2:a"
+        audio_map = f"{ai}:a"
         m = post.get("muziek_pad")
         if m:
             start = post.get("muziek_start", 0)
             audio_in = ["-ss", str(start), "-t", str(duur), "-i", m]
-            afilt = f"[2:a]volume=0.8,afade=t=in:st=0:d=0.6,afade=t=out:st={duur-1.2}:d=1.2[am]"
+            afilt = f"[{ai}:a]volume=0.8,afade=t=in:st=0:d=0.6,afade=t=out:st={duur-1.2}:d=1.2[am]"
             amb = post.get("geluid_pad")
             if amb:
                 audio_in += ["-ss", "3", "-t", str(duur), "-i", amb]
-                afilt = (f"[2:a]volume=0.8,afade=t=in:st=0:d=0.6,afade=t=out:st={duur-1.2}:d=1.2[m1];"
-                         f"[3:a]volume=0.25,afade=t=in:st=0:d=1,afade=t=out:st={duur-1.2}:d=1.2[g1];"
+                afilt = (f"[{ai}:a]volume=0.8,afade=t=in:st=0:d=0.6,afade=t=out:st={duur-1.2}:d=1.2[m1];"
+                         f"[{ai+1}:a]volume=0.25,afade=t=in:st=0:d=1,afade=t=out:st={duur-1.2}:d=1.2[g1];"
                          f"[m1][g1]amix=inputs=2:duration=first:normalize=0[am]")
             filt += ";" + afilt
             audio_map = "[am]"
-        # Achtergrond als één frame: zoompan maakt daar zelf `n` frames van (snel en exact 9 s)
-        cmd = ["ffmpeg", "-y", "-loglevel", "error", "-i", bgp,
-               "-loop", "1", "-framerate", str(fps), "-t", str(duur), "-i", txp] + audio_in + [
+        cmd = ["ffmpeg", "-y", "-loglevel", "error"] + inputs + audio_in + [
                "-filter_complex", filt, "-map", "[v]", "-map", audio_map,
                "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-r", str(fps),
                "-c:a", "aac", "-t", str(duur), "-movflags", "+faststart", pad]
@@ -375,3 +434,24 @@ def maak_carrousel(post, basis):
     _tekstslide(post, "WAT BETEKENT DIT?", post["betekenis"], paden[1], 2, bg=delen[1])
     _tekstslide(post, "VANDAAG", post["toepassing"], paden[2], 3, bg=delen[2])
     return paden
+
+
+def maak_story(slide1, pad):
+    """Story-versie (1080x1920) van slide 1: de slide in het midden op een vervaagde versie van zichzelf."""
+    im = Image.open(slide1).convert("RGB")
+    b, h = 1080, 1920
+    achter = im.resize((int(h * im.width / im.height), h)).crop((0, 0, b, h)) if im.width / im.height < b / h else im.resize((b, int(b * im.height / im.width)))
+    achter = achter.resize((b, h)).filter(ImageFilter.GaussianBlur(40))
+    achter = Image.blend(achter, Image.new("RGB", (b, h), (0, 0, 0)), 0.25)
+    w = int(b * 0.86); kaart = im.resize((w, int(w * im.height / im.width)))
+    x, y = (b - w) // 2, (h - kaart.height) // 2 - 40
+    schaduw = Image.new("L", (b, h), 0)
+    ImageDraw.Draw(schaduw).rounded_rectangle([x + 8, y + 16, x + w + 8, y + kaart.height + 16], 24, fill=120)
+    achter.paste((0, 0, 0), (0, 0), schaduw.filter(ImageFilter.GaussianBlur(18)))
+    masker = Image.new("L", kaart.size, 0)
+    ImageDraw.Draw(masker).rounded_rectangle([0, 0, kaart.width, kaart.height], 24, fill=255)
+    achter.paste(kaart, (x, y), masker)
+    d = ImageDraw.Draw(achter)
+    d.text((b // 2, y + kaart.height + 70), "Nieuwe post · bekijk het profiel", font=_klein_font(36, b"SemiBold"), fill=(255, 255, 255), anchor="ma")
+    achter.save(pad, quality=92)
+    return pad

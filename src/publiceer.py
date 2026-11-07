@@ -92,6 +92,18 @@ def publiceer_instagram(p, uid, tok):
     info = http("GET", f"{API}/{mid}", {"fields": "permalink,timestamp", "access_token": tok})
     return mid, info.get("permalink")
 
+def publiceer_story(p, uid, tok):
+    """Zet de post ook als story op Instagram (meer bereik bij bestaande volgers). Fouten zijn niet erg."""
+    if p["variabelen"]["formaat"] == "video":
+        params = {"media_type": "STORIES", "video_url": p["media_url"]}
+    elif p.get("story_url"):
+        params = {"media_type": "STORIES", "image_url": p["story_url"]}
+    else:
+        return None
+    cid = http("POST", f"{API}/{uid}/media", dict(params, access_token=tok))["id"]
+    wacht_klaar(cid, tok)
+    return http("POST", f"{API}/{uid}/media_publish", {"creation_id": cid, "access_token": tok})["id"]
+
 # ---------- Facebook-pagina ----------
 _PAGE_TOKEN = {}
 
@@ -170,9 +182,11 @@ def stats_facebook(p, fb, tok):
         pass
     return uit
 
-def tijdstip(p):
+def tijdstip(p, plat="instagram"):
+    """Tijdstip per platform: Facebook heeft een eigen, apart geleerd tijdstip (tijdslot_fb)."""
     d = dt.date.fromisoformat(p["datum"])
-    u, m = map(int, p["variabelen"]["tijdslot"].split(":"))
+    slot = p["variabelen"].get("tijdslot_fb") if plat == "facebook" and p["variabelen"].get("tijdslot_fb") else p["variabelen"]["tijdslot"]
+    u, m = map(int, slot.split(":"))
     return dt.datetime(d.year, d.month, d.day, u, m, tzinfo=TZ)
 
 def controleer_aantal(cfg, posts, nu):
@@ -205,13 +219,14 @@ def cmd_posten():
             S.cmd_dashboard()
         except Exception as e:
             print("Tussentijdse cijfers mislukt:", e)
-    klaar = [p for p in posts if p["status"] == "gerenderd" and tijdstip(p) <= nu]
+    klaar = [p for p in posts if p["status"] == "gerenderd"
+             and any(tijdstip(p, pl) <= nu for pl in cfg["platformen_actief"])]
     if not klaar:
         print("Niets te doen"); return
     uid, tok = env()
     fouten = 0
     for p in sorted(klaar, key=tijdstip):
-        if nu - tijdstip(p) > TE_LAAT:
+        if all(nu - tijdstip(p, pl) > TE_LAAT for pl in cfg["platformen_actief"]):
             p["status"] = "overgeslagen"
             S.cmd_log(f"{p['id']} overgeslagen: tijdstip gemist", "fout"); continue
         g = cfg.get("goedkeuren") or {}
@@ -221,11 +236,20 @@ def cmd_posten():
             p["status"] = "overgeslagen"
             S.cmd_log(f"{p['id']} overgeslagen: daglimiet bereikt", "fout"); continue
         for plat in cfg["platformen_actief"]:
-            if plat in p.get("gepubliceerd", {}):
+            if plat in p.get("gepubliceerd", {}) or plat in p.get("gemist", []) or tijdstip(p, plat) > nu:
                 continue
+            if nu - tijdstip(p, plat) > TE_LAAT:
+                p.setdefault("gemist", []).append(plat)  # dit platform is gemist; de andere gaan door
+                S.cmd_log(f"{p['id']} op {plat} overgeslagen: tijdstip gemist", "fout"); continue
             try:
                 if plat == "instagram":
                     mid, link = publiceer_instagram(p, uid, tok)
+                    if cfg.get("stories", True):
+                        try:
+                            if publiceer_story(p, uid, tok):
+                                S.cmd_log(f"{p['id']} ook als story geplaatst")
+                        except Exception as e:
+                            S.cmd_log(f"{p['id']} story mislukt (post zelf staat wel online): {str(e)[:120]}")
                 elif plat == "facebook":
                     mid, link = publiceer_facebook(p, tok)
                 else:
@@ -242,7 +266,7 @@ def cmd_posten():
                 if p["fouten"] >= 3:
                     p["status"] = "fout"
         ondersteund = [x for x in cfg["platformen_actief"] if x in ("instagram", "facebook")]
-        klaar_overal = all(x in p.get("gepubliceerd", {}) for x in ondersteund)
+        klaar_overal = all(x in p.get("gepubliceerd", {}) or x in p.get("gemist", []) for x in ondersteund)
         if p["status"] != "fout" and (klaar_overal or (p.get("gepubliceerd") and p.get("fouten", 0) >= 3)):
             p["status"] = "gepubliceerd"; vandaag_online += 1
         # anders blijft de status 'gerenderd' en probeert de volgende run het ontbrekende platform opnieuw
@@ -251,7 +275,7 @@ def cmd_posten():
     if fouten:
         sys.exit(f"{fouten} fout(en) bij publiceren, zie logboek")
 
-METRICS = ["reach", "likes", "comments", "shares", "saved", "views", "follows"]
+METRICS = ["reach", "likes", "comments", "shares", "saved", "views", "follows", "ig_reels_avg_watch_time"]
 
 def insights(mid, tok):
     """Vraagt de metrics op; sommige zijn niet voor elk mediatype beschikbaar, dan één voor één."""
@@ -286,7 +310,7 @@ def verse_cijfers(posts):
                 p.setdefault("stats", {}).setdefault(plat, {})["laatst"] = {
                     "t": nu.isoformat(timespec="minutes"), "views": m.get("views"), "reach": m.get("reach"),
                     "likes": m.get("likes"), "comments": m.get("comments"), "shares": m.get("shares"),
-                    "saves": m.get("saved"), "follows": m.get("follows")}
+                    "saves": m.get("saved"), "follows": m.get("follows"), "avg_watch_ms": m.get("ig_reels_avg_watch_time")}
                 n += 1
     return n
 
@@ -353,7 +377,7 @@ def cmd_statistieken():
         rij.append({"post_id": p["id"], "platform": plat, "moment": moment,
                     "views": m.get("views"), "reach": m.get("reach"), "likes": m.get("likes"),
                     "comments": m.get("comments"), "shares": m.get("shares"), "saves": m.get("saved"),
-                    "follows": m.get("follows")})
+                    "follows": m.get("follows"), "avg_watch_ms": m.get("ig_reels_avg_watch_time")})
     if rij:
         json.dump(rij, open(S.P("stats_tmp.json"), "w"))
         S.cmd_stats(S.P("stats_tmp.json"))

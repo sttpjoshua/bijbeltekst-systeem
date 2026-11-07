@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T00:37:53",
+ "updated": "2026-11-08T00:50:09",
  "agents": {
   "verskiezer": {
    "t": "2026-11-07T22:23:58",
@@ -7,12 +7,12 @@
    "state": "done"
   },
   "designer": {
-   "t": "2026-11-08T00:37:53",
-   "task": "Psalm 23:1 opnieuw gemaakt in stijl mint",
+   "t": "2026-11-08T00:50:09",
+   "task": "Ontwierp 2 Timotheüs 1:7 in stijl bosgroen",
    "state": "done"
   },
   "video": {
-   "t": "2026-11-08T00:36:47",
+   "t": "2026-11-08T00:50:08",
    "task": "Monteerde video Johannes 14:27 met muziek",
    "state": "done"
   },
@@ -52,6 +52,14 @@
  ],
  "log": [
   {
+   "t": "00:49",
+   "msg": "Experiment deze week: stijl en thema"
+  },
+  {
+   "t": "00:49",
+   "msg": "Strategie vernieuwd: weekexperiment met slimmer kiezen, eigen Facebook-tijdstip, kijkduur bij video, vraag ond"
+  },
+  {
    "t": "00:37",
    "msg": "Bediening: Psalm 23:1 opnieuw gemaakt in stijl mint"
   },
@@ -90,14 +98,6 @@
   {
    "t": "00:16",
    "msg": "Verbinding met Instagram werkt (@bibleverse_nl)"
-  },
-  {
-   "t": "23:38",
-   "msg": "Carrousels hebben nu één doorlopende achtergrond over de drie slides; bij een foto loopt die zacht over in een"
-  },
-  {
-   "t": "23:36",
-   "msg": "Losse afbeeldingen vervallen: een beeldpost is voortaan altijd een carrousel met uitleg. Psalm 23:1 en 2 Timot"
   }
  ],
  "lampen": [

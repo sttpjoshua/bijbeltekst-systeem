@@ -154,7 +154,7 @@ input[type=range]{width:100%}input.veld,select.veld{font:inherit;font-size:13px;
 <div id="tip"></div>
 <div id="galerij" onclick="if(event.target===this)this.style.display='none'"><button class="sluit" onclick="galerij.style.display='none'">✕</button><div class="rij"></div><div class="tel"></div></div>
 <script>
-const NAMEN={huisstijl:"Huisstijl",thema:"Thema",hook_stijl:"Hook-stijl",formaat:"Formaat",uitleg_op_beeld:"Uitleg op beeld",achtergrondbron:"Achtergrond",boekgroep:"Bijbelboek",lengte:"Lengte vers",bron:"Bekend of ontdekking",tijdslot:"Tijdstip"};
+const NAMEN={huisstijl:"Huisstijl",thema:"Thema",hook_stijl:"Hook-stijl",formaat:"Formaat",uitleg_op_beeld:"Uitleg op beeld",achtergrondbron:"Achtergrond",boekgroep:"Bijbelboek",lengte:"Lengte vers",bron:"Bekend of ontdekking",vraag_onderaan:"Vraag onderaan",tijdslot:"Tijdstip"};
 const STATUS={wacht_op_tekst:"Wacht op tekst",gerenderd:"Klaar, gaat online",afgekeurd:"Overgeslagen door jou",overgeslagen:"Overgeslagen",gepubliceerd:"Gepubliceerd",fout:"Fout"};
 const fmt=n=>n==null?"–":Number(n).toLocaleString("nl-NL");
 const tip=document.getElementById("tip");
@@ -351,7 +351,7 @@ function bouwPlanning(){
       const kleur=STIJLKLEUR[v.huisstijl]||"#999";v.huisstijl=v.huisstijl||(v.palet||"").replace("_"," ");
       const klik=(x.soort==="plan"||x.soort==="maken")?`toonPlan('${x.id}')`:`toonGalerij('${x.id}')`;
       return `<div class="slot" style="cursor:pointer" onclick="${klik}"><span class="tijd">${v.tijdslot}</span><div class="wat"><b class="st-${x.soort}">${{plan:"○",maken:"◐"}[x.soort]||"●"} ${x.ref}</b>
-        <span class="sub">${FORMAAT[v.formaat]||v.formaat} · ${v.thema.replace("_"," ")}</span><br>
+        ${x.reeks_label?`<span class="tag" style="background:var(--accent);color:#fff;border-color:var(--accent)">${x.reeks_label}</span><br>`:""}<span class="sub">${FORMAAT[v.formaat]||v.formaat} · ${v.thema.replace("_"," ")}${v.tijdslot_fb&&v.tijdslot_fb!==v.tijdslot?` · FB ${v.tijdslot_fb}`:""}</span><br>
         <span class="sub"><span class="stip" style="background:${kleur}"></span>${v.huisstijl}${v.achtergrondbron==="beeld"?" · foto":""}</span></div></div>`}).join("")}</div>`}).join("");
 }
 function toonPlan(id){
@@ -451,7 +451,14 @@ function bouwInzichten(){
   const el=document.getElementById("inzichten"),nodig=D.min_posts_voor_leren,gem=D.gemeten_posts||0;
   let h="";
   if(gem<nodig)h+=`<div class="inzicht"><b>Nog aan het verzamelen</b><div class="voortgang"><div style="width:${Math.round(gem/nodig*100)}%"></div></div><div class="sub">${gem} van ${nodig} posts gemeten. Daarna begint het systeem conclusies te trekken en bij te sturen.</div></div>`;
+  const ex=D.config.experiment;
+  if(ex&&ex.dims&&ex.tot>=new Date().toISOString().slice(0,10))h+=`<div class="inzicht"><b>🧪 Experiment deze week</b><div>Het systeem test nu bewust: <b>${ex.dims.map(d=>(NAMEN[d]||d).toLowerCase()).join("</b> en <b>")}</b>. De rest volgt wat al werkt.</div><div class="sub">Tot en met ${new Date(ex.tot).toLocaleDateString("nl-NL",{day:"numeric",month:"long"})}. Daarna kiest het systeem zelf het volgende experiment: waar het het minst zeker over is.</div></div>`;
+  const ie=D.inzichten_extra||{};
+  const zin=(lijst,pre)=>{const o=(lijst||[]).filter(x=>x.n>=2);if(o.length<2)return "";return `${pre} <b>${o[0].optie}</b> (${o[0].gem.toFixed(1).replace(".",",")}x, ${o[0].n} posts), het minst ${o[o.length-1].optie} (${o[o.length-1].gem.toFixed(1).replace(".",",")}x).`};
+  const wd=zin(ie.weekdag,"Beste dag:"),ti=zin(ie.tijd_ig,"Instagram: beste tijd"),tf=zin(ie.tijd_fb,"Facebook: beste tijd"),fi=zin(ie.formaat_ig,"Instagram:"),ff=zin(ie.formaat_fb,"Facebook:");
+  if(wd||ti||tf||fi||ff)h+=`<div class="inzicht"><div class="sub">Per dag en per platform</div>${[wd,ti,tf,fi,ff].filter(Boolean).map(x=>`<div>${x}</div>`).join("")}</div>`;
   for(const d of D.inzichten_data||[]){
+    if(d.dimensie==="vraag_onderaan"){const o=d.opties.filter(x=>x.n>=1);if(o.length===2){const ja=o.find(x=>String(x.optie)==="true"),nee=o.find(x=>String(x.optie)==="false");if(ja&&nee)h+=`<div class="inzicht"><div class="sub">Vraag onderaan</div>Met een vraag onderaan: ${ja.gem.toFixed(1).replace(".",",")}x, zonder: ${nee.gem.toFixed(1).replace(".",",")}x.<div class="sub">Gemeten op ${ja.n} en ${nee.n} posts.</div></div>`}continue}
     const o=d.opties.filter(x=>x.n>=1&&x.optie!=null);if(o.length<2)continue;
     const best=o[0],slecht=o[o.length-1],n=Math.min(best.n,slecht.n);
     const z=n<3?"te weinig metingen":n<8?"eerste aanwijzing":"redelijk zeker";

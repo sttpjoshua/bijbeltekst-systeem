@@ -71,6 +71,7 @@ def main(raw):
         p = vind(posts, o["post"])
         u, m = map(int, o["tijd"].split(":"))
         p["variabelen"]["tijdslot"] = f"{u:02d}:{m:02d}"
+        p["variabelen"]["tijdslot_fb"] = p["variabelen"]["tijdslot"]  # handmatig verplaatst: beide platformen tegelijk
         if o.get("datum"):
             p["datum"] = dt.date.fromisoformat(o["datum"]).isoformat()
         melding = f"Post {p['id']} verplaatst naar {p['datum']} {p['variabelen']['tijdslot']}"
@@ -81,6 +82,7 @@ def main(raw):
         nu = dt.datetime.now()
         p["datum"] = nu.date().isoformat()
         p["variabelen"]["tijdslot"] = (nu - dt.timedelta(minutes=1)).strftime("%H:%M")
+        p["variabelen"]["tijdslot_fb"] = p["variabelen"]["tijdslot"]
         p["handmatig_tijdstip"] = True
         melding = f"Post {p['id']} ({p['ref']}) wordt nu gepost"
     elif a == "vers_uitsluiten":

@@ -88,3 +88,12 @@ Elke carrousel heeft één doorlopende achtergrond over de drie slides (render.p
 
 ## Reserveverzen (voor "ander vers" in het kantoor)
 Na het schrijven en renderen van de posts (dagelijkse run, en avondcontrole als er posts bij kwamen): `python3 src/systeem.py reserve --datum MORGEN`. Vul daarna in `data/posts.json` bij elke post onder `reserve` de velden hook, caption, hashtags en, bij carrousel, betekenis en toepassing in, volgens dezelfde regels als de post zelf (caption begint met de hook en bevat het vers letterlijk en de verwijzing). Lees het reservevers ook na; past het los niet, haal de `reserve` dan weg en draai `reserve` opnieuw. Joshua kan dan in het kantoor met één klik naar het reservevers wisselen; het beeld wordt dan direct in GitHub gemaakt.
+
+## Strategie (vaste regels sinds 8 november)
+- **Kiezen gaat via Thompson sampling met een weekexperiment.** `config.json` › `experiment` zegt welke 2 onderdelen deze week bewust getest worden; het systeem kiest automatisch een nieuw experiment als het oude is verlopen (bij `plan`). Verander de keuzes van het systeem niet met de hand.
+- **Facebook heeft een eigen tijdstip** (`variabelen.tijdslot_fb`), apart geleerd.
+- **Vraag onderaan:** staat `vraag_onderaan` op true, eindig de caption met één oprechte, open vraag die bij het vers past (bijvoorbeeld "Welk woord raakt jou vandaag?"). Geen "typ amen", "tag iemand" of andere trucjes. Staat hij op false: geen vraag aan het eind.
+- **Reeksen** (`data/reeksen.json`): Advent (29 nov t/m 24 dec, 07:30, label "ADVENT · DAG n"), Kerst (25-26 dec), Nieuwjaar (1 jan), elke maandag "Moed voor de week" (07:30) en elke zondag "Vers van de week" (12:15, het best scorende vers van de afgelopen week). Bij een reekspost noem je de reeks in de caption (bijvoorbeeld "Advent, dag 3:" of "Moed voor de week:") en schrijf je de uitleg in het licht van de reeks (Advent: verwachting en licht richting Kerst).
+- **Stories:** elke post gaat automatisch ook als story op Instagram (`stories` in config).
+- **Video's:** het vers verschijnt stukje voor stukje; de lengte past zich aan (9 tot 18 seconden). Niets aan te doen in de teksten.
+- Na snel leren gaat het systeem terug naar **2 posts per dag**.
