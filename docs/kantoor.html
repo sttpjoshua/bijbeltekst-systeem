@@ -169,7 +169,7 @@ AG.forEach((a,i)=>{
 function mk(cls){const d=document.createElement('div');d.className=cls;document.getElementById('ov').appendChild(d);return d}
 
 function setDest(a,d){
-  if(a.dest===d)return;a.dest=d;
+  if(a.dest===d)return;a.dest=d;a.kuiert=false;a.doel=null;a.volgende=0;
   const cx=COLX[a.col],ay=AISLE[a.row],home={x:cx,y:DESKY[a.row]+2},slot=SLOTS[a.i];
   a.path=d==='home'?[{x:LANE,y:ay},{x:cx,y:ay},home]:[{x:cx,y:ay},{x:LANE,y:ay},slot];
 }
@@ -180,6 +180,21 @@ function move(a,dt){
   if(d<=sp){a.x=t.x;a.y=t.y;a.path.shift()}else{a.x+=dx/d*sp;a.y+=dy/d*sp}
 }
 const seated=a=>a.dest==='home'&&!a.path.length;
+/* Pauze betekent niet stilzitten: wie niets te doen heeft, haalt koffie, kijkt even rond of praat bij. */
+const KUIER=[{x:258,y:60},{x:286,y:60},{x:300,y:60},{x:240,y:104},{x:300,y:104},{x:246,y:192},{x:304,y:192},{x:232,y:150}];
+function rondlopen(a,now){
+  if(a.state!=='idle'||a.dest!=='lounge'||a.path.length)return;
+  if(!a.volgende){a.volgende=now+3000+Math.random()*12000;return}
+  if(now<a.volgende)return;
+  const L=LANE+4;
+  if(a.kuiert){a.kuiert=false;const s=SLOTS[a.i];a.path=[{x:L,y:a.y},{x:L,y:s.y},s];a.volgende=now+9000+Math.random()*16000}
+  else{
+    const bezet=AG.filter(b=>b!==a&&b.doel).map(b=>b.doel);
+    const vrij=KUIER.filter(k=>!bezet.includes(k));const k=vrij[Math.floor(Math.random()*vrij.length)]||KUIER[0];
+    a.kuiert=true;a.doel=k;a.path=[{x:L,y:a.y},{x:L,y:k.y},k];a.volgende=now+4000+Math.random()*7000;
+  }
+  if(!a.kuiert)a.doel=null;
+}
 
 /* ---------- themes ---------- */
 const THEMES={
@@ -329,7 +344,7 @@ function frame(now){
   const dt=Math.min(.05,(now-last)/1000);last=now;
   g.drawImage(bgc,0,0);
   beams(now);clock();
-  AG.forEach(a=>{setDest(a,a.state==='idle'?'lounge':'home');move(a,dt)});
+  AG.forEach(a=>{setDest(a,a.state==='idle'?'lounge':'home');rondlopen(a,now);move(a,dt)});
   for(let r=0;r<2;r++)AG.filter(a=>a.row===r).forEach(a=>{
     if(seated(a))drawChar(a,now);drawDesk(a,now);
   });
