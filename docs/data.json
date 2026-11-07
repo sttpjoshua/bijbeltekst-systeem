@@ -1,15 +1,18 @@
 {
- "gegenereerd": "2026-11-07T14:34",
+ "gegenereerd": "2026-11-07T14:55",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
   "kanaalnaam": "Bibleverse",
   "posts_per_dag": 1,
+  "max_posts_per_dag": 3,
   "verkenning": 0.2,
   "platformen_actief": [
    "instagram",
    "facebook"
-  ]
+  ],
+  "max_aandeel_beeld": 0.33,
+  "verzen_uitsluiten": null
  },
  "strategie": {
   "versie": 1,
@@ -130,6 +133,7 @@
     "achtergrond": "effen",
     "hook_op_beeld": false
    },
+   "vers_id": "Isaiah-43-19-19",
    "media": "docs/media/2026-11/2026-11-08-1-1.jpg",
    "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-1-1.jpg",
    "thumb": "thumbs/2026-11-08-1.jpg",
@@ -156,6 +160,7 @@
     "formaat": "video",
     "tijdslot": "12:15"
    },
+   "vers_id": "Colossians-3-15-15",
    "media": "docs/media/2026-11/2026-11-07-1.mp4",
    "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-07-1.mp4",
    "thumb": "thumbs/2026-11-07-1.jpg",
@@ -295,6 +300,31 @@
    "t": "2026-11-07T14:34",
    "soort": "fout",
    "tekst": "Privé repo bibleverse-materiaal kon niet gecloned worden (geen toegang in deze sessie); post van 8 nov gebruikt kleurverloop, geen effect want carrousel"
+  },
+  {
+   "t": "2026-11-07T14:34",
+   "soort": "info",
+   "tekst": "1 post klaargezet voor 8 nov 07:30 (Jesaja 43:19, carrousel)"
+  },
+  {
+   "t": "2026-11-07T14:55",
+   "soort": "info",
+   "tekst": "Verbinding met Instagram werkt (@bibleverse_nl)"
+  },
+  {
+   "t": "2026-11-07T14:55",
+   "soort": "info",
+   "tekst": "Token heeft alle rechten, ook voor statistieken"
+  },
+  {
+   "t": "2026-11-07T14:55",
+   "soort": "info",
+   "tekst": "Verbinding met Facebook-pagina werkt (Bibleversenl)"
+  },
+  {
+   "t": "2026-11-07T14:55",
+   "soort": "info",
+   "tekst": "Statistieken lezen werkt"
   }
  ],
  "recente_fouten": [
