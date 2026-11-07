@@ -9,7 +9,7 @@ Commando's (vanuit de projectmap):
   python3 src/systeem.py dashboard                     schrijft docs/data.json voor het dashboard
   python3 src/systeem.py check                         controleert of alles klopt
 """
-import json, os, sys, random, math, datetime as dt, argparse, statistics, time
+import json, os, sys, random, subprocess, math, datetime as dt, argparse, statistics, time
 os.environ["TZ"] = "Europe/Amsterdam"  # alle datums en tijden in Nederlandse tijd
 time.tzset()
 
@@ -54,6 +54,9 @@ DIMENSIES = {
     "formaat": ["afbeelding", "video", "carrousel"],
     "uitleg_op_beeld": [True, False],
     "achtergrondbron": ["verloop", "beeld"],
+    "boekgroep": ["psalmen", "spreuken", "wijsheid", "profeten", "evangelien", "brieven"],
+    "lengte": ["kort", "middel", "lang"],
+    "bron": ["bekend", "ontdekking"],
     "tijdslot": ["07:30", "12:15", "17:45", "20:30", "22:00"],
 }
 
@@ -121,6 +124,49 @@ def materiaal(cfg):
 
 BRON = {"NBV21": "NBV21 \u00a9 Nederlands-Vlaams Bijbelgenootschap"}
 
+GROEP_NL = {"Psalm": "psalmen", "Spreuken": "spreuken", "Prediker": "wijsheid", "Job": "wijsheid", "Hooglied": "wijsheid",
+            "Mattheüs": "evangelien", "Markus": "evangelien", "Lukas": "evangelien", "Johannes": "evangelien"}
+PROFETEN = {"Jesaja", "Jeremia", "Klaagliederen", "Ezechiël", "Daniël", "Hosea", "Joël", "Amos", "Jona", "Micha", "Nahum",
+            "Habakuk", "Sefanja", "Haggaï", "Zacharia", "Maleachi"}
+OT_VERHAAL = {"Genesis", "Exodus", "Deuteronomium", "Jozua", "Ruth", "1 Samuël", "2 Samuël", "1 Koningen", "2 Koningen",
+              "1 Kronieken", "2 Kronieken", "Nehemia", "Numeri", "Leviticus"}
+
+def boekgroep(ref):
+    boek = ref.rsplit(" ", 1)[0]
+    if boek in GROEP_NL:
+        return GROEP_NL[boek]
+    if boek in PROFETEN:
+        return "profeten"
+    if boek in OT_VERHAAL:
+        return "wijsheid"  # de paar losse verhaalverzen tellen mee bij 'wijsheid' (overig OT)
+    return "brieven"
+
+def lengteklas(tekst):
+    n = len(tekst)
+    return "kort" if n < 90 else "middel" if n < 170 else "lang"
+
+_ALLE = None
+def alle_verzen():
+    """Bekende verzen (handgekozen) + ontdekkingen uit de hele Bijbel + eventuele NBV21-verzen, met kenmerken."""
+    global _ALLE
+    if _ALLE is None:
+        uit, gezien = [], set()
+        for v in laad("data/verzen.json", []) + extra_verzen():
+            v = dict(v, bron="bekend", kwaliteit=12, boekgroep=boekgroep(v["ref"]), lengte=lengteklas(v["tekst"]))
+            uit.append(v); gezien.add(v["id"])
+        for v in laad("data/bijbel_pool.json", []):
+            if v["id"] not in gezien:
+                uit.append(dict(v, bron="ontdekking", boekgroep=v["boekgroep"] if v["boekgroep"] != "verhaal" else "wijsheid"))
+        _ALLE = uit
+    return _ALLE
+
+def toppers(posts):
+    """Verzen die duidelijk beter scoorden; die mogen na 30 dagen al terugkomen."""
+    sc = {}
+    for p, plat, s in post_scores(posts):
+        sc.setdefault(p["vers_id"], []).append(s)
+    return {k for k, v in sc.items() if len(v) and sum(v) / len(v) >= 1.3}
+
 def extra_verzen():
     """Verzen uit een moderne vertaling, aangeleverd in de privé repo (verzen_nbv21.csv: ref;tekst;thema)."""
     import csv
@@ -157,8 +203,12 @@ def kies_posts(datum, cfg, strat, posts, verzen, mat, n_start, n, gebruikte_slot
     grens = (dt.date.fromisoformat(datum) - dt.timedelta(days=cfg["vers_niet_herhalen_dagen"])).isoformat()
     recent = {p["vers_id"] for p in posts if p["datum"] >= grens} | set(cfg.get("verzen_uitsluiten", []))
     recent |= {k for k, tot in cfg.get("verzen_later", {}).items() if tot >= datum}  # 'ander vers' op het dashboard
+    # Toppers mogen na 30 dagen al terug
+    grens30 = (dt.date.fromisoformat(datum) - dt.timedelta(days=30)).isoformat()
+    top = toppers(posts)
+    recent -= {p["vers_id"] for p in posts if p["vers_id"] in top and p["datum"] < grens30
+               and not any(q["vers_id"] == p["vers_id"] and q["datum"] >= grens30 for q in posts)}
     gebruikte_slots = set(gebruikte_slots)
-    nbv_alle = extra_verzen()
     nieuw = []
     for i in range(n):
         v, bron = {}, {}
@@ -175,15 +225,18 @@ def kies_posts(datum, cfg, strat, posts, verzen, mat, n_start, n, gebruikte_slot
             aandeel = sum(1 for p in recent14 if p["variabelen"].get("achtergrondbron") == "beeld") / max(1, len(recent14))
             if (mat is not None and not mat["beelden"]) or aandeel >= cfg.get("max_aandeel_beeld", 0.33):
                 v["achtergrondbron"], bron["achtergrondbron"] = "verloop", "limiet"
-        # Eerst de moderne vertaling (als aangeleverd), anders de Statenvertaling
-        nbv = [x for x in nbv_alle if x["id"] not in recent]
-        kandidaten = [x for x in nbv if x["thema"] == v["thema"]] or nbv
-        if not kandidaten:
-            kandidaten = [x for x in verzen if x["thema"] == v["thema"] and x["id"] not in recent]
-        if not kandidaten:
-            kandidaten = [x for x in verzen if x["id"] not in recent] or verzen
-        vers = rnd.choice(kandidaten)
-        v["thema"] = vers["thema"]
+        # Uit de hele Bijbel: eerst alles laten kloppen, dan stap voor stap loslaten
+        vrij = [x for x in alle_verzen() if x["id"] not in recent]
+        kandidaten = []
+        for velden in (("thema", "boekgroep", "lengte", "bron"), ("thema", "boekgroep", "bron"), ("thema", "bron"),
+                       ("thema", "boekgroep"), ("thema",), ("bron",), ()):
+            kandidaten = [x for x in vrij if all(x[f] == v[f] for f in velden)]
+            if kandidaten:
+                break
+        kandidaten = kandidaten or alle_verzen()
+        vers = rnd.choices(kandidaten, weights=[x.get("kwaliteit", 6) ** 2 for x in kandidaten])[0]
+        for f in ("thema", "boekgroep", "lengte", "bron"):
+            v[f] = vers[f]  # wat er echt gepost wordt, telt mee bij het leren
         recent.add(vers["id"])
         nieuw.append({"id": f"{datum}-{n_start + i + 1}", "datum": datum, "status": "wacht_op_tekst",
                       "vers_id": vers["id"], "ref": vers["ref"], "tekst": vers["tekst"],
@@ -611,7 +664,7 @@ def dashboard_extra(cfg, posts):
     grens = (nu.date() - dt.timedelta(days=cfg["vers_niet_herhalen_dagen"])).isoformat()
     recent = {p["vers_id"] for p in posts if p["datum"] >= grens} | set(cfg.get("verzen_uitsluiten", []))
     per_thema = {}
-    for v in verzen + extra_verzen():
+    for v in alle_verzen():
         t = per_thema.setdefault(v["thema"], {"totaal": 0, "beschikbaar": 0, "nooit": 0})
         t["totaal"] += 1
         t["beschikbaar"] += v["id"] not in recent
@@ -620,7 +673,8 @@ def dashboard_extra(cfg, posts):
     lijst = mat.get("lijst", {})
     gebruik = lambda veld, namen: sorted(({"naam": os.path.basename(n), "keer": sum(1 for p in posts if p.get(veld) == n)} for n in namen),
                                           key=lambda x: -x["keer"])
-    voorraad = {"verzen": per_thema, "verzen_totaal": len(verzen), "nbv21": len(extra_verzen()),
+    voorraad = {"verzen": per_thema, "verzen_totaal": len(alle_verzen()), "nbv21": len(extra_verzen()),
+                "kandidaten": len(laad("data/bijbel_kandidaten.json", [])), "bekend": sum(1 for v in alle_verzen() if v["bron"] == "bekend"), "ontdekking": sum(1 for v in alle_verzen() if v["bron"] == "ontdekking"),
                 "per_dag": cfg["posts_per_dag"],
                 "muziek": gebruik("muziek", lijst.get("muziek", [])), "beelden": gebruik("beeld", lijst.get("beelden", [])),
                 "materiaal_bijgewerkt": mat.get("bijgewerkt")}
@@ -769,6 +823,46 @@ def cmd_vers(thema, boek, h, v1, v2=None):
     bewaar("data/verzen.json", verzen)
     print("Toegevoegd:", ref, "|", t)
 
+def cmd_vervang(pid, reden=""):
+    """Vers van een post past niet los van de context: nooit meer gebruiken en een ander vers met dezelfde kenmerken kiezen."""
+    cfg, strat = laad("config.json"), vul_strategie_aan(laad("strategie.json") or nieuwe_strategie())
+    posts = laad("data/posts.json", [])
+    p = next((x for x in posts if x["id"] == pid), None)
+    if not p or p["status"] not in ("wacht_op_tekst", "gerenderd"):
+        sys.exit("Post niet gevonden of al online")
+    cfg.setdefault("verzen_uitsluiten", [])
+    if p["vers_id"] not in cfg["verzen_uitsluiten"]:
+        cfg["verzen_uitsluiten"].append(p["vers_id"])
+    af = laad("data/pool_afgekeurd.json", [])
+    if p["vers_id"] not in af:
+        bewaar("data/pool_afgekeurd.json", af + [p["vers_id"]])
+    bewaar("config.json", cfg)
+    oud = p["ref"]
+    rest = [x for x in posts if x["id"] != pid]
+    nieuw = kies_posts(p["datum"], cfg, strat, rest, laad("data/verzen.json"), None, 0, 1, set(), random.Random(pid + oud))[0]
+    v = nieuw["variabelen"]
+    for f in ("thema", "boekgroep", "lengte", "bron"):
+        p["variabelen"][f] = v[f]
+    p.update({k: nieuw[k] for k in ("vers_id", "ref", "tekst", "vertaling")})
+    p.update({"status": "wacht_op_tekst", "hook": "", "caption": "", "hashtags": [], "uitleg": "", "betekenis": "", "toepassing": ""})
+    bewaar("data/posts.json", posts)
+    cmd_log(f"{oud} vervangen door {p['ref']} ({reden or 'past niet los van de context'})")
+    print(json.dumps({k: p[k] for k in ("id", "ref", "tekst", "variabelen")}, ensure_ascii=False, indent=1))
+
+def cmd_kandidaten(n=60):
+    """Toont nog niet beoordeelde verzen uit de hele Bijbel (voor de wekelijkse keuring)."""
+    for x in laad("data/bijbel_kandidaten.json", [])[:int(n)]:
+        print(f"{x['id']} | {x['ref']} | {x['thema']} | {x['tekst']}")
+
+def cmd_keur(oordeel, ids):
+    """keur goed ID ID ... of keur af ID ID ...: past de pool aan en bouwt hem opnieuw."""
+    pad = "data/pool_goedgekeurd.json" if oordeel == "goed" else "data/pool_afgekeurd.json"
+    lijst = laad(pad, [])
+    lijst += [i for i in ids if i not in lijst]
+    bewaar(pad, lijst)
+    subprocess.run([sys.executable, P("tools/bouw_bijbel.py")], check=True)
+    print(len(ids), "verzen", "goedgekeurd" if oordeel == "goed" else "afgekeurd")
+
 def cmd_opgelost():
     """Markeert alle huidige fouten in het logboek als opgelost (verdwijnen uit de rode balk)."""
     log = laad("data/logboek.json", [])
@@ -795,6 +889,9 @@ if __name__ == "__main__":
     x = a.parse_args()
     {"kies": lambda: cmd_kies(x.datum), "render": lambda: cmd_render(x.datum), "plan": lambda: cmd_plan(),
         "gezond": lambda: gezond(x.args[0], True, " ".join(x.args[1:])),
+        "vervang": lambda: cmd_vervang(x.args[0], " ".join(x.args[1:])),
+        "kandidaten": lambda: cmd_kandidaten(*(x.args[:1] or [60])),
+        "keur": lambda: cmd_keur(x.args[0], x.args[1:]),
      "registreer": lambda: cmd_registreer(*x.args), "stats": lambda: cmd_stats(x.args[0]),
      "leer": cmd_leer, "dashboard": cmd_dashboard, "check": cmd_check,
      "log": lambda: cmd_log(*x.args), "vers": lambda: cmd_vers(*x.args), "opruimen": lambda: cmd_opruimen(*x.args), "opgelost": cmd_opgelost}[x.cmd]()

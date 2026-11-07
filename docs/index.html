@@ -154,7 +154,7 @@ input[type=range]{width:100%}input.veld,select.veld{font:inherit;font-size:13px;
 <div id="tip"></div>
 <div id="galerij" onclick="if(event.target===this)this.style.display='none'"><button class="sluit" onclick="galerij.style.display='none'">✕</button><div class="rij"></div><div class="tel"></div></div>
 <script>
-const NAMEN={huisstijl:"Huisstijl",thema:"Thema",hook_stijl:"Hook-stijl",formaat:"Formaat",uitleg_op_beeld:"Uitleg op beeld",achtergrondbron:"Achtergrond",tijdslot:"Tijdstip"};
+const NAMEN={huisstijl:"Huisstijl",thema:"Thema",hook_stijl:"Hook-stijl",formaat:"Formaat",uitleg_op_beeld:"Uitleg op beeld",achtergrondbron:"Achtergrond",boekgroep:"Bijbelboek",lengte:"Lengte vers",bron:"Bekend of ontdekking",tijdslot:"Tijdstip"};
 const STATUS={wacht_op_tekst:"Wacht op tekst",gerenderd:"Klaar, gaat online",afgekeurd:"Overgeslagen door jou",overgeslagen:"Overgeslagen",gepubliceerd:"Gepubliceerd",fout:"Fout"};
 const fmt=n=>n==null?"–":Number(n).toLocaleString("nl-NL");
 const tip=document.getElementById("tip");
@@ -445,7 +445,7 @@ function bouwTop(){
   if(lijst.length>=6){h+=`<div class="sub" style="margin:10px 0 2px">Minst goed</div>`+rij(lijst[lijst.length-1],"↓")}
   el.innerHTML=h+(met.length?"":'<div class="sub" style="margin-top:6px">Gesorteerd op bereik; de score komt zodra een post 20 of meer mensen heeft bereikt.</div>');
 }
-const OPTNAAM={afbeelding:"afbeeldingen",video:"video's",carrousel:"carrousels",verloop:"kleurverloop",beeld:"foto-achtergrond",true:"met uitleg op het beeld",false:"zonder uitleg",geen:"geen hook",vraag:"een vraag als hook",herkenning:"een herkenbare hook",uitdaging:"een uitdaging als hook",rustig:"een rustige hook",avond:"stijl avond",zand:"stijl zand",salie:"stijl salie"};
+const OPTNAAM={afbeelding:"afbeeldingen",video:"video's",carrousel:"carrousels",verloop:"kleurverloop",beeld:"foto-achtergrond",true:"met uitleg op het beeld",false:"zonder uitleg",geen:"geen hook",vraag:"een vraag als hook",herkenning:"een herkenbare hook",uitdaging:"een uitdaging als hook",rustig:"een rustige hook",avond:"stijl avond",zand:"stijl zand",salie:"stijl salie",psalmen:"verzen uit de Psalmen",spreuken:"verzen uit Spreuken",wijsheid:"verzen uit Job, Prediker en Hooglied",profeten:"verzen uit de profeten",evangelien:"verzen uit de evangeliën",brieven:"verzen uit de brieven",kort:"korte verzen",middel:"middellange verzen",lang:"lange verzen",bekend:"bekende verzen",ontdekking:"minder bekende verzen"};
 const on=o=>OPTNAAM[o]||String(o).replace("_"," ");
 function bouwInzichten(){
   const el=document.getElementById("inzichten"),nodig=D.min_posts_voor_leren,gem=D.gemeten_posts||0;
@@ -472,7 +472,7 @@ function bouwVoorraad(){
   const mz=v.muziek||[],bd=v.beelden||[],mx=a=>a.length?a[0].keer:0,ongebruikt=a=>a.filter(x=>!x.keer).length;
   el.innerHTML=`<div class="grid g2"><div>
     <b><span class="lamp ${kl}" style="display:inline-block;margin-right:6px"></span>${beschikbaar} verzen beschikbaar</b> <span class="sub">· genoeg voor ongeveer ${dagen} dagen bij ${v.per_dag} per dag</span>
-    <div class="sub" style="margin:2px 0 10px">Een vers mag 60 dagen niet terugkomen. Totaal ${v.verzen_totaal} Statenvertaling${v.nbv21?` + ${v.nbv21} NBV21`:""}. De wekelijkse analyse vult 10 verzen bij${dagen<21?", en bij minder dan 21 dagen ook de dagelijkse run":""}.</div>
+    <div class="sub" style="margin:2px 0 10px">Een vers mag 60 dagen niet terugkomen. Totaal ${v.verzen_totaal}: ${v.bekend||0} bekende verzen en ${v.ontdekking||0} minder bekende uit de hele Bijbel${v.nbv21?`, waarvan ${v.nbv21} NBV21`:""}. Nog ${v.kandidaten||0} verzen uit de Bijbel wachten op keuring; elke week worden er zo'n 80 beoordeeld en de goede komen erbij. De wekelijkse analyse vult 10 verzen bij${dagen<21?", en bij minder dan 21 dagen ook de dagelijkse run":""}.</div>
     ${th.sort((a,b)=>a[1].beschikbaar-b[1].beschikbaar).map(([k,x])=>`<div class="thema-rij"><span>${k.replace("_"," ")}</span><div class="bk"><div style="width:${x.beschikbaar/max*100}%"></div></div><span class="sub" style="text-align:right">${x.beschikbaar} van ${x.totaal}</span></div>`).join("")}
   </div><div>
     <b>Muziek: ${mz.length} nummers</b><div class="sub" style="margin-bottom:10px">${ongebruikt(mz)} nog nooit gebruikt · vaakst gebruikt: ${mx(mz)}x${mz[0]&&mz[0].keer?` (${mz[0].naam.replace(/^ES_/,"").replace(/\.mp3$/,"").slice(0,40)})`:""}</div>

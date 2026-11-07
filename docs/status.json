@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T22:55:47",
+ "updated": "2026-11-07T23:02:35",
  "agents": {
   "verskiezer": {
    "t": "2026-11-07T22:23:58",
@@ -52,6 +52,10 @@
  ],
  "log": [
   {
+   "t": "23:02",
+   "msg": "Verzen uit de hele Bijbel: de Statenvertaling is doorzocht; losstaande verzen gaan mee als 'ontdekking'. Het s"
+  },
+  {
    "t": "22:55",
    "msg": "Voorraad verzen aangevuld naar 300 (Statenvertaling): genoeg voor ongeveer 2 maanden bij 5 posts per dag"
   },
@@ -94,10 +98,6 @@
   {
    "t": "15:06",
    "msg": "Statistieken lezen werkt"
-  },
-  {
-   "t": "15:06",
-   "msg": "Verbinding met Facebook-pagina werkt (Bibleversenl)"
   }
  ],
  "lampen": [

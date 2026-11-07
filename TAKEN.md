@@ -71,3 +71,8 @@ Doel: zorgen dat er voor MORGEN precies zoveel posts klaarstaan als `posts_per_d
 - Avondcontrole: draai ALTIJD `python3 src/systeem.py gezond avondcontrole "alles klopte"` (of "N posts aangevuld") en `python3 src/systeem.py dashboard`, en commit en push dat, ook als er niets aangevuld hoefde te worden. Dat is één kleine commit per avond.
 - Wekelijkse run: `python3 src/systeem.py gezond wekelijks "analyse gedaan"`.
 - Verzen bijvullen: bij 5 posts per dag raakt de voorraad sneller op (een vers mag 60 dagen niet terugkomen). Staat op het dashboard bij Voorraad "minder dan 21 dagen", voeg dan in de dagelijkse run 10 verzen toe zoals beschreven bij de wekelijkse run.
+
+## Verzen uit de hele Bijbel
+Het systeem kiest uit bekende verzen (`data/verzen.json`) en ontdekkingen uit de hele Statenvertaling (`data/bijbel_pool.json`). Het leert ook welk Bijbelboek (boekgroep), welke lengte en bekend of ontdekking het best werkt.
+- Dagelijkse run en avondcontrole: lees na `kies` elk gekozen vers. Is het los van de context onduidelijk, negatief, geweld, oordeel over anderen, of klopt de verwijzing kennelijk niet bij de tekst: `python3 src/systeem.py vervang POST-ID "korte reden"`. Dan wordt het vers nooit meer gekozen en krijgt de post een ander vers met dezelfde kenmerken. Herhaal tot alle verzen goed zijn, en schrijf pas dan de teksten.
+- Wekelijkse run: keur 80 kandidaten. `python3 src/systeem.py kandidaten 80` toont ze (id | verwijzing | thema | tekst). Goed is: losstaand begrijpelijk, bemoedigend, wijs of herkenbaar, en past bij een breed publiek. Draai `python3 src/systeem.py keur goed ID ID ...` en `python3 src/systeem.py keur af ID ID ...` (alle 80 beoordelen). Dit vervangt het toevoegen van 10 losse verzen.
