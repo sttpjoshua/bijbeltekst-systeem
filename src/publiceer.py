@@ -49,7 +49,28 @@ def caption(p):
         tekst += "\n\n" + " ".join(p["hashtags"])
     return tekst[:2200]
 
+def wacht_klaar(cid, tok):
+    for _ in range(40):
+        st = http("GET", f"{API}/{cid}", {"fields": "status_code,status", "access_token": tok})
+        if st.get("status_code") == "FINISHED":
+            return
+        if st.get("status_code") in ("ERROR", "EXPIRED"):
+            raise RuntimeError(f"Instagram verwerking mislukt: {st}")
+        time.sleep(6)
+    raise RuntimeError("Instagram verwerking duurde te lang")
+
 def publiceer_instagram(p, uid, tok):
+    if p["variabelen"]["formaat"] == "carrousel":
+        kinderen = []
+        for url in p["media_urls"]:
+            kid = http("POST", f"{API}/{uid}/media", {"image_url": url, "is_carousel_item": "true", "access_token": tok})["id"]
+            wacht_klaar(kid, tok); kinderen.append(kid)
+        cid = http("POST", f"{API}/{uid}/media", {"media_type": "CAROUSEL", "children": ",".join(kinderen),
+                                                  "caption": caption(p), "access_token": tok})["id"]
+        wacht_klaar(cid, tok)
+        mid = http("POST", f"{API}/{uid}/media_publish", {"creation_id": cid, "access_token": tok})["id"]
+        info = http("GET", f"{API}/{mid}", {"fields": "permalink", "access_token": tok})
+        return mid, info.get("permalink")
     video = p["variabelen"]["formaat"] == "video"
     params = {"caption": caption(p), "access_token": tok}
     if video:

@@ -104,6 +104,11 @@ def tekstlaag(b, h, post, ruimte_boven=0, ruimte_onder=0):
     top = ruimte_boven + int(h * 0.07) + extra
     bodem = h - ruimte_onder - int(h * (0.15 if v["layout"] == "kader" else 0.11))
     ref_h = int(b * 0.09)
+    uitleg_regels, uf = [], None
+    if v.get("uitleg_op_beeld") and post.get("uitleg"):
+        uf = _klein_font(int(b * 0.03), b"Medium")
+        uitleg_regels = _wrap(post["uitleg"], uf, int(max_b * 0.92), d)
+        ref_h += int(b * 0.05) + len(uitleg_regels) * int(uf.size * 1.4)
     beschikbaar = bodem - top - ref_h
     grootte = int(b * (0.078 if ruimte_boven else 0.066))
     while grootte > 26:
@@ -133,6 +138,10 @@ def tekstlaag(b, h, post, ruimte_boven=0, ruimte_onder=0):
     ry = y0 + blok_h + int(b * 0.05)
     d.line([b // 2 - 40, ry - int(b * 0.02), b // 2 + 40, ry - int(b * 0.02)], fill=accent + (255,), width=3)
     d.text((b // 2, ry), post["ref"].upper(), font=rf, fill=accent + (255,), anchor="ma")
+    if uitleg_regels:
+        uy = ry + int(b * 0.075)
+        for i, r in enumerate(uitleg_regels):
+            d.text((b // 2, uy + i * int(uf.size * 1.4)), r, font=uf, fill=kleur + (205,), anchor="ma")
 
     if v.get("hook_op_beeld") and post.get("beeld_hook"):
         hf = _klein_font(int(b * 0.034), b"Medium")
@@ -166,7 +175,7 @@ def maak_afbeelding(post, pad):
     return pad
 
 def maak_video(post, pad, duur=9):
-    """Achtergrond met langzame zoom, tekst die infadet. Veilige zones voor Reels/TikTok-interface."""
+    """Achtergrond met langzame zoom, tekst vrijwel direct in beeld (sterke eerste seconde). Veilige zones voor Reels/TikTok-interface."""
     b, h = 1080, 1920
     with tempfile.TemporaryDirectory() as tmp:
         bg = achtergrond(int(b * 1.15), int(h * 1.15), post["variabelen"]["palet"], post["variabelen"]["achtergrond"], post["id"])
@@ -176,7 +185,7 @@ def maak_video(post, pad, duur=9):
         fps = 30; n = duur * fps
         filt = (f"[0:v]scale={int(b*1.15)}:{int(h*1.15)},zoompan=z='1+0.08*on/{n}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)'"
                 f":d={n}:s={b}x{h}:fps={fps}[bg];"
-                f"[1:v]format=rgba,fade=t=in:st=0.6:d=1.2:alpha=1[tx];"
+                f"[1:v]format=rgba,fade=t=in:st=0:d=0.25:alpha=1[tx];"
                 f"[bg][tx]overlay=0:0,fade=t=out:st={duur-0.6}:d=0.6,format=yuv420p[v]")
         cmd = ["ffmpeg", "-y", "-loglevel", "error", "-loop", "1", "-t", str(duur), "-i", bgp,
                "-loop", "1", "-t", str(duur), "-i", txp,
@@ -186,3 +195,54 @@ def maak_video(post, pad, duur=9):
                "-c:a", "aac", "-shortest", "-movflags", "+faststart", pad]
         subprocess.run(cmd, check=True)
     return pad
+
+
+def _tekstslide(post, titel, body, pad, nummer):
+    """Slide 2 en 3 van een carrousel: titel + lopende tekst in de huisstijl."""
+    b, h = 1080, 1350
+    v = post["variabelen"]
+    pal = PALETTEN[v["palet"]]
+    kleur, accent = _hex(pal[2]), _hex(pal[3])
+    img = achtergrond(b, h, v["palet"], v["achtergrond"], post["id"] + str(nummer)).convert("RGBA")
+    laag = Image.new("RGBA", (b, h), (0, 0, 0, 0))
+    d = ImageDraw.Draw(laag)
+    marge = int(b * 0.14)
+    if v["layout"] == "kader":
+        p = int(b * 0.06)
+        d.rectangle([p, p, b - p, h - p], outline=accent + (200,), width=3)
+    tf = _klein_font(int(b * 0.03), b"Bold")
+    _woordmerk(d, b // 2, int(h * 0.16), titel, tf, accent + (255,), int(b * 0.008))
+    grootte = int(b * 0.058)
+    while grootte > 26:
+        f = _font(v["lettertype"], grootte)
+        regels = _wrap(body, f, b - 2 * marge, d)
+        lh = int(grootte * 1.38)
+        if lh * len(regels) <= h * 0.55:
+            break
+        grootte -= 2
+    y0 = int(h * 0.27) + (int(h * 0.55) - lh * len(regels)) // 2
+    for i, r in enumerate(regels):
+        d.text((b // 2, y0 + i * lh), r, font=f, fill=kleur + (255,), anchor="ma")
+    rf = _klein_font(int(b * 0.026), b"SemiBold")
+    d.text((b // 2, int(h * 0.85)), post["ref"].upper(), font=rf, fill=accent + (220,), anchor="ma")
+    hy = h - int(h * (0.115 if v["layout"] == "kader" else 0.085))
+    _woordmerk(d, b // 2, hy, "BIBLEVERSE", _klein_font(int(b * 0.024), b"Bold"), accent + (235,), int(b * 0.009))
+    if post.get("handle"):
+        d.text((b // 2, hy + int(b * 0.034)), post["handle"], font=_klein_font(int(b * 0.022), b"Regular"), fill=kleur + (140,), anchor="ma")
+    img.alpha_composite(laag)
+    img.convert("RGB").save(pad, quality=93)
+    return pad
+
+def maak_carrousel(post, basis):
+    """Drie slides: vers, betekenis, toepassing. Geeft de lijst met paden terug."""
+    paden = [basis.replace(".jpg", f"-{i}.jpg") for i in (1, 2, 3)]
+    eerste = dict(post, variabelen=dict(post["variabelen"], uitleg_op_beeld=False))
+    maak_afbeelding(eerste, paden[0])
+    # klein veeg-teken rechtsonder op slide 1
+    im = Image.open(paden[0]).convert("RGBA"); d = ImageDraw.Draw(im)
+    acc = _hex(PALETTEN[post["variabelen"]["palet"]][3])
+    d.text((im.width - 70, im.height - 70), "\u2192", font=_klein_font(44, b"Medium"), fill=acc + (220,), anchor="mm")
+    im.convert("RGB").save(paden[0], quality=93)
+    _tekstslide(post, "WAT BETEKENT DIT?", post["betekenis"], paden[1], 2)
+    _tekstslide(post, "VANDAAG", post["toepassing"], paden[2], 3)
+    return paden

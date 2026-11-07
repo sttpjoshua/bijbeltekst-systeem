@@ -43,7 +43,8 @@ DIMENSIES = {
     "thema": ["troost", "moed", "liefde", "hoop", "vertrouwen", "wijsheid", "humor_herkenbaar",
               "dankbaarheid", "identiteit", "vrede_rust"],
     "hook_stijl": ["vraag", "herkenning", "uitdaging", "rustig", "geen"],
-    "formaat": ["afbeelding", "video"],
+    "formaat": ["afbeelding", "video", "carrousel"],
+    "uitleg_op_beeld": [True, False],
     "tijdslot": ["07:30", "12:15", "17:45", "20:30", "22:00"],
 }
 
@@ -112,14 +113,15 @@ def cmd_kies(datum):
                       "vers_id": vers["id"], "ref": vers["ref"], "tekst": vers["tekst"],
                       "variabelen": v, "keuzebron": bron,
                       "hook": "", "beeld_hook": "", "caption": "", "hashtags": [],
+                      "uitleg": "", "betekenis": "", "toepassing": "",
                       "media": None, "media_url": None, "metricool": {}, "stats": {}})
     bewaar("data/posts.json", posts + nieuw)
     print(json.dumps([{k: p[k] for k in ("id", "ref", "tekst", "variabelen")} for p in nieuw], ensure_ascii=False, indent=1))
-    print("\nVul nu per post 'hook', 'beeld_hook' (als hook_op_beeld true is), 'caption' en 'hashtags' in data/posts.json in.")
+    print("\nVul nu per post in data/posts.json in: 'hook', 'caption', 'hashtags'; 'uitleg' als uitleg_op_beeld true is; 'betekenis' en 'toepassing' bij formaat carrousel. Zie TAKEN.md.")
 
 # ---------- Renderen ----------
 def cmd_render(datum):
-    from render import maak_afbeelding, maak_video
+    from render import maak_afbeelding, maak_video, maak_carrousel
     cfg = laad("config.json")
     posts = laad("data/posts.json", [])
     fouten = 0
@@ -130,15 +132,23 @@ def cmd_render(datum):
         if probleem:
             print("NIET GERENDERD", p["id"], probleem); fouten += 1; continue
         p["handle"] = cfg.get("handle", "")
-        ext = "mp4" if p["variabelen"]["formaat"] == "video" else "jpg"
+        fmt = p["variabelen"]["formaat"]
+        ext = "mp4" if fmt == "video" else "jpg"
         rel = f"docs/media/{datum[:7]}/{p['id']}.{ext}"
         os.makedirs(os.path.dirname(P(rel)), exist_ok=True)
-        (maak_video if ext == "mp4" else maak_afbeelding)(p, P(rel))
-        p["media"] = rel
-        p["thumb"] = maak_thumb(P(rel), p["id"])
+        if fmt == "carrousel":
+            paden = maak_carrousel(p, P(rel))
+            rels = [os.path.relpath(x, ROOT) for x in paden]
+            p["media"], p["media_extra"] = rels[0], rels[1:]
+        else:
+            (maak_video if ext == "mp4" else maak_afbeelding)(p, P(rel))
+            p["media"], p["media_extra"] = rel, []
+        p["thumb"] = maak_thumb(P(p["media"]), p["id"])
         if cfg.get("github_repo"):
             eig, naam = cfg["github_repo"].split("/")
-            p["media_url"] = f"https://{eig}.github.io/{naam}/{rel[len('docs/'):]}"
+            url = lambda r: f"https://{eig}.github.io/{naam}/{r[len('docs/'):]}"
+            p["media_url"] = url(p["media"])
+            p["media_urls"] = [url(r) for r in [p["media"]] + p["media_extra"]]
         p["status"] = "gerenderd"
         print("OK", p["id"], rel)
     bewaar("data/posts.json", posts)
@@ -169,7 +179,10 @@ def cmd_opruimen(dagen=30):
                 if not p.get("thumb"):
                     p["thumb"] = maak_thumb(P(p["media"]), p["id"])
                 os.remove(P(p["media"])); weg += 1
-            p["media"] = None
+            for extra in p.get("media_extra", []) or []:
+                if os.path.exists(P(extra)):
+                    os.remove(P(extra))
+            p["media"], p["media_extra"] = None, []
     bewaar("data/posts.json", posts)
     if weg:
         cmd_log(f"Opgeruimd: media van {weg} oude posts verwijderd (voorvertoning bewaard)")
@@ -186,6 +199,15 @@ def valideer_tekst(p, cfg):
         return "beeld_hook te lang (max 42 tekens)"
     if p["variabelen"]["hook_op_beeld"] and not p.get("beeld_hook", "").strip():
         p["variabelen"]["hook_op_beeld"] = False  # geen beeldhook: dan ook niet tonen
+    if p["variabelen"].get("uitleg_op_beeld") and not (0 < len(p.get("uitleg", "")) <= 110):
+        return "uitleg ontbreekt of is langer dan 110 tekens"
+    if p["variabelen"]["formaat"] == "carrousel":
+        for veld in ("betekenis", "toepassing"):
+            if not (20 <= len(p.get(veld, "")) <= 320):
+                return f"{veld} ontbreekt of heeft niet 20 tot 320 tekens"
+    for veld in ("uitleg", "betekenis", "toepassing"):
+        if "\u2014" in p.get(veld, ""):
+            return "gebruik geen lange streep"
     if len(p["hashtags"]) > cfg["hashtags_max"]:
         return "te veel hashtags"
     laag = p["caption"].lower()

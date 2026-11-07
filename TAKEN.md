@@ -24,6 +24,8 @@ Vul in `data/posts.json` deze velden in:
   Voor het thema `humor_herkenbaar` mag de hook licht en grappig zijn ("Die ene collega om 7:00 uur..."), maar nooit spottend over de Bijbel.
 - `beeld_hook`: altijd leeg laten. Joshua wil geen hooktekst op het beeld; de hook staat alleen in de caption.
 - `caption`: hook (als die er is), witregel, de verstekst letterlijk tussen aanhalingstekens, de referentie, witregel, één korte zin uitleg of toepassing in hedendaags Nederlands (de Statenvertaling is oud taalgebruik; help de lezer). Totaal maximaal 600 tekens.
+- `uitleg`: alleen als `variabelen.uitleg_op_beeld` true is. De kern van het vers in gewone, hedendaagse taal, maximaal 110 tekens, zonder aanhalingstekens. Bijvoorbeeld bij "En de vrede Gods heerse in uw harten": "Laat Gods vrede de baas zijn in je hart." Het is uitleg, geen Bijbeltekst: verander de betekenis niet en voeg niets toe.
+- `betekenis` en `toepassing`: alleen bij `variabelen.formaat` = carrousel (3 slides). `betekenis`: 2 tot 3 korte zinnen over wat het vers betekent, eenvoudig en trouw aan de tekst (20 tot 320 tekens). `toepassing`: 1 tot 2 zinnen met een concrete, kleine stap voor vandaag (20 tot 320 tekens). Geen preek, geen dwang.
 - `hashtags`: 3 tot 5, Nederlands, bv. `#bijbeltekst #geloof #bemoediging #god #jezus`. Wissel af.
 Schrijf in het Nederlands, warm en eenvoudig, nooit prekerig. Elke hook anders dan die van de afgelopen 14 dagen (kijk in `data/posts.json`).
 
