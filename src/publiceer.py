@@ -92,6 +92,83 @@ def publiceer_instagram(p, uid, tok):
     info = http("GET", f"{API}/{mid}", {"fields": "permalink,timestamp", "access_token": tok})
     return mid, info.get("permalink")
 
+# ---------- Facebook-pagina ----------
+_PAGE_TOKEN = {}
+
+def page_token(tok):
+    """Paginatoken afleiden van het systeemgebruiker-token (zelfde geheim als Instagram)."""
+    pid = os.environ.get("FB_PAGE_ID", "").strip()
+    if not pid:
+        raise RuntimeError("FB_PAGE_ID ontbreekt in de GitHub-secrets")
+    if pid not in _PAGE_TOKEN:
+        r = http("GET", f"{API_FB}/{pid}", {"fields": "access_token,name", "access_token": tok})
+        if not r.get("access_token"):
+            raise RuntimeError("Geen paginatoken: heeft bibleverse-bot volledige controle over de pagina?")
+        _PAGE_TOKEN[pid] = r["access_token"]
+    return pid, _PAGE_TOKEN[pid]
+
+def http_headers(url, headers, data=b""):
+    req = urllib.request.Request(url, data=data, method="POST", headers=headers)
+    try:
+        with urllib.request.urlopen(req, timeout=120) as r:
+            return json.load(r)
+    except urllib.error.HTTPError as e:
+        raise RuntimeError(f"{e.code}: {e.read().decode(errors='replace')[:400]}")
+
+def publiceer_facebook(p, tok):
+    pid, ptok = page_token(tok)
+    fmt = p["variabelen"]["formaat"]
+    tekst = caption(p)
+    if fmt == "afbeelding":
+        r = http("POST", f"{API_FB}/{pid}/photos", {"url": p["media_url"], "message": tekst, "access_token": ptok})
+        pk = r.get("post_id") or r["id"]
+    elif fmt == "carrousel":
+        ids = [http("POST", f"{API_FB}/{pid}/photos", {"url": u, "published": "false", "access_token": ptok})["id"]
+               for u in p["media_urls"]]
+        params = {"message": tekst, "access_token": ptok}
+        for i, fid in enumerate(ids):
+            params[f"attached_media[{i}]"] = json.dumps({"media_fbid": fid})
+        pk = http("POST", f"{API_FB}/{pid}/feed", params)["id"]
+    else:  # video als Reel
+        start = http("POST", f"{API_FB}/{pid}/video_reels", {"upload_phase": "start", "access_token": ptok})
+        vid = start["video_id"]
+        http_headers(start.get("upload_url") or f"https://rupload.facebook.com/video-upload/v23.0/{vid}",
+                     {"Authorization": f"OAuth {ptok}", "file_url": p["media_url"]})
+        http("POST", f"{API_FB}/{pid}/video_reels", {"upload_phase": "finish", "video_id": vid,
+                                                     "video_state": "PUBLISHED", "description": tekst, "access_token": ptok})
+        pk = vid
+    return pk, f"https://www.facebook.com/{pk}"
+
+def stats_facebook(p, fb, tok):
+    _, ptok = page_token(tok)
+    if p["variabelen"]["formaat"] == "video":
+        uit = {}
+        try:
+            r = http("GET", f"{API_FB}/{fb['id']}/video_insights", {"access_token": ptok})
+            for x in r.get("data", []):
+                waarde = (x.get("values") or [{}])[0].get("value")
+                if x["name"] in ("blue_reels_play_count", "fb_reels_total_plays"):
+                    uit["views"] = waarde
+                elif x["name"] == "post_impressions_unique":
+                    uit["reach"] = waarde
+                elif x["name"] == "post_video_social_actions":
+                    if isinstance(waarde, dict):
+                        uit.update({"likes": waarde.get("REACTION"), "comments": waarde.get("COMMENT"), "shares": waarde.get("SHARE")})
+        except RuntimeError:
+            pass
+        return uit
+    r = http("GET", f"{API_FB}/{fb['id']}", {"fields": "reactions.summary(true).limit(0),comments.summary(true).limit(0),shares",
+                                             "access_token": ptok})
+    uit = {"likes": r.get("reactions", {}).get("summary", {}).get("total_count"),
+           "comments": r.get("comments", {}).get("summary", {}).get("total_count"),
+           "shares": (r.get("shares") or {}).get("count", 0)}
+    try:
+        i = http("GET", f"{API_FB}/{fb['id']}/insights", {"metric": "post_impressions_unique", "access_token": ptok})
+        uit["reach"] = (i["data"][0]["values"] or [{}])[0].get("value")
+    except Exception:
+        pass
+    return uit
+
 def tijdstip(p):
     d = dt.date.fromisoformat(p["datum"])
     u, m = map(int, p["variabelen"]["tijdslot"].split(":"))
@@ -122,8 +199,10 @@ def cmd_posten():
             try:
                 if plat == "instagram":
                     mid, link = publiceer_instagram(p, uid, tok)
+                elif plat == "facebook":
+                    mid, link = publiceer_facebook(p, tok)
                 else:
-                    continue  # andere platformen volgen later
+                    continue  # YouTube en TikTok volgen na hun keuring
                 p.setdefault("gepubliceerd", {})[plat] = {"id": mid, "url": link, "t": dt.datetime.now(TZ).isoformat(timespec="minutes")}
                 S.cmd_log(f"{p['id']} online op {plat}: {p['ref']}")
             except Exception as e:
@@ -131,8 +210,11 @@ def cmd_posten():
                 S.cmd_log(f"{p['id']} {plat} mislukt: {e}", "fout"); fouten += 1
                 if p["fouten"] >= 3:
                     p["status"] = "fout"
-        if p.get("gepubliceerd") and p["status"] != "fout":
+        ondersteund = [x for x in cfg["platformen_actief"] if x in ("instagram", "facebook")]
+        klaar_overal = all(x in p.get("gepubliceerd", {}) for x in ondersteund)
+        if p["status"] != "fout" and (klaar_overal or (p.get("gepubliceerd") and p.get("fouten", 0) >= 3)):
             p["status"] = "gepubliceerd"; vandaag_online += 1
+        # anders blijft de status 'gerenderd' en probeert de volgende run het ontbrekende platform opnieuw
         S.bewaar("data/posts.json", posts)  # na elke post opslaan
     S.cmd_dashboard()
     if fouten:
@@ -161,12 +243,9 @@ def cmd_statistieken():
     posts = S.laad("data/posts.json", [])
     nu = dt.datetime.now(TZ)
     rij = []
-    for p in posts:
-        ig = p.get("gepubliceerd", {}).get("instagram")
-        if not ig:
-            continue
+    for p, plat, ig in [(p, pl, g) for p in posts for pl, g in p.get("gepubliceerd", {}).items()]:
         leeftijd = nu - dt.datetime.fromisoformat(ig["t"])
-        st = p.get("stats", {}).get("instagram", {})
+        st = p.get("stats", {}).get(plat, {})
         moment = None
         if leeftijd >= dt.timedelta(days=7) and "7d" not in st and leeftijd < dt.timedelta(days=14):
             moment = "7d"
@@ -175,10 +254,15 @@ def cmd_statistieken():
         if not moment:
             continue
         try:
-            m = insights(ig["id"], tok)
+            if plat == "instagram":
+                m = insights(ig["id"], tok)
+            elif plat == "facebook":
+                m = stats_facebook(p, ig, tok)
+            else:
+                continue
         except Exception as e:
-            S.cmd_log(f"Statistieken {p['id']} mislukt: {e}", "fout"); continue
-        rij.append({"post_id": p["id"], "platform": "instagram", "moment": moment,
+            S.cmd_log(f"Statistieken {p['id']} ({plat}) mislukt: {str(e)[:160]}", "fout"); continue
+        rij.append({"post_id": p["id"], "platform": plat, "moment": moment,
                     "views": m.get("views"), "reach": m.get("reach"), "likes": m.get("likes"),
                     "comments": m.get("comments"), "shares": m.get("shares"), "saves": m.get("saved"),
                     "follows": m.get("follows")})
@@ -211,6 +295,16 @@ def cmd_token():
                 S.cmd_log("Token mist rechten: " + ", ".join(mist) + ". Wel aanwezig: " + ", ".join(sorted(rechten)), "fout")
             else:
                 S.cmd_log("Token heeft alle rechten, ook voor statistieken")
+        if os.environ.get("FB_PAGE_ID", "").strip():
+            try:
+                pid, _ = page_token(tok)
+                naam = http("GET", f"{API_FB}/{pid}", {"fields": "name", "access_token": tok}).get("name")
+                S.cmd_log(f"Verbinding met Facebook-pagina werkt ({naam})")
+                mist_fb = [r for r in ("pages_manage_posts", "pages_read_engagement") if rechten and r not in rechten]
+                if mist_fb:
+                    S.cmd_log("Token mist Facebook-rechten: " + ", ".join(mist_fb), "fout")
+            except Exception as e:
+                S.cmd_log(f"Facebook-verbinding mislukt: {str(e)[:200]}", "fout")
         # praktijktest: statistieken van de laatste post opvragen (als die er is)
         try:
             media = http("GET", f"{API}/{uid}/media", {"fields": "id", "limit": 1, "access_token": tok}).get("data", [])
