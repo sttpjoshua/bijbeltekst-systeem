@@ -98,6 +98,14 @@ def main(raw):
     S.bewaar("data/posts.json", posts)
     if melding:
         S.cmd_log("Bediening: " + melding)
+        # laat de juiste medewerker in het pixel-kantoor zien dat hij de opdracht heeft uitgevoerd
+        agent = {"pauze": "controller", "posts_per_dag": "verskiezer", "verkenning": "verskiezer", "vers_uitsluiten": "verskiezer",
+                 "max_aandeel_beeld": "designer", "platform": "dispatcher", "tijd": "dispatcher", "nu_posten": "dispatcher",
+                 "leermodus": "analist"}.get(a)
+        if a == "overslaan":
+            agent = "video" if (vind(posts, o["post"])["variabelen"].get("formaat") == "video") else "designer"
+        if agent:
+            S.activiteit(agent, melding[:70])
     S.cmd_dashboard()
     print(melding or "ok")
 

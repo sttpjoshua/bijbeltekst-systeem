@@ -69,6 +69,31 @@ li time{color:var(--gold);margin-right:6px}
 .gcap{font-size:12px;color:var(--muted);display:flex;justify-content:space-between}
 h3.sec{font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);margin:18px 0 10px}
 [hidden]{display:none!important}
+.ac{position:fixed;z-index:50;width:310px;max-width:calc(100vw - 16px);background:#241b3d;border:1px solid #5a4a8c;border-radius:10px;box-shadow:0 12px 34px rgba(0,0,0,.6);padding:12px;font-size:12px;line-height:1.45;color:var(--ink)}
+.ac[hidden]{display:none}
+.ac.hover{pointer-events:none}
+.ac.sheet{left:8px;right:8px;bottom:8px;top:auto;width:auto;max-width:none;max-height:80vh;overflow:auto}
+.ac h4{margin:0;font-size:14px;display:flex;align-items:center;gap:8px;padding-right:22px}
+.ac .sw{width:12px;height:12px;border-radius:3px;display:inline-block}
+.ac .st{margin-left:auto;font-size:10px;padding:2px 7px;border-radius:4px;background:#4b3b78}
+.ac .st.working{background:var(--gold);color:#2a1a05}.ac .st.done{background:#1f7a46}.ac .st.error{background:#a32a2a}
+.ac .k{color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:1px;margin:10px 0 3px}
+.ac .nu{font-size:13px}
+.ac .x{position:absolute;top:6px;right:8px;background:none;border:0;color:var(--muted);font-size:20px;line-height:1;cursor:pointer}
+.ac.hover .x{display:none}
+.ac .acts{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.ac .acts.col{flex-direction:column;align-items:stretch}
+.ac button,.ac select,.ac input{font:inherit;font-size:12px}
+.ac .acts button,.ac .go,.ac .bk{background:#352a56;color:var(--ink);border:1px solid #5a4a8c;border-radius:6px;padding:6px 10px;cursor:pointer;text-align:left}
+.ac .acts button:hover:not(:disabled){border-color:var(--gold)}
+.ac button:disabled{opacity:.45;cursor:default}
+.ac .acts button.sel,.ac .go{background:var(--gold);color:#2a1a05;border-color:var(--gold);font-weight:700}
+.ac .chip{background:#352a56;border-radius:5px;padding:3px 8px;color:#e6dbff;white-space:nowrap}
+.ac select,.ac input[type=date],.ac input[type=time],.ac input[type=password]{background:#1d1630;color:var(--ink);border:1px solid #5a4a8c;border-radius:6px;padding:6px;width:100%}
+.ac .frm{display:grid;gap:8px}.ac label{display:grid;gap:3px;color:var(--muted)}
+.ac .rg{display:flex;align-items:center;gap:10px}.ac .rg input{flex:1}.ac .rg b{min-width:42px;text-align:right;color:var(--gold)}
+.ac #acMsg{margin-top:8px;font-size:12px}
+.ac a{color:var(--gold)}
 </style>
 </head>
 <body>
@@ -83,7 +108,9 @@ h3.sec{font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:var(--
   <div class="grid">
     <section>
       <div class="themes" id="themes"></div>
+      <div class="hint" id="cfgline" style="margin:-4px 0 10px"></div>
       <div class="cvwrap" id="cvwrap"><canvas id="cv"></canvas><div id="ov"></div></div>
+      <div class="hint" style="margin-top:8px">Houd je muis boven een medewerker om te zien wat hij doet. Klik of tik om hem te sturen.</div>
     </section>
     <aside>
       <div class="card">
@@ -309,6 +336,7 @@ function frame(now){
   AG.filter(a=>!seated(a)).sort((p,q)=>p.y-q.y).forEach(a=>drawChar(a,now));
   drawSofaFront();
   if(P.tint){g.fillStyle=P.tint;g.fillRect(0,0,W,H)}
+  if(PAUSED){g.fillStyle='rgba(10,8,30,.38)';g.fillRect(0,0,W,H)}
   overlay();
   requestAnimationFrame(frame);
 }
@@ -347,6 +375,7 @@ function render(){
   S.plat.forEach((p,i)=>{const on=S.actief.includes(p.k);document.getElementById('b'+i).style.width=(p.v/mx*100)+'%';
     document.getElementById('v'+i).textContent=on?fmt(p.v):'straks';document.getElementById('pn'+i).style.opacity=on?1:.45});
   if(live)liveStates();
+  applyOv();
   AG.forEach(a=>{
     document.getElementById('d_'+a.id).className='dot '+a.state;
     document.getElementById('t_'+a.id).textContent=a.state==='idle'?(a.last?'Pauze · laatst: '+a.last:'Pauze'):(a.task||'Bezig');
@@ -473,13 +502,237 @@ document.getElementById('fmt').addEventListener('click',e=>{
   document.getElementById('tab-posts').style.setProperty('--ar',b.dataset.f);
   [...document.getElementById('fmt').children].forEach(x=>x.classList.toggle('on',x===b));
 });
+/* ---------- aansturen: kaartje bij hover, klik om te sturen ---------- */
+let DJ=null,PAUSED=false;
+const KEY='bibleverse_gh_token';
+const gtok=()=>{try{return localStorage.getItem(KEY)}catch(e){return null}};
+const AGBY=id=>AG.find(a=>a.id===id);
+const cap1=x=>x[0].toUpperCase()+x.slice(1);
+const ROLE={
+ verskiezer:{wat:'Kiest elke dag de verzen en de stijl voor de posts van morgen. Kijkt eerst naar wat goed scoorde en probeert af en toe iets nieuws.',wanneer:'Dagelijks, bij het klaarzetten van morgen'},
+ designer:{wat:'Maakt de beelden en carrousels: kleuren, lettertype en layout. Kijkt elk beeld na en keurt af wat niet klopt.',wanneer:'Dagelijks, samen met de Verskiezer'},
+ video:{wat:'Monteert de video\'s met muziek en de tekst van het vers.',wanneer:'Dagelijks, voor posts in videoformaat'},
+ dispatcher:{wat:'Zet elk kwartier de posts online die klaarstaan, op Instagram en Facebook. Een post die meer dan 3 uur te laat is, slaat hij over.',wanneer:'Elk kwartier'},
+ analist:{wat:'Haalt elke ochtend de cijfers op (24 uur en 7 dagen na een post) en leert welke stijlen, thema\'s en tijden het best werken.',wanneer:'Elke ochtend'},
+ controller:{wat:'Bewaakt de verbindingen en het token en meldt fouten in het logboek. Verlengt het Instagram-token elke maandag.',wanneer:'Bij elke run, token elke maandag'}
+};
+const dagMaand=d=>new Date(d).toLocaleDateString('nl-NL',{day:'numeric',month:'long'});
+function cfgLine(){
+  const c=DJ&&DJ.config,el=document.getElementById('cfgline');
+  PAUSED=!!(c&&c.pauze);
+  if(!c){el.textContent='';return}
+  const pl=(c.platformen_actief||[]).map(cap1).join(' en ');
+  el.innerHTML=(c.pauze?'<b style="color:var(--err)">GEPAUZEERD: er gaat niets online</b> · ':'')
+    +(c.leermodus?`Snel leren tot ${esc(dagMaand(c.leermodus_tot))} · `:'')
+    +`${c.posts_per_dag} post${c.posts_per_dag>1?'s':''} per dag · ${esc(pl||'geen platform')} · experimenteren ${Math.round((c.verkenning??.2)*100)}%`;
+}
+function inst(id){
+  const c=DJ&&DJ.config;if(!c)return '';
+  const klaar=(DJ.posts||[]).filter(p=>p.status==='gerenderd');
+  const np=LIVEJ&&LIVEJ.stats&&LIVEJ.stats.next_post;
+  switch(id){
+    case 'verskiezer':return `${c.posts_per_dag} post${c.posts_per_dag>1?'s':''} per dag · ${Math.round((c.verkenning??.2)*100)}% experimenteren`+((c.verzen_uitsluiten||[]).length?` · ${c.verzen_uitsluiten.length} vers uitgesloten`:'');
+    case 'designer':return `Foto-achtergronden: maximaal ${Math.round((c.max_aandeel_beeld??.33)*100)}%`;
+    case 'video':return `${klaar.filter(p=>p.variabelen.formaat==='video').length} video klaar om te posten`;
+    case 'dispatcher':return `Platformen: ${(c.platformen_actief||[]).map(cap1).join(' en ')||'geen'}`+(np?` · volgende post ${np.slice(8,10)}-${np.slice(5,7)} om ${np.slice(11,16)}`:'');
+    case 'analist':return c.leermodus?`Snel leren aan tot ${dagMaand(c.leermodus_tot)}`:'Leert wekelijks';
+    case 'controller':return c.pauze?'Systeem gepauzeerd':((DJ.recente_fouten||[]).length?`${DJ.recente_fouten.length} open fout${DJ.recente_fouten.length>1?'en':''}`:'Alles werkt');
+  }
+  return '';
+}
+function nuText(a){
+  if(a.state==='working')return 'Bezig: '+a.task;
+  if(a.state==='error')return 'Probleem: '+a.task;
+  if(a.state==='done')return 'Net klaar: '+a.task;
+  return a.last?'Pauze. Laatst: '+a.last:'Pauze. Nog geen activiteit gezien.';
+}
+function applyOv(){const n=Date.now();AG.forEach(a=>{if(a.ov&&n<a.ov.until){a.state='working';a.task=a.ov.task}else a.ov=null})}
+
+/* opdrachten per medewerker: zelfde opdrachten als de Bediening op het dashboard */
+function acts(id){
+  const c=(DJ&&DJ.config)||{},P=(DJ&&DJ.posts)||[];
+  const wacht=P.filter(p=>p.status==='gerenderd'||p.status==='wacht_op_tekst').sort((a,b)=>(a.datum+a.variabelen.tijdslot).localeCompare(b.datum+b.variabelen.tijdslot));
+  const po=l=>l.map(p=>[p.id,`${p.ref} (${p.datum.slice(8,10)}-${p.datum.slice(5,7)} ${p.variabelen.tijdslot})`]);
+  const klaar=wacht.filter(p=>p.status==='gerenderd'),vid=wacht.filter(p=>p.variabelen.formaat==='video'),beeld=wacht.filter(p=>p.variabelen.formaat!=='video');
+  const aan=pl=>(c.platformen_actief||[]).includes(pl);
+  const plat=pl=>({t:`${cap1(pl)} ${aan(pl)?'uitzetten':'aanzetten'}`,info:aan(pl)?`Ik post dan niet meer op ${cap1(pl)}.`:`Ik post dan ook op ${cap1(pl)}.`,f:[],confirm:aan(pl),run:()=>({actie:'platform',platform:pl,aan:!aan(pl)})});
+  const over=l=>({t:'Post overslaan',info:'Een klaarstaande post gaat dan niet online.',f:[{k:'p',type:'select',opt:po(l)}],confirm:true,leeg:!l.length,run:v=>({actie:'overslaan',post:v.p})});
+  const A={
+    verskiezer:[
+      {t:'Posts per dag',info:'Hoeveel posts ik per dag klaarzet. Tijdens snel leren staat dit vast op 5.',f:[{k:'n',type:'choice',opt:[...Array(c.max_posts_per_dag||3)].map((_,i)=>[i+1,String(i+1)]),cur:c.posts_per_dag}],run:v=>({actie:'posts_per_dag',waarde:+v.n})},
+      {t:'Experimenteren',info:'Hoe vaak ik iets nieuws probeer in plaats van wat al goed werkt.',f:[{k:'v',type:'range',min:10,max:40,step:5,unit:'%',cur:Math.round((c.verkenning??.2)*100)}],run:v=>({actie:'verkenning',waarde:v.v/100})},
+      {t:'Vers nooit meer gebruiken',info:'Kies een vers uit de gemaakte posts. Ik kies het daarna niet meer.',f:[{k:'p',type:'select',opt:P.filter(p=>p.vers_id).map(p=>[p.id,p.ref])}],confirm:true,leeg:!P.some(p=>p.vers_id),run:v=>{const p=P.find(x=>x.id===v.p);return{actie:'vers_uitsluiten',vers_id:p.vers_id,ref:p.ref}}}
+    ],
+    designer:[
+      {t:'Aandeel foto-achtergronden',info:'Hoeveel posts maximaal een foto als achtergrond krijgen in plaats van kleur.',f:[{k:'v',type:'range',min:0,max:50,step:5,unit:'%',cur:Math.round((c.max_aandeel_beeld??.33)*100)}],run:v=>({actie:'max_aandeel_beeld',waarde:v.v/100})},
+      over(beeld)
+    ],
+    video:[over(vid)],
+    dispatcher:[
+      {t:'Nu posten',info:'Ik zet de gekozen post binnen een paar minuten online.',f:[{k:'p',type:'select',opt:po(klaar)}],leeg:!klaar.length,run:v=>({actie:'nu_posten',post:v.p})},
+      {t:'Post verplaatsen',info:'Kies een nieuwe dag en tijd voor een klaarstaande post.',f:[{k:'p',type:'select',opt:po(wacht)},{k:'d',type:'date',l:'Dag',cur:wacht[0]&&wacht[0].datum},{k:'t',type:'time',l:'Tijd',cur:wacht[0]&&wacht[0].variabelen.tijdslot}],leeg:!wacht.length,
+        sync:(pid,b)=>{const p=P.find(x=>x.id===pid);if(p){b.querySelector('[data-k=d]').value=p.datum;b.querySelector('[data-k=t]').value=p.variabelen.tijdslot}},
+        run:v=>({actie:'tijd',post:v.p,datum:v.d,tijd:v.t})},
+      plat('instagram'),plat('facebook'),
+      {t:'Nu kijken of er iets klaarstaat',info:'Normaal kijk ik elk kwartier.',f:[],taak:'posten'}
+    ],
+    analist:[
+      c.leermodus?{t:'Snel leren uitzetten',info:'Daarna gaan je oude instellingen vanzelf terug.',f:[],run:()=>({actie:'leermodus',aan:false})}
+        :{t:'Snel leren aanzetten',info:'Tijdelijk 5 posts per dag en elke dag leren in plaats van wekelijks. Bereik per post kan iets lager uitvallen.',f:[{k:'d',type:'choice',opt:[[7,'7 dagen'],[14,'14 dagen']],cur:7}],run:v=>({actie:'leermodus',aan:true,dagen:+v.d})},
+      {t:'Cijfers nu ophalen',info:'Ik haal meteen de nieuwste cijfers op.',f:[],taak:'statistieken'}
+    ],
+    controller:[
+      {t:c.pauze?'Hervatten':'Pauzeren',info:c.pauze?'Het systeem post daarna weer.':'Er gaat niets meer online tot je hervat.',f:[],confirm:!c.pauze,run:()=>({actie:'pauze',waarde:!c.pauze})},
+      {t:'Verbinding testen',info:'Ik controleer de koppeling met Instagram en Facebook.',f:[],run:()=>({actie:'test'})},
+      {t:'Token controleren',info:'Ik kijk hoe lang het Instagram-token nog geldig is.',f:[],taak:'token'}
+    ]
+  };
+  return A[id]||[];
+}
+
+const card=document.createElement('div');card.className='ac';card.hidden=true;
+card.innerHTML='<button class="x" aria-label="Sluiten">&times;</button><div id="acHead"></div><div id="acBody"></div>';
+document.body.appendChild(card);
+const acHead=card.querySelector('#acHead'),acBody=card.querySelector('#acBody');
+let curA=null,cardMode=null,lastXY={x:40,y:40};
+const SMALL=()=>matchMedia('(max-width:700px)').matches;
+function headHTML(a){
+  const st={working:'Bezig',done:'Klaar',error:'Probleem',idle:'Pauze'}[a.state],R=ROLE[a.id],i=inst(a.id);
+  return `<h4><i class="sw" style="background:${a.shirt}"></i>${esc(a.name)}<span class="st ${a.state}">${st}</span></h4>
+    <div class="k">Nu</div><div class="nu">${esc(nuText(a))}</div>
+    <div class="k">Wat ik doe</div><div>${esc(R.wat)}</div><div class="hint" style="margin-top:3px">${esc(R.wanneer)}</div>
+    ${i?`<div class="k">Instelling nu</div><div>${esc(i)}</div>`:''}`;
+}
+function hoverBody(a){
+  return `<div class="k">Hier kun je mij op sturen</div><div class="acts">${acts(a.id).map(x=>`<span class="chip">${esc(x.t)}</span>`).join('')}</div>
+    <div class="hint" style="margin-top:8px">Klik op het figuurtje om te sturen.</div>`;
+}
+function pinBody(a){
+  if(!gtok()){
+    return `<div class="k">Hier kun je mij op sturen</div><div class="acts">${acts(a.id).map(x=>`<span class="chip">${esc(x.t)}</span>`).join('')}</div>
+      <div class="hint" style="margin-top:10px">Plak één keer je GitHub-sleutel (dezelfde als op het dashboard, met Actions: Read and write). Hij blijft alleen in deze browser.</div>
+      <div class="acts" style="margin-top:6px"><input id="acTok" type="password" placeholder="github_pat_..." style="flex:1;min-width:150px"><button id="acSave" class="go">Opslaan</button></div>`;
+  }
+  return `<div class="k">Stuur mij op</div><div class="acts col">${acts(a.id).map((x,i)=>`<button data-i="${i}"${x.leeg?' disabled title="Er is nu niets om te kiezen"':''}>${esc(x.t)}${x.leeg?' (niets klaar)':''}</button>`).join('')}</div>
+    <div id="acMsg"></div><div class="hint" style="margin-top:8px"><a href="#" id="acForget">Sleutel van dit apparaat verwijderen</a></div>`;
+}
+function bindPin(a){
+  const sv=acBody.querySelector('#acSave');
+  if(sv)sv.onclick=()=>{const v=acBody.querySelector('#acTok').value.trim();if(!v)return;try{localStorage.setItem(KEY,v)}catch(e){alert('Deze browser laat niet opslaan.');return}acBody.innerHTML=pinBody(a);bindPin(a)};
+  acBody.querySelectorAll('.acts.col button').forEach(b=>b.onclick=()=>showForm(a,+b.dataset.i));
+  const fg=acBody.querySelector('#acForget');
+  if(fg)fg.onclick=e=>{e.preventDefault();try{localStorage.removeItem(KEY)}catch(x){}acBody.innerHTML=pinBody(a);bindPin(a)};
+}
+function fieldHTML(f){
+  if(f.type==='choice')return `<div class="acts" data-k="${f.k}" data-val="${esc(f.cur)}">${f.opt.map(([v,l])=>`<button type="button" class="${String(v)===String(f.cur)?'sel':''}" data-v="${esc(v)}">${esc(l)}</button>`).join('')}</div>`;
+  if(f.type==='range')return `<div class="rg"><input type="range" data-k="${f.k}" min="${f.min}" max="${f.max}" step="${f.step}" value="${f.cur}"><b>${f.cur}${f.unit||''}</b></div>`;
+  if(f.type==='select')return `<select data-k="${f.k}">${f.opt.map(([v,l])=>`<option value="${esc(v)}">${esc(l)}</option>`).join('')}</select>`;
+  if(f.type==='date')return `<label>${esc(f.l)}<input type="date" data-k="${f.k}" value="${esc(f.cur||'')}"></label>`;
+  if(f.type==='time')return `<label>${esc(f.l)}<input type="time" data-k="${f.k}" value="${esc(f.cur||'')}"></label>`;
+  return '';
+}
+function showForm(a,i){
+  const x=acts(a.id)[i];if(!x)return;
+  acBody.innerHTML=`<div class="k">${esc(x.t)}</div><div class="hint" style="margin-bottom:8px">${esc(x.info||'')}</div>
+    <div class="frm">${x.f.map(fieldHTML).join('')}</div>
+    <div class="acts" style="margin-top:10px"><button class="go">Versturen</button><button class="bk">Terug</button></div><div id="acMsg"></div>`;
+  acBody.querySelectorAll('.acts[data-k] button').forEach(b=>b.onclick=()=>{const c=b.parentNode;c.dataset.val=b.dataset.v;[...c.children].forEach(y=>y.classList.toggle('sel',y===b))});
+  acBody.querySelectorAll('input[type=range]').forEach(r=>r.oninput=()=>{const f=x.f.find(z=>z.k===r.dataset.k);r.nextElementSibling.textContent=r.value+(f.unit||'')});
+  const sel=acBody.querySelector('select[data-k=p]');if(sel&&x.sync){x.sync(sel.value,acBody);sel.onchange=()=>x.sync(sel.value,acBody)}
+  acBody.querySelector('.bk').onclick=()=>{acBody.innerHTML=pinBody(a);bindPin(a)};
+  const go=acBody.querySelector('.go');
+  go.onclick=()=>{
+    if(x.confirm&&!go.dataset.sure){go.dataset.sure=1;go.textContent='Zeker weten? Klik nogmaals';return}
+    const vals={};acBody.querySelectorAll('[data-k]').forEach(el=>{vals[el.dataset.k]=el.tagName==='DIV'?el.dataset.val:el.value});
+    verstuur(a,x,vals,go);
+  };
+}
+async function verstuur(a,x,vals,btn){
+  const msg=acBody.querySelector('#acMsg');
+  const set=(t,c,html)=>{if(!msg.isConnected)return;if(html)msg.innerHTML=t;else msg.textContent=t;msg.style.color=c||'var(--muted)'};
+  const repo=(DJ&&DJ.repo)||'sttpjoshua/bijbeltekst-systeem';
+  let inputs;
+  try{inputs=x.taak?{taak:x.taak}:{taak:'bediening',opdracht:JSON.stringify(x.run(vals))}}catch(e){set('Kies eerst iets.','var(--err)');return}
+  btn.disabled=true;set('Opdracht versturen...');const start=Date.now();
+  try{
+    const r=await fetch(`https://api.github.com/repos/${repo}/actions/workflows/publiceren.yml/dispatches`,{method:'POST',
+      headers:{'Authorization':'Bearer '+gtok(),'Accept':'application/vnd.github+json','Content-Type':'application/json'},
+      body:JSON.stringify({ref:'main',inputs})});
+    if(r.status===204){a.ov={task:'Opdracht: '+x.t,until:Date.now()+150000};log('Opdracht aan '+a.name+': '+x.t);set('Opdracht ontvangen. Bezig met uitvoeren...','var(--ok)');volg(a,start,set,btn,repo)}
+    else if(r.status===401||r.status===403||r.status===404){set('De sleutel werkt niet (verlopen of zonder Actions-rechten). Ga terug en verwijder hem onderaan.','var(--err)');btn.disabled=false}
+    else{set('GitHub gaf fout '+r.status+'.','var(--err)');btn.disabled=false}
+  }catch(e){set('Geen verbinding met GitHub.','var(--err)');btn.disabled=false}
+}
+async function volg(a,start,set,btn,repo){
+  const h={'Authorization':'Bearer '+gtok(),'Accept':'application/vnd.github+json'};
+  for(let i=0;i<40;i++){
+    await new Promise(r=>setTimeout(r,8000));
+    try{
+      const r=await fetch(`https://api.github.com/repos/${repo}/actions/workflows/publiceren.yml/runs?event=workflow_dispatch&per_page=1`,{headers:h});
+      const run=(await r.json()).workflow_runs?.[0];
+      if(run&&new Date(run.created_at).getTime()>start-60000){
+        if(run.status==='completed'){
+          a.ov=null;
+          if(run.conclusion==='success'){set('Uitgevoerd. Het kantoor wordt bijgewerkt...','var(--ok)');await new Promise(z=>setTimeout(z,6000));await loadReal();await poll();set('Klaar en bijgewerkt.','var(--ok)')}
+          else set(`Uitvoeren mislukt. <a href="${esc(run.html_url)}" target="_blank" rel="noopener">Bekijk details</a>`,'var(--err)',true);
+          btn.disabled=false;return;
+        }
+        set('Bezig met uitvoeren... ('+(run.status==='queued'?'in de wachtrij':'loopt')+')','var(--ok)');
+      }
+    }catch(e){}
+  }
+  set('Verstuurd. Herlaad de pagina over een minuut om het resultaat te zien.');btn.disabled=false;
+}
+function place(){
+  if(cardMode==='pin'&&SMALL()){card.classList.add('sheet');card.style.left=card.style.top='';return}
+  card.classList.remove('sheet');
+  const w=card.offsetWidth,h=card.offsetHeight;
+  let x=lastXY.x+18,y=lastXY.y+18;
+  if(x+w>innerWidth-8)x=Math.max(8,lastXY.x-w-18);
+  if(y+h>innerHeight-8)y=Math.max(8,innerHeight-h-8);
+  card.style.left=x+'px';card.style.top=y+'px';
+}
+function showCard(a,mode,e){
+  if(e){lastXY={x:e.clientX,y:e.clientY}}
+  const changed=curA!==a||cardMode!==mode;
+  curA=a;cardMode=mode;card.hidden=false;
+  card.classList.toggle('hover',mode==='hover');
+  acHead.innerHTML=headHTML(a);
+  if(changed){acBody.innerHTML=mode==='pin'?pinBody(a):hoverBody(a);if(mode==='pin')bindPin(a)}
+  place();
+}
+function hideCard(){card.hidden=true;curA=null;cardMode=null}
+card.querySelector('.x').onclick=hideCard;
+setInterval(()=>{if(!card.hidden&&curA)acHead.innerHTML=headHTML(curA)},1000);
+const wrapEl=document.getElementById('cvwrap');
+function hit(e){
+  const r=cv.getBoundingClientRect();if(!r.width)return null;
+  const lx=(e.clientX-r.left)/r.width*W,ly=(e.clientY-r.top)/r.height*H;
+  let best=null,bd=1e9;
+  AG.forEach(a=>{const dx=lx-a.x,dy=ly-(a.y-9);if(Math.abs(dx)<10&&dy>-16&&dy<14){const d=dx*dx+dy*dy;if(d<bd){bd=d;best=a}}});
+  return best;
+}
+wrapEl.addEventListener('mousemove',e=>{
+  const a=hit(e);wrapEl.style.cursor=a?'pointer':'default';
+  if(cardMode==='pin'){return}
+  if(a)showCard(a,'hover',e);else if(cardMode==='hover')hideCard();
+});
+wrapEl.addEventListener('mouseleave',()=>{if(cardMode==='hover')hideCard()});
+wrapEl.addEventListener('click',e=>{
+  const a=hit(e);
+  if(a){showCard(a,'pin',e);e.stopPropagation()}
+  else if(cardMode==='pin')hideCard();
+});
+document.addEventListener('click',e=>{if(cardMode==='pin'&&!card.contains(e.target)&&!wrapEl.contains(e.target))hideCard()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')hideCard()});
+
 /* echte posts uit data.json */
 const FMT={video:'video',carrousel:'carrousel',enkel:'enkele post'};
 const ST={gepubliceerd:'online',gerenderd:'klaar',gepland:'gepland'};
 async function loadReal(){
   try{
     const r=await fetch('data.json?'+Date.now(),{cache:'no-store'});if(!r.ok)throw 0;
-    const d=await r.json();const ps=(d.posts||[]).slice().sort((x,y)=>(y.datum||'').localeCompare(x.datum||'')||String(y.id).localeCompare(String(x.id)));
+    const d=await r.json();DJ=d;cfgLine();const ps=(d.posts||[]).slice().sort((x,y)=>(y.datum||'').localeCompare(x.datum||'')||String(y.id).localeCompare(String(x.id)));
     if(!ps.length)throw 0;
     document.getElementById('realEmpty').hidden=true;
     document.getElementById('real').innerHTML=ps.map(p=>{
@@ -493,7 +746,7 @@ async function loadReal(){
   }catch(e){document.getElementById('realEmpty').hidden=false}
 }
 document.getElementById('real').addEventListener('click',e=>{const b=e.target.closest('.fav');if(!b)return;e.preventDefault();const n=b.dataset.n;fav.has(n)?fav.delete(n):fav.add(n);b.classList.toggle('on',fav.has(n));saveFav()});
-loadReal();setInterval(loadReal,120000);
+loadReal();setInterval(loadReal,60000);
 })();
 </script>
 </body>
