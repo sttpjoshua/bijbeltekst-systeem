@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-07T12:10",
+ "gegenereerd": "2026-11-07T12:15",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -177,6 +177,11 @@
    "t": "2026-11-07T11:08",
    "soort": "info",
    "tekst": "Token heeft alle rechten, ook voor statistieken"
+  },
+  {
+   "t": "2026-11-07T12:15",
+   "soort": "fout",
+   "tekst": "2026-11-07-1 instagram mislukt: 400: {\"error\":{\"message\":\"Fatal\",\"type\":\"OAuthException\",\"code\":-1,\"error_subcode\":2207085,\"is_transient\":false,\"error_user_title\":\"Algemene interne fout\",\"error_user_msg\":\"Er is een interne serverfout opgetreden. Probeer het later opnieuw.\",\"fbtrace_id\":\"AlxxdZefWuKRL9xjgZiXFDo\"}}"
   }
  ],
  "recente_fouten": [
@@ -184,6 +189,11 @@
    "t": "2026-11-07T11:07",
    "soort": "fout",
    "tekst": "Token mist rechten: instagram_manage_insights"
+  },
+  {
+   "t": "2026-11-07T12:15",
+   "soort": "fout",
+   "tekst": "2026-11-07-1 instagram mislukt: 400: {\"error\":{\"message\":\"Fatal\",\"type\":\"OAuthException\",\"code\":-1,\"error_subcode\":2207085,\"is_transient\":false,\"error_user_title\":\"Algemene interne fout\",\"error_user_msg\":\"Er is een interne serverfout opgetreden. Probeer het later opnieuw.\",\"fbtrace_id\":\"AlxxdZefWuKRL9xjgZiXFDo\"}}"
   }
  ],
  "versen_totaal": 116
