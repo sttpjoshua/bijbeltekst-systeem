@@ -145,7 +145,7 @@ body.tv header h1{font-size:2vw}body.tv aside{font-size:1.05vw}
     <h1>Bibleverse HQ</h1>
     <span id="mode" class="badge">DEMO</span>
     <nav class="tabs" id="tabs"><button data-tab="kantoor" class="on">Kantoor</button><button data-tab="posts">Posts</button></nav>
-    <button class="hbtn" id="bGoed" title="Posts goedkeuren">📥 Goedkeuren<span class="n" id="nGoed" hidden></span></button><button class="hbtn" id="bBel" title="Meldingen bij problemen">🔔</button><button class="hbtn" id="bTv" title="Tv-stand">📺 Tv</button><span id="clock"></span><a href="./" style="color:var(--gold);font-size:12px;text-decoration:none;border:1px solid #4b3b78;padding:3px 8px;border-radius:4px">Dashboard</a>
+    <button class="hbtn" id="bBel" title="Meldingen bij problemen">🔔</button><button class="hbtn" id="bTv" title="Tv-stand">📺 Tv</button><span id="clock"></span><a href="./" style="color:var(--gold);font-size:12px;text-decoration:none;border:1px solid #4b3b78;padding:3px 8px;border-radius:4px">Dashboard</a>
   </header>
   <div id="tab-kantoor">
   <div class="grid">
@@ -711,13 +711,16 @@ function pinBody(a){
       <div class="acts" style="margin-top:8px"><input id="acTok" type="password" placeholder="github_pat_..." style="flex:1;min-width:150px"><button id="acSave" class="go">Opslaan</button></div>
       <div class="k">Daarna kun je mij hierop sturen</div><div class="acts">${acts(a.id).map(x=>`<span class="chip">${esc(x.t)}</span>`).join('')}</div>`;
   }
-  return `<div class="k">Stuur mij op</div><div class="acts col">${acts(a.id).map((x,i)=>`<button data-i="${i}"${x.leeg?' disabled title="Er is nu niets om te kiezen"':''}>${esc(x.t)}${x.leeg?' (niets klaar)':''}</button>`).join('')}</div>
+  return (a.id==='designer'?designerBak():'')+`<div class="k">Stuur mij op</div><div class="acts col">${acts(a.id).map((x,i)=>`<button data-i="${i}"${x.leeg?' disabled title="Er is nu niets om te kiezen"':''}>${esc(x.t)}${x.leeg?' (niets klaar)':''}</button>`).join('')}</div>
     <div id="acMsg"></div><div class="hint" style="margin-top:8px"><a href="#" id="acForget">Sleutel van dit apparaat verwijderen</a></div>`;
 }
 function bindPin(a){
   const sv=acBody.querySelector('#acSave');
   if(sv)sv.onclick=()=>{const v=acBody.querySelector('#acTok').value.trim();if(!v)return;try{localStorage.setItem(KEY,v)}catch(e){alert('Deze browser laat niet opslaan.');return}acBody.innerHTML=pinBody(a);bindPin(a)};
   acBody.querySelectorAll('.acts.col button').forEach(b=>b.onclick=()=>showForm(a,+b.dataset.i));
+  const bk=acBody.querySelector('#dbAlles');if(bk)bk.onclick=()=>{hideCard();toonGoedkeuren()};
+  acBody.querySelectorAll('[data-dbok]').forEach(b=>b.onclick=()=>stuurK({actie:'goedkeuren',post:b.dataset.dbok},b,acBody.querySelector('#dbMsg')));
+  acBody.querySelectorAll('[data-dbopen]').forEach(b=>b.onclick=()=>{hideCard();toonGoedkeuren()});
   const fg=acBody.querySelector('#acForget');
   if(fg)fg.onclick=e=>{e.preventDefault();try{localStorage.removeItem(KEY)}catch(x){}acBody.innerHTML=pinBody(a);bindPin(a)};
 }
@@ -896,6 +899,18 @@ function teKeuren(){
   return ((DJ&&DJ.posts)||[]).filter(p=>['gerenderd','opnieuw_maken','wacht_op_tekst'].includes(p.status)&&tijdVan(p)>=d)
     .sort((a,b)=>tijdVan(a)-tijdVan(b));
 }
+function designerBak(){
+  const l=teKeuren();
+  if(!l.length)return '<div class="k">Mijn bakje</div><div class="hint" style="margin-bottom:8px">Er ligt nu niets. De posts van morgen komen na 14:32.</div>';
+  const g=(DJ&&DJ.config&&DJ.config.goedkeuren)||{};
+  return `<div class="k">Mijn bakje: posts om te bekijken</div>
+    ${l.slice(0,6).map(p=>{const st=p.status==='gerenderd'?(p.goedgekeurd===true?'<span class="st ok">✓</span>':''):'<span class="st wacht">bezig</span>';
+      return `<div class="vo">${p.thumb?`<img src="${esc(p.thumb)}" alt="" data-dbopen="1" style="cursor:pointer">`:''}<div style="flex:1;min-width:0"><b>${esc(p.ref)}</b> ${st}<div class="hint">${esc(p.datum.slice(8,10)+'-'+p.datum.slice(5,7))} ${esc(p.variabelen.tijdslot)} · ${esc(p.variabelen.formaat)}</div></div>
+        ${p.status==='gerenderd'&&p.goedgekeurd!==true?`<button class="kbtn goud" data-dbok="${esc(p.id)}" title="Goedkeuren">✓</button>`:''}</div>`}).join('')}
+    <button class="kbtn goud" id="dbAlles" style="width:100%;margin:8px 0 4px">📥 Groot bekijken, andere stijl, ander vers of overslaan</button>
+    <div class="hint">Goedkeuren staat ${g.aan?'aan':'uit'}${g.aan?(g.zonder_reactie==='overslaan'?': zonder ✓ gaat een post niet online':': zonder ✓ gaat hij toch online'):': alles gaat vanzelf online'}.</div>
+    <div class="kmsg" id="dbMsg"></div>`;
+}
 function openTeller(){return teKeuren().filter(p=>p.status==='gerenderd'&&p.goedgekeurd!==true).length}
 function toonGoedkeuren(){
   const g=(DJ&&DJ.config&&DJ.config.goedkeuren)||{aan:false,zonder_reactie:'posten'};
@@ -933,10 +948,9 @@ $('kInhoud').addEventListener('click',e=>{
   const o={actie:a,post:id};if(a==='andere_stijl'){const s=rij.querySelector('[data-stijl]').value;if(s)o.huisstijl=s}
   stuurK(o,b,msg);
 });
-$('bGoed').addEventListener('click',toonGoedkeuren);
 const bakEl=document.createElement('button');bakEl.className='bak';bakEl.title='Posts goedkeuren';
 bakEl.style.left=((COLX[1]+12)/W*100)+'%';bakEl.style.top=((DESKY[0]-1)/H*100)+'%';
-bakEl.addEventListener('click',e=>{e.stopPropagation();toonGoedkeuren()});$('ov').appendChild(bakEl);
+bakEl.addEventListener('click',e=>{e.stopPropagation();const d=AG.find(x=>x.id==='designer');lastXY={x:e.clientX,y:e.clientY};showCard(d,'pin',e)});$('ov').appendChild(bakEl);
 
 /* ---- 2. alarm ---- */
 function advies(tekst){
@@ -1017,7 +1031,6 @@ function extraTekenen(t){
   const n=openTeller(),cx=COLX[1]+8,y=DESKY[0]-3;
   R(cx,y,9,3,'#d7c9a3');R(cx,y+2,9,1,'#8a6a3a');if(n){R(cx+1,y-1,7,1,'#fff');if(n>1)R(cx+2,y-2,6,1,'#f4f1e8')}
   bakEl.textContent='📥 '+n;bakEl.classList.toggle('leeg',!n);
-  const ng=$('nGoed');ng.hidden=!n;ng.textContent=n;
   // confetti
   CONF=CONF.filter(c=>t-0<1e12&&c.y<H+5&&nu()-c.t<9000);
   CONF.forEach(c=>{c.x+=c.vx*dt;c.y+=c.vy*dt;c.vy+=12*dt;R(c.x,c.y,2,2,c.c)});

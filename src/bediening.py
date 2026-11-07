@@ -136,8 +136,16 @@ def main(raw):
                 posts = S.laad("data/posts.json", [])
                 melding = f"{p['ref']} opnieuw gemaakt in stijl {nieuw}"
             else:
+                # video of foto: kan alleen in een run met muziek en foto's (dagelijks 14:32 of avondcontrole 20:47)
+                nu = dt.datetime.now()
+                runs = [nu.replace(hour=u, minute=m, second=0, microsecond=0) + dt.timedelta(days=d)
+                        for d in (0, 1) for u, m in ((14, 32), (20, 47))]
+                volgende = min(r for r in runs if r > nu)
+                tijd = dt.datetime.fromisoformat(p["datum"] + "T" + p["variabelen"]["tijdslot"])
+                if tijd <= volgende + dt.timedelta(minutes=20):
+                    raise SystemExit(f"{p['ref']} gaat online voordat hij opnieuw gemaakt kan worden (volgende run {volgende:%d-%m %H:%M}). Laat hem zo of sla hem over.")
                 p["status"] = "opnieuw_maken"
-                melding = f"{p['ref']} krijgt stijl {nieuw}; wordt bij de avondcontrole (20:47) opnieuw gemaakt"
+                melding = f"{p['ref']} krijgt stijl {nieuw}; wordt om {volgende:%H:%M} opnieuw gemaakt"
         else:
             melding = f"{p['ref']} krijgt stijl {nieuw}"
     elif a == "post_ander_vers":

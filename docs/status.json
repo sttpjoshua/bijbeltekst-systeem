@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T00:18:10",
+ "updated": "2026-11-08T00:21:23",
  "agents": {
   "verskiezer": {
    "t": "2026-11-07T22:23:58",
@@ -7,12 +7,12 @@
    "state": "done"
   },
   "designer": {
-   "t": "2026-11-08T00:18:10",
-   "task": "Johannes 14:27 krijgt stijl hemelsblauw; wordt bij de avondcontrole (2",
+   "t": "2026-11-08T00:21:23",
+   "task": "Ontwierp Johannes 14:27 in stijl hemelsblauw",
    "state": "done"
   },
   "video": {
-   "t": "2026-11-07T22:53:09",
+   "t": "2026-11-08T00:21:23",
    "task": "Monteerde video Johannes 14:27 met muziek",
    "state": "done"
   },
@@ -51,6 +51,10 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "00:21",
+   "msg": "Johannes 14:27 opnieuw gemaakt in stijl hemelsblauw"
+  },
   {
    "t": "00:18",
    "msg": "Bediening: Johannes 14:27 krijgt stijl hemelsblauw; wordt bij de avondcontrole (20:47) opnieuw gemaakt"
@@ -94,10 +98,6 @@
   {
    "t": "22:55",
    "msg": "Voorraad verzen aangevuld naar 300 (Statenvertaling): genoeg voor ongeveer 2 maanden bij 5 posts per dag"
-  },
-  {
-   "t": "22:53",
-   "msg": "Nieuwe frisse huisstijlen toegevoegd (zonsopgang, hemelsblauw, paars, roze, bosgroen, mint, perzik); donker 'a"
   }
  ],
  "lampen": [
