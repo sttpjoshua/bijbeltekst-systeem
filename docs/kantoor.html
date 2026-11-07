@@ -47,6 +47,28 @@ aside{display:flex;flex-direction:column;gap:12px}
 ul{list-style:none;margin:0;padding:0;font-size:12px;max-height:190px;overflow:auto}
 li{padding:4px 0;border-bottom:1px dashed #43376a;color:#e6dbff}
 li time{color:var(--gold);margin-right:6px}
+
+.tabs{display:flex;gap:6px;margin-left:8px}
+.tabs button,.seg button,.themes button{font:inherit;font-size:12px;font-weight:700;color:var(--muted);background:#2a2144;border:1px solid #43376a;border-radius:5px;padding:5px 11px;cursor:pointer}
+.tabs button.on,.seg button.on,.themes button.on{background:var(--gold);color:#2a1a05;border-color:var(--gold)}
+.themes{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+.bar2{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:12px}
+.seg{display:flex;gap:6px}
+.hint{font-size:12px;color:var(--muted)}
+.gallery{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(210px,1fr))}
+.gi{display:flex;flex-direction:column;gap:6px}
+.card2{container-type:inline-size;position:relative;border-radius:8px;overflow:hidden;aspect-ratio:var(--ar,4/5);box-shadow:0 6px 18px rgba(0,0,0,.4)}
+.card2 .in{position:absolute;inset:0;padding:9cqw;display:flex;flex-direction:column;justify-content:center;gap:5cqw}
+.card2 img{width:100%;height:100%;object-fit:cover;display:block}
+#real .card2 img{height:auto}
+.vt{font-size:calc(var(--fs)*1cqw);line-height:1.22}
+.vr{font-size:4.6cqw;letter-spacing:.14em;text-transform:uppercase;opacity:.9;font-weight:700}
+.vh{position:absolute;left:0;right:0;bottom:5cqw;text-align:center;font-size:3.4cqw;opacity:.7;letter-spacing:.08em}
+.fav{position:absolute;top:8px;right:8px;z-index:2;font:inherit;font-size:16px;line-height:1;width:30px;height:30px;border-radius:50%;border:0;background:rgba(0,0,0,.45);color:#fff;cursor:pointer}
+.fav.on{background:var(--gold);color:#2a1a05}
+.gcap{font-size:12px;color:var(--muted);display:flex;justify-content:space-between}
+h3.sec{font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);margin:18px 0 10px}
+[hidden]{display:none!important}
 </style>
 </head>
 <body>
@@ -54,10 +76,13 @@ li time{color:var(--gold);margin-right:6px}
   <header>
     <h1>Bibleverse HQ</h1>
     <span id="mode" class="badge">DEMO</span>
+    <nav class="tabs" id="tabs"><button data-tab="kantoor" class="on">Kantoor</button><button data-tab="posts">Posts</button></nav>
     <span id="clock"></span><a href="./" style="color:var(--gold);font-size:12px;text-decoration:none;border:1px solid #4b3b78;padding:3px 8px;border-radius:4px">Dashboard</a>
   </header>
+  <div id="tab-kantoor">
   <div class="grid">
     <section>
+      <div class="themes" id="themes"></div>
       <div class="cvwrap" id="cvwrap"><canvas id="cv"></canvas><div id="ov"></div></div>
     </section>
     <aside>
@@ -75,6 +100,18 @@ li time{color:var(--gold);margin-right:6px}
       <div class="card"><h2>Bereik per platform</h2><div id="plat"></div></div>
       <div class="card"><h2>Logboek</h2><ul id="log"></ul></div>
     </aside>
+  </div></div>
+  <div id="tab-posts" hidden>
+    <h3 class="sec" style="margin-top:4px">Gemaakte posts</h3>
+    <div class="gallery" id="real"></div>
+    <div id="realEmpty" class="hint" hidden>Nog geen posts gevonden.</div>
+    <div class="bar2" style="margin-top:26px">
+      <h3 class="sec" style="margin:0">Voorbeelddesigns</h3>
+      <div class="seg" id="fmt"><button data-f="4/5" class="on">Post 4:5</button><button data-f="9/16">Video 9:16</button></div>
+      <span class="hint">Tik op de ster voor favorieten.</span>
+      <span class="hint" id="favCount"></span>
+    </div>
+    <div class="gallery" id="gallery"></div>
   </div>
 </main>
 <script>
@@ -117,6 +154,15 @@ function move(a,dt){
 }
 const seated=a=>a.dest==='home'&&!a.path.length;
 
+/* ---------- themes ---------- */
+const THEMES={
+ dag:{n:'Dag',wall:'#f6e6bd',stripe:'#f1dfae',baseHi:'#d3a560',base:'#b98a4a',floor:'#eab24a',line:'#d99a2f',rug1:'#e0bf6e',rug2:'#f6dd9c',rug3:'#efd088',sofa:'#5fa36a',sofaHi:'#7bbd85',sofaMid:'#4f8f5a',sofaDk:'#3f7a4a',beam:'255,238,170',tint:null},
+ nacht:{n:'Nacht',wall:'#3b3a63',stripe:'#35345a',baseHi:'#4d4a80',base:'#232246',floor:'#4b3f6e',line:'#3f345f',rug1:'#2f2a55',rug2:'#3a3466',rug3:'#443d78',sofa:'#3d6b8a',sofaHi:'#5a8cae',sofaMid:'#325a76',sofaDk:'#284a62',beam:'150,175,255',tint:'rgba(20,16,60,.22)'},
+ kapel:{n:'Kapel',wall:'#ddd7c8',stripe:'#d2ccbb',baseHi:'#a29a86',base:'#7e7766',floor:'#bdb6a5',line:'#a8a190',rug1:'#6d2a35',rug2:'#8a3b48',rug3:'#9a4a57',sofa:'#7a5233',sofaHi:'#9a6b45',sofaMid:'#6a4529',sofaDk:'#553620',beam:'255,225,190',tint:null},
+ lente:{n:'Lente',wall:'#e6f4d6',stripe:'#d9edc4',baseHi:'#a6c783',base:'#7ea85b',floor:'#f1d9a6',line:'#e3c88c',rug1:'#bfe0f0',rug2:'#dcf0fa',rug3:'#cbe7f5',sofa:'#e48fa6',sofaHi:'#f2adc0',sofaMid:'#d27890',sofaDk:'#b85f78',beam:'255,250,200',tint:null}
+};
+let P=THEMES.dag;
+
 /* ---------- static background ---------- */
 const bgc=document.createElement('canvas');bgc.width=W;bgc.height=H;
 function plant(x,y){R(x-4,y-6,8,6,'#a8552a');R(x-4,y-6,8,1,'#c46a38');R(x-6,y-16,12,6,'#4f9e4a');R(x-4,y-21,8,6,'#63b85a');R(x-1,y-12,2,6,'#3b7a37');R(x-6,y-14,2,2,'#63b85a')}
@@ -128,17 +174,17 @@ function stained(x,y){
     R(x+3+c*9,y+3+r*6,8,5,pal[(r*2+c*3)%5]);
     R(x+3+c*9,y+3+r*6,8,1,'rgba(255,255,255,.25)');
   }
-  R(x,y,4,4,'#f6e6bd');R(x+26,y,4,4,'#f6e6bd');R(x+3,y+3,1,1,'#6b3f1d');R(x+26,y+3,1,1,'#6b3f1d');
+  R(x,y,4,4,P.wall);R(x+26,y,4,4,P.wall);R(x+3,y+3,1,1,'#6b3f1d');R(x+26,y+3,1,1,'#6b3f1d');
   R(x-2,y+42,34,3,'#8a5a2b');
 }
 function drawStatic(){
-  R(0,0,W,56,'#f6e6bd');
-  for(let x=0;x<W;x+=16)R(x,0,2,51,'#f1dfae');
-  R(0,50,W,1,'#d3a560');R(0,51,W,5,'#b98a4a');R(0,51,W,1,'#d3a560');
-  R(0,56,W,H-56,'#eab24a');
-  for(let k=0;56+k*12<H;k++){const y=56+k*12;R(0,y,W,1,'#d99a2f');for(let x=(k%2)*20;x<W;x+=40)R(x,y,1,12,'#d99a2f')}
-  R(226,114,94,86,'#e0bf6e');R(228,116,92,84,'#f6dd9c');
-  for(let y=118;y<198;y+=6)for(let x=230;x<318;x+=6)if(((x+y)/6)%2===0)R(x,y,2,2,'#efd088');
+  R(0,0,W,56,P.wall);
+  for(let x=0;x<W;x+=16)R(x,0,2,51,P.stripe);
+  R(0,50,W,1,P.baseHi);R(0,51,W,5,P.base);R(0,51,W,1,P.baseHi);
+  R(0,56,W,H-56,P.floor);
+  for(let k=0;56+k*12<H;k++){const y=56+k*12;R(0,y,W,1,P.line);for(let x=(k%2)*20;x<W;x+=40)R(x,y,1,12,P.line)}
+  R(226,114,94,86,P.rug1);R(228,116,92,84,P.rug2);
+  for(let y=118;y<198;y+=6)for(let x=230;x<318;x+=6)if(((x+y)/6)%2===0)R(x,y,2,2,P.rug3);
   // bookshelf
   R(8,5,50,47,'#7a4a22');R(10,7,46,43,'#4f2f14');
   const bc=['#c0392b','#2e86c1','#d4ac0d','#27ae60','#8e44ad','#e67e22','#ecf0f1','#16a085'];
@@ -157,18 +203,19 @@ function drawStatic(){
   R(252,28,13,17,'#3d4254');R(254,30,9,4,'#1f2230');R(254,36,9,2,'#5b6178');R(262,40,2,2,'#ff5a5a');R(256,42,5,3,'#fff');
   R(280,40,4,4,'#fff');R(290,40,4,4,'#fff');
   // sofa back and table
-  R(244,134,62,18,'#5fa36a');R(244,134,62,2,'#7bbd85');R(264,137,1,13,'#4f8f5a');R(285,137,1,13,'#4f8f5a');
+  R(244,134,62,18,P.sofa);R(244,134,62,2,P.sofaHi);R(264,137,1,13,P.sofaMid);R(285,137,1,13,P.sofaMid);
   R(258,172,34,3,'#c97b2e');R(258,175,34,4,'#9c5516');R(260,179,2,4,'#7d4412');R(288,179,2,4,'#7d4412');
   R(266,169,3,3,'#fff');R(281,169,3,3,'#fff');
   plant(311,128);plant(236,182);plant(10,70);
 }
-g=bgc.getContext('2d');drawStatic();g=ctx;
+function rebuild(){sd=7;g=bgc.getContext('2d');drawStatic();g=ctx}
+rebuild();
 
 /* ---------- dynamic drawing ---------- */
 function beams(t){
   g.save();
   const a=.07+.03*Math.sin(t/1800);
-  g.fillStyle=`rgba(255,238,170,${a})`;
+  g.fillStyle=`rgba(${P.beam},${a})`;
   [[72,98],[174,200]].forEach(([x0,x1])=>{
     g.beginPath();g.moveTo(x0,50);g.lineTo(x1,50);g.lineTo(x1+46,170);g.lineTo(x0+22,170);g.closePath();g.fill();
   });
@@ -227,8 +274,8 @@ function drawDesk(a,t){
   R(cx+14,y+1,4,4,'#fff');R(cx+18,y+2,1,2,'#fff');R(cx+14,y+1,4,1,'#6b3f1d');
 }
 function drawSofaFront(){
-  R(244,150,62,12,'#4f8f5a');R(244,150,62,2,'#69b176');R(264,152,1,10,'#3f7a4a');R(285,152,1,10,'#3f7a4a');
-  R(238,138,8,26,'#3f7a4a');R(304,138,8,26,'#3f7a4a');R(238,138,8,2,'#5fa36a');R(304,138,8,2,'#5fa36a');
+  R(244,150,62,12,P.sofaMid);R(244,150,62,2,P.sofaHi);R(264,152,1,10,P.sofaDk);R(285,152,1,10,P.sofaDk);
+  R(238,138,8,26,P.sofaDk);R(304,138,8,26,P.sofaDk);R(238,138,8,2,P.sofa);R(304,138,8,2,P.sofa);
 }
 
 /* ---------- overlay ---------- */
@@ -243,7 +290,7 @@ function overlay(){
     a.tag.style.left=lx;a.tag.style.top=((a.y+(sit?7:onSofa?[3,15,27][a.i]:3))/H*100)+'%';
     const show=a.state==='working'||a.state==='error';
     a.bub.className='bub'+(show&&a.task?'':' hide')+(a.state==='error'?' err':'');
-    if(show){a.bub.textContent=a.task;a.bub.style.left=lx;a.bub.style.top=((a.y-32)/H*100)+'%'}
+    if(show){const tx=a.task.length>38?a.task.slice(0,36)+'\u2026':a.task;a.bub.textContent=tx;a.bub.style.left=Math.min(84,Math.max(16,a.x/W*100))+'%';a.bub.style.top=((a.y-32)/H*100)+'%'}
   });
 }
 function resize(){document.documentElement.style.setProperty('--u',(cv.clientWidth/W).toFixed(3))}
@@ -261,6 +308,7 @@ function frame(now){
   });
   AG.filter(a=>!seated(a)).sort((p,q)=>p.y-q.y).forEach(a=>drawChar(a,now));
   drawSofaFront();
+  if(P.tint){g.fillStyle=P.tint;g.fillRect(0,0,W,H)}
   overlay();
   requestAnimationFrame(frame);
 }
@@ -382,6 +430,70 @@ async function cycle(){
   log('Demo: geen status.json gevonden');
   while(true){if(!live)await cycle();await sleep(9000)}
 })();
+
+/* ---------- tabs en thema's ---------- */
+const th=document.getElementById('themes');
+th.innerHTML=Object.keys(THEMES).map(k=>`<button data-k="${k}"${k==='dag'?' class="on"':''}>${THEMES[k].n}</button>`).join('');
+th.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;P=THEMES[b.dataset.k];rebuild();[...th.children].forEach(x=>x.classList.toggle('on',x===b))});
+function showTab(t){
+  document.getElementById('tab-kantoor').hidden=t!=='kantoor';
+  document.getElementById('tab-posts').hidden=t!=='posts';
+  [...document.getElementById('tabs').children].forEach(b=>b.classList.toggle('on',b.dataset.tab===t));
+  try{history.replaceState(null,'','#'+t)}catch(e){}
+  if(t==='kantoor')resize();
+}
+document.getElementById('tabs').addEventListener('click',e=>{const b=e.target.closest('button');if(b)showTab(b.dataset.tab)});
+if(location.hash==='#posts')showTab('posts');
+
+/* ---------- posts galerij ---------- */
+const DES=[
+ {n:'Zonsopgang',bg:'linear-gradient(160deg,#ffb347,#ff6f61 58%,#a8326b)',ink:'#fff8ea',ff:'Georgia,serif',fs:6.2,ref:'Johannes 3:16',t:'Want alzo lief heeft God de wereld gehad, dat Hij Zijn eniggeboren Zoon gegeven heeft, opdat een iegelijk, die in Hem gelooft, niet verderve, maar het eeuwige leven hebbe.'},
+ {n:'Hemelsblauw',bg:'linear-gradient(180deg,#9bd2ff,#3a86c8)',ink:'#ffffff',ff:'"Trebuchet MS",Verdana,sans-serif',fs:9.5,ref:'Psalm 23:1',t:'De HEERE is mijn Herder, mij zal niets ontbreken.',w:'800'},
+ {n:'Diep paars',bg:'radial-gradient(circle at 25% 15%,#8a5ae0,#2a1650 70%)',ink:'#f4ecff',ff:'Georgia,serif',fs:6.6,ref:'Jesaja 41:10',t:'Vrees niet, want Ik ben met u; wees niet verschrikt, want Ik ben uw God; Ik sterk u, ook help Ik u.'},
+ {n:'Zachtroze',bg:'linear-gradient(200deg,#ffe3ea,#f7a1b8)',ink:'#5a2236',ff:'Georgia,serif',fs:9,ref:'Filippenzen 4:13',t:'Ik vermag alle dingen door Christus, Die mij kracht geeft.',i:true},
+ {n:'Bosgroen',bg:'linear-gradient(170deg,#58a874,#1f5a3d)',ink:'#f1fff4',ff:'"Trebuchet MS",Verdana,sans-serif',fs:7,ref:'Jozua 1:9',t:'Heb Ik u niet geboden: Wees sterk en heb goeden moed? Vrees niet, en verschrik niet.',w:'700'},
+ {n:'Nacht',bg:'radial-gradient(1px 1px at 20% 30%,#fff,transparent),radial-gradient(1px 1px at 70% 20%,#fff,transparent),radial-gradient(2px 2px at 85% 60%,#fff8,transparent),radial-gradient(1px 1px at 35% 75%,#fff,transparent),linear-gradient(180deg,#14122b,#2b2457)',ink:'#e9e6ff',ff:'ui-monospace,Menlo,monospace',fs:8,ref:'Psalm 23:1',t:'De HEERE is mijn Herder, mij zal niets ontbreken.'},
+ {n:'Goud op zwart',bg:'#0d0d10',ink:'#f2c14e',ff:'Georgia,serif',fs:9.5,ref:'Filippenzen 4:13',t:'Ik vermag alle dingen door Christus.',acc:'#f2c14e',line:true},
+ {n:'Crème papier',bg:'#f6e6bd',ink:'#3a2412',ff:'Georgia,serif',fs:8,ref:'Jesaja 41:10',t:'Vrees niet, want Ik ben met u.',frame:true}
+];
+const fav=(()=>{let a=[];try{a=JSON.parse(localStorage.getItem('bv_fav')||'[]')}catch(e){}return new Set(a)})();
+function saveFav(){try{localStorage.setItem('bv_fav',JSON.stringify([...fav]))}catch(e){}document.getElementById('favCount').textContent=fav.size?`${fav.size} favoriet${fav.size>1?'en':''}`:''}
+const gal=document.getElementById('gallery');
+gal.innerHTML=DES.map((d,i)=>`<div class="gi"><div class="card2" style="background:${d.bg};color:${d.ink};--fs:${d.fs}">
+ <button class="fav${fav.has(d.n)?' on':''}" data-n="${d.n}" aria-label="Favoriet">&#9733;</button>
+ <div class="in" style="${d.frame?'box-shadow:inset 0 0 0 1.6cqw #f6e6bd,inset 0 0 0 2.4cqw #3a2412;':''}${d.line?'':''}">
+  <div class="vt" style="font-family:${d.ff};font-weight:${d.w||'400'};${d.i?'font-style:italic;':''}">${esc(d.t)}</div>
+  <div class="vr" style="font-family:${d.ff};${d.line?'border-top:.5cqw solid '+d.ink+';padding-top:4cqw;':''}">${esc(d.ref)}</div>
+ </div><div class="vh">@bibleverse_nl</div></div>
+ <div class="gcap"><span>${d.n}</span><span>#${i+1}</span></div></div>`).join('');
+gal.addEventListener('click',e=>{const b=e.target.closest('.fav');if(!b)return;const n=b.dataset.n;fav.has(n)?fav.delete(n):fav.add(n);b.classList.toggle('on',fav.has(n));saveFav()});
+saveFav();
+document.getElementById('fmt').addEventListener('click',e=>{
+  const b=e.target.closest('button');if(!b)return;
+  document.getElementById('tab-posts').style.setProperty('--ar',b.dataset.f);
+  [...document.getElementById('fmt').children].forEach(x=>x.classList.toggle('on',x===b));
+});
+/* echte posts uit data.json */
+const FMT={video:'video',carrousel:'carrousel',enkel:'enkele post'};
+const ST={gepubliceerd:'online',gerenderd:'klaar',gepland:'gepland'};
+async function loadReal(){
+  try{
+    const r=await fetch('data.json?'+Date.now(),{cache:'no-store'});if(!r.ok)throw 0;
+    const d=await r.json();const ps=(d.posts||[]).slice().sort((x,y)=>(y.datum||'').localeCompare(x.datum||'')||String(y.id).localeCompare(String(x.id)));
+    if(!ps.length)throw 0;
+    document.getElementById('realEmpty').hidden=true;
+    document.getElementById('real').innerHTML=ps.map(p=>{
+      const v=p.variabelen||{},ig=p.links&&p.links.instagram;
+      const cap=`<span>${esc(p.ref||'')}</span><span>${esc(ST[p.status]||p.status||'')} · ${esc(FMT[v.formaat]||v.formaat||'')}</span>`;
+      const sub=[v.huisstijl||v.palet,v.lettertype,v.layout,v.thema].filter(Boolean).map(x=>esc(String(x).replace(/_/g,' '))).join(' · ');
+      const img=p.thumb?`<img src="${esc(p.thumb)}" alt="${esc(p.ref||'')}" loading="lazy">`:'';
+      const inner=ig?`<a href="${esc(ig)}" target="_blank" rel="noopener">${img}</a>`:img;
+      return `<div class="gi"><div class="card2" style="aspect-ratio:auto">${inner}<button class="fav${fav.has(p.id)?' on':''}" data-n="${esc(p.id)}" aria-label="Favoriet">&#9733;</button></div><div class="gcap">${cap}</div><div class="hint" style="font-size:11px">${sub}</div></div>`;
+    }).join('');
+  }catch(e){document.getElementById('realEmpty').hidden=false}
+}
+document.getElementById('real').addEventListener('click',e=>{const b=e.target.closest('.fav');if(!b)return;e.preventDefault();const n=b.dataset.n;fav.has(n)?fav.delete(n):fav.add(n);b.classList.toggle('on',fav.has(n));saveFav()});
+loadReal();setInterval(loadReal,120000);
 })();
 </script>
 </body>
