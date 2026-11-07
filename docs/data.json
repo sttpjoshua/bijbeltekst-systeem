@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-08T00:16",
+ "gegenereerd": "2026-11-08T00:17",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -341,7 +341,7 @@
     "hook_op_beeld": false
    },
    "vers_id": "Isaiah-43-19-19",
-   "goedgekeurd": null,
+   "goedgekeurd": true,
    "caption": "Waar hoop jij stilletjes op iets nieuws?\n\n\"Ziet, Ik zal wat nieuws maken, nu zal het uitspruiten, zult gijlieden dat niet weten? Ja, Ik zal in de woestijn een weg leggen, en rivieren in de wildernis.\"\nJesaja 43:19\n\nGod kan iets nieuws laten groeien, juist op plekken waar alles dor en vastgelopen lijkt.",
    "uitleg": "God maakt iets nieuws, zelfs een weg waar je geen uitweg ziet.",
    "media": "docs/media/2026-11/2026-11-08-1-1.jpg",
@@ -659,6 +659,11 @@
    "t": "2026-11-08T00:16",
    "soort": "info",
    "tekst": "Statistieken lezen werkt"
+  },
+  {
+   "t": "2026-11-08T00:17",
+   "soort": "info",
+   "tekst": "Bediening: Jesaja 43:19 goedgekeurd"
   }
  ],
  "recente_fouten": [],

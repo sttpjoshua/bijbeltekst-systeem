@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T00:16:57",
+ "updated": "2026-11-08T00:17:46",
  "agents": {
   "verskiezer": {
    "t": "2026-11-07T22:23:58",
@@ -7,8 +7,8 @@
    "state": "done"
   },
   "designer": {
-   "t": "2026-11-07T23:38:25",
-   "task": "Ontwierp 2 Timotheüs 1:7 in stijl bosgroen",
+   "t": "2026-11-08T00:17:46",
+   "task": "Jesaja 43:19 goedgekeurd",
    "state": "done"
   },
   "video": {
@@ -52,6 +52,10 @@
  ],
  "log": [
   {
+   "t": "00:17",
+   "msg": "Bediening: Jesaja 43:19 goedgekeurd"
+  },
+  {
    "t": "00:16",
    "msg": "Statistieken lezen werkt"
   },
@@ -94,10 +98,6 @@
   {
    "t": "22:48",
    "msg": "Statistieken lezen werkt"
-  },
-  {
-   "t": "22:48",
-   "msg": "Verbinding met Facebook-pagina werkt (Bibleversenl)"
   }
  ],
  "lampen": [
