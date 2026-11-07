@@ -23,7 +23,8 @@
  },
  "materiaal_actions": {
   "fout": "2026-11-08T00:28",
-  "laatst_ok": false,
-  "detail": "geen MATERIAAL_PAT"
+  "laatst_ok": true,
+  "detail": "muziek en foto's beschikbaar",
+  "ok": "2026-11-08T00:33"
  }
 }

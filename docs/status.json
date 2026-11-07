@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T00:28:19",
+ "updated": "2026-11-08T00:33:27",
  "agents": {
   "verskiezer": {
    "t": "2026-11-07T22:23:58",
@@ -52,6 +52,10 @@
  ],
  "log": [
   {
+   "t": "00:33",
+   "msg": "Bediening: Muziek en foto's in GitHub: beschikbaar (27 nummers)"
+  },
+  {
    "t": "00:28",
    "msg": "Bediening: Muziek en foto's in GitHub: NIET beschikbaar, controleer MATERIAAL_PAT"
   },
@@ -94,10 +98,6 @@
   {
    "t": "23:13",
    "msg": "Bediening: Jesaja 43:19 goedgekeurd"
-  },
-  {
-   "t": "23:02",
-   "msg": "Verzen uit de hele Bijbel: de Statenvertaling is doorzocht; losstaande verzen gaan mee als 'ontdekking'. Het s"
   }
  ],
  "lampen": [

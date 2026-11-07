@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-08T00:28",
+ "gegenereerd": "2026-11-08T00:33",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -685,6 +685,11 @@
    "t": "2026-11-08T00:28",
    "soort": "info",
    "tekst": "Bediening: Muziek en foto's in GitHub: NIET beschikbaar, controleer MATERIAAL_PAT"
+  },
+  {
+   "t": "2026-11-08T00:33",
+   "soort": "info",
+   "tekst": "Bediening: Muziek en foto's in GitHub: beschikbaar (27 nummers)"
   }
  ],
  "recente_fouten": [],
@@ -714,8 +719,9 @@
   },
   "materiaal_actions": {
    "fout": "2026-11-08T00:28",
-   "laatst_ok": false,
-   "detail": "geen MATERIAAL_PAT"
+   "laatst_ok": true,
+   "detail": "muziek en foto's beschikbaar",
+   "ok": "2026-11-08T00:33"
   }
  },
  "groei": [
