@@ -182,23 +182,23 @@
  {
   "id": "2026-11-08-3",
   "datum": "2026-11-08",
-  "status": "gerenderd",
+  "status": "opnieuw_maken",
   "vers_id": "John-14-27-27",
   "ref": "Johannes 14:27",
   "tekst": "Vrede laat Ik u, Mijn vrede geef Ik u; niet gelijkerwijs de wereld hem geeft, geef Ik hem u. Uw hart worde niet ontroerd en zij niet versaagd.",
   "vertaling": "SV",
   "variabelen": {
-   "huisstijl": "paars",
+   "huisstijl": "hemelsblauw",
    "thema": "troost",
    "hook_stijl": "vraag",
    "formaat": "video",
    "uitleg_op_beeld": false,
    "achtergrondbron": "verloop",
    "tijdslot": "20:30",
-   "palet": "diep_paars",
-   "lettertype": "lora",
+   "palet": "hemelsblauw",
+   "lettertype": "montserrat_zwaar",
    "layout": "links",
-   "achtergrond": "radiaal",
+   "achtergrond": "diagonaal",
    "hook_op_beeld": false
   },
   "keuzebron": {
@@ -235,7 +235,8 @@
   "thumb": "thumbs/2026-11-08-3.jpg",
   "media_urls": [
    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-3.mp4"
-  ]
+  ],
+  "goedgekeurd": null
  },
  {
   "id": "2026-11-08-4",

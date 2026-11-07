@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-08T00:17",
+ "gegenereerd": "2026-11-08T00:18",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -247,19 +247,19 @@
    "ref": "Johannes 14:27",
    "tekst": "Vrede laat Ik u, Mijn vrede geef Ik u; niet gelijkerwijs de wereld hem geeft, geef Ik hem u. Uw hart worde niet ontroerd en zij niet versaagd.",
    "hook": "Wat haalt jou vanavond nog uit je rust?",
-   "status": "gerenderd",
+   "status": "opnieuw_maken",
    "variabelen": {
-    "huisstijl": "paars",
+    "huisstijl": "hemelsblauw",
     "thema": "troost",
     "hook_stijl": "vraag",
     "formaat": "video",
     "uitleg_op_beeld": false,
     "achtergrondbron": "verloop",
     "tijdslot": "20:30",
-    "palet": "diep_paars",
-    "lettertype": "lora",
+    "palet": "hemelsblauw",
+    "lettertype": "montserrat_zwaar",
     "layout": "links",
-    "achtergrond": "radiaal",
+    "achtergrond": "diagonaal",
     "hook_op_beeld": false
    },
    "vers_id": "John-14-27-27",
@@ -664,6 +664,11 @@
    "t": "2026-11-08T00:17",
    "soort": "info",
    "tekst": "Bediening: Jesaja 43:19 goedgekeurd"
+  },
+  {
+   "t": "2026-11-08T00:18",
+   "soort": "info",
+   "tekst": "Bediening: Johannes 14:27 krijgt stijl hemelsblauw; wordt bij de avondcontrole (20:47) opnieuw gemaakt"
   }
  ],
  "recente_fouten": [],

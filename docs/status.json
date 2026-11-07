@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T00:17:46",
+ "updated": "2026-11-08T00:18:10",
  "agents": {
   "verskiezer": {
    "t": "2026-11-07T22:23:58",
@@ -7,8 +7,8 @@
    "state": "done"
   },
   "designer": {
-   "t": "2026-11-08T00:17:46",
-   "task": "Jesaja 43:19 goedgekeurd",
+   "t": "2026-11-08T00:18:10",
+   "task": "Johannes 14:27 krijgt stijl hemelsblauw; wordt bij de avondcontrole (2",
    "state": "done"
   },
   "video": {
@@ -52,6 +52,10 @@
  ],
  "log": [
   {
+   "t": "00:18",
+   "msg": "Bediening: Johannes 14:27 krijgt stijl hemelsblauw; wordt bij de avondcontrole (20:47) opnieuw gemaakt"
+  },
+  {
    "t": "00:17",
    "msg": "Bediening: Jesaja 43:19 goedgekeurd"
   },
@@ -94,10 +98,6 @@
   {
    "t": "22:53",
    "msg": "Nieuwe frisse huisstijlen toegevoegd (zonsopgang, hemelsblauw, paars, roze, bosgroen, mint, perzik); donker 'a"
-  },
-  {
-   "t": "22:48",
-   "msg": "Statistieken lezen werkt"
   }
  ],
  "lampen": [
