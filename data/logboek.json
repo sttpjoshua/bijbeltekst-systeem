@@ -27,7 +27,8 @@
  {
   "t": "2026-11-07T11:07",
   "soort": "fout",
-  "tekst": "Token mist rechten: instagram_manage_insights"
+  "tekst": "Token mist rechten: instagram_manage_insights",
+  "opgelost": true
  },
  {
   "t": "2026-11-07T11:08",
@@ -42,7 +43,8 @@
  {
   "t": "2026-11-07T12:15",
   "soort": "fout",
-  "tekst": "2026-11-07-1 instagram mislukt: 400: {\"error\":{\"message\":\"Fatal\",\"type\":\"OAuthException\",\"code\":-1,\"error_subcode\":2207085,\"is_transient\":false,\"error_user_title\":\"Algemene interne fout\",\"error_user_msg\":\"Er is een interne serverfout opgetreden. Probeer het later opnieuw.\",\"fbtrace_id\":\"AlxxdZefWuKRL9xjgZiXFDo\"}}"
+  "tekst": "2026-11-07-1 instagram mislukt: 400: {\"error\":{\"message\":\"Fatal\",\"type\":\"OAuthException\",\"code\":-1,\"error_subcode\":2207085,\"is_transient\":false,\"error_user_title\":\"Algemene interne fout\",\"error_user_msg\":\"Er is een interne serverfout opgetreden. Probeer het later opnieuw.\",\"fbtrace_id\":\"AlxxdZefWuKRL9xjgZiXFDo\"}}",
+  "opgelost": true
  },
  {
   "t": "2026-11-07T12:30",
@@ -62,7 +64,8 @@
  {
   "t": "2026-11-07T12:32",
   "soort": "fout",
-  "tekst": "Facebook-verbinding mislukt: 400: {\"error\":{\"message\":\"(#100) Object does not exist, cannot be loaded due to missing permission or reviewable feature, or does not support this operation. This endpoint requires the 'pages_read_eng"
+  "tekst": "Facebook-verbinding mislukt: 400: {\"error\":{\"message\":\"(#100) Object does not exist, cannot be loaded due to missing permission or reviewable feature, or does not support this operation. This endpoint requires the 'pages_read_eng",
+  "opgelost": true
  },
  {
   "t": "2026-11-07T12:32",
@@ -82,7 +85,8 @@
  {
   "t": "2026-11-07T12:34",
   "soort": "fout",
-  "tekst": "Facebook-verbinding mislukt: 400: {\"error\":{\"message\":\"(#100) Object does not exist, cannot be loaded due to missing permission or reviewable feature, or does not support this operation. This endpoint requires the 'pages_read_engagement' permission or the 'Page Public Content Access' feature or the 'Page Public Metadata Access' feature. Refer to https:\\/\\/developers.facebook.com\\/docs\\/apps\\/review\\/login-permissions#manage-pages, | Rechten in token: business_management, instagram_basic, instagram_content_publish, instagram_manage_insights, pages_show_list, public_profile"
+  "tekst": "Facebook-verbinding mislukt: 400: {\"error\":{\"message\":\"(#100) Object does not exist, cannot be loaded due to missing permission or reviewable feature, or does not support this operation. This endpoint requires the 'pages_read_engagement' permission or the 'Page Public Content Access' feature or the 'Page Public Metadata Access' feature. Refer to https:\\/\\/developers.facebook.com\\/docs\\/apps\\/review\\/login-permissions#manage-pages, | Rechten in token: business_management, instagram_basic, instagram_content_publish, instagram_manage_insights, pages_show_list, public_profile",
+  "opgelost": true
  },
  {
   "t": "2026-11-07T12:34",

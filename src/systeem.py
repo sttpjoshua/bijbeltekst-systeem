@@ -421,7 +421,7 @@ def cmd_dashboard():
             "laatste_rapport": laad(f"rapporten/{rapporten[-1]}") if rapporten else None,
             "logboek": laad("data/logboek.json", [])[-60:],
             "recente_fouten": [l for l in laad("data/logboek.json", [])
-                               if l.get("soort") == "fout" and l["t"] >= (dt.datetime.now() - dt.timedelta(hours=48)).isoformat(timespec="minutes")],
+                               if l.get("soort") == "fout" and not l.get("opgelost") and l["t"] >= (dt.datetime.now() - dt.timedelta(hours=48)).isoformat(timespec="minutes")],
             "versen_totaal": len(laad("data/verzen.json", []))}
     bewaar("docs/data.json", data)
     print("docs/data.json bijgewerkt:", len(lijst), "posts")
@@ -457,6 +457,16 @@ def cmd_vers(thema, boek, h, v1, v2=None):
     bewaar("data/verzen.json", verzen)
     print("Toegevoegd:", ref, "|", t)
 
+def cmd_opgelost():
+    """Markeert alle huidige fouten in het logboek als opgelost (verdwijnen uit de rode balk)."""
+    log = laad("data/logboek.json", [])
+    n = 0
+    for l in log:
+        if l.get("soort") == "fout" and not l.get("opgelost"):
+            l["opgelost"] = True; n += 1
+    bewaar("data/logboek.json", log)
+    print(n, "fouten als opgelost gemarkeerd")
+
 def cmd_check():
     cfg = laad("config.json"); verzen = laad("data/verzen.json")
     ok = True
@@ -474,4 +484,4 @@ if __name__ == "__main__":
     {"kies": lambda: cmd_kies(x.datum), "render": lambda: cmd_render(x.datum),
      "registreer": lambda: cmd_registreer(*x.args), "stats": lambda: cmd_stats(x.args[0]),
      "leer": cmd_leer, "dashboard": cmd_dashboard, "check": cmd_check,
-     "log": lambda: cmd_log(*x.args), "vers": lambda: cmd_vers(*x.args), "opruimen": lambda: cmd_opruimen(*x.args)}[x.cmd]()
+     "log": lambda: cmd_log(*x.args), "vers": lambda: cmd_vers(*x.args), "opruimen": lambda: cmd_opruimen(*x.args), "opgelost": cmd_opgelost}[x.cmd]()

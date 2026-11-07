@@ -111,7 +111,7 @@ function bouw(){
   document.getElementById("inzichten").innerHTML=inz.length?inz.map(i=>`<div class="inzicht"><div class="sub">${i.datum}</div>${i.tekst}</div>`).join(""):'<div class="leeg">Na de eerste week met statistieken verschijnen hier de conclusies.</div>';
 
   // logboek
-  document.getElementById("logboek").innerHTML=(D.logboek||[]).slice().reverse().map(l=>`<div class="${l.soort==="fout"?"fout":""}"><span class="t">${l.t.replace("T"," ")}</span>${l.tekst}</div>`).join("")||'<div class="leeg">Nog niets gelogd.</div>';
+  document.getElementById("logboek").innerHTML=(D.logboek||[]).slice().reverse().map(l=>`<div class="${l.soort==="fout"&&!l.opgelost?"fout":""}"><span class="t">${l.t.replace("T"," ")}</span>${l.tekst.length>170?l.tekst.slice(0,170)+"…":l.tekst}${l.opgelost?' <span style="color:var(--goed)">(opgelost)</span>':""}</div>`).join("")||'<div class="leeg">Nog niets gelogd.</div>';
 
   // gewichten
   const g=document.getElementById("gewichten");g.innerHTML="";
