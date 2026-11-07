@@ -39,6 +39,17 @@ td{padding:8px 6px;border-bottom:1px solid var(--lijn);vertical-align:top}tr:hov
 .leeg{color:var(--ink3);font-size:13px}
 .foutbalk{background:var(--slecht);color:#fff;border-radius:12px;padding:14px 18px;margin-bottom:14px;font-size:14px}
 .foutbalk b{display:block;margin-bottom:4px}
+.bed{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-bottom:14px}
+.bed .blok{border:1px solid var(--lijn);border-radius:10px;padding:12px 14px}
+.bed .blok h3{font-size:13px;margin:0 0 8px;color:var(--ink2);font-weight:600}
+.btn{font:inherit;font-size:13px;font-weight:600;padding:7px 12px;border-radius:8px;border:1px solid var(--lijn);background:var(--bg);color:var(--ink);cursor:pointer}
+.btn:hover{border-color:var(--accent)}.btn.prim{background:var(--accent);color:#fff;border-color:var(--accent)}.btn.rood{background:var(--slecht);color:#fff;border-color:var(--slecht)}
+.btn.aan{background:var(--goed);color:#fff;border-color:var(--goed)}.btn:disabled{opacity:.5;cursor:wait}
+.seg{display:flex;gap:6px;flex-wrap:wrap}
+input[type=range]{width:100%}input.veld,select.veld{font:inherit;font-size:13px;padding:6px 8px;border:1px solid var(--lijn);border-radius:8px;background:var(--kaart);color:var(--ink)}
+.wacht{display:flex;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--lijn);flex-wrap:wrap}.wacht:last-child{border:0}
+.wacht .info{flex:1;min-width:180px}.wacht .acties{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+#bedMelding{font-size:13px;margin-top:10px;min-height:18px}
 </style>
 </head>
 <body>
@@ -50,6 +61,25 @@ td{padding:8px 6px;border-bottom:1px solid var(--lijn);vertical-align:top}tr:hov
 
   <div id="fouten"></div>
   <div class="grid g4" id="tegels"></div>
+
+  <section class="kaart" id="bediening">
+    <h2>Bediening</h2>
+    <div id="bedSleutel"></div>
+    <div id="bedPaneel" style="display:none">
+      <div class="bed">
+        <div class="blok"><h3>Systeem</h3><div class="seg" id="bPauze"></div><div class="sub" style="margin-top:6px">Pauze zet alles stil. Er gaat niets meer online tot je hervat.</div></div>
+        <div class="blok"><h3>Posts per dag</h3><div class="seg" id="bPPD"></div></div>
+        <div class="blok"><h3>Platformen</h3><div class="seg" id="bPlat"></div><div class="sub" style="margin-top:6px">YouTube en TikTok komen er later bij.</div></div>
+        <div class="blok"><h3>Verbinding</h3><button class="btn" id="bTest">Verbinding testen</button><div class="sub" style="margin-top:6px">Controleert de koppeling met Instagram en Facebook.</div></div>
+        <div class="blok"><h3>Aandeel foto-achtergronden: <span id="vBeeld"></span></h3><input type="range" id="rBeeld" min="0" max="50" step="5"><button class="btn" id="sBeeld">Opslaan</button></div>
+        <div class="blok"><h3>Experimenteren: <span id="vVerk"></span></h3><input type="range" id="rVerk" min="10" max="40" step="5"><button class="btn" id="sVerk">Opslaan</button><div class="sub" style="margin-top:6px">Hoe vaak het systeem iets nieuws probeert in plaats van wat al goed werkt.</div></div>
+      </div>
+      <h3 style="font-size:13px;color:var(--ink2);margin:6px 0 2px">Klaarstaande posts</h3>
+      <div id="bWacht"></div>
+      <div id="bedMelding"></div>
+      <div class="sub" style="margin-top:8px">Een opdracht wordt binnen een minuut uitgevoerd. Het dashboard ververst daarna vanzelf (dat duurt meestal 1 tot 3 minuten). <a href="#" id="bVergeet">Sleutel van dit apparaat verwijderen</a></div>
+    </div>
+  </section>
 
   <section class="grid g2">
     <div class="kaart"><h2>Wat het systeem geleerd heeft</h2><div id="inzichten"></div></div>
@@ -78,7 +108,7 @@ td{padding:8px 6px;border-bottom:1px solid var(--lijn);vertical-align:top}tr:hov
 <div id="tip"></div>
 <script>
 const NAMEN={huisstijl:"Huisstijl",thema:"Thema",hook_stijl:"Hook-stijl",hook_op_beeld:"Hook op beeld",formaat:"Formaat",tijdslot:"Tijdstip"};
-const STATUS={wacht_op_tekst:"Wacht op tekst",gerenderd:"Klaar, gaat online",overgeslagen:"Overgeslagen",gepubliceerd:"Gepubliceerd",fout:"Fout"};
+const STATUS={wacht_op_tekst:"Wacht op tekst",gerenderd:"Klaar, gaat online",afgekeurd:"Overgeslagen door jou",overgeslagen:"Overgeslagen",gepubliceerd:"Gepubliceerd",fout:"Fout"};
 const fmt=n=>n==null?"–":Number(n).toLocaleString("nl-NL");
 const tip=document.getElementById("tip");
 function toon(e,html){tip.innerHTML=html;tip.style.display="block";tip.style.left=Math.min(e.clientX+12,innerWidth-300)+"px";tip.style.top=(e.clientY+12)+"px"}
@@ -129,12 +159,13 @@ function bouw(){
   g.querySelectorAll(".rij").forEach(r=>{r.onmousemove=e=>toon(e,r.dataset.tip);r.onmouseleave=verberg});
 
   // filters
-  const fs=document.getElementById("fStatus"),ft=document.getElementById("fThema");
+  const fs=document.getElementById("fStatus"),ft=document.getElementById("fThema");fs.length=1;ft.length=1;
   [...new Set(p.map(x=>x.status))].forEach(v=>fs.add(new Option(STATUS[v]||v,v)));
   [...new Set(p.map(x=>x.variabelen.thema))].sort().forEach(v=>ft.add(new Option(v.replace("_"," "),v)));
   [fs,ft,document.getElementById("fZoek")].forEach(e=>e.oninput=tabel);
   document.querySelectorAll("th[data-k]").forEach(th=>th.onclick=()=>{sorteer={k:th.dataset.k,r:sorteer.k===th.dataset.k?-sorteer.r:-1};tabel()});
   tabel();
+  bouwBediening();
 }
 function waarde(x,k){if(k==="score"){const v=Object.values(x.score);return v.length?v.reduce((a,b)=>a+b)/v.length:-1}if(["views","likes","saves"].includes(k))return (k==="views"?(x.totaal.views||x.totaal.reach):x.totaal[k])||0;return x[k]}
 function tabel(){
@@ -152,6 +183,88 @@ function tabel(){
       <td>${STATUS[x.status]||x.status}</td>
       <td class="num">${fmt(waarde(x,"views"))}</td><td class="num">${fmt(x.totaal.likes)}</td><td class="num">${fmt(x.totaal.saves)}</td><td class="num"><b>${s}</b></td></tr>`}).join("");
   document.querySelectorAll("#tabel tbody tr").forEach(tr=>{tr.onmousemove=e=>toon(e,tr.dataset.tip);tr.onmouseleave=verberg});
+}
+
+// ---------- Bediening ----------
+const SLEUTEL="bibleverse_gh_token";
+function sleutel(){try{return localStorage.getItem(SLEUTEL)}catch(e){return null}}
+function melding(t,soort){const m=document.getElementById("bedMelding");m.innerHTML=t;m.style.color=soort==="fout"?"var(--slecht)":soort==="goed"?"var(--goed)":"var(--ink2)"}
+function bouwBediening(){
+  const s=sleutel(),c=D.config;
+  const sk=document.getElementById("bedSleutel"),pn=document.getElementById("bedPaneel");
+  if(!s){
+    pn.style.display="none";
+    sk.innerHTML=`<div class="sub" style="margin-bottom:8px">Plak één keer je GitHub-sleutel (dezelfde als bij de wekker op cron-job.org, met <i>Actions: Read and write</i>). Hij wordt alleen in deze browser bewaard, nergens anders.</div>
+      <div class="seg"><input class="veld" id="iSleutel" type="password" placeholder="github_pat_…" style="flex:1;min-width:220px"><button class="btn prim" id="bSleutel">Opslaan</button></div>`;
+    document.getElementById("bSleutel").onclick=()=>{const v=document.getElementById("iSleutel").value.trim();if(!v)return;try{localStorage.setItem(SLEUTEL,v)}catch(e){alert("Deze browser laat niet opslaan.");return}bouwBediening()};
+    return;
+  }
+  sk.innerHTML="";pn.style.display="block";
+  document.getElementById("bPauze").innerHTML=c.pauze
+    ?`<button class="btn aan" data-o='{"actie":"pauze","waarde":false}'>▶ Hervatten</button>`
+    :`<button class="btn rood" data-o='{"actie":"pauze","waarde":true}'>⏸ Pauzeren</button>`;
+  const max=c.max_posts_per_dag||3;
+  document.getElementById("bPPD").innerHTML=[...Array(max)].map((_,i)=>`<button class="btn ${c.posts_per_dag===i+1?"prim":""}" data-o='{"actie":"posts_per_dag","waarde":${i+1}}'>${i+1}</button>`).join("");
+  document.getElementById("bPlat").innerHTML=["instagram","facebook"].map(pl=>{const aan=c.platformen_actief.includes(pl);
+    return `<button class="btn ${aan?"aan":""}" data-o='{"actie":"platform","platform":"${pl}","aan":${!aan}}' title="Klik om ${aan?"uit":"aan"} te zetten">${pl[0].toUpperCase()+pl.slice(1)} ${aan?"aan":"uit"}</button>`}).join("");
+  const rb=document.getElementById("rBeeld"),rv=document.getElementById("rVerk");
+  rb.value=Math.round((c.max_aandeel_beeld??.33)*100);rv.value=Math.round((c.verkenning??.2)*100);
+  const upd=()=>{vBeeld.textContent=rb.value+"%";vVerk.textContent=rv.value+"%"};rb.oninput=rv.oninput=upd;upd();
+  document.getElementById("sBeeld").onclick=e=>stuur({actie:"max_aandeel_beeld",waarde:rb.value/100},e.target);
+  document.getElementById("sVerk").onclick=e=>stuur({actie:"verkenning",waarde:rv.value/100},e.target);
+  document.getElementById("bTest").onclick=e=>stuur({actie:"test"},e.target);
+  // klaarstaande posts
+  const w=D.posts.filter(x=>x.status==="gerenderd"||x.status==="wacht_op_tekst").sort((a,b)=>(a.datum+a.variabelen.tijdslot).localeCompare(b.datum+b.variabelen.tijdslot));
+  document.getElementById("bWacht").innerHTML=w.length?w.map(x=>{
+    const img=x.thumb||(x.media_url&&x.media_url.endsWith(".jpg")?x.media_url:"");
+    return `<div class="wacht">${img?`<img class="thumb" src="${img}">`:`<div class="thumb"></div>`}
+      <div class="info"><b>${x.ref}</b> <span class="tag">${x.variabelen.formaat}</span><span class="tag">${x.variabelen.thema.replace("_"," ")}</span>
+        <div class="sub">${STATUS[x.status]||x.status} · ${x.datum} om ${x.variabelen.tijdslot}${x.media_url?` · <a href="${x.media_url}" target="_blank">bekijken</a>`:""}</div></div>
+      <div class="acties">
+        ${x.status==="gerenderd"?`<button class="btn prim" data-o='${JSON.stringify({actie:"nu_posten",post:x.id}).replace(/'/g,"&#39;")}'>Nu posten</button>`:""}
+        <input class="veld" type="date" value="${x.datum}" id="d_${x.id}"><input class="veld" type="time" value="${x.variabelen.tijdslot}" id="t_${x.id}">
+        <button class="btn" data-tijd="${x.id}">Verplaats</button>
+        <button class="btn" data-o='${JSON.stringify({actie:"overslaan",post:x.id}).replace(/'/g,"&#39;")}' data-vraag="Deze post overslaan? Hij gaat dan niet online.">Overslaan</button>
+        ${x.vers_id?`<button class="btn" data-o='${JSON.stringify({actie:"vers_uitsluiten",vers_id:x.vers_id,ref:x.ref}).replace(/'/g,"&#39;")}' data-vraag="${x.ref} nooit meer gebruiken?">Vers nooit meer</button>`:""}
+      </div></div>`}).join(""):'<div class="leeg sub">Er staat nu niets klaar. De dagelijkse taak maakt de volgende post.</div>';
+  pn.querySelectorAll("[data-o]").forEach(b=>b.onclick=()=>{if(b.dataset.vraag&&!confirm(b.dataset.vraag))return;stuur(JSON.parse(b.dataset.o),b)});
+  pn.querySelectorAll("[data-tijd]").forEach(b=>b.onclick=()=>{const id=b.dataset.tijd;stuur({actie:"tijd",post:id,datum:document.getElementById("d_"+id).value,tijd:document.getElementById("t_"+id).value},b)});
+  document.getElementById("bVergeet").onclick=e=>{e.preventDefault();try{localStorage.removeItem(SLEUTEL)}catch(x){}bouwBediening()};
+}
+async function stuur(o,knop){
+  const repo=D.repo;if(!repo)return melding("Repo onbekend in config.json","fout");
+  if(knop)knop.disabled=true;melding("Opdracht versturen…");
+  try{
+    const r=await fetch(`https://api.github.com/repos/${repo}/actions/workflows/publiceren.yml/dispatches`,{method:"POST",
+      headers:{"Authorization":"Bearer "+sleutel(),"Accept":"application/vnd.github+json","Content-Type":"application/json"},
+      body:JSON.stringify({ref:"main",inputs:{taak:"bediening",opdracht:JSON.stringify(o)}})});
+    if(r.status===204){melding("✓ Opdracht ontvangen. Bezig met uitvoeren…","goed");volg(Date.now())}
+    else if(r.status===401||r.status===403){melding("De sleutel werkt niet (verlopen of zonder Actions-rechten). Verwijder hem onderaan en plak een nieuwe.","fout");if(knop)knop.disabled=false}
+    else{melding("GitHub gaf fout "+r.status+": "+(await r.text()).slice(0,140),"fout");if(knop)knop.disabled=false}
+  }catch(e){melding("Geen verbinding met GitHub: "+e.message,"fout");if(knop)knop.disabled=false}
+}
+async function volg(start){
+  const repo=D.repo,h={"Authorization":"Bearer "+sleutel(),"Accept":"application/vnd.github+json"};
+  const oud=D.gegenereerd;let klaar=false;
+  for(let i=0;i<40;i++){
+    await new Promise(r=>setTimeout(r,8000));
+    try{
+      if(!klaar){
+        const r=await fetch(`https://api.github.com/repos/${repo}/actions/workflows/publiceren.yml/runs?event=workflow_dispatch&per_page=1`,{headers:h});
+        const run=(await r.json()).workflow_runs?.[0];
+        if(run&&new Date(run.created_at).getTime()>start-60000){
+          if(run.status==="completed"){klaar=true;
+            if(run.conclusion==="success")melding("✓ Uitgevoerd. Dashboard wordt ververst…","goed");
+            else{melding(`Uitvoeren mislukt. <a href="${run.html_url}" target="_blank">Bekijk details</a>`,"fout");document.querySelectorAll("#bediening button").forEach(b=>b.disabled=false);return}
+          }else melding("Bezig met uitvoeren… ("+(run.status==="queued"?"in de wachtrij":"loopt")+")");
+        }
+      }
+      const d=await (await fetch("data.json?"+Date.now())).json();
+      if(d.gegenereerd!==oud){D=d;bouw();melding("✓ Klaar en bijgewerkt.","goed");return}
+    }catch(e){}
+  }
+  melding("Uitgevoerd, maar het dashboard is nog niet ververst. Herlaad de pagina over een minuut.");
+  document.querySelectorAll("#bediening button").forEach(b=>b.disabled=false);
 }
 </script>
 </body>

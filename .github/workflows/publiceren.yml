@@ -10,8 +10,11 @@ on:
   workflow_dispatch:
     inputs:
       taak:
-        description: "posten, statistieken of token"
+        description: "posten, statistieken, token of bediening"
         default: "posten"
+      opdracht:
+        description: "JSON-opdracht voor bediening (vanuit het dashboard)"
+        default: "{}"
 
 permissions:
   contents: write
@@ -38,7 +41,7 @@ jobs:
           elif [ "${{ github.event.schedule }}" = "41 3 * * 1" ]; then echo "taak=token" >> $GITHUB_OUTPUT
           else echo "taak=posten" >> $GITHUB_OUTPUT; fi
       - name: PyNaCl voor token-verversing
-        if: steps.t.outputs.taak == 'token'
+        if: steps.t.outputs.taak == 'token' || steps.t.outputs.taak == 'bediening'
         run: pip install pynacl
       - name: Uitvoeren
         env:
@@ -47,7 +50,15 @@ jobs:
           GH_PAT: ${{ secrets.GH_PAT }}
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           FB_TOKEN: ${{ secrets.FB_TOKEN }}
-        run: python3 src/publiceer.py ${{ steps.t.outputs.taak }}
+          OPDRACHT: ${{ inputs.opdracht }}
+        run: |
+          if [ "${{ steps.t.outputs.taak }}" = "bediening" ]; then
+            python3 src/bediening.py
+            # na een bediening meteen posten (voor 'nu posten') of de verbinding testen
+            if echo "$OPDRACHT" | grep -q '"test"'; then python3 src/publiceer.py token; else python3 src/publiceer.py posten; fi
+          else
+            python3 src/publiceer.py ${{ steps.t.outputs.taak }}
+          fi
       - name: Wijzigingen opslaan
         if: always()
         run: |

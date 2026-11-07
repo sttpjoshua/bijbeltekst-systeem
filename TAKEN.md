@@ -50,3 +50,6 @@ Het online zetten zelf doet GitHub Actions (`.github/workflows/publiceren.yml`, 
    - Een nieuw platform zet je alleen aan als `src/publiceer.py` het ondersteunt en de geheimen ervoor bestaan. Anders log je dat het klaarstaat voor Joshua.
 6. Daalt het totale bereik twee weken op rij met meer dan 30%: zet `verkenning` op 0.3 en log een waarschuwing.
 7. `python3 src/systeem.py dashboard`, log een samenvatting, commit, `git pull --rebase`, push.
+
+## Bediening via het dashboard
+Joshua kan vanaf het dashboard pauzeren, posts per dag (1-3), platformen, foto-aandeel en experimenteren aanpassen, en klaarstaande posts verplaatsen, nu posten, overslaan (status "afgekeurd") of een vers uitsluiten (config "verzen_uitsluiten"). Respecteer die keuzes: draai ze niet terug, kies nooit een uitgesloten vers, en verander de tijd niet van posts die hij handmatig heeft verplaatst. Verhoog posts_per_dag niet automatisch als Joshua hem zelf lager heeft gezet (zie logboek "Bediening:").

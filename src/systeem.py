@@ -146,7 +146,7 @@ def cmd_kies(datum):
     posts = laad("data/posts.json", [])
     rnd = random.Random(f"{datum}-{len(posts)}")
     grens = (dt.date.fromisoformat(datum) - dt.timedelta(days=cfg["vers_niet_herhalen_dagen"])).isoformat()
-    recent = {p["vers_id"] for p in posts if p["datum"] >= grens}
+    recent = {p["vers_id"] for p in posts if p["datum"] >= grens} | set(cfg.get("verzen_uitsluiten", []))
     al_vandaag = [p for p in posts if p["datum"] == datum]
     n = min(cfg["posts_per_dag"], cfg["max_posts_per_dag"]) - len(al_vandaag)
     if n <= 0:
@@ -445,12 +445,12 @@ def cmd_dashboard():
             for k in ("views", "reach", "likes", "comments", "shares", "saves"):
                 tot[k] = tot.get(k, 0) + (s.get(k) or 0)
         lijst.append({"id": p["id"], "datum": p["datum"], "ref": p["ref"], "tekst": p["tekst"], "hook": p.get("hook", ""),
-                      "status": p["status"], "variabelen": p["variabelen"], "media": p.get("media"), "media_url": p.get("media_url"), "thumb": p.get("thumb"),
+                      "status": p["status"], "variabelen": p["variabelen"], "vers_id": p.get("vers_id"), "media": p.get("media"), "media_url": p.get("media_url"), "thumb": p.get("thumb"),
                       "platformen": list(p.get("gepubliceerd", {}).keys()),
                       "links": {k: v.get("url") for k, v in p.get("gepubliceerd", {}).items()}, "totaal": tot, "score": sc.get(p["id"], {})})
     rapporten = sorted(os.listdir(P("rapporten"))) if os.path.isdir(P("rapporten")) else []
     data = {"gegenereerd": dt.datetime.now().isoformat(timespec="minutes"), "repo": cfg.get("github_repo", ""),
-            "config": {k: cfg.get(k) for k in ("pauze", "kanaalnaam", "posts_per_dag", "verkenning", "platformen_actief")},
+            "config": {k: cfg.get(k) for k in ("pauze", "kanaalnaam", "posts_per_dag", "max_posts_per_dag", "verkenning", "platformen_actief", "max_aandeel_beeld", "verzen_uitsluiten")},
             "strategie": strat, "posts": lijst,
             "leergeschiedenis": laad("data/leergeschiedenis.json", []),
             "laatste_rapport": laad(f"rapporten/{rapporten[-1]}") if rapporten else None,
