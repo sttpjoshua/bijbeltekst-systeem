@@ -105,6 +105,29 @@ def materiaal(cfg):
     muziek = [f for f in mp3 if f not in geluid and (december or "christmas" not in f.lower())]
     return {"beelden": beelden, "muziek": muziek, "geluid": geluid}
 
+BRON = {"NBV21": "NBV21 \u00a9 Nederlands-Vlaams Bijbelgenootschap"}
+
+def extra_verzen():
+    """Verzen uit een moderne vertaling, aangeleverd in de privé repo (verzen_nbv21.csv: ref;tekst;thema)."""
+    import csv
+    pad = os.path.join(materiaal_map(), "verzen_nbv21.csv")
+    if not os.path.exists(pad):
+        return []
+    uit = []
+    with open(pad, encoding="utf-8-sig") as f:
+        proef = f.read(2048); f.seek(0)
+        sep = ";" if proef.count(";") >= proef.count(",") else ","
+        for r in csv.DictReader(f, delimiter=sep):
+            ref, tekst = (r.get("ref") or "").strip(), " ".join((r.get("tekst") or "").split())
+            if not ref or not tekst or len(tekst) > 260:
+                continue
+            thema = (r.get("thema") or "").strip().lower().replace(" ", "_")
+            if thema not in DIMENSIES["thema"]:
+                thema = "hoop"
+            uit.append({"id": "NBV21-" + ref.replace(" ", "_"), "ref": ref, "tekst": tekst, "thema": thema,
+                        "lengte": len(tekst), "vertaling": "NBV21"})
+    return uit
+
 def minst_gebruikt(opties, posts, veld, rnd):
     """Kies de optie die het langst niet gebruikt is (nooit gebruikt eerst), met toeval bij gelijkspel."""
     laatst = {}
@@ -146,7 +169,11 @@ def cmd_kies(datum):
             aandeel = sum(1 for p in recent14 if p["variabelen"].get("achtergrondbron") == "beeld") / max(1, len(recent14))
             if not mat["beelden"] or aandeel >= cfg.get("max_aandeel_beeld", 0.33):
                 v["achtergrondbron"], bron["achtergrondbron"] = "verloop", "limiet"
-        kandidaten = [x for x in verzen if x["thema"] == v["thema"] and x["id"] not in recent]
+        # Eerst de moderne vertaling (als aangeleverd), anders de Statenvertaling
+        nbv = [x for x in extra_verzen() if x["id"] not in recent]
+        kandidaten = [x for x in nbv if x["thema"] == v["thema"]] or nbv
+        if not kandidaten:
+            kandidaten = [x for x in verzen if x["thema"] == v["thema"] and x["id"] not in recent]
         if not kandidaten:
             kandidaten = [x for x in verzen if x["id"] not in recent] or verzen
         vers = rnd.choice(kandidaten)
@@ -155,6 +182,7 @@ def cmd_kies(datum):
         pid = f"{datum}-{len(al_vandaag) + i + 1}"
         nieuw.append({"id": pid, "datum": datum, "status": "wacht_op_tekst",
                       "vers_id": vers["id"], "ref": vers["ref"], "tekst": vers["tekst"],
+                      "vertaling": vers.get("vertaling", "SV"),
                       "variabelen": v, "keuzebron": bron,
                       "hook": "", "beeld_hook": "", "caption": "", "hashtags": [],
                       "uitleg": "", "betekenis": "", "toepassing": "",
@@ -297,6 +325,8 @@ def valideer_tekst(p, cfg):
             return f"engagement-bait in caption ('{v}')"
     if "—" in p["caption"] or "—" in p["hook"]:
         return "gebruik geen lange streep"
+    if p.get("vertaling") in BRON and "NBV21" not in p["caption"]:
+        return "bronvermelding NBV21 ontbreekt in de caption"
     if p["tekst"][:40] not in p["caption"]:
         return "caption moet de verstekst letterlijk bevatten"
     return None

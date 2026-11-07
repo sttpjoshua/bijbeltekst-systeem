@@ -6,7 +6,8 @@ Dit bestand is de handleiding voor Claude bij elke geplande run. Volg het letter
 - Staat `pauze` op `true` in `config.json`: doe niets behalve `python3 src/systeem.py log "Gepauzeerd, niets gedaan"`, commit, push, stop.
 - Nooit iets posten via Metricool of op accounts van STTP Media of klanten. Posten gebeurt alleen via GitHub Actions met de geheimen van de repo.
 - Nooit meer dan `max_posts_per_dag` posts per dag.
-- Verstekst altijd letterlijk uit `data/verzen.json` (Statenvertaling). Nooit een vers zelf typen of "verbeteren".
+- Verstekst altijd letterlijk uit de post in `data/posts.json` (Statenvertaling uit `data/verzen.json`, of NBV21 uit `verzen_nbv21.csv` in de privé repo). Nooit een vers zelf typen, aanvullen of "verbeteren", en nooit NBV21-tekst uit je geheugen of van een website halen.
+- Heeft een post `"vertaling": "NBV21"`, zet dan direct onder de referentie in de caption: `NBV21 © Nederlands-Vlaams Bijbelgenootschap` (Joshua heeft toestemming van het NBG). Laat bij NBV21-posts `uitleg_op_beeld` gewoon zoals gekozen.
 - Geen lange streep (het teken U+2014) in captions of hooks.
 - Geen engagement-bait ("typ amen", "deel met 10 mensen", "zegen als je...").
 - Respectvol: geen spot met het geloof, geen politiek, geen beloften over gezondheid of geld.

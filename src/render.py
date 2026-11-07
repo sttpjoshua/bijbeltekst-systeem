@@ -163,7 +163,7 @@ def tekstlaag(b, h, post, ruimte_boven=0, ruimte_onder=0):
     rf = _klein_font(int(b * 0.032), b"SemiBold")
     ry = y0 + blok_h + int(b * 0.05)
     d.line([b // 2 - 40, ry - int(b * 0.02), b // 2 + 40, ry - int(b * 0.02)], fill=accent + (255,), width=3)
-    d.text((b // 2, ry), post["ref"].upper(), font=rf, fill=accent + (255,), anchor="ma")
+    d.text((b // 2, ry), (post["ref"] + ("  \u00b7  NBV21" if post.get("vertaling") == "NBV21" else "")).upper(), font=rf, fill=accent + (255,), anchor="ma")
     if uitleg_regels:
         uy = ry + int(b * 0.075)
         for i, r in enumerate(uitleg_regels):
@@ -264,7 +264,7 @@ def _tekstslide(post, titel, body, pad, nummer):
     for i, r in enumerate(regels):
         d.text((b // 2, y0 + i * lh), r, font=f, fill=kleur + (255,), anchor="ma")
     rf = _klein_font(int(b * 0.026), b"SemiBold")
-    d.text((b // 2, int(h * 0.85)), post["ref"].upper(), font=rf, fill=accent + (220,), anchor="ma")
+    d.text((b // 2, int(h * 0.85)), (post["ref"] + ("  \u00b7  NBV21" if post.get("vertaling") == "NBV21" else "")).upper(), font=rf, fill=accent + (220,), anchor="ma")
     hy = h - int(h * (0.115 if v["layout"] == "kader" else 0.085))
     _woordmerk(d, b // 2, hy, "BIBLEVERSE", _klein_font(int(b * 0.024), b"Bold"), accent + (235,), int(b * 0.009))
     if post.get("handle"):
