@@ -175,6 +175,21 @@ def tijdstip(p):
     u, m = map(int, p["variabelen"]["tijdslot"].split(":"))
     return dt.datetime(d.year, d.month, d.day, u, m, tzinfo=TZ)
 
+def controleer_aantal(cfg, posts, nu):
+    """Vanaf 06:00 één keer per dag: staan er voor vandaag minder posts klaar dan ingesteld? Dan een fout op het dashboard."""
+    if nu.hour < 6:
+        return
+    d = nu.date().isoformat()
+    teken = f"Te weinig posts voor {d}"
+    if any(x["tekst"].startswith(teken) for x in S.laad("data/logboek.json", [])[-200:]):
+        return
+    n = sum(1 for p in posts if p["datum"] == d and p["status"] in ("gerenderd", "gepubliceerd", "fout"))
+    nodig = min(cfg["posts_per_dag"], cfg["max_posts_per_dag"])
+    if n < nodig:
+        S.cmd_log(f"{teken}: {n} klaar, {nodig} ingesteld. De dagelijkse taak of de avondcontrole heeft ze niet gemaakt.", "fout")
+        S.cmd_dashboard()
+
+
 def cmd_posten():
     cfg = S.laad("config.json")
     if cfg["pauze"]:
@@ -182,6 +197,7 @@ def cmd_posten():
     nu = dt.datetime.now(TZ)
     posts = S.laad("data/posts.json", [])
     vandaag_online = sum(1 for p in posts if p["datum"] == nu.date().isoformat() and p["status"] == "gepubliceerd")
+    controleer_aantal(cfg, posts, nu)
     klaar = [p for p in posts if p["status"] == "gerenderd" and tijdstip(p) <= nu]
     if not klaar:
         print("Niets te doen"); return

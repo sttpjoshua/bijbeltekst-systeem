@@ -65,7 +65,7 @@ input[type=range]{width:100%}input.veld,select.veld{font:inherit;font-size:13px;
 .slot .tijd{font-variant-numeric:tabular-nums;color:var(--ink2);width:38px;flex:0 0 auto}
 .slot .wat{flex:1;min-width:0}.slot .wat b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .stip{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:4px;vertical-align:0}
-.st-klaar{color:var(--goed)}.st-online{color:var(--accent)}.st-plan{color:var(--ink3)}
+.st-klaar{color:var(--goed)}.st-maken{color:#d97706}.st-online{color:var(--accent)}.st-plan{color:var(--ink3)}
 .legenda{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--ink3);margin:-4px 0 12px}
 </style>
 </head>
@@ -81,7 +81,7 @@ input[type=range]{width:100%}input.veld,select.veld{font:inherit;font-size:13px;
 
   <section class="kaart" id="planning">
     <h2>Planning komende dagen</h2>
-    <div class="legenda"><span class="st-online">● Online</span><span class="st-klaar">● Klaar, gaat vanzelf online</span><span class="st-plan">○ Voorlopig plan</span></div>
+    <div class="legenda"><span class="st-online">● Online</span><span class="st-klaar">● Klaar, gaat vanzelf online</span><span class="st-maken">◐ Wordt vanavond gemaakt</span><span class="st-plan">○ Voorlopig plan</span></div>
     <div class="plan" id="planDagen"></div>
     <div class="sub" style="margin-top:10px">Het voorlopige plan wordt elke nacht opnieuw gemaakt met wat het systeem geleerd heeft, en na elke wijziging in Bediening. Een dag van tevoren worden de posts echt gemaakt; dan verschijnt het beeld. Klik op een post om de tekst te zien.</div>
   </section>
@@ -322,7 +322,8 @@ function bouwPlanning(){
   if(D.config.pauze){el.innerHTML='<div class="leeg sub">Het systeem staat op pauze. Er is niets gepland.</div>';return}
   const vandaag=new Date().toISOString().slice(0,10);
   const echt=D.posts.filter(x=>x.datum>=vandaag&&x.status!=="afgekeurd"&&x.status!=="overgeslagen").map(x=>({...x,soort:x.status==="gepubliceerd"?"online":"klaar"}));
-  const plan=(D.planning||[]).map(x=>({...x,soort:"plan",status:"plan",id:"plan-"+x.datum+x.variabelen.tijdslot}));
+  const morgen=new Date(Date.now()+864e5).toISOString().slice(0,10);
+  const plan=(D.planning||[]).map(x=>({...x,soort:x.datum<=morgen?"maken":"plan",status:"plan",id:"plan-"+x.datum+x.variabelen.tijdslot}));
   const alles=[...echt,...plan];
   const dagen=[...new Set(alles.map(x=>x.datum))].sort();
   if(!dagen.length){el.innerHTML='<div class="leeg sub">Nog geen planning. Die verschijnt na de volgende nachtelijke run.</div>';return}
@@ -333,8 +334,8 @@ function bouwPlanning(){
     return `<div class="dag"><h3>${naam[0].toUpperCase()+naam.slice(1)}<span>${dt.toLocaleDateString("nl-NL",{day:"numeric",month:"short"})}</span></h3>${items.map(x=>{
       const v=x.variabelen,exp=x.keuzebron&&Object.entries(x.keuzebron).some(([k,b])=>b==="verkenning"&&k!=="tijdslot");
       const kleur=STIJLKLEUR[v.huisstijl]||"#999";v.huisstijl=v.huisstijl||(v.palet||"").replace("_"," ");
-      const klik=x.soort==="plan"?`toonPlan('${x.id}')`:`toonGalerij('${x.id}')`;
-      return `<div class="slot" style="cursor:pointer" onclick="${klik}"><span class="tijd">${v.tijdslot}</span><div class="wat"><b class="st-${x.soort}">${x.soort==="plan"?"○":"●"} ${x.ref}</b>
+      const klik=(x.soort==="plan"||x.soort==="maken")?`toonPlan('${x.id}')`:`toonGalerij('${x.id}')`;
+      return `<div class="slot" style="cursor:pointer" onclick="${klik}"><span class="tijd">${v.tijdslot}</span><div class="wat"><b class="st-${x.soort}">${{plan:"○",maken:"◐"}[x.soort]||"●"} ${x.ref}</b>
         <span class="sub">${FORMAAT[v.formaat]||v.formaat} · ${v.thema.replace("_"," ")}</span><br>
         <span class="sub"><span class="stip" style="background:${kleur}"></span>${v.huisstijl}${v.achtergrondbron==="beeld"?" · foto":""}</span></div></div>`}).join("")}</div>`}).join("");
 }

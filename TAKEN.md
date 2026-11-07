@@ -59,3 +59,9 @@ Staat `leermodus` op true in config.json, dan maak je elke dag `posts_per_dag` (
 
 ## Planning
 `data/planning.json` is het voorlopige plan voor 7 dagen dat op het dashboard staat. `kies` volgt dat plan automatisch voor de gekozen datum (vers, formaat, stijl, tijd), zodat wat Joshua ziet ook gebeurt. Maak na elke wijziging de planning opnieuw: `python3 src/systeem.py plan` (kies doet dat zelf al).
+
+## Avondcontrole (elke avond rond 21:00)
+Doel: zorgen dat er voor MORGEN precies zoveel posts klaarstaan als `posts_per_dag` in config.json (bijvoorbeeld omdat Joshua na de dagelijkse run iets via Bediening heeft veranderd).
+1. Staat `pauze` op true: stop meteen, doe niets.
+2. Tel de posts van morgen in `data/posts.json` met status "gerenderd" of "wacht_op_tekst". Is dat aantal gelijk aan of hoger dan `posts_per_dag`, en heeft geen enkele post status "wacht_op_tekst": stop meteen. Commit dan niets.
+3. Anders: `python3 src/systeem.py kies --datum MORGEN` (vult alleen de ontbrekende posts aan en volgt de planning), schrijf de teksten volgens "Teksten schrijven", en render met `python3 src/systeem.py render --datum MORGEN`. Bekijk minstens één beeld. Log wat je deed met `python3 src/systeem.py log "Avondcontrole: ..."`, draai `python3 src/systeem.py dashboard`, commit en push.

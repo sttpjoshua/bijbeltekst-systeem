@@ -9,6 +9,13 @@ import systeem as S
 PLATFORMEN = ("instagram", "facebook")
 
 
+def wanneer():
+    """Na een wijziging in het aantal: vanaf wanneer geldt het?"""
+    if dt.datetime.now().hour < 21:
+        return ". Ontbrekende posts voor morgen worden vanavond rond 21:00 gemaakt"
+    return ". Dit geldt vanaf overmorgen (de avondcontrole voor morgen is al geweest)"
+
+
 def vind(posts, pid):
     for p in posts:
         if p["id"] == pid:
@@ -29,7 +36,7 @@ def main(raw):
     elif a == "posts_per_dag":
         n = max(1, min(int(o["waarde"]), cfg.get("max_posts_per_dag", 3)))
         cfg["posts_per_dag"] = n
-        melding = f"Posts per dag ingesteld op {n}"
+        melding = f"Posts per dag ingesteld op {n}" + wanneer()
     elif a == "platform":
         plat, aan = o["platform"], bool(o["aan"])
         if plat not in PLATFORMEN:
@@ -85,7 +92,7 @@ def main(raw):
             cfg["max_posts_per_dag"] = 5
             cfg["posts_per_dag"] = 5
             cfg["verkenning"] = 0.4
-            melding = f"Snel leren aangezet tot {cfg['leermodus_tot']}: 5 posts per dag, elke dag leren"
+            melding = f"Snel leren aangezet tot {cfg['leermodus_tot']}: 5 posts per dag, elke dag leren" + wanneer()
         else:
             S.leermodus_uit(cfg)
             melding = "Snel leren uitgezet, oude instellingen terug"

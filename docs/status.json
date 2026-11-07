@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T22:24:31",
+ "updated": "2026-11-07T22:30:24",
  "agents": {
   "verskiezer": {
    "t": "2026-11-07T22:23:58",
@@ -52,6 +52,10 @@
  ],
  "log": [
   {
+   "t": "22:30",
+   "msg": "Te weinig posts voor 2026-11-07: verwacht, snel leren ging vandaag pas aan (geen fout)"
+  },
+  {
    "t": "22:24",
    "msg": "4 extra posts voor 8 november gemaakt (snel leren stond na de dagelijkse run aan)"
   },
@@ -94,10 +98,6 @@
   {
    "t": "14:55",
    "msg": "Verbinding met Instagram werkt (@bibleverse_nl)"
-  },
-  {
-   "t": "14:34",
-   "msg": "1 post klaargezet voor 8 nov 07:30 (Jesaja 43:19, carrousel)"
   }
  ]
 }
