@@ -43,7 +43,6 @@ DIMENSIES = {
     "thema": ["troost", "moed", "liefde", "hoop", "vertrouwen", "wijsheid", "humor_herkenbaar",
               "dankbaarheid", "identiteit", "vrede_rust"],
     "hook_stijl": ["vraag", "herkenning", "uitdaging", "rustig", "geen"],
-    "hook_op_beeld": [True, False],
     "formaat": ["afbeelding", "video"],
     "tijdslot": ["07:30", "12:15", "17:45", "20:30", "22:00"],
 }
@@ -101,6 +100,7 @@ def cmd_kies(datum):
             v[dim], bron[dim] = kies_optie(dim, strat, cfg["verkenning"], rnd, uit)
         gebruikte_slots.add(v["tijdslot"])
         v.update(HUISSTIJLEN[v["huisstijl"]])
+        v["hook_op_beeld"] = False  # Joshua wil geen hooktekst op het beeld
         kandidaten = [x for x in verzen if x["thema"] == v["thema"] and x["id"] not in recent]
         if not kandidaten:
             kandidaten = [x for x in verzen if x["id"] not in recent] or verzen

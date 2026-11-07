@@ -22,7 +22,7 @@ Vul in `data/posts.json` deze velden in:
   - `rustig`: een korte, stille inleiding. "Even dit, voor je verder gaat."
   - `geen`: laat `hook` leeg.
   Voor het thema `humor_herkenbaar` mag de hook licht en grappig zijn ("Die ene collega om 7:00 uur..."), maar nooit spottend over de Bijbel.
-- `beeld_hook`: alleen als `variabelen.hook_op_beeld` true is. Maximaal 42 tekens. Mag dezelfde gedachte zijn als de hook, korter.
+- `beeld_hook`: altijd leeg laten. Joshua wil geen hooktekst op het beeld; de hook staat alleen in de caption.
 - `caption`: hook (als die er is), witregel, de verstekst letterlijk tussen aanhalingstekens, de referentie, witregel, één korte zin uitleg of toepassing in hedendaags Nederlands (de Statenvertaling is oud taalgebruik; help de lezer). Totaal maximaal 600 tekens.
 - `hashtags`: 3 tot 5, Nederlands, bv. `#bijbeltekst #geloof #bemoediging #god #jezus`. Wissel af.
 Schrijf in het Nederlands, warm en eenvoudig, nooit prekerig. Elke hook anders dan die van de afgelopen 14 dagen (kijk in `data/posts.json`).
