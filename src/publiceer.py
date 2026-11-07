@@ -179,6 +179,25 @@ def cmd_token():
         # Facebook/system-user token: niet te verversen, wel controleren of het werkt
         info = http("GET", f"{API}/{uid}", {"fields": "username", "access_token": tok})
         S.cmd_log(f"Verbinding met Instagram werkt (@{info.get('username')})")
+        try:
+            rechten = [x["permission"] for x in http("GET", f"{API}/me/permissions", {"access_token": tok}).get("data", [])
+                       if x.get("status") == "granted"]
+        except Exception:
+            rechten = []
+        if rechten:
+            mist = [r for r in ("instagram_basic", "instagram_content_publish", "instagram_manage_insights") if r not in rechten]
+            if mist:
+                S.cmd_log("Token mist rechten: " + ", ".join(mist), "fout")
+            else:
+                S.cmd_log("Token heeft alle rechten, ook voor statistieken")
+        # praktijktest: statistieken van de laatste post opvragen (als die er is)
+        try:
+            media = http("GET", f"{API}/{uid}/media", {"fields": "id", "limit": 1, "access_token": tok}).get("data", [])
+            if media:
+                m = insights(media[0]["id"], tok)
+                S.cmd_log("Statistieken lezen werkt" if m else "Statistieken lezen gaf geen gegevens terug", "info" if m else "fout")
+        except Exception as e:
+            S.cmd_log(f"Statistieken lezen mislukt: {str(e)[:160]}", "fout")
         S.cmd_dashboard(); return
     r = http("GET", "https://graph.instagram.com/refresh_access_token", {"grant_type": "ig_refresh_token", "access_token": tok})
     dagen = int(r.get("expires_in", 0)) // 86400
