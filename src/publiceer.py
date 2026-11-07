@@ -304,7 +304,7 @@ def cmd_token():
                 if mist_fb:
                     S.cmd_log("Token mist Facebook-rechten: " + ", ".join(mist_fb), "fout")
             except Exception as e:
-                S.cmd_log(f"Facebook-verbinding mislukt: {str(e)[:200]}", "fout")
+                S.cmd_log(f"Facebook-verbinding mislukt: {str(e)[:420]} | Rechten in token: {', '.join(sorted(rechten))}", "fout")
         # praktijktest: statistieken van de laatste post opvragen (als die er is)
         try:
             media = http("GET", f"{API}/{uid}/media", {"fields": "id", "limit": 1, "access_token": tok}).get("data", [])
