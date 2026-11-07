@@ -56,6 +56,17 @@ input[type=range]{width:100%}input.veld,select.veld{font:inherit;font-size:13px;
 #galerij .sluit{position:absolute;top:14px;right:18px;color:#fff;font-size:28px;cursor:pointer;background:none;border:0}
 #galerij .tel{color:#fff;font-size:13px;margin-top:8px;opacity:.8}
 .thumbs{display:flex;gap:3px;cursor:zoom-in}.thumbs .thumb{width:36px;height:45px}
+.plan{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px}
+.dag{border:1px solid var(--lijn);border-radius:10px;padding:10px 12px;background:var(--bg)}
+.dag h3{font-size:13px;margin:0 0 8px;color:var(--ink);font-weight:700;display:flex;justify-content:space-between}
+.dag h3 span{color:var(--ink3);font-weight:500}
+.slot{display:flex;gap:8px;padding:6px 0;border-top:1px solid var(--lijn);font-size:13px;line-height:1.35}
+.slot:first-of-type{border-top:0}
+.slot .tijd{font-variant-numeric:tabular-nums;color:var(--ink2);width:38px;flex:0 0 auto}
+.slot .wat{flex:1;min-width:0}.slot .wat b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.stip{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:4px;vertical-align:0}
+.st-klaar{color:var(--goed)}.st-online{color:var(--accent)}.st-plan{color:var(--ink3)}
+.legenda{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--ink3);margin:-4px 0 12px}
 </style>
 </head>
 <body>
@@ -67,6 +78,13 @@ input[type=range]{width:100%}input.veld,select.veld{font:inherit;font-size:13px;
 
   <div id="fouten"></div>
   <div class="grid g4" id="tegels"></div>
+
+  <section class="kaart" id="planning">
+    <h2>Planning komende dagen</h2>
+    <div class="legenda"><span class="st-online">● Online</span><span class="st-klaar">● Klaar, gaat vanzelf online</span><span class="st-plan">○ Voorlopig plan</span></div>
+    <div class="plan" id="planDagen"></div>
+    <div class="sub" style="margin-top:10px">Het voorlopige plan wordt elke nacht opnieuw gemaakt met wat het systeem geleerd heeft, en na elke wijziging in Bediening. Een dag van tevoren worden de posts echt gemaakt; dan verschijnt het beeld. Klik op een post om de tekst te zien.</div>
+  </section>
 
   <section class="kaart" id="bediening">
     <h2>Bediening</h2>
@@ -173,6 +191,7 @@ function bouw(){
   [fs,ft,document.getElementById("fZoek")].forEach(e=>e.oninput=tabel);
   document.querySelectorAll("th[data-k]").forEach(th=>th.onclick=()=>{sorteer={k:th.dataset.k,r:sorteer.k===th.dataset.k?-sorteer.r:-1};tabel()});
   tabel();
+  bouwPlanning();
   bouwBediening();
 }
 function waarde(x,k){if(k==="score"){const v=Object.values(x.score);return v.length?v.reduce((a,b)=>a+b)/v.length:-1}if(["views","likes","saves"].includes(k))return (k==="views"?(x.totaal.views||x.totaal.reach):x.totaal[k])||0;return x[k]}
@@ -293,6 +312,44 @@ function miniaturen(x){
   if(!lijst.length&&!x.media_url)return `<div class="thumb" style="display:grid;place-items:center;color:var(--ink3)">${x.variabelen.formaat==="video"?"▶":""}</div>`;
   const beelden=(lijst.length?lijst:[]).map(u=>`<img class="thumb" loading="lazy" src="${u}" onerror="this.remove()">`).join("")||`<div class="thumb" style="display:grid;place-items:center">▶</div>`;
   return `<div class="thumbs" onclick="toonGalerij('${x.id}')" title="Klik om groot te bekijken">${beelden}${x.variabelen.formaat==="video"?'<span style="align-self:center;color:var(--ink3)">▶</span>':""}</div>`;
+}
+
+// ---------- Planning ----------
+const STIJLKLEUR={avond:"#2b2f4a",zand:"#d9c3a0",salie:"#a8b8a0"};
+const FORMAAT={afbeelding:"🖼 Afbeelding",video:"▶ Video",carrousel:"▤ Carrousel"};
+function bouwPlanning(){
+  const el=document.getElementById("planDagen");if(!el)return;
+  if(D.config.pauze){el.innerHTML='<div class="leeg sub">Het systeem staat op pauze. Er is niets gepland.</div>';return}
+  const vandaag=new Date().toISOString().slice(0,10);
+  const echt=D.posts.filter(x=>x.datum>=vandaag&&x.status!=="afgekeurd"&&x.status!=="overgeslagen").map(x=>({...x,soort:x.status==="gepubliceerd"?"online":"klaar"}));
+  const plan=(D.planning||[]).map(x=>({...x,soort:"plan",status:"plan",id:"plan-"+x.datum+x.variabelen.tijdslot}));
+  const alles=[...echt,...plan];
+  const dagen=[...new Set(alles.map(x=>x.datum))].sort();
+  if(!dagen.length){el.innerHTML='<div class="leeg sub">Nog geen planning. Die verschijnt na de volgende nachtelijke run.</div>';return}
+  window._plan=Object.fromEntries(plan.map(x=>[x.id,x]));
+  el.innerHTML=dagen.map(d=>{
+    const items=alles.filter(x=>x.datum===d).sort((a,b)=>a.variabelen.tijdslot.localeCompare(b.variabelen.tijdslot));
+    const dt=new Date(d+"T12:00");const naam=d===vandaag?"Vandaag":dt.toLocaleDateString("nl-NL",{weekday:"long"});
+    return `<div class="dag"><h3>${naam[0].toUpperCase()+naam.slice(1)}<span>${dt.toLocaleDateString("nl-NL",{day:"numeric",month:"short"})}</span></h3>${items.map(x=>{
+      const v=x.variabelen,exp=x.keuzebron&&Object.entries(x.keuzebron).some(([k,b])=>b==="verkenning"&&k!=="tijdslot");
+      const kleur=STIJLKLEUR[v.huisstijl]||"#999";v.huisstijl=v.huisstijl||(v.palet||"").replace("_"," ");
+      const klik=x.soort==="plan"?`toonPlan('${x.id}')`:`toonGalerij('${x.id}')`;
+      return `<div class="slot" style="cursor:pointer" onclick="${klik}"><span class="tijd">${v.tijdslot}</span><div class="wat"><b class="st-${x.soort}">${x.soort==="plan"?"○":"●"} ${x.ref}</b>
+        <span class="sub">${FORMAAT[v.formaat]||v.formaat} · ${v.thema.replace("_"," ")}</span><br>
+        <span class="sub"><span class="stip" style="background:${kleur}"></span>${v.huisstijl}${v.achtergrondbron==="beeld"?" · foto":""}</span></div></div>`}).join("")}</div>`}).join("");
+}
+function toonPlan(id){
+  const x=window._plan[id];if(!x)return;const v=x.variabelen;
+  const g=document.getElementById("galerij");
+  g.querySelector(".rij").innerHTML=`<div style="background:var(--kaart);color:var(--ink);border-radius:12px;padding:22px 24px;max-width:520px">
+    <div class="sub">Voorlopig plan · ${x.datum} om ${v.tijdslot}</div><h3 style="margin:6px 0 10px;font-size:20px">${x.ref}</h3>
+    <p style="font-size:16px;line-height:1.5;margin:0 0 14px">${x.tekst}</p>
+    <span class="tag">${v.formaat}</span><span class="tag">${v.thema.replace("_"," ")}</span><span class="tag">stijl: ${v.huisstijl}</span><span class="tag">achtergrond: ${v.achtergrondbron==="beeld"?"foto":"kleurverloop"}</span><span class="tag">hook: ${v.hook_stijl}</span>
+    ${Object.entries(x.keuzebron||{}).filter(([k,b])=>b==="verkenning").length?`<div class="sub" style="margin-top:10px">⚗ Experiment bij: ${Object.entries(x.keuzebron).filter(([k,b])=>b==="verkenning").map(([k])=>NAMEN[k]||k).join(", ")}</div>`:""}
+    <div class="sub" style="margin-top:10px">Teksten en beeld worden een dag van tevoren gemaakt. Het plan kan nog veranderen als het systeem iets leert.</div>
+    ${sleutel()&&x.vers_id?`<div style="margin-top:12px"><button class="btn" onclick="galerij.style.display='none';stuur({actie:'ander_vers',vers_id:'${x.vers_id}',ref:'${x.ref}'})">Ander vers kiezen</button> <button class="btn" onclick="if(confirm('${x.ref} nooit meer gebruiken?')){galerij.style.display='none';stuur({actie:'vers_uitsluiten',vers_id:'${x.vers_id}',ref:'${x.ref}'})}">Nooit meer gebruiken</button></div>`:""}
+  </div>`;
+  g.querySelector(".tel").textContent="";g.style.display="flex";
 }
 </script>
 </body>

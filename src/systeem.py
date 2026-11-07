@@ -138,21 +138,13 @@ def minst_gebruikt(opties, posts, veld, rnd):
     return min(opties, key=lambda o: laatst.get(o, "")) if opties else None
 
 # ---------- Kiezen ----------
-def cmd_kies(datum):
-    cfg, strat = laad("config.json"), vul_strategie_aan(laad("strategie.json") or nieuwe_strategie())
-    if cfg["pauze"]:
-        print("PAUZE staat aan in config.json. Niets gepland."); return
-    verzen = laad("data/verzen.json")
-    posts = laad("data/posts.json", [])
-    rnd = random.Random(f"{datum}-{len(posts)}")
+def kies_posts(datum, cfg, strat, posts, verzen, mat, n_start, n, gebruikte_slots, rnd):
+    """Kiest n nieuwe posts voor een datum. Raakt geen bestanden aan."""
     grens = (dt.date.fromisoformat(datum) - dt.timedelta(days=cfg["vers_niet_herhalen_dagen"])).isoformat()
     recent = {p["vers_id"] for p in posts if p["datum"] >= grens} | set(cfg.get("verzen_uitsluiten", []))
-    al_vandaag = [p for p in posts if p["datum"] == datum]
-    n = min(cfg["posts_per_dag"], cfg["max_posts_per_dag"]) - len(al_vandaag)
-    if n <= 0:
-        print("Voor", datum, "zijn al genoeg posts gepland."); return
-    gebruikte_slots = {p["variabelen"]["tijdslot"] for p in al_vandaag}
-    mat = materiaal(cfg)
+    recent |= {k for k, tot in cfg.get("verzen_later", {}).items() if tot >= datum}  # 'ander vers' op het dashboard
+    gebruikte_slots = set(gebruikte_slots)
+    nbv_alle = extra_verzen()
     nieuw = []
     for i in range(n):
         v, bron = {}, {}
@@ -167,10 +159,10 @@ def cmd_kies(datum):
             grens14 = (dt.date.fromisoformat(datum) - dt.timedelta(days=14)).isoformat()
             recent14 = [p for p in posts + nieuw if p["datum"] >= grens14]
             aandeel = sum(1 for p in recent14 if p["variabelen"].get("achtergrondbron") == "beeld") / max(1, len(recent14))
-            if not mat["beelden"] or aandeel >= cfg.get("max_aandeel_beeld", 0.33):
+            if (mat is not None and not mat["beelden"]) or aandeel >= cfg.get("max_aandeel_beeld", 0.33):
                 v["achtergrondbron"], bron["achtergrondbron"] = "verloop", "limiet"
         # Eerst de moderne vertaling (als aangeleverd), anders de Statenvertaling
-        nbv = [x for x in extra_verzen() if x["id"] not in recent]
+        nbv = [x for x in nbv_alle if x["id"] not in recent]
         kandidaten = [x for x in nbv if x["thema"] == v["thema"]] or nbv
         if not kandidaten:
             kandidaten = [x for x in verzen if x["thema"] == v["thema"] and x["id"] not in recent]
@@ -179,21 +171,79 @@ def cmd_kies(datum):
         vers = rnd.choice(kandidaten)
         v["thema"] = vers["thema"]
         recent.add(vers["id"])
-        pid = f"{datum}-{len(al_vandaag) + i + 1}"
-        nieuw.append({"id": pid, "datum": datum, "status": "wacht_op_tekst",
+        nieuw.append({"id": f"{datum}-{n_start + i + 1}", "datum": datum, "status": "wacht_op_tekst",
                       "vers_id": vers["id"], "ref": vers["ref"], "tekst": vers["tekst"],
                       "vertaling": vers.get("vertaling", "SV"),
                       "variabelen": v, "keuzebron": bron,
                       "hook": "", "beeld_hook": "", "caption": "", "hashtags": [],
                       "uitleg": "", "betekenis": "", "toepassing": "",
                       "media": None, "media_url": None, "metricool": {}, "stats": {},
-                      "beeld": minst_gebruikt(mat["beelden"], posts + nieuw, "beeld", rnd) if v["achtergrondbron"] == "beeld" else None,
-                      "muziek": minst_gebruikt(mat["muziek"], posts + nieuw, "muziek", rnd) if v["formaat"] == "video" else None,
-                      "geluid": (rnd.choice(mat["geluid"]) if mat["geluid"] and v["formaat"] == "video" and v["achtergrondbron"] == "beeld" else None)})
+                      "beeld": None, "muziek": None, "geluid": None})
+    return nieuw
+
+def kies_bestanden(nieuw, posts, mat, rnd):
+    """Koppelt foto, muziek en sfeergeluid aan gekozen posts (pas bij het echte kiezen)."""
+    for p in nieuw:
+        v = p["variabelen"]
+        if v["achtergrondbron"] == "beeld" and not mat["beelden"]:
+            v["achtergrondbron"], p["keuzebron"]["achtergrondbron"] = "verloop", "limiet"
+        p["beeld"] = minst_gebruikt(mat["beelden"], posts + nieuw, "beeld", rnd) if v["achtergrondbron"] == "beeld" else None
+        p["muziek"] = minst_gebruikt(mat["muziek"], posts + nieuw, "muziek", rnd) if v["formaat"] == "video" else None
+        p["geluid"] = rnd.choice(mat["geluid"]) if mat["geluid"] and v["formaat"] == "video" and v["achtergrondbron"] == "beeld" else None
+
+def cmd_kies(datum):
+    cfg, strat = laad("config.json"), vul_strategie_aan(laad("strategie.json") or nieuwe_strategie())
+    if cfg["pauze"]:
+        print("PAUZE staat aan in config.json. Niets gepland."); return
+    verzen = laad("data/verzen.json")
+    posts = laad("data/posts.json", [])
+    rnd = random.Random(f"{datum}-{len(posts)}")
+    al_vandaag = [p for p in posts if p["datum"] == datum]
+    n = min(cfg["posts_per_dag"], cfg["max_posts_per_dag"]) - len(al_vandaag)
+    if n <= 0:
+        print("Voor", datum, "zijn al genoeg posts gepland."); return
+    mat = materiaal(cfg)
+    # Volg de planning die op het dashboard stond, als die nog klopt
+    uitgesloten = set(cfg.get("verzen_uitsluiten", [])) | {p["vers_id"] for p in posts} | set(cfg.get("verzen_later", {}))
+    gepland = [x for x in laad("data/planning.json", {}).get("posts", []) if x["datum"] == datum]
+    slots = {p["variabelen"]["tijdslot"] for p in al_vandaag}
+    nieuw = []
+    for x in gepland:
+        if len(nieuw) >= n or x["vers_id"] in uitgesloten or x["variabelen"]["tijdslot"] in slots:
+            continue
+        x = json.loads(json.dumps(x)); x["id"] = f"{datum}-{len(al_vandaag) + len(nieuw) + 1}"
+        slots.add(x["variabelen"]["tijdslot"]); nieuw.append(x)
+    if len(nieuw) < n:
+        nieuw += kies_posts(datum, cfg, strat, posts + nieuw, verzen, mat, len(al_vandaag) + len(nieuw), n - len(nieuw), slots, rnd)
+    kies_bestanden(nieuw, posts, mat, rnd)
     bewaar("data/posts.json", posts + nieuw)
     activiteit("verskiezer", "Koos " + ", ".join(p["ref"] for p in nieuw))
     print(json.dumps([{k: p[k] for k in ("id", "ref", "tekst", "variabelen")} for p in nieuw], ensure_ascii=False, indent=1))
     print("\nVul nu per post in data/posts.json in: 'hook', 'caption', 'hashtags'; 'uitleg' als uitleg_op_beeld true is; 'betekenis' en 'toepassing' bij formaat carrousel. Zie TAKEN.md.")
+    cmd_plan()
+
+def cmd_plan(dagen=7):
+    """Voorlopige planning voor de komende dagen, op basis van wat het systeem nu weet.
+    Wordt elke nacht en na elke bediening opnieuw gemaakt; de dagelijkse run volgt hem."""
+    cfg, strat = laad("config.json"), vul_strategie_aan(laad("strategie.json") or nieuwe_strategie())
+    posts = laad("data/posts.json", [])
+    verzen = laad("data/verzen.json")
+    vandaag = dt.date.today()
+    plan = []
+    if not cfg["pauze"]:
+        for d in range(1, dagen + 1):
+            datum = (vandaag + dt.timedelta(days=d)).isoformat()
+            al = [p for p in posts if p["datum"] == datum and p["status"] not in ("afgekeurd",)]
+            n = min(cfg["posts_per_dag"], cfg["max_posts_per_dag"]) - len(al)
+            if n <= 0:
+                continue
+            rnd = random.Random(f"plan-{datum}-{strat.get('versie', 1)}-{cfg['posts_per_dag']}")
+            nieuw = kies_posts(datum, cfg, strat, posts + plan, verzen, None, len(al), n,
+                               {p["variabelen"]["tijdslot"] for p in al}, rnd)
+            plan += nieuw
+    bewaar("data/planning.json", {"gemaakt": dt.datetime.now().isoformat(timespec="minutes"),
+                                  "strategie_versie": strat.get("versie", 1), "posts": plan})
+    print("Planning:", len(plan), "posts voor de komende", dagen, "dagen")
 
 # ---------- Renderen ----------
 def cmd_render(datum):
@@ -479,7 +529,9 @@ def cmd_dashboard():
             "logboek": laad("data/logboek.json", [])[-60:],
             "recente_fouten": [l for l in laad("data/logboek.json", [])
                                if l.get("soort") == "fout" and not l.get("opgelost") and l["t"] >= (dt.datetime.now() - dt.timedelta(hours=48)).isoformat(timespec="minutes")],
-            "versen_totaal": len(laad("data/verzen.json", []))}
+            "versen_totaal": len(laad("data/verzen.json", [])),
+            "planning": [{k: x[k] for k in ("datum", "ref", "tekst", "vers_id", "variabelen", "keuzebron")}
+                         for x in laad("data/planning.json", {}).get("posts", [])]}
     bewaar("docs/data.json", data)
     schrijf_status(cfg, strat, posts, data["recente_fouten"])
     print("docs/data.json bijgewerkt:", len(lijst), "posts")
@@ -581,7 +633,7 @@ if __name__ == "__main__":
     a.add_argument("cmd"); a.add_argument("args", nargs="*")
     a.add_argument("--datum", default=dt.date.today().isoformat())
     x = a.parse_args()
-    {"kies": lambda: cmd_kies(x.datum), "render": lambda: cmd_render(x.datum),
+    {"kies": lambda: cmd_kies(x.datum), "render": lambda: cmd_render(x.datum), "plan": lambda: cmd_plan(),
      "registreer": lambda: cmd_registreer(*x.args), "stats": lambda: cmd_stats(x.args[0]),
      "leer": cmd_leer, "dashboard": cmd_dashboard, "check": cmd_check,
      "log": lambda: cmd_log(*x.args), "vers": lambda: cmd_vers(*x.args), "opruimen": lambda: cmd_opruimen(*x.args), "opgelost": cmd_opgelost}[x.cmd]()

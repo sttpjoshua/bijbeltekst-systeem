@@ -89,6 +89,13 @@ def main(raw):
         else:
             S.leermodus_uit(cfg)
             melding = "Snel leren uitgezet, oude instellingen terug"
+    elif a == "ander_vers":
+        later = cfg.setdefault("verzen_later", {})
+        vandaag = dt.date.today().isoformat()
+        for k in [k for k, v in later.items() if v < vandaag]:
+            del later[k]
+        later[o["vers_id"]] = (dt.date.today() + dt.timedelta(days=30)).isoformat()
+        melding = f"{o.get('ref', o['vers_id'])} uit de planning gehaald; er komt een ander vers voor in de plaats"
     elif a == "test":
         melding = None  # de workflow draait daarna de verbindingstest
     else:
@@ -101,11 +108,12 @@ def main(raw):
         # laat de juiste medewerker in het pixel-kantoor zien dat hij de opdracht heeft uitgevoerd
         agent = {"pauze": "controller", "posts_per_dag": "verskiezer", "verkenning": "verskiezer", "vers_uitsluiten": "verskiezer",
                  "max_aandeel_beeld": "designer", "platform": "dispatcher", "tijd": "dispatcher", "nu_posten": "dispatcher",
-                 "leermodus": "analist"}.get(a)
+                 "leermodus": "analist", "ander_vers": "verskiezer"}.get(a)
         if a == "overslaan":
             agent = "video" if (vind(posts, o["post"])["variabelen"].get("formaat") == "video") else "designer"
         if agent:
             S.activiteit(agent, melding[:70])
+    S.cmd_plan()
     S.cmd_dashboard()
     print(melding or "ok")
 

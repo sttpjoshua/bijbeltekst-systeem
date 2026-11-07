@@ -56,3 +56,6 @@ Joshua kan vanaf het dashboard pauzeren, posts per dag (1-3), platformen, foto-a
 
 ## Snel leren
 Staat `leermodus` op true in config.json, dan maak je elke dag `posts_per_dag` (5) posts klaar, één per tijdslot, elk met een eigen hook en tekst. Pas posts_per_dag, max_posts_per_dag en verkenning dan niet aan; het systeem zet ze na `leermodus_tot` zelf terug. Het dagelijks leren gebeurt automatisch na het ophalen van de statistieken.
+
+## Planning
+`data/planning.json` is het voorlopige plan voor 7 dagen dat op het dashboard staat. `kies` volgt dat plan automatisch voor de gekozen datum (vers, formaat, stijl, tijd), zodat wat Joshua ziet ook gebeurt. Maak na elke wijziging de planning opnieuw: `python3 src/systeem.py plan` (kies doet dat zelf al).

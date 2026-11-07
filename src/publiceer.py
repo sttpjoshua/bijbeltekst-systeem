@@ -285,6 +285,7 @@ def cmd_statistieken():
             S.cmd_log("Snel leren: strategie bijgewerkt met de cijfers van gisteren")
         except Exception as e:
             S.cmd_log(f"Dagelijks leren mislukt: {e}", "fout")
+    S.cmd_plan()
     S.cmd_dashboard()
 
 def cmd_token():

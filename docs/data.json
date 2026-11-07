@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-07T15:19",
+ "gegenereerd": "2026-11-07T15:24",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -367,5 +367,993 @@
   }
  ],
  "recente_fouten": [],
- "versen_totaal": 116
+ "versen_totaal": 116,
+ "planning": [
+  {
+   "datum": "2026-11-08",
+   "ref": "Spreuken 15:1",
+   "tekst": "Een zacht antwoord keert de grimmigheid af; maar een smartend woord doet den toorn oprijzen.",
+   "vers_id": "Proverbs-15-1-1",
+   "variabelen": {
+    "huisstijl": "avond",
+    "thema": "wijsheid",
+    "hook_stijl": "herkenning",
+    "formaat": "carrousel",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "verloop",
+    "tijdslot": "17:45",
+    "palet": "nacht",
+    "lettertype": "playfair",
+    "layout": "citaat",
+    "achtergrond": "licht",
+    "hook_op_beeld": false
+   },
+   "keuzebron": {
+    "huisstijl": "strategie",
+    "thema": "strategie",
+    "hook_stijl": "strategie",
+    "formaat": "strategie",
+    "uitleg_op_beeld": "verkenning",
+    "achtergrondbron": "verkenning",
+    "tijdslot": "verkenning"
+   }
+  },
+  {
+   "datum": "2026-11-08",
+   "ref": "Johannes 14:27",
+   "tekst": "Vrede laat Ik u, Mijn vrede geef Ik u; niet gelijkerwijs de wereld hem geeft, geef Ik hem u. Uw hart worde niet ontroerd en zij niet versaagd.",
+   "vers_id": "John-14-27-27",
+   "variabelen": {
+    "huisstijl": "avond",
+    "thema": "troost",
+    "hook_stijl": "vraag",
+    "formaat": "video",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "verloop",
+    "tijdslot": "20:30",
+    "palet": "nacht",
+    "lettertype": "playfair",
+    "layout": "citaat",
+    "achtergrond": "licht",
+    "hook_op_beeld": false
+   },
+   "keuzebron": {
+    "huisstijl": "verkenning",
+    "thema": "strategie",
+    "hook_stijl": "strategie",
+    "formaat": "verkenning",
+    "uitleg_op_beeld": "verkenning",
+    "achtergrondbron": "strategie",
+    "tijdslot": "strategie"
+   }
+  },
+  {
+   "datum": "2026-11-08",
+   "ref": "Psalm 23:1",
+   "tekst": "De HEERE is mijn Herder, mij zal niets ontbreken.",
+   "vers_id": "Psalms-23-1-1",
+   "variabelen": {
+    "huisstijl": "salie",
+    "thema": "troost",
+    "hook_stijl": "uitdaging",
+    "formaat": "afbeelding",
+    "uitleg_op_beeld": true,
+    "achtergrondbron": "verloop",
+    "tijdslot": "12:15",
+    "palet": "salie",
+    "lettertype": "cormorant",
+    "layout": "kader",
+    "achtergrond": "effen",
+    "hook_op_beeld": false
+   },
+   "keuzebron": {
+    "huisstijl": "strategie",
+    "thema": "strategie",
+    "hook_stijl": "verkenning",
+    "formaat": "strategie",
+    "uitleg_op_beeld": "strategie",
+    "achtergrondbron": "verkenning",
+    "tijdslot": "strategie"
+   }
+  },
+  {
+   "datum": "2026-11-08",
+   "ref": "2 Timotheüs 1:7",
+   "tekst": "Want God heeft ons niet gegeven een geest der vreesachtigheid, maar der kracht, en der liefde, en der gematigdheid.",
+   "vers_id": "II_Timothy-1-7-7",
+   "variabelen": {
+    "huisstijl": "zand",
+    "thema": "moed",
+    "hook_stijl": "geen",
+    "formaat": "afbeelding",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "beeld",
+    "tijdslot": "22:00",
+    "palet": "zand",
+    "lettertype": "dmserif",
+    "layout": "centraal",
+    "achtergrond": "verloop",
+    "hook_op_beeld": false
+   },
+   "keuzebron": {
+    "huisstijl": "strategie",
+    "thema": "verkenning",
+    "hook_stijl": "strategie",
+    "formaat": "verkenning",
+    "uitleg_op_beeld": "verkenning",
+    "achtergrondbron": "strategie",
+    "tijdslot": "strategie"
+   }
+  },
+  {
+   "datum": "2026-11-09",
+   "ref": "Kolossenzen 3:2",
+   "tekst": "Bedenkt de dingen, die boven zijn, niet die op de aarde zijn.",
+   "vers_id": "Colossians-3-2-2",
+   "variabelen": {
+    "huisstijl": "salie",
+    "thema": "vrede_rust",
+    "hook_stijl": "herkenning",
+    "formaat": "afbeelding",
+    "uitleg_op_beeld": true,
+    "achtergrondbron": "beeld",
+    "tijdslot": "17:45",
+    "palet": "salie",
+    "lettertype": "cormorant",
+    "layout": "kader",
+    "achtergrond": "effen",
+    "hook_op_beeld": false
+   },
+   "keuzebron": {
+    "huisstijl": "verkenning",
+    "thema": "verkenning",
+    "hook_stijl": "strategie",
+    "formaat": "strategie",
+    "uitleg_op_beeld": "strategie",
+    "achtergrondbron": "verkenning",
+    "tijdslot": "verkenning"
+   }
+  },
+  {
+   "datum": "2026-11-09",
+   "ref": "2 Korinthe 5:17",
+   "tekst": "Zo dan, indien iemand in Christus is, die is een nieuw schepsel; het oude is voorbijgegaan, ziet, het is alles nieuw geworden.",
+   "vers_id": "II_Corinthians-5-17-17",
+   "variabelen": {
+    "huisstijl": "salie",
+    "thema": "identiteit",
+    "hook_stijl": "uitdaging",
+    "formaat": "carrousel",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "verloop",
+    "tijdslot": "20:30",
+    "palet": "salie",
+    "lettertype": "cormorant",
+    "layout": "kader",
+    "achtergrond": "effen",
+    "hook_op_beeld": false
+   },
+   "keuzebron": {
+    "huisstijl": "strategie",
+    "thema": "verkenning",
+    "hook_stijl": "verkenning",
+    "formaat": "verkenning",
+    "uitleg_op_beeld": "strategie",
+    "achtergrondbron": "verkenning",
+    "tijdslot": "verkenning"
+   }
+  },
+  {
+   "datum": "2026-11-09",
+   "ref": "Psalm 23:2-3",
+   "tekst": "Hij doet mij nederliggen in grazige weiden; Hij voert mij zachtjes aan zeer stille wateren. Hij verkwikt mijn ziel; Hij leidt mij in het spoor der gerechtigheid, om Zijns Naams wil.",
+   "vers_id": "Psalms-23-2-3",
+   "variabelen": {
+    "huisstijl": "salie",
+    "thema": "vrede_rust",
+    "hook_stijl": "rustig",
+    "formaat": "afbeelding",
+    "uitleg_op_beeld": true,
+    "achtergrondbron": "verloop",
+    "tijdslot": "22:00",
+    "palet": "salie",
+    "lettertype": "cormorant",
+    "layout": "kader",
+    "achtergrond": "effen",
+    "hook_op_beeld": false
+   },
+   "keuzebron": {
+    "huisstijl": "verkenning",
+    "thema": "verkenning",
+    "hook_stijl": "strategie",
+    "formaat": "strategie",
+    "uitleg_op_beeld": "strategie",
+    "achtergrondbron": "strategie",
+    "tijdslot": "verkenning"
+   }
+  },
+  {
+   "datum": "2026-11-09",
+   "ref": "Jeremia 1:5",
+   "tekst": "Eer Ik u in moeders buik formeerde, heb Ik u gekend, en eer gij uit de baarmoeder voortkwaamt, heb Ik u geheiligd; Ik heb u den volken tot een profeet gesteld.",
+   "vers_id": "Jeremiah-1-5-5",
+   "variabelen": {
+    "huisstijl": "zand",
+    "thema": "identiteit",
+    "hook_stijl": "uitdaging",
+    "formaat": "carrousel",
+    "uitleg_op_beeld": true,
+    "achtergrondbron": "beeld",
+    "tijdslot": "07:30",
+    "palet": "zand",
+    "lettertype": "dmserif",
+    "layout": "centraal",
+    "achtergrond": "verloop",
+    "hook_op_beeld": false
+   },
+   "keuzebron": {
+    "huisstijl": "verkenning",
+    "thema": "verkenning",
+    "hook_stijl": "strategie",
+    "formaat": "verkenning",
+    "uitleg_op_beeld": "verkenning",
+    "achtergrondbron": "strategie",
+    "tijdslot": "strategie"
+   }
+  },
+  {
+   "datum": "2026-11-09",
+   "ref": "Mattheüs 11:28",
+   "tekst": "Komt herwaarts tot Mij, allen die vermoeid en belast zijt, en Ik zal u rust geven.",
+   "vers_id": "Matthew-11-28-28",
+   "variabelen": {
+    "huisstijl": "salie",
+    "thema": "troost",
+    "hook_stijl": "rustig",
+    "formaat": "video",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "verloop",
+    "tijdslot": "12:15",
+    "palet": "salie",
+    "lettertype": "cormorant",
+    "layout": "kader",
+    "achtergrond": "effen",
+    "hook_op_beeld": false
+   },
+   "keuzebron": {
+    "huisstijl": "verkenning",
+    "thema": "strategie",
+    "hook_stijl": "strategie",
+    "formaat": "verkenning",
+    "uitleg_op_beeld": "verkenning",
+    "achtergrondbron": "strategie",
+    "tijdslot": "strategie"
+   }
+  },
+  {
+   "datum": "2026-11-10",
+   "ref": "Spreuken 19:21",
+   "tekst": "In het hart des mans zijn veel gedachten; maar de raad des HEEREN, die zal bestaan.",
+   "vers_id": "Proverbs-19-21-21",
+   "variabelen": {
+    "huisstijl": "zand",
+    "thema": "wijsheid",
+    "hook_stijl": "uitdaging",
+    "formaat": "carrousel",
+    "uitleg_op_beeld": true,
+    "achtergrondbron": "beeld",
+    "tijdslot": "12:15",
+    "palet": "zand",
+    "lettertype": "dmserif",
+    "layout": "centraal",
+    "achtergrond": "verloop",
+    "hook_op_beeld": false
+   },
+   "keuzebron": {
+    "huisstijl": "verkenning",
+    "thema": "strategie",
+    "hook_stijl": "verkenning",
+    "formaat": "verkenning",
+    "uitleg_op_beeld": "strategie",
+    "achtergrondbron": "verkenning",
+    "tijdslot": "strategie"
+   }
+  },
+  {
+   "datum": "2026-11-10",
+   "ref": "Spreuken 24:33-34",
+   "tekst": "Een weinig slapens, een weinig sluimerens, en weinig handvouwens, al nederliggende; Zo zal uw armoede u overkomen, als een wandelaar, en uw velerlei gebrek als een gewapend man.",
+   "vers_id": "Proverbs-24-33-34",
+   "variabelen": {
+    "huisstijl": "zand",
+    "thema": "humor_herkenbaar",
+    "hook_stijl": "herkenning",
+    "formaat": "video",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "verloop",
+    "tijdslot": "17:45",
+    "palet": "zand",
+    "lettertype": "dmserif",
+    "layout": "centraal",
+    "achtergrond": "verloop",
+    "hook_op_beeld": false
+   },
+   "keuzebron": {
+    "huisstijl": "strategie",
+    "thema": "verkenning",
+    "hook_stijl": "strategie",
+    "formaat": "strategie",
+    "uitleg_op_beeld": "strategie",
+    "achtergrondbron": "strategie",
+    "tijdslot": "strategie"
+   }
+  },
+  {
+   "datum": "2026-11-10",
+   "ref": "Jeremia 29:11",
+   "tekst": "Want Ik weet de gedachten, die Ik over u denk, spreekt de HEERE, gedachten des vredes, en niet des kwaads, dat Ik u geve het einde en de verwachting.",
+   "vers_id": "Jeremiah-29-11-11",
+   "variabelen": {
+    "huisstijl": "salie",
+    "thema": "hoop",
+    "hook_stijl": "vraag",
+    "formaat": "video",
+    "uitleg_op_beeld": true,
+    "achtergrondbron": "verloop",
+    "tijdslot": "22:00",
+    "palet": "salie",
+    "lettertype": "cormorant",
+    "layout": "kader",
+    "achtergrond": "effen",
+    "hook_op_beeld": false
+   },
+   "keuzebron": {
+    "huisstijl": "verkenning",
+    "thema": "strategie",
+    "hook_stijl": "verkenning",
+    "formaat": "verkenning",
+    "uitleg_op_beeld": "verkenning",
+    "achtergrondbron": "verkenning",
+    "tijdslot": "verkenning"
+   }
+  },
+  {
+   "datum": "2026-11-10",
+   "ref": "Jakobus 1:17",
+   "tekst": "Alle goede gave, en alle volmaakte gifte is van boven, van den Vader der lichten afkomende, bij Welken geen verandering is, of schaduw van omkering.",
+   "vers_id": "James-1-17-17",
+   "variabelen": {
+    "huisstijl": "zand",
+    "thema": "dankbaarheid",
+    "hook_stijl": "rustig",
+    "formaat": "afbeelding",
+    "uitleg_op_beeld": true,
+    "achtergrondbron": "verloop",
+    "tijdslot": "07:30",
+    "palet": "zand",
+    "lettertype": "dmserif",
+    "layout": "centraal",
+    "achtergrond": "verloop",
+    "hook_op_beeld": false
+   },
+   "keuzebron": {
+    "huisstijl": "strategie",
+    "thema": "strategie",
+    "hook_stijl": "strategie",
+    "formaat": "strategie",
+    "uitleg_op_beeld": "verkenning",
+    "achtergrondbron": "strategie",
+    "tijdslot": "strategie"
+   }
+  },
+  {
+   "datum": "2026-11-10",
+   "ref": "Psalm 37:5",
+   "tekst": "Wentel uw weg op den HEERE, en vertrouw op Hem; Hij zal het maken.",
+   "vers_id": "Psalms-37-5-5",
+   "variabelen": {
+    "huisstijl": "zand",
+    "thema": "hoop",
+    "hook_stijl": "geen",
+    "formaat": "video",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "verloop",
+    "tijdslot": "20:30",
+    "palet": "zand",
+    "lettertype": "dmserif",
+    "layout": "centraal",
+    "achtergrond": "verloop",
+    "hook_op_beeld": false
+   },
+   "keuzebron": {
+    "huisstijl": "verkenning",
+    "thema": "verkenning",
+    "hook_stijl": "strategie",
+    "formaat": "verkenning",
+    "uitleg_op_beeld": "strategie",
+    "achtergrondbron": "strategie",
+    "tijdslot": "verkenning"
+   }
+  },
+  {
+   "datum": "2026-11-11",
+   "ref": "Openbaring 21:4",
+   "tekst": "En God zal alle tranen van hun ogen afwissen; en de dood zal niet meer zijn; noch rouw, noch gekrijt, noch moeite zal meer zijn; want de eerste dingen zijn weggegaan.",
+   "vers_id": "Revelation_of_John-21-4-4",
+   "variabelen": {
+    "huisstijl": "salie",
+    "thema": "troost",
+    "hook_stijl": "geen",
+    "formaat": "video",
+    "uitleg_op_beeld": true,
+    "achtergrondbron": "beeld",
+    "tijdslot": "17:45",
+    "palet": "salie",
+    "lettertype": "cormorant",
+    "layout": "kader",
+    "achtergrond": "effen",
+    "hook_op_beeld": false
+   },
+   "keuzebron": {
+    "huisstijl": "verkenning",
+    "thema": "strategie",
+    "hook_stijl": "strategie",
+    "formaat": "strategie",
+    "uitleg_op_beeld": "strategie",
+    "achtergrondbron": "verkenning",
+    "tijdslot": "strategie"
+   }
+  },
+  {
+   "datum": "2026-11-11",
+   "ref": "Jesaja 43:1",
+   "tekst": "Maar nu, alzo zegt de HEERE, uw Schepper, o Jakob! en uw Formeerder, o Israel! vrees niet, want Ik heb u verlost; Ik heb u bij uw naam geroepen, gij zijt Mijn.",
+   "vers_id": "Isaiah-43-1-1",
+   "variabelen": {
+    "huisstijl": "salie",
+    "thema": "identiteit",
+    "hook_stijl": "rustig",
+    "formaat": "carrousel",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "verloop",
+    "tijdslot": "07:30",
+    "palet": "salie",
+    "lettertype": "cormorant",
+    "layout": "kader",
+    "achtergrond": "effen",
+    "hook_op_beeld": false
+   },
+   "keuzebron": {
+    "huisstijl": "strategie",
+    "thema": "strategie",
+    "hook_stijl": "strategie",
+    "formaat": "verkenning",
+    "uitleg_op_beeld": "strategie",
+    "achtergrondbron": "verkenning",
+    "tijdslot": "strategie"
+   }
+  },
+  {
+   "datum": "2026-11-11",
+   "ref": "Spreuken 26:11",
+   "tekst": "Gelijk een hond tot zijn uitspuwsel wederkeert, alzo herneemt de zot zijn dwaasheid.",
+   "vers_id": "Proverbs-26-11-11",
+   "variabelen": {
+    "huisstijl": "zand",
+    "thema": "humor_herkenbaar",
+    "hook_stijl": "rustig",
+    "formaat": "carrousel",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "verloop",
+    "tijdslot": "12:15",
+    "palet": "zand",
+    "lettertype": "dmserif",
+    "layout": "centraal",
+    "achtergrond": "verloop",
+    "hook_op_beeld": false
+   },
+   "keuzebron": {
+    "huisstijl": "strategie",
+    "thema": "strategie",
+    "hook_stijl": "strategie",
+    "formaat": "verkenning",
+    "uitleg_op_beeld": "strategie",
+    "achtergrondbron": "strategie",
+    "tijdslot": "verkenning"
+   }
+  },
+  {
+   "datum": "2026-11-11",
+   "ref": "Romeinen 8:37",
+   "tekst": "Maar in dit alles zijn wij meer dan overwinnaars, door Hem, Die ons liefgehad heeft.",
+   "vers_id": "Romans-8-37-37",
+   "variabelen": {
+    "huisstijl": "zand",
+    "thema": "moed",
+    "hook_stijl": "herkenning",
+    "formaat": "afbeelding",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "verloop",
+    "tijdslot": "22:00",
+    "palet": "zand",
+    "lettertype": "dmserif",
+    "layout": "centraal",
+    "achtergrond": "verloop",
+    "hook_op_beeld": false
+   },
+   "keuzebron": {
+    "huisstijl": "strategie",
+    "thema": "strategie",
+    "hook_stijl": "strategie",
+    "formaat": "verkenning",
+    "uitleg_op_beeld": "verkenning",
+    "achtergrondbron": "verkenning",
+    "tijdslot": "strategie"
+   }
+  },
+  {
+   "datum": "2026-11-11",
+   "ref": "Spreuken 1:7",
+   "tekst": "De vrees des HEEREN is het beginsel der wetenschap; de dwazen verachten wijsheid en tucht.",
+   "vers_id": "Proverbs-1-7-7",
+   "variabelen": {
+    "huisstijl": "salie",
+    "thema": "wijsheid",
+    "hook_stijl": "herkenning",
+    "formaat": "afbeelding",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "verloop",
+    "tijdslot": "20:30",
+    "palet": "salie",
+    "lettertype": "cormorant",
+    "layout": "kader",
+    "achtergrond": "effen",
+    "hook_op_beeld": false
+   },
+   "keuzebron": {
+    "huisstijl": "verkenning",
+    "thema": "verkenning",
+    "hook_stijl": "strategie",
+    "formaat": "strategie",
+    "uitleg_op_beeld": "verkenning",
+    "achtergrondbron": "verkenning",
+    "tijdslot": "strategie"
+   }
+  },
+  {
+   "datum": "2026-11-12",
+   "ref": "Psalm 56:4",
+   "tekst": "Ten dage, als ik zal vrezen, zal ik op U vertrouwen.",
+   "vers_id": "Psalms-56-4-4",
+   "variabelen": {
+    "huisstijl": "avond",
+    "thema": "vertrouwen",
+    "hook_stijl": "uitdaging",
+    "formaat": "carrousel",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "verloop",
+    "tijdslot": "22:00",
+    "palet": "nacht",
+    "lettertype": "playfair",
+    "layout": "citaat",
+    "achtergrond": "licht",
+    "hook_op_beeld": false
+   },
+   "keuzebron": {
+    "huisstijl": "strategie",
+    "thema": "strategie",
+    "hook_stijl": "verkenning",
+    "formaat": "strategie",
+    "uitleg_op_beeld": "strategie",
+    "achtergrondbron": "strategie",
+    "tijdslot": "strategie"
+   }
+  },
+  {
+   "datum": "2026-11-12",
+   "ref": "Mattheüs 6:34",
+   "tekst": "Zijt dan niet bezorgd tegen den morgen; want de morgen zal voor het zijne zorgen; elke dag heeft genoeg aan zijn zelfs kwaad.",
+   "vers_id": "Matthew-6-34-34",
+   "variabelen": {
+    "huisstijl": "avond",
+    "thema": "vertrouwen",
+    "hook_stijl": "uitdaging",
+    "formaat": "video",
+    "uitleg_op_beeld": true,
+    "achtergrondbron": "verloop",
+    "tijdslot": "17:45",
+    "palet": "nacht",
+    "lettertype": "playfair",
+    "layout": "citaat",
+    "achtergrond": "licht",
+    "hook_op_beeld": false
+   },
+   "keuzebron": {
+    "huisstijl": "strategie",
+    "thema": "strategie",
+    "hook_stijl": "strategie",
+    "formaat": "strategie",
+    "uitleg_op_beeld": "strategie",
+    "achtergrondbron": "strategie",
+    "tijdslot": "strategie"
+   }
+  },
+  {
+   "datum": "2026-11-12",
+   "ref": "Spreuken 19:24",
+   "tekst": "Een luiaard verbergt de hand in den boezem, en hij zal ze niet weder aan zijn mond brengen.",
+   "vers_id": "Proverbs-19-24-24",
+   "variabelen": {
+    "huisstijl": "avond",
+    "thema": "humor_herkenbaar",
+    "hook_stijl": "vraag",
+    "formaat": "carrousel",
+    "uitleg_op_beeld": true,
+    "achtergrondbron": "verloop",
+    "tijdslot": "07:30",
+    "palet": "nacht",
+    "lettertype": "playfair",
+    "layout": "citaat",
+    "achtergrond": "licht",
+    "hook_op_beeld": false
+   },
+   "keuzebron": {
+    "huisstijl": "verkenning",
+    "thema": "strategie",
+    "hook_stijl": "strategie",
+    "formaat": "strategie",
+    "uitleg_op_beeld": "strategie",
+    "achtergrondbron": "verkenning",
+    "tijdslot": "strategie"
+   }
+  },
+  {
+   "datum": "2026-11-12",
+   "ref": "Micha 7:7",
+   "tekst": "Maar ik zal uitzien naar den HEERE, ik zal wachten op de God mijns heils; mijn God zal mij horen.",
+   "vers_id": "Micah-7-7-7",
+   "variabelen": {
+    "huisstijl": "zand",
+    "thema": "hoop",
+    "hook_stijl": "uitdaging",
+    "formaat": "afbeelding",
+    "uitleg_op_beeld": true,
+    "achtergrondbron": "verloop",
+    "tijdslot": "12:15",
+    "palet": "zand",
+    "lettertype": "dmserif",
+    "layout": "centraal",
+    "achtergrond": "verloop",
+    "hook_op_beeld": false
+   },
+   "keuzebron": {
+    "huisstijl": "verkenning",
+    "thema": "verkenning",
+    "hook_stijl": "strategie",
+    "formaat": "strategie",
+    "uitleg_op_beeld": "strategie",
+    "achtergrondbron": "verkenning",
+    "tijdslot": "strategie"
+   }
+  },
+  {
+   "datum": "2026-11-12",
+   "ref": "Psalm 27:1",
+   "tekst": "De HEERE is mijn Licht en mijn Heil, voor wien zou ik vrezen? De HEERE is mijns levens kracht, voor wien zou ik vervaard zijn?",
+   "vers_id": "Psalms-27-1-1",
+   "variabelen": {
+    "huisstijl": "salie",
+    "thema": "moed",
+    "hook_stijl": "herkenning",
+    "formaat": "video",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "verloop",
+    "tijdslot": "20:30",
+    "palet": "salie",
+    "lettertype": "cormorant",
+    "layout": "kader",
+    "achtergrond": "effen",
+    "hook_op_beeld": false
+   },
+   "keuzebron": {
+    "huisstijl": "strategie",
+    "thema": "verkenning",
+    "hook_stijl": "strategie",
+    "formaat": "strategie",
+    "uitleg_op_beeld": "strategie",
+    "achtergrondbron": "verkenning",
+    "tijdslot": "strategie"
+   }
+  },
+  {
+   "datum": "2026-11-13",
+   "ref": "Psalm 127:2",
+   "tekst": "Het is tevergeefs, dat gijlieden vroeg opstaat, laat opblijft, eet brood der smarten; het is alzo, dat Hij het Zijn beminden als in den slaap geeft.",
+   "vers_id": "Psalms-127-2-2",
+   "variabelen": {
+    "huisstijl": "salie",
+    "thema": "vrede_rust",
+    "hook_stijl": "vraag",
+    "formaat": "carrousel",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "verloop",
+    "tijdslot": "20:30",
+    "palet": "salie",
+    "lettertype": "cormorant",
+    "layout": "kader",
+    "achtergrond": "effen",
+    "hook_op_beeld": false
+   },
+   "keuzebron": {
+    "huisstijl": "strategie",
+    "thema": "verkenning",
+    "hook_stijl": "verkenning",
+    "formaat": "verkenning",
+    "uitleg_op_beeld": "strategie",
+    "achtergrondbron": "verkenning",
+    "tijdslot": "strategie"
+   }
+  },
+  {
+   "datum": "2026-11-13",
+   "ref": "Jesaja 30:15",
+   "tekst": "Want alzo zegt de Heere HEERE, de Heilige Israels: Door wederkering en rust zoudt gijlieden behouden worden, in stilheid en in vertrouwen zou uw sterkte zijn; doch gij hebt niet gewild.",
+   "vers_id": "Isaiah-30-15-15",
+   "variabelen": {
+    "huisstijl": "salie",
+    "thema": "vrede_rust",
+    "hook_stijl": "uitdaging",
+    "formaat": "carrousel",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "verloop",
+    "tijdslot": "17:45",
+    "palet": "salie",
+    "lettertype": "cormorant",
+    "layout": "kader",
+    "achtergrond": "effen",
+    "hook_op_beeld": false
+   },
+   "keuzebron": {
+    "huisstijl": "strategie",
+    "thema": "strategie",
+    "hook_stijl": "strategie",
+    "formaat": "verkenning",
+    "uitleg_op_beeld": "verkenning",
+    "achtergrondbron": "strategie",
+    "tijdslot": "strategie"
+   }
+  },
+  {
+   "datum": "2026-11-13",
+   "ref": "Psalm 16:11",
+   "tekst": "Gij zult mij het pad des levens bekend maken; verzadiging der vreugde is bij Uw aangezicht; liefelijkheden zijn in Uw rechterhand, eeuwiglijk.",
+   "vers_id": "Psalms-16-11-11",
+   "variabelen": {
+    "huisstijl": "avond",
+    "thema": "dankbaarheid",
+    "hook_stijl": "herkenning",
+    "formaat": "carrousel",
+    "uitleg_op_beeld": true,
+    "achtergrondbron": "verloop",
+    "tijdslot": "07:30",
+    "palet": "nacht",
+    "lettertype": "playfair",
+    "layout": "citaat",
+    "achtergrond": "licht",
+    "hook_op_beeld": false
+   },
+   "keuzebron": {
+    "huisstijl": "verkenning",
+    "thema": "verkenning",
+    "hook_stijl": "verkenning",
+    "formaat": "verkenning",
+    "uitleg_op_beeld": "strategie",
+    "achtergrondbron": "strategie",
+    "tijdslot": "verkenning"
+   }
+  },
+  {
+   "datum": "2026-11-13",
+   "ref": "Prediker 4:9-10",
+   "tekst": "Twee zijn beter dan een; want zij hebben een goede beloning van hun arbeid; Want indien zij vallen, de een richt zijn metgezel op; maar wee den ene, die gevallen is, want er is geen tweede om hem op te helpen.",
+   "vers_id": "Ecclesiastes-4-9-10",
+   "variabelen": {
+    "huisstijl": "salie",
+    "thema": "wijsheid",
+    "hook_stijl": "uitdaging",
+    "formaat": "video",
+    "uitleg_op_beeld": true,
+    "achtergrondbron": "verloop",
+    "tijdslot": "22:00",
+    "palet": "salie",
+    "lettertype": "cormorant",
+    "layout": "kader",
+    "achtergrond": "effen",
+    "hook_op_beeld": false
+   },
+   "keuzebron": {
+    "huisstijl": "verkenning",
+    "thema": "verkenning",
+    "hook_stijl": "strategie",
+    "formaat": "strategie",
+    "uitleg_op_beeld": "strategie",
+    "achtergrondbron": "strategie",
+    "tijdslot": "verkenning"
+   }
+  },
+  {
+   "datum": "2026-11-13",
+   "ref": "Psalm 130:5",
+   "tekst": "Ik verwacht den HEERE; mijn ziel verwacht, en ik hoop op Zijn Woord.",
+   "vers_id": "Psalms-130-5-5",
+   "variabelen": {
+    "huisstijl": "salie",
+    "thema": "hoop",
+    "hook_stijl": "herkenning",
+    "formaat": "carrousel",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "verloop",
+    "tijdslot": "12:15",
+    "palet": "salie",
+    "lettertype": "cormorant",
+    "layout": "kader",
+    "achtergrond": "effen",
+    "hook_op_beeld": false
+   },
+   "keuzebron": {
+    "huisstijl": "strategie",
+    "thema": "strategie",
+    "hook_stijl": "verkenning",
+    "formaat": "strategie",
+    "uitleg_op_beeld": "verkenning",
+    "achtergrondbron": "verkenning",
+    "tijdslot": "strategie"
+   }
+  },
+  {
+   "datum": "2026-11-14",
+   "ref": "Spreuken 27:14",
+   "tekst": "Die zijn vriend zegent met luider stem, zich des morgens vroeg opmakende, het zal hem tot een vloek gerekend worden.",
+   "vers_id": "Proverbs-27-14-14",
+   "variabelen": {
+    "huisstijl": "zand",
+    "thema": "humor_herkenbaar",
+    "hook_stijl": "uitdaging",
+    "formaat": "video",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "beeld",
+    "tijdslot": "07:30",
+    "palet": "zand",
+    "lettertype": "dmserif",
+    "layout": "centraal",
+    "achtergrond": "verloop",
+    "hook_op_beeld": false
+   },
+   "keuzebron": {
+    "huisstijl": "verkenning",
+    "thema": "strategie",
+    "hook_stijl": "verkenning",
+    "formaat": "verkenning",
+    "uitleg_op_beeld": "verkenning",
+    "achtergrondbron": "strategie",
+    "tijdslot": "verkenning"
+   }
+  },
+  {
+   "datum": "2026-11-14",
+   "ref": "Markus 6:31",
+   "tekst": "En Hij zeide tot hen: Komt gijlieden in een woeste plaats hier alleen, en rust een weinig; want er waren velen, die kwamen en die gingen, en zij hadden zelfs geen gelegen tijd om te eten.",
+   "vers_id": "Mark-6-31-31",
+   "variabelen": {
+    "huisstijl": "avond",
+    "thema": "vrede_rust",
+    "hook_stijl": "geen",
+    "formaat": "afbeelding",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "beeld",
+    "tijdslot": "20:30",
+    "palet": "nacht",
+    "lettertype": "playfair",
+    "layout": "citaat",
+    "achtergrond": "licht",
+    "hook_op_beeld": false
+   },
+   "keuzebron": {
+    "huisstijl": "strategie",
+    "thema": "strategie",
+    "hook_stijl": "strategie",
+    "formaat": "verkenning",
+    "uitleg_op_beeld": "strategie",
+    "achtergrondbron": "strategie",
+    "tijdslot": "strategie"
+   }
+  },
+  {
+   "datum": "2026-11-14",
+   "ref": "Romeinen 8:31",
+   "tekst": "Wat zullen wij dan tot deze dingen zeggen? Zo God voor ons is, wie zal tegen ons zijn?",
+   "vers_id": "Romans-8-31-31",
+   "variabelen": {
+    "huisstijl": "zand",
+    "thema": "moed",
+    "hook_stijl": "geen",
+    "formaat": "carrousel",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "verloop",
+    "tijdslot": "12:15",
+    "palet": "zand",
+    "lettertype": "dmserif",
+    "layout": "centraal",
+    "achtergrond": "verloop",
+    "hook_op_beeld": false
+   },
+   "keuzebron": {
+    "huisstijl": "strategie",
+    "thema": "strategie",
+    "hook_stijl": "strategie",
+    "formaat": "strategie",
+    "uitleg_op_beeld": "verkenning",
+    "achtergrondbron": "strategie",
+    "tijdslot": "verkenning"
+   }
+  },
+  {
+   "datum": "2026-11-14",
+   "ref": "Spreuken 17:28",
+   "tekst": "Een dwaas zelfs, die zwijgt, zal wijs geacht worden, en die zijn lippen toesluit, verstandig.",
+   "vers_id": "Proverbs-17-28-28",
+   "variabelen": {
+    "huisstijl": "salie",
+    "thema": "humor_herkenbaar",
+    "hook_stijl": "uitdaging",
+    "formaat": "carrousel",
+    "uitleg_op_beeld": true,
+    "achtergrondbron": "verloop",
+    "tijdslot": "17:45",
+    "palet": "salie",
+    "lettertype": "cormorant",
+    "layout": "kader",
+    "achtergrond": "effen",
+    "hook_op_beeld": false
+   },
+   "keuzebron": {
+    "huisstijl": "verkenning",
+    "thema": "strategie",
+    "hook_stijl": "strategie",
+    "formaat": "strategie",
+    "uitleg_op_beeld": "strategie",
+    "achtergrondbron": "strategie",
+    "tijdslot": "verkenning"
+   }
+  },
+  {
+   "datum": "2026-11-14",
+   "ref": "Psalm 30:6",
+   "tekst": "Want een ogenblik is er in Zijn toorn, maar een leven in Zijn goedgunstigheid; des avonds vernacht het geween, maar des morgens is er gejuich.",
+   "vers_id": "Psalms-30-6-6",
+   "variabelen": {
+    "huisstijl": "salie",
+    "thema": "troost",
+    "hook_stijl": "uitdaging",
+    "formaat": "video",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "verloop",
+    "tijdslot": "22:00",
+    "palet": "salie",
+    "lettertype": "cormorant",
+    "layout": "kader",
+    "achtergrond": "effen",
+    "hook_op_beeld": false
+   },
+   "keuzebron": {
+    "huisstijl": "verkenning",
+    "thema": "verkenning",
+    "hook_stijl": "strategie",
+    "formaat": "verkenning",
+    "uitleg_op_beeld": "strategie",
+    "achtergrondbron": "strategie",
+    "tijdslot": "strategie"
+   }
+  }
+ ]
 }
