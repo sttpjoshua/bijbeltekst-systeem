@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-07T00:40",
+ "gegenereerd": "2026-11-07T10:57",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -14,32 +14,10 @@
   "versie": 1,
   "bijgewerkt": null,
   "gewichten": {
-   "palet": {
-    "nacht": 1.0,
+   "huisstijl": {
+    "avond": 1.0,
     "zand": 1.0,
-    "salie": 1.0,
-    "zonsopgang": 1.0,
-    "zwart_goud": 1.0,
-    "oceaan": 1.0,
-    "roze_avond": 1.0,
-    "wit": 1.0
-   },
-   "lettertype": {
-    "playfair": 1.0,
-    "cormorant": 1.0,
-    "dmserif": 1.0,
-    "lora": 1.0,
-    "montserrat": 1.0
-   },
-   "layout": {
-    "centraal": 1.0,
-    "citaat": 1.0,
-    "kader": 1.0
-   },
-   "achtergrond": {
-    "effen": 1.0,
-    "verloop": 1.0,
-    "licht": 1.0
+    "salie": 1.0
    },
    "thema": {
     "troost": 1.0,
@@ -77,32 +55,10 @@
    }
   },
   "metingen": {
-   "palet": {
-    "nacht": 0,
+   "huisstijl": {
+    "avond": 0,
     "zand": 0,
-    "salie": 0,
-    "zonsopgang": 0,
-    "zwart_goud": 0,
-    "oceaan": 0,
-    "roze_avond": 0,
-    "wit": 0
-   },
-   "lettertype": {
-    "playfair": 0,
-    "cormorant": 0,
-    "dmserif": 0,
-    "lora": 0,
-    "montserrat": 0
-   },
-   "layout": {
-    "centraal": 0,
-    "citaat": 0,
-    "kader": 0
-   },
-   "achtergrond": {
-    "effen": 0,
-    "verloop": 0,
-    "licht": 0
+    "salie": 0
    },
    "thema": {
     "troost": 0,
@@ -162,6 +118,7 @@
    },
    "media": "docs/media/2026-11/2026-11-07-1.mp4",
    "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-07-1.mp4",
+   "thumb": "thumbs/2026-11-07-1.jpg",
    "platformen": [],
    "links": {},
    "totaal": {},
@@ -192,5 +149,6 @@
    "tekst": "Eerste post klaargezet: 7 nov 12:15, Kolossenzen 3:15 (video)"
   }
  ],
+ "recente_fouten": [],
  "versen_totaal": 116
 }

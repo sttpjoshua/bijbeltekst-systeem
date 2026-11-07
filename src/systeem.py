@@ -30,11 +30,16 @@ def bewaar(pad, data):
     os.replace(tmp, P(pad))
 
 # ---------- Variabelen die het systeem test ----------
+# Vaste huisstijlen: één keuze bepaalt kleur, letter, layout en achtergrond samen.
+# Zo test het systeem 3 opties in plaats van honderden combinaties en blijft het account herkenbaar.
+HUISSTIJLEN = {
+    "avond":  {"palet": "nacht", "lettertype": "playfair",  "layout": "citaat",   "achtergrond": "licht"},
+    "zand":   {"palet": "zand",  "lettertype": "dmserif",   "layout": "centraal", "achtergrond": "verloop"},
+    "salie":  {"palet": "salie", "lettertype": "cormorant", "layout": "kader",    "achtergrond": "effen"},
+}
+
 DIMENSIES = {
-    "palet": ["nacht", "zand", "salie", "zonsopgang", "zwart_goud", "oceaan", "roze_avond", "wit"],
-    "lettertype": ["playfair", "cormorant", "dmserif", "lora", "montserrat"],
-    "layout": ["centraal", "citaat", "kader"],
-    "achtergrond": ["effen", "verloop", "licht"],
+    "huisstijl": list(HUISSTIJLEN),
     "thema": ["troost", "moed", "liefde", "hoop", "vertrouwen", "wijsheid", "humor_herkenbaar",
               "dankbaarheid", "identiteit", "vrede_rust"],
     "hook_stijl": ["vraag", "herkenning", "uitdaging", "rustig", "geen"],
@@ -56,17 +61,26 @@ def _terug(d, s):
             return o
     return s
 
+def vul_strategie_aan(strat):
+    for d, opts in DIMENSIES.items():
+        strat["gewichten"].setdefault(d, {})
+        strat["metingen"].setdefault(d, {})
+        for o in opts:
+            strat["gewichten"][d].setdefault(str(o), 1.0)
+            strat["metingen"][d].setdefault(str(o), 0)
+    return strat
+
 def kies_optie(dim, strat, verkenning, rnd, uitsluiten=()):
     opties = [o for o in DIMENSIES[dim] if o not in uitsluiten]
     if rnd.random() < verkenning:
         return rnd.choice(opties), "verkenning"
-    g = strat["gewichten"][dim]
+    g = strat["gewichten"].get(dim, {})
     gew = [max(0.05, g.get(str(o), 1.0)) ** 2 for o in opties]  # kwadraat: winnaars krijgen voorrang
     return rnd.choices(opties, weights=gew)[0], "strategie"
 
 # ---------- Kiezen ----------
 def cmd_kies(datum):
-    cfg, strat = laad("config.json"), laad("strategie.json") or nieuwe_strategie()
+    cfg, strat = laad("config.json"), vul_strategie_aan(laad("strategie.json") or nieuwe_strategie())
     if cfg["pauze"]:
         print("PAUZE staat aan in config.json. Niets gepland."); return
     verzen = laad("data/verzen.json")
@@ -86,6 +100,7 @@ def cmd_kies(datum):
             uit = gebruikte_slots if dim == "tijdslot" else ()
             v[dim], bron[dim] = kies_optie(dim, strat, cfg["verkenning"], rnd, uit)
         gebruikte_slots.add(v["tijdslot"])
+        v.update(HUISSTIJLEN[v["huisstijl"]])
         kandidaten = [x for x in verzen if x["thema"] == v["thema"] and x["id"] not in recent]
         if not kandidaten:
             kandidaten = [x for x in verzen if x["id"] not in recent] or verzen
@@ -120,6 +135,7 @@ def cmd_render(datum):
         os.makedirs(os.path.dirname(P(rel)), exist_ok=True)
         (maak_video if ext == "mp4" else maak_afbeelding)(p, P(rel))
         p["media"] = rel
+        p["thumb"] = maak_thumb(P(rel), p["id"])
         if cfg.get("github_repo"):
             eig, naam = cfg["github_repo"].split("/")
             p["media_url"] = f"https://{eig}.github.io/{naam}/{rel[len('docs/'):]}"
@@ -128,6 +144,36 @@ def cmd_render(datum):
     bewaar("data/posts.json", posts)
     if fouten:
         sys.exit(1)
+
+def maak_thumb(bron, pid):
+    """Kleine voorvertoning (216 px breed) die blijft bestaan als de media later wordt opgeruimd."""
+    import subprocess
+    rel = f"docs/thumbs/{pid}.jpg"
+    os.makedirs(P("docs/thumbs"), exist_ok=True)
+    if bron.endswith(".mp4"):
+        subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-ss", "4", "-i", bron, "-frames:v", "1",
+                        "-vf", "scale=216:-2", "-q:v", "4", P(rel)], check=True)
+    else:
+        from PIL import Image
+        im = Image.open(bron); im.thumbnail((216, 400)); im.save(P(rel), quality=80)
+    return rel[len("docs/"):]
+
+def cmd_opruimen(dagen=30):
+    """Verwijdert media van posts die langer dan `dagen` geleden online gingen; de thumb blijft."""
+    posts = laad("data/posts.json", [])
+    grens = (dt.date.today() - dt.timedelta(days=int(dagen))).isoformat()
+    weg = 0
+    for p in posts:
+        if p.get("status") in ("gepubliceerd", "overgeslagen", "fout", "afgekeurd") and p["datum"] < grens and p.get("media"):
+            if os.path.exists(P(p["media"])):
+                if not p.get("thumb"):
+                    p["thumb"] = maak_thumb(P(p["media"]), p["id"])
+                os.remove(P(p["media"])); weg += 1
+            p["media"] = None
+    bewaar("data/posts.json", posts)
+    if weg:
+        cmd_log(f"Opgeruimd: media van {weg} oude posts verwijderd (voorvertoning bewaard)")
+    print(weg, "bestanden opgeruimd")
 
 VERBODEN = ["link in bio", "volg voor meer", "deel dit met 10", "amen als", "typ amen", "zegen als je"]
 
@@ -206,13 +252,16 @@ def post_scores(posts):
         for p, r, b in rijen:
             # Mix: 70% interactie-kwaliteit, 30% bereik (algoritme vond het goed)
             score = 0.7 * (r / med_r) + 0.3 * (b / med_b)
-            uit.append((p, plat, min(score, 5.0)))
+            # Uitschieters dempen: boven 1,5 telt de rest maar half mee, en maximaal 3
+            if score > 1.5:
+                score = 1.5 + (score - 1.5) * 0.5
+            uit.append((p, plat, min(score, 3.0)))
     return uit
 
 # ---------- Leren ----------
 def cmd_leer():
     cfg = laad("config.json")
-    strat = laad("strategie.json") or nieuwe_strategie()
+    strat = vul_strategie_aan(laad("strategie.json") or nieuwe_strategie())
     posts = laad("data/posts.json", [])
     scores = post_scores(posts)
     vandaag = dt.date.today().isoformat()
@@ -262,7 +311,7 @@ def cmd_dashboard():
             for k in ("views", "reach", "likes", "comments", "shares", "saves"):
                 tot[k] = tot.get(k, 0) + (s.get(k) or 0)
         lijst.append({"id": p["id"], "datum": p["datum"], "ref": p["ref"], "tekst": p["tekst"], "hook": p["hook"],
-                      "status": p["status"], "variabelen": p["variabelen"], "media": p.get("media"), "media_url": p.get("media_url"),
+                      "status": p["status"], "variabelen": p["variabelen"], "media": p.get("media"), "media_url": p.get("media_url"), "thumb": p.get("thumb"),
                       "platformen": list(p.get("gepubliceerd", {}).keys()),
                       "links": {k: v.get("url") for k, v in p.get("gepubliceerd", {}).items()}, "totaal": tot, "score": sc.get(p["id"], {})})
     rapporten = sorted(os.listdir(P("rapporten"))) if os.path.isdir(P("rapporten")) else []
@@ -272,6 +321,8 @@ def cmd_dashboard():
             "leergeschiedenis": laad("data/leergeschiedenis.json", []),
             "laatste_rapport": laad(f"rapporten/{rapporten[-1]}") if rapporten else None,
             "logboek": laad("data/logboek.json", [])[-60:],
+            "recente_fouten": [l for l in laad("data/logboek.json", [])
+                               if l.get("soort") == "fout" and l["t"] >= (dt.datetime.now() - dt.timedelta(hours=48)).isoformat(timespec="minutes")],
             "versen_totaal": len(laad("data/verzen.json", []))}
     bewaar("docs/data.json", data)
     print("docs/data.json bijgewerkt:", len(lijst), "posts")
@@ -324,4 +375,4 @@ if __name__ == "__main__":
     {"kies": lambda: cmd_kies(x.datum), "render": lambda: cmd_render(x.datum),
      "registreer": lambda: cmd_registreer(*x.args), "stats": lambda: cmd_stats(x.args[0]),
      "leer": cmd_leer, "dashboard": cmd_dashboard, "check": cmd_check,
-     "log": lambda: cmd_log(*x.args), "vers": lambda: cmd_vers(*x.args)}[x.cmd]()
+     "log": lambda: cmd_log(*x.args), "vers": lambda: cmd_vers(*x.args), "opruimen": lambda: cmd_opruimen(*x.args)}[x.cmd]()

@@ -87,6 +87,7 @@ def cmd_posten():
     if not klaar:
         print("Niets te doen"); return
     uid, tok = env()
+    fouten = 0
     for p in sorted(klaar, key=tijdstip):
         if nu - tijdstip(p) > TE_LAAT:
             p["status"] = "overgeslagen"
@@ -106,13 +107,15 @@ def cmd_posten():
                 S.cmd_log(f"{p['id']} online op {plat}: {p['ref']}")
             except Exception as e:
                 p["fouten"] = p.get("fouten", 0) + 1
-                S.cmd_log(f"{p['id']} {plat} mislukt: {e}", "fout")
+                S.cmd_log(f"{p['id']} {plat} mislukt: {e}", "fout"); fouten += 1
                 if p["fouten"] >= 3:
                     p["status"] = "fout"
         if p.get("gepubliceerd") and p["status"] != "fout":
             p["status"] = "gepubliceerd"; vandaag_online += 1
         S.bewaar("data/posts.json", posts)  # na elke post opslaan
     S.cmd_dashboard()
+    if fouten:
+        sys.exit(f"{fouten} fout(en) bij publiceren, zie logboek")
 
 METRICS = ["reach", "likes", "comments", "shares", "saved", "views", "follows"]
 
@@ -163,6 +166,10 @@ def cmd_statistieken():
         S.cmd_stats(S.P("stats_tmp.json"))
         os.remove(S.P("stats_tmp.json"))
         S.cmd_log(f"Statistieken opgehaald voor {len(rij)} posts")
+    try:
+        S.cmd_opruimen(30)
+    except Exception as e:
+        S.cmd_log(f"Opruimen mislukt: {e}", "fout")
     S.cmd_dashboard()
 
 def cmd_token():

@@ -37,6 +37,8 @@ td{padding:8px 6px;border-bottom:1px solid var(--lijn);vertical-align:top}tr:hov
 .log .fout{color:var(--slecht)}
 #tip{position:fixed;pointer-events:none;background:var(--ink);color:var(--bg);padding:6px 9px;border-radius:6px;font-size:12px;display:none;max-width:280px;z-index:9}
 .leeg{color:var(--ink3);font-size:13px}
+.foutbalk{background:var(--slecht);color:#fff;border-radius:12px;padding:14px 18px;margin-bottom:14px;font-size:14px}
+.foutbalk b{display:block;margin-bottom:4px}
 </style>
 </head>
 <body>
@@ -46,6 +48,7 @@ td{padding:8px 6px;border-bottom:1px solid var(--lijn);vertical-align:top}tr:hov
     <div class="status" id="status"></div>
   </div>
 
+  <div id="fouten"></div>
   <div class="grid g4" id="tegels"></div>
 
   <section class="grid g2">
@@ -74,7 +77,7 @@ td{padding:8px 6px;border-bottom:1px solid var(--lijn);vertical-align:top}tr:hov
 </main>
 <div id="tip"></div>
 <script>
-const NAMEN={palet:"Kleurpalet",lettertype:"Lettertype",layout:"Layout",achtergrond:"Achtergrond",thema:"Thema",hook_stijl:"Hook-stijl",hook_op_beeld:"Hook op beeld",formaat:"Formaat",tijdslot:"Tijdstip"};
+const NAMEN={huisstijl:"Huisstijl",thema:"Thema",hook_stijl:"Hook-stijl",hook_op_beeld:"Hook op beeld",formaat:"Formaat",tijdslot:"Tijdstip"};
 const STATUS={wacht_op_tekst:"Wacht op tekst",gerenderd:"Klaar, gaat online",overgeslagen:"Overgeslagen",gepubliceerd:"Gepubliceerd",fout:"Fout"};
 const fmt=n=>n==null?"–":Number(n).toLocaleString("nl-NL");
 const tip=document.getElementById("tip");
@@ -95,6 +98,8 @@ function bouw(){
     `<span class="pil">${c.posts_per_dag} per dag · ${c.platformen_actief.join(", ")}</span>`+
     (repo?`<a class="knop" href="https://github.com/${repo}/edit/main/config.json" target="_blank" title="Zet &quot;pauze&quot; op true en sla op">Noodstop</a>`:"");
 
+  const f=D.recente_fouten||[];
+  document.getElementById("fouten").innerHTML=f.length?`<div class="foutbalk"><b>⚠ ${f.length} fout${f.length>1?"en":""} in de afgelopen 48 uur</b>${f.slice(-3).map(x=>x.t.replace("T"," ")+": "+x.tekst).join("<br>")}</div>`:"";
   const p=D.posts, pub=p.filter(x=>x.status==="gepubliceerd");
   const som=k=>pub.reduce((a,x)=>a+(x.totaal[k]||0),0);
   const week=p.filter(x=>x.datum>=new Date(Date.now()-7*864e5).toISOString().slice(0,10));
@@ -139,11 +144,11 @@ function tabel(){
   const v=x=>x.variabelen;
   document.querySelector("#tabel tbody").innerHTML=r.slice(0,200).map(x=>{
     const sc=Object.values(x.score);const s=sc.length?(sc.reduce((a,b)=>a+b)/sc.length).toFixed(2):"–";
-    const img=x.media_url&&x.media_url.endsWith(".jpg")?`<img class="thumb" loading="lazy" src="${x.media_url}">`:`<div class="thumb" style="display:grid;place-items:center;color:var(--ink3)">${v(x).formaat==="video"?"▶":""}</div>`;
+    const img=x.thumb?`<img class="thumb" loading="lazy" src="${x.thumb}">`:x.media_url&&x.media_url.endsWith(".jpg")?`<img class="thumb" loading="lazy" src="${x.media_url}">`:`<div class="thumb" style="display:grid;place-items:center;color:var(--ink3)">${v(x).formaat==="video"?"▶":""}</div>`;
     return `<tr data-tip="${(x.tekst||"").replace(/"/g,"&quot;")}${x.hook?"<br><br><i>"+x.hook.replace(/"/g,"&quot;")+"</i>":""}">
       <td>${img}</td><td style="white-space:nowrap">${x.datum}<div class="sub">${v(x).tijdslot}</div></td>
       <td><b>${x.ref}</b><div class="sub">${v(x).thema.replace("_"," ")}${Object.entries(x.links||{}).map(([k,u])=>u?` · <a href="${u}" target="_blank">${k}</a>`:"").join("")}</div></td>
-      <td><span class="tag">${v(x).formaat}</span><span class="tag">${v(x).palet}</span><span class="tag">${v(x).lettertype}</span><span class="tag">${v(x).layout}</span><span class="tag">hook: ${v(x).hook_stijl}</span></td>
+      <td><span class="tag">${v(x).formaat}</span><span class="tag">${v(x).huisstijl||v(x).palet}</span><span class="tag">hook: ${v(x).hook_stijl}</span></td>
       <td>${STATUS[x.status]||x.status}</td>
       <td class="num">${fmt(waarde(x,"views"))}</td><td class="num">${fmt(x.totaal.likes)}</td><td class="num">${fmt(x.totaal.saves)}</td><td class="num"><b>${s}</b></td></tr>`}).join("");
   document.querySelectorAll("#tabel tbody tr").forEach(tr=>{tr.onmousemove=e=>toon(e,tr.dataset.tip);tr.onmouseleave=verberg});
