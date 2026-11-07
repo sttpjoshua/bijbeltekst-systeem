@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-07T12:52",
+ "gegenereerd": "2026-11-07T14:34",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -109,6 +109,35 @@
   "inzichten": []
  },
  "posts": [
+  {
+   "id": "2026-11-08-1",
+   "datum": "2026-11-08",
+   "ref": "Jesaja 43:19",
+   "tekst": "Ziet, Ik zal wat nieuws maken, nu zal het uitspruiten, zult gijlieden dat niet weten? Ja, Ik zal in de woestijn een weg leggen, en rivieren in de wildernis.",
+   "hook": "Waar hoop jij stilletjes op iets nieuws?",
+   "status": "gerenderd",
+   "variabelen": {
+    "huisstijl": "salie",
+    "thema": "hoop",
+    "hook_stijl": "vraag",
+    "formaat": "carrousel",
+    "uitleg_op_beeld": true,
+    "achtergrondbron": "verloop",
+    "tijdslot": "07:30",
+    "palet": "salie",
+    "lettertype": "cormorant",
+    "layout": "kader",
+    "achtergrond": "effen",
+    "hook_op_beeld": false
+   },
+   "media": "docs/media/2026-11/2026-11-08-1-1.jpg",
+   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-1-1.jpg",
+   "thumb": "thumbs/2026-11-08-1.jpg",
+   "platformen": [],
+   "links": {},
+   "totaal": {},
+   "score": {}
+  },
   {
    "id": "2026-11-07-1",
    "datum": "2026-11-07",
@@ -261,8 +290,19 @@
    "t": "2026-11-07T12:42",
    "soort": "info",
    "tekst": "Facebook-pagina aangezet: posts gaan voortaan naar Instagram en Facebook"
+  },
+  {
+   "t": "2026-11-07T14:34",
+   "soort": "fout",
+   "tekst": "Privé repo bibleverse-materiaal kon niet gecloned worden (geen toegang in deze sessie); post van 8 nov gebruikt kleurverloop, geen effect want carrousel"
   }
  ],
- "recente_fouten": [],
+ "recente_fouten": [
+  {
+   "t": "2026-11-07T14:34",
+   "soort": "fout",
+   "tekst": "Privé repo bibleverse-materiaal kon niet gecloned worden (geen toegang in deze sessie); post van 8 nov gebruikt kleurverloop, geen effect want carrousel"
+  }
+ ],
  "versen_totaal": 116
 }

@@ -117,5 +117,15 @@
   "t": "2026-11-07T12:42",
   "soort": "info",
   "tekst": "Facebook-pagina aangezet: posts gaan voortaan naar Instagram en Facebook"
+ },
+ {
+  "t": "2026-11-07T14:34",
+  "soort": "fout",
+  "tekst": "Privé repo bibleverse-materiaal kon niet gecloned worden (geen toegang in deze sessie); post van 8 nov gebruikt kleurverloop, geen effect want carrousel"
+ },
+ {
+  "t": "2026-11-07T14:34",
+  "soort": "info",
+  "tekst": "1 post klaargezet voor 8 nov 07:30 (Jesaja 43:19, carrousel)"
  }
 ]
