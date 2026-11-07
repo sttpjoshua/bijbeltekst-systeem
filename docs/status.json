@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T22:46:25",
+ "updated": "2026-11-07T22:48:18",
  "agents": {
   "verskiezer": {
    "t": "2026-11-07T22:23:58",
@@ -99,5 +99,55 @@
    "t": "14:55",
    "msg": "Verbinding met Instagram werkt (@bibleverse_nl)"
   }
- ]
+ ],
+ "lampen": [
+  {
+   "naam": "Instagram",
+   "kleur": "groen",
+   "tekst": "ok"
+  },
+  {
+   "naam": "Facebook",
+   "kleur": "grijs",
+   "tekst": "nog niets geplaatst"
+  },
+  {
+   "naam": "Dagelijkse taak",
+   "kleur": "grijs",
+   "tekst": "nog niet gemeld"
+  },
+  {
+   "naam": "Avondcontrole",
+   "kleur": "grijs",
+   "tekst": "nog niet gemeld"
+  },
+  {
+   "naam": "Statistieken",
+   "kleur": "grijs",
+   "tekst": "nog niet gemeld"
+  },
+  {
+   "naam": "Sleutel IG",
+   "kleur": "grijs",
+   "tekst": "onbekend"
+  },
+  {
+   "naam": "Sleutel FB",
+   "kleur": "grijs",
+   "tekst": "onbekend"
+  }
+ ],
+ "volgers": {
+  "ig": null,
+  "fb": null,
+  "totaal": null,
+  "week": null,
+  "reeks": []
+ },
+ "top_post": null,
+ "snel_leren": {
+  "dag": 1,
+  "dagen": 7,
+  "tot": "2026-11-14"
+ }
 }

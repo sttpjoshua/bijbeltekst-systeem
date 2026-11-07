@@ -94,6 +94,14 @@ h3.sec{font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:var(--
 .ac .rg{display:flex;align-items:center;gap:10px}.ac .rg input{flex:1}.ac .rg b{min-width:42px;text-align:right;color:var(--gold)}
 .ac #acMsg{margin-top:8px;font-size:12px}
 .ac a{color:var(--gold)}
+.bord{position:absolute;transform:translate(-50%,0);text-align:center;color:#f7ecd0;font-weight:700;line-height:1.05;pointer-events:none;font-size:max(8px,calc(var(--u)*5.2px));width:calc(var(--u)*25px)}
+.bord .n{font-size:max(10px,calc(var(--u)*7.5px));display:block}.bord .d{color:#6bd68c}
+.lampen{display:grid;gap:5px;font-size:12px}.lampen div{display:flex;align-items:center;gap:7px}.lampen i{width:9px;height:9px;border-radius:2px;flex:0 0 auto}
+.lampen .groen{background:var(--ok)}.lampen .oranje{background:var(--gold)}.lampen .rood{background:var(--err)}.lampen .grijs{background:#6d6290}
+.lampen span{color:var(--muted);margin-left:auto}
+.vol{display:flex;align-items:flex-end;gap:12px}.vol b{font-size:26px;color:var(--gold)}.vol em{font-style:normal;color:var(--ok);font-weight:700}
+.potw{display:flex;gap:10px;align-items:center}.potw img{width:54px;height:68px;object-fit:cover;border-radius:4px;border:2px solid var(--gold)}
+.pbar{height:8px;background:var(--panel2);border-radius:4px;overflow:hidden;margin:6px 0}.pbar i{display:block;height:100%;background:var(--gold)}
 </style>
 </head>
 <body>
@@ -122,6 +130,10 @@ h3.sec{font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:var(--
           <div class="stat"><b id="sBest">-</b><span>Beste tijd</span></div>
         </div>
       </div>
+      <div class="card" id="cSnel" hidden><h2>⚡ Snel leren</h2><div id="snel"></div></div>
+      <div class="card"><h2>Volgers</h2><div id="volgers" class="hint">Worden vanaf vannacht elke dag geteld.</div></div>
+      <div class="card"><h2>Gezondheid</h2><div class="lampen" id="lampen"></div></div>
+      <div class="card" id="cTop" hidden><h2>🏆 Post van de week</h2><div id="potw"></div></div>
       <div class="card"><h2>Net geleerd</h2><div class="learn" id="learn">Wacht op de eerste data.</div></div>
       <div class="card"><h2>Team</h2><div class="chips" id="chips"></div></div>
       <div class="card"><h2>Bereik per platform</h2><div id="plat"></div></div>
@@ -238,6 +250,8 @@ function drawStatic(){
   }
   R(11,8+12-11,4,11,'#1f1f26');R(12,10,2,1,'#f2c14e');
   stained(70,6);stained(172,6);
+  // volgersbord (krijtbord) met lampjes eronder
+  R(209,7,32,28,'#6b3f1d');R(211,9,28,18,'#2f4a3a');R(211,9,28,1,'#3d5d4a');R(211,28,28,5,'#3a2412');R(207,35,36,2,'#8a5a2b');
   // cross
   R(121,12,4,20,'#8a5a2b');R(116,17,14,4,'#8a5a2b');R(122,12,1,20,'#a8723a');R(116,17,14,1,'#a8723a');
   // coffee corner
@@ -262,6 +276,12 @@ function beams(t){
     g.beginPath();g.moveTo(x0,50);g.lineTo(x1,50);g.lineTo(x1+46,170);g.lineTo(x0+22,170);g.closePath();g.fill();
   });
   g.restore();
+}
+const LAMPKLEUR={groen:'#3ecf6b',oranje:'#f2c14e',rood:'#ff4d4d',grijs:'#5d5470'};
+function lampjes(t){
+  const l=(LIVEJ&&LIVEJ.lampen)||[];
+  l.slice(0,7).forEach((x,i)=>{const k=LAMPKLEUR[x.kleur]||LAMPKLEUR.grijs;const knip=x.kleur==='rood'&&Math.floor(t/500)%2;
+    R(212+i*4,29,3,3,knip?'#5a1d1d':k);if(!knip&&x.kleur!=='grijs')R(212+i*4,29,1,1,'rgba(255,255,255,.6)')});
 }
 function clock(){
   const cx=150,cy=24;
@@ -343,7 +363,7 @@ let last=performance.now();
 function frame(now){
   const dt=Math.min(.05,(now-last)/1000);last=now;
   g.drawImage(bgc,0,0);
-  beams(now);clock();
+  beams(now);clock();lampjes(now);
   AG.forEach(a=>{setDest(a,a.state==='idle'?'lounge':'home');rondlopen(a,now);move(a,dt)});
   for(let r=0;r<2;r++)AG.filter(a=>a.row===r).forEach(a=>{
     if(seated(a))drawChar(a,now);drawDesk(a,now);
@@ -380,7 +400,26 @@ function nextPost(){
   return cd(best-n);
 }
 const cd=ms=>{const m=Math.round(ms/60000);return m>=60?`${Math.floor(m/60)}u ${m%60}m`:`${m}m`};
+const bordEl=document.createElement('div');bordEl.className='bord';bordEl.style.left=(225/W*100)+'%';bordEl.style.top=(10/H*100)+'%';
+document.getElementById('ov').appendChild(bordEl);
+const f2=n=>n==null?'–':Number(n).toLocaleString('nl-NL');
+function renderExtra(){
+  const j=LIVEJ;if(!j)return;
+  const v=j.volgers||{};
+  bordEl.innerHTML=v.totaal!=null?`<span class="n">${f2(v.totaal)}</span>volgers${v.week?`<br><span class="d">${v.week>0?'+':''}${v.week}</span>`:''}`:'<span class="n">?</span>volgers';
+  if(v.totaal!=null){
+    const r=v.reeks||[],mx=Math.max(...r,1),mn=Math.min(...r,0);
+    const sp=r.length>1?`<svg viewBox="0 0 100 30" style="width:100%;height:34px;margin-top:6px"><polyline fill="none" stroke="#f2c14e" stroke-width="2" points="${r.map((x,i)=>(i/(r.length-1)*100).toFixed(1)+','+(28-(x-mn)/(mx-mn||1)*26).toFixed(1)).join(' ')}"/></svg>`:'';
+    document.getElementById('volgers').innerHTML=`<div class="vol"><b>${f2(v.totaal)}</b>${v.week!=null?`<em>${v.week>=0?'+':''}${v.week} deze week</em>`:''}</div><div class="hint">Instagram ${f2(v.ig)} · Facebook ${f2(v.fb)}</div>${sp}`;
+  }
+  document.getElementById('lampen').innerHTML=(j.lampen||[]).map(x=>`<div><i class="${x.kleur}"></i>${esc(x.naam)}<span>${esc(x.tekst)}</span></div>`).join('')+'<div class="hint" style="margin-top:4px">Dezelfde lampjes branden aan de muur onder het volgersbord.</div>';
+  const tp=j.top_post;document.getElementById('cTop').hidden=!tp;
+  if(tp)document.getElementById('potw').innerHTML=`<div class="potw">${tp.thumb?`<img src="${tp.thumb}" alt="">`:''}<div><b>${esc(tp.ref)}</b><div class="hint">${tp.formaat} · bereik ${f2(tp.bereik)}${tp.score!=null?` · score ${tp.score.toFixed(2)}`:''}</div></div></div>`;
+  const sn=j.snel_leren;document.getElementById('cSnel').hidden=!sn;
+  if(sn)document.getElementById('snel').innerHTML=`<b>Dag ${sn.dag} van ${sn.dagen}</b><div class="pbar"><i style="width:${Math.round(sn.dag/sn.dagen*100)}%"></i></div><div class="hint">5 posts per dag, elke ochtend bijsturen. Tot en met ${new Date(sn.tot).toLocaleDateString('nl-NL',{day:'numeric',month:'long'})}.</div>`;
+}
 function render(){
+  renderExtra();
   document.getElementById('sPosts').textContent=S.posts;
   document.getElementById('sReach').textContent=fmt(S.reach);
   document.getElementById('sNext').textContent=nextPost();
@@ -401,7 +440,7 @@ function render(){
 setInterval(render,500);render();
 
 /* ---------- live mode (status.json) ---------- */
-let LIVEJ=null;
+var LIVEJ=null;
 function liveStates(){
   const j=LIVEJ;if(!j)return;const now=Date.now();
   AG.forEach(a=>{

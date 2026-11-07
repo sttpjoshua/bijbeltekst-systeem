@@ -619,6 +619,63 @@ def dashboard_extra(cfg, posts):
             "weken": weken, "inzichten_data": inzichten, "min_posts_voor_leren": cfg.get("min_posts_voor_leren", 6),
             "gemeten_posts": gemeten, "snel_leren": snel, "voorraad": voorraad}
 
+def kantoor_extra(cfg, posts):
+    """Extra's voor het pixel-kantoor: gezondheidslampjes, volgersbord, post van de week, snel leren."""
+    nu = dt.datetime.now()
+    uren = lambda t: (nu - dt.datetime.fromisoformat(t[:16])).total_seconds() / 3600 if t else 1e9
+    g = laad("data/gezondheid.json", {})
+    def taak(k, naam, max_u):
+        x = g.get(k)
+        if not x or (not x.get("ok") and not x.get("fout")):
+            return {"naam": naam, "kleur": "grijs", "tekst": "nog niet gemeld"}
+        if x.get("laatst_ok") is False:
+            return {"naam": naam, "kleur": "rood", "tekst": "mislukt"}
+        return {"naam": naam, "kleur": "groen" if uren(x.get("ok")) <= max_u else "oranje", "tekst": "ok" if uren(x.get("ok")) <= max_u else "te lang stil"}
+    def sleutel(k, naam):
+        x = g.get(k) or {}
+        if not x.get("verloopt"):
+            return {"naam": naam, "kleur": "grijs", "tekst": "onbekend"}
+        if x.get("geldig") is False:
+            return {"naam": naam, "kleur": "rood", "tekst": "ongeldig"}
+        if x["verloopt"] == "nooit":
+            return {"naam": naam, "kleur": "groen", "tekst": "verloopt nooit"}
+        d = (dt.date.fromisoformat(x["verloopt"]) - nu.date()).days
+        return {"naam": naam, "kleur": "rood" if d < 14 else "oranje" if d < 30 else "groen", "tekst": f"nog {d} dagen"}
+    lampen = []
+    for k, naam in (("instagram", "Instagram"), ("facebook", "Facebook")):
+        if k not in cfg.get("platformen_actief", []):
+            lampen.append({"naam": naam, "kleur": "grijs", "tekst": "uit"}); continue
+        x = g.get(k)
+        lampen.append({"naam": naam, "kleur": "grijs" if not x else "rood" if x.get("laatst_ok") is False else "groen",
+                       "tekst": "nog niets geplaatst" if not x else "mislukt" if x.get("laatst_ok") is False else "ok"})
+    lampen += [taak("dagelijks", "Dagelijkse taak", 27), taak("avondcontrole", "Avondcontrole", 27),
+               taak("statistieken", "Statistieken", 30), sleutel("sleutel_instagram", "Sleutel IG"), sleutel("sleutel_facebook", "Sleutel FB")]
+    groei = [x for x in laad("data/groei.json", []) if x.get("instagram") is not None or x.get("facebook") is not None]
+    tot = lambda x: (x.get("instagram") or 0) + (x.get("facebook") or 0)
+    week = next((x for x in groei if x["datum"] >= (nu.date() - dt.timedelta(days=7)).isoformat()), groei[0] if groei else None)
+    volgers = {"ig": groei[-1].get("instagram") if groei else None, "fb": groei[-1].get("facebook") if groei else None,
+               "totaal": tot(groei[-1]) if groei else None, "week": (tot(groei[-1]) - tot(week)) if groei and len(groei) > 1 else None,
+               "reeks": [tot(x) for x in groei[-14:]]}
+    # Post van de week: hoogste score (of bereik) van de afgelopen 7 dagen
+    sc = {}
+    for p, plat, s in post_scores(posts):
+        sc.setdefault(p["id"], []).append(s)
+    grens = (nu.date() - dt.timedelta(days=7)).isoformat()
+    kand = [p for p in posts if p["status"] == "gepubliceerd" and p["datum"] >= grens]
+    bereik = lambda p: sum((beste_meting(m).get("reach") or beste_meting(m).get("views") or 0) for m in p.get("stats", {}).values())
+    kand.sort(key=lambda p: (sum(sc[p["id"]]) / len(sc[p["id"]]) if p["id"] in sc else -1, bereik(p)), reverse=True)
+    top = None
+    if kand and (kand[0]["id"] in sc or bereik(kand[0])):
+        p = kand[0]
+        top = {"ref": p["ref"], "thumb": p.get("thumb") or p.get("media_url"), "bereik": bereik(p),
+               "score": round(sum(sc[p["id"]]) / len(sc[p["id"]]), 2) if p["id"] in sc else None, "formaat": p["variabelen"]["formaat"]}
+    snel = None
+    if cfg.get("leermodus"):
+        start = dt.date.fromisoformat(cfg.get("leermodus_start") or nu.date().isoformat())
+        dagen = max(1, (dt.date.fromisoformat(cfg["leermodus_tot"]) - start).days)
+        snel = {"dag": min(dagen, (nu.date() - start).days + 1), "dagen": dagen, "tot": cfg["leermodus_tot"]}
+    return {"lampen": lampen, "volgers": volgers, "top_post": top, "snel_leren": snel}
+
 def schrijf_status(cfg, strat, posts, fouten):
     """docs/status.json voor het pixel-kantoor. Toestanden worden in de browser bepaald op basis van tijd."""
     nu = dt.datetime.now()
@@ -652,6 +709,7 @@ def schrijf_status(cfg, strat, posts, fouten):
         "platforms": {k: per_plat.get(k, 0) for k in ("instagram", "facebook", "youtube", "tiktok")},
         "platforms_actief": cfg.get("platformen_actief", []),
         "log": [{"t": l["t"][11:16], "msg": l["tekst"][:110]} for l in reversed(laad("data/logboek.json", [])[-12:])],
+        **kantoor_extra(cfg, posts),
     }
     bewaar("docs/status.json", status)
 
