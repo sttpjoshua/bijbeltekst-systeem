@@ -75,6 +75,20 @@ def main(raw):
         if vid not in lijst:
             lijst.append(vid)
         melding = f"Vers {o.get('ref', vid)} wordt niet meer gebruikt"
+    elif a == "leermodus":
+        if o["aan"]:
+            dagen = int(o.get("dagen", 14))
+            if not cfg.get("leermodus"):
+                cfg["leermodus_vorige"] = {k: cfg.get(k) for k in ("posts_per_dag", "max_posts_per_dag", "verkenning")}
+            cfg["leermodus"] = True
+            cfg["leermodus_tot"] = (dt.date.today() + dt.timedelta(days=dagen)).isoformat()
+            cfg["max_posts_per_dag"] = 5
+            cfg["posts_per_dag"] = 5
+            cfg["verkenning"] = 0.4
+            melding = f"Snel leren aangezet tot {cfg['leermodus_tot']}: 5 posts per dag, elke dag leren"
+        else:
+            S.leermodus_uit(cfg)
+            melding = "Snel leren uitgezet, oude instellingen terug"
     elif a == "test":
         melding = None  # de workflow draait daarna de verbindingstest
     else:

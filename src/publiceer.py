@@ -279,6 +279,12 @@ def cmd_statistieken():
         S.cmd_opruimen(30)
     except Exception as e:
         S.cmd_log(f"Opruimen mislukt: {e}", "fout")
+    if S.check_leermodus():  # snel leren: elke dag de gewichten bijwerken
+        try:
+            S.cmd_leer()
+            S.cmd_log("Snel leren: strategie bijgewerkt met de cijfers van gisteren")
+        except Exception as e:
+            S.cmd_log(f"Dagelijks leren mislukt: {e}", "fout")
     S.cmd_dashboard()
 
 def cmd_token():

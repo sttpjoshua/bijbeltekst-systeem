@@ -69,6 +69,7 @@ input[type=range]{width:100%}input.veld,select.veld{font:inherit;font-size:13px;
       <div class="bed">
         <div class="blok"><h3>Systeem</h3><div class="seg" id="bPauze"></div><div class="sub" style="margin-top:6px">Pauze zet alles stil. Er gaat niets meer online tot je hervat.</div></div>
         <div class="blok"><h3>Posts per dag</h3><div class="seg" id="bPPD"></div></div>
+        <div class="blok"><h3>Snel leren</h3><div id="bLeer"></div></div>
         <div class="blok"><h3>Platformen</h3><div class="seg" id="bPlat"></div><div class="sub" style="margin-top:6px">YouTube en TikTok komen er later bij.</div></div>
         <div class="blok"><h3>Verbinding</h3><button class="btn" id="bTest">Verbinding testen</button><div class="sub" style="margin-top:6px">Controleert de koppeling met Instagram en Facebook.</div></div>
         <div class="blok"><h3>Aandeel foto-achtergronden: <span id="vBeeld"></span></h3><input type="range" id="rBeeld" min="0" max="50" step="5"><button class="btn" id="sBeeld">Opslaan</button></div>
@@ -125,7 +126,7 @@ function bouw(){
   document.getElementById("status").innerHTML=
     `<span class="pil ${c.pauze?"slecht":"goed"}">${c.pauze?"⏸ Gepauzeerd":"● Actief"}</span>`+
     (()=>{const v=D.posts.filter(x=>x.status==="gerenderd").sort((a,b)=>(a.datum+a.variabelen.tijdslot).localeCompare(b.datum+b.variabelen.tijdslot))[0];return `<span class="pil">${v?"Volgende: "+v.datum.slice(5)+" "+v.variabelen.tijdslot:"Geen post klaar"}</span>`})()+
-    `<span class="pil">${c.posts_per_dag} per dag · ${c.platformen_actief.join(", ")}</span>`+
+    (c.leermodus?`<span class="pil goed">⚡ Snel leren</span>`:"")+`<span class="pil">${c.posts_per_dag} per dag · ${c.platformen_actief.join(", ")}</span>`+
     (repo?`<a class="knop" href="https://github.com/${repo}/edit/main/config.json" target="_blank" title="Zet &quot;pauze&quot; op true en sla op">Noodstop</a>`:"");
 
   const f=D.recente_fouten||[];
@@ -207,6 +208,9 @@ function bouwBediening(){
   document.getElementById("bPPD").innerHTML=[...Array(max)].map((_,i)=>`<button class="btn ${c.posts_per_dag===i+1?"prim":""}" data-o='{"actie":"posts_per_dag","waarde":${i+1}}'>${i+1}</button>`).join("");
   document.getElementById("bPlat").innerHTML=["instagram","facebook"].map(pl=>{const aan=c.platformen_actief.includes(pl);
     return `<button class="btn ${aan?"aan":""}" data-o='{"actie":"platform","platform":"${pl}","aan":${!aan}}' title="Klik om ${aan?"uit":"aan"} te zetten">${pl[0].toUpperCase()+pl.slice(1)} ${aan?"aan":"uit"}</button>`}).join("");
+  document.getElementById("bLeer").innerHTML=c.leermodus
+    ?`<div class="seg"><span class="pil goed">● Aan tot ${new Date(c.leermodus_tot).toLocaleDateString("nl-NL",{day:"numeric",month:"long"})}</span><button class="btn" data-o='{"actie":"leermodus","aan":false}'>Uitzetten</button></div><div class="sub" style="margin-top:6px">5 posts per dag, elke dag leren. Daarna gaan je oude instellingen vanzelf terug.</div>`
+    :`<div class="seg"><button class="btn prim" data-o='{"actie":"leermodus","aan":true,"dagen":7}'>7 dagen</button><button class="btn prim" data-o='{"actie":"leermodus","aan":true,"dagen":14}'>14 dagen</button></div><div class="sub" style="margin-top:6px">Tijdelijk 5 posts per dag en elke dag leren in plaats van wekelijks. Bereik per post kan iets lager uitvallen.</div>`;
   const rb=document.getElementById("rBeeld"),rv=document.getElementById("rVerk");
   rb.value=Math.round((c.max_aandeel_beeld??.33)*100);rv.value=Math.round((c.verkenning??.2)*100);
   const upd=()=>{vBeeld.textContent=rb.value+"%";vVerk.textContent=rv.value+"%"};rb.oninput=rv.oninput=upd;upd();

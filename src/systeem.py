@@ -392,6 +392,27 @@ def post_scores(posts):
     return uit
 
 # ---------- Leren ----------
+def leermodus_uit(cfg):
+    """Zet snel leren uit en herstelt de instellingen van daarvoor."""
+    vorige = cfg.pop("leermodus_vorige", None) or {}
+    cfg["leermodus"] = False
+    cfg.pop("leermodus_tot", None)
+    cfg["max_posts_per_dag"] = vorige.get("max_posts_per_dag") or 3
+    cfg["posts_per_dag"] = min(vorige.get("posts_per_dag") or 1, cfg["max_posts_per_dag"])
+    cfg["verkenning"] = vorige.get("verkenning") or 0.2
+
+def check_leermodus():
+    """Na de einddatum gaat snel leren vanzelf uit. Geeft True als de modus (nog) aan staat."""
+    cfg = laad("config.json")
+    if not cfg.get("leermodus"):
+        return False
+    if cfg.get("leermodus_tot", "9999") < dt.date.today().isoformat():
+        leermodus_uit(cfg)
+        bewaar("config.json", cfg)
+        cmd_log("Snel leren afgelopen: terug naar de normale instellingen")
+        return False
+    return True
+
 def cmd_leer():
     cfg = laad("config.json")
     strat = vul_strategie_aan(laad("strategie.json") or nieuwe_strategie())
@@ -401,7 +422,8 @@ def cmd_leer():
     if len({p["id"] for p, _, _ in scores}) < cfg["min_posts_voor_leren"]:
         print("Nog te weinig gemeten posts om te leren:", len(scores)); return
     K = 4  # demping: een optie met weinig metingen blijft dicht bij 1.0
-    max_stap = cfg["max_gewicht_verschuiving_per_week"]
+    # Bij snel leren wordt elke dag geleerd, met kleinere stappen (ongeveer 0,4 per week in totaal)
+    max_stap = 0.06 if cfg.get("leermodus") else cfg["max_gewicht_verschuiving_per_week"]
     rapport = {"datum": vandaag, "aantal_metingen": len(scores), "dimensies": {}}
     for dim in DIMENSIES:
         per = {}
@@ -450,7 +472,7 @@ def cmd_dashboard():
                       "links": {k: v.get("url") for k, v in p.get("gepubliceerd", {}).items()}, "totaal": tot, "score": sc.get(p["id"], {})})
     rapporten = sorted(os.listdir(P("rapporten"))) if os.path.isdir(P("rapporten")) else []
     data = {"gegenereerd": dt.datetime.now().isoformat(timespec="minutes"), "repo": cfg.get("github_repo", ""),
-            "config": {k: cfg.get(k) for k in ("pauze", "kanaalnaam", "posts_per_dag", "max_posts_per_dag", "verkenning", "platformen_actief", "max_aandeel_beeld", "verzen_uitsluiten")},
+            "config": {k: cfg.get(k) for k in ("pauze", "kanaalnaam", "posts_per_dag", "max_posts_per_dag", "verkenning", "platformen_actief", "max_aandeel_beeld", "verzen_uitsluiten", "leermodus", "leermodus_tot")},
             "strategie": strat, "posts": lijst,
             "leergeschiedenis": laad("data/leergeschiedenis.json", []),
             "laatste_rapport": laad(f"rapporten/{rapporten[-1]}") if rapporten else None,

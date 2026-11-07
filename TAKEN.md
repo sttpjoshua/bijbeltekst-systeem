@@ -53,3 +53,6 @@ Het online zetten zelf doet GitHub Actions (`.github/workflows/publiceren.yml`, 
 
 ## Bediening via het dashboard
 Joshua kan vanaf het dashboard pauzeren, posts per dag (1-3), platformen, foto-aandeel en experimenteren aanpassen, en klaarstaande posts verplaatsen, nu posten, overslaan (status "afgekeurd") of een vers uitsluiten (config "verzen_uitsluiten"). Respecteer die keuzes: draai ze niet terug, kies nooit een uitgesloten vers, en verander de tijd niet van posts die hij handmatig heeft verplaatst. Verhoog posts_per_dag niet automatisch als Joshua hem zelf lager heeft gezet (zie logboek "Bediening:").
+
+## Snel leren
+Staat `leermodus` op true in config.json, dan maak je elke dag `posts_per_dag` (5) posts klaar, één per tijdslot, elk met een eigen hook en tekst. Pas posts_per_dag, max_posts_per_dag en verkenning dan niet aan; het systeem zet ze na `leermodus_tot` zelf terug. Het dagelijks leren gebeurt automatisch na het ophalen van de statistieken.
