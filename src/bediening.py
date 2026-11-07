@@ -126,8 +126,10 @@ def main(raw):
         melding = f"{p['ref']} goedgekeurd"
     elif a == "andere_stijl":
         p = vind(posts, o["post"])
-        if p["status"] not in ("gerenderd", "wacht_op_tekst"):
+        if p["status"] not in ("gerenderd", "wacht_op_tekst", "opnieuw_maken"):
             raise SystemExit("Deze post kan niet meer aangepast worden")
+        if p["status"] == "opnieuw_maken":
+            p["status"] = "gerenderd"  # wordt hieronder opnieuw gemaakt (of weer in de wachtrij gezet)
         import random
         fris = [k for k in S.HUISSTIJLEN if k != p["variabelen"].get("huisstijl") and k != "avond"]
         nieuw = o.get("huisstijl") if o.get("huisstijl") in S.HUISSTIJLEN else random.choice(fris)
