@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-07T12:41",
+ "gegenereerd": "2026-11-07T12:42",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -7,7 +7,8 @@
   "posts_per_dag": 1,
   "verkenning": 0.2,
   "platformen_actief": [
-   "instagram"
+   "instagram",
+   "facebook"
   ]
  },
  "strategie": {
@@ -251,6 +252,11 @@
    "t": "2026-11-07T12:41",
    "soort": "info",
    "tekst": "Statistieken lezen werkt"
+  },
+  {
+   "t": "2026-11-07T12:42",
+   "soort": "info",
+   "tekst": "Facebook-pagina aangezet: posts gaan voortaan naar Instagram en Facebook"
   }
  ],
  "recente_fouten": [

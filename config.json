@@ -8,10 +8,10 @@
   "max_posts_per_dag": 3,
   "verkenning": 0.2,
   "platformen_actief": [
-    "instagram"
+    "instagram",
+    "facebook"
   ],
   "platformen_later": [
-    "facebook",
     "youtube",
     "tiktok"
   ],
