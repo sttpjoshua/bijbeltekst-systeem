@@ -85,3 +85,6 @@ Joshua wil geen losse afbeeldingen meer: een beeldpost is altijd een carrousel (
 
 ## Carrousels: doorlopende achtergrond (vaste regel)
 Elke carrousel heeft één doorlopende achtergrond over de drie slides (render.py `_panorama`). Met een foto: slide 1 scherp, daarna zacht vervagend en rustiger. Verander dit nooit naar losse achtergronden per slide.
+
+## Reserveverzen (voor "ander vers" in het kantoor)
+Na het schrijven en renderen van de posts (dagelijkse run, en avondcontrole als er posts bij kwamen): `python3 src/systeem.py reserve --datum MORGEN`. Vul daarna in `data/posts.json` bij elke post onder `reserve` de velden hook, caption, hashtags en, bij carrousel, betekenis en toepassing in, volgens dezelfde regels als de post zelf (caption begint met de hook en bevat het vers letterlijk en de verwijzing). Lees het reservevers ook na; past het los niet, haal de `reserve` dan weg en draai `reserve` opnieuw. Joshua kan dan in het kantoor met één klik naar het reservevers wisselen; het beeld wordt dan direct in GitHub gemaakt.

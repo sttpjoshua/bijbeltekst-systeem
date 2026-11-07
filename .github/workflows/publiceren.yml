@@ -43,6 +43,15 @@ jobs:
       - name: PyNaCl voor token-verversing
         if: steps.t.outputs.taak == 'token' || steps.t.outputs.taak == 'bediening'
         run: pip install pynacl pillow numpy
+      - name: Muziek en foto's ophalen (alleen bij bediening, als MATERIAAL_PAT bestaat)
+        if: steps.t.outputs.taak == 'bediening'
+        env:
+          MATERIAAL_PAT: ${{ secrets.MATERIAAL_PAT }}
+        run: |
+          if [ -n "$MATERIAAL_PAT" ]; then
+            git clone --depth 1 -q "https://x-access-token:${MATERIAAL_PAT}@github.com/sttpjoshua/bibleverse-materiaal.git" ../bibleverse-materiaal || echo "Materiaal ophalen mislukt"
+            sudo apt-get install -y -qq ffmpeg >/dev/null || true
+          fi
       - name: Uitvoeren
         env:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}

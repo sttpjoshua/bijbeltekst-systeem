@@ -9,6 +9,13 @@ import systeem as S
 PLATFORMEN = ("instagram", "facebook")
 
 
+def materiaal_er():
+    """Zijn muziek en foto's beschikbaar (in GitHub Actions alleen met het geheim MATERIAAL_PAT)?"""
+    ok = os.path.isdir(S.materiaal_map())
+    S.gezond("materiaal_actions", ok, "muziek en foto's beschikbaar" if ok else "geen MATERIAAL_PAT")
+    return ok
+
+
 def wanneer():
     """Na een wijziging in het aantal: vanaf wanneer geldt het?"""
     if dt.datetime.now().hour < 21:
@@ -128,15 +135,15 @@ def main(raw):
         p.setdefault("keuzebron", {})["huisstijl"] = "joshua"
         p["goedgekeurd"] = None
         if p["status"] == "gerenderd":
-            # beelden kunnen hier meteen opnieuw; video en foto-achtergrond hebben muziek/foto's nodig (avondcontrole)
-            if p["variabelen"]["formaat"] != "video" and p["variabelen"].get("achtergrondbron") != "beeld":
+            beeldpost = p["variabelen"]["formaat"] != "video" and p["variabelen"].get("achtergrondbron") != "beeld"
+            if beeldpost or materiaal_er():
                 p["status"] = "klaar_voor_render"
                 S.bewaar("data/posts.json", posts)
                 S.cmd_render(p["datum"])
                 posts = S.laad("data/posts.json", [])
                 melding = f"{p['ref']} opnieuw gemaakt in stijl {nieuw}"
             else:
-                # video of foto: kan alleen in een run met muziek en foto's (dagelijks 14:32 of avondcontrole 20:47)
+                # zonder muziek en foto's in GitHub: wachten op een run die ze wel heeft (14:32 of 20:47)
                 nu = dt.datetime.now()
                 runs = [nu.replace(hour=u, minute=m, second=0, microsecond=0) + dt.timedelta(days=d)
                         for d in (0, 1) for u, m in ((14, 32), (20, 47))]
@@ -148,6 +155,28 @@ def main(raw):
                 melding = f"{p['ref']} krijgt stijl {nieuw}; wordt om {volgende:%H:%M} opnieuw gemaakt"
         else:
             melding = f"{p['ref']} krijgt stijl {nieuw}"
+    elif a == "post_ander_vers" and vind(posts, o["post"]).get("reserve", {}).get("caption"):
+        p = vind(posts, o["post"])
+        r = p.pop("reserve")
+        later = cfg.setdefault("verzen_later", {})
+        later[p["vers_id"]] = (dt.date.today() + dt.timedelta(days=30)).isoformat()
+        oud = p["ref"]
+        for k in ("vers_id", "ref", "tekst", "vertaling", "hook", "caption", "hashtags", "uitleg", "betekenis", "toepassing"):
+            if k in r:
+                p[k] = r[k]
+        for f in ("thema", "boekgroep", "lengte", "bron"):
+            if f in r:
+                p["variabelen"][f] = r[f]
+        p["goedgekeurd"] = None
+        if p["variabelen"]["formaat"] != "video" and p["variabelen"].get("achtergrondbron") != "beeld" or materiaal_er():
+            p["status"] = "klaar_voor_render"
+            S.bewaar("data/posts.json", posts); S.bewaar("config.json", cfg)
+            S.cmd_render(p["datum"])
+            posts, cfg = S.laad("data/posts.json", []), S.laad("config.json")
+            melding = f"Ander vers: {oud} vervangen door {p['ref']} (meteen opnieuw gemaakt)"
+        else:
+            p["status"] = "opnieuw_maken"
+            melding = f"Ander vers: {oud} vervangen door {p['ref']}; het beeld wordt bij de volgende run gemaakt"
     elif a == "post_ander_vers":
         p = vind(posts, o["post"])
         S.bewaar("data/posts.json", posts)

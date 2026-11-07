@@ -909,6 +909,12 @@ function verskiezerPlan(){
   return `<div class="k">Morgen op de planning</div>${m.length?m.map(p=>`<div class="vo"><span style="width:10px;height:10px;border-radius:2px;background:${STIJLKL[p.variabelen.huisstijl]||'#777'};flex:0 0 auto"></span><div style="flex:1;min-width:0"><b>${esc(p.variabelen.tijdslot)} ${esc(p.ref)}</b><div class="hint">${p.variabelen.formaat==='video'?'video':'carrousel'} · ${esc((p.variabelen.thema||'').replace('_',' '))} · ${p.soort==='plan'?'voorlopig':'klaar'}</div></div></div>`).join(''):'<div class="hint">Nog niets gepland.</div>'}
     <button class="kbtn goud" id="vpPlan" style="width:100%;margin:8px 0 10px">📅 Planbord van de hele week</button>`;
 }
+function hintGoed(p){
+  const mat=!!(DJ&&DJ.gezondheid&&DJ.gezondheid.materiaal_actions&&DJ.gezondheid.materiaal_actions.laatst_ok);
+  const snel=(p.variabelen.formaat!=='video'&&p.variabelen.achtergrondbron!=='beeld')||mat;
+  return (snel?'Andere stijl: binnen 2 à 3 minuten klaar.':'Andere stijl: video en foto worden bij de volgende run (14:32 of 20:47) gemaakt.')
+    +' '+(p.reserve_ref?`Ander vers: meteen, met het reservevers ${esc(p.reserve_ref)}.`:'Ander vers: bij de avondcontrole (20:47).');
+}
 function designerBak(){
   const l=teKeuren();
   if(!l.length)return '<div class="k">Mijn bakje</div><div class="hint" style="margin-bottom:8px">Er ligt nu niets. De posts van morgen komen na 14:32.</div>';
@@ -945,7 +951,7 @@ function toonGoedkeuren(){
           <select data-stijl><option value="">Verras me</option>${STIJLEN.filter(s=>s!==p.variabelen.huisstijl).map(s=>`<option>${s}</option>`).join('')}</select><button class="kbtn" data-a="andere_stijl">Andere stijl</button>
           <button class="kbtn" data-a="post_ander_vers">Ander vers</button>
           <button class="kbtn rood" data-a="overslaan">Overslaan</button></div>
-          <div class="hint" style="margin-top:4px">${p.variabelen.formaat==='video'||p.variabelen.achtergrondbron==='beeld'?'Andere stijl en ander vers worden bij de avondcontrole (20:47) gemaakt.':'Andere stijl is binnen een paar minuten klaar. Ander vers wordt bij de avondcontrole (20:47) gemaakt.'}</div>`:''}
+          <div class="hint" style="margin-top:4px">${hintGoed(p)}</div>`:''}
         <div class="kmsg"></div></div></div>`).join(''):'<div class="hint" style="padding:14px 0">Er ligt nu niets in het bakje. De posts van morgen komen na 14:32.</div>'}`);
 }
 $('kInhoud').addEventListener('click',e=>{
@@ -956,6 +962,10 @@ $('kInhoud').addEventListener('click',e=>{
   const rij=b.closest('.gk'),id=rij.dataset.id,msg=rij.querySelector('.kmsg'),a=b.dataset.a;
   if((a==='overslaan'||a==='post_ander_vers')&&!b.dataset.zeker){b.dataset.zeker=1;b.textContent='Zeker? Klik nog eens';return}
   const o={actie:a,post:id};if(a==='andere_stijl'){const s=rij.querySelector('[data-stijl]').value;if(s)o.huisstijl=s}
+  const lbl={goedkeuren:'✓ goedgekeurd',andere_stijl:'⏳ nieuwe stijl wordt gemaakt…',post_ander_vers:'⏳ ander vers wordt gezet…',overslaan:'overgeslagen'}[a];
+  const st=rij.querySelector('.st');if(st){st.textContent=lbl;st.className='st '+(a==='goedkeuren'?'ok':'wacht')}
+  rij.querySelectorAll('.rij button,.rij select').forEach(x=>{if(x!==b)x.disabled=true});
+  if(a==='overslaan')rij.style.opacity=.45;
   stuurK(o,b,msg);
 });
 const bakEl=document.createElement('button');bakEl.className='bak';bakEl.title='Posts goedkeuren';

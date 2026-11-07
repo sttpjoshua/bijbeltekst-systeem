@@ -114,7 +114,28 @@
    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-1-2.jpg",
    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-1-3.jpg"
   ],
-  "goedgekeurd": true
+  "goedgekeurd": true,
+  "reserve": {
+   "vers_id": "Psalms-27-1-1",
+   "ref": "Psalm 27:1",
+   "tekst": "De HEERE is mijn Licht en mijn Heil, voor wien zou ik vrezen? De HEERE is mijns levens kracht, voor wien zou ik vervaard zijn?",
+   "vertaling": "SV",
+   "thema": "moed",
+   "boekgroep": "psalmen",
+   "lengte": "middel",
+   "bron": "bekend",
+   "hook": "Waar ben jij vandaag bang voor?",
+   "caption": "Waar ben jij vandaag bang voor?\n\n\"De HEERE is mijn Licht en mijn Heil, voor wien zou ik vrezen? De HEERE is mijns levens kracht, voor wien zou ik vervaard zijn?\"\nPsalm 27:1\n\nAls God je licht is, hoeft het donker niet het laatste woord te hebben.",
+   "hashtags": [
+    "#bijbeltekst",
+    "#moed",
+    "#psalmen",
+    "#geloof"
+   ],
+   "uitleg": "",
+   "betekenis": "David zegt: met God aan mijn kant hoef ik niet in angst te leven. Hij is licht als het donker is, redding als ik vastzit en kracht als ik op ben.",
+   "toepassing": "Schrijf op waar je bang voor bent. Zet er dan naast: God is mijn licht, ook hierin."
+  }
  },
  {
   "id": "2026-11-08-2",
@@ -177,7 +198,28 @@
    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-2-2.jpg",
    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-2-3.jpg"
   ],
-  "goedgekeurd": null
+  "goedgekeurd": null,
+  "reserve": {
+   "vers_id": "Romans-8-31-31",
+   "ref": "Romeinen 8:31",
+   "tekst": "Wat zullen wij dan tot deze dingen zeggen? Zo God voor ons is, wie zal tegen ons zijn?",
+   "vertaling": "SV",
+   "thema": "moed",
+   "boekgroep": "brieven",
+   "lengte": "kort",
+   "bron": "bekend",
+   "hook": "Herken je dat gevoel dat alles tegenzit?",
+   "caption": "Herken je dat gevoel dat alles tegenzit?\n\n\"Wat zullen wij dan tot deze dingen zeggen? Zo God voor ons is, wie zal tegen ons zijn?\"\nRomeinen 8:31\n\nGod staat aan jouw kant, ook op dagen dat het niet zo voelt.",
+   "hashtags": [
+    "#bijbeltekst",
+    "#bemoediging",
+    "#romeinen",
+    "#geloof"
+   ],
+   "uitleg": "",
+   "betekenis": "Paulus herinnert eraan dat God niet tegen je is, maar voor je. Wat er ook tegen je ingaat, het weegt niet op tegen Hem.",
+   "toepassing": "Wat voelt vandaag als tegenwind? Zeg het hardop: God is voor mij. Kijk hoe dat je blik verandert."
+  }
  },
  {
   "id": "2026-11-08-3",
@@ -236,7 +278,28 @@
   "media_urls": [
    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-3.mp4"
   ],
-  "goedgekeurd": null
+  "goedgekeurd": null,
+  "reserve": {
+   "vers_id": "Psalms-119-145-145",
+   "ref": "Psalm 119:145",
+   "tekst": "Ik heb van ganser harte geroepen: verhoor mij, o HEERE! ik zal Uw inzettingen bewaren.",
+   "vertaling": "SV",
+   "thema": "identiteit",
+   "boekgroep": "psalmen",
+   "lengte": "kort",
+   "bron": "ontdekking",
+   "hook": "Wanneer heb jij voor het laatst echt geroepen?",
+   "caption": "Wanneer heb jij voor het laatst echt geroepen?\n\n\"Ik heb van ganser harte geroepen: verhoor mij, o HEERE! ik zal Uw inzettingen bewaren.\"\nPsalm 119:145\n\nJe mag met je hele hart tot God roepen; Hij luistert.",
+   "hashtags": [
+    "#bijbeltekst",
+    "#gebed",
+    "#psalmen",
+    "#geloof"
+   ],
+   "uitleg": "",
+   "betekenis": "",
+   "toepassing": ""
+  }
  },
  {
   "id": "2026-11-08-4",
@@ -299,7 +362,28 @@
    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-4-2.jpg",
    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-4-3.jpg"
   ],
-  "goedgekeurd": null
+  "goedgekeurd": null,
+  "reserve": {
+   "vers_id": "Romans-15-13-13",
+   "ref": "Romeinen 15:13",
+   "tekst": "De God nu der hoop vervulle ulieden met alle blijdschap en vrede in het geloven, opdat gij overvloedig moogt zijn in de hoop, door de kracht des Heiligen Geestes.",
+   "vertaling": "SV",
+   "thema": "hoop",
+   "boekgroep": "brieven",
+   "lengte": "middel",
+   "bron": "bekend",
+   "hook": "Lees dit en adem rustig uit.",
+   "caption": "Lees dit en adem rustig uit.\n\n\"De God nu der hoop vervulle ulieden met alle blijdschap en vrede in het geloven, opdat gij overvloedig moogt zijn in de hoop, door de kracht des Heiligen Geestes.\"\nRomeinen 15:13\n\nHoop is geen kunstje; het is een geschenk van God dat je mag ontvangen.",
+   "hashtags": [
+    "#bijbeltekst",
+    "#hoop",
+    "#vrede",
+    "#bemoediging"
+   ],
+   "uitleg": "",
+   "betekenis": "Paulus bidt dat God je vult met vreugde en vrede, zodat je overloopt van hoop. Die hoop komt niet uit jezelf, maar van Gods Geest.",
+   "toepassing": "Vraag vandaag in één zin om vreugde en vrede. Let erop waar je die tegenkomt."
+  }
  },
  {
   "id": "2026-11-08-5",
@@ -363,6 +447,28 @@
    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-5-2.jpg",
    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-5-3.jpg"
   ],
-  "goedgekeurd": null
+  "goedgekeurd": null,
+  "reserve": {
+   "vers_id": "Psalms-19-8-8",
+   "ref": "Psalm 19:8",
+   "tekst": "De wet des HEEREN is volmaakt, bekerende de ziel; de getuigenis des HEEREN is gewis, den slechten wijsheid gevende.",
+   "vertaling": "SV",
+   "thema": "wijsheid",
+   "boekgroep": "psalmen",
+   "lengte": "middel",
+   "bron": "ontdekking",
+   "hook": "",
+   "caption": "\"De wet des HEEREN is volmaakt, bekerende de ziel; de getuigenis des HEEREN is gewis, den slechten wijsheid gevende.\"\nPsalm 19:8\n\nGods woord zet je hart weer op koers en maakt je wijzer dan je denkt.",
+   "hashtags": [
+    "#bijbeltekst",
+    "#wijsheid",
+    "#psalmen",
+    "#bijbel",
+    "#geloof"
+   ],
+   "uitleg": "",
+   "betekenis": "Gods woorden zijn betrouwbaar en goed. Ze brengen je terug als je afdwaalt, en geven ook gewone mensen echte wijsheid.",
+   "toepassing": "Lees vandaag één psalm, rustig. Welke zin blijft hangen? Neem die mee de dag in."
+  }
  }
 ]

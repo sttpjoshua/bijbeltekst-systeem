@@ -593,7 +593,7 @@ def cmd_dashboard():
             for k in ("views", "reach", "likes", "comments", "shares", "saves"):
                 tot[k] = tot.get(k, 0) + (s.get(k) or 0)
         lijst.append({"id": p["id"], "datum": p["datum"], "ref": p["ref"], "tekst": p["tekst"], "hook": p.get("hook", ""),
-                      "status": p["status"], "variabelen": p["variabelen"], "vers_id": p.get("vers_id"), "goedgekeurd": p.get("goedgekeurd"),
+                      "status": p["status"], "variabelen": p["variabelen"], "vers_id": p.get("vers_id"), "goedgekeurd": p.get("goedgekeurd"), "reserve_ref": (p.get("reserve") or {}).get("ref") if (p.get("reserve") or {}).get("caption") else None,
                       "caption": p.get("caption", ""), "uitleg": p.get("uitleg", ""), "media": p.get("media"), "media_url": p.get("media_url"), "media_urls": p.get("media_urls"), "thumb": p.get("thumb"),
                       "platformen": list(p.get("gepubliceerd", {}).keys()),
                       "links": {k: v.get("url") for k, v in p.get("gepubliceerd", {}).items()}, "totaal": tot, "per_platform": per, "score": sc.get(p["id"], {}),
@@ -855,6 +855,29 @@ def cmd_vervang(pid, reden=""):
     cmd_log(f"{oud} vervangen door {p['ref']} ({reden or 'past niet los van de context'})")
     print(json.dumps({k: p[k] for k in ("id", "ref", "tekst", "variabelen")}, ensure_ascii=False, indent=1))
 
+def cmd_reserve(datum):
+    """Kiest per post van DATUM een reservevers (zelfde kenmerken) zodat 'ander vers' op het dashboard meteen kan.
+    Daarna vult Claude in data/posts.json per post onder 'reserve' de teksten in (zelfde velden als de post)."""
+    cfg, strat = laad("config.json"), vul_strategie_aan(laad("strategie.json") or nieuwe_strategie())
+    posts = laad("data/posts.json", [])
+    gebruikt = {p["vers_id"] for p in posts} | {p.get("reserve", {}).get("vers_id") for p in posts}
+    uit = []
+    for p in posts:
+        if p["datum"] != datum or p["status"] not in ("gerenderd", "wacht_op_tekst", "klaar_voor_render") or p.get("reserve", {}).get("caption"):
+            continue
+        cfg2 = dict(cfg, verzen_uitsluiten=list(set(cfg.get("verzen_uitsluiten", [])) | gebruikt))
+        alt = kies_posts(datum, cfg2, strat, posts, laad("data/verzen.json"), None, 0, 1, set(), random.Random("reserve" + p["id"]))[0]
+        r = {k: alt[k] for k in ("vers_id", "ref", "tekst", "vertaling")}
+        r.update({f: alt["variabelen"][f] for f in ("thema", "boekgroep", "lengte", "bron")})
+        r.update({"hook": "", "caption": "", "hashtags": [], "uitleg": "", "betekenis": "", "toepassing": ""})
+        p["reserve"] = r
+        gebruikt.add(r["vers_id"])
+        uit.append({"post": p["id"], "formaat": p["variabelen"]["formaat"], "hook_stijl": p["variabelen"]["hook_stijl"],
+                    "uitleg_op_beeld": p["variabelen"].get("uitleg_op_beeld"), "reserve": r["ref"], "tekst": r["tekst"]})
+    bewaar("data/posts.json", posts)
+    print(json.dumps(uit, ensure_ascii=False, indent=1))
+    print("\nVul per post onder 'reserve' in: hook, caption, hashtags, en bij carrousel betekenis en toepassing (zelfde regels als TAKEN.md).")
+
 def cmd_kandidaten(n=60):
     """Toont nog niet beoordeelde verzen uit de hele Bijbel (voor de wekelijkse keuring)."""
     for x in laad("data/bijbel_kandidaten.json", [])[:int(n)]:
@@ -897,6 +920,7 @@ if __name__ == "__main__":
         "gezond": lambda: gezond(x.args[0], True, " ".join(x.args[1:])),
         "vervang": lambda: cmd_vervang(x.args[0], " ".join(x.args[1:])),
         "kandidaten": lambda: cmd_kandidaten(*(x.args[:1] or [60])),
+        "reserve": lambda: cmd_reserve(x.datum),
         "keur": lambda: cmd_keur(x.args[0], x.args[1:]),
      "registreer": lambda: cmd_registreer(*x.args), "stats": lambda: cmd_stats(x.args[0]),
      "leer": cmd_leer, "dashboard": cmd_dashboard, "check": cmd_check,
