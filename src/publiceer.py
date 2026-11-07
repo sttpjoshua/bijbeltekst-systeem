@@ -187,7 +187,7 @@ def cmd_token():
         if rechten:
             mist = [r for r in ("instagram_basic", "instagram_content_publish", "instagram_manage_insights") if r not in rechten]
             if mist:
-                S.cmd_log("Token mist rechten: " + ", ".join(mist), "fout")
+                S.cmd_log("Token mist rechten: " + ", ".join(mist) + ". Wel aanwezig: " + ", ".join(sorted(rechten)), "fout")
             else:
                 S.cmd_log("Token heeft alle rechten, ook voor statistieken")
         # praktijktest: statistieken van de laatste post opvragen (als die er is)
