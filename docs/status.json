@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T15:19:36",
+ "updated": "2026-11-07T15:19:54",
  "agents": {
   "verskiezer": {
    "t": "2026-11-07T15:19:36",
@@ -25,6 +25,11 @@
    "t": "2026-11-07T15:06:01",
    "task": "Controleerde de verbindingen",
    "state": "done"
+  },
+  "analist": {
+   "t": "2026-11-07T15:19:54",
+   "task": "Snel leren aangezet tot 2026-11-14: 5 posts per dag, elke dag leren",
+   "state": "done"
   }
  },
  "stats": {
@@ -46,6 +51,10 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "15:19",
+   "msg": "Bediening: Snel leren aangezet tot 2026-11-14: 5 posts per dag, elke dag leren"
+  },
   {
    "t": "15:19",
    "msg": "Bediening: Posts per dag ingesteld op 3"
@@ -89,10 +98,6 @@
   {
    "t": "14:34",
    "msg": "Privé repo bibleverse-materiaal kon niet gecloned worden (geen toegang in deze sessie); post van 8 nov gebruik"
-  },
-  {
-   "t": "12:42",
-   "msg": "Facebook-pagina aangezet: posts gaan voortaan naar Instagram en Facebook"
   }
  ]
 }

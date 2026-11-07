@@ -4,17 +4,17 @@
  "config": {
   "pauze": false,
   "kanaalnaam": "Bibleverse",
-  "posts_per_dag": 3,
-  "max_posts_per_dag": 3,
-  "verkenning": 0.2,
+  "posts_per_dag": 5,
+  "max_posts_per_dag": 5,
+  "verkenning": 0.4,
   "platformen_actief": [
    "instagram",
    "facebook"
   ],
   "max_aandeel_beeld": 0.33,
   "verzen_uitsluiten": null,
-  "leermodus": null,
-  "leermodus_tot": null
+  "leermodus": true,
+  "leermodus_tot": "2026-11-14"
  },
  "strategie": {
   "versie": 1,
@@ -359,6 +359,11 @@
    "t": "2026-11-07T15:19",
    "soort": "info",
    "tekst": "Bediening: Posts per dag ingesteld op 3"
+  },
+  {
+   "t": "2026-11-07T15:19",
+   "soort": "info",
+   "tekst": "Bediening: Snel leren aangezet tot 2026-11-14: 5 posts per dag, elke dag leren"
   }
  ],
  "recente_fouten": [],
