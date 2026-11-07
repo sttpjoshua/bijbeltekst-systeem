@@ -19,7 +19,7 @@ API_IG = "https://graph.instagram.com/v23.0"   # tokens van "Instagram login" (b
 API_FB = "https://graph.facebook.com/v23.0"    # tokens van "Unified/Facebook login" en system users (beginnen met EAA)
 API = API_IG
 TZ = ZoneInfo("Europe/Amsterdam")
-TE_LAAT = dt.timedelta(hours=3)  # een gemiste post later dan dit wordt overgeslagen
+TE_LAAT = dt.timedelta(hours=8)  # GitHub-cron loopt soms uren achter; pas daarna overslaan
 
 def http(method, url, params=None):
     data = None
