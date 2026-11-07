@@ -121,7 +121,8 @@
  {
   "t": "2026-11-07T14:34",
   "soort": "fout",
-  "tekst": "Privé repo bibleverse-materiaal kon niet gecloned worden (geen toegang in deze sessie); post van 8 nov gebruikt kleurverloop, geen effect want carrousel"
+  "tekst": "Privé repo bibleverse-materiaal kon niet gecloned worden (geen toegang in deze sessie); post van 8 nov gebruikt kleurverloop, geen effect want carrousel",
+  "opgelost": true
  },
  {
   "t": "2026-11-07T14:34",
