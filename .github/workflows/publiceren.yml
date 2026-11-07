@@ -46,6 +46,7 @@ jobs:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
           GH_PAT: ${{ secrets.GH_PAT }}
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_TOKEN: ${{ secrets.FB_TOKEN }}
         run: python3 src/publiceer.py ${{ steps.t.outputs.taak }}
       - name: Wijzigingen opslaan
         if: always()

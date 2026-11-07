@@ -100,6 +100,7 @@ def page_token(tok):
     pid = os.environ.get("FB_PAGE_ID", "").strip()
     if not pid:
         raise RuntimeError("FB_PAGE_ID ontbreekt in de GitHub-secrets")
+    tok = os.environ.get("FB_TOKEN", "").strip() or tok  # aparte Facebook-app/token als die er is
     if pid not in _PAGE_TOKEN:
         r = http("GET", f"{API_FB}/{pid}", {"fields": "access_token,name", "access_token": tok})
         if not r.get("access_token"):
@@ -297,14 +298,11 @@ def cmd_token():
                 S.cmd_log("Token heeft alle rechten, ook voor statistieken")
         if os.environ.get("FB_PAGE_ID", "").strip():
             try:
-                pid, _ = page_token(tok)
-                naam = http("GET", f"{API_FB}/{pid}", {"fields": "name", "access_token": tok}).get("name")
+                pid, ptok = page_token(tok)
+                naam = http("GET", f"{API_FB}/{pid}", {"fields": "name", "access_token": ptok}).get("name")
                 S.cmd_log(f"Verbinding met Facebook-pagina werkt ({naam})")
-                mist_fb = [r for r in ("pages_manage_posts", "pages_read_engagement") if rechten and r not in rechten]
-                if mist_fb:
-                    S.cmd_log("Token mist Facebook-rechten: " + ", ".join(mist_fb), "fout")
             except Exception as e:
-                S.cmd_log(f"Facebook-verbinding mislukt: {str(e)[:420]} | Rechten in token: {', '.join(sorted(rechten))}", "fout")
+                S.cmd_log(f"Facebook-verbinding mislukt: {str(e)[:300]}", "fout")
         # praktijktest: statistieken van de laatste post opvragen (als die er is)
         try:
             media = http("GET", f"{API}/{uid}/media", {"fields": "id", "limit": 1, "access_token": tok}).get("data", [])
