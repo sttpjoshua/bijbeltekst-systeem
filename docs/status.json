@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T23:36:20",
+ "updated": "2026-11-07T23:38:36",
  "agents": {
   "verskiezer": {
    "t": "2026-11-07T22:23:58",
@@ -7,7 +7,7 @@
    "state": "done"
   },
   "designer": {
-   "t": "2026-11-07T23:36:10",
+   "t": "2026-11-07T23:38:25",
    "task": "Ontwierp 2 Timotheüs 1:7 in stijl bosgroen",
    "state": "done"
   },
@@ -52,6 +52,10 @@
  ],
  "log": [
   {
+   "t": "23:38",
+   "msg": "Carrousels hebben nu één doorlopende achtergrond over de drie slides; bij een foto loopt die zacht over in een"
+  },
+  {
    "t": "23:36",
    "msg": "Losse afbeeldingen vervallen: een beeldpost is voortaan altijd een carrousel met uitleg. Psalm 23:1 en 2 Timot"
   },
@@ -94,10 +98,6 @@
   {
    "t": "22:24",
    "msg": "4 extra posts voor 8 november gemaakt (snel leren stond na de dagelijkse run aan)"
-  },
-  {
-   "t": "15:19",
-   "msg": "Bediening: Snel leren aangezet tot 2026-11-14: 5 posts per dag, elke dag leren"
   }
  ],
  "lampen": [

@@ -233,5 +233,10 @@
   "t": "2026-11-07T23:36",
   "soort": "info",
   "tekst": "Losse afbeeldingen vervallen: een beeldpost is voortaan altijd een carrousel met uitleg. Psalm 23:1 en 2 Timotheüs 1:7 van 8 november omgezet."
+ },
+ {
+  "t": "2026-11-07T23:38",
+  "soort": "info",
+  "tekst": "Carrousels hebben nu één doorlopende achtergrond over de drie slides; bij een foto loopt die zacht over in een rustige, vervaagde versie."
  }
 ]

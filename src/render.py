@@ -254,9 +254,9 @@ def _woordmerk(d, cx, y, tekst, font, kleur, spatie):
         d.text((x, y), c, font=font, fill=kleur, anchor="la")
         x += w + spatie
 
-def maak_afbeelding(post, pad):
+def maak_afbeelding(post, pad, bg=None):
     b, h = 1080, 1350
-    img = _bg(post, b, h).convert("RGBA")
+    img = (bg or _bg(post, b, h)).convert("RGBA")
     img.alpha_composite(tekstlaag(b, h, post))
     img.convert("RGB").save(pad, quality=93)
     return pad
@@ -299,13 +299,13 @@ def maak_video(post, pad, duur=9):
     return pad
 
 
-def _tekstslide(post, titel, body, pad, nummer):
+def _tekstslide(post, titel, body, pad, nummer, bg=None):
     """Slide 2 en 3 van een carrousel: titel + lopende tekst in de huisstijl."""
     b, h = 1080, 1350
     v = post["variabelen"]
     pal = PALETTEN[v["palet"]]
-    kleur, accent = _hex(pal[2]), _hex(pal[3])
-    img = achtergrond(b, h, v["palet"], v["achtergrond"], post["id"] + str(nummer)).convert("RGBA")  # tekstslides altijd met verloop
+    kleur, accent = _kleuren(post) if bg is not None else (_hex(pal[2]), _hex(pal[3]))
+    img = (bg or achtergrond(b, h, v["palet"], v["achtergrond"], post["id"] + str(nummer))).convert("RGBA")
     laag = Image.new("RGBA", (b, h), (0, 0, 0, 0))
     d = ImageDraw.Draw(laag)
     marge = int(b * 0.14)
@@ -336,16 +336,42 @@ def _tekstslide(post, titel, body, pad, nummer):
     img.convert("RGB").save(pad, quality=93)
     return pad
 
+def _panorama(post, b, h):
+    """Eén doorlopende achtergrond voor alle drie de slides, zodat ze bij het swipen in elkaar overlopen.
+    Met een foto: links scherp, naar rechts steeds zachter en rustiger zodat de uitleg goed leesbaar is."""
+    v = post["variabelen"]
+    B = b * 3
+    if v.get("achtergrondbron") == "beeld" and post.get("beeld_pad"):
+        foto = foto_achtergrond(B, h, post["beeld_pad"], v["palet"])
+        zacht = foto.filter(ImageFilter.GaussianBlur(26))
+        donker = Image.new("RGB", (B, h), (12, 12, 16))
+        zacht = Image.blend(zacht, donker, 0.25)
+        masker = Image.new("L", (B, 1))
+        for x in range(B):
+            t = min(1, max(0, (x - b * 0.8) / (b * 0.6)))
+            masker.putpixel((x, 0), int(255 * (t * t * (3 - 2 * t))))
+        return Image.composite(zacht, foto, masker.resize((B, h)))
+    stijl = v.get("achtergrond", "verloop")
+    if stijl in ("diagonaal", "radiaal"):
+        return _verloop_plus(B, h, v["palet"], stijl)
+    if stijl == "effen":
+        return achtergrond(B, h, v["palet"], "effen", post["id"])
+    # verticaal verloop of lichtvlekken: horizontaal doorlopend
+    return achtergrond(B, h, v["palet"], stijl, post["id"])
+
 def maak_carrousel(post, basis):
-    """Drie slides: vers, betekenis, toepassing. Geeft de lijst met paden terug."""
+    """Drie slides: vers, betekenis, toepassing, op één doorlopende achtergrond. Geeft de lijst met paden terug."""
+    b, h = 1080, 1350
     paden = [basis.replace(".jpg", f"-{i}.jpg") for i in (1, 2, 3)]
+    pano = _panorama(post, b, h)
+    delen = [pano.crop((i * b, 0, (i + 1) * b, h)) for i in range(3)]
     eerste = dict(post, variabelen=dict(post["variabelen"], uitleg_op_beeld=False))
-    maak_afbeelding(eerste, paden[0])
+    maak_afbeelding(eerste, paden[0], bg=delen[0])
     # klein veeg-teken rechtsonder op slide 1
     im = Image.open(paden[0]).convert("RGBA"); d = ImageDraw.Draw(im)
     acc = _kleuren(post)[1]
     d.text((im.width - 70, im.height - 70), "\u2192", font=_klein_font(44, b"Medium"), fill=acc + (220,), anchor="mm")
     im.convert("RGB").save(paden[0], quality=93)
-    _tekstslide(post, "WAT BETEKENT DIT?", post["betekenis"], paden[1], 2)
-    _tekstslide(post, "VANDAAG", post["toepassing"], paden[2], 3)
+    _tekstslide(post, "WAT BETEKENT DIT?", post["betekenis"], paden[1], 2, bg=delen[1])
+    _tekstslide(post, "VANDAAG", post["toepassing"], paden[2], 3, bg=delen[2])
     return paden
