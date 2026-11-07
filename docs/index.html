@@ -50,6 +50,12 @@ input[type=range]{width:100%}input.veld,select.veld{font:inherit;font-size:13px;
 .wacht{display:flex;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--lijn);flex-wrap:wrap}.wacht:last-child{border:0}
 .wacht .info{flex:1;min-width:180px}.wacht .acties{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
 #bedMelding{font-size:13px;margin-top:10px;min-height:18px}
+#galerij{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;z-index:50;align-items:center;justify-content:center;flex-direction:column;padding:20px}
+#galerij .rij{display:flex;gap:12px;overflow-x:auto;max-width:100%;scroll-snap-type:x mandatory;padding-bottom:8px}
+#galerij img,#galerij video{max-height:78vh;max-width:86vw;border-radius:8px;scroll-snap-align:center;flex:0 0 auto}
+#galerij .sluit{position:absolute;top:14px;right:18px;color:#fff;font-size:28px;cursor:pointer;background:none;border:0}
+#galerij .tel{color:#fff;font-size:13px;margin-top:8px;opacity:.8}
+.thumbs{display:flex;gap:3px;cursor:zoom-in}.thumbs .thumb{width:36px;height:45px}
 </style>
 </head>
 <body>
@@ -107,6 +113,7 @@ input[type=range]{width:100%}input.veld,select.veld{font:inherit;font-size:13px;
   </section>
 </main>
 <div id="tip"></div>
+<div id="galerij" onclick="if(event.target===this)this.style.display='none'"><button class="sluit" onclick="galerij.style.display='none'">✕</button><div class="rij"></div><div class="tel"></div></div>
 <script>
 const NAMEN={huisstijl:"Huisstijl",thema:"Thema",hook_stijl:"Hook-stijl",hook_op_beeld:"Hook op beeld",formaat:"Formaat",tijdslot:"Tijdstip"};
 const STATUS={wacht_op_tekst:"Wacht op tekst",gerenderd:"Klaar, gaat online",afgekeurd:"Overgeslagen door jou",overgeslagen:"Overgeslagen",gepubliceerd:"Gepubliceerd",fout:"Fout"};
@@ -176,7 +183,7 @@ function tabel(){
   const v=x=>x.variabelen;
   document.querySelector("#tabel tbody").innerHTML=r.slice(0,200).map(x=>{
     const sc=Object.values(x.score);const s=sc.length?(sc.reduce((a,b)=>a+b)/sc.length).toFixed(2):"–";
-    const img=x.thumb?`<img class="thumb" loading="lazy" src="${x.thumb}">`:x.media_url&&x.media_url.endsWith(".jpg")?`<img class="thumb" loading="lazy" src="${x.media_url}">`:`<div class="thumb" style="display:grid;place-items:center;color:var(--ink3)">${v(x).formaat==="video"?"▶":""}</div>`;
+    const img=miniaturen(x);
     return `<tr data-tip="${(x.tekst||"").replace(/"/g,"&quot;")}${x.hook?"<br><br><i>"+x.hook.replace(/"/g,"&quot;")+"</i>":""}">
       <td>${img}</td><td style="white-space:nowrap">${x.datum}<div class="sub">${v(x).tijdslot}</div></td>
       <td><b>${x.ref}</b><div class="sub">${v(x).thema.replace("_"," ")}${Object.entries(x.links||{}).map(([k,u])=>u?` · <a href="${u}" target="_blank">${k}</a>`:"").join("")}</div></td>
@@ -221,10 +228,9 @@ function bouwBediening(){
   const w=D.posts.filter(x=>x.status==="gerenderd"||x.status==="wacht_op_tekst").sort((a,b)=>(a.datum+a.variabelen.tijdslot).localeCompare(b.datum+b.variabelen.tijdslot));
   document.getElementById("bWacht").innerHTML=w.length?w.map(x=>{
     const img=x.thumb||(x.media_url&&x.media_url.endsWith(".jpg")?x.media_url:"");
-    const slides=(x.media_urls&&x.media_urls.length>1)?x.media_urls.map((u,i)=>`<a href="${u}" target="_blank" title="Slide ${i+1}"><img class="thumb" src="${u}"></a>`).join(""):(img?`<img class="thumb" src="${img}">`:`<div class="thumb"></div>`);
-    return `<div class="wacht"><div style="display:flex;gap:4px">${slides}</div>
+    return `<div class="wacht">${miniaturen(x)}
       <div class="info"><b>${x.ref}</b> <span class="tag">${x.variabelen.formaat}${x.media_urls&&x.media_urls.length>1?" · "+x.media_urls.length+" slides":""}</span><span class="tag">${x.variabelen.thema.replace("_"," ")}</span>
-        <div class="sub">${STATUS[x.status]||x.status} · ${x.datum} om ${x.variabelen.tijdslot}${x.media_url?` · <a href="${x.media_url}" target="_blank">bekijken</a>`:""}</div></div>
+        <div class="sub">${STATUS[x.status]||x.status} · ${x.datum} om ${x.variabelen.tijdslot}${mediaVan(x).length?` · <a href="#" onclick="toonGalerij('${x.id}');return false">bekijken</a>`:""}</div></div>
       <div class="acties">
         ${x.status==="gerenderd"?`<button class="btn prim" data-o='${JSON.stringify({actie:"nu_posten",post:x.id}).replace(/'/g,"&#39;")}'>Nu posten</button>`:""}
         <input class="veld" type="date" value="${x.datum}" id="d_${x.id}"><input class="veld" type="time" value="${x.variabelen.tijdslot}" id="t_${x.id}">
@@ -270,6 +276,23 @@ async function volg(start){
   }
   melding("Uitgevoerd, maar het dashboard is nog niet ververst. Herlaad de pagina over een minuut.");
   document.querySelectorAll("#bediening button").forEach(b=>b.disabled=false);
+}
+
+// ---------- Galerij: alle slides of de video groot bekijken ----------
+function mediaVan(x){if(x.media_urls&&x.media_urls.length)return x.media_urls;return x.media_url?[x.media_url]:(x.thumb?[x.thumb]:[])}
+function toonGalerij(id){
+  const x=D.posts.find(p=>p.id===id);if(!x)return;const m=mediaVan(x);if(!m.length)return;
+  const g=document.getElementById("galerij");
+  g.querySelector(".rij").innerHTML=m.map(u=>u.endsWith(".mp4")?`<video src="${u}" controls autoplay playsinline></video>`:`<img src="${u}" onerror="this.remove()">`).join("");
+  g.querySelector(".tel").textContent=x.ref+(m.length>1?" · "+m.length+" slides, swipe of scroll opzij":"");
+  g.style.display="flex";
+}
+function miniaturen(x){
+  const m=mediaVan(x).filter(u=>!u.endsWith(".mp4"));
+  const lijst=m.length?m:(x.thumb?[x.thumb]:[]);
+  if(!lijst.length&&!x.media_url)return `<div class="thumb" style="display:grid;place-items:center;color:var(--ink3)">${x.variabelen.formaat==="video"?"▶":""}</div>`;
+  const beelden=(lijst.length?lijst:[]).map(u=>`<img class="thumb" loading="lazy" src="${u}" onerror="this.remove()">`).join("")||`<div class="thumb" style="display:grid;place-items:center">▶</div>`;
+  return `<div class="thumbs" onclick="toonGalerij('${x.id}')" title="Klik om groot te bekijken">${beelden}${x.variabelen.formaat==="video"?'<span style="align-self:center;color:var(--ink3)">▶</span>':""}</div>`;
 }
 </script>
 </body>
