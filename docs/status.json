@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T14:55:17",
+ "updated": "2026-11-07T15:06:07",
  "agents": {
   "verskiezer": {
    "t": "2026-11-07T14:33:54",
@@ -47,6 +47,22 @@
  ],
  "log": [
   {
+   "t": "15:06",
+   "msg": "Statistieken lezen werkt"
+  },
+  {
+   "t": "15:06",
+   "msg": "Verbinding met Facebook-pagina werkt (Bibleversenl)"
+  },
+  {
+   "t": "15:06",
+   "msg": "Token heeft alle rechten, ook voor statistieken"
+  },
+  {
+   "t": "15:06",
+   "msg": "Verbinding met Instagram werkt (@bibleverse_nl)"
+  },
+  {
    "t": "14:55",
    "msg": "Statistieken lezen werkt"
   },
@@ -76,22 +92,6 @@
   },
   {
    "t": "12:41",
-   "msg": "Statistieken lezen werkt"
-  },
-  {
-   "t": "12:41",
-   "msg": "Verbinding met Facebook-pagina werkt (Bibleversenl)"
-  },
-  {
-   "t": "12:41",
-   "msg": "Token heeft alle rechten, ook voor statistieken"
-  },
-  {
-   "t": "12:41",
-   "msg": "Verbinding met Instagram werkt (@bibleverse_nl)"
-  },
-  {
-   "t": "12:34",
    "msg": "Statistieken lezen werkt"
   }
  ]

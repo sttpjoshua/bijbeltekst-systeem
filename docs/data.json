@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-07T14:55",
+ "gegenereerd": "2026-11-07T15:06",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -12,7 +12,9 @@
    "facebook"
   ],
   "max_aandeel_beeld": 0.33,
-  "verzen_uitsluiten": null
+  "verzen_uitsluiten": null,
+  "leermodus": null,
+  "leermodus_tot": null
  },
  "strategie": {
   "versie": 1,
@@ -323,6 +325,26 @@
   },
   {
    "t": "2026-11-07T14:55",
+   "soort": "info",
+   "tekst": "Statistieken lezen werkt"
+  },
+  {
+   "t": "2026-11-07T15:06",
+   "soort": "info",
+   "tekst": "Verbinding met Instagram werkt (@bibleverse_nl)"
+  },
+  {
+   "t": "2026-11-07T15:06",
+   "soort": "info",
+   "tekst": "Token heeft alle rechten, ook voor statistieken"
+  },
+  {
+   "t": "2026-11-07T15:06",
+   "soort": "info",
+   "tekst": "Verbinding met Facebook-pagina werkt (Bibleversenl)"
+  },
+  {
+   "t": "2026-11-07T15:06",
    "soort": "info",
    "tekst": "Statistieken lezen werkt"
   }
