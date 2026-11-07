@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T23:13:24",
+ "updated": "2026-11-07T23:36:20",
  "agents": {
   "verskiezer": {
    "t": "2026-11-07T22:23:58",
@@ -7,8 +7,8 @@
    "state": "done"
   },
   "designer": {
-   "t": "2026-11-07T23:13:24",
-   "task": "Jesaja 43:19 goedgekeurd",
+   "t": "2026-11-07T23:36:10",
+   "task": "Ontwierp 2 Timotheüs 1:7 in stijl bosgroen",
    "state": "done"
   },
   "video": {
@@ -52,6 +52,10 @@
  ],
  "log": [
   {
+   "t": "23:36",
+   "msg": "Losse afbeeldingen vervallen: een beeldpost is voortaan altijd een carrousel met uitleg. Psalm 23:1 en 2 Timot"
+  },
+  {
    "t": "23:13",
    "msg": "Bediening: Jesaja 43:19 goedgekeurd"
   },
@@ -94,10 +98,6 @@
   {
    "t": "15:19",
    "msg": "Bediening: Snel leren aangezet tot 2026-11-14: 5 posts per dag, elke dag leren"
-  },
-  {
-   "t": "15:19",
-   "msg": "Bediening: Posts per dag ingesteld op 3"
   }
  ],
  "lampen": [

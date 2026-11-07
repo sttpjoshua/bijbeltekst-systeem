@@ -79,3 +79,6 @@ Het systeem kiest uit bekende verzen (`data/verzen.json`) en ontdekkingen uit de
 
 ## Goedkeuren en opnieuw maken
 Joshua kan in het kantoor (📥 Goedkeuren) posts goedkeuren, een andere stijl kiezen, een ander vers kiezen of overslaan. Een andere stijl voor een afbeelding of carrousel wordt meteen in GitHub Actions opnieuw gemaakt. Video's en posts met foto-achtergrond krijgen status "opnieuw_maken", en een ander vers geeft status "wacht_op_tekst": die maak je af in de avondcontrole (en in de dagelijkse run als je ze tegenkomt). Respecteer `goedkeuren` in config.json: verander die instelling nooit zelf.
+
+## Formaat
+Joshua wil geen losse afbeeldingen meer: een beeldpost is altijd een carrousel (vers, "Wat betekent dit?", "Vandaag"), dus altijd met `betekenis` en `toepassing`. Het systeem test alleen nog carrousel tegen video.

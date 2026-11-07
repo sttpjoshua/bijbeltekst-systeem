@@ -248,8 +248,8 @@
    "huisstijl": "hemelsblauw",
    "thema": "troost",
    "hook_stijl": "uitdaging",
-   "formaat": "afbeelding",
-   "uitleg_op_beeld": true,
+   "formaat": "carrousel",
+   "uitleg_op_beeld": false,
    "achtergrondbron": "verloop",
    "tijdslot": "12:15",
    "palet": "hemelsblauw",
@@ -277,21 +277,27 @@
    "#god"
   ],
   "uitleg": "God zorgt voor mij, ik kom niets tekort.",
-  "betekenis": "",
-  "toepassing": "",
-  "media": "docs/media/2026-11/2026-11-08-4.jpg",
-  "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-4.jpg",
+  "betekenis": "David vergelijkt God met een herder die zijn schapen leidt, voedt en beschermt. Wie bij Hem hoort, komt het belangrijkste niet tekort.",
+  "toepassing": "Noem vandaag drie dingen waar je het afgelopen jaar voor gezorgd bent. Zie je daarin iets van de Herder?",
+  "media": "docs/media/2026-11/2026-11-08-4-1.jpg",
+  "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-4-1.jpg",
   "metricool": {},
   "stats": {},
   "beeld": null,
   "muziek": null,
   "geluid": null,
   "handle": "@bibleverse_nl",
-  "media_extra": [],
+  "media_extra": [
+   "docs/media/2026-11/2026-11-08-4-2.jpg",
+   "docs/media/2026-11/2026-11-08-4-3.jpg"
+  ],
   "thumb": "thumbs/2026-11-08-4.jpg",
   "media_urls": [
-   "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-4.jpg"
-  ]
+   "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-4-1.jpg",
+   "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-4-2.jpg",
+   "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-4-3.jpg"
+  ],
+  "goedgekeurd": null
  },
  {
   "id": "2026-11-08-5",
@@ -305,7 +311,7 @@
    "huisstijl": "bosgroen",
    "thema": "moed",
    "hook_stijl": "geen",
-   "formaat": "afbeelding",
+   "formaat": "carrousel",
    "uitleg_op_beeld": false,
    "achtergrondbron": "beeld",
    "tijdslot": "22:00",
@@ -335,20 +341,26 @@
    "#jezus"
   ],
   "uitleg": "",
-  "betekenis": "",
-  "toepassing": "",
-  "media": "docs/media/2026-11/2026-11-08-5.jpg",
-  "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-5.jpg",
+  "betekenis": "Paulus schrijft aan Timotheüs, die het moeilijk had. Angst komt niet van God; Hij geeft kracht om door te gaan, liefde voor anderen en een rustig, helder hoofd.",
+  "toepassing": "Waar zie je vandaag tegenop? Zet één kleine stap, en vraag God om kracht in plaats van te wachten tot de angst weg is.",
+  "media": "docs/media/2026-11/2026-11-08-5-1.jpg",
+  "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-5-1.jpg",
   "metricool": {},
   "stats": {},
   "beeld": "pexels-brunoabdiel-5396622.jpg",
   "muziek": null,
   "geluid": null,
   "handle": "@bibleverse_nl",
-  "media_extra": [],
+  "media_extra": [
+   "docs/media/2026-11/2026-11-08-5-2.jpg",
+   "docs/media/2026-11/2026-11-08-5-3.jpg"
+  ],
   "thumb": "thumbs/2026-11-08-5.jpg",
   "media_urls": [
-   "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-5.jpg"
-  ]
+   "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-5-1.jpg",
+   "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-5-2.jpg",
+   "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-5-3.jpg"
+  ],
+  "goedgekeurd": null
  }
 ]

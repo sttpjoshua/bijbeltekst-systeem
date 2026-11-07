@@ -51,7 +51,7 @@ DIMENSIES = {
     "thema": ["troost", "moed", "liefde", "hoop", "vertrouwen", "wijsheid", "humor_herkenbaar",
               "dankbaarheid", "identiteit", "vrede_rust"],
     "hook_stijl": ["vraag", "herkenning", "uitdaging", "rustig", "geen"],
-    "formaat": ["afbeelding", "video", "carrousel"],
+    "formaat": ["video", "carrousel"],  # Joshua: een beeldpost is altijd een carrousel met uitleg
     "uitleg_op_beeld": [True, False],
     "achtergrondbron": ["verloop", "beeld"],
     "boekgroep": ["psalmen", "spreuken", "wijsheid", "profeten", "evangelien", "brieven"],
@@ -279,6 +279,8 @@ def cmd_kies(datum):
         if len(nieuw) >= n or x["vers_id"] in uitgesloten or x["variabelen"]["tijdslot"] in slots:
             continue
         x = json.loads(json.dumps(x)); x["id"] = f"{datum}-{len(al_vandaag) + len(nieuw) + 1}"
+        if x["variabelen"].get("formaat") == "afbeelding":
+            x["variabelen"]["formaat"] = "carrousel"
         slots.add(x["variabelen"]["tijdslot"]); nieuw.append(x)
     if len(nieuw) < n:
         nieuw += kies_posts(datum, cfg, strat, posts + nieuw, verzen, mat, len(al_vandaag) + len(nieuw), n - len(nieuw), slots, rnd)
