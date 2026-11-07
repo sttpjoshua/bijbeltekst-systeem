@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T23:13:11",
+ "updated": "2026-11-07T23:13:24",
  "agents": {
   "verskiezer": {
    "t": "2026-11-07T22:23:58",
@@ -7,8 +7,8 @@
    "state": "done"
   },
   "designer": {
-   "t": "2026-11-07T22:53:09",
-   "task": "Ontwierp 2 Timotheüs 1:7 in stijl bosgroen",
+   "t": "2026-11-07T23:13:24",
+   "task": "Jesaja 43:19 goedgekeurd",
    "state": "done"
   },
   "video": {
@@ -52,6 +52,10 @@
  ],
  "log": [
   {
+   "t": "23:13",
+   "msg": "Bediening: Jesaja 43:19 goedgekeurd"
+  },
+  {
    "t": "23:02",
    "msg": "Verzen uit de hele Bijbel: de Statenvertaling is doorzocht; losstaande verzen gaan mee als 'ontdekking'. Het s"
   },
@@ -94,10 +98,6 @@
   {
    "t": "15:19",
    "msg": "Bediening: Posts per dag ingesteld op 3"
-  },
-  {
-   "t": "15:06",
-   "msg": "Statistieken lezen werkt"
   }
  ],
  "lampen": [
