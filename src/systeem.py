@@ -319,8 +319,10 @@ def cmd_render(datum):
     posts = laad("data/posts.json", [])
     fouten = 0
     for p in posts:
-        if p["datum"] != datum or p["status"] not in ("wacht_op_tekst", "klaar_voor_render"):
+        if p["datum"] != datum or p["status"] not in ("wacht_op_tekst", "klaar_voor_render", "opnieuw_maken"):
             continue
+        if p["status"] == "opnieuw_maken" and not os.path.isdir(materiaal_map()):
+            continue  # video of foto-achtergrond: wacht op een run met muziek en foto's
         probleem = valideer_tekst(p, cfg)
         if probleem:
             print("NIET GERENDERD", p["id"], probleem); fouten += 1; continue
@@ -346,6 +348,7 @@ def cmd_render(datum):
             p["media_url"] = url(p["media"])
             p["media_urls"] = [url(r) for r in [p["media"]] + p["media_extra"]]
         p["status"] = "gerenderd"
+        p["goedgekeurd"] = None
         print("OK", p["id"], rel)
         if fmt == "video":
             activiteit("video", f"Monteerde video {p['ref']}" + (" met muziek" if p.get("muziek") else ""))
@@ -588,14 +591,15 @@ def cmd_dashboard():
             for k in ("views", "reach", "likes", "comments", "shares", "saves"):
                 tot[k] = tot.get(k, 0) + (s.get(k) or 0)
         lijst.append({"id": p["id"], "datum": p["datum"], "ref": p["ref"], "tekst": p["tekst"], "hook": p.get("hook", ""),
-                      "status": p["status"], "variabelen": p["variabelen"], "vers_id": p.get("vers_id"), "media": p.get("media"), "media_url": p.get("media_url"), "media_urls": p.get("media_urls"), "thumb": p.get("thumb"),
+                      "status": p["status"], "variabelen": p["variabelen"], "vers_id": p.get("vers_id"), "goedgekeurd": p.get("goedgekeurd"),
+                      "caption": p.get("caption", ""), "uitleg": p.get("uitleg", ""), "media": p.get("media"), "media_url": p.get("media_url"), "media_urls": p.get("media_urls"), "thumb": p.get("thumb"),
                       "platformen": list(p.get("gepubliceerd", {}).keys()),
                       "links": {k: v.get("url") for k, v in p.get("gepubliceerd", {}).items()}, "totaal": tot, "per_platform": per, "score": sc.get(p["id"], {}),
                       "online": min((g["t"] for g in p.get("gepubliceerd", {}).values()), default=None)})
     rapporten = sorted(os.listdir(P("rapporten"))) if os.path.isdir(P("rapporten")) else []
     extra = dashboard_extra(cfg, posts)
     data = {"gegenereerd": dt.datetime.now().isoformat(timespec="minutes"), "repo": cfg.get("github_repo", ""),
-            "config": {k: cfg.get(k) for k in ("pauze", "kanaalnaam", "posts_per_dag", "max_posts_per_dag", "verkenning", "platformen_actief", "max_aandeel_beeld", "verzen_uitsluiten", "leermodus", "leermodus_tot")},
+            "config": {k: cfg.get(k) for k in ("pauze", "kanaalnaam", "posts_per_dag", "max_posts_per_dag", "verkenning", "platformen_actief", "max_aandeel_beeld", "verzen_uitsluiten", "leermodus", "leermodus_tot", "goedkeuren")},
             "strategie": strat, "posts": lijst,
             "leergeschiedenis": laad("data/leergeschiedenis.json", []),
             "laatste_rapport": laad(f"rapporten/{rapporten[-1]}") if rapporten else None,

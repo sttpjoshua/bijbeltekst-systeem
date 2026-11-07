@@ -214,6 +214,9 @@ def cmd_posten():
         if nu - tijdstip(p) > TE_LAAT:
             p["status"] = "overgeslagen"
             S.cmd_log(f"{p['id']} overgeslagen: tijdstip gemist", "fout"); continue
+        g = cfg.get("goedkeuren") or {}
+        if g.get("aan") and g.get("zonder_reactie") == "overslaan" and p.get("goedgekeurd") is not True:
+            print(p["id"], "wacht op goedkeuring"); continue  # na 8 uur zonder goedkeuring vervalt hij hierboven vanzelf
         if vandaag_online >= cfg["max_posts_per_dag"]:
             p["status"] = "overgeslagen"
             S.cmd_log(f"{p['id']} overgeslagen: daglimiet bereikt", "fout"); continue

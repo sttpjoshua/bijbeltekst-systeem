@@ -102,6 +102,41 @@ h3.sec{font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:var(--
 .vol{display:flex;align-items:flex-end;gap:12px}.vol b{font-size:26px;color:var(--gold)}.vol em{font-style:normal;color:var(--ok);font-weight:700}
 .potw{display:flex;gap:10px;align-items:center}.potw img{width:54px;height:68px;object-fit:cover;border-radius:4px;border:2px solid var(--gold)}
 .pbar{height:8px;background:var(--panel2);border-radius:4px;overflow:hidden;margin:6px 0}.pbar i{display:block;height:100%;background:var(--gold)}
+
+/* ---------- goedkeuren, alarm, viering, overleg, tv ---------- */
+.hbtn{font:inherit;font-size:12px;color:var(--gold);background:none;border:1px solid #4b3b78;padding:3px 8px;border-radius:4px;cursor:pointer}
+.hbtn.on{background:var(--gold);color:#2a1a05}.hbtn .n{background:var(--err);color:#fff;border-radius:8px;padding:0 5px;margin-left:4px;font-size:11px}
+#alarm{display:none;background:#5a1b2a;border:2px solid var(--err);border-radius:8px;padding:10px 12px;margin-bottom:10px;font-size:13px;line-height:1.45}
+#alarm b{color:#ffd0d0}#alarm .acts{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.kbtn{font:inherit;font-size:12px;background:#352a56;color:var(--ink);border:1px solid #5a4a8c;border-radius:6px;padding:5px 9px;cursor:pointer}
+.kbtn.goud{background:var(--gold);color:#2a1a05;border-color:var(--gold);font-weight:700}.kbtn.rood{border-color:var(--err);color:#ffb3b3}
+.kbtn:disabled{opacity:.5;cursor:wait}
+.bak{position:absolute;pointer-events:auto;transform:translate(-50%,-100%);font:inherit;font-weight:700;font-size:max(9px,calc(var(--u)*5.5px));background:#fff8e6;color:#3a2412;border:2px solid #3a2412;border-radius:3px;padding:0 4px;cursor:pointer;box-shadow:0 2px 0 rgba(0,0,0,.25)}
+.bak.leeg{opacity:.55}
+#kpaneel{position:fixed;inset:0;background:rgba(10,6,22,.72);z-index:60;display:none;align-items:flex-start;justify-content:center;overflow:auto;padding:30px 12px}
+#kpaneel .doos{background:var(--panel);border:1px solid #5a4a8c;border-radius:10px;max-width:880px;width:100%;padding:16px 18px;position:relative}
+#kpaneel h2{margin:0 0 4px;font-size:16px;color:var(--gold)}#kpaneel .x{position:absolute;top:8px;right:12px;background:none;border:0;color:var(--muted);font-size:24px;cursor:pointer}
+.gk{display:grid;grid-template-columns:auto 1fr;gap:12px;padding:12px 0;border-top:1px solid #43376a}
+.gk .ims{display:flex;gap:4px}.gk img{width:86px;height:108px;object-fit:cover;border-radius:4px;cursor:zoom-in}
+.gk video{width:86px;height:153px;object-fit:cover;border-radius:4px}
+.gk .cap{white-space:pre-wrap;font-size:12px;color:var(--muted);max-height:4.2em;overflow:hidden;cursor:pointer}.gk .cap.open{max-height:none}
+.gk .rij{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;align-items:center}.gk select{background:#1d1630;color:var(--ink);border:1px solid #5a4a8c;border-radius:6px;padding:4px}
+.st{font-size:11px;padding:1px 6px;border-radius:4px;background:#352a56;margin-left:6px}.st.ok{background:#1f5a3d;color:#c9f5d6}.st.wacht{background:#5a4a1f;color:#ffe9a8}
+.kmsg{font-size:12px;margin-top:6px;min-height:16px}
+#toast{position:absolute;left:50%;top:8px;transform:translateX(-50%);background:#fff8e6;color:#3a2412;border:3px solid #3a2412;border-radius:6px;padding:8px 10px;display:none;gap:10px;align-items:center;z-index:5;box-shadow:0 4px 0 rgba(0,0,0,.3);max-width:92%}
+#toast img{width:46px;height:58px;object-fit:cover;border-radius:3px}#toast a{color:#a8326b;font-weight:700}
+.vo{display:flex;gap:8px;align-items:center;padding:5px 0;border-bottom:1px solid #43376a;font-size:12px}.vo:last-child{border:0}.vo img{width:34px;height:42px;object-fit:cover;border-radius:3px}
+.wb{background:#f7f5ee;color:#2a2a35;border-radius:6px;padding:10px 12px;font-size:12.5px;line-height:1.45;border:3px solid #8a8fa0}
+.wb h3{margin:0 0 6px;font-size:13px;color:#2f5d8a}.wb li{margin:3px 0}
+#tvpost{display:none;position:absolute;inset:0;background:var(--bg);align-items:center;justify-content:center;gap:4vw;padding:3vw;z-index:4}
+#tvpost img{max-height:84vh;max-width:46vw;border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,.5)}
+#tvpost .t{max-width:40vw;font-size:2.2vw;line-height:1.35}#tvpost .t small{display:block;color:var(--gold);font-size:1.3vw;margin-top:1vw;letter-spacing:.1em}
+body.tv{overflow:hidden}body.tv main{max-width:none;padding:1vw}body.tv .grid{grid-template-columns:minmax(0,3.2fr) minmax(260px,1fr)!important}
+body.tv .themes,body.tv #cfgline+div~.hint,body.tv .tabs,body.tv #cTop~.card:not(#cVandaagOnline),body.tv .hint{display:none!important}
+.tag small{display:block;font-size:.72em;opacity:.85;text-align:center;font-weight:600}
+body.tv .cvwrap{width:min(100%,calc((100vh - 240px) * 1.6));margin:0 auto}
+@media(max-width:700px){#toast{font-size:11px;padding:4px 6px;gap:6px;border-width:2px}#toast img{width:28px;height:35px}#alarm{font-size:12px}}body.tv .tag{font-size:calc(var(--u)*4.2px)}body.tv .bub{font-size:calc(var(--u)*4.2px)}
+body.tv header h1{font-size:2vw}body.tv aside{font-size:1.05vw}
 </style>
 </head>
 <body>
@@ -110,14 +145,15 @@ h3.sec{font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:var(--
     <h1>Bibleverse HQ</h1>
     <span id="mode" class="badge">DEMO</span>
     <nav class="tabs" id="tabs"><button data-tab="kantoor" class="on">Kantoor</button><button data-tab="posts">Posts</button></nav>
-    <span id="clock"></span><a href="./" style="color:var(--gold);font-size:12px;text-decoration:none;border:1px solid #4b3b78;padding:3px 8px;border-radius:4px">Dashboard</a>
+    <button class="hbtn" id="bGoed" title="Posts goedkeuren">📥 Goedkeuren<span class="n" id="nGoed" hidden></span></button><button class="hbtn" id="bBel" title="Meldingen bij problemen">🔔</button><button class="hbtn" id="bTv" title="Tv-stand">📺 Tv</button><span id="clock"></span><a href="./" style="color:var(--gold);font-size:12px;text-decoration:none;border:1px solid #4b3b78;padding:3px 8px;border-radius:4px">Dashboard</a>
   </header>
   <div id="tab-kantoor">
   <div class="grid">
     <section>
       <div class="themes" id="themes"></div>
       <div class="hint" id="cfgline" style="margin:-4px 0 10px"></div>
-      <div class="cvwrap" id="cvwrap"><canvas id="cv"></canvas><div id="ov"></div></div>
+      <div id="alarm"></div>
+      <div class="cvwrap" id="cvwrap" style="position:relative"><canvas id="cv"></canvas><div id="ov"></div><div id="toast"></div><div id="tvpost"></div></div>
       <div class="hint" style="margin-top:8px">Houd je muis boven een medewerker om te zien wat hij doet. Klik of tik om hem te sturen.</div>
     </section>
     <aside>
@@ -130,6 +166,8 @@ h3.sec{font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:var(--
           <div class="stat"><b id="sBest">-</b><span>Beste tijd</span></div>
         </div>
       </div>
+      <div class="card" id="cVandaagOnline" hidden><h2>📣 Vandaag online</h2><div id="vandaagOnline"></div></div>
+      <div class="card" id="cOverleg"><h2>🗒 Teamoverleg</h2><div id="overleg"></div></div>
       <div class="card" id="cSnel" hidden><h2>⚡ Snel leren</h2><div id="snel"></div></div>
       <div class="card"><h2>Volgers</h2><div id="volgers" class="hint">Worden vanaf vannacht elke dag geteld.</div></div>
       <div class="card"><h2>Gezondheid</h2><div class="lampen" id="lampen"></div></div>
@@ -153,6 +191,7 @@ h3.sec{font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:var(--
     <div class="gallery" id="gallery"></div>
   </div>
 </main>
+<div id="kpaneel"><div class="doos"><button class="x" aria-label="Sluiten">&times;</button><div id="kInhoud"></div></div></div>
 <script>
 (()=>{
 const W=320,H=200;
@@ -182,6 +221,8 @@ function mk(cls){const d=document.createElement('div');d.className=cls;document.
 
 function setDest(a,d){
   if(a.dest===d)return;a.dest=d;a.kuiert=false;a.doel=null;a.volgende=0;
+  if(d==='telefoon'){a.path=[{x:LANE+4,y:a.y},{x:LANE+4,y:104},{x:290,y:104}];return}
+  if(d==='overleg'){const s=OVERLEG[a.i];a.path=[{x:LANE+4,y:a.y},{x:LANE+4,y:s.y},s];return}
   const cx=COLX[a.col],ay=AISLE[a.row],home={x:cx,y:DESKY[a.row]+2},slot=SLOTS[a.i];
   a.path=d==='home'?[{x:LANE,y:ay},{x:cx,y:ay},home]:[{x:cx,y:ay},{x:LANE,y:ay},slot];
 }
@@ -192,6 +233,7 @@ function move(a,dt){
   if(d<=sp){a.x=t.x;a.y=t.y;a.path.shift()}else{a.x+=dx/d*sp;a.y+=dy/d*sp}
 }
 const seated=a=>a.dest==='home'&&!a.path.length;
+const OVERLEG=[{x:250,y:174},{x:250,y:186},{x:300,y:174},{x:300,y:186},{x:268,y:168},{x:284,y:168}];
 /* Pauze betekent niet stilzitten: wie niets te doen heeft, haalt koffie, kijkt even rond of praat bij. */
 const KUIER=[{x:258,y:60},{x:286,y:60},{x:300,y:60},{x:240,y:104},{x:300,y:104},{x:246,y:192},{x:304,y:192},{x:232,y:150}];
 function rondlopen(a,now){
@@ -345,10 +387,10 @@ function overlay(){
   AG.forEach(a=>{
     const sit=seated(a);
     const lx=(a.x/W*100)+'%';
-    a.tag.textContent=a.name;
+    const kl=klokje(a);a.tag.innerHTML=esc(a.name)+(kl?'<small>'+esc(kl)+'</small>':'');
     const onSofa=a.dest==='lounge'&&!a.path.length&&a.i<3;
     const narrow=cv.clientWidth<600;
-    a.tag.classList.toggle('hide',narrow&&a.state==='idle');
+    a.tag.classList.toggle('hide',(narrow&&a.state==='idle')||(a.dest==='overleg'&&!a.path.length));
     a.tag.style.left=lx;a.tag.style.top=((a.y+(sit?7:onSofa?[3,15,27][a.i]:3))/H*100)+'%';
     const show=a.state==='working'||a.state==='error';
     a.bub.className='bub'+(show&&a.task?'':' hide')+(a.state==='error'?' err':'');
@@ -364,12 +406,13 @@ function frame(now){
   const dt=Math.min(.05,(now-last)/1000);last=now;
   g.drawImage(bgc,0,0);
   beams(now);clock();lampjes(now);
-  AG.forEach(a=>{setDest(a,a.state==='idle'?'lounge':'home');rondlopen(a,now);move(a,dt)});
+  AG.forEach(a=>{setDest(a,bestemming(a));rondlopen(a,now);move(a,dt)});
   for(let r=0;r<2;r++)AG.filter(a=>a.row===r).forEach(a=>{
     if(seated(a))drawChar(a,now);drawDesk(a,now);
   });
   AG.filter(a=>!seated(a)).sort((p,q)=>p.y-q.y).forEach(a=>drawChar(a,now));
   drawSofaFront();
+  extraTekenen(now);
   if(P.tint){g.fillStyle=P.tint;g.fillRect(0,0,W,H)}
   if(PAUSED){g.fillStyle='rgba(10,8,30,.38)';g.fillRect(0,0,W,H)}
   overlay();
@@ -802,6 +845,247 @@ async function loadReal(){
 }
 document.getElementById('real').addEventListener('click',e=>{const b=e.target.closest('.fav');if(!b)return;e.preventDefault();const n=b.dataset.n;fav.has(n)?fav.delete(n):fav.add(n);b.classList.toggle('on',fav.has(n));saveFav()});
 loadReal();setInterval(loadReal,60000);
+
+/* ================= Goedkeuren, alarm, viering, dagritme, overleg, tv ================= */
+const $=id=>document.getElementById(id);
+const nu=()=>Date.now();
+const lsGet=(k,d)=>{try{const v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){return d}};
+const lsSet=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}};
+const STIJLEN=['zonsopgang','hemelsblauw','paars','roze','bosgroen','mint','perzik','zand','salie'];
+const tijdVan=p=>new Date(p.datum+'T'+p.variabelen.tijdslot+':00');
+
+/* ---- opdracht sturen (zelfde route als de Bediening) ---- */
+async function stuurK(o,btn,msgEl){
+  const set=(tx,c)=>{if(msgEl){msgEl.innerHTML=tx;msgEl.style.color=c||'var(--muted)'}};
+  if(!gtok()){set('Vul eerst je GitHub-sleutel in: klik op een medewerker en volg de stappen, of gebruik de Bediening op het dashboard.','var(--err)');return}
+  const repo=(DJ&&DJ.repo)||'sttpjoshua/bijbeltekst-systeem';
+  if(btn)btn.disabled=true;set('Opdracht versturen...');const start=nu();
+  try{
+    const r=await fetch(`https://api.github.com/repos/${repo}/actions/workflows/publiceren.yml/dispatches`,{method:'POST',
+      headers:{'Authorization':'Bearer '+gtok(),'Accept':'application/vnd.github+json','Content-Type':'application/json'},
+      body:JSON.stringify({ref:'main',inputs:{taak:'bediening',opdracht:JSON.stringify(o)}})});
+    if(r.status!==204){set(r.status===401||r.status===403?'De sleutel werkt niet (verlopen of zonder Actions-rechten).':'GitHub gaf fout '+r.status,'var(--err)');if(btn)btn.disabled=false;return}
+    set('Ontvangen. Bezig met uitvoeren...','var(--ok)');
+    const h={'Authorization':'Bearer '+gtok(),'Accept':'application/vnd.github+json'};
+    for(let i=0;i<40;i++){
+      await new Promise(z=>setTimeout(z,8000));
+      try{
+        const run=(await (await fetch(`https://api.github.com/repos/${repo}/actions/workflows/publiceren.yml/runs?event=workflow_dispatch&per_page=1`,{headers:h})).json()).workflow_runs?.[0];
+        if(run&&new Date(run.created_at).getTime()>start-60000&&run.status==='completed'){
+          if(run.conclusion!=='success'){set(`Mislukt. <a href="${esc(run.html_url)}" target="_blank" rel="noopener">Details</a>`,'var(--err)');if(btn)btn.disabled=false;return}
+          set('Uitgevoerd. Even geduld, het kantoor wordt bijgewerkt...','var(--ok)');
+          await new Promise(z=>setTimeout(z,25000));await loadReal();await poll();
+          set('Klaar.','var(--ok)');if(btn)btn.disabled=false;if(paneelOpen==='goed')toonGoedkeuren();return;
+        }
+      }catch(e){}
+    }
+    set('Verstuurd. Herlaad over een minuut.');if(btn)btn.disabled=false;
+  }catch(e){set('Geen verbinding met GitHub.','var(--err)');if(btn)btn.disabled=false}
+}
+
+/* ---- paneel ---- */
+let paneelOpen=null;
+const kp=$('kpaneel');
+function openPaneel(naam,html){paneelOpen=naam;$('kInhoud').innerHTML=html;kp.style.display='flex'}
+function sluitPaneel(){kp.style.display='none';paneelOpen=null}
+kp.addEventListener('click',e=>{if(e.target===kp||e.target.closest('.x'))sluitPaneel()});
+
+/* ---- 1. goedkeuren bij de Designer ---- */
+function teKeuren(){
+  const d=new Date();d.setHours(0,0,0,0);
+  return ((DJ&&DJ.posts)||[]).filter(p=>['gerenderd','opnieuw_maken','wacht_op_tekst'].includes(p.status)&&tijdVan(p)>=d)
+    .sort((a,b)=>tijdVan(a)-tijdVan(b));
+}
+function openTeller(){return teKeuren().filter(p=>p.status==='gerenderd'&&p.goedgekeurd!==true).length}
+function toonGoedkeuren(){
+  const g=(DJ&&DJ.config&&DJ.config.goedkeuren)||{aan:false,zonder_reactie:'posten'};
+  const lijst=teKeuren();
+  const media=p=>{const m=(p.media_urls&&p.media_urls.length)?p.media_urls:(p.media_url?[p.media_url]:[]);
+    return m.map(u=>u.endsWith('.mp4')?`<video src="${esc(u)}" muted loop playsinline controls preload="none" poster="${esc(p.thumb||'')}"></video>`:`<img src="${esc(u)}" data-groot="${esc(u)}" alt="">`).join('')||'<div class="hint" style="width:86px">nog geen beeld</div>'};
+  const status=p=>p.status==='opnieuw_maken'?'<span class="st wacht">wordt opnieuw gemaakt</span>':p.status==='wacht_op_tekst'?'<span class="st wacht">wacht op tekst</span>':p.goedgekeurd===true?'<span class="st ok">✓ goedgekeurd</span>':'<span class="st">nog niet bekeken</span>';
+  openPaneel('goed',`<h2>📥 Goedkeuren</h2>
+    <div class="hint" style="margin-bottom:8px">De Designer legt hier de posts neer die klaarstaan. Keur ze goed, kies iets anders of sla ze over.</div>
+    <div class="rij" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:12px">
+      <button class="kbtn ${g.aan?'goud':''}" data-inst='${JSON.stringify({actie:'goedkeuren_instelling',aan:!g.aan})}'>Goedkeuren is ${g.aan?'AAN':'UIT'}</button>
+      ${g.aan?`<span>Als ik niets doe:</span>
+      <button class="kbtn ${g.zonder_reactie==='posten'?'goud':''}" data-inst='{"actie":"goedkeuren_instelling","zonder_reactie":"posten"}'>gewoon posten</button>
+      <button class="kbtn ${g.zonder_reactie==='overslaan'?'goud':''}" data-inst='{"actie":"goedkeuren_instelling","zonder_reactie":"overslaan"}'>niet posten</button>`:'<span class="hint">Uit: alles gaat vanzelf online. Je kunt hier nog steeds dingen aanpassen.</span>'}
+    </div><div class="kmsg" id="instMsg"></div>
+    ${lijst.length?lijst.map(p=>`<div class="gk" data-id="${esc(p.id)}">
+      <div class="ims">${media(p)}</div>
+      <div><b>${esc(p.ref)}</b> ${status(p)}<div class="hint">${esc(p.datum.slice(8,10)+'-'+p.datum.slice(5,7))} om ${esc(p.variabelen.tijdslot)} · ${esc(p.variabelen.formaat)} · stijl ${esc(p.variabelen.huisstijl||'')}</div>
+        <div class="cap" title="Klik voor de hele tekst">${esc(p.caption||p.tekst||'')}</div>
+        ${p.status==='gerenderd'||p.status==='wacht_op_tekst'?`<div class="rij">
+          ${p.status==='gerenderd'&&p.goedgekeurd!==true?'<button class="kbtn goud" data-a="goedkeuren">✓ Goedkeuren</button>':''}
+          <select data-stijl><option value="">Verras me</option>${STIJLEN.filter(s=>s!==p.variabelen.huisstijl).map(s=>`<option>${s}</option>`).join('')}</select><button class="kbtn" data-a="andere_stijl">Andere stijl</button>
+          <button class="kbtn" data-a="post_ander_vers">Ander vers</button>
+          <button class="kbtn rood" data-a="overslaan">Overslaan</button></div>
+          <div class="hint" style="margin-top:4px">${p.variabelen.formaat==='video'||p.variabelen.achtergrondbron==='beeld'?'Andere stijl en ander vers worden bij de avondcontrole (20:47) gemaakt.':'Andere stijl is binnen een paar minuten klaar. Ander vers wordt bij de avondcontrole (20:47) gemaakt.'}</div>`:''}
+        <div class="kmsg"></div></div></div>`).join(''):'<div class="hint" style="padding:14px 0">Er ligt nu niets in het bakje. De posts van morgen komen na 14:32.</div>'}`);
+}
+$('kInhoud').addEventListener('click',e=>{
+  const im=e.target.closest('img[data-groot]');if(im){window.open(im.dataset.groot,'_blank');return}
+  const cap=e.target.closest('.cap');if(cap){cap.classList.toggle('open');return}
+  const ib=e.target.closest('[data-inst]');if(ib){stuurK(JSON.parse(ib.dataset.inst),ib,$('instMsg'));return}
+  const b=e.target.closest('[data-a]');if(!b)return;
+  const rij=b.closest('.gk'),id=rij.dataset.id,msg=rij.querySelector('.kmsg'),a=b.dataset.a;
+  if((a==='overslaan'||a==='post_ander_vers')&&!b.dataset.zeker){b.dataset.zeker=1;b.textContent='Zeker? Klik nog eens';return}
+  const o={actie:a,post:id};if(a==='andere_stijl'){const s=rij.querySelector('[data-stijl]').value;if(s)o.huisstijl=s}
+  stuurK(o,b,msg);
+});
+$('bGoed').addEventListener('click',toonGoedkeuren);
+const bakEl=document.createElement('button');bakEl.className='bak';bakEl.title='Posts goedkeuren';
+bakEl.style.left=((COLX[1]+12)/W*100)+'%';bakEl.style.top=((DESKY[0]-1)/H*100)+'%';
+bakEl.addEventListener('click',e=>{e.stopPropagation();toonGoedkeuren()});$('ov').appendChild(bakEl);
+
+/* ---- 2. alarm ---- */
+function advies(tekst){
+  const t=(tekst||'').toLowerCase();
+  if(/token|oauth|session|190|access/.test(t))return 'De sleutel van Meta werkt niet meer. Open Meta Business-instellingen › Systeemgebruikers › bibleverse-bot, maak een nieuwe sleutel en zet die in GitHub › Settings › Secrets als IG_TOKEN. Of vraag het Claude in de chat.';
+  if(/te weinig posts/.test(t))return 'Er staan minder posts klaar dan ingesteld. Vraag Claude in de chat om de posts van vandaag te maken, of zet posts per dag lager.';
+  if(/2207|container|verwerk|media/.test(t))return 'Instagram kon het beeld of de video niet verwerken. Het systeem probeert het elk kwartier opnieuw. Blijft het fout, kies dan in 📥 Goedkeuren een andere stijl of sla de post over.';
+  if(/429|rate|limit|too many/.test(t))return 'Meta remt even af omdat er te veel verzoeken waren. Dit lost zichzelf meestal binnen een uur op.';
+  if(/facebook|pagina|page/.test(t))return 'Facebook doet moeilijk. Controleer of de pagina Bibleversenl nog gekoppeld is aan bibleverse-bot (Business-instellingen › Pagina\'s).';
+  if(/overgeslagen/.test(t))return 'Een post is niet geplaatst omdat het tijdstip lang voorbij was. Meestal liep de wekker achter; controleer cron-job.org.';
+  if(/statistiek|insights/.test(t))return 'Cijfers ophalen lukte niet. Posten werkt gewoon door; morgen wordt het opnieuw geprobeerd.';
+  return 'Bekijk het logboek op het dashboard voor details, of plak de foutmelding in de chat met Claude.';
+}
+let ALARM=null;
+function alarmCheck(){
+  const fouten=(DJ&&DJ.recente_fouten)||[];
+  const rood=((LIVEJ&&LIVEJ.lampen)||[]).filter(l=>l.kleur==='rood');
+  ALARM=fouten.length||rood.length?{fouten,rood}:null;
+  const el=$('alarm');
+  if(!ALARM){el.style.display='none';document.title='Bibleverse HQ';return}
+  const f=fouten[fouten.length-1];
+  el.style.display='block';
+  el.innerHTML=`<b>⚠ ${esc(f?f.tekst.slice(0,140):rood.map(r=>r.naam+': '+r.tekst).join(', '))}</b><div style="margin-top:6px">${esc(advies(f?f.tekst:rood.map(r=>r.naam+' '+r.tekst).join(' ')))}</div>
+    <div class="acts"><button class="kbtn" id="aOpgelost">Opgelost, melding weg</button><a class="kbtn" href="./#logboek" style="text-decoration:none">Logboek</a></div><div class="kmsg" id="aMsg"></div>`;
+  $('aOpgelost').onclick=e=>stuurK({actie:'fouten_opgelost'},e.target,$('aMsg'));
+  // nieuwe fout? melden
+  const sleutelF=f?f.t+f.tekst:rood.map(r=>r.naam).join();
+  if(lsGet('bv_laatste_alarm','')!==sleutelF){
+    lsSet('bv_laatste_alarm',sleutelF);
+    if(lsGet('bv_meldingen',false)){
+      try{if(Notification.permission==='granted')new Notification('Bibleverse: probleem',{body:(f?f.tekst:'Er brandt een rood lampje').slice(0,120)})}catch(e){}
+      piep();
+    }
+  }
+}
+let titelKnip=false;setInterval(()=>{if(ALARM){titelKnip=!titelKnip;document.title=titelKnip?'⚠ Probleem · Bibleverse HQ':'Bibleverse HQ'}},1000);
+function piep(){try{const c=new (window.AudioContext||window.webkitAudioContext)();[0,.25].forEach(d=>{const o=c.createOscillator(),g=c.createGain();o.frequency.value=880;o.connect(g);g.connect(c.destination);g.gain.setValueAtTime(.15,c.currentTime+d);g.gain.exponentialRampToValueAtTime(.001,c.currentTime+d+.2);o.start(c.currentTime+d);o.stop(c.currentTime+d+.22)})}catch(e){}}
+function belKnop(){const on=lsGet('bv_meldingen',false);$('bBel').classList.toggle('on',on);$('bBel').title=on?'Meldingen staan aan (klik om uit te zetten)':'Meldingen en geluid bij problemen aanzetten'}
+$('bBel').addEventListener('click',async()=>{
+  const on=!lsGet('bv_meldingen',false);lsSet('bv_meldingen',on);
+  if(on){try{if('Notification' in window&&Notification.permission!=='granted')await Notification.requestPermission()}catch(e){}piep()}
+  belKnop();
+});belKnop();
+
+/* ---- 3. net online ---- */
+let CONF=[];
+function vieringCheck(){
+  const ps=((DJ&&DJ.posts)||[]).filter(p=>p.online&&nu()-new Date(p.online).getTime()<20*60000);
+  const gezien=lsGet('bv_gevierd',[]);
+  const nieuw=ps.find(p=>!gezien.includes(p.id));
+  if(nieuw){lsSet('bv_gevierd',[...gezien.slice(-40),nieuw.id]);vier(nieuw)}
+  // vandaag online, met cijfers
+  const vandaag=new Date().toISOString().slice(0,10);
+  const vo=((DJ&&DJ.posts)||[]).filter(p=>p.status==='gepubliceerd'&&p.online&&p.online.slice(0,10)===vandaag);
+  $('cVandaagOnline').hidden=!vo.length;
+  $('vandaagOnline').innerHTML=vo.map(p=>{const tt=p.totaal||{};const l=(p.links||{}).instagram||(p.links||{}).facebook;
+    return `<div class="vo">${p.thumb?`<img src="${esc(p.thumb)}" alt="">`:''}<div style="flex:1"><b>${esc(p.ref)}</b><div class="hint">${esc(p.online.slice(11,16))} · bereik ${tt.reach||tt.views||'nog onbekend'}${tt.likes?' · '+tt.likes+' likes':''}${tt.saves?' · '+tt.saves+' opgeslagen':''}</div></div>${l?`<a href="${esc(l)}" target="_blank" rel="noopener" style="color:var(--gold)">bekijk</a>`:''}</div>`}).join('');
+}
+function vier(p){
+  for(let i=0;i<70;i++)CONF.push({x:40+Math.random()*240,y:-10-Math.random()*60,vx:(Math.random()-.5)*20,vy:20+Math.random()*30,c:['#f2c14e','#ff6f61','#5aa6e6','#6bd68c','#f7a1b8'][i%5],t:nu()});
+  const dsp=AG.find(a=>a.id==='dispatcher');if(dsp&&dsp.state!=='error')dsp.ov={task:'🎉 '+p.ref+' staat online!',until:nu()+8000};
+  const l=(p.links||{}).instagram||(p.links||{}).facebook;
+  const to=$('toast');to.style.display='flex';
+  to.innerHTML=`${p.thumb?`<img src="${esc(p.thumb)}" alt="">`:''}<div><b>🎉 Net online</b><br>${esc(p.ref)}${l?` · <a href="${esc(l)}" target="_blank" rel="noopener">bekijk</a>`:''}</div>`;
+  setTimeout(()=>{to.style.display='none'},12000);
+}
+
+/* ---- tekenen: telefoon, bakje, confetti ---- */
+let laatsteT=performance.now();
+function extraTekenen(t){
+  const dt=Math.min(.05,(t-laatsteT)/1000);laatsteT=t;
+  // telefoon op een tafeltje rechts
+  R(286,96,14,3,'#8a5a2b');R(288,99,2,8,'#6b3f1d');R(296,99,2,8,'#6b3f1d');
+  const rinkel=ALARM&&Math.floor(t/250)%2;
+  R(288,90,10,6,ALARM?'#d93a3a':'#c0392b');R(289,88,8,2,ALARM?'#ff5a5a':'#a83226');
+  if(ALARM){R(290,92,6,1,'#fff');if(rinkel){R(284,86,2,1,'#ff5a5a');R(300,86,2,1,'#ff5a5a');R(283,89,1,2,'#ff5a5a');R(302,89,1,2,'#ff5a5a')}}
+  // bakje op het bureau van de Designer
+  const n=openTeller(),cx=COLX[1]+8,y=DESKY[0]-3;
+  R(cx,y,9,3,'#d7c9a3');R(cx,y+2,9,1,'#8a6a3a');if(n){R(cx+1,y-1,7,1,'#fff');if(n>1)R(cx+2,y-2,6,1,'#f4f1e8')}
+  bakEl.textContent='📥 '+n;bakEl.classList.toggle('leeg',!n);
+  const ng=$('nGoed');ng.hidden=!n;ng.textContent=n;
+  // confetti
+  CONF=CONF.filter(c=>t-0<1e12&&c.y<H+5&&nu()-c.t<9000);
+  CONF.forEach(c=>{c.x+=c.vx*dt;c.y+=c.vy*dt;c.vy+=12*dt;R(c.x,c.y,2,2,c.c)});
+}
+
+/* ---- 4. dagritme: aftellen naar de volgende taak ---- */
+function volgendeOm(uren){
+  const n=new Date();let best=null;
+  for(const [u,m] of uren){for(const plus of [0,1]){const d=new Date(n);d.setDate(d.getDate()+plus);d.setHours(u,m,0,0);if(d>n&&(!best||d<best))best=d}}
+  return best;
+}
+function duur(d){if(!d)return '';const m=Math.max(0,Math.round((d-nu())/60000));return m<60?m+'m':Math.floor(m/60)+'u'+String(m%60).padStart(2,'0')}
+function klokje(a){
+  if(a.state==='working'||a.state==='error')return '';
+  if(a.id==='dispatcher'){const np=LIVEJ&&LIVEJ.stats&&LIVEJ.stats.next_post;return np&&new Date(np)>nu()?'📤 '+duur(new Date(np)):''}
+  if(a.id==='verskiezer'||a.id==='designer'||a.id==='video')return '⏱ '+duur(volgendeOm([[14,32],[20,47]]));
+  if(a.id==='analist')return '⏱ '+duur(volgendeOm([[5,17]]));
+  if(a.id==='controller'){const n=new Date();const m=15-(n.getMinutes()%15);return '⏱ '+m+'m'}
+  return '';
+}
+
+/* ---- 5. teamoverleg op maandag ---- */
+function isOverleg(){const n=new Date();return n.getDay()===1&&((n.getHours()===11)||(n.getHours()===12&&n.getMinutes()<30))}
+function bestemming(a){
+  if(a.id==='controller'&&ALARM&&a.state!=='working')return 'telefoon';
+  if(a.state==='idle'&&isOverleg())return 'overleg';
+  return a.state==='idle'?'lounge':'home';
+}
+function toonOverleg(){
+  const s=(DJ&&DJ.strategie)||{},inz=(s.inzichten||[]).slice(-3).reverse(),tp=LIVEJ&&LIVEJ.top_post;
+  const lg=((DJ&&DJ.leergeschiedenis)||[]).slice(-1)[0];
+  const maandag=(()=>{const d=new Date();d.setDate(d.getDate()-((d.getDay()+6)%7));return d.toLocaleDateString('nl-NL',{day:'numeric',month:'long'})})();
+  $('overleg').innerHTML=`<div class="wb"><h3>Week van ${esc(maandag)}${isOverleg()?' · nu in overleg':''}</h3>
+    ${inz.length?`<b>Lessen</b><ol style="margin:4px 0 8px 18px;padding:0">${inz.map(i=>`<li>${esc(i.tekst)}</li>`).join('')}</ol>`:'<div>Nog geen lessen: het team verzamelt eerst cijfers. Het eerste overleg met conclusies is na de eerste week.</div>'}
+    ${tp?`<b>Beste post</b><div>${esc(tp.ref)} (${esc(tp.formaat)}, bereik ${tp.bereik})</div>`:''}
+    ${lg&&lg.wijzigingen?`<b>Aanpassingen</b><div>${esc(String(lg.wijzigingen).slice(0,200))}</div>`:''}
+    <div class="hint" style="color:#666;margin-top:6px">Elke maandag tussen 11:00 en 12:30 zit het team om de tafel.</div></div>`;
+}
+
+/* ---- 6. tv-stand ---- */
+let TV=new URLSearchParams(location.search).has('tv'),tvWissel=0;
+function zetTv(aan){
+  TV=aan;document.body.classList.toggle('tv',aan);$('bTv').classList.toggle('on',aan);
+  if(aan){try{document.documentElement.requestFullscreen&&document.documentElement.requestFullscreen()}catch(e){}autoThema()}
+  else{try{document.fullscreenElement&&document.exitFullscreen()}catch(e){}$('tvpost').style.display='none'}
+  if(typeof resize==='function')setTimeout(resize,300);
+}
+function autoThema(){const u=new Date().getHours();const k=u>=7&&u<19?'dag':'nacht';if(THEMES[k]&&P!==THEMES[k]){P=THEMES[k];rebuild();[...th.children].forEach(x=>x.classList.toggle('on',x.dataset.k===k))}}
+function tvTik(){
+  if(!TV)return;autoThema();
+  tvWissel=(tvWissel+1)%2;const tp=$('tvpost');
+  if(tvWissel===1){
+    const ps=((DJ&&DJ.posts)||[]).filter(p=>p.media_url||p.thumb);
+    const vandaag=new Date().toISOString().slice(0,10);
+    const p=ps.filter(x=>x.status==='gepubliceerd').sort((a,b)=>(b.online||'').localeCompare(a.online||''))[0]||ps.find(x=>x.datum>=vandaag);
+    if(!p){tp.style.display='none';return}
+    const img=(p.media_urls&&p.media_urls[0])||(p.media_url&&!p.media_url.endsWith('.mp4')?p.media_url:p.thumb);
+    tp.innerHTML=`<img src="${esc(img)}" alt=""><div class="t">${esc(p.tekst)}<small>${esc(p.ref.toUpperCase())} · ${p.status==='gepubliceerd'?'ONLINE OM '+esc((p.online||'').slice(11,16)):'GAAT ONLINE '+esc(p.datum.slice(8,10)+'-'+p.datum.slice(5,7)+' '+p.variabelen.tijdslot)}</small></div>`;
+    tp.style.display='flex';
+  }else tp.style.display='none';
+}
+$('bTv').addEventListener('click',()=>zetTv(!TV));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&TV)zetTv(false)});
+setInterval(tvTik,60000);if(TV)setTimeout(()=>zetTv(true),500);
+
+/* ---- elke paar seconden bijwerken ---- */
+setInterval(()=>{if(!DJ)return;alarmCheck();vieringCheck();toonOverleg()},3000);
+
 })();
 </script>
 </body>

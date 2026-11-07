@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-07T23:02",
+ "gegenereerd": "2026-11-07T23:13",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -14,7 +14,8 @@
   "max_aandeel_beeld": 0.33,
   "verzen_uitsluiten": null,
   "leermodus": true,
-  "leermodus_tot": "2026-11-14"
+  "leermodus_tot": "2026-11-14",
+  "goedkeuren": null
  },
  "strategie": {
   "versie": 1,
@@ -184,6 +185,9 @@
     "hook_op_beeld": false
    },
    "vers_id": "II_Timothy-1-7-7",
+   "goedgekeurd": null,
+   "caption": "\"Want God heeft ons niet gegeven een geest der vreesachtigheid, maar der kracht, en der liefde, en der gematigdheid.\"\n2 Timotheüs 1:7\n\nAngst hoeft niet het laatste woord te hebben: God geeft kracht, liefde en een rustig hoofd.",
+   "uitleg": "",
    "media": "docs/media/2026-11/2026-11-08-5.jpg",
    "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-5.jpg",
    "media_urls": [
@@ -219,6 +223,9 @@
     "hook_op_beeld": false
    },
    "vers_id": "Psalms-23-1-1",
+   "goedgekeurd": null,
+   "caption": "Lees deze zin twee keer, langzaam.\n\n\"De HEERE is mijn Herder, mij zal niets ontbreken.\"\nPsalm 23:1\n\nGod zorgt voor je zoals een herder voor zijn schapen: je staat er niet alleen voor.",
+   "uitleg": "God zorgt voor mij, ik kom niets tekort.",
    "media": "docs/media/2026-11/2026-11-08-4.jpg",
    "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-4.jpg",
    "media_urls": [
@@ -254,6 +261,9 @@
     "hook_op_beeld": false
    },
    "vers_id": "John-14-27-27",
+   "goedgekeurd": null,
+   "caption": "Wat haalt jou vanavond nog uit je rust?\n\n\"Vrede laat Ik u, Mijn vrede geef Ik u; niet gelijkerwijs de wereld hem geeft, geef Ik hem u. Uw hart worde niet ontroerd en zij niet versaagd.\"\nJohannes 14:27\n\nJezus geeft een vrede die niet afhangt van hoe je dag is gegaan.",
+   "uitleg": "",
    "media": "docs/media/2026-11/2026-11-08-3.mp4",
    "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-3.mp4",
    "media_urls": [
@@ -289,6 +299,9 @@
     "hook_op_beeld": false
    },
    "vers_id": "Proverbs-15-1-1",
+   "goedgekeurd": null,
+   "caption": "Herken je dat? Eén scherp woord en het hele gesprek ontspoort.\n\n\"Een zacht antwoord keert de grimmigheid af; maar een smartend woord doet den toorn oprijzen.\"\nSpreuken 15:1\n\nDe toon van je antwoord kan een ruzie laten groeien of juist laten zakken.",
+   "uitleg": "",
    "media": "docs/media/2026-11/2026-11-08-2-1.jpg",
    "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-2-1.jpg",
    "media_urls": [
@@ -326,6 +339,9 @@
     "hook_op_beeld": false
    },
    "vers_id": "Isaiah-43-19-19",
+   "goedgekeurd": null,
+   "caption": "Waar hoop jij stilletjes op iets nieuws?\n\n\"Ziet, Ik zal wat nieuws maken, nu zal het uitspruiten, zult gijlieden dat niet weten? Ja, Ik zal in de woestijn een weg leggen, en rivieren in de wildernis.\"\nJesaja 43:19\n\nGod kan iets nieuws laten groeien, juist op plekken waar alles dor en vastgelopen lijkt.",
+   "uitleg": "God maakt iets nieuws, zelfs een weg waar je geen uitweg ziet.",
    "media": "docs/media/2026-11/2026-11-08-1-1.jpg",
    "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-1-1.jpg",
    "media_urls": [
@@ -360,6 +376,9 @@
     "tijdslot": "12:15"
    },
    "vers_id": "Colossians-3-15-15",
+   "goedgekeurd": null,
+   "caption": "Voor wie deze week vooral heeft gerend en weinig heeft stilgestaan.\n\n\"En de vrede Gods heerse in uw harten, tot welken gij ook geroepen zijt in een lichaam; en weest dankbaar.\"\nKolossenzen 3:15\n\nLaat vandaag de vrede van God het laatste woord hebben, niet je to-do-lijst. En noem eens drie dingen waar je dankbaar voor bent.",
+   "uitleg": "",
    "media": "docs/media/2026-11/2026-11-07-1.mp4",
    "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-07-1.mp4",
    "media_urls": null,

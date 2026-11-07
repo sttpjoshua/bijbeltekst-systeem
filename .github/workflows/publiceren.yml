@@ -42,7 +42,7 @@ jobs:
           else echo "taak=posten" >> $GITHUB_OUTPUT; fi
       - name: PyNaCl voor token-verversing
         if: steps.t.outputs.taak == 'token' || steps.t.outputs.taak == 'bediening'
-        run: pip install pynacl
+        run: pip install pynacl pillow numpy
       - name: Uitvoeren
         env:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}

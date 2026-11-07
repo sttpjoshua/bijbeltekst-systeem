@@ -105,6 +105,51 @@ def main(raw):
             del later[k]
         later[o["vers_id"]] = (dt.date.today() + dt.timedelta(days=30)).isoformat()
         melding = f"{o.get('ref', o['vers_id'])} uit de planning gehaald; er komt een ander vers voor in de plaats"
+    elif a == "goedkeuren_instelling":
+        g = cfg.setdefault("goedkeuren", {"aan": False, "zonder_reactie": "posten"})
+        if "aan" in o:
+            g["aan"] = bool(o["aan"])
+        if o.get("zonder_reactie") in ("posten", "overslaan"):
+            g["zonder_reactie"] = o["zonder_reactie"]
+        melding = ("Goedkeuren aangezet" if g["aan"] else "Goedkeuren uitgezet") + (
+            f": zonder reactie wordt een post {'gewoon gepost' if g['zonder_reactie'] == 'posten' else 'overgeslagen'}" if g["aan"] else "")
+    elif a == "goedkeuren":
+        p = vind(posts, o["post"])
+        p["goedgekeurd"] = True
+        melding = f"{p['ref']} goedgekeurd"
+    elif a == "andere_stijl":
+        p = vind(posts, o["post"])
+        if p["status"] not in ("gerenderd", "wacht_op_tekst"):
+            raise SystemExit("Deze post kan niet meer aangepast worden")
+        import random
+        fris = [k for k in S.HUISSTIJLEN if k != p["variabelen"].get("huisstijl") and k != "avond"]
+        nieuw = o.get("huisstijl") if o.get("huisstijl") in S.HUISSTIJLEN else random.choice(fris)
+        p["variabelen"].update(S.HUISSTIJLEN[nieuw]); p["variabelen"]["huisstijl"] = nieuw
+        p.setdefault("keuzebron", {})["huisstijl"] = "joshua"
+        p["goedgekeurd"] = None
+        if p["status"] == "gerenderd":
+            # beelden kunnen hier meteen opnieuw; video en foto-achtergrond hebben muziek/foto's nodig (avondcontrole)
+            if p["variabelen"]["formaat"] != "video" and p["variabelen"].get("achtergrondbron") != "beeld":
+                p["status"] = "klaar_voor_render"
+                S.bewaar("data/posts.json", posts)
+                S.cmd_render(p["datum"])
+                posts = S.laad("data/posts.json", [])
+                melding = f"{p['ref']} opnieuw gemaakt in stijl {nieuw}"
+            else:
+                p["status"] = "opnieuw_maken"
+                melding = f"{p['ref']} krijgt stijl {nieuw}; wordt bij de avondcontrole (20:47) opnieuw gemaakt"
+        else:
+            melding = f"{p['ref']} krijgt stijl {nieuw}"
+    elif a == "post_ander_vers":
+        p = vind(posts, o["post"])
+        S.bewaar("data/posts.json", posts)
+        S.cmd_vervang(p["id"], "gekozen door Joshua")
+        posts, cfg = S.laad("data/posts.json", []), S.laad("config.json")
+        p = vind(posts, o["post"])
+        melding = f"Ander vers gekozen: {p['ref']}. De teksten en het beeld worden bij de avondcontrole (20:47) gemaakt"
+    elif a == "fouten_opgelost":
+        S.cmd_opgelost()
+        melding = "Openstaande fouten als opgelost gemarkeerd"
     elif a == "test":
         melding = None  # de workflow draait daarna de verbindingstest
     else:
@@ -117,7 +162,8 @@ def main(raw):
         # laat de juiste medewerker in het pixel-kantoor zien dat hij de opdracht heeft uitgevoerd
         agent = {"pauze": "controller", "posts_per_dag": "verskiezer", "verkenning": "verskiezer", "vers_uitsluiten": "verskiezer",
                  "max_aandeel_beeld": "designer", "platform": "dispatcher", "tijd": "dispatcher", "nu_posten": "dispatcher",
-                 "leermodus": "analist", "ander_vers": "verskiezer"}.get(a)
+                 "leermodus": "analist", "ander_vers": "verskiezer", "goedkeuren": "designer", "goedkeuren_instelling": "designer",
+                 "andere_stijl": "designer", "post_ander_vers": "verskiezer", "fouten_opgelost": "controller"}.get(a)
         if a == "overslaan":
             agent = "video" if (vind(posts, o["post"])["variabelen"].get("formaat") == "video") else "designer"
         if agent:
