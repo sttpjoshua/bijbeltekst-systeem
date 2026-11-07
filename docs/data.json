@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-07T15:24",
+ "gegenereerd": "2026-11-07T22:24",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -114,6 +114,140 @@
   "inzichten": []
  },
  "posts": [
+  {
+   "id": "2026-11-08-5",
+   "datum": "2026-11-08",
+   "ref": "2 Timotheüs 1:7",
+   "tekst": "Want God heeft ons niet gegeven een geest der vreesachtigheid, maar der kracht, en der liefde, en der gematigdheid.",
+   "hook": "",
+   "status": "gerenderd",
+   "variabelen": {
+    "huisstijl": "zand",
+    "thema": "moed",
+    "hook_stijl": "geen",
+    "formaat": "afbeelding",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "beeld",
+    "tijdslot": "22:00",
+    "palet": "zand",
+    "lettertype": "dmserif",
+    "layout": "centraal",
+    "achtergrond": "verloop",
+    "hook_op_beeld": false
+   },
+   "vers_id": "II_Timothy-1-7-7",
+   "media": "docs/media/2026-11/2026-11-08-5.jpg",
+   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-5.jpg",
+   "media_urls": [
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-5.jpg"
+   ],
+   "thumb": "thumbs/2026-11-08-5.jpg",
+   "platformen": [],
+   "links": {},
+   "totaal": {},
+   "score": {}
+  },
+  {
+   "id": "2026-11-08-4",
+   "datum": "2026-11-08",
+   "ref": "Psalm 23:1",
+   "tekst": "De HEERE is mijn Herder, mij zal niets ontbreken.",
+   "hook": "Lees deze zin twee keer, langzaam.",
+   "status": "gerenderd",
+   "variabelen": {
+    "huisstijl": "salie",
+    "thema": "troost",
+    "hook_stijl": "uitdaging",
+    "formaat": "afbeelding",
+    "uitleg_op_beeld": true,
+    "achtergrondbron": "verloop",
+    "tijdslot": "12:15",
+    "palet": "salie",
+    "lettertype": "cormorant",
+    "layout": "kader",
+    "achtergrond": "effen",
+    "hook_op_beeld": false
+   },
+   "vers_id": "Psalms-23-1-1",
+   "media": "docs/media/2026-11/2026-11-08-4.jpg",
+   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-4.jpg",
+   "media_urls": [
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-4.jpg"
+   ],
+   "thumb": "thumbs/2026-11-08-4.jpg",
+   "platformen": [],
+   "links": {},
+   "totaal": {},
+   "score": {}
+  },
+  {
+   "id": "2026-11-08-3",
+   "datum": "2026-11-08",
+   "ref": "Johannes 14:27",
+   "tekst": "Vrede laat Ik u, Mijn vrede geef Ik u; niet gelijkerwijs de wereld hem geeft, geef Ik hem u. Uw hart worde niet ontroerd en zij niet versaagd.",
+   "hook": "Wat haalt jou vanavond nog uit je rust?",
+   "status": "gerenderd",
+   "variabelen": {
+    "huisstijl": "avond",
+    "thema": "troost",
+    "hook_stijl": "vraag",
+    "formaat": "video",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "verloop",
+    "tijdslot": "20:30",
+    "palet": "nacht",
+    "lettertype": "playfair",
+    "layout": "citaat",
+    "achtergrond": "licht",
+    "hook_op_beeld": false
+   },
+   "vers_id": "John-14-27-27",
+   "media": "docs/media/2026-11/2026-11-08-3.mp4",
+   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-3.mp4",
+   "media_urls": [
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-3.mp4"
+   ],
+   "thumb": "thumbs/2026-11-08-3.jpg",
+   "platformen": [],
+   "links": {},
+   "totaal": {},
+   "score": {}
+  },
+  {
+   "id": "2026-11-08-2",
+   "datum": "2026-11-08",
+   "ref": "Spreuken 15:1",
+   "tekst": "Een zacht antwoord keert de grimmigheid af; maar een smartend woord doet den toorn oprijzen.",
+   "hook": "Herken je dat? Eén scherp woord en het hele gesprek ontspoort.",
+   "status": "gerenderd",
+   "variabelen": {
+    "huisstijl": "avond",
+    "thema": "wijsheid",
+    "hook_stijl": "herkenning",
+    "formaat": "carrousel",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "verloop",
+    "tijdslot": "17:45",
+    "palet": "nacht",
+    "lettertype": "playfair",
+    "layout": "citaat",
+    "achtergrond": "licht",
+    "hook_op_beeld": false
+   },
+   "vers_id": "Proverbs-15-1-1",
+   "media": "docs/media/2026-11/2026-11-08-2-1.jpg",
+   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-2-1.jpg",
+   "media_urls": [
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-2-1.jpg",
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-2-2.jpg",
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-2-3.jpg"
+   ],
+   "thumb": "thumbs/2026-11-08-2.jpg",
+   "platformen": [],
+   "links": {},
+   "totaal": {},
+   "score": {}
+  },
   {
    "id": "2026-11-08-1",
    "datum": "2026-11-08",
@@ -364,127 +498,16 @@
    "t": "2026-11-07T15:19",
    "soort": "info",
    "tekst": "Bediening: Snel leren aangezet tot 2026-11-14: 5 posts per dag, elke dag leren"
+  },
+  {
+   "t": "2026-11-07T22:24",
+   "soort": "info",
+   "tekst": "4 extra posts voor 8 november gemaakt (snel leren stond na de dagelijkse run aan)"
   }
  ],
  "recente_fouten": [],
  "versen_totaal": 116,
  "planning": [
-  {
-   "datum": "2026-11-08",
-   "ref": "Spreuken 15:1",
-   "tekst": "Een zacht antwoord keert de grimmigheid af; maar een smartend woord doet den toorn oprijzen.",
-   "vers_id": "Proverbs-15-1-1",
-   "variabelen": {
-    "huisstijl": "avond",
-    "thema": "wijsheid",
-    "hook_stijl": "herkenning",
-    "formaat": "carrousel",
-    "uitleg_op_beeld": false,
-    "achtergrondbron": "verloop",
-    "tijdslot": "17:45",
-    "palet": "nacht",
-    "lettertype": "playfair",
-    "layout": "citaat",
-    "achtergrond": "licht",
-    "hook_op_beeld": false
-   },
-   "keuzebron": {
-    "huisstijl": "strategie",
-    "thema": "strategie",
-    "hook_stijl": "strategie",
-    "formaat": "strategie",
-    "uitleg_op_beeld": "verkenning",
-    "achtergrondbron": "verkenning",
-    "tijdslot": "verkenning"
-   }
-  },
-  {
-   "datum": "2026-11-08",
-   "ref": "Johannes 14:27",
-   "tekst": "Vrede laat Ik u, Mijn vrede geef Ik u; niet gelijkerwijs de wereld hem geeft, geef Ik hem u. Uw hart worde niet ontroerd en zij niet versaagd.",
-   "vers_id": "John-14-27-27",
-   "variabelen": {
-    "huisstijl": "avond",
-    "thema": "troost",
-    "hook_stijl": "vraag",
-    "formaat": "video",
-    "uitleg_op_beeld": false,
-    "achtergrondbron": "verloop",
-    "tijdslot": "20:30",
-    "palet": "nacht",
-    "lettertype": "playfair",
-    "layout": "citaat",
-    "achtergrond": "licht",
-    "hook_op_beeld": false
-   },
-   "keuzebron": {
-    "huisstijl": "verkenning",
-    "thema": "strategie",
-    "hook_stijl": "strategie",
-    "formaat": "verkenning",
-    "uitleg_op_beeld": "verkenning",
-    "achtergrondbron": "strategie",
-    "tijdslot": "strategie"
-   }
-  },
-  {
-   "datum": "2026-11-08",
-   "ref": "Psalm 23:1",
-   "tekst": "De HEERE is mijn Herder, mij zal niets ontbreken.",
-   "vers_id": "Psalms-23-1-1",
-   "variabelen": {
-    "huisstijl": "salie",
-    "thema": "troost",
-    "hook_stijl": "uitdaging",
-    "formaat": "afbeelding",
-    "uitleg_op_beeld": true,
-    "achtergrondbron": "verloop",
-    "tijdslot": "12:15",
-    "palet": "salie",
-    "lettertype": "cormorant",
-    "layout": "kader",
-    "achtergrond": "effen",
-    "hook_op_beeld": false
-   },
-   "keuzebron": {
-    "huisstijl": "strategie",
-    "thema": "strategie",
-    "hook_stijl": "verkenning",
-    "formaat": "strategie",
-    "uitleg_op_beeld": "strategie",
-    "achtergrondbron": "verkenning",
-    "tijdslot": "strategie"
-   }
-  },
-  {
-   "datum": "2026-11-08",
-   "ref": "2 Timotheüs 1:7",
-   "tekst": "Want God heeft ons niet gegeven een geest der vreesachtigheid, maar der kracht, en der liefde, en der gematigdheid.",
-   "vers_id": "II_Timothy-1-7-7",
-   "variabelen": {
-    "huisstijl": "zand",
-    "thema": "moed",
-    "hook_stijl": "geen",
-    "formaat": "afbeelding",
-    "uitleg_op_beeld": false,
-    "achtergrondbron": "beeld",
-    "tijdslot": "22:00",
-    "palet": "zand",
-    "lettertype": "dmserif",
-    "layout": "centraal",
-    "achtergrond": "verloop",
-    "hook_op_beeld": false
-   },
-   "keuzebron": {
-    "huisstijl": "strategie",
-    "thema": "verkenning",
-    "hook_stijl": "strategie",
-    "formaat": "verkenning",
-    "uitleg_op_beeld": "verkenning",
-    "achtergrondbron": "strategie",
-    "tijdslot": "strategie"
-   }
-  },
   {
    "datum": "2026-11-09",
    "ref": "Kolossenzen 3:2",
