@@ -1,9 +1,9 @@
 {
- "updated": "2026-11-07T15:08:59",
+ "updated": "2026-11-07T15:19:36",
  "agents": {
   "verskiezer": {
-   "t": "2026-11-07T14:33:54",
-   "task": "Koos Jesaja 43:19",
+   "t": "2026-11-07T15:19:36",
+   "task": "Posts per dag ingesteld op 3",
    "state": "done"
   },
   "designer": {
@@ -47,6 +47,10 @@
  ],
  "log": [
   {
+   "t": "15:19",
+   "msg": "Bediening: Posts per dag ingesteld op 3"
+  },
+  {
    "t": "15:06",
    "msg": "Statistieken lezen werkt"
   },
@@ -89,10 +93,6 @@
   {
    "t": "12:42",
    "msg": "Facebook-pagina aangezet: posts gaan voortaan naar Instagram en Facebook"
-  },
-  {
-   "t": "12:41",
-   "msg": "Statistieken lezen werkt"
   }
  ]
 }

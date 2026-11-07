@@ -4,7 +4,7 @@
  "handle": "@bibleverse_nl",
  "tijdzone": "Europe/Amsterdam",
  "github_repo": "sttpjoshua/bijbeltekst-systeem",
- "posts_per_dag": 1,
+ "posts_per_dag": 3,
  "max_posts_per_dag": 3,
  "verkenning": 0.2,
  "platformen_actief": [

@@ -1,10 +1,10 @@
 {
- "gegenereerd": "2026-11-07T15:08",
+ "gegenereerd": "2026-11-07T15:19",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
   "kanaalnaam": "Bibleverse",
-  "posts_per_dag": 1,
+  "posts_per_dag": 3,
   "max_posts_per_dag": 3,
   "verkenning": 0.2,
   "platformen_actief": [
@@ -354,6 +354,11 @@
    "t": "2026-11-07T15:06",
    "soort": "info",
    "tekst": "Statistieken lezen werkt"
+  },
+  {
+   "t": "2026-11-07T15:19",
+   "soort": "info",
+   "tekst": "Bediening: Posts per dag ingesteld op 3"
   }
  ],
  "recente_fouten": [],

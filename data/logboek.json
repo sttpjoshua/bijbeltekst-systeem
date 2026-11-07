@@ -168,5 +168,10 @@
   "t": "2026-11-07T15:06",
   "soort": "info",
   "tekst": "Statistieken lezen werkt"
+ },
+ {
+  "t": "2026-11-07T15:19",
+  "soort": "info",
+  "tekst": "Bediening: Posts per dag ingesteld op 3"
  }
 ]
