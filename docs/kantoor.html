@@ -137,6 +137,17 @@ body.tv .themes,body.tv #cfgline+div~.hint,body.tv .tabs,body.tv #cTop~.card:not
 body.tv .cvwrap{width:min(100%,calc((100vh - 240px) * 1.6));margin:0 auto}
 @media(max-width:700px){#toast{font-size:11px;padding:4px 6px;gap:6px;border-width:2px}#toast img{width:28px;height:35px}#alarm{font-size:12px}}body.tv .tag{font-size:calc(var(--u)*4.2px)}body.tv .bub{font-size:calc(var(--u)*4.2px)}
 body.tv header h1{font-size:2vw}body.tv aside{font-size:1.05vw}
+
+.pbord{position:absolute;pointer-events:auto;cursor:pointer;background:transparent;border:0;padding:0}
+.pbord:hover{outline:2px solid var(--gold);outline-offset:1px}
+.pweek{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin-top:10px}
+.pdag{background:#2a2144;border:1px solid #43376a;border-radius:6px;padding:6px;min-width:0}.pdag.vandaag{border-color:var(--gold)}
+.pdag h4{margin:0 0 6px;font-size:11px;color:var(--gold);display:flex;justify-content:space-between}.pdag h4 span{color:var(--muted);font-weight:400}
+.pkaart{border-radius:5px;padding:5px;margin-bottom:5px;font-size:11px;line-height:1.3;cursor:pointer;color:#fff;position:relative;overflow:hidden}
+.pkaart b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.pkaart img{width:100%;height:46px;object-fit:cover;border-radius:3px;display:block;margin-bottom:3px}
+.pkaart .s{opacity:.85;font-size:10px}.pkaart.plan{opacity:.8;border:1px dashed rgba(255,255,255,.6)}.pkaart.online{opacity:.6}
+.pdet{margin-top:12px;background:#1d1630;border:1px solid #43376a;border-radius:8px;padding:10px 12px;font-size:13px}
+@media(max-width:700px){.pweek{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
@@ -281,16 +292,8 @@ function drawStatic(){
   for(let k=0;56+k*12<H;k++){const y=56+k*12;R(0,y,W,1,P.line);for(let x=(k%2)*20;x<W;x+=40)R(x,y,1,12,P.line)}
   R(226,114,94,86,P.rug1);R(228,116,92,84,P.rug2);
   for(let y=118;y<198;y+=6)for(let x=230;x<318;x+=6)if(((x+y)/6)%2===0)R(x,y,2,2,P.rug3);
-  // bookshelf
-  R(8,5,50,47,'#7a4a22');R(10,7,46,43,'#4f2f14');
-  const bc=['#c0392b','#2e86c1','#d4ac0d','#27ae60','#8e44ad','#e67e22','#ecf0f1','#16a085'];
-  for(let s=0;s<3;s++){
-    const sy=8+s*14;let x=11;
-    while(x<53){const w=2+Math.floor(rnd()*2),h=9+Math.floor(rnd()*3);
-      if(x+w>54)break;R(x,sy+12-h,w,h,bc[Math.floor(rnd()*bc.length)]);x+=w+(rnd()<.2?1:0)}
-    R(10,sy+12,46,2,'#7a4a22');
-  }
-  R(11,8+12-11,4,11,'#1f1f26');R(12,10,2,1,'#f2c14e');
+  // planbord (prikbord met de posts van de komende week; inhoud wordt live getekend)
+  R(8,5,50,46,'#6b3f1d');R(10,7,46,42,'#c9a46a');R(10,7,46,1,'#d8b77e');R(6,51,54,2,'#8a5a2b');
   stained(70,6);stained(172,6);
   // volgersbord (krijtbord) met lampjes eronder
   R(209,7,32,28,'#6b3f1d');R(211,9,28,18,'#2f4a3a');R(211,9,28,1,'#3d5d4a');R(211,28,28,5,'#3a2412');R(207,35,36,2,'#8a5a2b');
@@ -405,7 +408,7 @@ let last=performance.now();
 function frame(now){
   const dt=Math.min(.05,(now-last)/1000);last=now;
   g.drawImage(bgc,0,0);
-  beams(now);clock();lampjes(now);
+  beams(now);clock();lampjes(now);planbord(now);
   AG.forEach(a=>{setDest(a,bestemming(a));rondlopen(a,now);move(a,dt)});
   for(let r=0;r<2;r++)AG.filter(a=>a.row===r).forEach(a=>{
     if(seated(a))drawChar(a,now);drawDesk(a,now);
@@ -711,13 +714,14 @@ function pinBody(a){
       <div class="acts" style="margin-top:8px"><input id="acTok" type="password" placeholder="github_pat_..." style="flex:1;min-width:150px"><button id="acSave" class="go">Opslaan</button></div>
       <div class="k">Daarna kun je mij hierop sturen</div><div class="acts">${acts(a.id).map(x=>`<span class="chip">${esc(x.t)}</span>`).join('')}</div>`;
   }
-  return (a.id==='designer'?designerBak():'')+`<div class="k">Stuur mij op</div><div class="acts col">${acts(a.id).map((x,i)=>`<button data-i="${i}"${x.leeg?' disabled title="Er is nu niets om te kiezen"':''}>${esc(x.t)}${x.leeg?' (niets klaar)':''}</button>`).join('')}</div>
+  return (a.id==='designer'?designerBak():'')+(a.id==='verskiezer'?verskiezerPlan():'')+`<div class="k">Stuur mij op</div><div class="acts col">${acts(a.id).map((x,i)=>`<button data-i="${i}"${x.leeg?' disabled title="Er is nu niets om te kiezen"':''}>${esc(x.t)}${x.leeg?' (niets klaar)':''}</button>`).join('')}</div>
     <div id="acMsg"></div><div class="hint" style="margin-top:8px"><a href="#" id="acForget">Sleutel van dit apparaat verwijderen</a></div>`;
 }
 function bindPin(a){
   const sv=acBody.querySelector('#acSave');
   if(sv)sv.onclick=()=>{const v=acBody.querySelector('#acTok').value.trim();if(!v)return;try{localStorage.setItem(KEY,v)}catch(e){alert('Deze browser laat niet opslaan.');return}acBody.innerHTML=pinBody(a);bindPin(a)};
   acBody.querySelectorAll('.acts.col button').forEach(b=>b.onclick=()=>showForm(a,+b.dataset.i));
+  const pb=acBody.querySelector('#vpPlan');if(pb)pb.onclick=()=>{hideCard();toonPlanning()};
   const bk=acBody.querySelector('#dbAlles');if(bk)bk.onclick=()=>{hideCard();toonGoedkeuren()};
   acBody.querySelectorAll('[data-dbok]').forEach(b=>b.onclick=()=>stuurK({actie:'goedkeuren',post:b.dataset.dbok},b,acBody.querySelector('#dbMsg')));
   acBody.querySelectorAll('[data-dbopen]').forEach(b=>b.onclick=()=>{hideCard();toonGoedkeuren()});
@@ -898,6 +902,12 @@ function teKeuren(){
   const d=new Date();d.setHours(0,0,0,0);
   return ((DJ&&DJ.posts)||[]).filter(p=>['gerenderd','opnieuw_maken','wacht_op_tekst'].includes(p.status)&&tijdVan(p)>=d)
     .sort((a,b)=>tijdVan(a)-tijdVan(b));
+}
+function verskiezerPlan(){
+  const {dagen,items}=weekItems();const morgen=dagen[1];
+  const m=items.filter(p=>p.datum===morgen);
+  return `<div class="k">Morgen op de planning</div>${m.length?m.map(p=>`<div class="vo"><span style="width:10px;height:10px;border-radius:2px;background:${STIJLKL[p.variabelen.huisstijl]||'#777'};flex:0 0 auto"></span><div style="flex:1;min-width:0"><b>${esc(p.variabelen.tijdslot)} ${esc(p.ref)}</b><div class="hint">${p.variabelen.formaat==='video'?'video':'carrousel'} · ${esc((p.variabelen.thema||'').replace('_',' '))} · ${p.soort==='plan'?'voorlopig':'klaar'}</div></div></div>`).join(''):'<div class="hint">Nog niets gepland.</div>'}
+    <button class="kbtn goud" id="vpPlan" style="width:100%;margin:8px 0 10px">📅 Planbord van de hele week</button>`;
 }
 function designerBak(){
   const l=teKeuren();
@@ -1098,6 +1108,66 @@ setInterval(tvTik,60000);if(TV)setTimeout(()=>zetTv(true),500);
 
 /* ---- elke paar seconden bijwerken ---- */
 setInterval(()=>{if(!DJ)return;alarmCheck();vieringCheck();toonOverleg()},3000);
+
+
+/* ---- planbord aan de muur ---- */
+const STIJLKL={avond:'#2b2f4a',zand:'#d9c3a0',salie:'#a8b8a0',zonsopgang:'#ff6f61',hemelsblauw:'#5aa6e6',paars:'#6a3fc0',roze:'#f7a1b8',bosgroen:'#3f8a5c',mint:'#8fdcc7',perzik:'#ffc28b'};
+const dagStr=d=>d.toISOString().slice(0,10);
+function weekItems(){
+  const vandaag=new Date();vandaag.setHours(12,0,0,0);
+  const dagen=[...Array(7)].map((_,i)=>{const d=new Date(vandaag);d.setDate(d.getDate()+i);return dagStr(d)});
+  const echt=((DJ&&DJ.posts)||[]).filter(p=>dagen.includes(p.datum)&&!['afgekeurd','overgeslagen'].includes(p.status)).map(p=>({...p,soort:p.status==='gepubliceerd'?'online':'echt'}));
+  const plan=((DJ&&DJ.planning)||[]).filter(p=>dagen.includes(p.datum)).map(p=>({...p,soort:'plan',id:'plan-'+p.datum+p.variabelen.tijdslot}));
+  return {dagen,items:[...echt,...plan].sort((a,b)=>(a.datum+a.variabelen.tijdslot).localeCompare(b.datum+b.variabelen.tijdslot))};
+}
+function planbord(t){
+  const {dagen,items}=weekItems();
+  const kw=6,x0=11,y0=9;
+  dagen.forEach((d,i)=>{
+    const x=x0+i*kw+(i>0?1:0)*0;
+    R(x,y0,kw-1,2,i===0?'#f2c14e':'#8a6a3a');
+    items.filter(p=>p.datum===d).slice(0,6).forEach((p,j)=>{
+      const y=y0+4+j*6,kl=STIJLKL[p.variabelen.huisstijl]||'#999';
+      R(x,y,kw-1,4,p.soort==='plan'?'#e9dcc0':kl);
+      if(p.soort==='plan')R(x,y,kw-1,1,kl);
+      if(p.variabelen.formaat==='video')R(x+1,y+1,2,2,'#fff');
+      if(p.soort==='online')R(x+3,y+1,1,2,'#2e7d4f');
+      R(x+2,y-1,1,1,'#c0392b'); // punaise
+    });
+  });
+}
+const pbEl=document.createElement('button');pbEl.className='pbord';pbEl.title='Planbord: klik voor de planning van deze week';
+Object.assign(pbEl.style,{left:(8/W*100)+'%',top:(5/H*100)+'%',width:(50/W*100)+'%',height:(46/H*100)+'%'});
+pbEl.addEventListener('click',e=>{e.stopPropagation();toonPlanning()});$('ov').appendChild(pbEl);
+let PLAN_SEL=null;
+function toonPlanning(sel){
+  PLAN_SEL=sel||null;
+  const {dagen,items}=weekItems();const vd=dagStr(new Date());
+  const naam=d=>{const x=new Date(d+'T12:00');return d===vd?'Vandaag':x.toLocaleDateString('nl-NL',{weekday:'short'})};
+  const det=PLAN_SEL&&items.find(p=>p.id===PLAN_SEL);
+  openPaneel('plan',`<h2>📅 Planbord</h2><div class="hint">Gekleurde kaartjes zijn klaar of online; gestippeld is het voorlopige plan, dat elke nacht wordt bijgewerkt met wat het systeem leert. Klik op een kaartje voor meer.</div>
+   <div class="pweek">${dagen.map(d=>`<div class="pdag${d===vd?' vandaag':''}"><h4>${esc(naam(d))}<span>${esc(d.slice(8,10)+'-'+d.slice(5,7))}</span></h4>
+     ${items.filter(p=>p.datum===d).map(p=>{const kl=STIJLKL[p.variabelen.huisstijl]||'#777';
+       const licht=['zand','salie','mint','perzik','roze'].includes(p.variabelen.huisstijl);
+       return `<div class="pkaart ${p.soort}" data-pid="${esc(p.id)}" style="background:${kl};color:${licht?'#2a1a10':'#fff'}">${p.thumb&&p.soort!=='plan'?`<img src="${esc(p.thumb)}" alt="">`:''}<b>${esc(p.variabelen.tijdslot)} ${esc(p.ref)}</b><div class="s">${p.variabelen.formaat==='video'?'▶ video':'▤ carrousel'} · ${esc((p.variabelen.thema||'').replace('_',' '))}</div><div class="s">${p.soort==='online'?'✓ online':p.soort==='plan'?'voorlopig':p.status==='gerenderd'?(p.goedgekeurd?'✓ goedgekeurd':'klaar'):'wordt gemaakt'}</div></div>`}).join('')||'<div class="hint">Leeg</div>'}
+   </div>`).join('')}</div>
+   ${det?`<div class="pdet"><b>${esc(det.ref)}</b> · ${esc(det.datum.slice(8,10)+'-'+det.datum.slice(5,7))} om ${esc(det.variabelen.tijdslot)} · stijl ${esc(det.variabelen.huisstijl)}
+     <div style="margin:6px 0;line-height:1.45">${esc(det.tekst||'')}</div>
+     ${det.soort==='plan'?`<div class="hint">Nog een plan: de teksten en het beeld worden een dag van tevoren gemaakt.</div>
+       <div class="rij" style="display:flex;gap:6px;margin-top:8px;flex-wrap:wrap"><button class="kbtn" data-pa="ander_vers">Ander vers kiezen</button><button class="kbtn rood" data-pa="vers_uitsluiten">Dit vers nooit meer</button></div>`
+     :det.soort==='online'?`<div class="hint">Staat online.${(det.links||{}).instagram?` <a href="${esc(det.links.instagram)}" target="_blank" rel="noopener" style="color:var(--gold)">Bekijk op Instagram</a>`:''}</div>`
+     :`<div class="rij" style="display:flex;gap:6px;margin-top:8px;flex-wrap:wrap"><button class="kbtn goud" data-pa="naar_goed">Bekijken en goedkeuren bij de Designer</button></div>`}
+     <div class="kmsg" id="pMsg"></div></div>`:''}`);
+}
+$('kInhoud').addEventListener('click',e=>{
+  if(paneelOpen!=='plan')return;
+  const k=e.target.closest('[data-pid]');if(k){toonPlanning(k.dataset.pid);return}
+  const b=e.target.closest('[data-pa]');if(!b)return;
+  const {items}=weekItems();const p=items.find(x=>x.id===PLAN_SEL);if(!p)return;
+  if(b.dataset.pa==='naar_goed'){toonGoedkeuren();return}
+  if(b.dataset.pa==='vers_uitsluiten'&&!b.dataset.zeker){b.dataset.zeker=1;b.textContent='Zeker? Klik nog eens';return}
+  stuurK({actie:b.dataset.pa,vers_id:p.vers_id,ref:p.ref},b,$('pMsg'));
+},true);
 
 })();
 </script>
