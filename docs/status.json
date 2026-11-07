@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T22:53:20",
+ "updated": "2026-11-07T22:55:47",
  "agents": {
   "verskiezer": {
    "t": "2026-11-07T22:23:58",
@@ -52,6 +52,10 @@
  ],
  "log": [
   {
+   "t": "22:55",
+   "msg": "Voorraad verzen aangevuld naar 300 (Statenvertaling): genoeg voor ongeveer 2 maanden bij 5 posts per dag"
+  },
+  {
    "t": "22:53",
    "msg": "Nieuwe frisse huisstijlen toegevoegd (zonsopgang, hemelsblauw, paars, roze, bosgroen, mint, perzik); donker 'a"
   },
@@ -94,10 +98,6 @@
   {
    "t": "15:06",
    "msg": "Verbinding met Facebook-pagina werkt (Bibleversenl)"
-  },
-  {
-   "t": "15:06",
-   "msg": "Token heeft alle rechten, ook voor statistieken"
   }
  ],
  "lampen": [
