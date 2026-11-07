@@ -1,0 +1,98 @@
+{
+ "updated": "2026-11-07T12:52:53",
+ "agents": {
+  "verskiezer": {
+   "t": "2026-11-07T00:40:00",
+   "task": "Koos Kolossenzen 3:15",
+   "state": "done"
+  },
+  "designer": {
+   "t": "2026-11-07T00:41:00",
+   "task": "Ontwierp Kolossenzen 3:15",
+   "state": "done"
+  },
+  "video": {
+   "t": "2026-11-07T00:41:00",
+   "task": "Monteerde video Kolossenzen 3:15",
+   "state": "done"
+  },
+  "dispatcher": {
+   "t": "2026-11-07T12:30:00",
+   "task": "Postte Kolossenzen 3:15 op instagram",
+   "state": "done"
+  },
+  "controller": {
+   "t": "2026-11-07T12:41:00",
+   "task": "Controleerde de verbindingen",
+   "state": "done"
+  }
+ },
+ "stats": {
+  "posts_today": 1,
+  "posts_total": 1,
+  "reach_7d": 0,
+  "best_time": "nog onbekend",
+  "next_post": null
+ },
+ "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
+ "platforms": {
+  "instagram": 0,
+  "facebook": 0,
+  "youtube": 0,
+  "tiktok": 0
+ },
+ "platforms_actief": [
+  "instagram",
+  "facebook"
+ ],
+ "log": [
+  {
+   "t": "12:42",
+   "msg": "Facebook-pagina aangezet: posts gaan voortaan naar Instagram en Facebook"
+  },
+  {
+   "t": "12:41",
+   "msg": "Statistieken lezen werkt"
+  },
+  {
+   "t": "12:41",
+   "msg": "Verbinding met Facebook-pagina werkt (Bibleversenl)"
+  },
+  {
+   "t": "12:41",
+   "msg": "Token heeft alle rechten, ook voor statistieken"
+  },
+  {
+   "t": "12:41",
+   "msg": "Verbinding met Instagram werkt (@bibleverse_nl)"
+  },
+  {
+   "t": "12:34",
+   "msg": "Statistieken lezen werkt"
+  },
+  {
+   "t": "12:34",
+   "msg": "Facebook-verbinding mislukt: 400: {\"error\":{\"message\":\"(#100) Object does not exist, cannot be loaded due to m"
+  },
+  {
+   "t": "12:34",
+   "msg": "Token heeft alle rechten, ook voor statistieken"
+  },
+  {
+   "t": "12:34",
+   "msg": "Verbinding met Instagram werkt (@bibleverse_nl)"
+  },
+  {
+   "t": "12:32",
+   "msg": "Statistieken lezen werkt"
+  },
+  {
+   "t": "12:32",
+   "msg": "Facebook-verbinding mislukt: 400: {\"error\":{\"message\":\"(#100) Object does not exist, cannot be loaded due to m"
+  },
+  {
+   "t": "12:32",
+   "msg": "Token heeft alle rechten, ook voor statistieken"
+  }
+ ]
+}

@@ -206,9 +206,11 @@ def cmd_posten():
                     continue  # YouTube en TikTok volgen na hun keuring
                 p.setdefault("gepubliceerd", {})[plat] = {"id": mid, "url": link, "t": dt.datetime.now(TZ).isoformat(timespec="minutes")}
                 S.cmd_log(f"{p['id']} online op {plat}: {p['ref']}")
+                S.activiteit("dispatcher", f"Postte {p['ref']} op {plat}")
             except Exception as e:
                 p["fouten"] = p.get("fouten", 0) + 1
                 S.cmd_log(f"{p['id']} {plat} mislukt: {e}", "fout"); fouten += 1
+                S.activiteit("dispatcher", f"Post op {plat} mislukt", "error")
                 if p["fouten"] >= 3:
                     p["status"] = "fout"
         ondersteund = [x for x in cfg["platformen_actief"] if x in ("instagram", "facebook")]
@@ -272,6 +274,7 @@ def cmd_statistieken():
         S.cmd_stats(S.P("stats_tmp.json"))
         os.remove(S.P("stats_tmp.json"))
         S.cmd_log(f"Statistieken opgehaald voor {len(rij)} posts")
+        S.activiteit("analist", f"Las cijfers van {len(rij)} posts")
     try:
         S.cmd_opruimen(30)
     except Exception as e:
@@ -285,6 +288,7 @@ def cmd_token():
         # Facebook/system-user token: niet te verversen, wel controleren of het werkt
         info = http("GET", f"{API}/{uid}", {"fields": "username", "access_token": tok})
         S.cmd_log(f"Verbinding met Instagram werkt (@{info.get('username')})")
+        S.activiteit("controller", "Controleerde de verbindingen")
         try:
             rechten = [x["permission"] for x in http("GET", f"{API}/me/permissions", {"access_token": tok}).get("data", [])
                        if x.get("status") == "granted"]

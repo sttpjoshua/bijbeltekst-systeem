@@ -163,6 +163,7 @@ def cmd_kies(datum):
                       "muziek": minst_gebruikt(mat["muziek"], posts + nieuw, "muziek", rnd) if v["formaat"] == "video" else None,
                       "geluid": (rnd.choice(mat["geluid"]) if mat["geluid"] and v["formaat"] == "video" and v["achtergrondbron"] == "beeld" else None)})
     bewaar("data/posts.json", posts + nieuw)
+    activiteit("verskiezer", "Koos " + ", ".join(p["ref"] for p in nieuw))
     print(json.dumps([{k: p[k] for k in ("id", "ref", "tekst", "variabelen")} for p in nieuw], ensure_ascii=False, indent=1))
     print("\nVul nu per post in data/posts.json in: 'hook', 'caption', 'hashtags'; 'uitleg' als uitleg_op_beeld true is; 'betekenis' en 'toepassing' bij formaat carrousel. Zie TAKEN.md.")
 
@@ -201,6 +202,9 @@ def cmd_render(datum):
             p["media_urls"] = [url(r) for r in [p["media"]] + p["media_extra"]]
         p["status"] = "gerenderd"
         print("OK", p["id"], rel)
+        if fmt == "video":
+            activiteit("video", f"Monteerde video {p['ref']}" + (" met muziek" if p.get("muziek") else ""))
+        activiteit("designer", f"Ontwierp {p['ref']} in stijl {p['variabelen'].get('huisstijl', '')}")
     bewaar("data/posts.json", posts)
     if fouten:
         sys.exit(1)
@@ -391,6 +395,7 @@ def cmd_leer():
     hist.append({"datum": vandaag, "versie": strat["versie"], "gewichten": strat["gewichten"]})
     bewaar("data/leergeschiedenis.json", hist)
     bewaar(f"rapporten/{vandaag}.json", rapport)
+    activiteit("analist", f"Weekanalyse: strategie v{strat['versie']}")
     for dim, r in rapport["dimensies"].items():
         top = sorted(r.items(), key=lambda x: -x[1]["nieuw"])[:2]
         print(f"{dim:14s} beste: " + ", ".join(f"{k} ({v['nieuw']}, n={v['n']})" for k, v in top))
@@ -424,7 +429,50 @@ def cmd_dashboard():
                                if l.get("soort") == "fout" and not l.get("opgelost") and l["t"] >= (dt.datetime.now() - dt.timedelta(hours=48)).isoformat(timespec="minutes")],
             "versen_totaal": len(laad("data/verzen.json", []))}
     bewaar("docs/data.json", data)
+    schrijf_status(cfg, strat, posts, data["recente_fouten"])
     print("docs/data.json bijgewerkt:", len(lijst), "posts")
+
+def schrijf_status(cfg, strat, posts, fouten):
+    """docs/status.json voor het pixel-kantoor. Toestanden worden in de browser bepaald op basis van tijd."""
+    nu = dt.datetime.now()
+    act = laad("data/activiteit.json", {})
+    agents = {k: dict(v) for k, v in act.items()}
+    if fouten:
+        agents["controller"] = {"t": fouten[-1]["t"], "task": fouten[-1]["tekst"][:70], "state": "error"}
+    elif "controller" not in agents:
+        agents["controller"] = {"t": nu.isoformat(timespec="seconds"), "task": "Alles werkt", "state": "done"}
+    vandaag = nu.date().isoformat()
+    grens7 = (nu - dt.timedelta(days=7)).date().isoformat()
+    per_plat, bereik7 = {}, 0
+    for p in posts:
+        for plat, mom in p.get("stats", {}).items():
+            st = mom.get("7d") or mom.get("24u") or {}
+            r = st.get("reach") or st.get("views") or 0
+            per_plat[plat] = per_plat.get(plat, 0) + r
+            if p["datum"] >= grens7:
+                bereik7 += r
+    volgende = sorted((p["datum"] + "T" + p["variabelen"]["tijdslot"] + ":00") for p in posts if p["status"] == "gerenderd")
+    tijden = strat["gewichten"].get("tijdslot", {})
+    beste = max(tijden, key=tijden.get) if strat.get("bijgewerkt") and tijden else "nog onbekend"
+    inz = strat.get("inzichten") or []
+    status = {
+        "updated": nu.isoformat(timespec="seconds"),
+        "agents": agents,
+        "stats": {"posts_today": sum(1 for p in posts if p["datum"] == vandaag and p["status"] == "gepubliceerd"),
+                  "posts_total": sum(1 for p in posts if p["status"] == "gepubliceerd"),
+                  "reach_7d": bereik7, "best_time": beste, "next_post": volgende[0] if volgende else None},
+        "learned": inz[-1]["tekst"] if inz else "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
+        "platforms": {k: per_plat.get(k, 0) for k in ("instagram", "facebook", "youtube", "tiktok")},
+        "platforms_actief": cfg.get("platformen_actief", []),
+        "log": [{"t": l["t"][11:16], "msg": l["tekst"][:110]} for l in reversed(laad("data/logboek.json", [])[-12:])],
+    }
+    bewaar("docs/status.json", status)
+
+def activiteit(agent, taak, staat="done"):
+    """Laatste actie per medewerker in het pixel-kantoor (docs/kantoor.html)."""
+    a = laad("data/activiteit.json", {})
+    a[agent] = {"t": dt.datetime.now().isoformat(timespec="seconds"), "task": taak, "state": staat}
+    bewaar("data/activiteit.json", a)
 
 def cmd_log(tekst, soort="info"):
     log = laad("data/logboek.json", [])
