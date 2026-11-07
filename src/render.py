@@ -17,7 +17,26 @@ PALETTEN = {
     "oceaan":     ("#023047", "#219ebc", "#f1faee", "#ffb703"),
     "roze_avond": ("#3d2c4e", "#b56576", "#fff1f3", "#ffcdb2"),
     "wit":        ("#fbfaf7", "#f1eee8", "#1b1b1b", "#b08968"),
+    # Frisse paletten (naar de voorbeelddesigns in het kantoor)
+    "zonsopgang_fris": ("#ffb347", "#a8326b", "#fff8ea", "#fff1c9"),
+    "hemelsblauw":     ("#9bd2ff", "#3a86c8", "#ffffff", "#eaf6ff"),
+    "diep_paars":      ("#8a5ae0", "#2a1650", "#f4ecff", "#d9c6ff"),
+    "zachtroze":       ("#ffe3ea", "#f7a1b8", "#5a2236", "#8c3354"),
+    "bosgroen":        ("#58a874", "#1f5a3d", "#f1fff4", "#d8f5c8"),
+    "mint":            ("#e3fcf4", "#8fdcc7", "#0f4a3c", "#1f7a63"),
+    "perzik":          ("#fff6cc", "#ffc28b", "#5a3008", "#b8571a"),
 }
+
+# Verlopen met meer kleuren en een hoek (graden, CSS-stijl: 180 = van boven naar beneden)
+VERLOPEN = {
+    "zonsopgang_fris": (160, ["#ffb347", "#ff6f61", "#a8326b"], [0, .58, 1]),
+    "hemelsblauw":     (180, ["#9bd2ff", "#3a86c8"], [0, 1]),
+    "zachtroze":       (200, ["#ffe3ea", "#f7a1b8"], [0, 1]),
+    "bosgroen":        (170, ["#58a874", "#1f5a3d"], [0, 1]),
+    "mint":            (165, ["#e3fcf4", "#8fdcc7"], [0, 1]),
+    "perzik":          (150, ["#fff6cc", "#ffd59e", "#ffb38a"], [0, .5, 1]),
+}
+RADIAAL = {"diep_paars": ((0.25, 0.15), ["#8a5ae0", "#2a1650"], 0.75)}
 
 LETTERTYPES = {
     # naam: (bestand, variatie of None)
@@ -26,6 +45,9 @@ LETTERTYPES = {
     "dmserif":   ("DMSerifDisplay-Regular.ttf", None),
     "lora":      ("Lora.ttf", b"Regular"),
     "montserrat": ("Montserrat.ttf", b"SemiBold"),
+    "montserrat_zwaar": ("Montserrat.ttf", b"ExtraBold"),
+    "cormorant_cursief": ("CormorantGaramond-Italic.ttf", b"Medium Italic"),
+    "lora_half": ("Lora.ttf", b"Medium"),
 }
 
 def _hex(c):
@@ -50,6 +72,8 @@ def achtergrond(b, h, palet, stijl, seed):
     img = Image.new("RGB", (b, h), boven)
     if stijl == "effen":
         return img
+    if stijl in ("diagonaal", "radiaal"):
+        return _verloop_plus(b, h, palet, stijl)
     # verticaal verloop
     strook = Image.new("RGB", (1, h))
     for y in range(h):
@@ -71,6 +95,36 @@ def achtergrond(b, h, palet, stijl, seed):
     ruis = Image.effect_noise((b, h), 18).convert("RGB")
     img = Image.blend(img, ruis, 0.04)
     return img
+
+def _verloop_plus(b, h, palet, stijl):
+    """Verloop met meerdere kleuren onder een hoek, of radiaal (zoals de voorbeelddesigns)."""
+    try:
+        import numpy as np
+    except ImportError:  # zonder numpy: gewoon verloop van de eerste naar de laatste kleur
+        return achtergrond(b, h, palet, "verloop", 0)
+    yy, xx = np.mgrid[0:h, 0:b].astype(np.float32)
+    if stijl == "radiaal" and palet in RADIAAL:
+        (cx, cy), kleuren, straal = RADIAAL[palet]
+        t = np.hypot((xx - cx * b) / b, (yy - cy * h) / b) / straal
+        stops = [0, 1]
+    else:
+        hoek, kleuren, stops = VERLOPEN.get(palet, (180, [PALETTEN[palet][0], PALETTEN[palet][1]], [0, 1]))
+        a = math.radians(hoek)
+        dx, dy = math.sin(a), -math.cos(a)  # CSS: 180deg = naar beneden
+        proj = (xx - b / 2) * dx + (yy - h / 2) * dy
+        lengte = abs(b / 2 * dx) + abs(h / 2 * dy)
+        t = (proj / lengte + 1) / 2
+    t = np.clip(t, 0, 1)
+    rgb = [np.array(_hex(k), dtype=np.float32) for k in kleuren]
+    uit = np.zeros((h, b, 3), dtype=np.float32)
+    for i in range(len(stops) - 1):
+        lo, hi = stops[i], stops[i + 1]
+        m = (t >= lo) & (t <= hi) if i == len(stops) - 2 else (t >= lo) & (t < hi)
+        f = ((t - lo) / max(hi - lo, 1e-6))[..., None]
+        uit = np.where(m[..., None], rgb[i] * (1 - f) + rgb[i + 1] * f, uit)
+    img = Image.fromarray(uit.astype(np.uint8))
+    ruis = Image.effect_noise((b, h), 12).convert("RGB")  # heel lichte korrel tegen banding
+    return Image.blend(img, ruis, 0.025)
 
 def _wrap(tekst, font, max_b, draw):
     woorden, regels, huidig = tekst.split(), [], ""
@@ -137,6 +191,8 @@ def tekstlaag(b, h, post, ruimte_boven=0, ruimte_onder=0):
         ref_h += int(b * 0.05) + len(uitleg_regels) * int(uf.size * 1.4)
     beschikbaar = bodem - top - ref_h
     grootte = int(b * (0.078 if ruimte_boven else 0.066))
+    if v["layout"] == "links":  # groter en luchtiger bij korte verzen, zoals de voorbeelden
+        grootte = int(grootte * (1.25 if len(tekst) < 80 else 1.08 if len(tekst) < 140 else 0.95))
     while grootte > 26:
         f = _font(v["lettertype"], grootte)
         regels = _wrap(tekst, f, max_b, d)
@@ -157,17 +213,23 @@ def tekstlaag(b, h, post, ruimte_boven=0, ruimte_onder=0):
         p = int(b * 0.06)
         d.rectangle([p, ruimte_boven + p, b - p, h - ruimte_onder - p], outline=accent + (200,), width=3)
 
+    links = v["layout"] == "links"
+    tx, an = (marge, "la") if links else (b // 2, "ma")
     for i, r in enumerate(regels):
-        d.text((b // 2, y0 + i * lh), r, font=f, fill=kleur + (255,), anchor="ma")
+        d.text((tx, y0 + i * lh), r, font=f, fill=kleur + (255,), anchor=an)
 
     rf = _klein_font(int(b * 0.032), b"SemiBold")
     ry = y0 + blok_h + int(b * 0.05)
-    d.line([b // 2 - 40, ry - int(b * 0.02), b // 2 + 40, ry - int(b * 0.02)], fill=accent + (255,), width=3)
-    d.text((b // 2, ry), (post["ref"] + ("  \u00b7  NBV21" if post.get("vertaling") == "NBV21" else "")).upper(), font=rf, fill=accent + (255,), anchor="ma")
+    reftekst = (post["ref"] + ("  \u00b7  NBV21" if post.get("vertaling") == "NBV21" else "")).upper()
+    if links:
+        d.text((tx, ry), reftekst, font=rf, fill=accent + (255,), anchor="la")
+    else:
+        d.line([b // 2 - 40, ry - int(b * 0.02), b // 2 + 40, ry - int(b * 0.02)], fill=accent + (255,), width=3)
+        d.text((b // 2, ry), reftekst, font=rf, fill=accent + (255,), anchor="ma")
     if uitleg_regels:
         uy = ry + int(b * 0.075)
         for i, r in enumerate(uitleg_regels):
-            d.text((b // 2, uy + i * int(uf.size * 1.4)), r, font=uf, fill=kleur + (205,), anchor="ma")
+            d.text((tx, uy + i * int(uf.size * 1.4)), r, font=uf, fill=kleur + (205,), anchor=an)
 
     if v.get("hook_op_beeld") and post.get("beeld_hook"):
         hf = _klein_font(int(b * 0.034), b"Medium")
@@ -261,8 +323,9 @@ def _tekstslide(post, titel, body, pad, nummer):
             break
         grootte -= 2
     y0 = int(h * 0.27) + (int(h * 0.55) - lh * len(regels)) // 2
+    links = v["layout"] == "links"
     for i, r in enumerate(regels):
-        d.text((b // 2, y0 + i * lh), r, font=f, fill=kleur + (255,), anchor="ma")
+        d.text((marge if links else b // 2, y0 + i * lh), r, font=f, fill=kleur + (255,), anchor="la" if links else "ma")
     rf = _klein_font(int(b * 0.026), b"SemiBold")
     d.text((b // 2, int(h * 0.85)), (post["ref"] + ("  \u00b7  NBV21" if post.get("vertaling") == "NBV21" else "")).upper(), font=rf, fill=accent + (220,), anchor="ma")
     hy = h - int(h * (0.115 if v["layout"] == "kader" else 0.085))

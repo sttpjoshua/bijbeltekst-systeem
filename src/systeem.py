@@ -36,6 +36,14 @@ HUISSTIJLEN = {
     "avond":  {"palet": "nacht", "lettertype": "playfair",  "layout": "citaat",   "achtergrond": "licht"},
     "zand":   {"palet": "zand",  "lettertype": "dmserif",   "layout": "centraal", "achtergrond": "verloop"},
     "salie":  {"palet": "salie", "lettertype": "cormorant", "layout": "kader",    "achtergrond": "effen"},
+    # Frisse stijlen (naar de voorbeelddesigns)
+    "zonsopgang":  {"palet": "zonsopgang_fris", "lettertype": "lora",              "layout": "links",    "achtergrond": "diagonaal"},
+    "hemelsblauw": {"palet": "hemelsblauw",     "lettertype": "montserrat_zwaar",  "layout": "links",    "achtergrond": "diagonaal"},
+    "paars":       {"palet": "diep_paars",      "lettertype": "lora",              "layout": "links",    "achtergrond": "radiaal"},
+    "roze":        {"palet": "zachtroze",       "lettertype": "cormorant_cursief", "layout": "links",    "achtergrond": "diagonaal"},
+    "bosgroen":    {"palet": "bosgroen",        "lettertype": "montserrat_zwaar",  "layout": "links",    "achtergrond": "diagonaal"},
+    "mint":        {"palet": "mint",            "lettertype": "dmserif",           "layout": "centraal", "achtergrond": "diagonaal"},
+    "perzik":      {"palet": "perzik",          "lettertype": "playfair",          "layout": "citaat",   "achtergrond": "diagonaal"},
 }
 
 DIMENSIES = {
@@ -50,7 +58,8 @@ DIMENSIES = {
 }
 
 # Startgewichten die afwijken van 1,0 (Joshua: vooral kleurverloop, foto's als aanvulling)
-START_GEWICHT = {("achtergrondbron", "beeld"): 0.6}
+START_GEWICHT = {("achtergrondbron", "beeld"): 0.6,
+                 ("huisstijl", "avond"): 0.35}  # Joshua wil een frisse uitstraling: donker minder vaak
 
 def nieuwe_strategie():
     return {"versie": 1, "bijgewerkt": None,

@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T22:48:40",
+ "updated": "2026-11-07T22:53:20",
  "agents": {
   "verskiezer": {
    "t": "2026-11-07T22:23:58",
@@ -7,12 +7,12 @@
    "state": "done"
   },
   "designer": {
-   "t": "2026-11-07T22:24:24",
-   "task": "Ontwierp 2 Timotheüs 1:7 in stijl zand",
+   "t": "2026-11-07T22:53:09",
+   "task": "Ontwierp 2 Timotheüs 1:7 in stijl bosgroen",
    "state": "done"
   },
   "video": {
-   "t": "2026-11-07T22:24:23",
+   "t": "2026-11-07T22:53:09",
    "task": "Monteerde video Johannes 14:27 met muziek",
    "state": "done"
   },
@@ -51,6 +51,10 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "22:53",
+   "msg": "Nieuwe frisse huisstijlen toegevoegd (zonsopgang, hemelsblauw, paars, roze, bosgroen, mint, perzik); donker 'a"
+  },
   {
    "t": "22:48",
    "msg": "Statistieken lezen werkt"
@@ -94,10 +98,6 @@
   {
    "t": "15:06",
    "msg": "Token heeft alle rechten, ook voor statistieken"
-  },
-  {
-   "t": "15:06",
-   "msg": "Verbinding met Instagram werkt (@bibleverse_nl)"
   }
  ],
  "lampen": [
