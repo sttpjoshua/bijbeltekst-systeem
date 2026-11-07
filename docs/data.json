@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-07T12:32",
+ "gegenereerd": "2026-11-07T12:34",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -211,6 +211,26 @@
    "t": "2026-11-07T12:32",
    "soort": "info",
    "tekst": "Statistieken lezen werkt"
+  },
+  {
+   "t": "2026-11-07T12:34",
+   "soort": "info",
+   "tekst": "Verbinding met Instagram werkt (@bibleverse_nl)"
+  },
+  {
+   "t": "2026-11-07T12:34",
+   "soort": "info",
+   "tekst": "Token heeft alle rechten, ook voor statistieken"
+  },
+  {
+   "t": "2026-11-07T12:34",
+   "soort": "fout",
+   "tekst": "Facebook-verbinding mislukt: 400: {\"error\":{\"message\":\"(#100) Object does not exist, cannot be loaded due to missing permission or reviewable feature, or does not support this operation. This endpoint requires the 'pages_read_engagement' permission or the 'Page Public Content Access' feature or the 'Page Public Metadata Access' feature. Refer to https:\\/\\/developers.facebook.com\\/docs\\/apps\\/review\\/login-permissions#manage-pages, | Rechten in token: business_management, instagram_basic, instagram_content_publish, instagram_manage_insights, pages_show_list, public_profile"
+  },
+  {
+   "t": "2026-11-07T12:34",
+   "soort": "info",
+   "tekst": "Statistieken lezen werkt"
   }
  ],
  "recente_fouten": [
@@ -228,6 +248,11 @@
    "t": "2026-11-07T12:32",
    "soort": "fout",
    "tekst": "Facebook-verbinding mislukt: 400: {\"error\":{\"message\":\"(#100) Object does not exist, cannot be loaded due to missing permission or reviewable feature, or does not support this operation. This endpoint requires the 'pages_read_eng"
+  },
+  {
+   "t": "2026-11-07T12:34",
+   "soort": "fout",
+   "tekst": "Facebook-verbinding mislukt: 400: {\"error\":{\"message\":\"(#100) Object does not exist, cannot be loaded due to missing permission or reviewable feature, or does not support this operation. This endpoint requires the 'pages_read_engagement' permission or the 'Page Public Content Access' feature or the 'Page Public Metadata Access' feature. Refer to https:\\/\\/developers.facebook.com\\/docs\\/apps\\/review\\/login-permissions#manage-pages, | Rechten in token: business_management, instagram_basic, instagram_content_publish, instagram_manage_insights, pages_show_list, public_profile"
   }
  ],
  "versen_totaal": 116
