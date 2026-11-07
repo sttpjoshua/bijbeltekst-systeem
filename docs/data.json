@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-08T00:33",
+ "gegenereerd": "2026-11-08T00:36",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -251,17 +251,17 @@
    "hook": "Wat haalt jou vanavond nog uit je rust?",
    "status": "gerenderd",
    "variabelen": {
-    "huisstijl": "hemelsblauw",
+    "huisstijl": "salie",
     "thema": "troost",
     "hook_stijl": "vraag",
     "formaat": "video",
     "uitleg_op_beeld": false,
     "achtergrondbron": "verloop",
     "tijdslot": "20:30",
-    "palet": "hemelsblauw",
-    "lettertype": "montserrat_zwaar",
-    "layout": "links",
-    "achtergrond": "diagonaal",
+    "palet": "salie",
+    "lettertype": "cormorant",
+    "layout": "kader",
+    "achtergrond": "effen",
     "hook_op_beeld": false
    },
    "vers_id": "John-14-27-27",
@@ -690,6 +690,11 @@
    "t": "2026-11-08T00:33",
    "soort": "info",
    "tekst": "Bediening: Muziek en foto's in GitHub: beschikbaar (27 nummers)"
+  },
+  {
+   "t": "2026-11-08T00:36",
+   "soort": "info",
+   "tekst": "Bediening: Johannes 14:27 opnieuw gemaakt in stijl salie"
   }
  ],
  "recente_fouten": [],
@@ -721,7 +726,7 @@
    "fout": "2026-11-08T00:28",
    "laatst_ok": true,
    "detail": "muziek en foto's beschikbaar",
-   "ok": "2026-11-08T00:33"
+   "ok": "2026-11-08T00:36"
   }
  },
  "groei": [

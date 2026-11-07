@@ -230,17 +230,17 @@
   "tekst": "Vrede laat Ik u, Mijn vrede geef Ik u; niet gelijkerwijs de wereld hem geeft, geef Ik hem u. Uw hart worde niet ontroerd en zij niet versaagd.",
   "vertaling": "SV",
   "variabelen": {
-   "huisstijl": "hemelsblauw",
+   "huisstijl": "salie",
    "thema": "troost",
    "hook_stijl": "vraag",
    "formaat": "video",
    "uitleg_op_beeld": false,
    "achtergrondbron": "verloop",
    "tijdslot": "20:30",
-   "palet": "hemelsblauw",
-   "lettertype": "montserrat_zwaar",
-   "layout": "links",
-   "achtergrond": "diagonaal",
+   "palet": "salie",
+   "lettertype": "cormorant",
+   "layout": "kader",
+   "achtergrond": "effen",
    "hook_op_beeld": false
   },
   "keuzebron": {
