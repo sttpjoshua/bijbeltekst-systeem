@@ -605,13 +605,14 @@ function headHTML(a){
 }
 function hoverBody(a){
   return `<div class="k">Hier kun je mij op sturen</div><div class="acts">${acts(a.id).map(x=>`<span class="chip">${esc(x.t)}</span>`).join('')}</div>
-    <div class="hint" style="margin-top:8px">Klik op het figuurtje om te sturen.</div>`;
+    <div class="hint" style="margin-top:8px">Klik op het figuurtje zelf (niet op dit kaartje) om te sturen.</div>`;
 }
 function pinBody(a){
   if(!gtok()){
-    return `<div class="k">Hier kun je mij op sturen</div><div class="acts">${acts(a.id).map(x=>`<span class="chip">${esc(x.t)}</span>`).join('')}</div>
-      <div class="hint" style="margin-top:10px">Plak één keer je GitHub-sleutel (dezelfde als op het dashboard, met Actions: Read and write). Hij blijft alleen in deze browser.</div>
-      <div class="acts" style="margin-top:6px"><input id="acTok" type="password" placeholder="github_pat_..." style="flex:1;min-width:150px"><button id="acSave" class="go">Opslaan</button></div>`;
+    return `<div class="k">Eerst één keer inloggen</div>
+      <div class="hint">Om opdrachten te kunnen sturen heb ik je GitHub-sleutel nodig (dezelfde als op het dashboard, met Actions: Read and write). Hij blijft alleen in deze browser.</div>
+      <div class="acts" style="margin-top:8px"><input id="acTok" type="password" placeholder="github_pat_..." style="flex:1;min-width:150px"><button id="acSave" class="go">Opslaan</button></div>
+      <div class="k">Daarna kun je mij hierop sturen</div><div class="acts">${acts(a.id).map(x=>`<span class="chip">${esc(x.t)}</span>`).join('')}</div>`;
   }
   return `<div class="k">Stuur mij op</div><div class="acts col">${acts(a.id).map((x,i)=>`<button data-i="${i}"${x.leeg?' disabled title="Er is nu niets om te kiezen"':''}>${esc(x.t)}${x.leeg?' (niets klaar)':''}</button>`).join('')}</div>
     <div id="acMsg"></div><div class="hint" style="margin-top:8px"><a href="#" id="acForget">Sleutel van dit apparaat verwijderen</a></div>`;
