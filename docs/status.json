@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T00:25:36",
+ "updated": "2026-11-08T00:28:19",
  "agents": {
   "verskiezer": {
    "t": "2026-11-07T22:23:58",
@@ -52,6 +52,10 @@
  ],
  "log": [
   {
+   "t": "00:28",
+   "msg": "Bediening: Muziek en foto's in GitHub: NIET beschikbaar, controleer MATERIAAL_PAT"
+  },
+  {
    "t": "00:21",
    "msg": "Johannes 14:27 opnieuw gemaakt in stijl hemelsblauw"
   },
@@ -94,10 +98,6 @@
   {
    "t": "23:02",
    "msg": "Verzen uit de hele Bijbel: de Statenvertaling is doorzocht; losstaande verzen gaan mee als 'ontdekking'. Het s"
-  },
-  {
-   "t": "22:55",
-   "msg": "Voorraad verzen aangevuld naar 300 (Statenvertaling): genoeg voor ongeveer 2 maanden bij 5 posts per dag"
   }
  ],
  "lampen": [

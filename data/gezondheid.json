@@ -20,5 +20,10 @@
   "geldig": true,
   "ok": "2026-11-08T00:16",
   "laatst_ok": true
+ },
+ "materiaal_actions": {
+  "fout": "2026-11-08T00:28",
+  "laatst_ok": false,
+  "detail": "geen MATERIAAL_PAT"
  }
 }

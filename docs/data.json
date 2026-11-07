@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-08T00:25",
+ "gegenereerd": "2026-11-08T00:28",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -680,6 +680,11 @@
    "t": "2026-11-08T00:21",
    "soort": "info",
    "tekst": "Johannes 14:27 opnieuw gemaakt in stijl hemelsblauw"
+  },
+  {
+   "t": "2026-11-08T00:28",
+   "soort": "info",
+   "tekst": "Bediening: Muziek en foto's in GitHub: NIET beschikbaar, controleer MATERIAAL_PAT"
   }
  ],
  "recente_fouten": [],
@@ -706,6 +711,11 @@
    "geldig": true,
    "ok": "2026-11-08T00:16",
    "laatst_ok": true
+  },
+  "materiaal_actions": {
+   "fout": "2026-11-08T00:28",
+   "laatst_ok": false,
+   "detail": "geen MATERIAAL_PAT"
   }
  },
  "groei": [
