@@ -198,6 +198,13 @@ def cmd_posten():
     posts = S.laad("data/posts.json", [])
     vandaag_online = sum(1 for p in posts if p["datum"] == nu.date().isoformat() and p["status"] == "gepubliceerd")
     controleer_aantal(cfg, posts, nu)
+    if nu.hour in (10, 13, 16, 19, 22) and nu.minute < 15:
+        try:
+            verse_cijfers(posts)
+            S.bewaar("data/posts.json", posts)
+            S.cmd_dashboard()
+        except Exception as e:
+            print("Tussentijdse cijfers mislukt:", e)
     klaar = [p for p in posts if p["status"] == "gerenderd" and tijdstip(p) <= nu]
     if not klaar:
         print("Niets te doen"); return
@@ -223,10 +230,12 @@ def cmd_posten():
                 p.setdefault("gepubliceerd", {})[plat] = {"id": mid, "url": link, "t": dt.datetime.now(TZ).isoformat(timespec="minutes")}
                 S.cmd_log(f"{p['id']} online op {plat}: {p['ref']}")
                 S.activiteit("dispatcher", f"Postte {p['ref']} op {plat}")
+                S.gezond(plat, True, f"{p['ref']} geplaatst")
             except Exception as e:
                 p["fouten"] = p.get("fouten", 0) + 1
                 S.cmd_log(f"{p['id']} {plat} mislukt: {e}", "fout"); fouten += 1
                 S.activiteit("dispatcher", f"Post op {plat} mislukt", "error")
+                S.gezond(plat, False, str(e))
                 if p["fouten"] >= 3:
                     p["status"] = "fout"
         ondersteund = [x for x in cfg["platformen_actief"] if x in ("instagram", "facebook")]
@@ -256,6 +265,63 @@ def insights(mid, tok):
             except RuntimeError:
                 pass
         return uit
+
+def verse_cijfers(posts):
+    """Actuele cijfers van posts jonger dan 7 dagen (alleen voor het dashboard; het leren gebruikt 24u en 7d)."""
+    uid, tok = env()
+    nu = dt.datetime.now(TZ)
+    n = 0
+    for p in posts:
+        for plat, g in p.get("gepubliceerd", {}).items():
+            if nu - dt.datetime.fromisoformat(g["t"]) > dt.timedelta(days=7):
+                continue
+            try:
+                m = insights(g["id"], tok) if plat == "instagram" else stats_facebook(p, g, tok) if plat == "facebook" else None
+            except Exception:
+                continue
+            if m:
+                p.setdefault("stats", {}).setdefault(plat, {})["laatst"] = {
+                    "t": nu.isoformat(timespec="minutes"), "views": m.get("views"), "reach": m.get("reach"),
+                    "likes": m.get("likes"), "comments": m.get("comments"), "shares": m.get("shares"),
+                    "saves": m.get("saved"), "follows": m.get("follows")}
+                n += 1
+    return n
+
+def volgers_en_tokens():
+    """Dagelijks: aantal volgers (voor de groeilijn) en hoe lang de sleutels nog geldig zijn."""
+    uid, tok = env()
+    vandaag = dt.datetime.now(TZ).date().isoformat()
+    rij = {"datum": vandaag}
+    try:
+        r = http("GET", f"{API}/{uid}", {"fields": "followers_count,media_count", "access_token": tok})
+        rij["instagram"] = r.get("followers_count"); rij["ig_posts"] = r.get("media_count")
+        S.gezond("instagram_lezen", True, f"{r.get('followers_count')} volgers")
+    except Exception as e:
+        S.gezond("instagram_lezen", False, str(e))
+    if os.environ.get("FB_PAGE_ID", "").strip():
+        try:
+            pid, ptok = page_token(tok)
+            r = http("GET", f"{API_FB}/{pid}", {"fields": "followers_count,fan_count", "access_token": ptok})
+            rij["facebook"] = r.get("followers_count") or r.get("fan_count")
+        except Exception as e:
+            S.gezond("facebook_lezen", False, str(e))
+    groei = [x for x in S.laad("data/groei.json", []) if x["datum"] != vandaag] + [rij]
+    S.bewaar("data/groei.json", groei[-400:])
+    # Hoe lang zijn de sleutels nog geldig? (0 = verloopt nooit)
+    g = S.laad("data/gezondheid.json", {})
+    for naam, t in (("sleutel_instagram", tok), ("sleutel_facebook", os.environ.get("FB_TOKEN", "").strip())):
+        if not t or not t.startswith("EAA"):
+            continue
+        try:
+            d = http("GET", f"{API_FB}/debug_token", {"input_token": t, "access_token": t}).get("data", {})
+            exp = d.get("expires_at") or 0
+            g.setdefault(naam, {})["verloopt"] = "nooit" if exp == 0 else dt.datetime.fromtimestamp(exp, TZ).date().isoformat()
+            g[naam]["geldig"] = bool(d.get("is_valid"))
+            g[naam]["ok" if d.get("is_valid") else "fout"] = dt.datetime.now().isoformat(timespec="minutes")
+            g[naam]["laatst_ok"] = bool(d.get("is_valid"))
+        except Exception as e:
+            g.setdefault(naam, {})["detail"] = str(e)[:160]
+    S.bewaar("data/gezondheid.json", g)
 
 def cmd_statistieken():
     uid, tok = env()
@@ -291,6 +357,16 @@ def cmd_statistieken():
         os.remove(S.P("stats_tmp.json"))
         S.cmd_log(f"Statistieken opgehaald voor {len(rij)} posts")
         S.activiteit("analist", f"Las cijfers van {len(rij)} posts")
+    try:
+        verse_cijfers(posts := S.laad("data/posts.json", []))
+        S.bewaar("data/posts.json", posts)
+    except Exception as e:
+        S.cmd_log(f"Actuele cijfers ophalen mislukt: {str(e)[:160]}", "fout")
+    try:
+        volgers_en_tokens()
+    except Exception as e:
+        S.cmd_log(f"Volgers ophalen mislukt: {str(e)[:160]}", "fout")
+    S.gezond("statistieken", True, f"{len(rij)} nieuwe metingen")
     try:
         S.cmd_opruimen(30)
     except Exception as e:
@@ -338,6 +414,10 @@ def cmd_token():
                 S.cmd_log("Statistieken lezen werkt" if m else "Statistieken lezen gaf geen gegevens terug", "info" if m else "fout")
         except Exception as e:
             S.cmd_log(f"Statistieken lezen mislukt: {str(e)[:160]}", "fout")
+        try:
+            volgers_en_tokens()
+        except Exception as e:
+            S.cmd_log(f"Volgers ophalen mislukt: {str(e)[:160]}", "fout")
         S.cmd_dashboard(); return
     r = http("GET", "https://graph.instagram.com/refresh_access_token", {"grant_type": "ig_refresh_token", "access_token": tok})
     dagen = int(r.get("expires_in", 0)) // 86400

@@ -103,7 +103,12 @@ def materiaal(cfg):
     geluid = [f for f in mp3 if os.path.basename(f).startswith(("ES_Ambience", "ES_Water"))]
     december = dt.date.today().month == 12
     muziek = [f for f in mp3 if f not in geluid and (december or "christmas" not in f.lower())]
-    return {"beelden": beelden, "muziek": muziek, "geluid": geluid}
+    uit = {"beelden": beelden, "muziek": muziek, "geluid": geluid}
+    # Momentopname van de voorraad voor het dashboard (GitHub Actions ziet de privé map niet)
+    lijst = {"beelden": beelden, "muziek": sorted(f for f in mp3 if f not in geluid), "geluid": geluid}
+    if laad("data/materiaal_lijst.json", {}).get("lijst") != lijst:
+        bewaar("data/materiaal_lijst.json", {"bijgewerkt": dt.date.today().isoformat(), "lijst": lijst})
+    return uit
 
 BRON = {"NBV21": "NBV21 \u00a9 Nederlands-Vlaams Bijbelgenootschap"}
 
@@ -447,6 +452,7 @@ def leermodus_uit(cfg):
     vorige = cfg.pop("leermodus_vorige", None) or {}
     cfg["leermodus"] = False
     cfg.pop("leermodus_tot", None)
+    cfg.pop("leermodus_start", None)
     cfg["max_posts_per_dag"] = vorige.get("max_posts_per_dag") or 3
     cfg["posts_per_dag"] = min(vorige.get("posts_per_dag") or 1, cfg["max_posts_per_dag"])
     cfg["verkenning"] = vorige.get("verkenning") or 0.2
@@ -512,15 +518,20 @@ def cmd_dashboard():
     lijst = []
     for p in sorted(posts, key=lambda x: x["id"], reverse=True)[:300]:
         tot = {}
+        per = {}
         for plat, mom in p.get("stats", {}).items():
-            s = mom.get("7d") or mom.get("24u") or {}
+            s = beste_meting(mom)
+            per[plat] = {k: s.get(k) for k in ("views", "reach", "likes", "comments", "shares", "saves", "follows")}
+            per[plat]["t"] = s.get("t")
             for k in ("views", "reach", "likes", "comments", "shares", "saves"):
                 tot[k] = tot.get(k, 0) + (s.get(k) or 0)
         lijst.append({"id": p["id"], "datum": p["datum"], "ref": p["ref"], "tekst": p["tekst"], "hook": p.get("hook", ""),
                       "status": p["status"], "variabelen": p["variabelen"], "vers_id": p.get("vers_id"), "media": p.get("media"), "media_url": p.get("media_url"), "media_urls": p.get("media_urls"), "thumb": p.get("thumb"),
                       "platformen": list(p.get("gepubliceerd", {}).keys()),
-                      "links": {k: v.get("url") for k, v in p.get("gepubliceerd", {}).items()}, "totaal": tot, "score": sc.get(p["id"], {})})
+                      "links": {k: v.get("url") for k, v in p.get("gepubliceerd", {}).items()}, "totaal": tot, "per_platform": per, "score": sc.get(p["id"], {}),
+                      "online": min((g["t"] for g in p.get("gepubliceerd", {}).values()), default=None)})
     rapporten = sorted(os.listdir(P("rapporten"))) if os.path.isdir(P("rapporten")) else []
+    extra = dashboard_extra(cfg, posts)
     data = {"gegenereerd": dt.datetime.now().isoformat(timespec="minutes"), "repo": cfg.get("github_repo", ""),
             "config": {k: cfg.get(k) for k in ("pauze", "kanaalnaam", "posts_per_dag", "max_posts_per_dag", "verkenning", "platformen_actief", "max_aandeel_beeld", "verzen_uitsluiten", "leermodus", "leermodus_tot")},
             "strategie": strat, "posts": lijst,
@@ -530,11 +541,83 @@ def cmd_dashboard():
             "recente_fouten": [l for l in laad("data/logboek.json", [])
                                if l.get("soort") == "fout" and not l.get("opgelost") and l["t"] >= (dt.datetime.now() - dt.timedelta(hours=48)).isoformat(timespec="minutes")],
             "versen_totaal": len(laad("data/verzen.json", [])),
+            **extra,
             "planning": [{k: x[k] for k in ("datum", "ref", "tekst", "vers_id", "variabelen", "keuzebron")}
                          for x in laad("data/planning.json", {}).get("posts", [])]}
     bewaar("docs/data.json", data)
     schrijf_status(cfg, strat, posts, data["recente_fouten"])
     print("docs/data.json bijgewerkt:", len(lijst), "posts")
+
+def beste_meting(mom):
+    """Meest actuele cijfers: 7 dagen als die er is, anders de tussentijdse, anders 24 uur."""
+    return mom.get("7d") or mom.get("laatst") or mom.get("24u") or {}
+
+NAMEN_OPTIES = {"afbeelding": "afbeeldingen", "video": "video's", "carrousel": "carrousels", "verloop": "kleurverloop",
+                "beeld": "foto-achtergrond", True: "met uitleg", False: "zonder uitleg"}
+
+def dashboard_extra(cfg, posts):
+    """Extra blokken voor het dashboard: gezondheid, groei, weekvergelijking, inzichten, snel leren, voorraad."""
+    nu = dt.datetime.now()
+    # Week tegen vorige week (op publicatiedatum)
+    def week(van, tot):
+        w = {"posts": 0, "reach": 0, "views": 0, "likes": 0, "comments": 0, "saves": 0, "shares": 0}
+        for p in posts:
+            if p["status"] != "gepubliceerd" or not (van <= p["datum"] < tot):
+                continue
+            w["posts"] += 1
+            for mom in p.get("stats", {}).values():
+                m = beste_meting(mom)
+                for k in list(w)[1:]:
+                    w[k] += m.get(k) or 0
+        return w
+    d = lambda n: (nu.date() - dt.timedelta(days=n)).isoformat()
+    morgen = (nu.date() + dt.timedelta(days=1)).isoformat()
+    weken = {"deze": week(d(6), morgen), "vorige": week(d(13), d(6))}
+    # Inzichten: gemiddelde score per optie, met aantal metingen
+    per_post = {}
+    for p, plat, sc in post_scores(posts):
+        per_post.setdefault(p["id"], (p, []))[1].append(sc)
+    inzichten = []
+    for dim in DIMENSIES:
+        groepen = {}
+        for p, scores in per_post.values():
+            o = p["variabelen"].get(dim)
+            groepen.setdefault(json.dumps(o), []).append(sum(scores) / len(scores))
+        opties = sorted(({"optie": json.loads(k), "gem": round(sum(v) / len(v), 2), "n": len(v)} for k, v in groepen.items()),
+                        key=lambda x: -x["gem"])
+        inzichten.append({"dimensie": dim, "opties": opties, "metingen": sum(x["n"] for x in opties)})
+    # Snel leren
+    gemeten = sum(1 for p in per_post.values())
+    snel = None
+    if cfg.get("leermodus"):
+        start = cfg.get("leermodus_start") or nu.date().isoformat()
+        snel = {"start": start, "tot": cfg.get("leermodus_tot"),
+                "dag": (nu.date() - dt.date.fromisoformat(start)).days + 1,
+                "dagen": max(1, (dt.date.fromisoformat(cfg["leermodus_tot"]) - dt.date.fromisoformat(start)).days),
+                "online": sum(1 for p in posts if p["status"] == "gepubliceerd" and p["datum"] >= start),
+                "gemeten": sum(1 for p, _ in per_post.values() if p["datum"] >= start)}
+    # Voorraad
+    verzen = laad("data/verzen.json", [])
+    gebruikt = {p["vers_id"] for p in posts if p["status"] not in ("afgekeurd",)}
+    grens = (nu.date() - dt.timedelta(days=cfg["vers_niet_herhalen_dagen"])).isoformat()
+    recent = {p["vers_id"] for p in posts if p["datum"] >= grens} | set(cfg.get("verzen_uitsluiten", []))
+    per_thema = {}
+    for v in verzen + extra_verzen():
+        t = per_thema.setdefault(v["thema"], {"totaal": 0, "beschikbaar": 0, "nooit": 0})
+        t["totaal"] += 1
+        t["beschikbaar"] += v["id"] not in recent
+        t["nooit"] += v["id"] not in gebruikt
+    mat = laad("data/materiaal_lijst.json", {})
+    lijst = mat.get("lijst", {})
+    gebruik = lambda veld, namen: sorted(({"naam": os.path.basename(n), "keer": sum(1 for p in posts if p.get(veld) == n)} for n in namen),
+                                          key=lambda x: -x["keer"])
+    voorraad = {"verzen": per_thema, "verzen_totaal": len(verzen), "nbv21": len(extra_verzen()),
+                "per_dag": cfg["posts_per_dag"],
+                "muziek": gebruik("muziek", lijst.get("muziek", [])), "beelden": gebruik("beeld", lijst.get("beelden", [])),
+                "materiaal_bijgewerkt": mat.get("bijgewerkt")}
+    return {"gezondheid": laad("data/gezondheid.json", {}), "groei": laad("data/groei.json", []),
+            "weken": weken, "inzichten_data": inzichten, "min_posts_voor_leren": cfg.get("min_posts_voor_leren", 6),
+            "gemeten_posts": gemeten, "snel_leren": snel, "voorraad": voorraad}
 
 def schrijf_status(cfg, strat, posts, fouten):
     """docs/status.json voor het pixel-kantoor. Toestanden worden in de browser bepaald op basis van tijd."""
@@ -577,6 +660,16 @@ def activiteit(agent, taak, staat="done"):
     a = laad("data/activiteit.json", {})
     a[agent] = {"t": dt.datetime.now().isoformat(timespec="seconds"), "task": taak, "state": staat}
     bewaar("data/activiteit.json", a)
+
+def gezond(naam, ok=True, detail=""):
+    """Laatste gelukte en mislukte keer per onderdeel (dashboard: gezondheidsbalk)."""
+    g = laad("data/gezondheid.json", {})
+    x = g.setdefault(naam, {})
+    nu = dt.datetime.now().isoformat(timespec="minutes")
+    x["ok" if ok else "fout"] = nu
+    x["laatst_ok"] = bool(ok)
+    x["detail"] = str(detail)[:160]
+    bewaar("data/gezondheid.json", g)
 
 def cmd_log(tekst, soort="info"):
     log = laad("data/logboek.json", [])
@@ -634,6 +727,7 @@ if __name__ == "__main__":
     a.add_argument("--datum", default=dt.date.today().isoformat())
     x = a.parse_args()
     {"kies": lambda: cmd_kies(x.datum), "render": lambda: cmd_render(x.datum), "plan": lambda: cmd_plan(),
+        "gezond": lambda: gezond(x.args[0], True, " ".join(x.args[1:])),
      "registreer": lambda: cmd_registreer(*x.args), "stats": lambda: cmd_stats(x.args[0]),
      "leer": cmd_leer, "dashboard": cmd_dashboard, "check": cmd_check,
      "log": lambda: cmd_log(*x.args), "vers": lambda: cmd_vers(*x.args), "opruimen": lambda: cmd_opruimen(*x.args), "opgelost": cmd_opgelost}[x.cmd]()

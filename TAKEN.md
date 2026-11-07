@@ -63,5 +63,11 @@ Staat `leermodus` op true in config.json, dan maak je elke dag `posts_per_dag` (
 ## Avondcontrole (elke avond rond 21:00)
 Doel: zorgen dat er voor MORGEN precies zoveel posts klaarstaan als `posts_per_dag` in config.json (bijvoorbeeld omdat Joshua na de dagelijkse run iets via Bediening heeft veranderd).
 1. Staat `pauze` op true: stop meteen, doe niets.
-2. Tel de posts van morgen in `data/posts.json` met status "gerenderd" of "wacht_op_tekst". Is dat aantal gelijk aan of hoger dan `posts_per_dag`, en heeft geen enkele post status "wacht_op_tekst": stop meteen. Commit dan niets.
+2. Tel de posts van morgen in `data/posts.json` met status "gerenderd" of "wacht_op_tekst". Is dat aantal gelijk aan of hoger dan `posts_per_dag`, en heeft geen enkele post status "wacht_op_tekst": meld alleen de gezondheid (zie "Gezondheid melden"), commit en push, en stop.
 3. Anders: `python3 src/systeem.py kies --datum MORGEN` (vult alleen de ontbrekende posts aan en volgt de planning), schrijf de teksten volgens "Teksten schrijven", en render met `python3 src/systeem.py render --datum MORGEN`. Bekijk minstens één beeld. Log wat je deed met `python3 src/systeem.py log "Avondcontrole: ..."`, draai `python3 src/systeem.py dashboard`, commit en push.
+
+## Gezondheid melden (voor de balk bovenaan het dashboard)
+- Dagelijkse run: draai aan het eind `python3 src/systeem.py gezond dagelijks "N posts voor MORGEN klaargezet"` en daarna `python3 src/systeem.py dashboard`, vóór de commit.
+- Avondcontrole: draai ALTIJD `python3 src/systeem.py gezond avondcontrole "alles klopte"` (of "N posts aangevuld") en `python3 src/systeem.py dashboard`, en commit en push dat, ook als er niets aangevuld hoefde te worden. Dat is één kleine commit per avond.
+- Wekelijkse run: `python3 src/systeem.py gezond wekelijks "analyse gedaan"`.
+- Verzen bijvullen: bij 5 posts per dag raakt de voorraad sneller op (een vers mag 60 dagen niet terugkomen). Staat op het dashboard bij Voorraad "minder dan 21 dagen", voeg dan in de dagelijkse run 10 verzen toe zoals beschreven bij de wekelijkse run.

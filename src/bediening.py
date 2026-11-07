@@ -87,6 +87,8 @@ def main(raw):
             dagen = int(o.get("dagen", 14))
             if not cfg.get("leermodus"):
                 cfg["leermodus_vorige"] = {k: cfg.get(k) for k in ("posts_per_dag", "max_posts_per_dag", "verkenning")}
+            if not cfg.get("leermodus"):
+                cfg["leermodus_start"] = dt.date.today().isoformat()
             cfg["leermodus"] = True
             cfg["leermodus_tot"] = (dt.date.today() + dt.timedelta(days=dagen)).isoformat()
             cfg["max_posts_per_dag"] = 5
