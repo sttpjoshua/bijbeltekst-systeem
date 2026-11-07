@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-08T00:36",
+ "gegenereerd": "2026-11-08T00:37",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -210,16 +210,16 @@
    "hook": "Lees deze zin twee keer, langzaam.",
    "status": "gerenderd",
    "variabelen": {
-    "huisstijl": "hemelsblauw",
+    "huisstijl": "mint",
     "thema": "troost",
     "hook_stijl": "uitdaging",
     "formaat": "carrousel",
     "uitleg_op_beeld": false,
     "achtergrondbron": "verloop",
     "tijdslot": "12:15",
-    "palet": "hemelsblauw",
-    "lettertype": "montserrat_zwaar",
-    "layout": "links",
+    "palet": "mint",
+    "lettertype": "dmserif",
+    "layout": "centraal",
     "achtergrond": "diagonaal",
     "hook_op_beeld": false
    },
@@ -692,9 +692,9 @@
    "tekst": "Bediening: Muziek en foto's in GitHub: beschikbaar (27 nummers)"
   },
   {
-   "t": "2026-11-08T00:36",
+   "t": "2026-11-08T00:37",
    "soort": "info",
-   "tekst": "Bediening: Johannes 14:27 opnieuw gemaakt in stijl salie"
+   "tekst": "Bediening: Psalm 23:1 opnieuw gemaakt in stijl mint"
   }
  ],
  "recente_fouten": [],

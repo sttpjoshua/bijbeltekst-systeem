@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T00:36:47",
+ "updated": "2026-11-08T00:37:53",
  "agents": {
   "verskiezer": {
    "t": "2026-11-07T22:23:58",
@@ -7,8 +7,8 @@
    "state": "done"
   },
   "designer": {
-   "t": "2026-11-08T00:36:47",
-   "task": "Johannes 14:27 opnieuw gemaakt in stijl salie",
+   "t": "2026-11-08T00:37:53",
+   "task": "Psalm 23:1 opnieuw gemaakt in stijl mint",
    "state": "done"
   },
   "video": {
@@ -52,8 +52,8 @@
  ],
  "log": [
   {
-   "t": "00:36",
-   "msg": "Bediening: Johannes 14:27 opnieuw gemaakt in stijl salie"
+   "t": "00:37",
+   "msg": "Bediening: Psalm 23:1 opnieuw gemaakt in stijl mint"
   },
   {
    "t": "00:33",
