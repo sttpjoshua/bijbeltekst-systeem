@@ -189,6 +189,10 @@ def main(raw):
     elif a == "fouten_opgelost":
         S.cmd_opgelost()
         melding = "Openstaande fouten als opgelost gemarkeerd"
+    elif a == "test_materiaal":
+        ok = materiaal_er()
+        n = len(S.materiaal(cfg)["muziek"]) if ok else 0
+        melding = f"Muziek en foto's in GitHub: {'beschikbaar (' + str(n) + ' nummers)' if ok else 'NIET beschikbaar, controleer MATERIAAL_PAT'}"
     elif a == "test":
         melding = None  # de workflow draait daarna de verbindingstest
     else:
