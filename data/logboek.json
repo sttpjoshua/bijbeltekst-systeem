@@ -48,5 +48,25 @@
   "t": "2026-11-07T12:30",
   "soort": "info",
   "tekst": "2026-11-07-1 online op instagram: Kolossenzen 3:15"
+ },
+ {
+  "t": "2026-11-07T12:32",
+  "soort": "info",
+  "tekst": "Verbinding met Instagram werkt (@bibleverse_nl)"
+ },
+ {
+  "t": "2026-11-07T12:32",
+  "soort": "info",
+  "tekst": "Token heeft alle rechten, ook voor statistieken"
+ },
+ {
+  "t": "2026-11-07T12:32",
+  "soort": "fout",
+  "tekst": "Facebook-verbinding mislukt: 400: {\"error\":{\"message\":\"(#100) Object does not exist, cannot be loaded due to missing permission or reviewable feature, or does not support this operation. This endpoint requires the 'pages_read_eng"
+ },
+ {
+  "t": "2026-11-07T12:32",
+  "soort": "info",
+  "tekst": "Statistieken lezen werkt"
  }
 ]
