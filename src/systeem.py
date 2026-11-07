@@ -467,7 +467,7 @@ def cmd_dashboard():
             for k in ("views", "reach", "likes", "comments", "shares", "saves"):
                 tot[k] = tot.get(k, 0) + (s.get(k) or 0)
         lijst.append({"id": p["id"], "datum": p["datum"], "ref": p["ref"], "tekst": p["tekst"], "hook": p.get("hook", ""),
-                      "status": p["status"], "variabelen": p["variabelen"], "vers_id": p.get("vers_id"), "media": p.get("media"), "media_url": p.get("media_url"), "thumb": p.get("thumb"),
+                      "status": p["status"], "variabelen": p["variabelen"], "vers_id": p.get("vers_id"), "media": p.get("media"), "media_url": p.get("media_url"), "media_urls": p.get("media_urls"), "thumb": p.get("thumb"),
                       "platformen": list(p.get("gepubliceerd", {}).keys()),
                       "links": {k: v.get("url") for k, v in p.get("gepubliceerd", {}).items()}, "totaal": tot, "score": sc.get(p["id"], {})})
     rapporten = sorted(os.listdir(P("rapporten"))) if os.path.isdir(P("rapporten")) else []

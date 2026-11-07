@@ -221,8 +221,9 @@ function bouwBediening(){
   const w=D.posts.filter(x=>x.status==="gerenderd"||x.status==="wacht_op_tekst").sort((a,b)=>(a.datum+a.variabelen.tijdslot).localeCompare(b.datum+b.variabelen.tijdslot));
   document.getElementById("bWacht").innerHTML=w.length?w.map(x=>{
     const img=x.thumb||(x.media_url&&x.media_url.endsWith(".jpg")?x.media_url:"");
-    return `<div class="wacht">${img?`<img class="thumb" src="${img}">`:`<div class="thumb"></div>`}
-      <div class="info"><b>${x.ref}</b> <span class="tag">${x.variabelen.formaat}</span><span class="tag">${x.variabelen.thema.replace("_"," ")}</span>
+    const slides=(x.media_urls&&x.media_urls.length>1)?x.media_urls.map((u,i)=>`<a href="${u}" target="_blank" title="Slide ${i+1}"><img class="thumb" src="${u}"></a>`).join(""):(img?`<img class="thumb" src="${img}">`:`<div class="thumb"></div>`);
+    return `<div class="wacht"><div style="display:flex;gap:4px">${slides}</div>
+      <div class="info"><b>${x.ref}</b> <span class="tag">${x.variabelen.formaat}${x.media_urls&&x.media_urls.length>1?" · "+x.media_urls.length+" slides":""}</span><span class="tag">${x.variabelen.thema.replace("_"," ")}</span>
         <div class="sub">${STATUS[x.status]||x.status} · ${x.datum} om ${x.variabelen.tijdslot}${x.media_url?` · <a href="${x.media_url}" target="_blank">bekijken</a>`:""}</div></div>
       <div class="acties">
         ${x.status==="gerenderd"?`<button class="btn prim" data-o='${JSON.stringify({actie:"nu_posten",post:x.id}).replace(/'/g,"&#39;")}'>Nu posten</button>`:""}
