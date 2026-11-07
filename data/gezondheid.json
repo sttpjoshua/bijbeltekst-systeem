@@ -3,5 +3,22 @@
   "ok": "2026-11-07T22:43",
   "laatst_ok": true,
   "detail": "Kolossenzen 3:15 geplaatst"
+ },
+ "instagram_lezen": {
+  "ok": "2026-11-07T22:48",
+  "laatst_ok": true,
+  "detail": "0 volgers"
+ },
+ "sleutel_instagram": {
+  "verloopt": "nooit",
+  "geldig": true,
+  "ok": "2026-11-07T22:48",
+  "laatst_ok": true
+ },
+ "sleutel_facebook": {
+  "verloopt": "nooit",
+  "geldig": true,
+  "ok": "2026-11-07T22:48",
+  "laatst_ok": true
  }
 }

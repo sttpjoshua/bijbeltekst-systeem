@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T22:48:18",
+ "updated": "2026-11-07T22:48:40",
  "agents": {
   "verskiezer": {
    "t": "2026-11-07T22:23:58",
@@ -22,7 +22,7 @@
    "state": "done"
   },
   "controller": {
-   "t": "2026-11-07T15:06:01",
+   "t": "2026-11-07T22:48:31",
    "task": "Controleerde de verbindingen",
    "state": "done"
   },
@@ -51,6 +51,22 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "22:48",
+   "msg": "Statistieken lezen werkt"
+  },
+  {
+   "t": "22:48",
+   "msg": "Verbinding met Facebook-pagina werkt (Bibleversenl)"
+  },
+  {
+   "t": "22:48",
+   "msg": "Token heeft alle rechten, ook voor statistieken"
+  },
+  {
+   "t": "22:48",
+   "msg": "Verbinding met Instagram werkt (@bibleverse_nl)"
+  },
   {
    "t": "22:30",
    "msg": "Te weinig posts voor 2026-11-07: verwacht, snel leren ging vandaag pas aan (geen fout)"
@@ -82,22 +98,6 @@
   {
    "t": "15:06",
    "msg": "Verbinding met Instagram werkt (@bibleverse_nl)"
-  },
-  {
-   "t": "14:55",
-   "msg": "Statistieken lezen werkt"
-  },
-  {
-   "t": "14:55",
-   "msg": "Verbinding met Facebook-pagina werkt (Bibleversenl)"
-  },
-  {
-   "t": "14:55",
-   "msg": "Token heeft alle rechten, ook voor statistieken"
-  },
-  {
-   "t": "14:55",
-   "msg": "Verbinding met Instagram werkt (@bibleverse_nl)"
   }
  ],
  "lampen": [
@@ -128,21 +128,23 @@
   },
   {
    "naam": "Sleutel IG",
-   "kleur": "grijs",
-   "tekst": "onbekend"
+   "kleur": "groen",
+   "tekst": "verloopt nooit"
   },
   {
    "naam": "Sleutel FB",
-   "kleur": "grijs",
-   "tekst": "onbekend"
+   "kleur": "groen",
+   "tekst": "verloopt nooit"
   }
  ],
  "volgers": {
-  "ig": null,
-  "fb": null,
-  "totaal": null,
+  "ig": 0,
+  "fb": 0,
+  "totaal": 0,
   "week": null,
-  "reeks": []
+  "reeks": [
+   0
+  ]
  },
  "top_post": null,
  "snel_leren": {

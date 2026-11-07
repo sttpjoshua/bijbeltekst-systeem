@@ -520,6 +520,26 @@
    "t": "2026-11-07T22:30",
    "soort": "info",
    "tekst": "Te weinig posts voor 2026-11-07: verwacht, snel leren ging vandaag pas aan (geen fout)"
+  },
+  {
+   "t": "2026-11-07T22:48",
+   "soort": "info",
+   "tekst": "Verbinding met Instagram werkt (@bibleverse_nl)"
+  },
+  {
+   "t": "2026-11-07T22:48",
+   "soort": "info",
+   "tekst": "Token heeft alle rechten, ook voor statistieken"
+  },
+  {
+   "t": "2026-11-07T22:48",
+   "soort": "info",
+   "tekst": "Verbinding met Facebook-pagina werkt (Bibleversenl)"
+  },
+  {
+   "t": "2026-11-07T22:48",
+   "soort": "info",
+   "tekst": "Statistieken lezen werkt"
   }
  ],
  "recente_fouten": [],
@@ -529,9 +549,33 @@
    "ok": "2026-11-07T22:43",
    "laatst_ok": true,
    "detail": "Kolossenzen 3:15 geplaatst"
+  },
+  "instagram_lezen": {
+   "ok": "2026-11-07T22:48",
+   "laatst_ok": true,
+   "detail": "0 volgers"
+  },
+  "sleutel_instagram": {
+   "verloopt": "nooit",
+   "geldig": true,
+   "ok": "2026-11-07T22:48",
+   "laatst_ok": true
+  },
+  "sleutel_facebook": {
+   "verloopt": "nooit",
+   "geldig": true,
+   "ok": "2026-11-07T22:48",
+   "laatst_ok": true
   }
  },
- "groei": [],
+ "groei": [
+  {
+   "datum": "2026-11-07",
+   "instagram": 0,
+   "ig_posts": 1,
+   "facebook": 0
+  }
+ ],
  "weken": {
   "deze": {
    "posts": 1,
