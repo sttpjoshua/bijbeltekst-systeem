@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-07T10:57",
+ "gegenereerd": "2026-11-07T11:07",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -147,8 +147,24 @@
    "t": "2026-11-07T00:40",
    "soort": "info",
    "tekst": "Eerste post klaargezet: 7 nov 12:15, Kolossenzen 3:15 (video)"
+  },
+  {
+   "t": "2026-11-07T11:07",
+   "soort": "info",
+   "tekst": "Verbinding met Instagram werkt (@bibleverse_nl)"
+  },
+  {
+   "t": "2026-11-07T11:07",
+   "soort": "fout",
+   "tekst": "Token mist rechten: instagram_manage_insights"
   }
  ],
- "recente_fouten": [],
+ "recente_fouten": [
+  {
+   "t": "2026-11-07T11:07",
+   "soort": "fout",
+   "tekst": "Token mist rechten: instagram_manage_insights"
+  }
+ ],
  "versen_totaal": 116
 }
