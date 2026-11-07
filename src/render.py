@@ -138,11 +138,24 @@ def tekstlaag(b, h, post, ruimte_boven=0, ruimte_onder=0):
         hf = _klein_font(int(b * 0.034), b"Medium")
         hook_y = ruimte_boven + (int(b * 0.06) + int(h * 0.03) if v["layout"] == "kader" else int(h * (0.03 if ruimte_boven else 0.07)))
         d.text((b // 2, hook_y), post["beeld_hook"], font=hf, fill=kleur + (200,), anchor="ma")
+    # Merkblok onderaan: vaste herkenning op elke post (woordmerk + handle)
+    hy = h - ruimte_onder - int(h * (0.115 if v["layout"] == "kader" else 0.085))
+    _woordmerk(d, b // 2, hy, "BIBLEVERSE", _klein_font(int(b * 0.024), b"Bold"), accent + (235,), int(b * 0.009))
     if post.get("handle"):
-        sf = _klein_font(int(b * 0.026), b"Regular")
-        hy = h - ruimte_onder - int(h * (0.10 if v["layout"] == "kader" else 0.06))
-        d.text((b // 2, hy), post["handle"], font=sf, fill=kleur + (150,), anchor="ma")
+        sf = _klein_font(int(b * 0.022), b"Regular")
+        d.text((b // 2, hy + int(b * 0.034)), post["handle"], font=sf, fill=kleur + (140,), anchor="ma")
     return laag
+
+def _woordmerk(d, cx, y, tekst, font, kleur, spatie):
+    """Tekst met extra letterafstand, gecentreerd rond cx, met een klein punt-accent ervoor."""
+    breedtes = [d.textlength(c, font=font) for c in tekst]
+    totaal = sum(breedtes) + spatie * (len(tekst) - 1)
+    x = cx - totaal / 2
+    r = max(3, font.size // 5)
+    d.ellipse([x - 4 * r, y + font.size * 0.42 - r, x - 2 * r, y + font.size * 0.42 + r], fill=kleur)
+    for c, w in zip(tekst, breedtes):
+        d.text((x, y), c, font=font, fill=kleur, anchor="la")
+        x += w + spatie
 
 def maak_afbeelding(post, pad):
     b, h = 1080, 1350
