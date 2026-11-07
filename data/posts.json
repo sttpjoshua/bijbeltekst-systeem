@@ -2,7 +2,7 @@
  {
   "id": "2026-11-07-1",
   "datum": "2026-11-07",
-  "status": "gerenderd",
+  "status": "gepubliceerd",
   "vers_id": "Colossians-3-15-15",
   "ref": "Kolossenzen 3:15",
   "tekst": "En de vrede Gods heerse in uw harten, tot welken gij ook geroepen zijt in een lichaam; en weest dankbaar.",
@@ -43,6 +43,13 @@
   "stats": {},
   "handle": "@bibleverse_nl",
   "thumb": "thumbs/2026-11-07-1.jpg",
-  "fouten": 1
+  "fouten": 1,
+  "gepubliceerd": {
+   "instagram": {
+    "id": "18648606430059734",
+    "url": "https://www.instagram.com/reel/DfcFByGNQ2a/",
+    "t": "2026-11-07T12:30+01:00"
+   }
+  }
  }
 ]
