@@ -83,11 +83,37 @@ def _wrap(tekst, font, max_b, draw):
     if huidig: regels.append(huidig)
     return regels
 
+def foto_achtergrond(b, h, pad, palet):
+    """Eigen foto als achtergrond: bijgesneden, gedimd en licht getint in de huisstijlkleur."""
+    from PIL import ImageOps, ImageEnhance
+    im = Image.open(pad); im = ImageOps.exif_transpose(im).convert("RGB")
+    im.thumbnail((b * 2, h * 2))
+    im = ImageOps.fit(im, (b, h), centering=(0.5, 0.45))
+    im = ImageEnhance.Color(im).enhance(0.85)
+    tint = Image.new("RGB", (b, h), _hex(PALETTEN[palet][0]))
+    im = Image.blend(im, tint, 0.18)
+    # verloop van boven licht naar onder donkerder, en overal gedimd voor leesbaarheid
+    donker = Image.new("RGB", (b, h), (8, 8, 10))
+    masker = Image.linear_gradient("L").resize((b, h)).point(lambda x: int(80 + x * 0.42))
+    return Image.composite(donker, im, masker)
+
+def _kleuren(post):
+    v = post["variabelen"]
+    pal = PALETTEN[v["palet"]]
+    if v.get("achtergrondbron") == "beeld":
+        return (250, 247, 240), (236, 210, 160)  # lichte tekst op gedimde foto
+    return _hex(pal[2]), _hex(pal[3])
+
+def _bg(post, b, h):
+    v = post["variabelen"]
+    if v.get("achtergrondbron") == "beeld" and post.get("beeld_pad"):
+        return foto_achtergrond(b, h, post["beeld_pad"], v["palet"])
+    return achtergrond(b, h, v["palet"], v["achtergrond"], post["id"])
+
 def tekstlaag(b, h, post, ruimte_boven=0, ruimte_onder=0):
     """Transparante laag met vers, referentie, optionele hook-regel en handle."""
     v = post["variabelen"]
-    pal = PALETTEN[v["palet"]]
-    kleur, accent = _hex(pal[2]), _hex(pal[3])
+    kleur, accent = _kleuren(post)
     laag = Image.new("RGBA", (b, h), (0, 0, 0, 0))
     d = ImageDraw.Draw(laag)
     marge = int(b * (0.16 if v["layout"] == "kader" else 0.12))
@@ -168,8 +194,7 @@ def _woordmerk(d, cx, y, tekst, font, kleur, spatie):
 
 def maak_afbeelding(post, pad):
     b, h = 1080, 1350
-    bg = achtergrond(b, h, post["variabelen"]["palet"], post["variabelen"]["achtergrond"], post["id"])
-    img = bg.convert("RGBA")
+    img = _bg(post, b, h).convert("RGBA")
     img.alpha_composite(tekstlaag(b, h, post))
     img.convert("RGB").save(pad, quality=93)
     return pad
@@ -178,7 +203,7 @@ def maak_video(post, pad, duur=9):
     """Achtergrond met langzame zoom, tekst vrijwel direct in beeld (sterke eerste seconde). Veilige zones voor Reels/TikTok-interface."""
     b, h = 1080, 1920
     with tempfile.TemporaryDirectory() as tmp:
-        bg = achtergrond(int(b * 1.15), int(h * 1.15), post["variabelen"]["palet"], post["variabelen"]["achtergrond"], post["id"])
+        bg = _bg(post, int(b * 1.15), int(h * 1.15))
         bgp, txp = os.path.join(tmp, "bg.png"), os.path.join(tmp, "tx.png")
         bg.save(bgp)
         tekstlaag(b, h, post, ruimte_boven=220, ruimte_onder=380).save(txp)
@@ -187,12 +212,27 @@ def maak_video(post, pad, duur=9):
                 f":d={n}:s={b}x{h}:fps={fps}[bg];"
                 f"[1:v]format=rgba,fade=t=in:st=0:d=0.25:alpha=1[tx];"
                 f"[bg][tx]overlay=0:0,fade=t=out:st={duur-0.6}:d=0.6,format=yuv420p[v]")
-        cmd = ["ffmpeg", "-y", "-loglevel", "error", "-loop", "1", "-t", str(duur), "-i", bgp,
-               "-loop", "1", "-t", str(duur), "-i", txp,
-               "-f", "lavfi", "-t", str(duur), "-i", "anullsrc=r=44100:cl=stereo",
-               "-filter_complex", filt, "-map", "[v]", "-map", "2:a",
+        audio_in = ["-f", "lavfi", "-t", str(duur), "-i", "anullsrc=r=44100:cl=stereo"]
+        audio_map = "2:a"
+        m = post.get("muziek_pad")
+        if m:
+            start = post.get("muziek_start", 0)
+            audio_in = ["-ss", str(start), "-t", str(duur), "-i", m]
+            afilt = f"[2:a]volume=0.8,afade=t=in:st=0:d=0.6,afade=t=out:st={duur-1.2}:d=1.2[am]"
+            amb = post.get("geluid_pad")
+            if amb:
+                audio_in += ["-ss", "3", "-t", str(duur), "-i", amb]
+                afilt = (f"[2:a]volume=0.8,afade=t=in:st=0:d=0.6,afade=t=out:st={duur-1.2}:d=1.2[m1];"
+                         f"[3:a]volume=0.25,afade=t=in:st=0:d=1,afade=t=out:st={duur-1.2}:d=1.2[g1];"
+                         f"[m1][g1]amix=inputs=2:duration=first:normalize=0[am]")
+            filt += ";" + afilt
+            audio_map = "[am]"
+        # Achtergrond als één frame: zoompan maakt daar zelf `n` frames van (snel en exact 9 s)
+        cmd = ["ffmpeg", "-y", "-loglevel", "error", "-i", bgp,
+               "-loop", "1", "-framerate", str(fps), "-t", str(duur), "-i", txp] + audio_in + [
+               "-filter_complex", filt, "-map", "[v]", "-map", audio_map,
                "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-r", str(fps),
-               "-c:a", "aac", "-shortest", "-movflags", "+faststart", pad]
+               "-c:a", "aac", "-t", str(duur), "-movflags", "+faststart", pad]
         subprocess.run(cmd, check=True)
     return pad
 
@@ -203,7 +243,7 @@ def _tekstslide(post, titel, body, pad, nummer):
     v = post["variabelen"]
     pal = PALETTEN[v["palet"]]
     kleur, accent = _hex(pal[2]), _hex(pal[3])
-    img = achtergrond(b, h, v["palet"], v["achtergrond"], post["id"] + str(nummer)).convert("RGBA")
+    img = achtergrond(b, h, v["palet"], v["achtergrond"], post["id"] + str(nummer)).convert("RGBA")  # tekstslides altijd met verloop
     laag = Image.new("RGBA", (b, h), (0, 0, 0, 0))
     d = ImageDraw.Draw(laag)
     marge = int(b * 0.14)
@@ -240,7 +280,7 @@ def maak_carrousel(post, basis):
     maak_afbeelding(eerste, paden[0])
     # klein veeg-teken rechtsonder op slide 1
     im = Image.open(paden[0]).convert("RGBA"); d = ImageDraw.Draw(im)
-    acc = _hex(PALETTEN[post["variabelen"]["palet"]][3])
+    acc = _kleuren(post)[1]
     d.text((im.width - 70, im.height - 70), "\u2192", font=_klein_font(44, b"Medium"), fill=acc + (220,), anchor="mm")
     im.convert("RGB").save(paden[0], quality=93)
     _tekstslide(post, "WAT BETEKENT DIT?", post["betekenis"], paden[1], 2)

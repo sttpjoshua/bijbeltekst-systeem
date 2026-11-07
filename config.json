@@ -19,5 +19,10 @@
   "min_posts_voor_leren": 6,
   "max_gewicht_verschuiving_per_week": 0.15,
   "hashtags_max": 5,
-  "opmerkingen": "pauze=true zet alles stil, ook posts die al klaarstaan. Eerste week 1 post per dag; daarna verhoogt het systeem zelf naar 2."
+  "opmerkingen": "pauze=true zet alles stil, ook posts die al klaarstaan. Eerste week 1 post per dag; daarna verhoogt het systeem zelf naar 2.",
+  "max_aandeel_beeld": 0.33,
+  "beelden_overslaan": [
+    "pexels-strannik-sk-35101279.jpg",
+    "pexels-vialyn-chen-1091642248-20653781.jpg"
+  ]
 }

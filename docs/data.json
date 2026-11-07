@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-07T12:01",
+ "gegenereerd": "2026-11-07T12:10",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -47,6 +47,10 @@
     "True": 1.0,
     "False": 1.0
    },
+   "achtergrondbron": {
+    "verloop": 1.0,
+    "beeld": 0.6
+   },
    "tijdslot": {
     "07:30": 1.0,
     "12:15": 1.0,
@@ -88,6 +92,10 @@
    "uitleg_op_beeld": {
     "True": 0,
     "False": 0
+   },
+   "achtergrondbron": {
+    "verloop": 0,
+    "beeld": 0
    },
    "tijdslot": {
     "07:30": 0,

@@ -32,6 +32,7 @@ Schrijf in het Nederlands, warm en eenvoudig, nooit prekerig. Elke hook anders d
 ## Dagelijkse run
 Het online zetten zelf doet GitHub Actions (`.github/workflows/publiceren.yml`, elk kwartier) en het ophalen van statistieken ook (dagelijks). Deze run maakt alleen de posts van morgen klaar.
 1. `git pull --rebase`. Lees `config.json`. Pauze? Zie regels.
+   Clone ook de privé repo `sttpjoshua/bibleverse-materiaal` (add_repo, alleen lezen) naast deze repo, dus als map `../bibleverse-materiaal`. Daar staan Joshua's muziek (Epidemic Sound) en foto's. Zet die bestanden NOOIT in deze openbare repo; alleen de afgewerkte post mag hier komen. Ontbreekt de map, dan gebruikt het systeem automatisch kleurverloop en geen muziek, en logt het een fout.
 2. Bereken MORGEN (Europe/Amsterdam). `python3 src/systeem.py kies --datum MORGEN`.
 3. Schrijf de teksten (zie hierboven) in `data/posts.json`.
 4. `python3 src/systeem.py render --datum MORGEN`. Bekijk minstens één gemaakt beeld met Read (bij video: haal een frame op 4 s met ffmpeg). Klopt er iets niet (tekst afgesneden, onleesbaar), zet de status van die post op "afgekeurd" en log het.

@@ -45,12 +45,16 @@ DIMENSIES = {
     "hook_stijl": ["vraag", "herkenning", "uitdaging", "rustig", "geen"],
     "formaat": ["afbeelding", "video", "carrousel"],
     "uitleg_op_beeld": [True, False],
+    "achtergrondbron": ["verloop", "beeld"],
     "tijdslot": ["07:30", "12:15", "17:45", "20:30", "22:00"],
 }
 
+# Startgewichten die afwijken van 1,0 (Joshua: vooral kleurverloop, foto's als aanvulling)
+START_GEWICHT = {("achtergrondbron", "beeld"): 0.6}
+
 def nieuwe_strategie():
     return {"versie": 1, "bijgewerkt": None,
-            "gewichten": {d: {str(o): 1.0 for o in opts} for d, opts in DIMENSIES.items()},
+            "gewichten": {d: {str(o): START_GEWICHT.get((d, str(o)), 1.0) for o in opts} for d, opts in DIMENSIES.items()},
             "metingen": {d: {str(o): 0 for o in opts} for d, opts in DIMENSIES.items()},
             "inzichten": []}
 
@@ -66,7 +70,7 @@ def vul_strategie_aan(strat):
         strat["gewichten"].setdefault(d, {})
         strat["metingen"].setdefault(d, {})
         for o in opts:
-            strat["gewichten"][d].setdefault(str(o), 1.0)
+            strat["gewichten"][d].setdefault(str(o), START_GEWICHT.get((d, str(o)), 1.0))
             strat["metingen"][d].setdefault(str(o), 0)
     return strat
 
@@ -77,6 +81,38 @@ def kies_optie(dim, strat, verkenning, rnd, uitsluiten=()):
     g = strat["gewichten"].get(dim, {})
     gew = [max(0.05, g.get(str(o), 1.0)) ** 2 for o in opties]  # kwadraat: winnaars krijgen voorrang
     return rnd.choices(opties, weights=gew)[0], "strategie"
+
+# ---------- Eigen materiaal (privé repo bibleverse-materiaal) ----------
+def materiaal_map():
+    return os.environ.get("BIBLEVERSE_MATERIAAL") or os.path.join(os.path.dirname(ROOT), "bibleverse-materiaal")
+
+def materiaal(cfg):
+    """Lijsten met bestandsnamen (relatief aan de materiaalmap). Leeg als de map ontbreekt."""
+    m = materiaal_map()
+    if not os.path.isdir(m):
+        return {"beelden": [], "muziek": [], "geluid": []}
+    alle = []
+    for root, _, files in os.walk(m):
+        if ".git" in root:
+            continue
+        for f in files:
+            alle.append(os.path.relpath(os.path.join(root, f), m))
+    overslaan = set(cfg.get("beelden_overslaan", []))
+    beelden = sorted(f for f in alle if f.lower().endswith((".jpg", ".jpeg", ".png")) and os.path.basename(f) not in overslaan)
+    mp3 = sorted(f for f in alle if f.lower().endswith(".mp3"))
+    geluid = [f for f in mp3 if os.path.basename(f).startswith(("ES_Ambience", "ES_Water"))]
+    december = dt.date.today().month == 12
+    muziek = [f for f in mp3 if f not in geluid and (december or "christmas" not in f.lower())]
+    return {"beelden": beelden, "muziek": muziek, "geluid": geluid}
+
+def minst_gebruikt(opties, posts, veld, rnd):
+    """Kies de optie die het langst niet gebruikt is (nooit gebruikt eerst), met toeval bij gelijkspel."""
+    laatst = {}
+    for p in posts:
+        if p.get(veld):
+            laatst[p[veld]] = max(laatst.get(p[veld], ""), p["datum"])
+    opties = list(opties); rnd.shuffle(opties)
+    return min(opties, key=lambda o: laatst.get(o, "")) if opties else None
 
 # ---------- Kiezen ----------
 def cmd_kies(datum):
@@ -93,6 +129,7 @@ def cmd_kies(datum):
     if n <= 0:
         print("Voor", datum, "zijn al genoeg posts gepland."); return
     gebruikte_slots = {p["variabelen"]["tijdslot"] for p in al_vandaag}
+    mat = materiaal(cfg)
     nieuw = []
     for i in range(n):
         v, bron = {}, {}
@@ -102,6 +139,13 @@ def cmd_kies(datum):
         gebruikte_slots.add(v["tijdslot"])
         v.update(HUISSTIJLEN[v["huisstijl"]])
         v["hook_op_beeld"] = False  # Joshua wil geen hooktekst op het beeld
+        # Foto-achtergrond alleen als er beelden zijn en het maximumaandeel niet bereikt is
+        if v["achtergrondbron"] == "beeld":
+            grens14 = (dt.date.fromisoformat(datum) - dt.timedelta(days=14)).isoformat()
+            recent14 = [p for p in posts + nieuw if p["datum"] >= grens14]
+            aandeel = sum(1 for p in recent14 if p["variabelen"].get("achtergrondbron") == "beeld") / max(1, len(recent14))
+            if not mat["beelden"] or aandeel >= cfg.get("max_aandeel_beeld", 0.33):
+                v["achtergrondbron"], bron["achtergrondbron"] = "verloop", "limiet"
         kandidaten = [x for x in verzen if x["thema"] == v["thema"] and x["id"] not in recent]
         if not kandidaten:
             kandidaten = [x for x in verzen if x["id"] not in recent] or verzen
@@ -114,7 +158,10 @@ def cmd_kies(datum):
                       "variabelen": v, "keuzebron": bron,
                       "hook": "", "beeld_hook": "", "caption": "", "hashtags": [],
                       "uitleg": "", "betekenis": "", "toepassing": "",
-                      "media": None, "media_url": None, "metricool": {}, "stats": {}})
+                      "media": None, "media_url": None, "metricool": {}, "stats": {},
+                      "beeld": minst_gebruikt(mat["beelden"], posts + nieuw, "beeld", rnd) if v["achtergrondbron"] == "beeld" else None,
+                      "muziek": minst_gebruikt(mat["muziek"], posts + nieuw, "muziek", rnd) if v["formaat"] == "video" else None,
+                      "geluid": (rnd.choice(mat["geluid"]) if mat["geluid"] and v["formaat"] == "video" and v["achtergrondbron"] == "beeld" else None)})
     bewaar("data/posts.json", posts + nieuw)
     print(json.dumps([{k: p[k] for k in ("id", "ref", "tekst", "variabelen")} for p in nieuw], ensure_ascii=False, indent=1))
     print("\nVul nu per post in data/posts.json in: 'hook', 'caption', 'hashtags'; 'uitleg' als uitleg_op_beeld true is; 'betekenis' en 'toepassing' bij formaat carrousel. Zie TAKEN.md.")
@@ -132,6 +179,7 @@ def cmd_render(datum):
         if probleem:
             print("NIET GERENDERD", p["id"], probleem); fouten += 1; continue
         p["handle"] = cfg.get("handle", "")
+        koppel_materiaal(p)
         fmt = p["variabelen"]["formaat"]
         ext = "mp4" if fmt == "video" else "jpg"
         rel = f"docs/media/{datum[:7]}/{p['id']}.{ext}"
@@ -144,6 +192,8 @@ def cmd_render(datum):
             (maak_video if ext == "mp4" else maak_afbeelding)(p, P(rel))
             p["media"], p["media_extra"] = rel, []
         p["thumb"] = maak_thumb(P(p["media"]), p["id"])
+        for k in ("beeld_pad", "muziek_pad", "geluid_pad"):
+            p.pop(k, None)
         if cfg.get("github_repo"):
             eig, naam = cfg["github_repo"].split("/")
             url = lambda r: f"https://{eig}.github.io/{naam}/{r[len('docs/'):]}"
@@ -187,6 +237,33 @@ def cmd_opruimen(dagen=30):
     if weg:
         cmd_log(f"Opgeruimd: media van {weg} oude posts verwijderd (voorvertoning bewaard)")
     print(weg, "bestanden opgeruimd")
+
+def koppel_materiaal(p):
+    """Zet tijdelijke paden naar foto/muziek; valt terug op verloop/stilte als het materiaal ontbreekt."""
+    import subprocess, random as _r
+    m = materiaal_map()
+    if p.get("beeld"):
+        pad = os.path.join(m, p["beeld"])
+        if os.path.exists(pad):
+            p["beeld_pad"] = pad
+        else:
+            p["variabelen"]["achtergrondbron"] = "verloop"; p["beeld"] = None
+            cmd_log(f"{p['id']}: foto niet gevonden (is bibleverse-materiaal gecloned?), verloop gebruikt", "fout")
+    if p.get("muziek"):
+        pad = os.path.join(m, p["muziek"])
+        if os.path.exists(pad):
+            p["muziek_pad"] = pad
+            try:
+                duur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", pad],
+                                            capture_output=True, text=True).stdout.strip())
+            except ValueError:
+                duur = 30
+            p["muziek_start"] = round(_r.Random(p["id"]).uniform(min(8, duur * 0.1), max(min(8, duur * 0.1), min(60, duur - 12))), 1)
+        else:
+            p["muziek"] = None
+            cmd_log(f"{p['id']}: muziek niet gevonden, video zonder muziek", "fout")
+    if p.get("geluid") and os.path.exists(os.path.join(m, p["geluid"])):
+        p["geluid_pad"] = os.path.join(m, p["geluid"])
 
 VERBODEN = ["link in bio", "volg voor meer", "deel dit met 10", "amen als", "typ amen", "zegen als je"]
 
