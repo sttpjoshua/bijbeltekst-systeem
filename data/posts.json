@@ -720,7 +720,7 @@
   "metricool": {},
   "stats": {},
   "beeld": null,
-  "muziek": null,
+  "muziek": "ES_Samadhi (Alpha 10 hz) - Syntropy.mp3",
   "geluid": null,
   "handle": "@bibleverse_nl",
   "duur": 9,
@@ -752,7 +752,8 @@
    "betekenis": "",
    "toepassing": "",
    "kernwoord": "hoop"
-  }
+  },
+  "muziek_start": 50.3
  },
  {
   "id": "2026-11-09-3",
@@ -815,7 +816,7 @@
   "metricool": {},
   "stats": {},
   "beeld": null,
-  "muziek": null,
+  "muziek": "ES_Meditations - Drift Far Away.mp3",
   "geluid": null,
   "handle": "@bibleverse_nl",
   "duur": 13,
@@ -847,7 +848,8 @@
    "betekenis": "",
    "toepassing": "",
    "kernwoord": "stichten"
-  }
+  },
+  "muziek_start": 39.5
  },
  {
   "id": "2026-11-09-4",
@@ -1211,7 +1213,7 @@
   "metricool": {},
   "stats": {},
   "beeld": null,
-  "muziek": null,
+  "muziek": "ES_Meadow Waves - Rand Aldo.mp3",
   "geluid": null,
   "handle": "@bibleverse_nl",
   "duur": 13,
@@ -1243,7 +1245,8 @@
    "betekenis": "",
    "toepassing": "",
    "kernwoord": "wijze"
-  }
+  },
+  "muziek_start": 22.8
  },
  {
   "id": "2026-11-10-3",

@@ -1072,6 +1072,31 @@ def cmd_check():
     print(len(verzen), "versen;", "pauze:", cfg["pauze"])
     sys.exit(0 if ok else 1)
 
+def cmd_aanvullen(alleen_check=False):
+    """Video's zonder muziek (gemaakt in een run zonder bibleverse-materiaal) alsnog muziek geven en opnieuw maken.
+    Draait in GitHub Actions met MATERIAAL_PAT. Met 'check': exit 0 als er iets aan te vullen is, anders 1."""
+    posts = laad("data/posts.json", [])
+    vandaag = dt.date.today().isoformat()
+    nodig = [p for p in posts if p["datum"] >= vandaag and p["status"] in ("gerenderd", "gepland", "klaar_voor_render")
+             and p["variabelen"].get("formaat") == "video" and not p.get("muziek") and not p.get("gemist")]
+    if alleen_check:
+        print(len(nodig), "video's zonder muziek"); sys.exit(0 if nodig else 1)
+    if not nodig:
+        return
+    mat = materiaal(laad("config.json"))
+    if not mat["muziek"]:
+        print("Geen muziek beschikbaar; niets aangevuld"); return
+    rnd = random.Random(vandaag)
+    for p in nodig:
+        p["muziek"] = minst_gebruikt(mat["muziek"], posts, "muziek", rnd)
+        p["status"] = "opnieuw_maken"
+    bewaar("data/posts.json", posts)
+    for d in sorted({p["datum"] for p in nodig}):
+        cmd_render(d)
+    activiteit("video", f"Muziek toegevoegd aan {len(nodig)} video('s): " + ", ".join(p["ref"] for p in nodig))
+    cmd_log(f"Muziek alsnog toegevoegd aan {len(nodig)} video('s)", "info")
+    cmd_dashboard()
+
 if __name__ == "__main__":
     a = argparse.ArgumentParser()
     a.add_argument("cmd"); a.add_argument("args", nargs="*")
@@ -1086,4 +1111,5 @@ if __name__ == "__main__":
         "keur": lambda: cmd_keur(x.args[0], x.args[1:]),
      "registreer": lambda: cmd_registreer(*x.args), "stats": lambda: cmd_stats(x.args[0]),
      "leer": cmd_leer, "dashboard": cmd_dashboard, "check": cmd_check,
-     "log": lambda: cmd_log(*x.args), "vers": lambda: cmd_vers(*x.args), "opruimen": lambda: cmd_opruimen(*x.args), "opgelost": cmd_opgelost}[x.cmd]()
+     "log": lambda: cmd_log(*x.args), "vers": lambda: cmd_vers(*x.args), "opruimen": lambda: cmd_opruimen(*x.args), "opgelost": cmd_opgelost,
+     "aanvullen": lambda: cmd_aanvullen(bool(x.args and x.args[0] == "check"))}[x.cmd]()

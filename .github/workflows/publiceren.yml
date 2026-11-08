@@ -52,6 +52,17 @@ jobs:
             git clone --depth 1 -q "https://x-access-token:${MATERIAAL_PAT}@github.com/sttpjoshua/bibleverse-materiaal.git" ../bibleverse-materiaal || echo "Materiaal ophalen mislukt"
             sudo apt-get install -y -qq ffmpeg >/dev/null || true
           fi
+      - name: Video's zonder muziek aanvullen (als een run zonder materiaal ze maakte)
+        if: steps.t.outputs.taak == 'posten'
+        env:
+          MATERIAAL_PAT: ${{ secrets.MATERIAAL_PAT }}
+        run: |
+          if [ -n "$MATERIAAL_PAT" ] && python3 src/systeem.py aanvullen check; then
+            pip install -q pillow numpy
+            sudo apt-get install -y -qq ffmpeg >/dev/null || true
+            git clone --depth 1 -q "https://x-access-token:${MATERIAAL_PAT}@github.com/sttpjoshua/bibleverse-materiaal.git" ../bibleverse-materiaal || { echo "Materiaal ophalen mislukt"; exit 0; }
+            python3 src/systeem.py aanvullen || echo "Aanvullen mislukt"
+          fi
       - name: Uitvoeren
         env:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}

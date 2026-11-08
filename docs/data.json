@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-08T14:36",
+ "gegenereerd": "2026-11-08T15:46",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1001,11 +1001,6 @@
  "logboek": [
   {
    "t": "2026-11-07T12:32",
-   "soort": "info",
-   "tekst": "Token heeft alle rechten, ook voor statistieken"
-  },
-  {
-   "t": "2026-11-07T12:32",
    "soort": "fout",
    "tekst": "Facebook-verbinding mislukt: 400: {\"error\":{\"message\":\"(#100) Object does not exist, cannot be loaded due to missing permission or reviewable feature, or does not support this operation. This endpoint requires the 'pages_read_eng",
    "opgelost": true
@@ -1295,21 +1290,21 @@
   {
    "t": "2026-11-08T14:36",
    "soort": "fout",
-   "tekst": "Privé repo bibleverse-materiaal kon niet gecloned worden (add_repo niet beschikbaar in deze sessie); posts van 9 en 10 nov gebruiken kleurverloop, video's zonder muziek"
+   "tekst": "Privé repo bibleverse-materiaal kon niet gecloned worden (add_repo niet beschikbaar in deze sessie); posts van 9 en 10 nov gebruiken kleurverloop, video's zonder muziek",
+   "opgelost": true
   },
   {
    "t": "2026-11-08T14:36",
    "soort": "info",
    "tekst": "10 posts klaargezet: 5 voor 9 nov (07:30, 12:15, 17:45, 20:30, 22:00) en 5 voor 10 nov (07:30, 12:15, 17:45, 20:30, 22:00), met reserveverzen"
-  }
- ],
- "recente_fouten": [
+  },
   {
-   "t": "2026-11-08T14:36",
-   "soort": "fout",
-   "tekst": "Privé repo bibleverse-materiaal kon niet gecloned worden (add_repo niet beschikbaar in deze sessie); posts van 9 en 10 nov gebruiken kleurverloop, video's zonder muziek"
+   "t": "2026-11-08T15:46",
+   "soort": "info",
+   "tekst": "Muziek alsnog toegevoegd aan 3 video('s)"
   }
  ],
+ "recente_fouten": [],
  "versen_totaal": 300,
  "reacties": [],
  "inzichten_extra": {
@@ -1394,7 +1389,7 @@
    "ok": "2026-11-08T07:00",
    "laatst_ok": false,
    "detail": "400: {\"error\":{\"message\":\"(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https:\\/\\/",
-   "fout": "2026-11-08T14:00"
+   "fout": "2026-11-08T15:00"
   },
   "facebook": {
    "ok": "2026-11-08T12:15",
@@ -1588,6 +1583,18 @@
     "keer": 1
    },
    {
+    "naam": "ES_Meadow Waves - Rand Aldo.mp3",
+    "keer": 1
+   },
+   {
+    "naam": "ES_Meditations - Drift Far Away.mp3",
+    "keer": 1
+   },
+   {
+    "naam": "ES_Samadhi (Alpha 10 hz) - Syntropy.mp3",
+    "keer": 1
+   },
+   {
     "naam": "ES_A Higher Calling - Mandala Dreams.mp3",
     "keer": 0
    },
@@ -1632,14 +1639,6 @@
     "keer": 0
    },
    {
-    "naam": "ES_Meadow Waves - Rand Aldo.mp3",
-    "keer": 0
-   },
-   {
-    "naam": "ES_Meditations - Drift Far Away.mp3",
-    "keer": 0
-   },
-   {
     "naam": "ES_Mind Flow - Aashray Harishankar.mp3",
     "keer": 0
    },
@@ -1649,10 +1648,6 @@
    },
    {
     "naam": "ES_Rain on Lotus Leaves - Aks & Lakshmi.mp3",
-    "keer": 0
-   },
-   {
-    "naam": "ES_Samadhi (Alpha 10 hz) - Syntropy.mp3",
     "keer": 0
    },
    {
