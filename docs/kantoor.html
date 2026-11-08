@@ -220,9 +220,10 @@ const AG=[
  {id:'dispatcher',name:'Dispatcher',shirt:'#f08a24',hair:'#e8c35a',skin:'#f5d3b0',col:0,row:1},
  {id:'analist',name:'Analist',shirt:'#8e5bd0',hair:'#3b2418',skin:'#a86f47',col:1,row:1},
  {id:'controller',name:'Controller',shirt:'#2aa7a0',hair:'#8a8a94',skin:'#edc7a0',col:2,row:1},
+ {id:'community',name:'Community',shirt:'#e0457b',hair:'#2b1a10',skin:'#d9a07a',col:null,row:null},
 ];
 const COLX=[45,120,195],DESKY=[96,156],AISLE=[72,128],LANE=226;
-const SLOTS=[{x:255,y:158},{x:275,y:158},{x:295,y:158},{x:268,y:84},{x:238,y:122},{x:296,y:120}];
+const SLOTS=[{x:255,y:158},{x:275,y:158},{x:295,y:158},{x:268,y:84},{x:238,y:122},{x:296,y:120},{x:236,y:188}];
 AG.forEach((a,i)=>{
   a.i=i;a.state='idle';a.task='';a.dest='lounge';a.path=[];
   a.x=SLOTS[i].x;a.y=SLOTS[i].y;a.face=1;
@@ -234,6 +235,7 @@ function setDest(a,d){
   if(a.dest===d)return;a.dest=d;a.kuiert=false;a.doel=null;a.volgende=0;
   if(d==='telefoon'){a.path=[{x:LANE+4,y:a.y},{x:LANE+4,y:104},{x:290,y:104}];return}
   if(d==='overleg'){const s=OVERLEG[a.i];a.path=[{x:LANE+4,y:a.y},{x:LANE+4,y:s.y},s];return}
+  if(a.id==='community'){const s=d==='home'?{x:304,y:66}:SLOTS[a.i];a.path=[{x:LANE+4,y:a.y},{x:LANE+4,y:s.y},s];return}
   const cx=COLX[a.col],ay=AISLE[a.row],home={x:cx,y:DESKY[a.row]+2},slot=SLOTS[a.i];
   a.path=d==='home'?[{x:LANE,y:ay},{x:cx,y:ay},home]:[{x:cx,y:ay},{x:LANE,y:ay},slot];
 }
@@ -243,8 +245,8 @@ function move(a,dt){
   if(Math.abs(dx)>.5)a.face=dx<0?-1:1;
   if(d<=sp){a.x=t.x;a.y=t.y;a.path.shift()}else{a.x+=dx/d*sp;a.y+=dy/d*sp}
 }
-const seated=a=>a.dest==='home'&&!a.path.length;
-const OVERLEG=[{x:250,y:174},{x:250,y:186},{x:300,y:174},{x:300,y:186},{x:268,y:168},{x:284,y:168}];
+const seated=a=>a.id!=='community'&&a.dest==='home'&&!a.path.length;
+const OVERLEG=[{x:250,y:174},{x:250,y:186},{x:300,y:174},{x:300,y:186},{x:268,y:168},{x:284,y:168},{x:276,y:190}];
 /* Pauze betekent niet stilzitten: wie niets te doen heeft, haalt koffie, kijkt even rond of praat bij. */
 const KUIER=[{x:258,y:60},{x:286,y:60},{x:300,y:60},{x:240,y:104},{x:300,y:104},{x:246,y:192},{x:304,y:192},{x:232,y:150}];
 function rondlopen(a,now){
@@ -360,6 +362,7 @@ function drawChar(a,t){
   if(a.id==='designer'){R(x-4,y-19,8,2,'#222');R(x-1,y-20,2,1,'#222')}
   if(a.id==='video'){R(x-4,y-15,1,4,'#111');R(x+3,y-15,1,4,'#111');R(x-3,y-18,6,1,'#111')}
   if(a.id==='controller'){R(x-3,y-14,6,1,'#1d1d2b');R(x-3,y-14,1,2,'#1d1d2b');R(x+2,y-14,1,2,'#1d1d2b')}
+  if(a.id==='community'){R(x-4,y-17,8,1,'#333');R(x-4,y-17,1,4,'#333');R(x+3,y-17,1,4,'#333');R(x+4,y-13,2,1,'#333')}
   if(a.id==='dispatcher'){R(x-3,y-19,6,2,'#d9701a');R(x-5,y-17,3,1,'#d9701a')}
   if(a.id==='analist'){R(x-1,y-9,2,3,'#f2c14e')}
   if(a.id==='verskiezer'){R(x-2,y-20,4,1,'#f2c14e')}
@@ -434,7 +437,7 @@ function renderLog(){document.getElementById('log').innerHTML=LOG.slice(0,10).ma
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const fmt=n=>n.toLocaleString('nl-NL');
 const chips=document.getElementById('chips');
-chips.innerHTML=AG.map(a=>`<div class="chip"><i class="dot" id="d_${a.id}"></i><b>${a.name}</b><span id="t_${a.id}">Pauze</span></div>`).join('');
+chips.innerHTML=AG.map(a=>`<div class="chip" data-ag="${a.id}" style="cursor:pointer" title="Klik om ${a.name} te openen"><i class="dot" id="d_${a.id}"></i><b>${a.name}</b><span id="t_${a.id}">Pauze</span></div>`).join('');
 const bars=document.getElementById('plat');
 bars.innerHTML=S.plat.map((p,i)=>`<div class="pl"><span id="pn${i}">${p.n}</span><div class="bar"><i id="b${i}"></i></div><em id="v${i}"></em></div>`).join('');
 function nextPost(){
@@ -614,6 +617,7 @@ const ROLE={
  video:{wat:'Monteert de video\'s met muziek en de tekst van het vers.',wanneer:'Dagelijks, voor posts in videoformaat'},
  dispatcher:{wat:'Zet elk kwartier de posts online die klaarstaan, op Instagram en Facebook. Een post die meer dan 3 uur te laat is, slaat hij over.',wanneer:'Elk kwartier'},
  analist:{wat:'Haalt elke ochtend de cijfers op (24 uur en 7 dagen na een post) en leert welke stijlen, thema\'s en tijden het best werken.',wanneer:'Elke ochtend'},
+ community:{wat:'Leest de reacties op je posts en schrijft per reactie een antwoord. Jij keurt het goed, dan zet ik het eronder.',wanneer:'Reacties elk uur ophalen, antwoorden om 14:32 en 20:47'},
  controller:{wat:'Bewaakt de verbindingen en het token en meldt fouten in het logboek. Verlengt het Instagram-token elke maandag.',wanneer:'Bij elke run, token elke maandag'}
 };
 const dagMaand=d=>new Date(d).toLocaleDateString('nl-NL',{day:'numeric',month:'long'});
@@ -681,6 +685,7 @@ function acts(id){
         :{t:'Snel leren aanzetten',info:'Tijdelijk 5 posts per dag en elke dag leren in plaats van wekelijks. Bereik per post kan iets lager uitvallen.',f:[{k:'d',type:'choice',opt:[[7,'7 dagen'],[14,'14 dagen']],cur:7}],run:v=>({actie:'leermodus',aan:true,dagen:+v.d})},
       {t:'Cijfers nu ophalen',info:'Ik haal meteen de nieuwste cijfers op.',f:[],taak:'statistieken'}
     ],
+    community:[],
     controller:[
       {t:c.pauze?'Hervatten':'Pauzeren',info:c.pauze?'Het systeem post daarna weer.':'Er gaat niets meer online tot je hervat.',f:[],confirm:!c.pauze,run:()=>({actie:'pauze',waarde:!c.pauze})},
       {t:'Verbinding testen',info:'Ik controleer de koppeling met Instagram en Facebook.',f:[],run:()=>({actie:'test'})},
@@ -696,6 +701,7 @@ document.body.appendChild(card);
 const acHead=card.querySelector('#acHead'),acBody=card.querySelector('#acBody');
 let curA=null,cardMode=null,lastXY={x:40,y:40};
 const SMALL=()=>matchMedia('(max-width:700px)').matches;
+document.getElementById('chips').addEventListener('click',e=>{const c=e.target.closest('[data-ag]');if(!c)return;const a=AG.find(x=>x.id===c.dataset.ag);if(a){lastXY={x:e.clientX-320,y:e.clientY-40};showCard(a,'pin',e);e.stopPropagation()}});
 function headHTML(a){
   const st={working:'Bezig',done:'Klaar',error:'Probleem',idle:'Pauze'}[a.state],R=ROLE[a.id],i=inst(a.id);
   return `<h4><i class="sw" style="background:${a.shirt}"></i>${esc(a.name)}<span class="st ${a.state}">${st}</span></h4>
@@ -714,6 +720,7 @@ function pinBody(a){
       <div class="acts" style="margin-top:8px"><input id="acTok" type="password" placeholder="github_pat_..." style="flex:1;min-width:150px"><button id="acSave" class="go">Opslaan</button></div>
       <div class="k">Daarna kun je mij hierop sturen</div><div class="acts">${acts(a.id).map(x=>`<span class="chip">${esc(x.t)}</span>`).join('')}</div>`;
   }
+  if(a.id==='community')return communityBak();
   return (a.id==='designer'?designerBak():'')+(a.id==='verskiezer'?verskiezerPlan():'')+`<div class="k">Stuur mij op</div><div class="acts col">${acts(a.id).map((x,i)=>`<button data-i="${i}"${x.leeg?' disabled title="Er is nu niets om te kiezen"':''}>${esc(x.t)}${x.leeg?' (niets klaar)':''}</button>`).join('')}</div>
     <div id="acMsg"></div><div class="hint" style="margin-top:8px"><a href="#" id="acForget">Sleutel van dit apparaat verwijderen</a></div>`;
 }
@@ -721,6 +728,9 @@ function bindPin(a){
   const sv=acBody.querySelector('#acSave');
   if(sv)sv.onclick=()=>{const v=acBody.querySelector('#acTok').value.trim();if(!v)return;try{localStorage.setItem(KEY,v)}catch(e){alert('Deze browser laat niet opslaan.');return}acBody.innerHTML=pinBody(a);bindPin(a)};
   acBody.querySelectorAll('.acts.col button').forEach(b=>b.onclick=()=>showForm(a,+b.dataset.i));
+  acBody.querySelectorAll('[data-rp]').forEach(b=>b.onclick=()=>{const rij=b.closest('.rx');const tekst=rij.querySelector('textarea').value.trim();if(!tekst){rij.querySelector('.kmsg').textContent='Schrijf eerst een antwoord.';return}
+    rij.querySelector('.st').textContent='⏳ wordt geplaatst…';stuurK({actie:'reactie_plaatsen',reactie:b.dataset.rp,tekst},b,rij.querySelector('.kmsg'))});
+  acBody.querySelectorAll('[data-rn]').forEach(b=>b.onclick=()=>{const rij=b.closest('.rx');rij.style.opacity=.5;stuurK({actie:'reactie_negeren',reactie:b.dataset.rn},b,rij.querySelector('.kmsg'))});
   const pb=acBody.querySelector('#vpPlan');if(pb)pb.onclick=()=>{hideCard();toonPlanning()};
   const bk=acBody.querySelector('#dbAlles');if(bk)bk.onclick=()=>{hideCard();toonGoedkeuren()};
   acBody.querySelectorAll('[data-dbok]').forEach(b=>b.onclick=()=>stuurK({actie:'goedkeuren',post:b.dataset.dbok},b,acBody.querySelector('#dbMsg')));
@@ -903,6 +913,21 @@ function teKeuren(){
   return ((DJ&&DJ.posts)||[]).filter(p=>['gerenderd','opnieuw_maken','wacht_op_tekst'].includes(p.status)&&tijdVan(p)>=d)
     .sort((a,b)=>tijdVan(a)-tijdVan(b));
 }
+function communityBak(){
+  if(!gtok())return '<div class="hint">Vul eerst je GitHub-sleutel in bij een andere medewerker.</div>';
+  const g=(DJ&&DJ.gezondheid&&DJ.gezondheid.reacties)||null;
+  const open=((DJ&&DJ.reacties)||[]).filter(r=>r.status==='nieuw'||r.status==='voorgesteld');
+  let h='<div class="k">Reacties om te beantwoorden</div>';
+  if(g&&g.laatst_ok===false)h+='<div class="hint" style="color:var(--err);margin-bottom:8px">Ik mag de reacties nog niet lezen. In Meta moet het recht <b>instagram_manage_comments</b> (en voor Facebook <b>pages_read_user_content</b> en <b>pages_manage_engagement</b>) aan de sleutel worden toegevoegd.</div>';
+  if(!open.length)return h+'<div class="hint">Er staan geen reacties open. Ik kijk elk uur of er iets nieuws is.</div>';
+  return h+open.slice(0,8).map(r=>`<div class="rx" style="border-top:1px solid #43376a;padding:8px 0">
+    <div><b>${esc(r.naam)}</b> <span class="hint">op ${esc(r.ref)} · ${esc(r.platform)}</span> <span class="st">${r.status==='nieuw'?'nog geen voorstel':''}</span></div>
+    <div style="margin:4px 0;font-size:13px">“${esc(r.tekst)}”</div>
+    ${r.notitie?`<div class="hint" style="color:var(--gold)">${esc(r.notitie)}</div>`:''}
+    <textarea rows="2" style="width:100%;background:#1d1630;color:var(--ink);border:1px solid #5a4a8c;border-radius:6px;padding:6px;font:inherit;font-size:12px" placeholder="Jouw antwoord…">${esc(r.voorstel||'')}</textarea>
+    <div class="acts" style="margin-top:6px"><button class="go" data-rp="${esc(r.id)}">Plaatsen</button><button data-rn="${esc(r.id)}">Afgehandeld</button></div><div class="kmsg"></div></div>`).join('')
+    +(open.length>8?`<div class="hint">En nog ${open.length-8} meer.</div>`:'');
+}
 function verskiezerPlan(){
   const {dagen,items}=weekItems();const morgen=dagen[1];
   const m=items.filter(p=>p.datum===morgen);
@@ -1069,6 +1094,7 @@ function klokje(a){
   if(a.id==='verskiezer'||a.id==='designer'||a.id==='video')return '⏱ '+duur(volgendeOm([[14,32],[20,47]]));
   if(a.id==='analist')return '⏱ '+duur(volgendeOm([[5,17]]));
   if(a.id==='controller'){const n=new Date();const m=15-(n.getMinutes()%15);return '⏱ '+m+'m'}
+  if(a.id==='community'){const n=((DJ&&DJ.reacties)||[]).filter(r=>r.status==='nieuw'||r.status==='voorgesteld').length;return n?'💬 '+n:''}
   return '';
 }
 

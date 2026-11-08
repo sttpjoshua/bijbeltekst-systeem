@@ -244,6 +244,12 @@ def cmd_posten():
     posts = S.laad("data/posts.json", [])
     vandaag_online = sum(1 for p in posts if p["datum"] == nu.date().isoformat() and p["status"] == "gepubliceerd")
     controleer_aantal(cfg, posts, nu)
+    if nu.minute < 15 and 7 <= nu.hour <= 23:
+        try:
+            if reacties_ophalen(posts):
+                S.cmd_dashboard()
+        except Exception as e:
+            print("Reacties ophalen mislukt:", e)
     if nu.hour in (10, 13, 16, 19, 22) and nu.minute < 15:
         try:
             verse_cijfers(posts)
@@ -382,6 +388,60 @@ def volgers_en_tokens():
             g.setdefault(naam, {})["detail"] = str(e)[:160]
     S.bewaar("data/gezondheid.json", g)
 
+# ---------- Reacties ----------
+def reacties_ophalen(posts):
+    """Haalt reacties op posts van de afgelopen 14 dagen op (Instagram en Facebook) in data/reacties.json.
+    Hiervoor zijn extra rechten nodig: instagram_manage_comments (en voor Facebook pages_read_user_content)."""
+    uid, tok = env()
+    nu = dt.datetime.now(TZ)
+    oud = {r["id"]: r for r in S.laad("data/reacties.json", [])}
+    nieuw_aantal, fout = 0, None
+    for p in posts:
+        for plat, g in p.get("gepubliceerd", {}).items():
+            if nu - dt.datetime.fromisoformat(g["t"]) > dt.timedelta(days=14):
+                continue
+            try:
+                if plat == "instagram":
+                    r = http("GET", f"{API}/{g['id']}/comments", {"fields": "id,text,username,timestamp,replies{id,text,username}", "access_token": tok})
+                    rijen = [(c["id"], c.get("text", ""), c.get("username", ""), c.get("timestamp", ""),
+                              any(x.get("username") == "bibleverse_nl" for x in (c.get("replies") or {}).get("data", []))) for c in r.get("data", [])]
+                elif plat == "facebook":
+                    pid, ptok = page_token(tok)
+                    r = http("GET", f"{API_FB}/{g['id']}/comments", {"fields": "id,message,from,created_time,comments{from}", "access_token": ptok})
+                    rijen = [(c["id"], c.get("message", ""), (c.get("from") or {}).get("name", "iemand"), c.get("created_time", ""),
+                              any((x.get("from") or {}).get("id") == pid for x in (c.get("comments") or {}).get("data", []))) for c in r.get("data", [])]
+                else:
+                    continue
+            except Exception as e:
+                fout = str(e)[:160]; continue
+            for cid, tekst, naam, t, beantwoord in rijen:
+                if naam == "bibleverse_nl":
+                    continue
+                r0 = oud.get(cid)
+                if r0:
+                    if beantwoord and r0["status"] != "geplaatst":
+                        r0["status"] = "geplaatst"
+                    continue
+                oud[cid] = {"id": cid, "platform": plat, "post": p["id"], "ref": p["ref"], "media_id": g["id"], "tekst": tekst,
+                            "naam": naam, "t": t[:16], "status": "geplaatst" if beantwoord else "nieuw", "voorstel": ""}
+                nieuw_aantal += 1
+    # afgehandelde reacties na 3 dagen weghalen (de repo is openbaar; bewaar niet meer dan nodig)
+    grens = (nu - dt.timedelta(days=3)).isoformat(timespec="minutes")
+    houd = [r for r in oud.values() if r["status"] in ("nieuw", "voorgesteld") or r.get("geplaatst", r["t"]) >= grens]
+    S.bewaar("data/reacties.json", sorted(houd, key=lambda r: r["t"], reverse=True)[:300])
+    S.gezond("reacties", fout is None, fout or f"{nieuw_aantal} nieuwe reacties")
+    if nieuw_aantal:
+        S.activiteit("community", f"{nieuw_aantal} nieuwe reactie{'s' if nieuw_aantal > 1 else ''} gevonden")
+    return nieuw_aantal
+
+def reactie_plaatsen(r, tekst):
+    uid, tok = env()
+    if r["platform"] == "instagram":
+        http("POST", f"{API}/{r['id']}/replies", {"message": tekst, "access_token": tok})
+    else:
+        pid, ptok = page_token(tok)
+        http("POST", f"{API_FB}/{r['id']}/comments", {"message": tekst, "access_token": ptok})
+
 def cmd_statistieken():
     uid, tok = env()
     posts = S.laad("data/posts.json", [])
@@ -425,6 +485,10 @@ def cmd_statistieken():
         volgers_en_tokens()
     except Exception as e:
         S.cmd_log(f"Volgers ophalen mislukt: {str(e)[:160]}", "fout")
+    try:
+        reacties_ophalen(S.laad("data/posts.json", []))
+    except Exception as e:
+        print("Reacties ophalen mislukt:", e)
     S.gezond("statistieken", True, f"{len(rij)} nieuwe metingen")
     try:
         S.cmd_opruimen(30)

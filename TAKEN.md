@@ -99,3 +99,10 @@ Na het schrijven en renderen van de posts (dagelijkse run, en avondcontrole als 
 - **Stories:** elke post gaat automatisch ook als story op Instagram (`stories` in config).
 - **Video's:** het vers verschijnt stukje voor stukje; de lengte past zich aan (9 tot 18 seconden). Niets aan te doen in de teksten.
 - Na snel leren gaat het systeem terug naar **2 posts per dag**.
+
+## Reacties (Community-manager)
+`data/reacties.json` bevat reacties op de posts. Bij elke dagelijkse run en avondcontrole: schrijf voor elke reactie met status "nieuw" een antwoord in `voorstel` en zet de status op "voorgesteld". Joshua keurt het goed in het kantoor (Community-manager) en dan wordt het geplaatst.
+- Kort (1 tot 2 zinnen), warm, persoonlijk, in het Nederlands, in de jij-vorm. Ga in op wat de persoon schrijft. Hooguit één emoji.
+- Een gebedsverzoek of verdriet: meelevend, zonder preek ("Wat verdrietig, we bidden met je mee 🤍"). Bij signalen van acuut gevaar (zelfbeschadiging of zelfdoding): schrijf een rustig, zorgzaam antwoord dat verwijst naar 113 Zelfmoordpreventie (0800-0113, gratis) en zet in `notitie` "aandacht Joshua".
+- Geen discussies over leerstellige kwesties, politiek of andere kerken; bij een kritische of trollende reactie: `voorstel` leeg, status "voorgesteld" en `notitie` "beter negeren".
+- Geen engagement-bait, geen links, geen lange streep, niets beloven namens Joshua.

@@ -831,7 +831,9 @@ def dashboard_extra(cfg, posts):
     st_all, st_ig, st_fb = optie_stats(posts), optie_stats(posts, "instagram"), optie_stats(posts, "facebook")
     extra_inz = {"weekdag": opties_van(st_all, "weekdag"), "tijd_ig": opties_van(st_ig, "tijdslot"),
                  "tijd_fb": opties_van(st_fb, "tijdslot"), "formaat_ig": opties_van(st_ig, "formaat"), "formaat_fb": opties_van(st_fb, "formaat")}
-    return {"inzichten_extra": extra_inz, "reeksen": [{k: r.get(k) for k in ("naam", "label", "van", "tot", "weekdag", "tijdslot")} for r in laad("data/reeksen.json", {}).get("reeksen", [])],
+    reacties = laad("data/reacties.json", [])
+    return {"reacties": [r for r in reacties if r["status"] in ("nieuw", "voorgesteld")][:40] + [r for r in reacties if r["status"] not in ("nieuw", "voorgesteld")][:10],
+            "inzichten_extra": extra_inz, "reeksen": [{k: r.get(k) for k in ("naam", "label", "van", "tot", "weekdag", "tijdslot")} for r in laad("data/reeksen.json", {}).get("reeksen", [])],
             "gezondheid": laad("data/gezondheid.json", {}), "groei": laad("data/groei.json", []),
             "weken": weken, "inzichten_data": inzichten, "min_posts_voor_leren": cfg.get("min_posts_voor_leren", 6),
             "gemeten_posts": gemeten, "snel_leren": snel, "voorraad": voorraad}

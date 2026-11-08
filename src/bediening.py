@@ -191,6 +191,23 @@ def main(raw):
     elif a == "fouten_opgelost":
         S.cmd_opgelost()
         melding = "Openstaande fouten als opgelost gemarkeerd"
+    elif a in ("reactie_plaatsen", "reactie_negeren"):
+        reacties = S.laad("data/reacties.json", [])
+        r = next((x for x in reacties if x["id"] == o["reactie"]), None)
+        if not r:
+            raise SystemExit("Reactie niet gevonden")
+        if a == "reactie_plaatsen":
+            tekst = (o.get("tekst") or r.get("voorstel") or "").strip()
+            if not tekst or "—" in tekst:
+                raise SystemExit("Geen geldige antwoordtekst")
+            import publiceer
+            publiceer.reactie_plaatsen(r, tekst)
+            r.update(status="geplaatst", antwoord=tekst, geplaatst=dt.datetime.now().isoformat(timespec="minutes"))
+            melding = f"Antwoord geplaatst bij {r['naam']} ({r['ref']})"
+        else:
+            r["status"] = "genegeerd"
+            melding = f"Reactie van {r['naam']} gemarkeerd als afgehandeld"
+        S.bewaar("data/reacties.json", reacties)
     elif a == "test_materiaal":
         ok = materiaal_er()
         n = len(S.materiaal(cfg)["muziek"]) if ok else 0
@@ -208,7 +225,7 @@ def main(raw):
         agent = {"pauze": "controller", "posts_per_dag": "verskiezer", "verkenning": "verskiezer", "vers_uitsluiten": "verskiezer",
                  "max_aandeel_beeld": "designer", "platform": "dispatcher", "tijd": "dispatcher", "nu_posten": "dispatcher",
                  "leermodus": "analist", "ander_vers": "verskiezer", "goedkeuren": "designer", "goedkeuren_instelling": "designer",
-                 "andere_stijl": "designer", "post_ander_vers": "verskiezer", "fouten_opgelost": "controller"}.get(a)
+                 "andere_stijl": "designer", "post_ander_vers": "verskiezer", "fouten_opgelost": "controller", "reactie_plaatsen": "community", "reactie_negeren": "community"}.get(a)
         if a == "overslaan":
             agent = "video" if (vind(posts, o["post"])["variabelen"].get("formaat") == "video") else "designer"
         if agent:
