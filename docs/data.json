@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-08T16:00",
+ "gegenereerd": "2026-11-08T16:57",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1786,6 +1786,11 @@
    }
   ],
   "materiaal_bijgewerkt": "2026-11-07"
+ },
+ "herstel": [],
+ "nood": {
+  "klaar": 6,
+  "doel": 6
  },
  "planning": [
   {

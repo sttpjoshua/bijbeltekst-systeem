@@ -89,7 +89,7 @@ input[type=range]{width:100%}input.veld,select.veld{font:inherit;font-size:13px;
   </div>
 
   <div id="fouten"></div>
-  <section class="kaart" id="gezondheid" style="margin-top:0;margin-bottom:14px"><h2>Gezondheid</h2><div class="gz" id="gzLijst"></div></section>
+  <section class="kaart" id="gezondheid" style="margin-top:0;margin-bottom:14px"><h2>Gezondheid</h2><div class="gz" id="gzLijst"></div><div id="herstelLijst" style="margin-top:12px"></div></section>
   <div class="grid g4" id="tegels"></div>
   <div id="snelLeren"></div>
 
@@ -394,7 +394,11 @@ function bouwGezondheid(){
     item("Statistieken",taak(g.statistieken,30),g.statistieken?"Laatst "+geleden(g.statistieken.ok)+" · elke nacht":"elke nacht rond 05:15",g.statistieken&&g.statistieken.detail)+
     sleutelItem("sleutel_instagram","Sleutel Instagram")+sleutelItem("sleutel_facebook","Sleutel Facebook")+
     item("Zelftest",taak(g.zelftest,24*8),g.zelftest?(g.zelftest.laatst_ok===false?"Problemen gevonden":"Laatst "+geleden(g.zelftest.ok))+" · elke maandag":"elke maandag, eerste keer 9 november",g.zelftest&&g.zelftest.detail)+
-    item("Reacties lezen",!g.reacties?"grijs":g.reacties.laatst_ok===false?"oranje":"groen",!g.reacties?"wordt elk uur gecontroleerd":g.reacties.laatst_ok===false?"Recht ontbreekt in Meta":"Laatst "+geleden(g.reacties.ok),g.reacties&&g.reacties.detail);
+    item("Reacties lezen",!g.reacties?"grijs":g.reacties.laatst_ok===false?"oranje":"groen",!g.reacties?"wordt elk uur gecontroleerd":g.reacties.laatst_ok===false?"Recht ontbreekt in Meta":"Laatst "+geleden(g.reacties.ok),g.reacties&&g.reacties.detail)+
+    (()=>{const n=D.nood||{klaar:0,doel:6},h=D.herstel||[];return item("Zelfherstel",n.klaar>=3?"groen":n.klaar>0?"oranje":"rood",
+      `${h.length} keer zelf opgelost deze week · noodvoorraad ${n.klaar}/${n.doel}`,"Bekende problemen lost het systeem zelf op. De noodvoorraad zijn kant-en-klare posts voor als een dagelijkse run mislukt.")})();
+  const hl=(D.herstel||[]).slice(0,6);
+  document.getElementById("herstelLijst").innerHTML=hl.length?`<div class="sub" style="margin-bottom:4px"><b>Zelf opgelost (laatste 7 dagen)</b></div>`+hl.map(h=>`<div class="sub">${h.ok?"✅":"🛟"} ${new Date(h.t).toLocaleString("nl-NL",{weekday:"short",hour:"2-digit",minute:"2-digit"})}: ${h.probleem} → ${h.actie}</div>`).join(""):"";
   if(!RUNS&&D.repo){RUNS=[];fetch(`https://api.github.com/repos/${D.repo}/actions/workflows/publiceren.yml/runs?per_page=10`).then(r=>r.json()).then(j=>{RUNS=j.workflow_runs||[];bouwGezondheid()}).catch(()=>{})}
 }
 function delta(nu,oud){if(!oud&&!nu)return "";if(!oud)return `<span class="delta op">nieuw</span>`;const p=Math.round((nu-oud)/oud*100);return `<span class="delta ${p>=0?"op":"af"}">${p>=0?"+":""}${p}%</span>`}

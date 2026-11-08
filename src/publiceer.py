@@ -233,14 +233,33 @@ def controleer_aantal(cfg, posts, nu):
             continue
         n = sum(1 for p in posts if p["datum"] == d and p["status"] in ("gerenderd", "gepubliceerd", "fout"))
         if n < nodig:
-            S.cmd_log(f"{teken}: {n} klaar, {nodig} ingesteld. De dagelijkse taak of de avondcontrole heeft ze niet gemaakt.", "fout")
+            if len(S.nood_klaar()) >= nodig - n:
+                S.cmd_log(f"{teken}: {n} klaar, {nodig} ingesteld. De noodvoorraad vult de lege tijdsloten automatisch op.", "info")
+            else:
+                S.cmd_log(f"{teken}: {n} klaar, {nodig} ingesteld, en de noodvoorraad is te klein. De volgende controle maakt ze aan.", "fout")
             S.cmd_dashboard()
+
+def media_online(p):
+    """Staan alle beelden van deze post al op GitHub Pages? (Na een nieuwe commit duurt dat soms een paar minuten.)"""
+    for u in p.get("media_urls") or ([p["media_url"]] if p.get("media_url") else []):
+        try:
+            req = urllib.request.Request(u, method="HEAD")
+            if urllib.request.urlopen(req, timeout=15).status != 200:
+                return False
+        except Exception:
+            return False
+    return True
 
 def cmd_posten():
     cfg = S.laad("config.json")
     if cfg["pauze"]:
         print("Pauze staat aan"); return
     nu = dt.datetime.now(TZ)
+    try:
+        if S.noodinzet(nu):
+            S.cmd_dashboard()
+    except Exception as e:
+        print("Noodinzet mislukt:", e)
     posts = S.laad("data/posts.json", [])
     vandaag_online = sum(1 for p in posts if p["datum"] == nu.date().isoformat() and p["status"] == "gepubliceerd")
     controleer_aantal(cfg, posts, nu)
@@ -273,6 +292,12 @@ def cmd_posten():
         if vandaag_online >= cfg["max_posts_per_dag"]:
             p["status"] = "overgeslagen"
             S.cmd_log(f"{p['id']} overgeslagen: daglimiet bereikt", "fout"); continue
+        if not media_online(p):
+            if nu - tijdstip(p) < dt.timedelta(minutes=45):
+                if not p.get("wacht_media"):
+                    p["wacht_media"] = True
+                    S.herstel(f"{p['id']}: beeld staat nog niet online", "wacht een kwartier en probeert het dan opnieuw")
+                S.bewaar("data/posts.json", posts); continue
         for plat in cfg["platformen_actief"]:
             if plat in p.get("gepubliceerd", {}) or plat in p.get("gemist", []) or tijdstip(p, plat) > nu:
                 continue
@@ -298,11 +323,14 @@ def cmd_posten():
                 S.gezond(plat, True, f"{p['ref']} geplaatst")
             except Exception as e:
                 p["fouten"] = p.get("fouten", 0) + 1
-                S.cmd_log(f"{p['id']} {plat} mislukt: {e}", "fout"); fouten += 1
+                if p["fouten"] < 3:  # meestal een tijdelijke storing bij Meta: volgende kwartier opnieuw
+                    S.herstel(f"{p['id']} op {plat} mislukt ({str(e)[:100]})",
+                              f"poging {p['fouten']} van 3; probeert het over een kwartier opnieuw")
+                    continue
+                S.cmd_log(f"{p['id']} {plat} mislukt na 3 pogingen: {e}", "fout"); fouten += 1
                 S.activiteit("dispatcher", f"Post op {plat} mislukt", "error")
                 S.gezond(plat, False, str(e))
-                if p["fouten"] >= 3:
-                    p["status"] = "fout"
+                p["status"] = "fout"
         ondersteund = [x for x in cfg["platformen_actief"] if x in ("instagram", "facebook")]
         klaar_overal = all(x in p.get("gepubliceerd", {}) or x in p.get("gemist", []) for x in ondersteund)
         if p["status"] != "fout" and (klaar_overal or (p.get("gepubliceerd") and p.get("fouten", 0) >= 3)):

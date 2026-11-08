@@ -377,6 +377,42 @@ def cmd_plan(dagen=7):
     print("Planning:", len(plan), "posts voor de komende", dagen, "dagen")
 
 # ---------- Renderen ----------
+def render_een(p, cfg, map_rel):
+    """Maakt beeld of video van één post (in docs/media/<map_rel>/) en zet hem op 'gerenderd'."""
+    from render import maak_afbeelding, maak_video, maak_carrousel
+    p["handle"] = cfg.get("handle", "")
+    koppel_materiaal(p)
+    fmt = p["variabelen"]["formaat"]
+    ext = "mp4" if fmt == "video" else "jpg"
+    rel = f"docs/media/{map_rel}/{p['id']}.{ext}"
+    os.makedirs(os.path.dirname(P(rel)), exist_ok=True)
+    if fmt == "carrousel":
+        paden = maak_carrousel(p, P(rel))
+        rels = [os.path.relpath(x, ROOT) for x in paden]
+        p["media"], p["media_extra"] = rels[0], rels[1:]
+    else:
+        (maak_video if ext == "mp4" else maak_afbeelding)(p, P(rel))
+        p["media"], p["media_extra"] = rel, []
+    p["thumb"] = maak_thumb(P(p["media"]), p["id"])
+    if fmt == "carrousel":
+        from render import maak_story
+        p["story"] = os.path.relpath(maak_story(P(p["media"]), P(rel).replace(".jpg", "-story.jpg")), ROOT)
+    for k in ("beeld_pad", "muziek_pad", "geluid_pad"):
+        p.pop(k, None)
+    if cfg.get("github_repo"):
+        eig, naam = cfg["github_repo"].split("/")
+        url = lambda r: f"https://{eig}.github.io/{naam}/{r[len('docs/'):]}"
+        p["media_url"] = url(p["media"])
+        p["media_urls"] = [url(r) for r in [p["media"]] + p["media_extra"]]
+        p["story_url"] = url(p["story"]) if p.get("story") else None
+    p["status"] = "gerenderd"
+    p["goedgekeurd"] = None
+    print("OK", p["id"], rel)
+    if fmt == "video":
+        activiteit("video", f"Monteerde video {p['ref']}" + (" met muziek" if p.get("muziek") else ""))
+    activiteit("designer", f"Ontwierp {p['ref']} in stijl {p['variabelen'].get('huisstijl', '')}")
+
+
 def cmd_render(datum):
     from render import maak_afbeelding, maak_video, maak_carrousel
     cfg = laad("config.json")
@@ -390,37 +426,19 @@ def cmd_render(datum):
         probleem = valideer_tekst(p, cfg)
         if probleem:
             print("NIET GERENDERD", p["id"], probleem); fouten += 1; continue
-        p["handle"] = cfg.get("handle", "")
-        koppel_materiaal(p)
-        fmt = p["variabelen"]["formaat"]
-        ext = "mp4" if fmt == "video" else "jpg"
-        rel = f"docs/media/{datum[:7]}/{p['id']}.{ext}"
-        os.makedirs(os.path.dirname(P(rel)), exist_ok=True)
-        if fmt == "carrousel":
-            paden = maak_carrousel(p, P(rel))
-            rels = [os.path.relpath(x, ROOT) for x in paden]
-            p["media"], p["media_extra"] = rels[0], rels[1:]
-        else:
-            (maak_video if ext == "mp4" else maak_afbeelding)(p, P(rel))
-            p["media"], p["media_extra"] = rel, []
-        p["thumb"] = maak_thumb(P(p["media"]), p["id"])
-        if fmt == "carrousel":
-            from render import maak_story
-            p["story"] = os.path.relpath(maak_story(P(p["media"]), P(rel).replace(".jpg", "-story.jpg")), ROOT)
-        for k in ("beeld_pad", "muziek_pad", "geluid_pad"):
-            p.pop(k, None)
-        if cfg.get("github_repo"):
-            eig, naam = cfg["github_repo"].split("/")
-            url = lambda r: f"https://{eig}.github.io/{naam}/{r[len('docs/'):]}"
-            p["media_url"] = url(p["media"])
-            p["media_urls"] = [url(r) for r in [p["media"]] + p["media_extra"]]
-            p["story_url"] = url(p["story"]) if p.get("story") else None
-        p["status"] = "gerenderd"
-        p["goedgekeurd"] = None
-        print("OK", p["id"], rel)
-        if fmt == "video":
-            activiteit("video", f"Monteerde video {p['ref']}" + (" met muziek" if p.get("muziek") else ""))
-        activiteit("designer", f"Ontwierp {p['ref']} in stijl {p['variabelen'].get('huisstijl', '')}")
+        try:
+            render_een(p, cfg, datum[:7])
+        except Exception as e:
+            if p.get("beeld"):  # vaak ligt het aan de foto: probeer het met kleurverloop
+                p["beeld"] = None; p["variabelen"]["achtergrondbron"] = "verloop"
+                try:
+                    render_een(p, cfg, datum[:7])
+                    herstel(f"{p['id']}: maken met foto mislukt ({str(e)[:80]})", "opnieuw gemaakt met kleurverloop")
+                    continue
+                except Exception as e2:
+                    e = e2
+            p["status"] = "afgekeurd"; fouten += 1
+            herstel(f"{p['id']}: beeld kon niet gemaakt worden ({str(e)[:80]})", "post afgekeurd; de noodvoorraad vult het tijdslot op", ok=False)
     bewaar("data/posts.json", posts)
     if fouten:
         sys.exit(1)
@@ -845,7 +863,9 @@ def dashboard_extra(cfg, posts):
             "inzichten_extra": extra_inz, "reeksen": [{k: r.get(k) for k in ("naam", "label", "van", "tot", "weekdag", "tijdslot")} for r in laad("data/reeksen.json", {}).get("reeksen", [])],
             "gezondheid": laad("data/gezondheid.json", {}), "groei": laad("data/groei.json", []),
             "weken": weken, "inzichten_data": inzichten, "min_posts_voor_leren": cfg.get("min_posts_voor_leren", 6),
-            "gemeten_posts": gemeten, "snel_leren": snel, "voorraad": voorraad}
+            "gemeten_posts": gemeten, "snel_leren": snel, "voorraad": voorraad,
+            "herstel": [h for h in laad("data/herstel.json", []) if h["t"] >= (nu - dt.timedelta(days=7)).isoformat()][::-1][:30],
+            "nood": {"klaar": len(nood_klaar()), "doel": NOOD_DOEL}}
 
 def kantoor_extra(cfg, posts):
     """Extra's voor het pixel-kantoor: gezondheidslampjes, volgersbord, post van de week, snel leren."""
@@ -1097,6 +1117,102 @@ def cmd_aanvullen(alleen_check=False):
     cmd_log(f"Muziek alsnog toegevoegd aan {len(nodig)} video('s)", "info")
     cmd_dashboard()
 
+# ---------- Zelfherstel ----------
+NOOD_DOEL = 6
+
+def herstel(probleem, actie, ok=True):
+    """Legt vast wat het systeem zelf heeft opgelost (dashboard: Zelfherstel; kantoor: de Controller)."""
+    h = laad("data/herstel.json", [])
+    h.append({"t": dt.datetime.now().isoformat(timespec="minutes"), "probleem": probleem, "actie": actie, "ok": ok})
+    bewaar("data/herstel.json", h[-200:])
+    activiteit("controller", ("Zelf opgelost: " if ok else "Opgevangen: ") + actie, "done" if ok else "error")
+    cmd_log(f"Zelfherstel: {probleem} \u2192 {actie}", "info")
+
+def nood_klaar():
+    return [n for n in laad("data/noodvoorraad.json", []) if n["status"] == "gerenderd"]
+
+def noodinzet(nu):
+    """Staan er vandaag minder posts klaar dan ingesteld? Zet dan posts uit de noodvoorraad op de vrije tijdsloten."""
+    if nu.hour < 6:
+        return 0
+    cfg = laad("config.json")
+    if cfg.get("pauze"):
+        return 0
+    posts = laad("data/posts.json", [])
+    d = nu.date().isoformat()
+    vandaag = [p for p in posts if p["datum"] == d]
+    actief = [p for p in vandaag if p["status"] in ("gerenderd", "gepubliceerd", "gepland", "fout")]
+    tekort = min(cfg["posts_per_dag"], cfg["max_posts_per_dag"]) - len(actief)
+    if tekort <= 0:
+        return 0
+    bezet = {p["variabelen"].get("tijdslot") for p in actief}
+    grens = (nu + dt.timedelta(minutes=20)).strftime("%H:%M")
+    vrij = [t for t in DIMENSIES["tijdslot"] if t not in bezet and t >= grens]
+    voorraad = laad("data/noodvoorraad.json", [])
+    gezet = 0
+    for slot in vrij[:tekort]:
+        kl = [n for n in voorraad if n["status"] == "gerenderd"]
+        if not kl:
+            cmd_log("Noodvoorraad is op: er staan vandaag te weinig posts klaar. De volgende controle vult de voorraad aan.", "fout")
+            break
+        n = kl[0]; voorraad.remove(n)
+        n = dict(n, id=f"{d}-n{slot.replace(':', '')}", datum=d, status="gerenderd", nood=True, goedgekeurd=True)
+        n["variabelen"] = dict(n["variabelen"], tijdslot=slot, tijdslot_fb=None)
+        n["keuzebron"] = dict(n.get("keuzebron", {}), tijdslot="nood")
+        posts.append(n); gezet += 1
+        herstel(f"Geen post klaar voor {d} {slot}", f"noodpost {n['ref']} ingezet om {slot}")
+    if gezet:
+        bewaar("data/posts.json", posts); bewaar("data/noodvoorraad.json", voorraad)
+    return gezet
+
+def cmd_nood(actie="status"):
+    """Noodvoorraad: kant-en-klare posts voor als een dagelijkse run mislukt.
+    status | aanvullen (lege posts erbij tot NOOD_DOEL; Claude schrijft de teksten) | render"""
+    cfg = laad("config.json")
+    voorraad = laad("data/noodvoorraad.json", [])
+    if actie == "status":
+        print(f"{len([n for n in voorraad if n['status'] == 'gerenderd'])} klaar, "
+              f"{len([n for n in voorraad if n['status'] == 'wacht_op_tekst'])} wachten op tekst (doel {NOOD_DOEL})")
+        return
+    if actie == "aanvullen":
+        posts = laad("data/posts.json", [])
+        gebruikt = {p.get("vers_id") for p in posts} | {n.get("vers_id") for n in voorraad}
+        uitgesloten = set(cfg.get("verzen_uitsluiten", []))
+        kand = [v for v in alle_verzen() if v["bron"] == "bekend" and v["lengte"] != "lang"
+                and v["id"] not in gebruikt and v["ref"] not in uitgesloten]
+        rnd = random.Random(dt.datetime.now().isoformat())
+        rnd.shuffle(kand)
+        frisse = ["zonsopgang", "hemelsblauw", "paars", "roze", "bosgroen", "mint", "perzik", "zand"]
+        nieuw = 0
+        while len(voorraad) < NOOD_DOEL and kand:
+            v = kand.pop()
+            st = frisse[(len(voorraad) + rnd.randrange(8)) % len(frisse)]
+            var = dict(HUISSTIJLEN[st], huisstijl=st, thema=v.get("thema"), hook_stijl="geen", formaat="carrousel",
+                       uitleg_op_beeld=False, achtergrondbron="verloop", boekgroep=v["boekgroep"], lengte=v["lengte"],
+                       bron=v["bron"], vraag_onderaan=True, opening="vers", tijdslot=None, hook_op_beeld=False)
+            voorraad.append({"id": f"nood-{dt.date.today().strftime('%Y%m%d')}-{len(voorraad) + 1}-{rnd.randrange(1000)}",
+                             "status": "wacht_op_tekst", "vers_id": v["id"], "ref": v["ref"], "tekst": v["tekst"],
+                             "vertaling": v.get("vertaling", "SV"), "variabelen": var,
+                             "keuzebron": {k: "nood" for k in DIMENSIES}, "hook": "", "beeld_hook": "", "caption": "",
+                             "hashtags": [], "uitleg": "", "betekenis": "", "toepassing": "", "kernwoord": "",
+                             "media": None, "media_extra": [], "beeld": None, "muziek": None, "geluid": None,
+                             "metricool": {}, "stats": {}})
+            nieuw += 1
+        bewaar("data/noodvoorraad.json", voorraad)
+        print(nieuw, "lege noodposts toegevoegd; schrijf hun teksten in data/noodvoorraad.json en draai: nood render")
+        return
+    if actie == "render":
+        n_ok = 0
+        for n in voorraad:
+            if n["status"] not in ("wacht_op_tekst", "klaar_voor_render"):
+                continue
+            probleem = valideer_tekst(n, cfg)
+            if probleem:
+                print("NIET GERENDERD", n["id"], probleem); continue
+            render_een(n, cfg, "nood"); n_ok += 1
+        bewaar("data/noodvoorraad.json", voorraad)
+        print(n_ok, "noodposts gemaakt;", len([n for n in voorraad if n["status"] == "gerenderd"]), "klaar")
+
 if __name__ == "__main__":
     a = argparse.ArgumentParser()
     a.add_argument("cmd"); a.add_argument("args", nargs="*")
@@ -1112,4 +1228,5 @@ if __name__ == "__main__":
      "registreer": lambda: cmd_registreer(*x.args), "stats": lambda: cmd_stats(x.args[0]),
      "leer": cmd_leer, "dashboard": cmd_dashboard, "check": cmd_check,
      "log": lambda: cmd_log(*x.args), "vers": lambda: cmd_vers(*x.args), "opruimen": lambda: cmd_opruimen(*x.args), "opgelost": cmd_opgelost,
+     "nood": lambda: cmd_nood(*(x.args[:1] or ["status"])),
      "aanvullen": lambda: cmd_aanvullen(bool(x.args and x.args[0] == "check"))}[x.cmd]()
