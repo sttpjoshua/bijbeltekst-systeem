@@ -1,7 +1,7 @@
 """Maakt een afbeelding (1080x1350) of video (1080x1920, 9 s) van een vers.
 Alle ontwerpkeuzes komen binnen als variabelen, zodat het leersysteem ze kan vergelijken.
 """
-import os, random, subprocess, tempfile, math
+import os, re, random, subprocess, tempfile, math
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -164,6 +164,90 @@ def _bg(post, b, h):
         return foto_achtergrond(b, h, post["beeld_pad"], v["palet"])
     return achtergrond(b, h, v["palet"], v["achtergrond"], post["id"])
 
+
+# ---------- Kernwoord ----------
+_STOP = set("de het een en of maar want dat die dit deze is zijn was waren zal zult zullen wordt worden heeft hebt hebben ik gij u uw mijn mij me ons onze zij hij hem haar hun hen wij we jullie je jij niet geen ook als in op aan van voor met tot uit door over bij naar om te zo dan nu er al wat wie hoe waar daar hier zich zelf heere here heer god gods jezus christus".split())
+_STERK = ["vrede", "liefde", "hoop", "kracht", "licht", "herder", "genade", "trouw", "vreugde", "blijdschap", "rust", "sterk",
+          "moed", "leven", "hart", "barmhartigheden", "goedertierenheid", "hulp", "vertrouw", "vertrouwen", "geloof", "waarheid", "nieuw"]
+
+def _kaal(w):
+    return re.sub(r"[^\w]", "", w.lower())
+
+def kernwoord(post):
+    """Het woord dat uitgelicht wordt: wat de schrijver koos, anders een sterk woord uit het vers."""
+    woorden = post["tekst"].split()
+    kaal = [_kaal(w) for w in woorden]
+    k = _kaal(post.get("kernwoord") or "")
+    if k and k in kaal:
+        return k
+    for s in _STERK:
+        if s in kaal:
+            return s
+    kand = [w for w in kaal if w not in _STOP and len(w) >= 5]
+    return max(kand, key=len) if kand else None
+
+def _kernstaat(post, kleur, accent):
+    """Hoe het kernwoord opvalt: in de accentkleur, of als label als de accentkleur te veel op de tekst lijkt."""
+    st = {"kern": kernwoord(post)}
+    if sum(abs(x - y) for x, y in zip(kleur[:3], accent[:3])) < 120:
+        pal = PALETTEN[post["variabelen"]["palet"]]
+        st["label"] = _hex(pal[1]) + (255,) if post["variabelen"].get("achtergrondbron") != "beeld" else (40, 34, 30, 255)
+    return st
+
+def _regel(d, x, y, r, f, kleur, accent, staat, links):
+    """Eén regel tekst; het kernwoord (eerste keer) in de accentkleur."""
+    w = d.textlength(r, font=f)
+    x0 = x if links else x - w / 2
+    kern = staat.get("kern")
+    ws = r.split(" ")
+    if kern and not staat.get("klaar"):
+        for i, t in enumerate(ws):
+            if _kaal(t) == kern:
+                m = re.match(r"^(\W*)(.*?)(\W*)$", t)
+                voor = " ".join(ws[:i]) + (" " if i else "") + m.group(1)
+                na = m.group(3) + (" " if i < len(ws) - 1 else "") + " ".join(ws[i + 1:])
+                d.text((x0, y), voor, font=f, fill=kleur, anchor="la")
+                x1 = x0 + d.textlength(voor, font=f)
+                if staat.get("label"):  # accent lijkt te veel op de tekstkleur: woord als label (lichte balk, woord in de achtergrondkleur)
+                    l, t, rr, bb = f.getbbox(m.group(2), anchor="la")
+                    pad = f.size * 0.07
+                    d.rounded_rectangle([x1 + l - pad, y + t - pad * 1.3, x1 + rr + pad, y + bb + pad * 1.3], radius=int(f.size * 0.14), fill=kleur)
+                    d.text((x1, y), m.group(2), font=f, fill=staat["label"], anchor="la")
+                else:
+                    d.text((x1, y), m.group(2), font=f, fill=accent, anchor="la")
+                d.text((x1 + d.textlength(m.group(2), font=f), y), na, font=f, fill=kleur, anchor="la")
+                staat["klaar"] = True
+                return w
+    d.text((x0, y), r, font=f, fill=kleur, anchor="la")
+    return w
+
+def stopper_fragment(tekst, kern, max_w=10):
+    """Het stukje van het vers rond het kernwoord (tussen leestekens), voor een korte, grote eerste slide."""
+    woorden = tekst.split()
+    stukken, huidig = [], []
+    for i, w in enumerate(woorden):
+        huidig.append(i)
+        if w[-1] in ",;:.!?":
+            stukken.append(huidig); huidig = []
+    if huidig:
+        stukken.append(huidig)
+    idx = next((i for i, w in enumerate(woorden) if _kaal(w) == kern), 0)
+    st = next(s for s in stukken if idx in s)
+    if len(st) < 4:  # te kort: neem het volgende stuk erbij
+        j = stukken.index(st)
+        if j + 1 < len(stukken):
+            st = st + stukken[j + 1]
+    if len(st) > max_w:
+        a = max(st[0], min(idx - 3, st[-1] - max_w + 1)); st = list(range(a, a + max_w))
+    frag = " ".join(woorden[st[0]:st[-1] + 1])
+    if st[-1] < len(woorden) - 1:
+        frag = frag.rstrip(",;:.!?")
+    if st[0] > 0:
+        frag = "\u2026" + frag[0].lower() + frag[1:] if not frag[:2].isupper() else "\u2026" + frag
+    if st[-1] < len(woorden) - 1:
+        frag += "\u2026"
+    return frag
+
 def tekstlaag(b, h, post, ruimte_boven=0, ruimte_onder=0, geo=None):
     """Transparante laag met vers, referentie, optionele hook-regel en handle."""
     v = post["variabelen"]
@@ -193,7 +277,9 @@ def tekstlaag(b, h, post, ruimte_boven=0, ruimte_onder=0, geo=None):
         ref_h += int(b * 0.05) + len(uitleg_regels) * int(uf.size * 1.4)
     beschikbaar = bodem - top - ref_h
     grootte = int(b * (0.078 if ruimte_boven else 0.066))
-    if v["layout"] == "links":  # groter en luchtiger bij korte verzen, zoals de voorbeelden
+    if post.get("_stopper"):
+        grootte = int(b * 0.115)
+    elif v["layout"] == "links":  # groter en luchtiger bij korte verzen, zoals de voorbeelden
         grootte = int(grootte * (1.25 if len(tekst) < 80 else 1.08 if len(tekst) < 140 else 0.95))
     while grootte > 26:
         f = _font(v["lettertype"], grootte)
@@ -217,15 +303,17 @@ def tekstlaag(b, h, post, ruimte_boven=0, ruimte_onder=0, geo=None):
 
     links = v["layout"] == "links"
     tx, an = (marge, "la") if links else (b // 2, "ma")
+    staat = _kernstaat(post, kleur, accent)
     for i, r in enumerate(regels):
-        d.text((tx, y0 + i * lh), r, font=f, fill=kleur + (255,), anchor=an)
+        w = _regel(d, tx, y0 + i * lh, r, f, kleur + (255,), accent + (255,), staat, links)
         if geo is not None:  # plaats van elke regel, voor het woord-voor-woord verschijnen in video's
-            w = d.textlength(r, font=f)
             geo.append({"x": tx if links else b // 2 - w / 2, "w": w, "y": y0 + i * lh - int(lh * 0.12), "h": int(lh * 1.12), "tekst": r, "font": f})
 
     rf = _klein_font(int(b * 0.032), b"SemiBold")
     ry = y0 + blok_h + int(b * 0.05)
     reftekst = (post["ref"] + ("  \u00b7  NBV21" if post.get("vertaling") == "NBV21" else "")).upper()
+    if post.get("_stopper"):
+        reftekst = post["ref"].upper() + "  \u00b7  LEES VERDER \u2192"
     if links:
         d.text((tx, ry), reftekst, font=rf, fill=accent + (255,), anchor="la")
     else:
@@ -302,7 +390,7 @@ def maak_video(post, pad, duur=None):
                 if teller + len(ws) <= n:
                     teller += len(ws); continue
                 zichtbaar = max(0, n - teller)
-                x0 = g["x"] + (d.textlength(" ".join(ws[:zichtbaar]) + " ", font=g["font"]) if zichtbaar else 0)
+                x0 = g["x"] + (d.textlength(" ".join(ws[:zichtbaar]) + " ", font=g["font"]) - g["font"].size * 0.09 if zichtbaar else 0)
                 md.rectangle([x0, g["y"], g["x"] + g["w"] + 12, g["y"] + g["h"]], fill=0)
                 teller += len(ws)
             alpha = Image.composite(vol.getchannel("A"), Image.new("L", (b, h), 0), masker)
@@ -383,8 +471,9 @@ def _tekstslide(post, titel, body, pad, nummer, bg=None):
         grootte -= 2
     y0 = int(h * 0.27) + (int(h * 0.55) - lh * len(regels)) // 2
     links = v["layout"] == "links"
+    staat = _kernstaat(post, kleur, accent)
     for i, r in enumerate(regels):
-        d.text((marge if links else b // 2, y0 + i * lh), r, font=f, fill=kleur + (255,), anchor="la" if links else "ma")
+        _regel(d, marge if links else b // 2, y0 + i * lh, r, f, kleur + (255,), accent + (255,), staat, links)
     rf = _klein_font(int(b * 0.026), b"SemiBold")
     d.text((b // 2, int(h * 0.85)), (post["ref"] + ("  \u00b7  NBV21" if post.get("vertaling") == "NBV21" else "")).upper(), font=rf, fill=accent + (220,), anchor="ma")
     hy = h - int(h * (0.115 if v["layout"] == "kader" else 0.085))
@@ -395,11 +484,11 @@ def _tekstslide(post, titel, body, pad, nummer, bg=None):
     img.convert("RGB").save(pad, quality=93)
     return pad
 
-def _panorama(post, b, h):
+def _panorama(post, b, h, n=3):
     """Eén doorlopende achtergrond voor alle drie de slides, zodat ze bij het swipen in elkaar overlopen.
     Met een foto: links scherp, naar rechts steeds zachter en rustiger zodat de uitleg goed leesbaar is."""
     v = post["variabelen"]
-    B = b * 3
+    B = b * n
     if v.get("achtergrondbron") == "beeld" and post.get("beeld_pad"):
         foto = foto_achtergrond(B, h, post["beeld_pad"], v["palet"])
         zacht = foto.filter(ImageFilter.GaussianBlur(26))
@@ -419,20 +508,28 @@ def _panorama(post, b, h):
     return achtergrond(B, h, v["palet"], stijl, post["id"])
 
 def maak_carrousel(post, basis):
-    """Drie slides: vers, betekenis, toepassing, op één doorlopende achtergrond. Geeft de lijst met paden terug."""
+    """Slides op één doorlopende achtergrond: (stopper,) vers, betekenis, toepassing. Geeft de lijst met paden terug."""
     b, h = 1080, 1350
-    paden = [basis.replace(".jpg", f"-{i}.jpg") for i in (1, 2, 3)]
-    pano = _panorama(post, b, h)
-    delen = [pano.crop((i * b, 0, (i + 1) * b, h)) for i in range(3)]
+    stopper = post["variabelen"].get("opening") == "stopper"
+    n = 4 if stopper else 3
+    paden = [basis.replace(".jpg", f"-{i}.jpg") for i in range(1, n + 1)]
+    pano = _panorama(post, b, h, n)
+    delen = [pano.crop((i * b, 0, (i + 1) * b, h)) for i in range(n)]
     eerste = dict(post, variabelen=dict(post["variabelen"], uitleg_op_beeld=False))
-    maak_afbeelding(eerste, paden[0], bg=delen[0])
-    # klein veeg-teken rechtsonder op slide 1
-    im = Image.open(paden[0]).convert("RGBA"); d = ImageDraw.Draw(im)
-    acc = _kleuren(post)[1]
-    d.text((im.width - 70, im.height - 70), "\u2192", font=_klein_font(44, b"Medium"), fill=acc + (220,), anchor="mm")
-    im.convert("RGB").save(paden[0], quality=93)
-    _tekstslide(post, "WAT BETEKENT DIT?", post["betekenis"], paden[1], 2, bg=delen[1])
-    _tekstslide(post, "VANDAAG", post["toepassing"], paden[2], 3, bg=delen[2])
+    k = 0
+    if stopper:
+        kern = kernwoord(post)
+        maak_afbeelding(dict(eerste, tekst=stopper_fragment(post["tekst"], kern), _stopper=True),
+                        paden[0], bg=delen[0])
+        k = 1
+    maak_afbeelding(eerste, paden[k], bg=delen[k])
+    if not stopper:  # klein veeg-teken rechtsonder op slide 1
+        im = Image.open(paden[0]).convert("RGBA"); d = ImageDraw.Draw(im)
+        acc = _kleuren(post)[1]
+        d.text((im.width - 70, im.height - 70), "\u2192", font=_klein_font(44, b"Medium"), fill=acc + (220,), anchor="mm")
+        im.convert("RGB").save(paden[0], quality=93)
+    _tekstslide(post, "WAT BETEKENT DIT?", post["betekenis"], paden[k + 1], 2, bg=delen[k + 1])
+    _tekstslide(post, "VANDAAG", post["toepassing"], paden[k + 2], 3, bg=delen[k + 2])
     return paden
 
 

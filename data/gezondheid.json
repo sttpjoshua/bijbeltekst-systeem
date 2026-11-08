@@ -42,5 +42,10 @@
   "ok": "2026-11-08T12:15",
   "laatst_ok": true,
   "detail": "1 nieuwe metingen"
+ },
+ "zelftest": {
+  "ok": "2026-11-08T12:56",
+  "laatst_ok": true,
+  "detail": "12 onderdelen gemaakt en gecontroleerd"
  }
 }

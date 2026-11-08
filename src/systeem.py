@@ -58,6 +58,7 @@ DIMENSIES = {
     "lengte": ["kort", "middel", "lang"],
     "bron": ["bekend", "ontdekking"],
     "vraag_onderaan": [True, False],
+    "opening": ["vers", "stopper"],  # carrousel: slide 1 het hele vers, of eerst een korte, grote 'stopper'
     "tijdslot": ["07:30", "12:15", "17:45", "20:30", "22:00"],
 }
 
@@ -291,6 +292,10 @@ def kies_posts(datum, cfg, strat, posts, verzen, mat, n_start, n, gebruikte_slot
         vers = rnd.choices(kandidaten, weights=[x.get("kwaliteit", 6) ** 2 for x in kandidaten])[0]
         for f in ("thema", "boekgroep", "lengte", "bron"):
             v[f] = vers[f]  # wat er echt gepost wordt, telt mee bij het leren
+        if v["formaat"] != "carrousel":
+            v["opening"], bron["opening"] = None, "n.v.t."  # alleen carrousels hebben een opening
+        elif v["opening"] == "stopper" and len(vers["tekst"]) < 70:
+            v["opening"], bron["opening"] = "vers", "kort vers"  # een kort vers is zelf al de stopper
         recent.add(vers["id"])
         nieuw.append({**({"reeks": reekspost["naam"], "reeks_label": reekspost["label"]} if reekspost else {}),
                       "id": f"{datum}-{n_start + i + 1}", "datum": datum, "status": "wacht_op_tekst",
@@ -298,7 +303,7 @@ def kies_posts(datum, cfg, strat, posts, verzen, mat, n_start, n, gebruikte_slot
                       "vertaling": vers.get("vertaling", "SV"),
                       "variabelen": v, "keuzebron": bron,
                       "hook": "", "beeld_hook": "", "caption": "", "hashtags": [],
-                      "uitleg": "", "betekenis": "", "toepassing": "",
+                      "uitleg": "", "betekenis": "", "toepassing": "", "kernwoord": "",
                       "media": None, "media_url": None, "metricool": {}, "stats": {},
                       "beeld": None, "muziek": None, "geluid": None})
     return nieuw
@@ -491,6 +496,8 @@ def valideer_tekst(p, cfg):
         return "beeld_hook te lang (max 42 tekens)"
     if p["variabelen"]["hook_op_beeld"] and not p.get("beeld_hook", "").strip():
         p["variabelen"]["hook_op_beeld"] = False  # geen beeldhook: dan ook niet tonen
+    if p.get("kernwoord") and p["kernwoord"].lower().strip(" .,;:!?") not in [w.lower().strip(" .,;:!?\u2019'\"") for w in p["tekst"].split()]:
+        return "kernwoord moet letterlijk één woord uit het vers zijn"
     if p["variabelen"].get("uitleg_op_beeld") and not (0 < len(p.get("uitleg", "")) <= 110):
         return "uitleg ontbreekt of is langer dan 110 tekens"
     if p["variabelen"]["formaat"] == "carrousel":
@@ -604,6 +611,8 @@ def optie_stats(posts, platform=None):
         if platform == "facebook" and v.get("tijdslot_fb"):
             v["tijdslot"] = v["tijdslot_fb"]
         for dim, o in v.items():
+            if o is None:  # niet van toepassing (bijv. opening bij een video)
+                continue
             uit.setdefault(dim, {}).setdefault(str(o), []).append(gem)
     return uit
 
@@ -647,7 +656,7 @@ def cmd_experiment(stil=False):
     bewaar("config.json", cfg)
     namen = {"huisstijl": "stijl", "thema": "thema", "hook_stijl": "soort hook", "formaat": "carrousel of video",
              "uitleg_op_beeld": "uitleg op beeld", "achtergrondbron": "foto of kleur", "boekgroep": "Bijbelboek",
-             "lengte": "lengte van het vers", "bron": "bekend of onbekend vers", "vraag_onderaan": "vraag onderaan"}
+             "lengte": "lengte van het vers", "bron": "bekend of onbekend vers", "vraag_onderaan": "vraag onderaan", "opening": "eerste slide (stopper of hele vers)"}
     tekst = "Experiment deze week: " + " en ".join(namen.get(d, d) for d in keuze)
     cmd_log(tekst)
     if not stil:
