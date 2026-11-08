@@ -205,10 +205,10 @@ def kernwoord(post):
     kand = [w for w in kaal if w not in _STOP and len(w) >= 5]
     return max(kand, key=len) if kand else None
 
-def _kernstaat(post, kleur, accent):
+def _kernstaat(post, kleur, accent, plain=False):
     """Hoe het kernwoord opvalt: dikker, en in de accentkleur. Lijkt de accentkleur te veel op de tekstkleur,
     dan een diepe tint van de achtergrond (of warm goud op een foto). Nooit een vakje of balk eromheen."""
-    st = {"kern": kernwoord(post), "kleur": accent}
+    st = {"kern": kernwoord(post), "kleur": accent, "plain": plain}
     if sum(abs(x - y) for x, y in zip(kleur[:3], accent[:3])) < 120:
         if post["variabelen"].get("achtergrondbron") == "beeld":
             st["kleur"] = (255, 214, 140, 255)
@@ -242,7 +242,9 @@ def _regel(d, x, y, r, f, kleur, accent, staat, links):
                 d.text((x0, y), voor, font=f, fill=kleur, anchor="la")
                 x1 = x0 + d.textlength(voor, font=f)
                 kk = staat.get("kleur", accent)
-                d.text((x1 + rand, y), m.group(2), font=fv, fill=kk, anchor="la", stroke_width=rand, stroke_fill=kk)
+                staat["pos"] = {"x": x1 + rand, "y": y, "woord": m.group(2), "font": fv, "rand": rand, "kleur": kk}
+                kz = kleur if staat.get("plain") else kk
+                d.text((x1 + rand, y), m.group(2), font=fv, fill=kz, anchor="la", stroke_width=rand, stroke_fill=kz)
                 d.text((x1 + bw, y), na, font=f, fill=kleur, anchor="la")
                 staat["klaar"] = True
                 return w
@@ -276,7 +278,7 @@ def stopper_fragment(tekst, kern, max_w=10):
         frag += "\u2026"
     return frag
 
-def tekstlaag(b, h, post, ruimte_boven=0, ruimte_onder=0, geo=None):
+def tekstlaag(b, h, post, ruimte_boven=0, ruimte_onder=0, geo=None, kern_info=None):
     """Transparante laag met vers, referentie, optionele hook-regel en handle."""
     v = post["variabelen"]
     kleur, accent = _kleuren(post)
@@ -331,7 +333,7 @@ def tekstlaag(b, h, post, ruimte_boven=0, ruimte_onder=0, geo=None):
 
     links = v["layout"] == "links"
     tx, an = (marge, "la") if links else (b // 2, "ma")
-    staat = _kernstaat(post, kleur, accent)
+    staat = _kernstaat(post, kleur, accent, plain=kern_info is not None)
     for i, r in enumerate(regels):
         w = _regel(d, tx, y0 + i * lh, r, f, kleur + (255,), accent + (255,), staat, links)
         if geo is not None:  # plaats van elke regel, voor het woord-voor-woord verschijnen in video's
@@ -352,6 +354,8 @@ def tekstlaag(b, h, post, ruimte_boven=0, ruimte_onder=0, geo=None):
         for i, r in enumerate(uitleg_regels):
             d.text((tx, uy + i * int(uf.size * 1.4)), r, font=uf, fill=kleur + (205,), anchor=an)
 
+    if kern_info is not None and staat.get("pos"):
+        kern_info.update(staat["pos"])
     if v.get("hook_op_beeld") and post.get("beeld_hook"):
         hf = _klein_font(int(b * 0.034), b"Medium")
         hook_y = ruimte_boven + (int(b * 0.06) + int(h * 0.03) if v["layout"] == "kader" else int(h * (0.03 if ruimte_boven else 0.07)))
@@ -395,7 +399,7 @@ def _stukjes(woorden, max_w=6):
         uit.append(huidig)
     return uit
 
-def _uitleglaag(post, titel, body, b, h, boven, onder, onderschrift=None):
+def _uitleglaag(post, titel, body, b, h, boven, onder, onderschrift=None, tot=None):
     """Transparante laag voor een uitlegscherm in een video: titel, lopende tekst, bijbelplaats en merk."""
     v = post["variabelen"]
     kleur, accent = _kleuren(post)
@@ -424,122 +428,209 @@ def _uitleglaag(post, titel, body, b, h, boven, onder, onderschrift=None):
     y0 = boven + int(ruimte * 0.2) + (int(ruimte * 0.62) - totaal) // 2
     links = v["layout"] == "links"
     staat = _kernstaat(post, kleur, accent)
-    for i, r in enumerate(regels):
+    alle = [("b", r) for r in regels] + ([("o", r) for r in oregels] if onderschrift else [])
+    tot = len(alle) if tot is None else tot
+    for i, r in enumerate(regels[:tot]):
         _regel(d, marge if links else b // 2, y0 + i * lh, r, f, kleur + (255,), accent + (255,), staat, links)
     if onderschrift:
         oy = y0 + lh * len(regels) + int(lh * 0.8)
         olh = int(grootte * 0.9 * 1.38)
-        for i, r in enumerate(oregels):
+        for i, r in enumerate(oregels[:max(0, tot - len(regels))]):
             d.text((marge if links else b // 2, oy + i * olh), r, font=of, fill=accent + (255,), anchor="la" if links else "ma")
     rf = _klein_font(int(b * 0.028), b"SemiBold")
     d.text((b // 2, h - onder - int(b * 0.09)), (post["ref"] + ("  \u00b7  NBV21" if post.get("vertaling") == "NBV21" else "")).upper(), font=rf, fill=accent + (220,), anchor="ma")
     _woordmerk(d, b // 2, h - onder - int(b * 0.03), "BIBLEVERSE", _klein_font(int(b * 0.024), b"Bold"), accent + (235,), int(b * 0.009))
+    laag.regels = [r for _, r in alle]
     return laag
 
+def _beats(pad, start, duur):
+    """Momenten (in seconden) met een duidelijke tel in de muziek, via spectrale flux. Leeg als het niet lukt."""
+    try:
+        import numpy as np
+        sr = 22050
+        raw = subprocess.run(["ffmpeg", "-loglevel", "error", "-ss", str(start), "-t", str(duur + 2), "-i", pad,
+                              "-ac", "1", "-ar", str(sr), "-f", "s16le", "-"], capture_output=True, check=True).stdout
+        x = np.frombuffer(raw, dtype=np.int16).astype(np.float32) / 32768
+        hop, n = 512, 1024
+        if len(x) < n * 4:
+            return []
+        fr = np.lib.stride_tricks.sliding_window_view(x, n)[::hop] * np.hanning(n)
+        spec = np.abs(np.fft.rfft(fr, axis=1))
+        flux = np.maximum(0, np.diff(np.log1p(spec), axis=0)).sum(axis=1)
+        flux = (flux - flux.mean()) / (flux.std() + 1e-9)
+        w = int(0.12 * sr / hop)
+        uit = []
+        for i in range(w, len(flux) - w):
+            if flux[i] > 0.8 and flux[i] == flux[i - w:i + w + 1].max():
+                uit.append((i + 1) * hop / sr)
+        return uit
+    except Exception:
+        return []
+
 def maak_video(post, pad, duur=None):
-    """Achtergrond met langzame zoom; het vers verschijnt stukje voor stukje, op leestempo.
-    Het eerste stukje staat er binnen een kwart seconde (sterke eerste seconde). Veilige zones voor Reels."""
+    """Reel. Het vers verschijnt frase voor frase (het eerste stukje staat er meteen); het kernwoord kleurt daarna op.
+    Met video_uitleg schuift het beeld als een carrousel door naar "Wat betekent dit?" en "Vandaag" (regel voor regel),
+    met een voortgangsbalkje bovenin. Overgangen vallen op een tel in de muziek. Aan het eind keert het beeld terug
+    naar precies het beginbeeld, zodat de reel naadloos opnieuw begint. post["cover_ms"] = goed omslagmoment."""
     b, h = 1080, 1920
+    BOVEN, ONDER = 220, 380
     v = post["variabelen"]
-    uitleg = bool(v.get("video_uitleg")) and post.get("betekenis") and post.get("toepassing")
+    uitleg = bool(v.get("video_uitleg") and post.get("betekenis") and post.get("toepassing"))
+    kleur, accent = _kleuren(post)
     with tempfile.TemporaryDirectory() as tmp:
-        bg = _panorama(post, b, h, 3) if uitleg else _bg(post, int(b * 1.15), int(h * 1.15))
-        bgp = os.path.join(tmp, "bg.png")
-        bg.save(bgp)
-        geo = []
-        vol = tekstlaag(b, h, post, ruimte_boven=220, ruimte_onder=380, geo=geo)
+        def bewaar(im, naam):
+            pth = os.path.join(tmp, naam); im.save(pth); return pth
+        def bewaar_laag(im, naam):
+            """Transparante laag bijgesneden tot de inhoud: (pad, x, y). Scheelt veel rekenwerk bij het samenvoegen."""
+            bb = im.getbbox() or (0, 0, 2, 2)
+            return bewaar(im.crop(bb), naam), bb[0], bb[1]
+        # achtergrond: drie schermen breed met uitleg, anders één
+        strook = _panorama(post, b, h, 3) if uitleg else _bg(post, b, h)
+        # vers (kernwoord eerst in tekstkleur) + geometrie per regel
+        geo, kern = [], {}
+        vol = tekstlaag(b, h, post, ruimte_boven=BOVEN, ruimte_onder=ONDER, geo=geo, kern_info=kern)
         woorden = [w for g in geo for w in g["tekst"].split()]
         stukjes = _stukjes(woorden)
         d = ImageDraw.Draw(Image.new("L", (1, 1)))
         def laag_tot(n):
-            """Tekstlaag waarin alleen de eerste n woorden van het vers zichtbaar zijn."""
-            masker = Image.new("L", (b, h), 255)
-            md = ImageDraw.Draw(masker)
-            teller = 0
+            masker = Image.new("L", (b, h), 255); md = ImageDraw.Draw(masker); teller = 0
             for g in geo:
                 ws = g["tekst"].split()
                 if teller + len(ws) <= n:
                     teller += len(ws); continue
                 zichtbaar = max(0, n - teller)
                 x0 = g["x"] + (d.textlength(" ".join(ws[:zichtbaar]) + " ", font=g["font"]) - g["font"].size * 0.09 if zichtbaar else 0)
-                md.rectangle([x0, g["y"], g["x"] + g["w"] + 12, g["y"] + g["h"]], fill=0)
+                md.rectangle([x0, g["y"], g["x"] + g["w"] + 40, g["y"] + g["h"]], fill=0)
                 teller += len(ws)
             alpha = Image.composite(vol.getchannel("A"), Image.new("L", (b, h), 0), masker)
-            l = vol.copy(); l.putalpha(alpha)
-            return l
-        # tijden: elk stukje verschijnt als het vorige gelezen kan zijn (ongeveer 3 woorden per seconde)
-        tijden, t, n_tot = [], 0.15, 0
-        for st in stukjes:
-            tijden.append(round(t, 2)); n_tot += len(st)
+            l = vol.copy(); l.putalpha(alpha); return l
+        # tijden van het vers
+        tijden, t, n_tot, stuk_van = [], 0.0, 0, []
+        for i, st in enumerate(stukjes):
+            tijden.append(round(t, 2)); stuk_van += [i] * len(st)
             t += max(0.7, len(st) / 3.0)
+        vers_klaar = tijden[-1] + 0.35
+        post["cover_ms"] = int((vers_klaar + 0.4) * 1000)  # omslag: het hele vers staat in beeld
+        # muziek-tellen voor de overgangen
+        beats = _beats(post["muziek_pad"], post.get("muziek_start", 0), 60) if post.get("muziek_pad") else []
+        def op_tel(x):
+            kand = [bt for bt in beats if x <= bt <= x + 0.7]
+            return round(kand[0], 2) if kand else round(x, 2)
+        lagen = []  # (pad, x, fade_in, fade_out_or_None, fade_duur)
+        n_tot = 0
+        for i, st in enumerate(stukjes):
+            n_tot += len(st)
+            lagen.append([bewaar_laag(laag_tot(n_tot), f"v{i}.png"), 0, tijden[i], "eind" if i > 0 else None, 0.35])
+        # kernwoord: kleurt op (met een korte 'pop') zodra zijn stukje er staat
+        kern_lagen = []
+        if kern.get("woord"):
+            kaal = [_kaal(w) for w in woorden]
+            k_idx = kaal.index(_kaal(kern["woord"])) if _kaal(kern["woord"]) in kaal else 0
+            tk = tijden[stuk_van[k_idx]] + 0.35
+            kl = Image.new("RGBA", (b, h), (0, 0, 0, 0)); kd = ImageDraw.Draw(kl)
+            kd.text((kern["x"], kern["y"]), kern["woord"], font=kern["font"], fill=kern["kleur"], anchor="la",
+                    stroke_width=kern["rand"], stroke_fill=kern["kleur"])
+            pop = Image.new("RGBA", (b, h), (0, 0, 0, 0))
+            bb = kl.getbbox()
+            if bb:
+                stuk = kl.crop(bb); sc = 1.14
+                groot = stuk.resize((int(stuk.width * sc), int(stuk.height * sc)), Image.LANCZOS)
+                cx, cy = (bb[0] + bb[2]) / 2, (bb[1] + bb[3]) / 2
+                pop.alpha_composite(groot, (int(cx - groot.width / 2), int(cy - groot.height / 2)))
+            kern_lagen.append([bewaar_laag(kl, "kern.png"), 0, tk, "eind", 0.3])  # aan het eind weer neutraal: zoals het beginbeeld
+            kern_lagen.append([bewaar_laag(pop, "pop.png"), 0, tk, ("pop", tk + 0.18), 0.12])
+        # tijdlijn
+        lees = lambda tekst: len(tekst.split()) / 2.8
         if uitleg:
-            lees = lambda tekst: max(4.5, len(tekst.split()) / 2.6 + 1.5)  # rustig leestempo
             vraag = (post.get("caption", "").strip().splitlines() or [""])[-1].strip()
             vraag = vraag if vraag.endswith("?") and len(vraag) <= 90 else None
-            T1 = t + 2.0                      # vers helemaal te lezen, dan doorschuiven
-            T2 = T1 + 0.8 + lees(post["betekenis"])
-            T3 = T2 + 0.8 + lees(post["toepassing"] + " " + (vraag or ""))
-            duur = int(min(45, T3 + 0.8))
-            post["duur"] = duur
-            strook = os.path.join(tmp, "strook.png")
-            st_img = bg.convert("RGBA")
-            st_img.alpha_composite(_uitleglaag(post, "WAT BETEKENT DIT?", post["betekenis"], b, h, 220, 380), (b, 0))
-            st_img.alpha_composite(_uitleglaag(post, "VANDAAG", post["toepassing"], b, h, 220, 380, vraag), (2 * b, 0))
-            st_img.convert("RGB").save(strook)
-        elif duur is None:
-            duur = int(min(18, max(9, t + 3)))
-            post["duur"] = duur
+            T1 = op_tel(vers_klaar + max(1.8, lees(post["tekst"]) * 0.35))
+            schermen, t0, overgangen = [], T1 + 0.8, [T1]
+            for nr, (titel, body, onder) in enumerate((("WAT BETEKENT DIT?", post["betekenis"], None),
+                                                       ("VANDAAG", post["toepassing"], vraag)), start=1):
+                volledig = _uitleglaag(post, titel, body, b, h, BOVEN, ONDER, onder)
+                regels = volledig.regels
+                tl = t0 + 0.1
+                for j in range(len(regels) + 1):
+                    if j == 0:  # titel (en merk) staan er al tijdens het inschuiven
+                        lagen.append([bewaar_laag(_uitleglaag(post, titel, body, b, h, BOVEN, ONDER, onder, tot=0), f"u{nr}_0.png"), nr * b, 0, None, 0.3])
+                        continue
+                    lagen.append([bewaar_laag(_uitleglaag(post, titel, body, b, h, BOVEN, ONDER, onder, tot=j), f"u{nr}_{j}.png"),
+                                  nr * b, round(tl, 2), None, 0.3])
+                    tl += max(0.5, lees(regels[j - 1]))
+                einde = op_tel(tl + 1.6)
+                overgangen.append(einde); t0 = einde + 0.8
+            T2, T3 = overgangen[1], overgangen[2]
+            terug = T3 + 1.0           # terugschuiven naar het vers (het beginbeeld)
+            eind = terug + 0.6         # even het hele vers, daarna terug naar alleen het eerste stukje
+            duur = int(math.ceil(eind + 0.5))
         else:
-            post["duur"] = duur
-        lagen = [laag_tot(0)]
-        n_tot = 0
-        for st in stukjes:
-            n_tot += len(st); lagen.append(laag_tot(n_tot))
-        paden = []
-        for i, l in enumerate(lagen):
-            pth = os.path.join(tmp, f"l{i}.png"); l.save(pth); paden.append(pth)
-        fps = 30; n = duur * fps
+            eind = vers_klaar + max(3.0, lees(post["tekst"]) * 0.6)
+            duur = int(min(20, max(9, math.ceil(eind + 0.5))))
+            eind = duur - 0.5
+        post["duur"] = duur
+        # voortgangsbalkje (alleen met uitleg): drie streepjes, het actieve stuk licht op
+        balk = []
         if uitleg:
-            # de verslagen liggen op het eerste scherm van de strook; daarna schuift het beeld als een carrousel naar links
-            filt = f"[0:v]format=rgba[s];[s][1:v]overlay=0:0[v0]"
-        else:
-            filt = (f"[0:v]scale={int(b*1.15)}:{int(h*1.15)},zoompan=z='1+0.08*on/{n}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)'"
-                    f":d={n}:s={b}x{h}:fps={fps}[bg];[bg][1:v]overlay=0:0[v0]")
-        for i in range(1, len(paden)):
-            filt += (f";[{i+1}:v]format=rgba,fade=t=in:st={tijden[i-1]}:d=0.35:alpha=1[t{i}]"
-                     f";[v{i-1}][t{i}]overlay=0:0[v{i}]")
-        laatste = len(paden) - 1
+            fasen = [(0, T1 + 0.4), (T1 + 0.4, T2 + 0.4), (T2 + 0.4, terug), (terug, duur + 1)]
+            mx, gap, by, bh = int(b * 0.12), 14, BOVEN + 10, 6
+            sw = (b - 2 * mx - 2 * gap) / 3
+            for k, (van, tot) in enumerate(fasen):
+                im = Image.new("RGBA", (b, h), (0, 0, 0, 0)); bd = ImageDraw.Draw(im)
+                for j in range(3):
+                    x0 = mx + j * (sw + gap)
+                    bd.rounded_rectangle([x0, by, x0 + sw, by + bh], radius=3, fill=kleur + ((235,) if j <= k % 3 else (70,)))
+                balk.append((bewaar(im, f"balk{k}.png"), van, tot))
+        # ffmpeg-opbouw
+        fps = 30
+        inputs = ["-loop", "1", "-framerate", str(fps), "-t", str(duur), "-i", bewaar(strook.convert("RGB"), "strook.png")]
+        filt, vorige, idx = "[0:v]format=rgba[s0]", "s0", 1
+        for (pth, bx, by), x, tin, tuit, fd in lagen + kern_lagen:
+            inputs += ["-loop", "1", "-framerate", str(fps), "-t", str(duur), "-i", pth]
+            f = f"[{idx}:v]format=rgba"
+            if tin > 0:
+                f += f",fade=t=in:st={tin}:d={fd}:alpha=1"
+            if tuit == "eind":
+                f += f",fade=t=out:st={eind:.2f}:d=0.45:alpha=1"
+            elif isinstance(tuit, tuple):
+                f += f",fade=t=out:st={tuit[1]:.2f}:d=0.3:alpha=1"
+            filt += f";{f}[l{idx}];[{vorige}][l{idx}]overlay={x + bx}:{by}[s{idx}]"
+            vorige = f"s{idx}"; idx += 1
         if uitleg:
             e = lambda a: f"(({a})*({a})*(3-2*({a})))"
-            u1, u2 = f"(t-{T1:.2f})/0.8", f"(t-{T2:.2f})/0.8"
-            xexpr = (f"if(lt(t,{T1:.2f}),0,if(lt(t,{T1+0.8:.2f}),{b}*{e(u1)},if(lt(t,{T2:.2f}),{b},"
-                     f"if(lt(t,{T2+0.8:.2f}),{b}+{b}*{e(u2)},{2*b}))))")
-            filt += f";[v{laatste}]crop=w={b}:h={h}:x='{xexpr}':y=0,fade=t=out:st={duur-0.6}:d=0.6,format=yuv420p[v]"
-            bgp = strook
-            inputs = ["-loop", "1", "-framerate", str(fps), "-t", str(duur), "-i", bgp]
-        else:
-            filt += f";[v{laatste}]fade=t=out:st={duur-0.6}:d=0.6,format=yuv420p[v]"
-            inputs = ["-i", bgp]
-        for pth in paden:
+            u = lambda T, d: f"(t-{T:.2f})/{d}"
+            xexpr = (f"if(lt(t,{T1:.2f}),0,if(lt(t,{T1+0.8:.2f}),{b}*{e(u(T1,0.8))},if(lt(t,{T2:.2f}),{b},"
+                     f"if(lt(t,{T2+0.8:.2f}),{b}+{b}*{e(u(T2,0.8))},if(lt(t,{T3:.2f}),{2*b},"
+                     f"if(lt(t,{terug:.2f}),{2*b}-{2*b}*{e(u(T3,1.0))},0))))))")
+            filt += f";[{vorige}]crop=w={b}:h={h}:x='{xexpr}':y=0[c]"; vorige = "c"
+        n = duur * fps
+        filt += (f";[{vorige}]zoompan=z='1+0.035*sin(PI*on/{n})':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)'"
+                 f":d=1:s={b}x{h}:fps={fps}[z]"); vorige = "z"
+        for k, (pth, van, tot) in enumerate(balk):
             inputs += ["-loop", "1", "-framerate", str(fps), "-t", str(duur), "-i", pth]
-        ai = len(paden) + 1
+            filt += f";[{vorige}][{idx}:v]overlay=0:0:enable='between(t,{van:.2f},{tot:.2f})'[b{k}]"
+            vorige = f"b{k}"; idx += 1
+        filt += f";[{vorige}]format=yuv420p[v]"
+        ai = idx
         audio_in = ["-f", "lavfi", "-t", str(duur), "-i", "anullsrc=r=44100:cl=stereo"]
         audio_map = f"{ai}:a"
         m = post.get("muziek_pad")
         if m:
             start = post.get("muziek_start", 0)
             audio_in = ["-ss", str(start), "-t", str(duur), "-i", m]
-            afilt = f"[{ai}:a]volume=0.8,afade=t=in:st=0:d=0.6,afade=t=out:st={duur-1.2}:d=1.2[am]"
+            afilt = f"[{ai}:a]volume=0.8,afade=t=in:st=0:d=0.3,afade=t=out:st={duur-0.9}:d=0.9[am]"
             amb = post.get("geluid_pad")
             if amb:
                 audio_in += ["-ss", "3", "-t", str(duur), "-i", amb]
-                afilt = (f"[{ai}:a]volume=0.8,afade=t=in:st=0:d=0.6,afade=t=out:st={duur-1.2}:d=1.2[m1];"
-                         f"[{ai+1}:a]volume=0.25,afade=t=in:st=0:d=1,afade=t=out:st={duur-1.2}:d=1.2[g1];"
+                afilt = (f"[{ai}:a]volume=0.8,afade=t=in:st=0:d=0.3,afade=t=out:st={duur-0.9}:d=0.9[m1];"
+                         f"[{ai+1}:a]volume=0.25,afade=t=in:st=0:d=1,afade=t=out:st={duur-0.9}:d=0.9[g1];"
                          f"[m1][g1]amix=inputs=2:duration=first:normalize=0[am]")
             filt += ";" + afilt
             audio_map = "[am]"
+        script = os.path.join(tmp, "filter.txt")
+        open(script, "w").write(filt)
         cmd = ["ffmpeg", "-y", "-loglevel", "error"] + inputs + audio_in + [
-               "-filter_complex", filt, "-map", "[v]", "-map", audio_map,
+               "-filter_complex_script", script, "-map", "[v]", "-map", audio_map,
                "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-r", str(fps),
                "-c:a", "aac", "-t", str(duur), "-movflags", "+faststart", pad]
         subprocess.run(cmd, check=True)

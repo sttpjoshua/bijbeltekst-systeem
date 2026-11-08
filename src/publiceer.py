@@ -99,6 +99,8 @@ def publiceer_instagram(p, uid, tok):
     params = {"caption": caption(p), "access_token": tok}
     if video:
         params.update({"media_type": "REELS", "video_url": p["media_url"], "share_to_feed": "true"})
+        if p.get("cover_ms"):
+            params["thumb_offset"] = str(p["cover_ms"])  # omslag in het raster: het moment dat het hele vers in beeld staat
     else:
         params["image_url"] = p["media_url"]
     cid = (http("POST", f"{API}/{uid}/media", params) if video

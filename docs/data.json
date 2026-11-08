@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-08T17:19",
+ "gegenereerd": "2026-11-08T17:33",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1410,7 +1410,7 @@
    "detail": "1 nieuwe metingen"
   },
   "zelftest": {
-   "ok": "2026-11-08T17:19",
+   "ok": "2026-11-08T17:31",
    "laatst_ok": true,
    "detail": "12 onderdelen gemaakt en gecontroleerd"
   },

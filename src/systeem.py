@@ -396,7 +396,7 @@ def render_een(p, cfg, map_rel):
     else:
         (maak_video if ext == "mp4" else maak_afbeelding)(p, P(rel))
         p["media"], p["media_extra"] = rel, []
-    p["thumb"] = maak_thumb(P(p["media"]), p["id"])
+    p["thumb"] = maak_thumb(P(p["media"]), p["id"], (p.get("cover_ms") or 4000) / 1000)
     if fmt == "carrousel":
         from render import maak_story
         p["story"] = os.path.relpath(maak_story(P(p["media"]), P(rel).replace(".jpg", "-story.jpg")), ROOT)
@@ -446,13 +446,13 @@ def cmd_render(datum):
     if fouten:
         sys.exit(1)
 
-def maak_thumb(bron, pid):
+def maak_thumb(bron, pid, sec=4):
     """Kleine voorvertoning (216 px breed) die blijft bestaan als de media later wordt opgeruimd."""
     import subprocess
     rel = f"docs/thumbs/{pid}.jpg"
     os.makedirs(P("docs/thumbs"), exist_ok=True)
     if bron.endswith(".mp4"):
-        subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-ss", "4", "-i", bron, "-frames:v", "1",
+        subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-ss", str(sec), "-i", bron, "-frames:v", "1",
                         "-vf", "scale=216:-2", "-q:v", "4", P(rel)], check=True)
     else:
         from PIL import Image

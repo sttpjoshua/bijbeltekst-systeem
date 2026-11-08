@@ -354,8 +354,9 @@
    "betekenis": "",
    "toepassing": ""
   },
-  "duur": 12,
-  "story_url": null
+  "duur": 16,
+  "story_url": null,
+  "cover_ms": 9080
  },
  {
   "id": "2026-11-08-4",
@@ -753,7 +754,8 @@
    "toepassing": "",
    "kernwoord": "hoop"
   },
-  "muziek_start": 50.3
+  "muziek_start": 50.3,
+  "cover_ms": 3750
  },
  {
   "id": "2026-11-09-3",
@@ -819,7 +821,7 @@
   "muziek": "ES_Meditations - Drift Far Away.mp3",
   "geluid": null,
   "handle": "@bibleverse_nl",
-  "duur": 13,
+  "duur": 18,
   "media_extra": [],
   "thumb": "thumbs/2026-11-09-3.jpg",
   "media_urls": [
@@ -849,7 +851,8 @@
    "toepassing": "",
    "kernwoord": "stichten"
   },
-  "muziek_start": 39.5
+  "muziek_start": 39.5,
+  "cover_ms": 10820
  },
  {
   "id": "2026-11-09-4",
@@ -1216,7 +1219,7 @@
   "muziek": "ES_Meadow Waves - Rand Aldo.mp3",
   "geluid": null,
   "handle": "@bibleverse_nl",
-  "duur": 13,
+  "duur": 16,
   "media_extra": [],
   "thumb": "thumbs/2026-11-10-2.jpg",
   "media_urls": [
@@ -1246,7 +1249,8 @@
    "toepassing": "",
    "kernwoord": "wijze"
   },
-  "muziek_start": 22.8
+  "muziek_start": 22.8,
+  "cover_ms": 10180
  },
  {
   "id": "2026-11-10-3",
