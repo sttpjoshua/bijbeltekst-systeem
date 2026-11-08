@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T20:32:04",
+ "updated": "2026-11-08T22:02:06",
  "agents": {
   "verskiezer": {
    "t": "2026-11-08T14:33:06",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-08T20:32:04",
-   "task": "Postte Johannes 14:27 op facebook",
+   "t": "2026-11-08T22:02:06",
+   "task": "Postte 2 Timotheüs 1:7 op facebook",
    "state": "done"
   },
   "controller": {
@@ -38,11 +38,11 @@
   }
  },
  "stats": {
-  "posts_today": 4,
-  "posts_total": 5,
+  "posts_today": 5,
+  "posts_total": 6,
   "reach_7d": 7,
   "best_time": "nog onbekend",
-  "next_post": "2026-11-08T22:00:00"
+  "next_post": "2026-11-09T07:30:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
@@ -56,6 +56,18 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "22:02",
+   "msg": "2026-11-08-5 online op facebook: 2 Timotheüs 1:7"
+  },
+  {
+   "t": "22:01",
+   "msg": "2026-11-08-5 online op instagram: 2 Timotheüs 1:7"
+  },
+  {
+   "t": "22:01",
+   "msg": "2026-11-08-5 ook als story geplaatst"
+  },
   {
    "t": "20:32",
    "msg": "2026-11-08-3 online op facebook: Johannes 14:27"
@@ -91,18 +103,6 @@
   {
    "t": "18:19",
    "msg": "Bediening: Liken lukte niet: recht ontbreekt (zie melding)"
-  },
-  {
-   "t": "18:19",
-   "msg": "ACTIE VOOR JOU: liken van reacties op instagram lukt nog niet. Voeg het recht instagram_manage_engagement toe "
-  },
-  {
-   "t": "18:11",
-   "msg": "Bediening: Reacties opgehaald: 1 nieuw"
-  },
-  {
-   "t": "18:08",
-   "msg": "Statistieken lezen werkt"
   }
  ],
  "lampen": [
@@ -153,9 +153,9 @@
   ]
  },
  "top_post": {
-  "ref": "Kolossenzen 3:15",
-  "thumb": "thumbs/2026-11-07-1.jpg",
-  "bereik": 8,
+  "ref": "Johannes 14:27",
+  "thumb": "thumbs/2026-11-08-3.jpg",
+  "bereik": 19,
   "score": null,
   "formaat": "video"
  },

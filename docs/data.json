@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-08T20:32",
+ "gegenereerd": "2026-11-08T22:02",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -685,7 +685,7 @@
    "ref": "2 Timotheüs 1:7",
    "tekst": "Want God heeft ons niet gegeven een geest der vreesachtigheid, maar der kracht, en der liefde, en der gematigdheid.",
    "hook": "",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "bosgroen",
     "thema": "moed",
@@ -715,12 +715,18 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-5-3.jpg"
    ],
    "thumb": "thumbs/2026-11-08-5.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "instagram",
+    "facebook"
+   ],
+   "links": {
+    "instagram": "https://www.instagram.com/p/DffrKVcmP2n/",
+    "facebook": "https://www.facebook.com/1015160368352770_122134051190879910"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
-   "online": null
+   "online": "2026-11-08T22:01+01:00"
   },
   {
    "id": "2026-11-08-4",
@@ -767,23 +773,23 @@
     "facebook": "https://www.facebook.com/1015160368352770_122134008476879910"
    },
    "totaal": {
-    "views": 9,
-    "reach": 1,
-    "likes": 1,
+    "views": 11,
+    "reach": 2,
+    "likes": 2,
     "comments": 0,
     "shares": 0,
     "saves": 0
    },
    "per_platform": {
     "instagram": {
-     "views": 9,
-     "reach": 1,
-     "likes": 1,
+     "views": 11,
+     "reach": 2,
+     "likes": 2,
      "comments": 0,
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-08T19:00+01:00"
+     "t": "2026-11-08T22:00+01:00"
     },
     "facebook": {
      "views": null,
@@ -793,7 +799,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-08T19:00+01:00"
+     "t": "2026-11-08T22:00+01:00"
     }
    },
    "score": {},
@@ -842,8 +848,36 @@
     "instagram": "https://www.instagram.com/reel/DffgyADgrGP/",
     "facebook": "https://www.facebook.com/2357605761683690"
    },
-   "totaal": {},
-   "per_platform": {},
+   "totaal": {
+    "views": 32,
+    "reach": 17,
+    "likes": 3,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0
+   },
+   "per_platform": {
+    "instagram": {
+     "views": 30,
+     "reach": 17,
+     "likes": 3,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "t": "2026-11-08T22:00+01:00"
+    },
+    "facebook": {
+     "views": 2,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "t": "2026-11-08T22:00+01:00"
+    }
+   },
    "score": {},
    "online": "2026-11-08T20:31+01:00"
   },
@@ -892,23 +926,23 @@
     "facebook": "https://www.facebook.com/1015160368352770_122134032104879910"
    },
    "totaal": {
-    "views": 4,
-    "reach": 1,
-    "likes": 2,
+    "views": 6,
+    "reach": 2,
+    "likes": 3,
     "comments": 3,
     "shares": 0,
     "saves": 0
    },
    "per_platform": {
     "instagram": {
-     "views": 4,
-     "reach": 1,
-     "likes": 2,
+     "views": 6,
+     "reach": 2,
+     "likes": 3,
      "comments": 3,
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-08T19:00+01:00"
+     "t": "2026-11-08T22:00+01:00"
     },
     "facebook": {
      "views": null,
@@ -918,7 +952,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-08T19:00+01:00"
+     "t": "2026-11-08T22:00+01:00"
     }
    },
    "score": {},
@@ -969,7 +1003,7 @@
     "facebook": "https://www.facebook.com/1015160368352770_122133986888879910"
    },
    "totaal": {
-    "views": 12,
+    "views": 14,
     "reach": 5,
     "likes": 3,
     "comments": 0,
@@ -978,14 +1012,14 @@
    },
    "per_platform": {
     "instagram": {
-     "views": 12,
+     "views": 14,
      "reach": 5,
      "likes": 3,
      "comments": 0,
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-08T19:00+01:00"
+     "t": "2026-11-08T22:00+01:00"
     },
     "facebook": {
      "views": null,
@@ -995,7 +1029,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-08T19:00+01:00"
+     "t": "2026-11-08T22:00+01:00"
     }
    },
    "score": {},
@@ -1037,23 +1071,23 @@
     "instagram": "https://www.instagram.com/reel/DfcFByGNQ2a/"
    },
    "totaal": {
-    "views": 10,
+    "views": 12,
     "reach": 8,
-    "likes": 2,
+    "likes": 3,
     "comments": 0,
     "shares": 0,
     "saves": 0
    },
    "per_platform": {
     "instagram": {
-     "views": 10,
+     "views": 12,
      "reach": 8,
-     "likes": 2,
+     "likes": 3,
      "comments": 0,
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-08T19:00+01:00"
+     "t": "2026-11-08T22:00+01:00"
     }
    },
    "score": {},
@@ -1063,21 +1097,6 @@
  "leergeschiedenis": [],
  "laatste_rapport": null,
  "logboek": [
-  {
-   "t": "2026-11-07T15:06",
-   "soort": "info",
-   "tekst": "Token heeft alle rechten, ook voor statistieken"
-  },
-  {
-   "t": "2026-11-07T15:06",
-   "soort": "info",
-   "tekst": "Verbinding met Facebook-pagina werkt (Bibleversenl)"
-  },
-  {
-   "t": "2026-11-07T15:06",
-   "soort": "info",
-   "tekst": "Statistieken lezen werkt"
-  },
   {
    "t": "2026-11-07T15:19",
    "soort": "info",
@@ -1365,6 +1384,21 @@
    "t": "2026-11-08T20:32:04",
    "soort": "info",
    "tekst": "2026-11-08-3 online op facebook: Johannes 14:27"
+  },
+  {
+   "t": "2026-11-08T22:01:56",
+   "soort": "info",
+   "tekst": "2026-11-08-5 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-08T22:01:56",
+   "soort": "info",
+   "tekst": "2026-11-08-5 online op instagram: 2 Timotheüs 1:7"
+  },
+  {
+   "t": "2026-11-08T22:02:06",
+   "soort": "info",
+   "tekst": "2026-11-08-5 online op facebook: 2 Timotheüs 1:7"
   }
  ],
  "recente_fouten": [],
@@ -1441,9 +1475,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-08T20:31",
+   "ok": "2026-11-08T22:01",
    "laatst_ok": true,
-   "detail": "Johannes 14:27 geplaatst"
+   "detail": "2 Timotheüs 1:7 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-08T18:08",
@@ -1469,15 +1503,15 @@
    "ok": "2026-11-08T00:36"
   },
   "reacties": {
-   "ok": "2026-11-08T20:00",
+   "ok": "2026-11-08T22:00",
    "laatst_ok": true,
    "detail": "0 nieuwe reacties",
    "fout": "2026-11-08T18:00"
   },
   "facebook": {
-   "ok": "2026-11-08T20:32",
+   "ok": "2026-11-08T22:02",
    "laatst_ok": true,
-   "detail": "Johannes 14:27 geplaatst"
+   "detail": "2 Timotheüs 1:7 geplaatst"
   },
   "statistieken": {
    "ok": "2026-11-08T12:15",
@@ -1511,10 +1545,10 @@
  ],
  "weken": {
   "deze": {
-   "posts": 5,
-   "reach": 15,
-   "views": 35,
-   "likes": 8,
+   "posts": 6,
+   "reach": 34,
+   "views": 75,
+   "likes": 14,
    "comments": 3,
    "saves": 0,
    "shares": 0
@@ -1598,7 +1632,7 @@
   "tot": "2026-11-14",
   "dag": 2,
   "dagen": 7,
-  "online": 5,
+  "online": 6,
   "gemeten": 0
  },
  "voorraad": {
