@@ -43,15 +43,15 @@
   "stats": {
    "instagram": {
     "laatst": {
-     "t": "2026-11-08T16:00+01:00",
-     "views": 7,
-     "reach": 7,
-     "likes": 1,
+     "t": "2026-11-08T19:00+01:00",
+     "views": 10,
+     "reach": 8,
+     "likes": 2,
      "comments": 0,
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "avg_watch_ms": 4017
+     "avg_watch_ms": 4209
     },
     "24u": {
      "views": 7,
@@ -126,14 +126,27 @@
   "stats": {
    "instagram": {
     "laatst": {
-     "t": "2026-11-08T16:00+01:00",
-     "views": 4,
-     "reach": 3,
-     "likes": 2,
+     "t": "2026-11-08T19:00+01:00",
+     "views": 12,
+     "reach": 5,
+     "likes": 3,
      "comments": 0,
      "shares": 0,
      "saves": 0,
      "follows": 0,
+     "avg_watch_ms": null
+    }
+   },
+   "facebook": {
+    "laatst": {
+     "t": "2026-11-08T19:00+01:00",
+     "views": null,
+     "reach": null,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": null,
+     "follows": null,
      "avg_watch_ms": null
     }
    }
@@ -235,7 +248,34 @@
   "media": "docs/media/2026-11/2026-11-08-2-1.jpg",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-2-1.jpg",
   "metricool": {},
-  "stats": {},
+  "stats": {
+   "instagram": {
+    "laatst": {
+     "t": "2026-11-08T19:00+01:00",
+     "views": 4,
+     "reach": 1,
+     "likes": 2,
+     "comments": 3,
+     "shares": 0,
+     "saves": 0,
+     "follows": 0,
+     "avg_watch_ms": null
+    }
+   },
+   "facebook": {
+    "laatst": {
+     "t": "2026-11-08T19:00+01:00",
+     "views": null,
+     "reach": null,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": null,
+     "follows": null,
+     "avg_watch_ms": null
+    }
+   }
+  },
   "beeld": null,
   "muziek": null,
   "geluid": null,
@@ -421,14 +461,27 @@
   "stats": {
    "instagram": {
     "laatst": {
-     "t": "2026-11-08T16:00+01:00",
-     "views": 0,
-     "reach": 0,
-     "likes": 0,
+     "t": "2026-11-08T19:00+01:00",
+     "views": 9,
+     "reach": 1,
+     "likes": 1,
      "comments": 0,
      "shares": 0,
      "saves": 0,
      "follows": 0,
+     "avg_watch_ms": null
+    }
+   },
+   "facebook": {
+    "laatst": {
+     "t": "2026-11-08T19:00+01:00",
+     "views": null,
+     "reach": null,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": null,
+     "follows": null,
      "avg_watch_ms": null
     }
    }
