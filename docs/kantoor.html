@@ -1268,7 +1268,7 @@ function objInhoud(n,extra){
       <div class="hint">Instagram ${gr[gr.length-1].instagram??'–'} · Facebook ${gr[gr.length-1].facebook??'–'}</div>`;
   }
   if(n==='overleg'){
-    return ($('overleg').innerHTML||'')+`<div class="acts" style="margin-top:10px"><button class="kbtn goud" id="kRoep">👥 Team nu bij elkaar roepen</button></div><div class="hint" style="margin-top:4px">Elke maandag om 11:00 komt het team hier vanzelf samen voor het weekoverleg.</div>`;
+    return ($('overleg').innerHTML||'')+`<div class="acts" style="margin-top:10px"><button class="kbtn goud" id="kRoep">👥 Team nu bij elkaar roepen</button></div><div class="hint" style="margin-top:4px">Het team loopt naar de vergaderruimte en Claude maakt bij de volgende run (14:32 of 20:47) een tussentijdse analyse. De punten verschijnen hier op het whiteboard. Elke maandag om 11:00 is er ook vanzelf een weekoverleg.</div>`;
   }
   return '';
 }
@@ -1286,7 +1286,9 @@ function bindObj(){
   acBody.querySelectorAll('[data-obj]').forEach(b=>b.onclick=ev=>{ev.stopPropagation();showObj(b.dataset.obj,null,b.dataset.tekst)});
   const vs=acBody.querySelector('#kVraagStuur');if(vs)vs.onclick=()=>{const t=acBody.querySelector('#kVraag').value.trim();if(t)stuurK({actie:'verzoek',tekst:t},vs,msg)};
   const vp=acBody.querySelector('#kVerplaats');if(vp)vp.onclick=()=>stuurK({actie:'tijd',post:vp.dataset.post,datum:acBody.querySelector('#kDag').value,tijd:acBody.querySelector('#kTijd').value},vp,msg);
-  const rp=acBody.querySelector('#kRoep');if(rp)rp.onclick=()=>{OVERLEG_TOT=Date.now()+90000;hideCard();log('Team komt bij elkaar in de vergaderruimte')};
+  const rp=acBody.querySelector('#kRoep');if(rp)rp.onclick=()=>{OVERLEG_TOT=Date.now()+90000;log('Team komt bij elkaar in de vergaderruimte');
+    if(gtok())stuurK({actie:'verzoek',soort:'overleg',tekst:'Tussentijds overleg: wat werkt, wat niet, en wat stel je voor?'},rp,msg);
+    else msg.innerHTML='Het team komt bij elkaar. Voor een echte analyse van Claude: plak eerst je GitHub-sleutel bij een medewerker.'};
 }
 // klikken en hover op voorwerpen (medewerkers gaan voor)
 wrapEl.addEventListener('click',e=>{if(hit(e))return;const o=objHit(e);if(o){e.stopPropagation();showObj(o.n,e)}},true);
@@ -1361,7 +1363,7 @@ function klokje(a){
 
 /* ---- 5. teamoverleg op maandag ---- */
 let OVERLEG_TOT=0;
-function isOverleg(){if(Date.now()<OVERLEG_TOT)return true;const n=new Date();return n.getDay()===1&&((n.getHours()===11)||(n.getHours()===12&&n.getMinutes()<30))}
+function isOverleg(){if(Date.now()<OVERLEG_TOT)return true;if(((DJ&&DJ.verzoeken)||[]).some(v=>v.soort==='overleg'&&v.status==='bezig'))return true;const n=new Date();return n.getDay()===1&&((n.getHours()===11)||(n.getHours()===12&&n.getMinutes()<30))}
 function bestemming(a){
   if(Date.now()<OVERLEG_TOT&&a.state!=='error')return 'overleg';
   if(a.id==='controller'&&a.naar)return a.naar;
@@ -1373,7 +1375,10 @@ function toonOverleg(){
   const s=(DJ&&DJ.strategie)||{},inz=(s.inzichten||[]).slice(-3).reverse(),tp=LIVEJ&&LIVEJ.top_post;
   const lg=((DJ&&DJ.leergeschiedenis)||[]).slice(-1)[0];
   const maandag=(()=>{const d=new Date();d.setDate(d.getDate()-((d.getDay()+6)%7));return d.toLocaleDateString('nl-NL',{day:'numeric',month:'long'})})();
-  $('overleg').innerHTML=`<div class="wb"><h3>Week van ${esc(maandag)}${isOverleg()?' · nu in overleg':''}</h3>
+  const ov=((DJ&&DJ.overleg)||[])[0],ovz=((DJ&&DJ.verzoeken)||[]).find(v=>v.soort==='overleg'&&(v.status==='wacht'||v.status==='bezig'));
+  const tus=ov?`<div style="margin-bottom:8px;padding-bottom:8px;border-bottom:1px dashed #b9bccb"><h3>Tussentijds overleg · ${esc(new Date(ov.t).toLocaleDateString('nl-NL',{weekday:'short',day:'numeric',month:'short'}))}</h3><ul style="margin:4px 0 0 16px;padding:0;list-style:disc">${ov.punten.map(x=>`<li style="border:0;padding:1px 0;color:inherit">${/^voorstel:/i.test(x)?'<b>'+esc(x)+'</b>':esc(x)}</li>`).join('')}</ul></div>`:'';
+  const wacht=ovz?`<div style="margin-bottom:8px;color:#8a5a00">${ovz.status==='bezig'?'🔧 Claude maakt nu de analyse…':'⏳ Overleg aangevraagd: de analyse komt bij de volgende run (14:32 of 20:47).'}</div>`:'';
+  $('overleg').innerHTML=`<div class="wb">${wacht}${tus}<h3>Week van ${esc(maandag)}${isOverleg()?' · nu in overleg':''}</h3>
     ${inz.length?`<b>Lessen</b><ol style="margin:4px 0 8px 18px;padding:0">${inz.map(i=>`<li>${esc(i.tekst)}</li>`).join('')}</ol>`:'<div>Nog geen lessen: het team verzamelt eerst cijfers. Het eerste overleg met conclusies is na de eerste week.</div>'}
     ${tp?`<b>Beste post</b><div>${esc(tp.ref)} (${esc(tp.formaat)}, bereik ${tp.bereik})</div>`:''}
     ${lg&&lg.wijzigingen?`<b>Aanpassingen</b><div>${esc(String(lg.wijzigingen).slice(0,200))}</div>`:''}

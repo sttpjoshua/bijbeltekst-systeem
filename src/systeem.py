@@ -868,7 +868,8 @@ def dashboard_extra(cfg, posts):
             "gemeten_posts": gemeten, "snel_leren": snel, "voorraad": voorraad,
             "herstel": [h for h in laad("data/herstel.json", []) if h["t"] >= (nu - dt.timedelta(days=7)).isoformat()][::-1][:30],
             "nood": {"klaar": len(nood_klaar()), "doel": NOOD_DOEL},
-            "verzoeken": laad("data/verzoeken.json", [])[-20:][::-1]}
+            "verzoeken": laad("data/verzoeken.json", [])[-20:][::-1],
+            "overleg": laad("data/overleg.json", [])[-1:]}
 
 def kantoor_extra(cfg, posts):
     """Extra's voor het pixel-kantoor: gezondheidslampjes, volgersbord, post van de week, snel leren."""
@@ -1209,6 +1210,14 @@ def cmd_verzoek(vid=None, status=None, *antwoord):
     if status == "klaar":
         activiteit("controller", "Verzoek van Joshua afgehandeld")
 
+def cmd_overleg(*tekst):
+    """Tussentijds overleg vastleggen (verschijnt op het whiteboard in de vergaderruimte).
+    Geef de punten als losse argumenten; begin een voorstel met 'Voorstel:'."""
+    o = laad("data/overleg.json", [])
+    o.append({"t": dt.datetime.now().isoformat(timespec="minutes"), "punten": [x for x in tekst if x.strip()]})
+    bewaar("data/overleg.json", o[-12:])
+    activiteit("analist", "Tussentijds overleg gehouden")
+
 def cmd_nood(actie="status"):
     """Noodvoorraad: kant-en-klare posts voor als een dagelijkse run mislukt.
     status | aanvullen (lege posts erbij tot NOOD_DOEL; Claude schrijft de teksten) | render"""
@@ -1273,5 +1282,6 @@ if __name__ == "__main__":
      "leer": cmd_leer, "dashboard": cmd_dashboard, "check": cmd_check,
      "log": lambda: cmd_log(*x.args), "vers": lambda: cmd_vers(*x.args), "opruimen": lambda: cmd_opruimen(*x.args), "opgelost": cmd_opgelost,
      "verzoek": lambda: cmd_verzoek(*x.args),
+     "overleg": lambda: cmd_overleg(*x.args),
      "nood": lambda: cmd_nood(*(x.args[:1] or ["status"])),
      "aanvullen": lambda: cmd_aanvullen(bool(x.args and x.args[0] == "check"))}[x.cmd]()

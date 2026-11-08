@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-08T18:27",
+ "gegenereerd": "2026-11-08T18:36",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1012,11 +1012,6 @@
   {
    "t": "2026-11-07T14:55",
    "soort": "info",
-   "tekst": "Verbinding met Instagram werkt (@bibleverse_nl)"
-  },
-  {
-   "t": "2026-11-07T14:55",
-   "soort": "info",
    "tekst": "Token heeft alle rechten, ook voor statistieken"
   },
   {
@@ -1827,6 +1822,7 @@
   "doel": 6
  },
  "verzoeken": [],
+ "overleg": [],
  "planning": [
   {
    "datum": "2026-11-11",

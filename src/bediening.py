@@ -307,9 +307,9 @@ def main(raw):
             raise SystemExit("Leeg verzoek")
         v = S.laad("data/verzoeken.json", [])
         v.append({"id": dt.datetime.now().strftime("%Y%m%d%H%M%S"), "t": dt.datetime.now().isoformat(timespec="minutes"),
-                  "tekst": tekst, "status": "wacht", "antwoord": ""})
+                  "tekst": tekst, "status": "wacht", "antwoord": "", "soort": o.get("soort", "vraag")})
         S.bewaar("data/verzoeken.json", v[-100:])
-        melding = "Verzoek voor Claude in de wachtrij gezet"
+        melding = "Overleg aangevraagd: Claude maakt een tussentijdse analyse" if o.get("soort") == "overleg" else "Verzoek voor Claude in de wachtrij gezet"
     elif a == "verzoek_weg":
         v = S.laad("data/verzoeken.json", [])
         for x in v:
