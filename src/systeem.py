@@ -1174,6 +1174,22 @@ def noodinzet(nu):
         bewaar("data/posts.json", posts); bewaar("data/noodvoorraad.json", voorraad)
     return gezet
 
+def standaard_opties(tekst):
+    """Drie nette antwoordopties die meteen klaarstaan voor een nieuwe reactie. Claude vervangt ze in de
+    volgende run door antwoorden op maat (veld 'opties'). Bij twijfel: warm, kort, zonder discussie."""
+    t = (tekst or "").lower()
+    if any(w in t for w in ("bid", "gebed", "ziek", "verdriet", "moeilijk", "zwaar", "overleden", "angst", "bang")):
+        return ["Wat fijn dat je dit deelt. We bidden met je mee 🤍",
+                "Dank je dat je dit met ons deelt. Je staat er niet alleen voor, God is dichtbij.",
+                "We denken aan je en bidden voor je. Veel sterkte 🙏"]
+    if "?" in t:
+        return ["Goede vraag! Dank je dat je meedenkt 🙏",
+                "Mooie vraag. Wat denk jij er zelf over?",
+                "Dank je voor je vraag. Lees het hele hoofdstuk eens, dat geeft vaak extra licht op het vers."]
+    return ["Amen 🙏 Fijn dat dit vers je raakt.",
+            "Dank je wel! Gods zegen voor vandaag 🤍",
+            "Mooi dat je meeleest. Fijne dag!"]
+
 def cmd_verzoek(vid=None, status=None, *antwoord):
     """Verzoeken uit het dashboard ('Vraag Claude'). Zonder argumenten: toon open verzoeken.
     Met argumenten: verzoek ID op status 'bezig' of 'klaar' zetten, met een kort antwoord voor Joshua."""

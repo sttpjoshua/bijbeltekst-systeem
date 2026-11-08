@@ -124,7 +124,7 @@ Na het schrijven en renderen van de posts (dagelijkse run, en avondcontrole als 
 - Na snel leren gaat het systeem terug naar **2 posts per dag**.
 
 ## Reacties (Community-manager)
-`data/reacties.json` bevat reacties op de posts. Bij elke dagelijkse run en avondcontrole: schrijf voor elke reactie met status "nieuw" een antwoord in `voorstel` en zet de status op "voorgesteld". Joshua keurt het goed in het kantoor (Community-manager) en dan wordt het geplaatst.
+`data/reacties.json` bevat reacties op de posts. Bij elke dagelijkse run en avondcontrole: schrijf voor elke reactie met status "nieuw" drie antwoordopties op maat in `opties` (een lijst van 3: warm en persoonlijk, kort, en een met een korte bemoediging of verwijzing naar het vers), zet de beste ook in `voorstel` en zet de status op "voorgesteld". Bij een reactie die beter genegeerd kan worden: `opties` leeg. Joshua kiest of past aan in het dashboard (Overzicht › Reacties) of in het kantoor (Community-manager), en dan wordt het geplaatst.
 - Kort (1 tot 2 zinnen), warm, persoonlijk, in het Nederlands, in de jij-vorm. Ga in op wat de persoon schrijft. Hooguit één emoji.
 - Een gebedsverzoek of verdriet: meelevend, zonder preek ("Wat verdrietig, we bidden met je mee 🤍"). Bij signalen van acuut gevaar (zelfbeschadiging of zelfdoding): schrijf een rustig, zorgzaam antwoord dat verwijst naar 113 Zelfmoordpreventie (0800-0113, gratis) en zet in `notitie` "aandacht Joshua".
 - Geen discussies over leerstellige kwesties, politiek of andere kerken; bij een kritische of trollende reactie: `voorstel` leeg, status "voorgesteld" en `notitie` "beter negeren".

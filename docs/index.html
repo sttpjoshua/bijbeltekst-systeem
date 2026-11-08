@@ -173,6 +173,15 @@ table th{color:var(--ink3);text-transform:uppercase;font-size:11px;letter-spacin
 .thema button.aan{background:var(--kaart);color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.08)}
 #themaKnop{display:none;border:0;background:var(--kaart);border-radius:999px;width:34px;height:34px;font-size:16px;cursor:pointer}
 @media(max-width:900px){#themaKnop{display:inline-block}}
+.rc{padding:14px 0;border-top:1px solid var(--lijn)}.rc:first-of-type{border-top:0}
+.rc .wie{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}.rc .wie b{font-size:14px}
+.rc .tekst{margin:6px 0 10px;padding:10px 12px;background:var(--zacht);border-radius:12px;font-size:14px}
+.rc .opties{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.rc .optie{font:inherit;font-size:12.5px;text-align:left;border:1px solid var(--lijn);background:var(--kaart);color:var(--ink);border-radius:10px;padding:7px 10px;cursor:pointer;max-width:100%}
+.rc .optie:hover,.rc .optie.aan{border-color:var(--accent);background:var(--accent-zacht)}
+.rc textarea{margin-bottom:8px}
+.platform{font-size:11px;font-weight:600;padding:2px 7px;border-radius:6px}.platform.instagram{background:#fdebf6;color:#b0307d}.platform.facebook{background:#e9f0ff;color:#2459c9}
+html[data-thema=donker] .platform.instagram{background:#3a1d31;color:#f39ad0}html[data-thema=donker] .platform.facebook{background:#1b2840;color:#8fb2ff}
 </style>
 </head>
 <body>
@@ -199,6 +208,7 @@ table th{color:var(--ink3);text-transform:uppercase;font-size:11px;letter-spacin
 
   <div class="tab" data-tab="overzicht">
     <section class="kaart" id="aandacht" style="margin-top:0"></section>
+    <section class="kaart" id="reactiesKaart" style="display:none"></section>
     <div class="grid g4" id="tegels" style="margin-top:14px"></div>
     <section class="grid g2">
       <div class="kaart"><h2>Volgende posts</h2><div id="volgende"></div><a href="#planning" class="sub" onclick="tab('planning');return false">Hele planning bekijken →</a></div>
@@ -309,7 +319,7 @@ function bouw(){
       :`<button class="knop" style="border:0;cursor:pointer" data-o='{"actie":"pauze","waarde":true}' data-vraag="Alles stilzetten? Er gaat niets meer online tot je op Hervatten klikt.">⏸ Noodstop</button>`);
 
   const p=D.posts;
-  bouwAandacht();bouwVolgende();bouwVerzoeken();bouwGezondheid();bouwTegels();bouwSnelLeren();bouwGroei();bouwTop();bouwInzichten();bouwVoorraad();
+  bouwAandacht();bouwReacties();bouwVolgende();bouwVerzoeken();bouwGezondheid();bouwTegels();bouwSnelLeren();bouwGroei();bouwTop();bouwInzichten();bouwVoorraad();
 
   // logboek
   document.getElementById("logboek").innerHTML=(D.logboek||[]).slice().reverse().map(l=>`<div class="${l.soort==="fout"&&!l.opgelost?"fout":""}"><span class="t">${l.t.replace("T"," ")}</span>${l.tekst.length>170?l.tekst.slice(0,170)+"…":l.tekst}${l.opgelost?' <span style="color:var(--goed)">(opgelost)</span>':""}</div>`).join("")||'<div class="leeg">Nog niets gelogd.</div>';
@@ -417,6 +427,25 @@ function bouwAandacht(){
     const acties=(ACTIES[x.code]?ACTIES[x.code](x):"")+
       `<button class="btn" data-vraagclaude="${esc("Los dit op: "+x.tekst)}">Vraag Claude</button>`+knop("✓ Opgelost",{actie:"fout_opgelost",t:x.t});
     return `<div class="melding"><div class="wat">${jij?"<b>Actie voor jou:</b> "+esc(x.tekst.replace(/^ACTIE VOOR JOU:\s*/,"")):esc(x.tekst)}</div><div class="sub">${geleden(x.t)}</div><div class="acties">${acties}</div>${["rechten","verbinding"].includes(x.code)||/recht|token/i.test(x.tekst)?stappenMeta():""}</div>`}).join("");
+}
+function bouwReacties(){
+  const el=document.getElementById("reactiesKaart"),open=(D.reacties||[]).filter(r=>r.status==="nieuw"||r.status==="voorgesteld");
+  if(!open.length){el.style.display="none";return}
+  el.style.display="block";
+  el.innerHTML=`<h2>Reacties <span class="teller" style="background:var(--accent)">${open.length}</span></h2>`+open.slice(0,8).map(r=>{
+    const opties=[...new Set([...(r.opties||[]),...(r.voorstel?[r.voorstel]:[])])].filter(Boolean).slice(0,4);
+    return `<div class="rc" data-rid="${esc(r.id)}">
+      <div class="wie"><b>${esc(r.naam)}</b><span class="platform ${esc(r.platform)}">${r.platform==="instagram"?"Instagram":"Facebook"}</span><span class="sub">op ${esc(r.ref)} · ${geleden(r.t)}</span>${r.notitie?`<span class="sub" style="color:var(--let)">· ${esc(r.notitie)}</span>`:""}</div>
+      <div class="tekst">${esc(r.tekst)}</div>
+      ${opties.length?`<div class="sub" style="margin-bottom:6px">Kies een antwoord of schrijf je eigen:</div><div class="opties">${opties.map(o=>`<button class="optie" data-optie="${esc(o)}">${esc(o)}</button>`).join("")}</div>`:""}
+      <textarea class="veld" rows="2" placeholder="Jouw antwoord…">${esc(opties[0]||"")}</textarea>
+      <div class="seg"><button class="btn prim" data-plaats="${esc(r.id)}">Plaatsen</button>
+        <button class="btn" data-o="${ok({actie:"reactie_liken",reactie:r.id})}">${r.geliked?"❤️ Geliked":"♡ Liken"}</button>
+        <button class="btn" data-o="${ok({actie:"reactie_negeren",reactie:r.id})}">Afgehandeld</button></div></div>`}).join("");
+  el.querySelectorAll(".rc").forEach(rc=>{const ta=rc.querySelector("textarea"),bs=rc.querySelectorAll(".optie");
+    bs.forEach((b,i)=>{if(i===0)b.classList.add("aan");b.onclick=()=>{ta.value=b.dataset.optie;bs.forEach(x=>x.classList.toggle("aan",x===b))}});
+    rc.querySelector("[data-plaats]").onclick=e=>{const t=ta.value.trim();if(!t)return;if(!sleutel())return naarSleutel();
+      if(t.includes("\u2014"))return melding("Gebruik geen lange streep in het antwoord.","fout");stuur({actie:"reactie_plaatsen",reactie:rc.dataset.rid,tekst:t},e.target)}});
 }
 function bouwVolgende(){
   const v=D.posts.filter(x=>x.status==="gerenderd").sort((a,b)=>(a.datum+a.variabelen.tijdslot).localeCompare(b.datum+b.variabelen.tijdslot)).slice(0,4);

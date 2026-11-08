@@ -419,6 +419,13 @@ def volgers_en_tokens():
     S.bewaar("data/gezondheid.json", g)
 
 # ---------- Reacties ----------
+def lokaal(t):
+    """Tijd van Meta (UTC, bv. 2026-11-08T17:11:00+0000) naar Nederlandse tijd 'YYYY-MM-DDTHH:MM'."""
+    try:
+        return dt.datetime.strptime(t[:19] + t[19:].replace(":", ""), "%Y-%m-%dT%H:%M:%S%z").astimezone(TZ).isoformat(timespec="minutes")[:16]
+    except Exception:
+        return t[:16]
+
 def reacties_ophalen(posts):
     """Haalt reacties op posts van de afgelopen 14 dagen op (Instagram en Facebook) in data/reacties.json.
     Hiervoor zijn extra rechten nodig: instagram_manage_comments (en voor Facebook pages_read_user_content)."""
@@ -453,7 +460,8 @@ def reacties_ophalen(posts):
                         r0["status"] = "geplaatst"
                     continue
                 oud[cid] = {"id": cid, "platform": plat, "post": p["id"], "ref": p["ref"], "media_id": g["id"], "tekst": tekst,
-                            "naam": naam, "t": t[:16], "status": "geplaatst" if beantwoord else "nieuw", "voorstel": ""}
+                            "naam": naam, "t": lokaal(t), "status": "geplaatst" if beantwoord else "nieuw", "voorstel": "",
+                            "opties": S.standaard_opties(tekst)}
                 nieuw_aantal += 1
     # afgehandelde reacties na 3 dagen weghalen (de repo is openbaar; bewaar niet meer dan nodig)
     grens = (nu - dt.timedelta(days=3)).isoformat(timespec="minutes")
@@ -471,6 +479,16 @@ def reactie_plaatsen(r, tekst):
     else:
         pid, ptok = page_token(tok)
         http("POST", f"{API_FB}/{r['id']}/comments", {"message": tekst, "access_token": ptok})
+
+def reactie_liken(r):
+    """Hartje op een reactie. Instagram: recht instagram_manage_engagement (sinds april 2026);
+    Facebook: pages_manage_engagement."""
+    uid, tok = env()
+    if r["platform"] == "instagram":
+        http("POST", f"{API}/{r['id']}/likes", {"access_token": tok})
+    else:
+        pid, ptok = page_token(tok)
+        http("POST", f"{API_FB}/{r['id']}/likes", {"access_token": ptok})
 
 def cmd_statistieken():
     uid, tok = env()

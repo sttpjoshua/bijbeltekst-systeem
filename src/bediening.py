@@ -191,6 +191,22 @@ def main(raw):
     elif a == "fouten_opgelost":
         S.cmd_opgelost()
         melding = "Openstaande fouten als opgelost gemarkeerd"
+    elif a == "reactie_liken":
+        reacties = S.laad("data/reacties.json", [])
+        r = next((x for x in reacties if x["id"] == o["reactie"]), None)
+        if not r:
+            raise SystemExit("Reactie niet gevonden")
+        import publiceer
+        try:
+            publiceer.reactie_liken(r)
+            r["geliked"] = True
+            melding = f"Reactie van {r['naam']} geliked"
+        except Exception as e:
+            recht = "instagram_manage_engagement" if r["platform"] == "instagram" else "pages_manage_engagement"
+            S.cmd_log(f"ACTIE VOOR JOU: liken van reacties op {r['platform']} lukt nog niet. Voeg het recht {recht} toe aan de app en maak het token opnieuw aan "
+                      f"(zelfde stappen als bij de reactierechten). Melding van Meta: {str(e)[:150]}", "fout", code="rechten")
+            melding = "Liken lukte niet: recht ontbreekt (zie melding)"
+        S.bewaar("data/reacties.json", reacties)
     elif a in ("reactie_plaatsen", "reactie_negeren"):
         reacties = S.laad("data/reacties.json", [])
         r = next((x for x in reacties if x["id"] == o["reactie"]), None)
@@ -318,7 +334,7 @@ def main(raw):
         agent = {"pauze": "controller", "posts_per_dag": "verskiezer", "verkenning": "verskiezer", "vers_uitsluiten": "verskiezer",
                  "max_aandeel_beeld": "designer", "platform": "dispatcher", "tijd": "dispatcher", "nu_posten": "dispatcher",
                  "leermodus": "analist", "ander_vers": "verskiezer", "goedkeuren": "designer", "goedkeuren_instelling": "designer",
-                 "andere_stijl": "designer", "post_ander_vers": "verskiezer", "fouten_opgelost": "controller", "reactie_plaatsen": "community", "reactie_negeren": "community",
+                 "andere_stijl": "designer", "post_ander_vers": "verskiezer", "fouten_opgelost": "controller", "reactie_plaatsen": "community", "reactie_negeren": "community", "reactie_liken": "community",
                  "fout_opgelost": "controller", "post_opnieuw": "dispatcher", "post_nood": "controller", "nood_inzetten": "controller",
                  "muziek_toevoegen": "video", "statistieken_nu": "analist", "reacties_nu": "community", "zelftest_nu": "controller",
                  "run": "dispatcher", "verzoek": "controller"}.get(a)
