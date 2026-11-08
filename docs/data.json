@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-08T18:36",
+ "gegenereerd": "2026-11-08T18:40",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1012,11 +1012,6 @@
   {
    "t": "2026-11-07T14:55",
    "soort": "info",
-   "tekst": "Token heeft alle rechten, ook voor statistieken"
-  },
-  {
-   "t": "2026-11-07T14:55",
-   "soort": "info",
    "tekst": "Verbinding met Facebook-pagina werkt (Bibleversenl)"
   },
   {
@@ -1311,6 +1306,11 @@
    "t": "2026-11-08T18:27:40",
    "soort": "info",
    "tekst": "Bediening: Openstaande fouten als opgelost gemarkeerd"
+  },
+  {
+   "t": "2026-11-08T18:40:21",
+   "soort": "info",
+   "tekst": "Bediening: Overleg aangevraagd: Claude maakt een tussentijdse analyse"
   }
  ],
  "recente_fouten": [],
@@ -1821,7 +1821,16 @@
   "klaar": 6,
   "doel": 6
  },
- "verzoeken": [],
+ "verzoeken": [
+  {
+   "id": "20261108184021",
+   "t": "2026-11-08T18:40",
+   "tekst": "Tussentijds overleg: wat werkt, wat niet, en wat stel je voor?",
+   "status": "wacht",
+   "antwoord": "",
+   "soort": "overleg"
+  }
+ ],
  "overleg": [],
  "planning": [
   {
