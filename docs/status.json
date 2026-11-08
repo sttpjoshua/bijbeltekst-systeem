@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T19:12:42",
+ "updated": "2026-11-08T20:32:04",
  "agents": {
   "verskiezer": {
    "t": "2026-11-08T14:33:06",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-08T17:45:55",
-   "task": "Postte Spreuken 15:1 op facebook",
+   "t": "2026-11-08T20:32:04",
+   "task": "Postte Johannes 14:27 op facebook",
    "state": "done"
   },
   "controller": {
@@ -38,11 +38,11 @@
   }
  },
  "stats": {
-  "posts_today": 3,
-  "posts_total": 4,
+  "posts_today": 4,
+  "posts_total": 5,
   "reach_7d": 7,
   "best_time": "nog onbekend",
-  "next_post": "2026-11-08T20:30:00"
+  "next_post": "2026-11-08T22:00:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
@@ -56,6 +56,18 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "20:32",
+   "msg": "2026-11-08-3 online op facebook: Johannes 14:27"
+  },
+  {
+   "t": "20:31",
+   "msg": "2026-11-08-3 online op instagram: Johannes 14:27"
+  },
+  {
+   "t": "20:31",
+   "msg": "2026-11-08-3 ook als story geplaatst"
+  },
   {
    "t": "18:40",
    "msg": "Bediening: Overleg aangevraagd: Claude maakt een tussentijdse analyse"
@@ -91,18 +103,6 @@
   {
    "t": "18:08",
    "msg": "Statistieken lezen werkt"
-  },
-  {
-   "t": "18:08",
-   "msg": "Verbinding met Facebook-pagina werkt (Bibleversenl)"
-  },
-  {
-   "t": "18:08",
-   "msg": "Token heeft alle rechten, ook voor statistieken"
-  },
-  {
-   "t": "18:08",
-   "msg": "Verbinding met Instagram werkt (@bibleverse_nl)"
   }
  ],
  "lampen": [

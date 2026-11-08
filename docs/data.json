@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-08T19:12",
+ "gegenereerd": "2026-11-08T20:32",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -805,7 +805,7 @@
    "ref": "Johannes 14:27",
    "tekst": "Vrede laat Ik u, Mijn vrede geef Ik u; niet gelijkerwijs de wereld hem geeft, geef Ik hem u. Uw hart worde niet ontroerd en zij niet versaagd.",
    "hook": "Wat haalt jou vanavond nog uit je rust?",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "salie",
     "thema": "troost",
@@ -834,12 +834,18 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-3.mp4"
    ],
    "thumb": "thumbs/2026-11-08-3.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "instagram",
+    "facebook"
+   ],
+   "links": {
+    "instagram": "https://www.instagram.com/reel/DffgyADgrGP/",
+    "facebook": "https://www.facebook.com/2357605761683690"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
-   "online": null
+   "online": "2026-11-08T20:31+01:00"
   },
   {
    "id": "2026-11-08-2",
@@ -1057,21 +1063,6 @@
  "leergeschiedenis": [],
  "laatste_rapport": null,
  "logboek": [
-  {
-   "t": "2026-11-07T14:55",
-   "soort": "info",
-   "tekst": "Verbinding met Facebook-pagina werkt (Bibleversenl)"
-  },
-  {
-   "t": "2026-11-07T14:55",
-   "soort": "info",
-   "tekst": "Statistieken lezen werkt"
-  },
-  {
-   "t": "2026-11-07T15:06",
-   "soort": "info",
-   "tekst": "Verbinding met Instagram werkt (@bibleverse_nl)"
-  },
   {
    "t": "2026-11-07T15:06",
    "soort": "info",
@@ -1359,6 +1350,21 @@
    "t": "2026-11-08T18:40:21",
    "soort": "info",
    "tekst": "Bediening: Overleg aangevraagd: Claude maakt een tussentijdse analyse"
+  },
+  {
+   "t": "2026-11-08T20:31:54",
+   "soort": "info",
+   "tekst": "2026-11-08-3 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-08T20:31:54",
+   "soort": "info",
+   "tekst": "2026-11-08-3 online op instagram: Johannes 14:27"
+  },
+  {
+   "t": "2026-11-08T20:32:04",
+   "soort": "info",
+   "tekst": "2026-11-08-3 online op facebook: Johannes 14:27"
   }
  ],
  "recente_fouten": [],
@@ -1435,9 +1441,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-08T17:45",
+   "ok": "2026-11-08T20:31",
    "laatst_ok": true,
-   "detail": "Spreuken 15:1 geplaatst"
+   "detail": "Johannes 14:27 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-08T18:08",
@@ -1463,15 +1469,15 @@
    "ok": "2026-11-08T00:36"
   },
   "reacties": {
-   "ok": "2026-11-08T19:00",
+   "ok": "2026-11-08T20:00",
    "laatst_ok": true,
    "detail": "0 nieuwe reacties",
    "fout": "2026-11-08T18:00"
   },
   "facebook": {
-   "ok": "2026-11-08T17:45",
+   "ok": "2026-11-08T20:32",
    "laatst_ok": true,
-   "detail": "Spreuken 15:1 geplaatst"
+   "detail": "Johannes 14:27 geplaatst"
   },
   "statistieken": {
    "ok": "2026-11-08T12:15",
@@ -1505,7 +1511,7 @@
  ],
  "weken": {
   "deze": {
-   "posts": 4,
+   "posts": 5,
    "reach": 15,
    "views": 35,
    "likes": 8,
@@ -1592,7 +1598,7 @@
   "tot": "2026-11-14",
   "dag": 2,
   "dagen": 7,
-  "online": 4,
+  "online": 5,
   "gemeten": 0
  },
  "voorraad": {

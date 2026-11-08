@@ -330,7 +330,7 @@
  {
   "id": "2026-11-08-3",
   "datum": "2026-11-08",
-  "status": "gerenderd",
+  "status": "gepubliceerd",
   "vers_id": "John-14-27-27",
   "ref": "Johannes 14:27",
   "tekst": "Vrede laat Ik u, Mijn vrede geef Ik u; niet gelijkerwijs de wereld hem geeft, geef Ik hem u. Uw hart worde niet ontroerd en zij niet versaagd.",
@@ -410,7 +410,19 @@
   },
   "duur": 37,
   "story_url": null,
-  "cover_ms": 9080
+  "cover_ms": 9080,
+  "gepubliceerd": {
+   "instagram": {
+    "id": "18172049671475076",
+    "url": "https://www.instagram.com/reel/DffgyADgrGP/",
+    "t": "2026-11-08T20:31+01:00"
+   },
+   "facebook": {
+    "id": "2357605761683690",
+    "url": "https://www.facebook.com/2357605761683690",
+    "t": "2026-11-08T20:32+01:00"
+   }
+  }
  },
  {
   "id": "2026-11-08-4",
