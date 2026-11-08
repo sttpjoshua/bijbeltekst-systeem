@@ -5,14 +5,14 @@
   "tekst": "Systeem geïnstalleerd, wacht op Metricool-merk"
  },
  {
-  "t": "2026-11-06T23:48",
-  "soort": "info",
-  "tekst": "Overgestapt van Metricool naar direct posten via GitHub Actions"
- },
- {
   "t": "2026-11-06T23:38",
   "soort": "info",
   "tekst": "Verbinding met Instagram werkt (@bibleverse_nl)"
+ },
+ {
+  "t": "2026-11-06T23:48",
+  "soort": "info",
+  "tekst": "Overgestapt van Metricool naar direct posten via GitHub Actions"
  },
  {
   "t": "2026-11-07T00:40",
@@ -415,5 +415,10 @@
   "t": "2026-11-08T18:19:03",
   "soort": "info",
   "tekst": "Bediening: Liken lukte niet: recht ontbreekt (zie melding)"
+ },
+ {
+  "t": "2026-11-08T18:20:42",
+  "soort": "info",
+  "tekst": "Bediening: Antwoord geplaatst bij shaquana_brandsma (Spreuken 15:1)"
  }
 ]
