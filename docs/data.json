@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-08T07:31",
+ "gegenereerd": "2026-11-08T10:00",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -392,8 +392,26 @@
     "instagram": "https://www.instagram.com/p/DfeHgbfFgF-/",
     "facebook": "https://www.facebook.com/1015160368352770_122133986888879910"
    },
-   "totaal": {},
-   "per_platform": {},
+   "totaal": {
+    "views": 2,
+    "reach": 1,
+    "likes": 2,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0
+   },
+   "per_platform": {
+    "instagram": {
+     "views": 2,
+     "reach": 1,
+     "likes": 2,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": 0,
+     "t": "2026-11-08T10:00+01:00"
+    }
+   },
    "score": {},
    "online": "2026-11-08T07:30+01:00"
   },
@@ -432,8 +450,26 @@
    "links": {
     "instagram": "https://www.instagram.com/reel/DfcFByGNQ2a/"
    },
-   "totaal": {},
-   "per_platform": {},
+   "totaal": {
+    "views": 7,
+    "reach": 6,
+    "likes": 1,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0
+   },
+   "per_platform": {
+    "instagram": {
+     "views": 7,
+     "reach": 6,
+     "likes": 1,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "t": "2026-11-08T10:00+01:00"
+    }
+   },
    "score": {},
    "online": "2026-11-07T12:30+01:00"
   }
@@ -830,8 +866,9 @@
   },
   "reacties": {
    "ok": "2026-11-08T07:00",
-   "laatst_ok": true,
-   "detail": "0 nieuwe reacties"
+   "laatst_ok": false,
+   "detail": "400: {\"error\":{\"message\":\"(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https:\\/\\/",
+   "fout": "2026-11-08T10:00"
   },
   "facebook": {
    "ok": "2026-11-08T07:31",
@@ -856,9 +893,9 @@
  "weken": {
   "deze": {
    "posts": 2,
-   "reach": 0,
-   "views": 0,
-   "likes": 0,
+   "reach": 7,
+   "views": 9,
+   "likes": 3,
    "comments": 0,
    "saves": 0,
    "shares": 0

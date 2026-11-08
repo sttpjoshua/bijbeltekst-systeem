@@ -40,7 +40,21 @@
   "media": "docs/media/2026-11/2026-11-07-1.mp4",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-07-1.mp4",
   "metricool": {},
-  "stats": {},
+  "stats": {
+   "instagram": {
+    "laatst": {
+     "t": "2026-11-08T10:00+01:00",
+     "views": 7,
+     "reach": 6,
+     "likes": 1,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "avg_watch_ms": 4264
+    }
+   }
+  },
   "handle": "@bibleverse_nl",
   "thumb": "thumbs/2026-11-07-1.jpg",
   "fouten": 1,
@@ -99,7 +113,21 @@
   "media": "docs/media/2026-11/2026-11-08-1-1.jpg",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-1-1.jpg",
   "metricool": {},
-  "stats": {},
+  "stats": {
+   "instagram": {
+    "laatst": {
+     "t": "2026-11-08T10:00+01:00",
+     "views": 2,
+     "reach": 1,
+     "likes": 2,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": 0,
+     "avg_watch_ms": null
+    }
+   }
+  },
   "beeld": null,
   "muziek": null,
   "geluid": null,
