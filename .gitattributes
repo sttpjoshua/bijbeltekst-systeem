@@ -1,0 +1,6 @@
+# JSON-data wordt per post/sleutel samengevoegd (tools/json_merge.py), zodat gelijktijdige schrijvers elkaar niet overschrijven
+data/*.json merge=json
+config.json merge=json
+strategie.json merge=json
+docs/data.json merge=json
+docs/status.json merge=json

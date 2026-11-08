@@ -1,5 +1,7 @@
 # Werkinstructies voor de geplande taken
 
+> **Eerst na het clonen:** `sh tools/git_instellen.sh` (JSON-bestanden worden dan per post samengevoegd bij `git pull --rebase`, zodat je geen wijzigingen van GitHub Actions of het dashboard overschrijft). Gebruik nooit `-X theirs` of `--force`.
+
 Dit bestand is de handleiding voor Claude bij elke geplande run. Volg het letterlijk. Werk in de projectmap (de clone van de repo uit `config.json` > `github_repo`).
 
 ## Vaste regels (nooit overtreden)
