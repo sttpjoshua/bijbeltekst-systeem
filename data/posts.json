@@ -43,7 +43,7 @@
   "stats": {
    "instagram": {
     "laatst": {
-     "t": "2026-11-08T12:15+01:00",
+     "t": "2026-11-08T13:00+01:00",
      "views": 7,
      "reach": 7,
      "likes": 1,
@@ -126,8 +126,8 @@
   "stats": {
    "instagram": {
     "laatst": {
-     "t": "2026-11-08T12:15+01:00",
-     "views": 3,
+     "t": "2026-11-08T13:00+01:00",
+     "views": 4,
      "reach": 2,
      "likes": 2,
      "comments": 0,
@@ -403,7 +403,21 @@
   "media": "docs/media/2026-11/2026-11-08-4-1.jpg",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-4-1.jpg",
   "metricool": {},
-  "stats": {},
+  "stats": {
+   "instagram": {
+    "laatst": {
+     "t": "2026-11-08T13:00+01:00",
+     "views": 0,
+     "reach": 0,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": 0,
+     "avg_watch_ms": null
+    }
+   }
+  },
   "beeld": null,
   "muziek": null,
   "geluid": null,
