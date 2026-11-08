@@ -395,12 +395,55 @@ def _stukjes(woorden, max_w=6):
         uit.append(huidig)
     return uit
 
+def _uitleglaag(post, titel, body, b, h, boven, onder, onderschrift=None):
+    """Transparante laag voor een uitlegscherm in een video: titel, lopende tekst, bijbelplaats en merk."""
+    v = post["variabelen"]
+    kleur, accent = _kleuren(post)
+    laag = Image.new("RGBA", (b, h), (0, 0, 0, 0))
+    d = ImageDraw.Draw(laag)
+    marge = int(b * 0.12)
+    if v["layout"] == "kader":
+        p = int(b * 0.06)
+        d.rectangle([p, boven - p, b - p, h - onder + p], outline=accent + (200,), width=3)
+    ruimte = h - boven - onder
+    _woordmerk(d, b // 2, boven + int(ruimte * 0.08), titel, _klein_font(int(b * 0.034), b"Bold"), accent + (255,), int(b * 0.009))
+    grootte = int(b * 0.066)
+    while grootte > 28:
+        f = _font(v["lettertype"], grootte)
+        regels = _wrap(body, f, b - 2 * marge, d)
+        lh = int(grootte * 1.38)
+        extra = 0
+        if onderschrift:
+            of = _font(v["lettertype"], int(grootte * 0.9))
+            oregels = _wrap(onderschrift, of, b - 2 * marge, d)
+            extra = int(lh * 0.8) + len(oregels) * int(grootte * 0.9 * 1.38)
+        if lh * len(regels) + extra <= ruimte * 0.62:
+            break
+        grootte -= 2
+    totaal = lh * len(regels) + extra
+    y0 = boven + int(ruimte * 0.2) + (int(ruimte * 0.62) - totaal) // 2
+    links = v["layout"] == "links"
+    staat = _kernstaat(post, kleur, accent)
+    for i, r in enumerate(regels):
+        _regel(d, marge if links else b // 2, y0 + i * lh, r, f, kleur + (255,), accent + (255,), staat, links)
+    if onderschrift:
+        oy = y0 + lh * len(regels) + int(lh * 0.8)
+        olh = int(grootte * 0.9 * 1.38)
+        for i, r in enumerate(oregels):
+            d.text((marge if links else b // 2, oy + i * olh), r, font=of, fill=accent + (255,), anchor="la" if links else "ma")
+    rf = _klein_font(int(b * 0.028), b"SemiBold")
+    d.text((b // 2, h - onder - int(b * 0.09)), (post["ref"] + ("  \u00b7  NBV21" if post.get("vertaling") == "NBV21" else "")).upper(), font=rf, fill=accent + (220,), anchor="ma")
+    _woordmerk(d, b // 2, h - onder - int(b * 0.03), "BIBLEVERSE", _klein_font(int(b * 0.024), b"Bold"), accent + (235,), int(b * 0.009))
+    return laag
+
 def maak_video(post, pad, duur=None):
     """Achtergrond met langzame zoom; het vers verschijnt stukje voor stukje, op leestempo.
     Het eerste stukje staat er binnen een kwart seconde (sterke eerste seconde). Veilige zones voor Reels."""
     b, h = 1080, 1920
+    v = post["variabelen"]
+    uitleg = bool(v.get("video_uitleg")) and post.get("betekenis") and post.get("toepassing")
     with tempfile.TemporaryDirectory() as tmp:
-        bg = _bg(post, int(b * 1.15), int(h * 1.15))
+        bg = _panorama(post, b, h, 3) if uitleg else _bg(post, int(b * 1.15), int(h * 1.15))
         bgp = os.path.join(tmp, "bg.png")
         bg.save(bgp)
         geo = []
@@ -429,9 +472,25 @@ def maak_video(post, pad, duur=None):
         for st in stukjes:
             tijden.append(round(t, 2)); n_tot += len(st)
             t += max(0.7, len(st) / 3.0)
-        if duur is None:
+        if uitleg:
+            lees = lambda tekst: max(4.5, len(tekst.split()) / 2.6 + 1.5)  # rustig leestempo
+            vraag = (post.get("caption", "").strip().splitlines() or [""])[-1].strip()
+            vraag = vraag if vraag.endswith("?") and len(vraag) <= 90 else None
+            T1 = t + 2.0                      # vers helemaal te lezen, dan doorschuiven
+            T2 = T1 + 0.8 + lees(post["betekenis"])
+            T3 = T2 + 0.8 + lees(post["toepassing"] + " " + (vraag or ""))
+            duur = int(min(45, T3 + 0.8))
+            post["duur"] = duur
+            strook = os.path.join(tmp, "strook.png")
+            st_img = bg.convert("RGBA")
+            st_img.alpha_composite(_uitleglaag(post, "WAT BETEKENT DIT?", post["betekenis"], b, h, 220, 380), (b, 0))
+            st_img.alpha_composite(_uitleglaag(post, "VANDAAG", post["toepassing"], b, h, 220, 380, vraag), (2 * b, 0))
+            st_img.convert("RGB").save(strook)
+        elif duur is None:
             duur = int(min(18, max(9, t + 3)))
-        post["duur"] = duur
+            post["duur"] = duur
+        else:
+            post["duur"] = duur
         lagen = [laag_tot(0)]
         n_tot = 0
         for st in stukjes:
@@ -440,14 +499,27 @@ def maak_video(post, pad, duur=None):
         for i, l in enumerate(lagen):
             pth = os.path.join(tmp, f"l{i}.png"); l.save(pth); paden.append(pth)
         fps = 30; n = duur * fps
-        filt = (f"[0:v]scale={int(b*1.15)}:{int(h*1.15)},zoompan=z='1+0.08*on/{n}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)'"
-                f":d={n}:s={b}x{h}:fps={fps}[bg];[bg][1:v]overlay=0:0[v0]")
+        if uitleg:
+            # de verslagen liggen op het eerste scherm van de strook; daarna schuift het beeld als een carrousel naar links
+            filt = f"[0:v]format=rgba[s];[s][1:v]overlay=0:0[v0]"
+        else:
+            filt = (f"[0:v]scale={int(b*1.15)}:{int(h*1.15)},zoompan=z='1+0.08*on/{n}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)'"
+                    f":d={n}:s={b}x{h}:fps={fps}[bg];[bg][1:v]overlay=0:0[v0]")
         for i in range(1, len(paden)):
             filt += (f";[{i+1}:v]format=rgba,fade=t=in:st={tijden[i-1]}:d=0.35:alpha=1[t{i}]"
                      f";[v{i-1}][t{i}]overlay=0:0[v{i}]")
         laatste = len(paden) - 1
-        filt += f";[v{laatste}]fade=t=out:st={duur-0.6}:d=0.6,format=yuv420p[v]"
-        inputs = ["-i", bgp]
+        if uitleg:
+            e = lambda a: f"(({a})*({a})*(3-2*({a})))"
+            u1, u2 = f"(t-{T1:.2f})/0.8", f"(t-{T2:.2f})/0.8"
+            xexpr = (f"if(lt(t,{T1:.2f}),0,if(lt(t,{T1+0.8:.2f}),{b}*{e(u1)},if(lt(t,{T2:.2f}),{b},"
+                     f"if(lt(t,{T2+0.8:.2f}),{b}+{b}*{e(u2)},{2*b}))))")
+            filt += f";[v{laatste}]crop=w={b}:h={h}:x='{xexpr}':y=0,fade=t=out:st={duur-0.6}:d=0.6,format=yuv420p[v]"
+            bgp = strook
+            inputs = ["-loop", "1", "-framerate", str(fps), "-t", str(duur), "-i", bgp]
+        else:
+            filt += f";[v{laatste}]fade=t=out:st={duur-0.6}:d=0.6,format=yuv420p[v]"
+            inputs = ["-i", bgp]
         for pth in paden:
             inputs += ["-loop", "1", "-framerate", str(fps), "-t", str(duur), "-i", pth]
         ai = len(paden) + 1
