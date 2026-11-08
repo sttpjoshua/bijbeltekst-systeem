@@ -190,6 +190,7 @@ html[data-thema=donker] .platform.instagram{background:#3a1d31;color:#f39ad0}htm
   <div class="merk"><span class="logo">B</span><span>Bibleverse</span></div>
   <nav class="tabs" id="tabs">
     <button data-tab="overzicht"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V21h-6v-6H9v6H3z"/></svg><span>Overzicht</span><span class="teller" id="tAandacht"></span></button>
+    <button data-tab="inbox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.9A8 8 0 1 1 21 12z"/></svg><span>Reacties</span><span class="teller" id="tInbox" style="background:var(--accent)"></span></button>
     <button data-tab="planning"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M8 2.5v4M16 2.5v4M3 9.5h18"/></svg><span>Planning</span></button>
     <button data-tab="resultaten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><span>Resultaten</span></button>
     <button data-tab="posts"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>Alle posts</span></button>
@@ -208,7 +209,6 @@ html[data-thema=donker] .platform.instagram{background:#3a1d31;color:#f39ad0}htm
 
   <div class="tab" data-tab="overzicht">
     <section class="kaart" id="aandacht" style="margin-top:0"></section>
-    <section class="kaart" id="reactiesKaart" style="display:none"></section>
     <div class="grid g4" id="tegels" style="margin-top:14px"></div>
     <section class="grid g2">
       <div class="kaart"><h2>Volgende posts</h2><div id="volgende"></div><a href="#planning" class="sub" onclick="tab('planning');return false">Hele planning bekijken →</a></div>
@@ -224,6 +224,11 @@ html[data-thema=donker] .platform.instagram{background:#3a1d31;color:#f39ad0}htm
       </div>
     </section>
     <section class="kaart" id="gezondheid"><h2>Gezondheid</h2><div class="sub" style="margin:-6px 0 10px">Klik op een blokje om die controle nu te laten draaien.</div><div class="gz" id="gzLijst"></div><div id="herstelLijst" style="margin-top:12px"></div></section>
+  </div>
+
+  <div class="tab" data-tab="inbox">
+    <section class="kaart" id="reactiesKaart" style="margin-top:0"></section>
+    <section class="kaart" id="reactiesKlaar"></section>
   </div>
 
   <div class="tab" data-tab="planning">
@@ -385,13 +390,13 @@ document.addEventListener("click",e=>{
   if(v){e.preventDefault();tab("overzicht");const ta=document.getElementById("vTekst");ta.value=v.dataset.vraagclaude;ta.focus();ta.scrollIntoView({behavior:"smooth",block:"center"})}
 });
 // ---------- Tabs ----------
-const TABNAAM={overzicht:"Overzicht",planning:"Planning",resultaten:"Resultaten",posts:"Alle posts",beheer:"Beheer"};
+const TABNAAM={inbox:"Reacties",overzicht:"Overzicht",planning:"Planning",resultaten:"Resultaten",posts:"Alle posts",beheer:"Beheer"};
 function tab(n){document.querySelectorAll("#tabs button").forEach(b=>b.classList.toggle("aan",b.dataset.tab===n));
   const pt=document.getElementById("paginaTitel");if(pt)pt.textContent=TABNAAM[n]||"Overzicht";window.scrollTo(0,0);
   document.querySelectorAll(".tab").forEach(t=>t.classList.toggle("aan",t.dataset.tab===n));if(location.hash!=="#"+n)history.replaceState(null,"","#"+n)}
 document.querySelectorAll("#tabs button").forEach(b=>b.onclick=()=>tab(b.dataset.tab));
 window.addEventListener("hashchange",()=>tab(location.hash.slice(1)||"overzicht"));
-tab(["overzicht","planning","resultaten","posts","beheer"].includes(location.hash.slice(1))?location.hash.slice(1):"overzicht");
+tab(["overzicht","inbox","planning","resultaten","posts","beheer"].includes(location.hash.slice(1))?location.hash.slice(1):"overzicht");
 // ---------- Aandacht nodig ----------
 const esc=t=>String(t??"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/"/g,"&quot;");
 const ok=o=>esc(JSON.stringify(o)).replace(/'/g,"&#39;");
@@ -415,6 +420,8 @@ function bouwAandacht(){
   const f=(D.recente_fouten||[]).slice().reverse(),el=document.getElementById("aandacht"),n=D.nood||{klaar:6,doel:6};
   const extra=[];
   if(n.klaar<2)extra.push(`<div class="melding info"><div class="wat"><b>Noodvoorraad bijna op</b> (${n.klaar} van ${n.doel})</div><div class="sub">Die posts vangen een mislukte dagelijkse run op.</div><div class="acties"><button class="btn prim" data-vraagclaude="Vul de noodvoorraad aan tot 6 posts.">Vraag Claude om aan te vullen</button></div></div>`);
+  const openR=(D.reacties||[]).filter(r=>r.status==="nieuw"||r.status==="voorgesteld");
+  if(openR.length)extra.push(`<div class="melding info" style="border-left-color:var(--accent)"><div class="wat"><b>💬 ${openR.length} nieuwe reactie${openR.length>1?"s":""}</b></div><div class="sub">${openR.slice(0,2).map(r=>`${esc(r.naam)}: “${esc(r.tekst.slice(0,60))}”`).join(" · ")}</div><div class="acties"><button class="btn prim" onclick="tab('inbox')">Bekijken en beantwoorden</button></div></div>`);
   const klaar=(D.verzoeken||[]).filter(v=>v.status==="klaar"&&uurGeleden(v.bijgewerkt||v.t)<24);
   if(klaar.length)extra.push(`<div class="melding info" style="border-left-color:var(--goed)"><div class="wat"><b>Claude heeft ${klaar.length} verzoek${klaar.length>1?"en":""} afgehandeld</b></div><div class="sub">Zie "Vraag Claude" hieronder.</div></div>`);
   document.getElementById("tAandacht").textContent=f.length||"";
@@ -430,9 +437,11 @@ function bouwAandacht(){
 }
 function bouwReacties(){
   const el=document.getElementById("reactiesKaart"),open=(D.reacties||[]).filter(r=>r.status==="nieuw"||r.status==="voorgesteld");
-  if(!open.length){el.style.display="none";return}
-  el.style.display="block";
-  el.innerHTML=`<h2>Reacties <span class="teller" style="background:var(--accent)">${open.length}</span></h2>`+open.slice(0,8).map(r=>{
+  document.getElementById("tInbox").textContent=open.length||"";
+  const klaar=(D.reacties||[]).filter(r=>!(r.status==="nieuw"||r.status==="voorgesteld")).slice(0,10);
+  document.getElementById("reactiesKlaar").innerHTML=`<h2>Afgehandeld</h2>`+(klaar.length?klaar.map(r=>`<div class="top"><div class="info"><b>${esc(r.naam)}</b> <span class="platform ${esc(r.platform)}">${r.platform==="instagram"?"Instagram":"Facebook"}</span> <span class="sub">op ${esc(r.ref)} · ${geleden(r.t)}</span><div class="sub">“${esc(r.tekst)}”${r.antwoord?` → <b>${esc(r.antwoord)}</b>`:r.status==="genegeerd"?" · afgehandeld zonder antwoord":""}${r.geliked?" · ❤️":""}</div></div></div>`).join(""):'<div class="leeg">Nog niets afgehandeld. Afgehandelde reacties blijven hier 3 dagen staan.</div>');
+  if(!open.length){el.innerHTML=`<h2>Nieuwe reacties</h2><div class="allesgoed"><span class="groot">💬</span><div><b>Geen nieuwe reacties.</b><div class="sub">Elk uur tussen 07:00 en 23:00 wordt gekeken of er iets nieuws is.</div></div></div>`;return}
+  el.innerHTML=`<h2>Nieuwe reacties</h2>`+open.slice(0,8).map(r=>{
     const opties=[...new Set([...(r.opties||[]),...(r.voorstel?[r.voorstel]:[])])].filter(Boolean).slice(0,4);
     return `<div class="rc" data-rid="${esc(r.id)}">
       <div class="wie"><b>${esc(r.naam)}</b><span class="platform ${esc(r.platform)}">${r.platform==="instagram"?"Instagram":"Facebook"}</span><span class="sub">op ${esc(r.ref)} · ${geleden(r.t)}</span>${r.notitie?`<span class="sub" style="color:var(--let)">· ${esc(r.notitie)}</span>`:""}</div>
