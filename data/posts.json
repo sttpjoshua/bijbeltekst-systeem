@@ -307,7 +307,8 @@
    "lettertype": "cormorant",
    "layout": "kader",
    "achtergrond": "effen",
-   "hook_op_beeld": false
+   "hook_op_beeld": false,
+   "video_uitleg": true
   },
   "keuzebron": {
    "huisstijl": "joshua",
@@ -316,7 +317,8 @@
    "formaat": "verkenning",
    "uitleg_op_beeld": "verkenning",
    "achtergrondbron": "strategie",
-   "tijdslot": "strategie"
+   "tijdslot": "strategie",
+   "video_uitleg": "vaste regel"
   },
   "hook": "Wat haalt jou vanavond nog uit je rust?",
   "beeld_hook": "",
@@ -328,8 +330,8 @@
    "#bemoediging"
   ],
   "uitleg": "",
-  "betekenis": "",
-  "toepassing": "",
+  "betekenis": "Jezus zegt dit op de avond voor zijn dood. Zijn vrede is geen rust omdat alles goed gaat, maar rust omdat Hij erbij is, ook als het onrustig is.",
+  "toepassing": "Merk vandaag een moment van onrust op. Adem rustig uit en zeg: Uw vrede is groter dan dit.",
   "media": "docs/media/2026-11/2026-11-08-3.mp4",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-3.mp4",
   "metricool": {},
@@ -366,7 +368,7 @@
    "betekenis": "",
    "toepassing": ""
   },
-  "duur": 16,
+  "duur": 37,
   "story_url": null,
   "cover_ms": 9080
  },
@@ -699,7 +701,8 @@
    "lettertype": "dmserif",
    "layout": "centraal",
    "achtergrond": "diagonaal",
-   "hook_op_beeld": false
+   "hook_op_beeld": false,
+   "video_uitleg": true
   },
   "keuzebron": {
    "huisstijl": "experiment",
@@ -713,7 +716,8 @@
    "bron": "experiment",
    "vraag_onderaan": "experiment",
    "opening": "n.v.t.",
-   "tijdslot": "experiment"
+   "tijdslot": "experiment",
+   "video_uitleg": "vaste regel"
   },
   "hook": "Even rustig, voor je weer drie dingen tegelijk doet.",
   "beeld_hook": "",
@@ -725,8 +729,8 @@
    "#geloof"
   ],
   "uitleg": "",
-  "betekenis": "",
-  "toepassing": "",
+  "betekenis": "Een verstandig mens denkt na over de weg die hij gaat. Wie zonder nadenken doet wat in hem opkomt, houdt uiteindelijk vooral zichzelf voor de gek.",
+  "toepassing": "Neem bij één keuze vandaag even de tijd: waar leidt dit naartoe? Kies daarna pas.",
   "kernwoord": "wijsheid",
   "media": "docs/media/2026-11/2026-11-09-2.mp4",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-09-2.mp4",
@@ -736,7 +740,7 @@
   "muziek": "ES_Samadhi (Alpha 10 hz) - Syntropy.mp3",
   "geluid": null,
   "handle": "@bibleverse_nl",
-  "duur": 9,
+  "duur": 28,
   "media_extra": [],
   "thumb": "thumbs/2026-11-09-2.jpg",
   "media_urls": [
@@ -795,7 +799,8 @@
    "lettertype": "cormorant",
    "layout": "kader",
    "achtergrond": "effen",
-   "hook_op_beeld": false
+   "hook_op_beeld": false,
+   "video_uitleg": true
   },
   "keuzebron": {
    "huisstijl": "experiment",
@@ -809,7 +814,8 @@
    "bron": "experiment",
    "vraag_onderaan": "experiment",
    "opening": "n.v.t.",
-   "tijdslot": "experiment"
+   "tijdslot": "experiment",
+   "video_uitleg": "vaste regel"
   },
   "hook": "Kijk vandaag één keer bewust naar een vogel.",
   "beeld_hook": "",
@@ -822,8 +828,8 @@
    "#geloof"
   ],
   "uitleg": "",
-  "betekenis": "",
-  "toepassing": "",
+  "betekenis": "Jezus wijst op de vogels: ze plannen niet en zorgen niet, en toch krijgen ze te eten. Als God al zo voor hen zorgt, hoeveel meer dan voor jou.",
+  "toepassing": "Kijk vandaag bewust naar een vogel buiten en leg één zorg in gedachten bij God neer.",
   "kernwoord": "vogelen",
   "media": "docs/media/2026-11/2026-11-09-3.mp4",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-09-3.mp4",
@@ -833,7 +839,7 @@
   "muziek": "ES_Meditations - Drift Far Away.mp3",
   "geluid": null,
   "handle": "@bibleverse_nl",
-  "duur": 18,
+  "duur": 38,
   "media_extra": [],
   "thumb": "thumbs/2026-11-09-3.jpg",
   "media_urls": [
@@ -1194,7 +1200,8 @@
    "lettertype": "montserrat_zwaar",
    "layout": "links",
    "achtergrond": "diagonaal",
-   "hook_op_beeld": false
+   "hook_op_beeld": false,
+   "video_uitleg": true
   },
   "keuzebron": {
    "huisstijl": "experiment",
@@ -1208,7 +1215,8 @@
    "bron": "experiment",
    "vraag_onderaan": "experiment",
    "opening": "n.v.t.",
-   "tijdslot": "experiment"
+   "tijdslot": "experiment",
+   "video_uitleg": "vaste regel"
   },
   "hook": "Zeg deze belofte vandaag hardop tegen jezelf.",
   "beeld_hook": "",
@@ -1220,8 +1228,8 @@
    "#nieuwbegin"
   ],
   "uitleg": "",
-  "betekenis": "",
-  "toepassing": "",
+  "betekenis": "Aan het eind van de Bijbel belooft God dat Hij alles nieuw maakt: wat kapot is, wordt heel. Dat is geen vage wens, maar een betrouwbare belofte.",
+  "toepassing": "Denk aan iets in je leven dat stuk is, en bid vandaag: maak ook dit nieuw.",
   "kernwoord": "nieuw",
   "media": "docs/media/2026-11/2026-11-10-2.mp4",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-10-2.mp4",
@@ -1231,7 +1239,7 @@
   "muziek": "ES_Meadow Waves - Rand Aldo.mp3",
   "geluid": null,
   "handle": "@bibleverse_nl",
-  "duur": 16,
+  "duur": 39,
   "media_extra": [],
   "thumb": "thumbs/2026-11-10-2.jpg",
   "media_urls": [

@@ -58,8 +58,7 @@ DIMENSIES = {
     "lengte": ["kort", "middel", "lang"],
     "bron": ["bekend", "ontdekking"],
     "vraag_onderaan": [True, False],
-    "opening": ["vers", "stopper"],
-    "video_uitleg": [True, False],  # video: na het vers ook "Wat betekent dit?" en "Vandaag" (zoals de carrousel)  # carrousel: slide 1 het hele vers, of eerst een korte, grote 'stopper'
+    "opening": ["vers", "stopper"],  # carrousel: slide 1 het hele vers, of eerst een korte, grote 'stopper'
     "tijdslot": ["07:30", "12:15", "17:45", "20:30", "22:00"],
 }
 
@@ -295,10 +294,10 @@ def kies_posts(datum, cfg, strat, posts, verzen, mat, n_start, n, gebruikte_slot
             v[f] = vers[f]  # wat er echt gepost wordt, telt mee bij het leren
         if v["formaat"] != "carrousel":
             v["opening"], bron["opening"] = None, "n.v.t."  # alleen carrousels hebben een opening
-        if v["formaat"] != "video":
-            v["video_uitleg"], bron["video_uitleg"] = None, "n.v.t."
         elif v["opening"] == "stopper" and len(vers["tekst"]) < 70:
             v["opening"], bron["opening"] = "vers", "kort vers"  # een kort vers is zelf al de stopper
+        # vaste regel (Joshua, 8 nov): een reel heeft altijd uitleg, zoals de carrousel
+        v["video_uitleg"], bron["video_uitleg"] = (True, "vaste regel") if v["formaat"] == "video" else (None, "n.v.t.")
         recent.add(vers["id"])
         nieuw.append({**({"reeks": reekspost["naam"], "reeks_label": reekspost["label"]} if reekspost else {}),
                       "id": f"{datum}-{n_start + i + 1}", "datum": datum, "status": "wacht_op_tekst",

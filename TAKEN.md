@@ -29,7 +29,7 @@ Vul in `data/posts.json` deze velden in:
 - `caption`: hook (als die er is), witregel, de verstekst letterlijk tussen aanhalingstekens, de referentie, witregel, één korte zin uitleg of toepassing in hedendaags Nederlands (de Statenvertaling is oud taalgebruik; help de lezer). Totaal maximaal 600 tekens.
 - `uitleg`: alleen als `variabelen.uitleg_op_beeld` true is. De kern van het vers in gewone, hedendaagse taal, maximaal 110 tekens, zonder aanhalingstekens. Bijvoorbeeld bij "En de vrede Gods heerse in uw harten": "Laat Gods vrede de baas zijn in je hart." Het is uitleg, geen Bijbeltekst: verander de betekenis niet en voeg niets toe.
 - `kernwoord`: altijd invullen. Eén woord dat letterlijk in het vers staat (zoals het daar staat) en de kern draagt, bijvoorbeeld "Herder", "vrede", "hulp" of "nieuw". Liefst een woord met gevoel of beeld, niet "HEERE" of "God". Dit woord krijgt de accentkleur op het beeld. Bij `variabelen.opening` = stopper komt het stukje van het vers rond dit woord groot op slide 1 te staan, dus kies een woord in het sterkste deel van het vers.
-- `betekenis` en `toepassing`: bij `variabelen.formaat` = carrousel (3 slides) én bij een video met `variabelen.video_uitleg` = true (dan verschijnen ze na het vers als "Wat betekent dit?" en "Vandaag"; de laatste regel van de caption, de vraag, komt onder de toepassing). `betekenis`: 2 tot 3 korte zinnen over wat het vers betekent, eenvoudig en trouw aan de tekst (20 tot 320 tekens). `toepassing`: 1 tot 2 zinnen met een concrete, kleine stap voor vandaag (20 tot 320 tekens). Geen preek, geen dwang.
+- `betekenis` en `toepassing`: bij `variabelen.formaat` = carrousel (3 slides) én bij elke video (vaste regel: reels hebben altijd uitleg) (dan verschijnen ze na het vers als "Wat betekent dit?" en "Vandaag"; de laatste regel van de caption, de vraag, komt onder de toepassing). `betekenis`: 2 tot 3 korte zinnen over wat het vers betekent, eenvoudig en trouw aan de tekst (20 tot 320 tekens). `toepassing`: 1 tot 2 zinnen met een concrete, kleine stap voor vandaag (20 tot 320 tekens). Geen preek, geen dwang.
 - `hashtags`: 3 tot 5, Nederlands, bv. `#bijbeltekst #geloof #bemoediging #god #jezus`. Wissel af.
 Schrijf in het Nederlands, warm en eenvoudig, nooit prekerig. Elke hook anders dan die van de afgelopen 14 dagen (kijk in `data/posts.json`).
 
@@ -101,6 +101,9 @@ Joshua kan in het kantoor (📥 Goedkeuren) posts goedkeuren, een andere stijl k
 
 ## Formaat
 Joshua wil geen losse afbeeldingen meer: een beeldpost is altijd een carrousel (vers, "Wat betekent dit?", "Vandaag"), dus altijd met `betekenis` en `toepassing`. Het systeem test alleen nog carrousel tegen video.
+
+## Reels (vaste regel)
+Elke reel heeft uitleg: vers frase voor frase, dan "Wat betekent dit?" en "Vandaag" met voortgangsbalkje, omslag op het volle vers, naadloze loop, oplichtend kernwoord en overgangen op de muziek. Dus bij elke video `betekenis` en `toepassing` schrijven.
 
 ## Kernwoord: dikker en in kleur, nooit een vakje (vaste regel)
 Het kernwoord wordt uitgelicht door het dikker te zetten in een opvallende kleur (zie `_kernstaat` en `_regel` in src/render.py). Nooit een vakje, balk of label eromheen: dat vindt Joshua niet mooi.
