@@ -41,5 +41,9 @@
   ],
   "van": "2026-11-08",
   "tot": "2026-11-14"
- }
+ },
+ "verzen_uitsluiten": [
+  "II_Corinthians-5-6-6",
+  "Job-9-4-4"
+ ]
 }
