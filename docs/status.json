@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T17:47:12",
+ "updated": "2026-11-08T18:08:30",
  "agents": {
   "verskiezer": {
    "t": "2026-11-08T14:33:06",
@@ -22,7 +22,7 @@
    "state": "done"
   },
   "controller": {
-   "t": "2026-11-08T00:16:52",
+   "t": "2026-11-08T18:08:26",
    "task": "Controleerde de verbindingen",
    "state": "done"
   },
@@ -51,6 +51,22 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "18:08",
+   "msg": "Statistieken lezen werkt"
+  },
+  {
+   "t": "18:08",
+   "msg": "Verbinding met Facebook-pagina werkt (Bibleversenl)"
+  },
+  {
+   "t": "18:08",
+   "msg": "Token heeft alle rechten, ook voor statistieken"
+  },
+  {
+   "t": "18:08",
+   "msg": "Verbinding met Instagram werkt (@bibleverse_nl)"
+  },
   {
    "t": "17:45",
    "msg": "2026-11-08-2 online op facebook: Spreuken 15:1"
@@ -82,22 +98,6 @@
   {
    "t": "14:33",
    "msg": "2 Korinthe 5:6 vervangen door Psalm 34:3 (Los van de context onduidelijk (uitwonen van den Heere))"
-  },
-  {
-   "t": "12:15",
-   "msg": "2026-11-08-4 online op facebook: Psalm 23:1"
-  },
-  {
-   "t": "12:15",
-   "msg": "2026-11-08-4 online op instagram: Psalm 23:1"
-  },
-  {
-   "t": "12:15",
-   "msg": "2026-11-08-4 ook als story geplaatst"
-  },
-  {
-   "t": "12:15",
-   "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
   }
  ],
  "lampen": [

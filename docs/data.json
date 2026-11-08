@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-08T17:47",
+ "gegenereerd": "2026-11-08T18:08",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1010,27 +1010,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-07T12:34",
-   "soort": "info",
-   "tekst": "Token heeft alle rechten, ook voor statistieken"
-  },
-  {
-   "t": "2026-11-07T12:34",
-   "soort": "fout",
-   "tekst": "Facebook-verbinding mislukt: 400: {\"error\":{\"message\":\"(#100) Object does not exist, cannot be loaded due to missing permission or reviewable feature, or does not support this operation. This endpoint requires the 'pages_read_engagement' permission or the 'Page Public Content Access' feature or the 'Page Public Metadata Access' feature. Refer to https:\\/\\/developers.facebook.com\\/docs\\/apps\\/review\\/login-permissions#manage-pages, | Rechten in token: business_management, instagram_basic, instagram_content_publish, instagram_manage_insights, pages_show_list, public_profile",
-   "opgelost": true
-  },
-  {
-   "t": "2026-11-07T12:34",
-   "soort": "info",
-   "tekst": "Statistieken lezen werkt"
-  },
-  {
-   "t": "2026-11-07T12:41",
-   "soort": "info",
-   "tekst": "Verbinding met Instagram werkt (@bibleverse_nl)"
-  },
-  {
    "t": "2026-11-07T12:41",
    "soort": "info",
    "tekst": "Token heeft alle rechten, ook voor statistieken"
@@ -1311,6 +1290,26 @@
    "t": "2026-11-08T17:45:55",
    "soort": "info",
    "tekst": "2026-11-08-2 online op facebook: Spreuken 15:1"
+  },
+  {
+   "t": "2026-11-08T18:08:26",
+   "soort": "info",
+   "tekst": "Verbinding met Instagram werkt (@bibleverse_nl)"
+  },
+  {
+   "t": "2026-11-08T18:08:26",
+   "soort": "info",
+   "tekst": "Token heeft alle rechten, ook voor statistieken"
+  },
+  {
+   "t": "2026-11-08T18:08:27",
+   "soort": "info",
+   "tekst": "Verbinding met Facebook-pagina werkt (Bibleversenl)"
+  },
+  {
+   "t": "2026-11-08T18:08:29",
+   "soort": "info",
+   "tekst": "Statistieken lezen werkt"
   }
  ],
  "recente_fouten": [],
@@ -1372,20 +1371,20 @@
    "detail": "Spreuken 15:1 geplaatst"
   },
   "instagram_lezen": {
-   "ok": "2026-11-08T12:15",
+   "ok": "2026-11-08T18:08",
    "laatst_ok": true,
    "detail": "1 volgers"
   },
   "sleutel_instagram": {
    "verloopt": "nooit",
    "geldig": true,
-   "ok": "2026-11-08T12:15",
+   "ok": "2026-11-08T18:08",
    "laatst_ok": true
   },
   "sleutel_facebook": {
    "verloopt": "nooit",
    "geldig": true,
-   "ok": "2026-11-08T12:15",
+   "ok": "2026-11-08T18:08",
    "laatst_ok": true
   },
   "materiaal_actions": {
@@ -1398,7 +1397,7 @@
    "ok": "2026-11-08T07:00",
    "laatst_ok": false,
    "detail": "400: {\"error\":{\"message\":\"(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https:\\/\\/",
-   "fout": "2026-11-08T17:00"
+   "fout": "2026-11-08T18:00"
   },
   "facebook": {
    "ok": "2026-11-08T17:45",
@@ -1431,7 +1430,7 @@
   {
    "datum": "2026-11-08",
    "instagram": 1,
-   "ig_posts": 2,
+   "ig_posts": 4,
    "facebook": 0
   }
  ],
