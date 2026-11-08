@@ -96,29 +96,100 @@ textarea.veld{width:100%;font:inherit;font-size:14px;padding:8px 10px;border:1px
 #toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:10px;font-size:14px;max-width:92vw;display:none;z-index:60;box-shadow:0 6px 24px rgba(0,0,0,.2)}
 #toast a{color:inherit}
 @media(max-width:600px){.info-pil{display:none}}
+
+/* ---------- Nieuwe vormgeving (naar de voorbeelden van Joshua) ---------- */
+:root{--bg:#eef1f4;--kaart:#fff;--ink:#17181c;--ink2:#4b5060;--ink3:#8b90a0;--lijn:#eceef2;--accent:#2563eb;--accent-zacht:#e8efff;--goed:#16a36a;--let:#e8a417;--slecht:#e5484d;--zacht:#f6f7f9}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1115;--kaart:#181b21;--ink:#f2f3f5;--ink2:#b8bdc8;--ink3:#7d8391;--lijn:#262a32;--accent:#6c9dff;--accent-zacht:#1d2740;--zacht:#1f232a}}
+body{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink)}
+.app{display:grid;grid-template-columns:232px 1fr;max-width:1400px;margin:18px auto;gap:18px;padding:0 18px;align-items:start}
+.zijbalk{position:sticky;top:18px;background:var(--kaart);border-radius:20px;padding:20px 14px;min-height:calc(100vh - 36px);display:flex;flex-direction:column}
+.merk{display:flex;align-items:center;gap:10px;font-weight:700;font-size:19px;padding:0 8px 22px}
+.merk .logo{width:32px;height:32px;border-radius:10px;background:var(--ink);color:var(--kaart);display:grid;place-items:center;font-size:17px;font-weight:800}
+.tabs{display:flex;flex-direction:column;gap:2px;border:0;margin:0;overflow:visible}
+.tabs button,.navlink{display:flex;align-items:center;gap:11px;font:inherit;font-size:14px;font-weight:500;padding:10px 12px;border:0;border-radius:11px;background:none;color:var(--ink2);cursor:pointer;text-align:left;text-decoration:none;border-bottom:0}
+.tabs button svg,.navlink svg{width:18px;height:18px;flex:0 0 auto}
+.tabs button:hover,.navlink:hover{background:var(--zacht);color:var(--ink)}
+.tabs button.aan{background:var(--zacht);color:var(--ink);font-weight:600;border-bottom:0}
+.tabs .teller{margin-left:auto}
+.navkop{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink3);padding:18px 12px 6px}
+.zijvoet{margin-top:auto;padding:12px;border-top:1px solid var(--lijn)}
+main{max-width:none;margin:0;padding:6px 0 60px;min-width:0}
+.kop{align-items:center;margin-bottom:18px}
+h1{font-size:26px;font-weight:700;letter-spacing:-.01em}
+.pil{border:0;background:var(--kaart);font-weight:500}
+.knop{border-radius:999px;background:var(--ink);padding:9px 16px}
+.kaart{border:0;border-radius:18px;padding:20px 22px;box-shadow:0 1px 2px rgba(16,24,40,.04)}
+h2{font-size:16px;text-transform:none;letter-spacing:0;color:var(--ink);font-weight:650}
+section{margin-top:18px}.grid{gap:18px}
+.tegel .label{display:flex;align-items:center;gap:7px;color:var(--ink2);font-weight:500;font-size:13.5px}
+.tegel .stip{width:8px;height:8px;border-radius:50%;margin:0}
+.tegel .getal{font-size:38px;font-weight:600;letter-spacing:-.02em;margin:10px 0 8px;display:flex;align-items:baseline;flex-wrap:wrap;gap:8px}
+.tegel .staart{color:var(--ink3)}
+.delta{font-size:12px;font-weight:500;padding:3px 8px;border-radius:7px;background:var(--zacht);margin:0;letter-spacing:0}
+.delta.op{color:var(--goed)}.delta.af{color:var(--slecht)}
+.tegel .klein{font-size:12.5px}
+.gzi,.melding,.dag,.blok,.bed .blok{background:var(--zacht);border-color:transparent;border-radius:14px}
+.melding{border-left-width:4px}
+.btn{border-radius:10px;border-color:var(--lijn);background:var(--kaart)}
+.btn.prim{background:var(--ink);border-color:var(--ink);color:var(--kaart)}
+textarea.veld,input.veld,select.veld,select,input{border-radius:12px;background:var(--zacht);border-color:transparent}
+.ai-kop{display:flex}.ai-pil{font-size:12px;font-weight:600;padding:4px 10px;border-radius:8px;background:#f1ebff;color:#6d3fd8}
+.ai-titel{font-size:19px;margin:12px 0 12px}
+.ai-kaarten{display:grid;gap:10px;margin-bottom:12px}
+.ai-kaart{font:inherit;text-align:left;border:0;border-radius:14px;padding:12px 14px;cursor:pointer;display:flex;flex-direction:column;gap:3px;color:var(--ink)}
+.ai-kaart b{font-size:14px}.ai-kaart span{font-size:12.5px;color:var(--ink2)}
+.ai-kaart.blauw{background:#e9f3ff}.ai-kaart.groen{background:#e3f6ee}.ai-kaart.roze{background:#fdebf6}
+@media (prefers-color-scheme:dark){.ai-kaart.blauw{background:#1b2840}.ai-kaart.groen{background:#173027}.ai-kaart.roze{background:#3a1d31}.ai-pil{background:#2a2142;color:#c4a8ff}}
+.ai-kaart:hover{filter:brightness(.97)}
+.top{border-color:var(--lijn)}
+table th{color:var(--ink3);text-transform:uppercase;font-size:11px;letter-spacing:.05em}
+@media(max-width:900px){
+  .app{grid-template-columns:minmax(0,1fr);margin:0;padding:0;gap:0}
+  .app>*{min-width:0}.kop{flex-wrap:wrap;gap:10px}.status{gap:6px}
+  .zijbalk{position:sticky;top:0;z-index:20;min-height:0;border-radius:0;padding:10px 12px;flex-direction:row;align-items:center;gap:8px;box-shadow:0 1px 0 var(--lijn)}
+  .merk{padding:0;font-size:0;gap:0}.merk .logo{font-size:16px}
+  .tabs{flex-direction:row;overflow-x:auto;gap:4px;scrollbar-width:none}
+  .tabs button,.navlink{padding:8px 10px;white-space:nowrap;font-size:13px}
+  .tabs button svg,.navlink svg{display:none}
+  .navkop,.zijvoet{display:none}
+  main{padding:14px 14px 60px}
+  h1{font-size:22px}
+  .tegel .getal{font-size:30px}
+}
 </style>
 </head>
 <body>
+<div class="app">
+<aside class="zijbalk">
+  <div class="merk"><span class="logo">B</span><span>Bibleverse</span></div>
+  <nav class="tabs" id="tabs">
+    <button data-tab="overzicht"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V21h-6v-6H9v6H3z"/></svg><span>Overzicht</span><span class="teller" id="tAandacht"></span></button>
+    <button data-tab="planning"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M8 2.5v4M16 2.5v4M3 9.5h18"/></svg><span>Planning</span></button>
+    <button data-tab="resultaten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><span>Resultaten</span></button>
+    <button data-tab="posts"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>Alle posts</span></button>
+    <button data-tab="beheer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg><span>Beheer</span></button>
+    <div class="navkop">Werkplaats</div>
+    <a class="navlink" href="kantoor.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h1M14 9h1M9 13h1M14 13h1M10 21v-4h4v4"/></svg><span>Pixel-kantoor</span></a>
+  </nav>
+  <div class="zijvoet"><div class="sub">@bibleverse_nl</div><div class="sub" id="bijgewerkt">Laden…</div></div>
+</aside>
 <main>
   <div class="kop">
-    <div><h1 id="titel">Bijbeltekst-systeem</h1><div class="sub" id="bijgewerkt">Laden…</div></div>
-    <div class="status"><a class="pil" href="kantoor.html" style="text-decoration:none;color:var(--ink)">🏢 Kantoor</a><span id="status" style="display:contents"></span></div>
+    <div><h1 id="paginaTitel">Overzicht</h1><div class="sub" id="titel" style="display:none"></div></div>
+    <div class="status"><span id="status" style="display:contents"></span></div>
   </div>
-
-  <nav class="tabs" id="tabs">
-    <button data-tab="overzicht">Overzicht<span class="teller" id="tAandacht"></span></button>
-    <button data-tab="planning">Planning</button>
-    <button data-tab="resultaten">Resultaten</button>
-    <button data-tab="posts">Alle posts</button>
-    <button data-tab="beheer">Beheer</button>
-  </nav>
 
   <div class="tab" data-tab="overzicht">
     <section class="kaart" id="aandacht" style="margin-top:0"></section>
     <div class="grid g4" id="tegels" style="margin-top:14px"></div>
     <section class="grid g2">
       <div class="kaart"><h2>Volgende posts</h2><div id="volgende"></div><a href="#planning" class="sub" onclick="tab('planning');return false">Hele planning bekijken →</a></div>
-      <div class="kaart" id="claudeVak"><h2>Vraag Claude</h2>
+      <div class="kaart" id="claudeVak"><div class="ai-kop"><span class="ai-pil">✦ Claude</span></div><h3 class="ai-titel">Vraag me iets</h3>
+        <div class="ai-kaarten">
+          <button class="ai-kaart blauw" data-vraagclaude="Wat werkt tot nu toe het best, en wat stel je voor om te veranderen?"><b>Wat werkt het best?</b><span>Een korte analyse van de posts en wat ik zou aanpassen.</span></button>
+          <button class="ai-kaart groen" data-vraagclaude="Maak de posts van morgen opnieuw, in een lichtere en frissere stijl."><b>Posts van morgen aanpassen</b><span>Andere stijl, ander vers of andere tijden.</span></button>
+          <button class="ai-kaart roze" data-vraagclaude="Zoek uit waarom er de afgelopen dagen iets mislukte en los het op."><b>Iets mislukt?</b><span>Ik zoek de oorzaak en los het op.</span></button>
+        </div>
         <textarea class="veld" id="vTekst" rows="3" placeholder="Bijvoorbeeld: maak de posts van morgen opnieuw in een lichtere stijl, of: zoek uit waarom Facebook mislukt."></textarea>
         <div class="seg" style="margin-top:8px;align-items:center"><button class="btn prim" id="vStuur">Versturen</button><span class="sub">Claude pakt het op bij de volgende run (14:32 of 20:47).</span></div>
         <div id="verzoeken" style="margin-top:10px"></div>
@@ -191,6 +262,7 @@ textarea.veld{width:100%;font:inherit;font-size:14px;padding:8px 10px;border:1px
     </section>
   </div>
 </main>
+</div>
 <div id="tip"></div>
 <div id="toast"></div>
 <div id="galerij" onclick="if(event.target===this)this.style.display='none'"><button class="sluit" onclick="galerij.style.display='none'">✕</button><div class="galrij"></div><div class="tel"></div></div>
@@ -208,7 +280,7 @@ fetch("data.json?"+Date.now()).then(r=>r.json()).then(d=>{D=d;bouw()}).catch(()=
 function bouw(){
   const c=D.config,s=D.strategie;
   document.getElementById("titel").textContent=(c.kanaalnaam&&c.kanaalnaam!=="NOG INVULLEN"?c.kanaalnaam:"Bijbeltekst-systeem")+" · Dashboard";
-  document.getElementById("bijgewerkt").textContent="Bijgewerkt "+new Date(D.gegenereerd).toLocaleString("nl-NL")+" · strategie v"+s.versie+(s.bijgewerkt?" ("+s.bijgewerkt+")":"");
+  document.getElementById("bijgewerkt").textContent="Bijgewerkt "+new Date(D.gegenereerd).toLocaleString("nl-NL",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"});
   const repo=(D.repo||"");
   document.getElementById("status").innerHTML=
     `<span class="pil ${c.pauze?"slecht":"goed"}">${c.pauze?"⏸ Gepauzeerd":"● Actief"}</span>`+
@@ -284,7 +356,9 @@ document.addEventListener("click",e=>{
   if(v){e.preventDefault();tab("overzicht");const ta=document.getElementById("vTekst");ta.value=v.dataset.vraagclaude;ta.focus();ta.scrollIntoView({behavior:"smooth",block:"center"})}
 });
 // ---------- Tabs ----------
+const TABNAAM={overzicht:"Overzicht",planning:"Planning",resultaten:"Resultaten",posts:"Alle posts",beheer:"Beheer"};
 function tab(n){document.querySelectorAll("#tabs button").forEach(b=>b.classList.toggle("aan",b.dataset.tab===n));
+  const pt=document.getElementById("paginaTitel");if(pt)pt.textContent=TABNAAM[n]||"Overzicht";window.scrollTo(0,0);
   document.querySelectorAll(".tab").forEach(t=>t.classList.toggle("aan",t.dataset.tab===n));if(location.hash!=="#"+n)history.replaceState(null,"","#"+n)}
 document.querySelectorAll("#tabs button").forEach(b=>b.onclick=()=>tab(b.dataset.tab));
 window.addEventListener("hashchange",()=>tab(location.hash.slice(1)||"overzicht"));
@@ -508,7 +582,7 @@ function bouwGezondheid(){
   document.getElementById("herstelLijst").innerHTML=hl.length?`<div class="sub" style="margin-bottom:4px"><b>Zelf opgelost (laatste 7 dagen)</b></div>`+hl.map(h=>`<div class="sub">${h.ok?"✅":"🛟"} ${new Date(h.t).toLocaleString("nl-NL",{weekday:"short",hour:"2-digit",minute:"2-digit"})}: ${h.probleem} → ${h.actie}</div>`).join(""):"";
   if(!RUNS&&D.repo){RUNS=[];fetch(`https://api.github.com/repos/${D.repo}/actions/workflows/publiceren.yml/runs?per_page=10`).then(r=>r.json()).then(j=>{RUNS=j.workflow_runs||[];bouwGezondheid()}).catch(()=>{})}
 }
-function delta(nu,oud){if(!oud&&!nu)return "";if(!oud)return `<span class="delta op">nieuw</span>`;const p=Math.round((nu-oud)/oud*100);return `<span class="delta ${p>=0?"op":"af"}">${p>=0?"+":""}${p}%</span>`}
+function delta(nu,oud){if(!oud&&!nu)return "";if(!oud)return `<span class="delta op">↗ nieuw</span>`;const p=Math.round((nu-oud)/oud*100);return `<span class="delta ${p>=0?"op":"af"}">${p>=0?"↗":"↘"} ${p>=0?"+":""}${p}% t.o.v. vorige week</span>`}
 function bouwTegels(){
   const w=D.weken||{deze:{},vorige:{}},a=w.deze,b=w.vorige,gr=D.groei||[],nu=gr[gr.length-1]||{};
   const wk=gr.find(x=>x.datum>=new Date(Date.now()-7*864e5).toISOString().slice(0,10))||gr[0]||{};
@@ -519,7 +593,8 @@ function bouwTegels(){
     ["Bereik deze week",fmt(a.reach||a.views)+delta(a.reach||a.views,b.reach||b.views),`vorige week ${fmt(b.reach||b.views)}`],
     ["Interacties deze week",fmt(inter(a))+delta(inter(a),inter(b)),`${fmt(a.saves)} opgeslagen · ${fmt(a.shares)} gedeeld · ${fmt(a.comments)} reacties`],
     ["Posts deze week",fmt(a.posts)+delta(a.posts,b.posts),`vorige week ${fmt(b.posts)} · totaal ${fmt(D.posts.filter(x=>x.status==="gepubliceerd").length)}`]];
-  document.getElementById("tegels").innerHTML=tegels.map(([l,g,k])=>`<div class="kaart tegel"><div class="label">${l}</div><div class="getal">${g}</div><div class="klein">${k}</div></div>`).join("");
+  const kl=["#ef6b4b","#e86bc3","#2fb37a","#3b7cf0"];
+  document.getElementById("tegels").innerHTML=tegels.map(([l,g,k],i)=>`<div class="kaart tegel"><div class="label"><span class="stip" style="background:${kl[i]}"></span>${l}</div><div class="getal">${g.replace(/^([\d.]+)(\.\d{3})/,'$1<span class="staart">$2</span>')}</div><div class="klein">${k}</div></div>`).join("");
 }
 function bouwSnelLeren(){
   const s=D.snel_leren,el=document.getElementById("snelLeren");
@@ -533,17 +608,18 @@ function bouwSnelLeren(){
 function bouwGroei(){
   const gr=(D.groei||[]).filter(x=>x.instagram!=null||x.facebook!=null),el=document.getElementById("groei");
   if(!gr.length){el.innerHTML='<div class="leeg">De volgers worden vanaf vannacht elke dag geteld. Vanaf dag twee verschijnt hier een lijn.</div>';return}
-  const W=520,H=170,pl=36,pb=22,reeks=[["instagram","Instagram","#c13584"],["facebook","Facebook","#1877f2"]];
+  const W=520,H=170,pl=36,pb=22,reeks=[["instagram","Instagram","#e86bc3"],["facebook","Facebook","#3b7cf0"]];
   const alle=gr.flatMap(x=>[x.instagram||0,x.facebook||0]),max=Math.max(5,...alle),min=0;
   const X=i=>pl+(gr.length<2?(W-pl)/2:i*(W-pl-8)/(gr.length-1)),Y=v=>H-pb-(v-min)/(max-min)*(H-pb-10);
   let svg=`<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto">`;
   for(let k=0;k<=4;k++){const v=Math.round(min+(max-min)*k/4),y=Y(v);svg+=`<line x1="${pl}" x2="${W}" y1="${y}" y2="${y}" stroke="var(--lijn)"/><text x="${pl-6}" y="${y+4}" font-size="10" text-anchor="end" fill="var(--ink3)">${v}</text>`}
   const stap=Math.max(1,Math.ceil(gr.length/6));gr.forEach((x,i)=>{if(i%stap===0||i===gr.length-1)svg+=`<text x="${X(i)}" y="${H-6}" font-size="10" text-anchor="middle" fill="var(--ink3)">${x.datum.slice(8)}-${x.datum.slice(5,7)}</text>`});
   reeks.forEach(([k,n,kl])=>{const pts=gr.map((x,i)=>x[k]==null?null:[X(i),Y(x[k])]).filter(Boolean);if(!pts.length)return;
-    svg+=`<polyline fill="none" stroke="${kl}" stroke-width="2" points="${pts.map(p=>p.join(",")).join(" ")}"/>`+pts.map(p=>`<circle cx="${p[0]}" cy="${p[1]}" r="2.5" fill="${kl}"/>`).join("")});
+    const d=pts.map((p,i)=>{if(!i)return `M${p[0]},${p[1]}`;const q=pts[i-1],mx=(q[0]+p[0])/2;return `C${mx},${q[1]} ${mx},${p[1]} ${p[0]},${p[1]}`}).join(" ");
+    svg+=`<path d="${d}" fill="none" stroke="${kl}" stroke-width="3" stroke-linecap="round"/>`+pts.slice(-1).map(p=>`<circle cx="${p[0]}" cy="${p[1]}" r="4.5" fill="#fff" stroke="${kl}" stroke-width="2.5"/>`).join("")});
   svg+="</svg>";
   const nu=gr[gr.length-1];
-  el.innerHTML=svg+`<div class="legenda" style="margin-top:6px"><span style="color:#c13584">● Instagram ${fmt(nu.instagram)}</span><span style="color:#1877f2">● Facebook ${fmt(nu.facebook)}</span>${gr.length<2?"<span>Vanaf morgen een lijn</span>":""}</div>`;
+  el.innerHTML=svg+`<div class="legenda" style="margin-top:6px"><span style="color:#e86bc3">● Instagram ${fmt(nu.instagram)}</span><span style="color:#3b7cf0">● Facebook ${fmt(nu.facebook)}</span>${gr.length<2?"<span>Vanaf morgen een lijn</span>":""}</div>`;
 }
 function bouwTop(){
   const el=document.getElementById("topPosts"),pub=D.posts.filter(x=>x.status==="gepubliceerd");
