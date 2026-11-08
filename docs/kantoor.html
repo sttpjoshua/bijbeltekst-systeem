@@ -4,6 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Bibleverse HQ · kantoor</title>
+<script>
+(function(){var t;try{t=localStorage.getItem("bibleverse_thema")}catch(e){}
+  var d=t==="donker"||(t!=="licht"&&window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches);
+  document.documentElement.setAttribute("data-thema",d?"donker":"licht")})();
+</script>
 <style>
 :root{--bg:#1d1630;--panel:#2a2144;--panel2:#352a56;--ink:#f7ecd0;--muted:#b9a9d6;--gold:#f2c14e;--ok:#6bd68c;--err:#ff6b6b;--u:1}
 *{box-sizing:border-box}
@@ -148,6 +153,41 @@ body.tv header h1{font-size:2vw}body.tv aside{font-size:1.05vw}
 .pkaart .s{opacity:.85;font-size:10px}.pkaart.plan{opacity:.8;border:1px dashed rgba(255,255,255,.6)}.pkaart.online{opacity:.6}
 .pdet{margin-top:12px;background:#1d1630;border:1px solid #43376a;border-radius:8px;padding:10px 12px;font-size:13px}
 @media(max-width:700px){.pweek{grid-template-columns:1fr 1fr}}
+
+/* ---------- vormgeving zoals het dashboard (het kantoor zelf blijft pixel-art) ---------- */
+html[data-thema=licht]{--bg:#eef1f4;--panel:#ffffff;--panel2:#f6f7f9;--ink:#17181c;--muted:#6b7080;--gold:#b7791f;--ok:#16a36a;--err:#e5484d;--lijn:#eceef2;--knop:#17181c;--knopink:#ffffff}
+html[data-thema=donker]{--bg:#0f1115;--panel:#181b21;--panel2:#1f232a;--ink:#f2f3f5;--muted:#9aa0ad;--gold:#e8b04a;--ok:#4fca8e;--err:#f07070;--lijn:#262a32;--knop:#f2f3f5;--knopink:#181b21}
+body{background:var(--bg);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.tag,.bub,.bak,.bord,#toast,.cvwrap,.wb{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
+.wrap{max-width:1280px}
+h1{color:var(--ink);font-size:22px;letter-spacing:-.01em}
+.badge{background:var(--panel2);color:var(--muted)}.badge.live{background:#e3f6ee;color:#16a36a}
+html[data-thema=donker] .badge.live{background:#173027;color:#4fca8e}
+.card{background:var(--panel);border:0;border-radius:18px;padding:16px 18px;box-shadow:0 1px 2px rgba(16,24,40,.04)}
+.card h2{font-size:14px;letter-spacing:0;text-transform:none;color:var(--ink);font-weight:650}
+.stat{background:var(--panel2);border-radius:12px}.stat b{color:var(--ink)}.stat span{color:var(--muted);text-transform:none;letter-spacing:0;font-size:11.5px}
+li{border-bottom:1px solid var(--lijn);color:var(--ink)}li time{color:var(--muted)}
+.bar{background:var(--panel2)}.pbar{background:var(--panel2)}
+.cvwrap{border:0;border-radius:18px;box-shadow:0 1px 2px rgba(16,24,40,.06)}
+.tabs button,.seg button,.themes button,.hbtn{font-family:inherit;background:var(--panel);color:var(--muted);border:0;border-radius:10px;padding:7px 12px;font-weight:600}
+.tabs button.on,.seg button.on,.themes button.on,.hbtn.on{background:var(--knop);color:var(--knopink);border:0}
+.naardash{font:inherit;font-size:13px;font-weight:600;background:var(--knop);color:var(--knopink)!important;border-radius:999px;padding:8px 14px;text-decoration:none}
+#clock{color:var(--muted)}
+.vol b{color:var(--ink)}.vol em{color:var(--ok)}
+.lampen span,.hint{color:var(--muted)}
+.ac{background:var(--panel);border:0;border-radius:16px;box-shadow:0 12px 40px rgba(16,24,40,.18);color:var(--ink)}
+.ac .st{background:var(--panel2);color:var(--muted)}.ac .chip{background:var(--panel2);color:var(--ink)}
+.ac .acts button,.ac .bk,.kbtn{background:var(--panel2);color:var(--ink);border:1px solid var(--lijn);border-radius:10px}
+.ac .acts button.sel,.ac .go,.kbtn.goud{background:var(--knop);color:var(--knopink);border-color:var(--knop)}
+.ac select,.ac input[type=date],.ac input[type=time],.ac input[type=password],.gk select{background:var(--panel2);color:var(--ink);border:1px solid var(--lijn);border-radius:10px}
+#kpaneel{background:rgba(15,17,21,.45)}#kpaneel .doos{background:var(--panel);border:0;border-radius:18px;color:var(--ink)}#kpaneel h2{color:var(--ink)}
+.gk{border-top:1px solid var(--lijn)}.vo{border-bottom:1px solid var(--lijn)}
+.pdag{background:var(--panel2);border:1px solid var(--lijn)}.pdag h4{color:var(--ink)}.pdet{background:var(--panel2);border:1px solid var(--lijn)}
+#alarm{background:#fdecec;border:0;border-left:4px solid var(--err);color:#5a1515;border-radius:12px}#alarm b{color:#8a1f1f}
+html[data-thema=donker] #alarm{background:#3a1d22;color:#ffd6d6}html[data-thema=donker] #alarm b{color:#ffb3b3}
+.st.ok{background:#e3f6ee;color:#16a36a}.st.wacht{background:#fff3d6;color:#8a5a00}
+.mbtn{position:absolute;pointer-events:auto;transform:translate(-50%,-100%);font:700 max(9px,calc(var(--u)*5.5px)) ui-monospace,Menlo,monospace;background:#fff8e6;color:#3a2412;border:2px solid #3a2412;border-radius:3px;padding:0 4px;cursor:pointer;white-space:nowrap}
+.mbtn.blauw{background:#e9f3ff;border-color:#2459c9;color:#1b3f8f}.mbtn.groen{background:#e3f6ee;border-color:#16a36a;color:#0f5d3c}
 </style>
 </head>
 <body>
@@ -156,7 +196,7 @@ body.tv header h1{font-size:2vw}body.tv aside{font-size:1.05vw}
     <h1>Bibleverse HQ</h1>
     <span id="mode" class="badge">DEMO</span>
     <nav class="tabs" id="tabs"><button data-tab="kantoor" class="on">Kantoor</button><button data-tab="posts">Posts</button></nav>
-    <button class="hbtn" id="bBel" title="Meldingen bij problemen">🔔</button><button class="hbtn" id="bTv" title="Tv-stand">📺 Tv</button><span id="clock"></span><a href="./" style="color:var(--gold);font-size:12px;text-decoration:none;border:1px solid #4b3b78;padding:3px 8px;border-radius:4px">Dashboard</a>
+    <button class="hbtn" id="bBel" title="Meldingen bij problemen">🔔</button><button class="hbtn" id="bTv" title="Tv-stand">📺 Tv</button><span id="clock"></span><a href="./" class="naardash">← Dashboard</a>
   </header>
   <div id="tab-kantoor">
   <div class="grid">
@@ -233,6 +273,8 @@ function mk(cls){const d=document.createElement('div');d.className=cls;document.
 
 function setDest(a,d){
   if(a.dest===d)return;a.dest=d;a.kuiert=false;a.doel=null;a.volgende=0;
+  if(d==='kast'){a.path=[{x:a.x,y:AISLE[1]},{x:28,y:AISLE[1]},{x:28,y:140}];return}
+  if(d==='brievenbus'){a.path=[{x:LANE-2,y:a.y},{x:LANE-2,y:186},{x:224,y:186}];return}
   if(d==='telefoon'){a.path=[{x:LANE+4,y:a.y},{x:LANE+4,y:104},{x:290,y:104}];return}
   if(d==='overleg'){const s=OVERLEG[a.i];a.path=[{x:LANE+4,y:a.y},{x:LANE+4,y:s.y},s];return}
   if(a.id==='community'){const s=d==='home'?{x:304,y:66}:SLOTS[a.i];a.path=[{x:LANE+4,y:a.y},{x:LANE+4,y:s.y},s];return}
@@ -374,6 +416,10 @@ function drawChar(a,t){
 }
 function drawDesk(a,t){
   const cx=COLX[a.col],y=DESKY[a.row];
+  if(P===THEMES.nacht){ // bureaulamp die 's avonds gloeit
+    g.fillStyle='rgba(255,214,120,.16)';g.beginPath();g.ellipse(cx+12,y+2,14,6,0,0,Math.PI*2);g.fill();
+    R(cx+11,y-6,1,6,'#4a4a58');R(cx+9,y-8,5,2,'#ffd66b');R(cx+10,y-6,3,1,'#fff3c4');
+  }
   R(cx-22,y,44,6,'#d58a38');R(cx-22,y,44,1,'#e8a458');
   R(cx-22,y+6,44,8,'#a85d1c');R(cx-22,y+13,44,1,'#8a4812');
   R(cx-20,y+14,3,3,'#7d4412');R(cx+17,y+14,3,3,'#7d4412');
@@ -381,6 +427,11 @@ function drawDesk(a,t){
   R(cx-21,y-5,11,6,'#2c2c38');R(cx-20,y-4,9,4,sc);
   if(a.state==='working'){for(let l=0;l<3;l++){const w=2+((Math.floor(t/180)+l*2)%5);R(cx-19,y-4+l+ (l?0:0),w,1,'#2b6f86')}}
   R(cx-22,y+1,13,2,'#4a4a58');
+  if(a.id==='video'){ // tweede scherm: tijdlijn van de reel (vers, betekenis, vandaag)
+    R(cx-8,y-8,19,8,'#2c2c38');R(cx-7,y-7,17,6,'#1b1e2a');
+    R(cx-6,y-5,5,2,'#f2c14e');R(cx-1,y-5,5,2,'#5aa6e6');R(cx+4,y-5,5,2,'#4fca8e');
+    const ph=a.state==='working'?(Math.floor(t/90)%15):0;R(cx-6+ph,y-7,1,6,'#ffffff');
+  }
   R(cx+14,y+1,4,4,'#fff');R(cx+18,y+2,1,2,'#fff');R(cx+14,y+1,4,1,'#6b3f1d');
 }
 function drawSofaFront(){
@@ -565,8 +616,13 @@ async function cycle(){
 
 /* ---------- tabs en thema's ---------- */
 const th=document.getElementById('themes');
-th.innerHTML=Object.keys(THEMES).map(k=>`<button data-k="${k}"${k==='dag'?' class="on"':''}>${THEMES[k].n}</button>`).join('');
-th.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;P=THEMES[b.dataset.k];rebuild();[...th.children].forEach(x=>x.classList.toggle('on',x===b))});
+th.innerHTML='<button data-k="auto">Auto</button>'+Object.keys(THEMES).map(k=>`<button data-k="${k}">${THEMES[k].n}</button>`).join('');
+let KTHEMA=(()=>{try{return localStorage.getItem('bv_kthema')||'auto'}catch(e){return 'auto'}})();
+function zetKThema(k){KTHEMA=k;try{localStorage.setItem('bv_kthema',k)}catch(e){}
+  if(k==='auto'){const u=new Date().getHours();P=THEMES[u>=7&&u<19?'dag':'nacht']}else P=THEMES[k];
+  rebuild();[...th.children].forEach(x=>x.classList.toggle('on',x.dataset.k===k))}
+th.addEventListener('click',e=>{const b=e.target.closest('button');if(b)zetKThema(b.dataset.k)});
+zetKThema(KTHEMA);setInterval(()=>{if(KTHEMA==='auto')zetKThema('auto')},60000);
 function showTab(t){
   document.getElementById('tab-kantoor').hidden=t!=='kantoor';
   document.getElementById('tab-posts').hidden=t!=='posts';
@@ -617,8 +673,8 @@ const ROLE={
  video:{wat:'Monteert de video\'s met muziek en de tekst van het vers.',wanneer:'Dagelijks, voor posts in videoformaat'},
  dispatcher:{wat:'Zet elk kwartier de posts online die klaarstaan, op Instagram en Facebook. Een post die meer dan 3 uur te laat is, slaat hij over.',wanneer:'Elk kwartier'},
  analist:{wat:'Haalt elke ochtend de cijfers op (24 uur en 7 dagen na een post) en leert welke stijlen, thema\'s en tijden het best werken.',wanneer:'Elke ochtend'},
- community:{wat:'Leest de reacties op je posts en schrijft per reactie een antwoord. Jij keurt het goed, dan zet ik het eronder.',wanneer:'Reacties elk uur ophalen, antwoorden om 14:32 en 20:47'},
- controller:{wat:'Bewaakt de verbindingen en het token en meldt fouten in het logboek. Verlengt het Instagram-token elke maandag.',wanneer:'Bij elke run, token elke maandag'}
+ community:{wat:'Leest de reacties op je posts en zet per reactie drie antwoordopties klaar. Jij kiest en plaatst ze in het dashboard, onder Reacties.',wanneer:'Reacties elk uur ophalen, antwoorden om 14:32 en 20:47'},
+ controller:{wat:'Bewaakt de verbindingen, lost bekende problemen zelf op (met de gereedschapskist), beheert de noodvoorraad in de kast en haalt jouw vragen uit de brievenbus.',wanneer:'Bij elke run, token elke maandag'}
 };
 const dagMaand=d=>new Date(d).toLocaleDateString('nl-NL',{day:'numeric',month:'long'});
 function cfgLine(){
@@ -914,19 +970,13 @@ function teKeuren(){
     .sort((a,b)=>tijdVan(a)-tijdVan(b));
 }
 function communityBak(){
-  if(!gtok())return '<div class="hint">Vul eerst je GitHub-sleutel in bij een andere medewerker.</div>';
   const g=(DJ&&DJ.gezondheid&&DJ.gezondheid.reacties)||null;
   const open=((DJ&&DJ.reacties)||[]).filter(r=>r.status==='nieuw'||r.status==='voorgesteld');
-  let h='<div class="k">Reacties om te beantwoorden</div>';
-  if(g&&g.laatst_ok===false)h+='<div class="hint" style="color:var(--err);margin-bottom:8px">Ik mag de reacties nog niet lezen. In Meta moet het recht <b>instagram_manage_comments</b> (en voor Facebook <b>pages_read_user_content</b> en <b>pages_manage_engagement</b>) aan de sleutel worden toegevoegd.</div>';
-  if(!open.length)return h+'<div class="hint">Er staan geen reacties open. Ik kijk elk uur of er iets nieuws is.</div>';
-  return h+open.slice(0,8).map(r=>`<div class="rx" style="border-top:1px solid #43376a;padding:8px 0">
-    <div><b>${esc(r.naam)}</b> <span class="hint">op ${esc(r.ref)} · ${esc(r.platform)}</span> <span class="st">${r.status==='nieuw'?'nog geen voorstel':''}</span></div>
-    <div style="margin:4px 0;font-size:13px">“${esc(r.tekst)}”</div>
-    ${r.notitie?`<div class="hint" style="color:var(--gold)">${esc(r.notitie)}</div>`:''}
-    <textarea rows="2" style="width:100%;background:#1d1630;color:var(--ink);border:1px solid #5a4a8c;border-radius:6px;padding:6px;font:inherit;font-size:12px" placeholder="Jouw antwoord…">${esc(r.voorstel||'')}</textarea>
-    <div class="acts" style="margin-top:6px"><button class="go" data-rp="${esc(r.id)}">Plaatsen</button><button data-rn="${esc(r.id)}">Afgehandeld</button></div><div class="kmsg"></div></div>`).join('')
-    +(open.length>8?`<div class="hint">En nog ${open.length-8} meer.</div>`:'');
+  let h='<div class="k">Reacties</div>';
+  if(g&&g.laatst_ok===false)h+='<div class="hint" style="color:var(--err);margin-bottom:8px">Ik mag de reacties nog niet lezen: er ontbreekt een recht in Meta. Zie de melding op het dashboard.</div>';
+  h+=open.length?open.slice(0,4).map(r=>`<div class="vo"><div style="flex:1;min-width:0"><b>${esc(r.naam)}</b> <span class="hint">op ${esc(r.ref)}</span><div>“${esc(r.tekst)}”</div></div></div>`).join('')
+    +(open.length>4?`<div class="hint">En nog ${open.length-4} meer.</div>`:''):'<div class="hint">Er staan geen reacties open. Ik kijk elk uur of er iets nieuws is.</div>';
+  return h+`<a class="go" href="./#inbox" style="display:block;text-align:center;margin-top:10px;text-decoration:none">💬 Beantwoorden in het dashboard</a>`;
 }
 function verskiezerPlan(){
   const {dagen,items}=weekItems();const morgen=dagen[1];
@@ -1076,10 +1126,59 @@ function extraTekenen(t){
   const n=openTeller(),cx=COLX[1]+8,y=DESKY[0]-3;
   R(cx,y,9,3,'#d7c9a3');R(cx,y+2,9,1,'#8a6a3a');if(n){R(cx+1,y-1,7,1,'#fff');if(n>1)R(cx+2,y-2,6,1,'#f4f1e8')}
   bakEl.textContent='📥 '+n;bakEl.classList.toggle('leeg',!n);
+  nieuwTekenen(t,dt);
   // confetti
   CONF=CONF.filter(c=>t-0<1e12&&c.y<H+5&&nu()-c.t<9000);
   CONF.forEach(c=>{c.x+=c.vx*dt;c.y+=c.vy*dt;c.vy+=12*dt;R(c.x,c.y,2,2,c.c)});
 }
+
+
+/* ---- kast (noodvoorraad), brievenbus (Vraag Claude), gereedschap, hartjes ---- */
+let HART=[],vorigeLikes=null;
+function nieuwTekenen(t,dt){
+  // kast met de noodvoorraad: 6 vakjes, elk gevuld vakje is een kant-en-klare noodpost
+  const n=Math.min(6,((DJ&&DJ.nood)||{}).klaar??6);
+  R(2,104,20,38,'#8a5a2b');R(3,105,18,36,'#6b3f1d');R(2,104,20,1,'#a8723a');R(1,142,22,2,'#5a3416');
+  for(let i=0;i<6;i++){const x=4+(i%2)*8,y=107+Math.floor(i/2)*11;R(x,y,7,9,'#4a2c14');
+    if(i<n){R(x+1,y+3,5,6,'#d7a868');R(x+1,y+3,5,1,'#e8c48a');R(x+3,y+3,1,6,'#b8864a')}}
+  // brievenbus voor "Vraag Claude"
+  const vz=(DJ&&DJ.verzoeken)||[],wacht=vz.filter(v=>v.status==='wacht').length;
+  R(214,184,2,12,'#4a2c14');R(209,176,12,9,'#c0392b');R(209,176,12,1,'#e05a4a');R(210,180,10,1,'#7d1f16');
+  if(wacht){R(211,174,8,3,'#ffffff');R(211,174,8,1,'#d9d4c4');R(214,175,2,1,'#c0392b')}
+  // gereedschapskist bij de Controller als hij iets zelf oplost
+  const c=AG.find(x=>x.id==='controller');
+  if(c&&c.state==='working'&&String(c.task).startsWith('🔧')){const bx=Math.round(c.x)+4,by=Math.round(c.y)-6;R(bx,by,6,4,'#d93a3a');R(bx+1,by-1,4,1,'#8a1f1f');R(bx,by+1,6,1,'#a82a2a')}
+  // hartjes die omhoog zweven (nieuwe likes)
+  HART=HART.filter(h=>h.leef>0);HART.forEach(h=>{h.y-=10*dt;h.x+=Math.sin(h.y/4)*.2;h.leef-=dt;
+    const x=Math.round(h.x),y=Math.round(h.y),k=h.leef>.6?'#ff5a8a':'rgba(255,90,138,.5)';
+    R(x,y,2,1,k);R(x+3,y,2,1,k);R(x-1,y+1,7,1,k);R(x,y+2,5,1,k);R(x+1,y+3,3,1,k);R(x+2,y+4,1,1,k)});
+}
+function hartjes(n){const c=AG.find(x=>x.id==='community');for(let i=0;i<Math.min(n,6);i++)setTimeout(()=>HART.push({x:c.x-3+Math.random()*6,y:c.y-22,leef:2.4}),i*350)}
+const mail=document.createElement('button');mail.className='mbtn blauw';mail.style.left=(215/W*100)+'%';mail.style.top=(172/H*100)+'%';
+mail.title='Vraag Claude (opent het dashboard)';mail.onclick=e=>{e.stopPropagation();location.href='./#overzicht'};$('ov').appendChild(mail);
+const kastTag=document.createElement('button');kastTag.className='mbtn';kastTag.style.left=(12/W*100)+'%';kastTag.style.top=(103/H*100)+'%';
+kastTag.title='Noodvoorraad: kant-en-klare posts voor als een dagelijkse run mislukt';kastTag.onclick=e=>{e.stopPropagation();location.href='./#overzicht'};$('ov').appendChild(kastTag);
+const reactieBal=document.createElement('button');reactieBal.className='mbtn groen';reactieBal.title='Nieuwe reacties: beantwoorden in het dashboard';
+reactieBal.onclick=e=>{e.stopPropagation();location.href='./#inbox'};$('ov').appendChild(reactieBal);
+function nieuwBijwerken(){
+  if(!DJ)return;const nu_=Date.now();
+  const vz=DJ.verzoeken||[],wacht=vz.filter(v=>v.status==='wacht').length,bezig=vz.some(v=>v.status==='bezig');
+  const antw=vz.filter(v=>v.status==='klaar'&&nu_-new Date(v.bijgewerkt||v.t)<864e5).length;
+  mail.hidden=!(wacht||antw);mail.textContent=wacht?`✉ ${wacht}`:`✓ ${antw} antwoord`;
+  const nd=DJ.nood||{klaar:6,doel:6};kastTag.textContent=`📦 ${nd.klaar}/${nd.doel}`;kastTag.style.opacity=nd.klaar<2?1:.75;
+  const open=(DJ.reacties||[]).filter(r=>r.status==='nieuw'||r.status==='voorgesteld').length;
+  const cm=AG.find(x=>x.id==='community');reactieBal.hidden=!open;reactieBal.textContent=`💬 ${open} nieuw`;
+  reactieBal.style.left=(cm.x/W*100)+'%';reactieBal.style.top=((cm.y-30)/H*100)+'%';
+  // Controller: verzoek oppakken, of zelf iets oplossen (laatste 20 minuten)
+  const c=AG.find(x=>x.id==='controller');c.naar=null;
+  const h=(DJ.herstel||[]).find(x=>nu_-new Date(x.t)<20*60000);
+  if(bezig){c.naar='brievenbus';c.ov={until:nu_+5000,task:'Werkt aan je verzoek'}}
+  else if(h){c.ov={until:nu_+5000,task:'🔧 '+h.actie};if(/noodpost/.test(h.actie))c.naar='kast'}
+  // hartjes bij nieuwe likes
+  const likes=(DJ.posts||[]).reduce((s,p)=>s+((p.totaal||{}).likes||0),0)+(DJ.reacties||[]).filter(r=>r.geliked).length;
+  if(vorigeLikes!==null&&likes>vorigeLikes)hartjes(likes-vorigeLikes);vorigeLikes=likes;
+}
+setInterval(nieuwBijwerken,2000);
 
 /* ---- 4. dagritme: aftellen naar de volgende taak ---- */
 function volgendeOm(uren){
@@ -1101,6 +1200,7 @@ function klokje(a){
 /* ---- 5. teamoverleg op maandag ---- */
 function isOverleg(){const n=new Date();return n.getDay()===1&&((n.getHours()===11)||(n.getHours()===12&&n.getMinutes()<30))}
 function bestemming(a){
+  if(a.id==='controller'&&a.naar)return a.naar;
   if(a.id==='controller'&&ALARM&&a.state!=='working')return 'telefoon';
   if(a.state==='idle'&&isOverleg())return 'overleg';
   return a.state==='idle'?'lounge':'home';
