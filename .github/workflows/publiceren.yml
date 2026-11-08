@@ -92,6 +92,12 @@ jobs:
             python3 tools/zelftest.py || true
             python3 src/systeem.py dashboard
           fi
+      - name: WhatsApp-updates versturen
+        if: always()
+        env:
+          WA_PHONE: ${{ secrets.WA_PHONE }}
+          WA_KEY: ${{ secrets.WA_KEY }}
+        run: python3 src/whatsapp.py || true
       - name: Wijzigingen opslaan
         id: opslaan
         if: always()

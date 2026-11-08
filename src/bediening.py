@@ -317,6 +317,16 @@ def main(raw):
                 x["status"] = "geannuleerd"
         S.bewaar("data/verzoeken.json", v)
         melding = "Verzoek ingetrokken"
+    elif a == "whatsapp_instelling":
+        w = cfg.setdefault("whatsapp", {})
+        w[o["soort"]] = bool(o["aan"])
+        namen = {"direct": "directe meldingen", "dagelijks": "dagoverzicht", "wekelijks": "weekverslag", "uitschieter": "uitschieters"}
+        melding = f"WhatsApp: {namen.get(o['soort'], o['soort'])} {'aan' if o['aan'] else 'uit'}"
+    elif a == "whatsapp_test":
+        import whatsapp
+        whatsapp.zet_in_wachtrij("👋 Testbericht van Bibleverse. De WhatsApp-koppeling werkt!", "test",
+                                 "test:" + dt.datetime.now().isoformat(timespec="seconds"))
+        melding = "WhatsApp-testbericht klaargezet"
     elif a == "test_materiaal":
         ok = materiaal_er()
         n = len(S.materiaal(cfg)["muziek"]) if ok else 0
@@ -337,7 +347,7 @@ def main(raw):
                  "andere_stijl": "designer", "post_ander_vers": "verskiezer", "fouten_opgelost": "controller", "reactie_plaatsen": "community", "reactie_negeren": "community", "reactie_liken": "community",
                  "fout_opgelost": "controller", "post_opnieuw": "dispatcher", "post_nood": "controller", "nood_inzetten": "controller",
                  "muziek_toevoegen": "video", "statistieken_nu": "analist", "reacties_nu": "community", "zelftest_nu": "controller",
-                 "run": "dispatcher", "verzoek": "controller"}.get(a)
+                 "run": "dispatcher", "verzoek": "controller", "whatsapp_test": "controller", "whatsapp_instelling": "controller"}.get(a)
         if a == "overslaan":
             agent = "video" if (vind(posts, o["post"])["variabelen"].get("formaat") == "video") else "designer"
         if agent:

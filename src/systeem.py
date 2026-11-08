@@ -869,7 +869,8 @@ def dashboard_extra(cfg, posts):
             "herstel": [h for h in laad("data/herstel.json", []) if h["t"] >= (nu - dt.timedelta(days=7)).isoformat()][::-1][:30],
             "nood": {"klaar": len(nood_klaar()), "doel": NOOD_DOEL},
             "verzoeken": laad("data/verzoeken.json", [])[-20:][::-1],
-            "overleg": laad("data/overleg.json", [])[-1:]}
+            "overleg": laad("data/overleg.json", [])[-1:],
+            "whatsapp": {**{"direct": True, "dagelijks": True, "wekelijks": True, "uitschieter": True}, **(cfg.get("whatsapp") or {})}}
 
 def kantoor_extra(cfg, posts):
     """Extra's voor het pixel-kantoor: gezondheidslampjes, volgersbord, post van de week, snel leren."""
@@ -991,6 +992,14 @@ def cmd_log(tekst, soort="info", code=None, post=None):
         regel["post"] = post
     log.append(regel)
     bewaar("data/logboek.json", log[-500:])
+    if soort == "fout" and (code in ("post_mislukt", "post_gemist", "te_weinig", "nood_op", "rechten") or tekst.startswith("ACTIE VOOR JOU")):
+        try:  # direct een WhatsApp-seintje (wordt verstuurd door de volgende GitHub-run)
+            import whatsapp
+            whatsapp.zet_in_wachtrij(("🚨 *Bibleverse: " + ("actie voor jou" if tekst.startswith("ACTIE VOOR JOU") else "probleem") + "*\n")
+                                     + tekst.replace("ACTIE VOOR JOU:", "").strip()[:500]
+                                     + "\nOplossen: https://sttpjoshua.github.io/bijbeltekst-systeem/", "direct")
+        except Exception as e:
+            print("WhatsApp-wachtrij:", e)
 
 def cmd_vers(thema, boek, h, v1, v2=None):
     """Voegt een vers toe vanuit de Statenvertaling-bron, bv: vers hoop "Psalms" 27 14"""
