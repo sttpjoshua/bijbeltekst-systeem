@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-08T10:00",
+ "gegenereerd": "2026-11-08T12:15",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -393,8 +393,8 @@
     "facebook": "https://www.facebook.com/1015160368352770_122133986888879910"
    },
    "totaal": {
-    "views": 2,
-    "reach": 1,
+    "views": 3,
+    "reach": 2,
     "likes": 2,
     "comments": 0,
     "shares": 0,
@@ -402,14 +402,14 @@
    },
    "per_platform": {
     "instagram": {
-     "views": 2,
-     "reach": 1,
+     "views": 3,
+     "reach": 2,
      "likes": 2,
      "comments": 0,
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-08T10:00+01:00"
+     "t": "2026-11-08T12:15+01:00"
     }
    },
    "score": {},
@@ -452,7 +452,7 @@
    },
    "totaal": {
     "views": 7,
-    "reach": 6,
+    "reach": 7,
     "likes": 1,
     "comments": 0,
     "shares": 0,
@@ -461,13 +461,13 @@
    "per_platform": {
     "instagram": {
      "views": 7,
-     "reach": 6,
+     "reach": 7,
      "likes": 1,
      "comments": 0,
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-08T10:00+01:00"
+     "t": "2026-11-08T12:15+01:00"
     }
    },
    "score": {},
@@ -477,16 +477,6 @@
  "leergeschiedenis": [],
  "laatste_rapport": null,
  "logboek": [
-  {
-   "t": "2026-11-06T23:38",
-   "soort": "info",
-   "tekst": "Verbinding met Instagram werkt (@bibleverse_nl)"
-  },
-  {
-   "t": "2026-11-07T00:40",
-   "soort": "info",
-   "tekst": "Eerste post klaargezet: 7 nov 12:15, Kolossenzen 3:15 (video)"
-  },
   {
    "t": "2026-11-07T11:07",
    "soort": "info",
@@ -781,6 +771,16 @@
    "t": "2026-11-08T07:31",
    "soort": "info",
    "tekst": "2026-11-08-1 online op facebook: Jesaja 43:19"
+  },
+  {
+   "t": "2026-11-08T12:15",
+   "soort": "info",
+   "tekst": "Statistieken opgehaald voor 1 posts"
+  },
+  {
+   "t": "2026-11-08T12:15",
+   "soort": "info",
+   "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
   }
  ],
  "recente_fouten": [],
@@ -842,20 +842,20 @@
    "detail": "Jesaja 43:19 geplaatst"
   },
   "instagram_lezen": {
-   "ok": "2026-11-08T00:16",
+   "ok": "2026-11-08T12:15",
    "laatst_ok": true,
-   "detail": "0 volgers"
+   "detail": "1 volgers"
   },
   "sleutel_instagram": {
    "verloopt": "nooit",
    "geldig": true,
-   "ok": "2026-11-08T00:16",
+   "ok": "2026-11-08T12:15",
    "laatst_ok": true
   },
   "sleutel_facebook": {
    "verloopt": "nooit",
    "geldig": true,
-   "ok": "2026-11-08T00:16",
+   "ok": "2026-11-08T12:15",
    "laatst_ok": true
   },
   "materiaal_actions": {
@@ -868,12 +868,17 @@
    "ok": "2026-11-08T07:00",
    "laatst_ok": false,
    "detail": "400: {\"error\":{\"message\":\"(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https:\\/\\/",
-   "fout": "2026-11-08T10:00"
+   "fout": "2026-11-08T12:15"
   },
   "facebook": {
    "ok": "2026-11-08T07:31",
    "laatst_ok": true,
    "detail": "Jesaja 43:19 geplaatst"
+  },
+  "statistieken": {
+   "ok": "2026-11-08T12:15",
+   "laatst_ok": true,
+   "detail": "1 nieuwe metingen"
   }
  },
  "groei": [
@@ -885,16 +890,16 @@
   },
   {
    "datum": "2026-11-08",
-   "instagram": 0,
-   "ig_posts": 1,
+   "instagram": 1,
+   "ig_posts": 2,
    "facebook": 0
   }
  ],
  "weken": {
   "deze": {
    "posts": 2,
-   "reach": 7,
-   "views": 9,
+   "reach": 9,
+   "views": 10,
    "likes": 3,
    "comments": 0,
    "saves": 0,

@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T10:00:48",
+ "updated": "2026-11-08T12:15:11",
  "agents": {
   "verskiezer": {
    "t": "2026-11-07T22:23:58",
@@ -27,21 +27,21 @@
    "state": "done"
   },
   "analist": {
-   "t": "2026-11-07T15:19:54",
-   "task": "Snel leren aangezet tot 2026-11-14: 5 posts per dag, elke dag leren",
+   "t": "2026-11-08T12:15:04",
+   "task": "Las cijfers van 1 posts",
    "state": "done"
   }
  },
  "stats": {
   "posts_today": 1,
   "posts_total": 2,
-  "reach_7d": 0,
+  "reach_7d": 7,
   "best_time": "nog onbekend",
   "next_post": "2026-11-08T12:15:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
-  "instagram": 0,
+  "instagram": 7,
   "facebook": 0,
   "youtube": 0,
   "tiktok": 0
@@ -51,6 +51,14 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "12:15",
+   "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
+  },
+  {
+   "t": "12:15",
+   "msg": "Statistieken opgehaald voor 1 posts"
+  },
   {
    "t": "07:31",
    "msg": "2026-11-08-1 online op facebook: Jesaja 43:19"
@@ -90,14 +98,6 @@
   {
    "t": "00:18",
    "msg": "Bediening: Johannes 14:27 krijgt stijl hemelsblauw; wordt bij de avondcontrole (20:47) opnieuw gemaakt"
-  },
-  {
-   "t": "00:17",
-   "msg": "Bediening: Jesaja 43:19 goedgekeurd"
-  },
-  {
-   "t": "00:16",
-   "msg": "Statistieken lezen werkt"
   }
  ],
  "lampen": [
@@ -123,8 +123,8 @@
   },
   {
    "naam": "Statistieken",
-   "kleur": "grijs",
-   "tekst": "nog niet gemeld"
+   "kleur": "groen",
+   "tekst": "ok"
   },
   {
    "naam": "Sleutel IG",
@@ -138,19 +138,19 @@
   }
  ],
  "volgers": {
-  "ig": 0,
+  "ig": 1,
   "fb": 0,
-  "totaal": 0,
-  "week": 0,
+  "totaal": 1,
+  "week": 1,
   "reeks": [
    0,
-   0
+   1
   ]
  },
  "top_post": {
   "ref": "Kolossenzen 3:15",
   "thumb": "thumbs/2026-11-07-1.jpg",
-  "bereik": 6,
+  "bereik": 7,
   "score": null,
   "formaat": "video"
  },

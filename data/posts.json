@@ -43,15 +43,25 @@
   "stats": {
    "instagram": {
     "laatst": {
-     "t": "2026-11-08T10:00+01:00",
+     "t": "2026-11-08T12:15+01:00",
      "views": 7,
-     "reach": 6,
+     "reach": 7,
      "likes": 1,
      "comments": 0,
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "avg_watch_ms": 4264
+     "avg_watch_ms": 4017
+    },
+    "24u": {
+     "views": 7,
+     "reach": 7,
+     "likes": 1,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "avg_watch_ms": 4017
     }
    }
   },
@@ -116,9 +126,9 @@
   "stats": {
    "instagram": {
     "laatst": {
-     "t": "2026-11-08T10:00+01:00",
-     "views": 2,
-     "reach": 1,
+     "t": "2026-11-08T12:15+01:00",
+     "views": 3,
+     "reach": 2,
      "likes": 2,
      "comments": 0,
      "shares": 0,
