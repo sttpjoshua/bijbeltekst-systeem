@@ -160,7 +160,9 @@ table th{color:var(--ink3);text-transform:uppercase;font-size:11px;letter-spacin
   .app>*{min-width:0}.kop{flex-wrap:wrap;gap:10px}.status{gap:6px}
   .zijbalk{position:sticky;top:0;z-index:20;min-height:0;border-radius:0;padding:10px 12px;flex-direction:row;align-items:center;gap:8px;box-shadow:0 1px 0 var(--lijn)}
   .merk{padding:0;font-size:0;gap:0}.merk .logo{font-size:16px}
-  .tabs{flex-direction:row;overflow-x:auto;gap:4px;scrollbar-width:none}
+  .zijbalk{flex-wrap:wrap}
+  .tabs{flex-direction:row;flex-wrap:wrap;gap:4px;overflow:visible}
+  .navlink{background:var(--ink);color:var(--kaart)!important}
   .tabs button,.navlink{padding:8px 10px;white-space:nowrap;font-size:13px}
   .tabs button svg,.navlink svg{display:none}
   .navkop,.zijvoet{display:none}
@@ -196,7 +198,7 @@ html[data-thema=donker] .platform.instagram{background:#3a1d31;color:#f39ad0}htm
     <button data-tab="posts"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>Alle posts</span></button>
     <button data-tab="beheer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg><span>Beheer</span></button>
     <div class="navkop">Werkplaats</div>
-    <a class="navlink" href="kantoor.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h1M14 9h1M9 13h1M14 13h1M10 21v-4h4v4"/></svg><span>Pixel-kantoor</span></a>
+    <a class="navlink" href="kantoor.html" title="Naar het pixel-kantoor"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h1M14 9h1M9 13h1M14 13h1M10 21v-4h4v4"/></svg><span>Pixel-kantoor</span></a>
   </nav>
   <div class="zijvoet"><div class="sub">@bibleverse_nl</div><div class="sub" id="bijgewerkt">Laden…</div>
     <div class="thema"><button data-thema="licht" onclick="zetThema('licht')">☀️ Licht</button><button data-thema="donker" onclick="zetThema('donker')">🌙 Donker</button><button data-thema="auto" onclick="zetThema('auto')">Auto</button></div></div>
