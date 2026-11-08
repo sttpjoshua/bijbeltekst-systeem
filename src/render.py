@@ -60,7 +60,26 @@ def _font(naam, grootte, gewicht=None):
         if gewicht or var: f.set_variation_by_name(gewicht or var)
     except Exception:
         pass
+    f._bv = (naam, gewicht or var)
     return f
+
+_GEWICHTEN = [b"Thin", b"ExtraLight", b"Light", b"Regular", b"Medium", b"SemiBold", b"Bold", b"ExtraBold", b"Black"]
+
+def _vet(f):
+    """Een dikkere versie van hetzelfde lettertype (twee stappen zwaarder). Geeft (font, extra_dikte) terug."""
+    naam, g = getattr(f, "_bv", (None, None))
+    if not naam or not g:
+        return f, max(1, round(f.size * 0.025))  # geen gewichten (DM Serif): iets dikker met een rand
+    cursief = g.endswith(b"Italic")
+    basis = g.replace(b" Italic", b"").replace(b"Italic", b"Regular") or b"Regular"
+    v = ImageFont.truetype(os.path.join(FONTS, LETTERTYPES[naam][0]), f.size)
+    namen = v.get_variation_names()
+    i = _GEWICHTEN.index(basis) if basis in _GEWICHTEN else 3
+    for j in range(min(i + 2, len(_GEWICHTEN) - 1), i, -1):
+        kand = _GEWICHTEN[j] + (b" Italic" if cursief else b"")
+        if kand in namen:
+            v.set_variation_by_name(kand); return v, 0
+    return f, max(1, round(f.size * 0.025))
 
 def _klein_font(grootte, gewicht=b"Medium"):
     f = ImageFont.truetype(os.path.join(FONTS, "Montserrat.ttf"), grootte)
@@ -187,11 +206,21 @@ def kernwoord(post):
     return max(kand, key=len) if kand else None
 
 def _kernstaat(post, kleur, accent):
-    """Hoe het kernwoord opvalt: in de accentkleur, of als label als de accentkleur te veel op de tekst lijkt."""
-    st = {"kern": kernwoord(post)}
+    """Hoe het kernwoord opvalt: dikker, en in de accentkleur. Lijkt de accentkleur te veel op de tekstkleur,
+    dan een diepe tint van de achtergrond (of warm goud op een foto). Nooit een vakje of balk eromheen."""
+    st = {"kern": kernwoord(post), "kleur": accent}
     if sum(abs(x - y) for x, y in zip(kleur[:3], accent[:3])) < 120:
-        pal = PALETTEN[post["variabelen"]["palet"]]
-        st["label"] = _hex(pal[1]) + (255,) if post["variabelen"].get("achtergrondbron") != "beeld" else (40, 34, 30, 255)
+        if post["variabelen"].get("achtergrondbron") == "beeld":
+            st["kleur"] = (255, 214, 140, 255)
+        else:
+            lum = lambda c: (0.299 * c[0] + 0.587 * c[1] + 0.114 * c[2]) / 255
+            bg = _hex(PALETTEN[post["variabelen"]["palet"]][1])
+            if lum(kleur) < 0.5:  # donkere tekst: de accentkleur krachtiger maken (verder van de tekstkleur af)
+                st["kleur"] = tuple(max(0, min(255, int(a + (a - t) * 1.6))) for a, t in zip(accent[:3], kleur[:3])) + (255,)
+            elif lum(bg) > 0.3:  # lichte tekst op een kleurige achtergrond: een diepe tint van die achtergrond
+                st["kleur"] = tuple(int(c * 0.42) for c in bg) + (255,)
+            else:  # lichte tekst op een donkere achtergrond: warm goud
+                st["kleur"] = (255, 210, 130, 255)
     return st
 
 def _regel(d, x, y, r, f, kleur, accent, staat, links):
@@ -206,16 +235,15 @@ def _regel(d, x, y, r, f, kleur, accent, staat, links):
                 m = re.match(r"^(\W*)(.*?)(\W*)$", t)
                 voor = " ".join(ws[:i]) + (" " if i else "") + m.group(1)
                 na = m.group(3) + (" " if i < len(ws) - 1 else "") + " ".join(ws[i + 1:])
+                fv, rand = _vet(f)
+                bw = d.textlength(m.group(2), font=fv) + 2 * rand
+                w = d.textlength(voor, font=f) + bw + d.textlength(na, font=f)
+                x0 = x if links else x - w / 2
                 d.text((x0, y), voor, font=f, fill=kleur, anchor="la")
                 x1 = x0 + d.textlength(voor, font=f)
-                if staat.get("label"):  # accent lijkt te veel op de tekstkleur: woord als label (lichte balk, woord in de achtergrondkleur)
-                    l, t, rr, bb = f.getbbox(m.group(2), anchor="la")
-                    pad = f.size * 0.07
-                    d.rounded_rectangle([x1 + l - pad, y + t - pad * 1.3, x1 + rr + pad, y + bb + pad * 1.3], radius=int(f.size * 0.14), fill=kleur)
-                    d.text((x1, y), m.group(2), font=f, fill=staat["label"], anchor="la")
-                else:
-                    d.text((x1, y), m.group(2), font=f, fill=accent, anchor="la")
-                d.text((x1 + d.textlength(m.group(2), font=f), y), na, font=f, fill=kleur, anchor="la")
+                kk = staat.get("kleur", accent)
+                d.text((x1 + rand, y), m.group(2), font=fv, fill=kk, anchor="la", stroke_width=rand, stroke_fill=kk)
+                d.text((x1 + bw, y), na, font=f, fill=kleur, anchor="la")
                 staat["klaar"] = True
                 return w
     d.text((x0, y), r, font=f, fill=kleur, anchor="la")

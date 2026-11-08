@@ -102,6 +102,9 @@ Joshua kan in het kantoor (📥 Goedkeuren) posts goedkeuren, een andere stijl k
 ## Formaat
 Joshua wil geen losse afbeeldingen meer: een beeldpost is altijd een carrousel (vers, "Wat betekent dit?", "Vandaag"), dus altijd met `betekenis` en `toepassing`. Het systeem test alleen nog carrousel tegen video.
 
+## Kernwoord: dikker en in kleur, nooit een vakje (vaste regel)
+Het kernwoord wordt uitgelicht door het dikker te zetten in een opvallende kleur (zie `_kernstaat` en `_regel` in src/render.py). Nooit een vakje, balk of label eromheen: dat vindt Joshua niet mooi.
+
 ## Carrousels: doorlopende achtergrond (vaste regel)
 Elke carrousel heeft één doorlopende achtergrond over de drie slides (render.py `_panorama`). Met een foto: slide 1 scherp, daarna zacht vervagend en rustiger. Verander dit nooit naar losse achtergronden per slide.
 
