@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-08T18:22",
+ "gegenereerd": "2026-11-08T18:26",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1010,27 +1010,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-07T12:41",
-   "soort": "info",
-   "tekst": "Statistieken lezen werkt"
-  },
-  {
-   "t": "2026-11-07T12:42",
-   "soort": "info",
-   "tekst": "Facebook-pagina aangezet: posts gaan voortaan naar Instagram en Facebook"
-  },
-  {
-   "t": "2026-11-07T14:34",
-   "soort": "fout",
-   "tekst": "Privé repo bibleverse-materiaal kon niet gecloned worden (geen toegang in deze sessie); post van 8 nov gebruikt kleurverloop, geen effect want carrousel",
-   "opgelost": true
-  },
-  {
-   "t": "2026-11-07T14:34",
-   "soort": "info",
-   "tekst": "1 post klaargezet voor 8 nov 07:30 (Jesaja 43:19, carrousel)"
-  },
-  {
    "t": "2026-11-07T14:55",
    "soort": "info",
    "tekst": "Verbinding met Instagram werkt (@bibleverse_nl)"
@@ -1310,7 +1289,8 @@
    "t": "2026-11-08T18:19:03",
    "soort": "fout",
    "tekst": "ACTIE VOOR JOU: liken van reacties op instagram lukt nog niet. Voeg het recht instagram_manage_engagement toe aan de app en maak het token opnieuw aan (zelfde stappen als bij de reactierechten). Melding van Meta: 400: {\"error\":{\"message\":\"Unsupported post request. Object with ID '18400547434202863' does not exist, cannot be loaded due to missing permissions, or",
-   "code": "rechten"
+   "code": "rechten",
+   "opgelost": true
   },
   {
    "t": "2026-11-08T18:19:03",
@@ -1326,16 +1306,14 @@
    "t": "2026-11-08T18:22:09",
    "soort": "info",
    "tekst": "Bediening: Antwoord geplaatst bij shaquana_brandsma (Spreuken 15:1)"
-  }
- ],
- "recente_fouten": [
+  },
   {
-   "t": "2026-11-08T18:19:03",
-   "soort": "fout",
-   "tekst": "ACTIE VOOR JOU: liken van reacties op instagram lukt nog niet. Voeg het recht instagram_manage_engagement toe aan de app en maak het token opnieuw aan (zelfde stappen als bij de reactierechten). Melding van Meta: 400: {\"error\":{\"message\":\"Unsupported post request. Object with ID '18400547434202863' does not exist, cannot be loaded due to missing permissions, or",
-   "code": "rechten"
+   "t": "2026-11-08T18:26:07",
+   "soort": "info",
+   "tekst": "Bediening: Fout als opgelost gemarkeerd"
   }
  ],
+ "recente_fouten": [],
  "versen_totaal": 300,
  "reacties": [
   {
