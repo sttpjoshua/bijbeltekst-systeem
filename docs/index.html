@@ -51,7 +51,7 @@ input[type=range]{width:100%}input.veld,select.veld{font:inherit;font-size:13px;
 .wacht .info{flex:1;min-width:180px}.wacht .acties{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
 #bedMelding{font-size:13px;margin-top:10px;min-height:18px}
 #galerij{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;z-index:50;align-items:center;justify-content:center;flex-direction:column;padding:20px}
-#galerij .rij{display:flex;gap:12px;overflow-x:auto;max-width:100%;scroll-snap-type:x mandatory;padding-bottom:8px}
+#galerij .galrij{display:flex;gap:12px;overflow-x:auto;max-width:100%;scroll-snap-type:x mandatory;padding-bottom:8px}
 #galerij img,#galerij video{max-height:78vh;max-width:86vw;border-radius:8px;scroll-snap-align:center;flex:0 0 auto}
 #galerij .sluit{position:absolute;top:14px;right:18px;color:#fff;font-size:28px;cursor:pointer;background:none;border:0}
 #galerij .tel{color:#fff;font-size:13px;margin-top:8px;opacity:.8}
@@ -193,7 +193,7 @@ textarea.veld{width:100%;font:inherit;font-size:14px;padding:8px 10px;border:1px
 </main>
 <div id="tip"></div>
 <div id="toast"></div>
-<div id="galerij" onclick="if(event.target===this)this.style.display='none'"><button class="sluit" onclick="galerij.style.display='none'">✕</button><div class="rij"></div><div class="tel"></div></div>
+<div id="galerij" onclick="if(event.target===this)this.style.display='none'"><button class="sluit" onclick="galerij.style.display='none'">✕</button><div class="galrij"></div><div class="tel"></div></div>
 <script>
 const NAMEN={huisstijl:"Huisstijl",thema:"Thema",hook_stijl:"Hook-stijl",formaat:"Formaat",uitleg_op_beeld:"Uitleg op beeld",achtergrondbron:"Achtergrond",boekgroep:"Bijbelboek",lengte:"Lengte vers",bron:"Bekend of ontdekking",vraag_onderaan:"Vraag onderaan",opening:"Eerste slide",tijdslot:"Tijdstip"};
 const STATUS={wacht_op_tekst:"Wacht op tekst",gerenderd:"Klaar, gaat online",afgekeurd:"Overgeslagen door jou",overgeslagen:"Overgeslagen",gepubliceerd:"Gepubliceerd",fout:"Fout"};
@@ -420,7 +420,7 @@ function mediaVan(x){if(x.media_urls&&x.media_urls.length)return x.media_urls;re
 function toonGalerij(id){
   const x=D.posts.find(p=>p.id===id);if(!x)return;const m=mediaVan(x);if(!m.length)return;
   const g=document.getElementById("galerij");
-  g.querySelector(".rij").innerHTML=m.map(u=>u.endsWith(".mp4")?`<video src="${u}" controls autoplay playsinline></video>`:`<img src="${u}" onerror="this.remove()">`).join("");
+  g.querySelector(".galrij").innerHTML=m.map(u=>u.endsWith(".mp4")?`<video src="${u}" controls autoplay playsinline></video>`:`<img src="${u}" onerror="this.remove()">`).join("");
   g.querySelector(".tel").textContent=x.ref+(m.length>1?" · "+m.length+" slides, swipe of scroll opzij":"");
   g.style.display="flex";
 }
@@ -460,7 +460,7 @@ function bouwPlanning(){
 function toonPlan(id){
   const x=window._plan[id];if(!x)return;const v=x.variabelen;
   const g=document.getElementById("galerij");
-  g.querySelector(".rij").innerHTML=`<div style="background:var(--kaart);color:var(--ink);border-radius:12px;padding:22px 24px;max-width:520px">
+  g.querySelector(".galrij").innerHTML=`<div style="background:var(--kaart);color:var(--ink);border-radius:12px;padding:22px 24px;max-width:520px">
     <div class="sub">Voorlopig plan · ${x.datum} om ${v.tijdslot}</div><h3 style="margin:6px 0 10px;font-size:20px">${x.ref}</h3>
     <p style="font-size:16px;line-height:1.5;margin:0 0 14px">${x.tekst}</p>
     <span class="tag">${v.formaat}</span><span class="tag">${v.thema.replace("_"," ")}</span><span class="tag">stijl: ${v.huisstijl}</span><span class="tag">achtergrond: ${v.achtergrondbron==="beeld"?"foto":"kleurverloop"}</span><span class="tag">hook: ${v.hook_stijl}</span>
