@@ -1,0 +1,36 @@
+name: Website bijwerken
+
+# Bouwt de website (dashboard, kantoor, data) uit main/docs plus de beelden uit de branch 'media'.
+on:
+  push:
+    branches: [main]      # wijzigingen van Claude; GitHub Actions roept dit zelf aan na elke run met wijzigingen
+  workflow_dispatch:
+  workflow_call:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/checkout@v4
+        with:
+          ref: media
+          path: docs/media
+      - run: rm -rf docs/media/.git
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+      - uses: actions/deploy-pages@v4

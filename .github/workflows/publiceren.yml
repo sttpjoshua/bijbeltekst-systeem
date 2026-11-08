@@ -27,6 +27,8 @@ jobs:
   run:
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    outputs:
+      gewijzigd: ${{ steps.opslaan.outputs.gewijzigd }}
     env:
       TZ: Europe/Amsterdam  # alle tijden in logboek en bediening in Nederlandse tijd
     steps:
@@ -34,6 +36,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Beelden en video's koppelen (branch media)
+        run: python3 tools/media.py koppel
       - name: Taak bepalen
         id: t
         run: |
@@ -83,21 +87,35 @@ jobs:
           fi
           # elke maandag bij de tokencontrole: zelftest van beelden en video's
           if [ "${{ steps.t.outputs.taak }}" = "token" ]; then
+            python3 tools/media.py samenpersen || true   # oude versies van beelden uit de geschiedenis
             sudo apt-get install -y -qq ffmpeg >/dev/null 2>&1 || true
             python3 tools/zelftest.py || true
             python3 src/systeem.py dashboard
           fi
       - name: Wijzigingen opslaan
+        id: opslaan
         if: always()
         run: |
           git config user.name "bijbeltekst-bot"
           git config user.email "actions@users.noreply.github.com"
           sh tools/git_instellen.sh
+          if python3 tools/media.py bewaar "Media: ${{ steps.t.outputs.taak }}" | grep -q gepusht; then echo "gewijzigd=1" >> $GITHUB_OUTPUT; fi
           git add -A
           if git diff --cached --quiet; then exit 0; fi
+          echo "gewijzigd=1" >> $GITHUB_OUTPUT
           git commit -m "Automatisch: ${{ steps.t.outputs.taak }}"
           for i in 1 2 3 4; do
             if git pull --rebase origin main; then git push && break
             else git rebase --abort 2>/dev/null; git pull --rebase -X theirs origin main && git push && break; fi
             sleep 5
           done
+
+  website:
+    # na elke run met wijzigingen: dashboard, kantoor en beelden opnieuw online zetten
+    needs: run
+    if: always() && needs.run.outputs.gewijzigd == '1'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/pages.yml

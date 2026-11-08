@@ -2,3 +2,4 @@ test/
 __pycache__/
 *.tmp
 stats_tmp.json
+docs/media/
