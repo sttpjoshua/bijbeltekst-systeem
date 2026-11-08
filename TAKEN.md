@@ -33,12 +33,12 @@ Vul in `data/posts.json` deze velden in:
 Schrijf in het Nederlands, warm en eenvoudig, nooit prekerig. Elke hook anders dan die van de afgelopen 14 dagen (kijk in `data/posts.json`).
 
 ## Dagelijkse run
-Het online zetten zelf doet GitHub Actions (`.github/workflows/publiceren.yml`, elk kwartier) en het ophalen van statistieken ook (dagelijks). Deze run maakt alleen de posts van morgen klaar.
+Het online zetten zelf doet GitHub Actions (`.github/workflows/publiceren.yml`, elk kwartier) en het ophalen van statistieken ook (dagelijks). Deze run maakt de posts van MORGEN én OVERMORGEN klaar (twee dagen buffer: als een run een keer mislukt, staat er toch genoeg klaar). Voor MORGEN zijn de meeste posts meestal al gemaakt; vul alleen aan wat ontbreekt.
 1. `git pull --rebase`. Lees `config.json`. Pauze? Zie regels.
    Clone ook de privé repo `sttpjoshua/bibleverse-materiaal` (add_repo, alleen lezen) naast deze repo, dus als map `../bibleverse-materiaal`. Daar staan Joshua's muziek (Epidemic Sound) en foto's. Zet die bestanden NOOIT in deze openbare repo; alleen de afgewerkte post mag hier komen. Ontbreekt de map, dan gebruikt het systeem automatisch kleurverloop en geen muziek, en logt het een fout.
-2. Bereken MORGEN (Europe/Amsterdam). `python3 src/systeem.py kies --datum MORGEN`.
+2. Bereken MORGEN en OVERMORGEN (Europe/Amsterdam). Doe stap 2 t/m 5 voor elk van beide dagen: `python3 src/systeem.py kies --datum DATUM` (vult alleen ontbrekende posts aan).
 3. Schrijf de teksten (zie hierboven) in `data/posts.json`.
-4. `python3 src/systeem.py render --datum MORGEN`. Bekijk minstens één gemaakt beeld met Read (bij video: haal een frame op 4 s met ffmpeg). Klopt er iets niet (tekst afgesneden, onleesbaar), zet de status van die post op "afgekeurd" en log het.
+4. `python3 src/systeem.py render --datum DATUM`. Bekijk minstens één gemaakt beeld met Read (bij video: haal een frame op 4 s met ffmpeg). Klopt er iets niet (tekst afgesneden, onleesbaar), zet de status van die post op "afgekeurd" en log het.
 5. Kijk in `data/logboek.json` naar fouten van de afgelopen 24 uur (van GitHub Actions). Noem ze in je eindbericht.
 6. `python3 src/systeem.py dashboard`, log een regel als "1 post klaargezet voor MORGEN 20:30", dan `git add -A && git commit -m "Posts MORGEN" && git pull --rebase && git push`.
 
@@ -63,13 +63,13 @@ Staat `leermodus` op true in config.json, dan maak je elke dag `posts_per_dag` (
 `data/planning.json` is het voorlopige plan voor 7 dagen dat op het dashboard staat. `kies` volgt dat plan automatisch voor de gekozen datum (vers, formaat, stijl, tijd), zodat wat Joshua ziet ook gebeurt. Maak na elke wijziging de planning opnieuw: `python3 src/systeem.py plan` (kies doet dat zelf al).
 
 ## Avondcontrole (elke avond rond 21:00)
-Doel: zorgen dat er voor MORGEN precies zoveel posts klaarstaan als `posts_per_dag` in config.json (bijvoorbeeld omdat Joshua na de dagelijkse run iets via Bediening heeft veranderd).
+Doel: zorgen dat er voor MORGEN en OVERMORGEN precies zoveel posts klaarstaan als `posts_per_dag` in config.json (bijvoorbeeld omdat Joshua na de dagelijkse run iets via Bediening heeft veranderd).
 1. Staat `pauze` op true: stop meteen, doe niets.
-2. Staan er posts (van morgen of vandaag) met status "opnieuw_maken" of "wacht_op_tekst": maak die af (teksten schrijven waar nodig) en render ze met `python3 src/systeem.py render --datum DATUM`. Tel daarna de posts van morgen in `data/posts.json` met status "gerenderd" of "wacht_op_tekst". Is dat aantal gelijk aan of hoger dan `posts_per_dag`, en heeft geen enkele post status "wacht_op_tekst": meld alleen de gezondheid (zie "Gezondheid melden"), commit en push, en stop.
-3. Anders: `python3 src/systeem.py kies --datum MORGEN` (vult alleen de ontbrekende posts aan en volgt de planning), schrijf de teksten volgens "Teksten schrijven", en render met `python3 src/systeem.py render --datum MORGEN`. Bekijk minstens één beeld. Log wat je deed met `python3 src/systeem.py log "Avondcontrole: ..."`, draai `python3 src/systeem.py dashboard`, commit en push.
+2. Staan er posts (van morgen of vandaag) met status "opnieuw_maken" of "wacht_op_tekst": maak die af (teksten schrijven waar nodig) en render ze met `python3 src/systeem.py render --datum DATUM`. Tel daarna voor MORGEN en voor OVERMORGEN de posts in `data/posts.json` met status "gerenderd" of "wacht_op_tekst". Is dat aantal gelijk aan of hoger dan `posts_per_dag`, en heeft geen enkele post status "wacht_op_tekst": meld alleen de gezondheid (zie "Gezondheid melden"), commit en push, en stop.
+3. Anders, per dag waar iets ontbreekt: `python3 src/systeem.py kies --datum DATUM` (vult alleen de ontbrekende posts aan en volgt de planning), schrijf de teksten volgens "Teksten schrijven", en render met `python3 src/systeem.py render --datum DATUM`. Bekijk minstens één beeld. Log wat je deed met `python3 src/systeem.py log "Avondcontrole: ..."`, draai `python3 src/systeem.py dashboard`, commit en push.
 
 ## Gezondheid melden (voor de balk bovenaan het dashboard)
-- Dagelijkse run: draai aan het eind `python3 src/systeem.py gezond dagelijks "N posts voor MORGEN klaargezet"` en daarna `python3 src/systeem.py dashboard`, vóór de commit.
+- Dagelijkse run: draai aan het eind `python3 src/systeem.py gezond dagelijks "N posts voor MORGEN en OVERMORGEN klaargezet"` en daarna `python3 src/systeem.py dashboard`, vóór de commit.
 - Avondcontrole: draai ALTIJD `python3 src/systeem.py gezond avondcontrole "alles klopte"` (of "N posts aangevuld") en `python3 src/systeem.py dashboard`, en commit en push dat, ook als er niets aangevuld hoefde te worden. Dat is één kleine commit per avond.
 - Wekelijkse run: `python3 src/systeem.py gezond wekelijks "analyse gedaan"`.
 - Verzen bijvullen: bij 5 posts per dag raakt de voorraad sneller op (een vers mag 60 dagen niet terugkomen). Staat op het dashboard bij Voorraad "minder dan 21 dagen", voeg dan in de dagelijkse run 10 verzen toe zoals beschreven bij de wekelijkse run.
@@ -89,7 +89,7 @@ Joshua wil geen losse afbeeldingen meer: een beeldpost is altijd een carrousel (
 Elke carrousel heeft één doorlopende achtergrond over de drie slides (render.py `_panorama`). Met een foto: slide 1 scherp, daarna zacht vervagend en rustiger. Verander dit nooit naar losse achtergronden per slide.
 
 ## Reserveverzen (voor "ander vers" in het kantoor)
-Na het schrijven en renderen van de posts (dagelijkse run, en avondcontrole als er posts bij kwamen): `python3 src/systeem.py reserve --datum MORGEN`. Vul daarna in `data/posts.json` bij elke post onder `reserve` de velden hook, caption, hashtags en, bij carrousel, betekenis en toepassing in, volgens dezelfde regels als de post zelf (caption begint met de hook en bevat het vers letterlijk en de verwijzing). Lees het reservevers ook na; past het los niet, haal de `reserve` dan weg en draai `reserve` opnieuw. Joshua kan dan in het kantoor met één klik naar het reservevers wisselen; het beeld wordt dan direct in GitHub gemaakt.
+Na het schrijven en renderen van de posts (dagelijkse run, en avondcontrole als er posts bij kwamen): `python3 src/systeem.py reserve --datum DATUM` (voor MORGEN en OVERMORGEN). Vul daarna in `data/posts.json` bij elke post onder `reserve` de velden hook, caption, hashtags en, bij carrousel, betekenis en toepassing in, volgens dezelfde regels als de post zelf (caption begint met de hook en bevat het vers letterlijk en de verwijzing). Lees het reservevers ook na; past het los niet, haal de `reserve` dan weg en draai `reserve` opnieuw. Joshua kan dan in het kantoor met één klik naar het reservevers wisselen; het beeld wordt dan direct in GitHub gemaakt.
 
 ## Strategie (vaste regels sinds 8 november)
 - **Kiezen gaat via Thompson sampling met een weekexperiment.** `config.json` › `experiment` zegt welke 2 onderdelen deze week bewust getest worden; het systeem kiest automatisch een nieuw experiment als het oude is verlopen (bij `plan`). Verander de keuzes van het systeem niet met de hand.

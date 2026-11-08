@@ -190,19 +190,23 @@ def tijdstip(p, plat="instagram"):
     return dt.datetime(d.year, d.month, d.day, u, m, tzinfo=TZ)
 
 def controleer_aantal(cfg, posts, nu):
-    """Vanaf 06:00 één keer per dag: staan er voor vandaag minder posts klaar dan ingesteld? Dan een fout op het dashboard."""
-    if nu.hour < 6:
-        return
-    d = nu.date().isoformat()
-    teken = f"Te weinig posts voor {d}"
-    if any(x["tekst"].startswith(teken) for x in S.laad("data/logboek.json", [])[-200:]):
-        return
-    n = sum(1 for p in posts if p["datum"] == d and p["status"] in ("gerenderd", "gepubliceerd", "fout"))
+    """Vanaf 06:00: staan er voor vandaag genoeg posts? Vanaf 21:30: staan er voor morgen genoeg? Anders een fout op het dashboard."""
     nodig = min(cfg["posts_per_dag"], cfg["max_posts_per_dag"])
-    if n < nodig:
-        S.cmd_log(f"{teken}: {n} klaar, {nodig} ingesteld. De dagelijkse taak of de avondcontrole heeft ze niet gemaakt.", "fout")
-        S.cmd_dashboard()
-
+    controles = []
+    if nu.hour >= 6:
+        controles.append(nu.date())
+    if nu.hour > 21 or (nu.hour == 21 and nu.minute >= 30):
+        controles.append(nu.date() + dt.timedelta(days=1))
+    log = S.laad("data/logboek.json", [])[-300:]
+    for dag in controles:
+        d = dag.isoformat()
+        teken = f"Te weinig posts voor {d}"
+        if any(x["tekst"].startswith(teken) for x in log):
+            continue
+        n = sum(1 for p in posts if p["datum"] == d and p["status"] in ("gerenderd", "gepubliceerd", "fout"))
+        if n < nodig:
+            S.cmd_log(f"{teken}: {n} klaar, {nodig} ingesteld. De dagelijkse taak of de avondcontrole heeft ze niet gemaakt.", "fout")
+            S.cmd_dashboard()
 
 def cmd_posten():
     cfg = S.laad("config.json")

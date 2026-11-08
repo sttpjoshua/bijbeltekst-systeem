@@ -95,7 +95,7 @@ input[type=range]{width:100%}input.veld,select.veld{font:inherit;font-size:13px;
 
   <section class="kaart" id="planning">
     <h2>Planning komende dagen</h2>
-    <div class="legenda"><span class="st-online">● Online</span><span class="st-klaar">● Klaar, gaat vanzelf online</span><span class="st-maken">◐ Wordt vanavond gemaakt</span><span class="st-plan">○ Voorlopig plan</span></div>
+    <div class="legenda"><span class="st-online">● Online</span><span class="st-klaar">● Klaar, gaat vanzelf online</span><span class="st-maken">◐ Wordt vandaag gemaakt (14:32 of 20:47)</span><span class="st-plan">○ Voorlopig plan</span></div>
     <div class="plan" id="planDagen"></div>
     <div class="sub" style="margin-top:10px">Het voorlopige plan wordt elke nacht opnieuw gemaakt met wat het systeem geleerd heeft, en na elke wijziging in Bediening. Een dag van tevoren worden de posts echt gemaakt; dan verschijnt het beeld. Klik op een post om de tekst te zien.</div>
   </section>
@@ -337,7 +337,7 @@ function bouwPlanning(){
   if(D.config.pauze){el.innerHTML='<div class="leeg sub">Het systeem staat op pauze. Er is niets gepland.</div>';return}
   const vandaag=new Date().toISOString().slice(0,10);
   const echt=D.posts.filter(x=>x.datum>=vandaag&&x.status!=="afgekeurd"&&x.status!=="overgeslagen").map(x=>({...x,soort:x.status==="gepubliceerd"?"online":"klaar"}));
-  const morgen=new Date(Date.now()+864e5).toISOString().slice(0,10);
+  const morgen=new Date(Date.now()+2*864e5).toISOString().slice(0,10);
   const plan=(D.planning||[]).map(x=>({...x,soort:x.datum<=morgen?"maken":"plan",status:"plan",id:"plan-"+x.datum+x.variabelen.tijdslot}));
   const alles=[...echt,...plan];
   const dagen=[...new Set(alles.map(x=>x.datum))].sort();
