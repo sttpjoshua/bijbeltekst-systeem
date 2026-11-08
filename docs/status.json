@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T18:08:30",
+ "updated": "2026-11-08T18:11:56",
  "agents": {
   "verskiezer": {
    "t": "2026-11-08T14:33:06",
@@ -30,6 +30,11 @@
    "t": "2026-11-08T12:15:04",
    "task": "Las cijfers van 1 posts",
    "state": "done"
+  },
+  "community": {
+   "t": "2026-11-08T18:11:56",
+   "task": "Reacties opgehaald: 1 nieuw",
+   "state": "done"
   }
  },
  "stats": {
@@ -51,6 +56,10 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "18:11",
+   "msg": "Bediening: Reacties opgehaald: 1 nieuw"
+  },
   {
    "t": "18:08",
    "msg": "Statistieken lezen werkt"
@@ -94,10 +103,6 @@
   {
    "t": "14:33",
    "msg": "Job 9:4 vervangen door Openbaring 21:5 (Los van de context dreigend en onduidelijk)"
-  },
-  {
-   "t": "14:33",
-   "msg": "2 Korinthe 5:6 vervangen door Psalm 34:3 (Los van de context onduidelijk (uitwonen van den Heere))"
   }
  ],
  "lampen": [
