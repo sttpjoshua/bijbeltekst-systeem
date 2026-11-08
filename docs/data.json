@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-08T18:26",
+ "gegenereerd": "2026-11-08T18:27",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1311,6 +1311,11 @@
    "t": "2026-11-08T18:26:07",
    "soort": "info",
    "tekst": "Bediening: Fout als opgelost gemarkeerd"
+  },
+  {
+   "t": "2026-11-08T18:27:40",
+   "soort": "info",
+   "tekst": "Bediening: Openstaande fouten als opgelost gemarkeerd"
   }
  ],
  "recente_fouten": [],

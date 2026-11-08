@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T18:26:07",
+ "updated": "2026-11-08T18:27:40",
  "agents": {
   "verskiezer": {
    "t": "2026-11-08T14:33:06",
@@ -22,8 +22,8 @@
    "state": "done"
   },
   "controller": {
-   "t": "2026-11-08T18:26:07",
-   "task": "Fout als opgelost gemarkeerd",
+   "t": "2026-11-08T18:27:40",
+   "task": "Openstaande fouten als opgelost gemarkeerd",
    "state": "done"
   },
   "analist": {
@@ -57,28 +57,12 @@
  ],
  "log": [
   {
-   "t": "18:26",
-   "msg": "Bediening: Fout als opgelost gemarkeerd"
+   "t": "17:45",
+   "msg": "2026-11-08-2 online op facebook: Spreuken 15:1"
   },
   {
-   "t": "18:22",
-   "msg": "Bediening: Antwoord geplaatst bij shaquana_brandsma (Spreuken 15:1)"
-  },
-  {
-   "t": "18:20",
-   "msg": "Bediening: Antwoord geplaatst bij shaquana_brandsma (Spreuken 15:1)"
-  },
-  {
-   "t": "18:19",
-   "msg": "Bediening: Liken lukte niet: recht ontbreekt (zie melding)"
-  },
-  {
-   "t": "18:19",
-   "msg": "ACTIE VOOR JOU: liken van reacties op instagram lukt nog niet. Voeg het recht instagram_manage_engagement toe "
-  },
-  {
-   "t": "18:11",
-   "msg": "Bediening: Reacties opgehaald: 1 nieuw"
+   "t": "17:45",
+   "msg": "2026-11-08-2 online op instagram: Spreuken 15:1"
   },
   {
    "t": "18:08",
@@ -97,12 +81,32 @@
    "msg": "Verbinding met Instagram werkt (@bibleverse_nl)"
   },
   {
-   "t": "17:45",
-   "msg": "2026-11-08-2 online op facebook: Spreuken 15:1"
+   "t": "18:11",
+   "msg": "Bediening: Reacties opgehaald: 1 nieuw"
   },
   {
-   "t": "17:45",
-   "msg": "2026-11-08-2 online op instagram: Spreuken 15:1"
+   "t": "18:19",
+   "msg": "Bediening: Liken lukte niet: recht ontbreekt (zie melding)"
+  },
+  {
+   "t": "18:19",
+   "msg": "ACTIE VOOR JOU: liken van reacties op instagram lukt nog niet. Voeg het recht instagram_manage_engagement toe "
+  },
+  {
+   "t": "18:20",
+   "msg": "Bediening: Antwoord geplaatst bij shaquana_brandsma (Spreuken 15:1)"
+  },
+  {
+   "t": "18:22",
+   "msg": "Bediening: Antwoord geplaatst bij shaquana_brandsma (Spreuken 15:1)"
+  },
+  {
+   "t": "18:26",
+   "msg": "Bediening: Fout als opgelost gemarkeerd"
+  },
+  {
+   "t": "18:27",
+   "msg": "Bediening: Openstaande fouten als opgelost gemarkeerd"
   }
  ],
  "lampen": [
