@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-08T15:46",
+ "gegenereerd": "2026-11-08T16:00",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -780,7 +780,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-08T13:00+01:00"
+     "t": "2026-11-08T16:00+01:00"
     }
    },
    "score": {},
@@ -916,7 +916,7 @@
    },
    "totaal": {
     "views": 4,
-    "reach": 2,
+    "reach": 3,
     "likes": 2,
     "comments": 0,
     "shares": 0,
@@ -925,13 +925,13 @@
    "per_platform": {
     "instagram": {
      "views": 4,
-     "reach": 2,
+     "reach": 3,
      "likes": 2,
      "comments": 0,
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-08T13:00+01:00"
+     "t": "2026-11-08T16:00+01:00"
     }
    },
    "score": {},
@@ -989,7 +989,7 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-08T13:00+01:00"
+     "t": "2026-11-08T16:00+01:00"
     }
    },
    "score": {},
@@ -1389,7 +1389,7 @@
    "ok": "2026-11-08T07:00",
    "laatst_ok": false,
    "detail": "400: {\"error\":{\"message\":\"(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https:\\/\\/",
-   "fout": "2026-11-08T15:00"
+   "fout": "2026-11-08T16:00"
   },
   "facebook": {
    "ok": "2026-11-08T12:15",
@@ -1429,7 +1429,7 @@
  "weken": {
   "deze": {
    "posts": 3,
-   "reach": 9,
+   "reach": 10,
    "views": 11,
    "likes": 3,
    "comments": 0,
