@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T17:33:15",
+ "updated": "2026-11-08T17:45:55",
  "agents": {
   "verskiezer": {
    "t": "2026-11-08T14:33:06",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-08T12:15:54",
-   "task": "Postte Psalm 23:1 op facebook",
+   "t": "2026-11-08T17:45:55",
+   "task": "Postte Spreuken 15:1 op facebook",
    "state": "done"
   },
   "controller": {
@@ -33,11 +33,11 @@
   }
  },
  "stats": {
-  "posts_today": 2,
-  "posts_total": 3,
+  "posts_today": 3,
+  "posts_total": 4,
   "reach_7d": 7,
   "best_time": "nog onbekend",
-  "next_post": "2026-11-08T17:45:00"
+  "next_post": "2026-11-08T20:30:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
@@ -51,6 +51,18 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "17:45",
+   "msg": "2026-11-08-2 online op facebook: Spreuken 15:1"
+  },
+  {
+   "t": "17:45",
+   "msg": "2026-11-08-2 online op instagram: Spreuken 15:1"
+  },
+  {
+   "t": "17:45",
+   "msg": "2026-11-08-2 ook als story geplaatst"
+  },
   {
    "t": "15:46",
    "msg": "Muziek alsnog toegevoegd aan 3 video('s)"
@@ -86,18 +98,6 @@
   {
    "t": "12:15",
    "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
-  },
-  {
-   "t": "12:15",
-   "msg": "Statistieken opgehaald voor 1 posts"
-  },
-  {
-   "t": "07:31",
-   "msg": "2026-11-08-1 online op facebook: Jesaja 43:19"
-  },
-  {
-   "t": "07:30",
-   "msg": "2026-11-08-1 online op instagram: Jesaja 43:19"
   }
  ],
  "lampen": [

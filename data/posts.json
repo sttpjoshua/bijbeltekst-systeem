@@ -192,7 +192,7 @@
  {
   "id": "2026-11-08-2",
   "datum": "2026-11-08",
-  "status": "gerenderd",
+  "status": "gepubliceerd",
   "vers_id": "Proverbs-15-1-1",
   "ref": "Spreuken 15:1",
   "tekst": "Een zacht antwoord keert de grimmigheid af; maar een smartend woord doet den toorn oprijzen.",
@@ -273,7 +273,19 @@
    "toepassing": "Wat voelt vandaag als tegenwind? Zeg het hardop: God is voor mij. Kijk hoe dat je blik verandert."
   },
   "story": "docs/media/2026-11/2026-11-08-2-story.jpg",
-  "story_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-2-story.jpg"
+  "story_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-2-story.jpg",
+  "gepubliceerd": {
+   "instagram": {
+    "id": "17873460159647173",
+    "url": "https://www.instagram.com/p/DffN3pEj56o/",
+    "t": "2026-11-08T17:45+01:00"
+   },
+   "facebook": {
+    "id": "1015160368352770_122134032104879910",
+    "url": "https://www.facebook.com/1015160368352770_122134032104879910",
+    "t": "2026-11-08T17:45+01:00"
+   }
+  }
  },
  {
   "id": "2026-11-08-3",
