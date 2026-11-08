@@ -1,0 +1,30 @@
+name: stemproef
+on:
+  push:
+    branches: [stemproef]
+    paths: [".github/workflows/stemproef.yml"]
+permissions:
+  contents: write
+jobs:
+  stem:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - run: pip install -q piper-tts
+      - name: Stemmen maken
+        run: |
+          mkdir -p stemproef
+          TEKST="Ik hef mijn ogen op naar de bergen, van waar mijn hulp komen zal. Mijn hulp is van den Heere, Die hemel en aarde gemaakt heeft. Psalm honderdeenentwintig."
+          B=https://huggingface.co/rhasspy/piper-voices/resolve/main
+          for v in nl/nl_NL/ronnie/medium/nl_NL-ronnie-medium nl/nl_NL/mls/medium/nl_NL-mls-medium nl/nl_NL/pim/medium/nl_NL-pim-medium nl/nl_BE/nathalie/medium/nl_BE-nathalie-medium nl/nl_BE/rdh/medium/nl_BE-rdh-medium; do
+            n=$(basename $v)
+            curl -sfL -o $n.onnx $B/$v.onnx && curl -sfL -o $n.onnx.json $B/$v.onnx.json || { echo "geen $n"; continue; }
+            echo "$TEKST" | piper -m $n.onnx --length-scale 1.15 --sentence-silence 0.45 -f stemproef/$n.wav && echo "ok $n"
+          done
+          ls -la stemproef
+      - name: Opslaan
+        run: |
+          git config user.name "bibleverse-bot"; git config user.email "bot@users.noreply.github.com"
+          git add stemproef && git commit -qm "Stemproef Piper" && git push
