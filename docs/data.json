@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-08T16:57",
+ "gegenereerd": "2026-11-08T17:06",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1389,7 +1389,7 @@
    "ok": "2026-11-08T07:00",
    "laatst_ok": false,
    "detail": "400: {\"error\":{\"message\":\"(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https:\\/\\/",
-   "fout": "2026-11-08T16:00"
+   "fout": "2026-11-08T17:00"
   },
   "facebook": {
    "ok": "2026-11-08T12:15",
@@ -1792,6 +1792,7 @@
   "klaar": 6,
   "doel": 6
  },
+ "verzoeken": [],
  "planning": [
   {
    "datum": "2026-11-11",

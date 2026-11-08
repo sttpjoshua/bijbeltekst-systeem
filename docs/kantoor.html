@@ -1007,7 +1007,7 @@ function advies(tekst){
   if(/facebook|pagina|page/.test(t))return 'Facebook doet moeilijk. Controleer of de pagina Bibleversenl nog gekoppeld is aan bibleverse-bot (Business-instellingen › Pagina\'s).';
   if(/overgeslagen/.test(t))return 'Een post is niet geplaatst omdat het tijdstip lang voorbij was. Meestal liep de wekker achter; controleer cron-job.org.';
   if(/statistiek|insights/.test(t))return 'Cijfers ophalen lukte niet. Posten werkt gewoon door; morgen wordt het opnieuw geprobeerd.';
-  return 'Het systeem probeert dit eerst zelf op te lossen, en de volgende controle (14:32 of 20:47) pakt het daarna op. Blijft deze melding morgen nog staan, plak hem dan in de chat met Claude.';
+  return 'Het systeem probeert dit eerst zelf op te lossen, en de volgende controle (14:32 of 20:47) pakt het daarna op. Op het dashboard staan knoppen om het meteen op te lossen, of gebruik daar \'Vraag Claude\'.';
 }
 let ALARM=null;
 function alarmCheck(){

@@ -208,6 +208,99 @@ def main(raw):
             r["status"] = "genegeerd"
             melding = f"Reactie van {r['naam']} gemarkeerd als afgehandeld"
         S.bewaar("data/reacties.json", reacties)
+    elif a == "fout_opgelost":
+        log = S.laad("data/logboek.json", [])
+        n = 0
+        for l in log:
+            if l.get("t") == o["t"] and l.get("soort") == "fout":
+                l["opgelost"] = True; n += 1
+        S.bewaar("data/logboek.json", log)
+        melding = "Fout als opgelost gemarkeerd" if n else None
+    elif a == "post_opnieuw":
+        import publiceer as PB
+        p = vind(posts, o["post"])
+        if p["status"] == "gepubliceerd":
+            raise SystemExit("Deze post staat al online")
+        if not p.get("media"):
+            raise SystemExit("Het beeld van deze post is al opgeruimd; kies 'Vervangen door noodpost'")
+        p["status"], p["fouten"], p["gemist"] = "gerenderd", 0, []
+        p.pop("wacht_media", None)
+        nu = dt.datetime.now(PB.TZ)
+        if PB.tijdstip(p) <= nu:
+            p["datum"] = nu.date().isoformat()
+            p["variabelen"]["tijdslot"] = p["variabelen"]["tijdslot_fb"] = (nu - dt.timedelta(minutes=1)).strftime("%H:%M")
+            p["handmatig_tijdstip"] = True
+            melding = f"{p['ref']} wordt nu opnieuw geprobeerd"
+        else:
+            melding = f"{p['ref']} staat weer klaar voor {p['variabelen']['tijdslot']}"
+    elif a == "post_nood":
+        import publiceer as PB
+        p = vind(posts, o["post"])
+        if p["status"] == "gepubliceerd":
+            raise SystemExit("Deze post staat al online")
+        voorraad = S.laad("data/noodvoorraad.json", [])
+        kl = [n for n in voorraad if n["status"] == "gerenderd"]
+        if not kl:
+            raise SystemExit("De noodvoorraad is leeg. Gebruik 'Vraag Claude' om hem aan te vullen.")
+        n = kl[0]; voorraad.remove(n)
+        nu = dt.datetime.now(PB.TZ)
+        datum, slot = p["datum"], p["variabelen"]["tijdslot"]
+        if PB.tijdstip(p) <= nu:
+            datum, slot = nu.date().isoformat(), (nu - dt.timedelta(minutes=1)).strftime("%H:%M")
+        p["status"] = "afgekeurd"
+        n = dict(n, id=f"{datum}-n{slot.replace(':', '')}", datum=datum, status="gerenderd", nood=True, goedgekeurd=True)
+        n["variabelen"] = dict(n["variabelen"], tijdslot=slot, tijdslot_fb=None)
+        posts.append(n)
+        S.bewaar("data/noodvoorraad.json", voorraad)
+        S.herstel(f"{p['ref']} vervangen (door jou)", f"noodpost {n['ref']} om {slot}")
+        melding = f"{p['ref']} vervangen door noodpost {n['ref']} om {slot}"
+    elif a == "nood_inzetten":
+        import publiceer as PB
+        S.bewaar("data/posts.json", posts)
+        k = S.noodinzet(dt.datetime.now(PB.TZ))
+        posts = S.laad("data/posts.json", [])
+        melding = f"{k} noodpost(s) ingezet op de lege tijdsloten van vandaag" if k else "Er waren geen lege tijdsloten meer vandaag"
+    elif a == "muziek_toevoegen":
+        if not materiaal_er():
+            raise SystemExit("Muziek is niet bereikbaar: controleer MATERIAAL_PAT")
+        S.bewaar("data/posts.json", posts)
+        S.cmd_aanvullen()
+        posts = S.laad("data/posts.json", [])
+        melding = "Video's zonder muziek zijn opnieuw gemaakt met muziek"
+    elif a == "statistieken_nu":
+        import publiceer as PB
+        PB.verse_cijfers(posts)
+        try:
+            PB.volgers_en_tokens()
+        except Exception as e:
+            print("Volgers:", e)
+        melding = "Cijfers en volgers opgehaald"
+    elif a == "reacties_nu":
+        import publiceer as PB
+        n = PB.reacties_ophalen(posts)
+        melding = "Reacties opgehaald" + (f": {n} nieuw" if isinstance(n, int) else "")
+    elif a == "zelftest_nu":
+        import subprocess
+        r = subprocess.run([sys.executable, "tools/zelftest.py"], capture_output=True, text=True)
+        melding = "Zelftest: " + ((r.stdout or r.stderr).strip().splitlines() or ["klaar"])[-1][:120]
+    elif a == "run":
+        melding = "Controle gestart: alles wat klaarstaat gaat nu online"
+    elif a == "verzoek":
+        tekst = (o.get("tekst") or "").strip()[:1500]
+        if not tekst:
+            raise SystemExit("Leeg verzoek")
+        v = S.laad("data/verzoeken.json", [])
+        v.append({"id": dt.datetime.now().strftime("%Y%m%d%H%M%S"), "t": dt.datetime.now().isoformat(timespec="minutes"),
+                  "tekst": tekst, "status": "wacht", "antwoord": ""})
+        S.bewaar("data/verzoeken.json", v[-100:])
+        melding = "Verzoek voor Claude in de wachtrij gezet"
+    elif a == "verzoek_weg":
+        v = S.laad("data/verzoeken.json", [])
+        for x in v:
+            if x["id"] == o["id"] and x["status"] == "wacht":
+                x["status"] = "geannuleerd"
+        S.bewaar("data/verzoeken.json", v)
+        melding = "Verzoek ingetrokken"
     elif a == "test_materiaal":
         ok = materiaal_er()
         n = len(S.materiaal(cfg)["muziek"]) if ok else 0
@@ -225,7 +318,10 @@ def main(raw):
         agent = {"pauze": "controller", "posts_per_dag": "verskiezer", "verkenning": "verskiezer", "vers_uitsluiten": "verskiezer",
                  "max_aandeel_beeld": "designer", "platform": "dispatcher", "tijd": "dispatcher", "nu_posten": "dispatcher",
                  "leermodus": "analist", "ander_vers": "verskiezer", "goedkeuren": "designer", "goedkeuren_instelling": "designer",
-                 "andere_stijl": "designer", "post_ander_vers": "verskiezer", "fouten_opgelost": "controller", "reactie_plaatsen": "community", "reactie_negeren": "community"}.get(a)
+                 "andere_stijl": "designer", "post_ander_vers": "verskiezer", "fouten_opgelost": "controller", "reactie_plaatsen": "community", "reactie_negeren": "community",
+                 "fout_opgelost": "controller", "post_opnieuw": "dispatcher", "post_nood": "controller", "nood_inzetten": "controller",
+                 "muziek_toevoegen": "video", "statistieken_nu": "analist", "reacties_nu": "community", "zelftest_nu": "controller",
+                 "run": "dispatcher", "verzoek": "controller"}.get(a)
         if a == "overslaan":
             agent = "video" if (vind(posts, o["post"])["variabelen"].get("formaat") == "video") else "designer"
         if agent:

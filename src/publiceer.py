@@ -236,7 +236,7 @@ def controleer_aantal(cfg, posts, nu):
             if len(S.nood_klaar()) >= nodig - n:
                 S.cmd_log(f"{teken}: {n} klaar, {nodig} ingesteld. De noodvoorraad vult de lege tijdsloten automatisch op.", "info")
             else:
-                S.cmd_log(f"{teken}: {n} klaar, {nodig} ingesteld, en de noodvoorraad is te klein. De volgende controle maakt ze aan.", "fout")
+                S.cmd_log(f"{teken}: {n} klaar, {nodig} ingesteld, en de noodvoorraad is te klein.", "fout", code="te_weinig")
             S.cmd_dashboard()
 
 def media_online(p):
@@ -285,13 +285,13 @@ def cmd_posten():
     for p in sorted(klaar, key=tijdstip):
         if all(nu - tijdstip(p, pl) > TE_LAAT for pl in cfg["platformen_actief"]):
             p["status"] = "overgeslagen"
-            S.cmd_log(f"{p['id']} overgeslagen: tijdstip gemist", "fout"); continue
+            S.cmd_log(f"{p['id']} ({p['ref']}) niet geplaatst: het tijdstip is meer dan 8 uur gemist", "fout", code="post_gemist", post=p["id"]); continue
         g = cfg.get("goedkeuren") or {}
         if g.get("aan") and g.get("zonder_reactie") == "overslaan" and p.get("goedgekeurd") is not True:
             print(p["id"], "wacht op goedkeuring"); continue  # na 8 uur zonder goedkeuring vervalt hij hierboven vanzelf
         if vandaag_online >= cfg["max_posts_per_dag"]:
             p["status"] = "overgeslagen"
-            S.cmd_log(f"{p['id']} overgeslagen: daglimiet bereikt", "fout"); continue
+            S.cmd_log(f"{p['id']} overgeslagen: daglimiet bereikt", "info"); continue
         if not media_online(p):
             if nu - tijdstip(p) < dt.timedelta(minutes=45):
                 if not p.get("wacht_media"):
@@ -303,7 +303,7 @@ def cmd_posten():
                 continue
             if nu - tijdstip(p, plat) > TE_LAAT:
                 p.setdefault("gemist", []).append(plat)  # dit platform is gemist; de andere gaan door
-                S.cmd_log(f"{p['id']} op {plat} overgeslagen: tijdstip gemist", "fout"); continue
+                S.cmd_log(f"{p['id']} ({p['ref']}) niet geplaatst op {plat}: tijdstip gemist", "fout", code="post_gemist", post=p["id"]); continue
             try:
                 if plat == "instagram":
                     mid, link = publiceer_instagram(p, uid, tok)
@@ -327,7 +327,7 @@ def cmd_posten():
                     S.herstel(f"{p['id']} op {plat} mislukt ({str(e)[:100]})",
                               f"poging {p['fouten']} van 3; probeert het over een kwartier opnieuw")
                     continue
-                S.cmd_log(f"{p['id']} {plat} mislukt na 3 pogingen: {e}", "fout"); fouten += 1
+                S.cmd_log(f"{p['id']} ({p['ref']}) op {plat} mislukt na 3 pogingen: {str(e)[:200]}", "fout", code="post_mislukt", post=p["id"]); fouten += 1
                 S.activiteit("dispatcher", f"Post op {plat} mislukt", "error")
                 S.gezond(plat, False, str(e))
                 p["status"] = "fout"
@@ -493,7 +493,7 @@ def cmd_statistieken():
             else:
                 continue
         except Exception as e:
-            S.cmd_log(f"Statistieken {p['id']} ({plat}) mislukt: {str(e)[:160]}", "fout"); continue
+            S.cmd_log(f"Statistieken {p['id']} ({plat}) mislukt: {str(e)[:160]}", "fout", code="statistieken"); continue
         rij.append({"post_id": p["id"], "platform": plat, "moment": moment,
                     "views": m.get("views"), "reach": m.get("reach"), "likes": m.get("likes"),
                     "comments": m.get("comments"), "shares": m.get("shares"), "saves": m.get("saved"),
@@ -508,11 +508,11 @@ def cmd_statistieken():
         verse_cijfers(posts := S.laad("data/posts.json", []))
         S.bewaar("data/posts.json", posts)
     except Exception as e:
-        S.cmd_log(f"Actuele cijfers ophalen mislukt: {str(e)[:160]}", "fout")
+        S.cmd_log(f"Actuele cijfers ophalen mislukt: {str(e)[:160]}", "fout", code="statistieken")
     try:
         volgers_en_tokens()
     except Exception as e:
-        S.cmd_log(f"Volgers ophalen mislukt: {str(e)[:160]}", "fout")
+        S.cmd_log(f"Volgers ophalen mislukt: {str(e)[:160]}", "fout", code="statistieken")
     try:
         reacties_ophalen(S.laad("data/posts.json", []))
     except Exception as e:
@@ -547,7 +547,7 @@ def cmd_token():
         if rechten:
             mist = [r for r in ("instagram_basic", "instagram_content_publish", "instagram_manage_insights") if r not in rechten]
             if mist:
-                S.cmd_log("Token mist rechten: " + ", ".join(mist) + ". Wel aanwezig: " + ", ".join(sorted(rechten)), "fout")
+                S.cmd_log("Token mist rechten: " + ", ".join(mist) + ". Wel aanwezig: " + ", ".join(sorted(rechten)), "fout", code="rechten")
             else:
                 S.cmd_log("Token heeft alle rechten, ook voor statistieken")
         if os.environ.get("FB_PAGE_ID", "").strip():
@@ -556,7 +556,7 @@ def cmd_token():
                 naam = http("GET", f"{API_FB}/{pid}", {"fields": "name", "access_token": ptok}).get("name")
                 S.cmd_log(f"Verbinding met Facebook-pagina werkt ({naam})")
             except Exception as e:
-                S.cmd_log(f"Facebook-verbinding mislukt: {str(e)[:300]}", "fout")
+                S.cmd_log(f"Facebook-verbinding mislukt: {str(e)[:300]}", "fout", code="verbinding")
         # praktijktest: statistieken van de laatste post opvragen (als die er is)
         try:
             media = http("GET", f"{API}/{uid}/media", {"fields": "id", "limit": 1, "access_token": tok}).get("data", [])
@@ -564,11 +564,11 @@ def cmd_token():
                 m = insights(media[0]["id"], tok)
                 S.cmd_log("Statistieken lezen werkt" if m else "Statistieken lezen gaf geen gegevens terug", "info" if m else "fout")
         except Exception as e:
-            S.cmd_log(f"Statistieken lezen mislukt: {str(e)[:160]}", "fout")
+            S.cmd_log(f"Statistieken lezen mislukt: {str(e)[:160]}", "fout", code="statistieken")
         try:
             volgers_en_tokens()
         except Exception as e:
-            S.cmd_log(f"Volgers ophalen mislukt: {str(e)[:160]}", "fout")
+            S.cmd_log(f"Volgers ophalen mislukt: {str(e)[:160]}", "fout", code="statistieken")
         S.cmd_dashboard(); return
     r = http("GET", "https://graph.instagram.com/refresh_access_token", {"grant_type": "ig_refresh_token", "access_token": tok})
     dagen = int(r.get("expires_in", 0)) // 86400

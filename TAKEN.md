@@ -40,9 +40,18 @@ Het systeem lost bekende problemen zelf op (GitHub Actions, elk kwartier): posts
 2. Kijk in `data/herstel.json` of hetzelfde probleem vaker dan twee keer in een week voorkwam. Zo ja: zoek de structurele oorzaak en verhelp die.
 3. Noodvoorraad: `python3 src/systeem.py nood status`. Minder dan 6 klaar: `python3 src/systeem.py nood aanvullen`, schrijf voor de nieuwe posts in `data/noodvoorraad.json` hook, caption (eindigt met een vraag), hashtags, kernwoord, betekenis en toepassing volgens "Teksten schrijven" (tijdloos, geen datum of seizoen), en `python3 src/systeem.py nood render`. Bekijk één beeld met Read.
 
+## Verzoeken uit het dashboard ("Vraag Claude")
+Joshua stelt vragen en geeft opdrachten via het dashboard; die staan in `data/verzoeken.json`. Bij ELKE run (dagelijks, avondcontrole, wekelijks), direct na Zelfherstel:
+1. `python3 src/systeem.py verzoek` toont de open verzoeken.
+2. Per verzoek: `python3 src/systeem.py verzoek ID bezig`, voer het uit (binnen de vaste regels), en sluit af met `python3 src/systeem.py verzoek ID klaar "kort antwoord in gewone taal, wat je deed of waarom het niet kan"`. Kan het niet zonder Joshua: zet het op klaar met precies wat hij moet doen.
+3. Een verzoek dat de vaste regels zou breken (bijvoorbeeld een auteursrechtelijk beschermde vertaling overnemen): niet uitvoeren, wel uitleggen in het antwoord.
+
+## Dashboard als centraal punt (vaste regel)
+Joshua bestuurt en controleert alles vanuit het dashboard. Bij elke nieuwe functie of wijziging: zorg dat hij het in het dashboard kan zien én bedienen (een knop via `src/bediening.py`, of een melding met de juiste knoppen). Elke nieuwe fout krijgt een `code` in `cmd_log` met bijpassende knoppen in `docs/index.html` (ACTIES). Verwijs nooit naar "plak het in de chat": verwijs naar de knop, of naar "Vraag Claude" in het dashboard.
+
 ## Dagelijkse run
 Het online zetten zelf doet GitHub Actions (`.github/workflows/publiceren.yml`, elk kwartier) en het ophalen van statistieken ook (dagelijks). Deze run maakt de posts van MORGEN én OVERMORGEN klaar (twee dagen buffer: als een run een keer mislukt, staat er toch genoeg klaar). Voor MORGEN zijn de meeste posts meestal al gemaakt; vul alleen aan wat ontbreekt.
-1. `git pull --rebase`. Lees `config.json`. Pauze? Zie regels. Doe daarna eerst "Zelfherstel".
+1. `git pull --rebase`. Lees `config.json`. Pauze? Zie regels. Doe daarna eerst "Zelfherstel" en dan "Verzoeken uit het dashboard".
    Clone ook de privé repo `sttpjoshua/bibleverse-materiaal` (add_repo, alleen lezen) naast deze repo, dus als map `../bibleverse-materiaal`. Daar staan Joshua's muziek (Epidemic Sound) en foto's. Zet die bestanden NOOIT in deze openbare repo; alleen de afgewerkte post mag hier komen. Lukt het clonen niet (bijvoorbeeld omdat add_repo in deze sessie ontbreekt), ga dan gewoon door: het systeem gebruikt dan kleurverloop en maakt video's zonder muziek. GitHub Actions vult de muziek binnen een kwartier automatisch aan (`systeem.py aanvullen`, met het geheim MATERIAAL_PAT). Log dit dus als "info", NIET als fout, en meld het niet als probleem aan Joshua.
 2. Bereken MORGEN en OVERMORGEN (Europe/Amsterdam). Doe stap 2 t/m 5 voor elk van beide dagen: `python3 src/systeem.py kies --datum DATUM` (vult alleen ontbrekende posts aan).
 3. Schrijf de teksten (zie hierboven) in `data/posts.json`.
@@ -72,7 +81,7 @@ Staat `leermodus` op true in config.json, dan maak je elke dag `posts_per_dag` (
 
 ## Avondcontrole (elke avond rond 21:00)
 Doel: zorgen dat er voor MORGEN en OVERMORGEN precies zoveel posts klaarstaan als `posts_per_dag` in config.json (bijvoorbeeld omdat Joshua na de dagelijkse run iets via Bediening heeft veranderd).
-1. Staat `pauze` op true: stop meteen, doe niets. Anders: doe eerst "Zelfherstel" (hierboven).
+1. Staat `pauze` op true: stop meteen, doe niets. Anders: doe eerst "Zelfherstel" en "Verzoeken uit het dashboard".
 2. Staan er posts (van morgen of vandaag) met status "opnieuw_maken" of "wacht_op_tekst": maak die af (teksten schrijven waar nodig) en render ze met `python3 src/systeem.py render --datum DATUM`. Tel daarna voor MORGEN en voor OVERMORGEN de posts in `data/posts.json` met status "gerenderd" of "wacht_op_tekst". Is dat aantal gelijk aan of hoger dan `posts_per_dag`, en heeft geen enkele post status "wacht_op_tekst": meld alleen de gezondheid (zie "Gezondheid melden"), commit en push, en stop.
 3. Anders, per dag waar iets ontbreekt: `python3 src/systeem.py kies --datum DATUM` (vult alleen de ontbrekende posts aan en volgt de planning), schrijf de teksten volgens "Teksten schrijven", en render met `python3 src/systeem.py render --datum DATUM`. Bekijk minstens één beeld. Log wat je deed met `python3 src/systeem.py log "Avondcontrole: ..."`, draai `python3 src/systeem.py dashboard`, commit en push.
 

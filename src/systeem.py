@@ -486,7 +486,7 @@ def koppel_materiaal(p):
             p["beeld_pad"] = pad
         else:
             p["variabelen"]["achtergrondbron"] = "verloop"; p["beeld"] = None
-            cmd_log(f"{p['id']}: foto niet gevonden (is bibleverse-materiaal gecloned?), verloop gebruikt", "fout")
+            cmd_log(f"{p['id']}: foto niet gevonden, kleurverloop gebruikt", "info")
     if p.get("muziek"):
         pad = os.path.join(m, p["muziek"])
         if os.path.exists(pad):
@@ -499,7 +499,7 @@ def koppel_materiaal(p):
             p["muziek_start"] = round(_r.Random(p["id"]).uniform(min(8, duur * 0.1), max(min(8, duur * 0.1), min(60, duur - 12))), 1)
         else:
             p["muziek"] = None
-            cmd_log(f"{p['id']}: muziek niet gevonden, video zonder muziek", "fout")
+            cmd_log(f"{p['id']}: muziek niet gevonden, video zonder muziek", "fout", code="muziek", post=p["id"])
     if p.get("geluid") and os.path.exists(os.path.join(m, p["geluid"])):
         p["geluid_pad"] = os.path.join(m, p["geluid"])
 
@@ -865,7 +865,8 @@ def dashboard_extra(cfg, posts):
             "weken": weken, "inzichten_data": inzichten, "min_posts_voor_leren": cfg.get("min_posts_voor_leren", 6),
             "gemeten_posts": gemeten, "snel_leren": snel, "voorraad": voorraad,
             "herstel": [h for h in laad("data/herstel.json", []) if h["t"] >= (nu - dt.timedelta(days=7)).isoformat()][::-1][:30],
-            "nood": {"klaar": len(nood_klaar()), "doel": NOOD_DOEL}}
+            "nood": {"klaar": len(nood_klaar()), "doel": NOOD_DOEL},
+            "verzoeken": laad("data/verzoeken.json", [])[-20:][::-1]}
 
 def kantoor_extra(cfg, posts):
     """Extra's voor het pixel-kantoor: gezondheidslampjes, volgersbord, post van de week, snel leren."""
@@ -977,9 +978,15 @@ def gezond(naam, ok=True, detail=""):
     x["detail"] = str(detail)[:160]
     bewaar("data/gezondheid.json", g)
 
-def cmd_log(tekst, soort="info"):
+def cmd_log(tekst, soort="info", code=None, post=None):
+    """Logregel. Bij fouten: 'code' bepaalt welke knoppen het dashboard toont, 'post' welke post het betreft."""
     log = laad("data/logboek.json", [])
-    log.append({"t": dt.datetime.now().isoformat(timespec="minutes"), "soort": soort, "tekst": tekst})
+    regel = {"t": dt.datetime.now().isoformat(timespec="seconds"), "soort": soort, "tekst": tekst}
+    if code:
+        regel["code"] = code
+    if post:
+        regel["post"] = post
+    log.append(regel)
     bewaar("data/logboek.json", log[-500:])
 
 def cmd_vers(thema, boek, h, v1, v2=None):
@@ -1153,7 +1160,7 @@ def noodinzet(nu):
     for slot in vrij[:tekort]:
         kl = [n for n in voorraad if n["status"] == "gerenderd"]
         if not kl:
-            cmd_log("Noodvoorraad is op: er staan vandaag te weinig posts klaar. De volgende controle vult de voorraad aan.", "fout")
+            cmd_log("Noodvoorraad is op: er staan vandaag te weinig posts klaar.", "fout", code="nood_op")
             break
         n = kl[0]; voorraad.remove(n)
         n = dict(n, id=f"{d}-n{slot.replace(':', '')}", datum=d, status="gerenderd", nood=True, goedgekeurd=True)
@@ -1164,6 +1171,25 @@ def noodinzet(nu):
     if gezet:
         bewaar("data/posts.json", posts); bewaar("data/noodvoorraad.json", voorraad)
     return gezet
+
+def cmd_verzoek(vid=None, status=None, *antwoord):
+    """Verzoeken uit het dashboard ('Vraag Claude'). Zonder argumenten: toon open verzoeken.
+    Met argumenten: verzoek ID op status 'bezig' of 'klaar' zetten, met een kort antwoord voor Joshua."""
+    v = laad("data/verzoeken.json", [])
+    if not vid:
+        for x in v:
+            if x["status"] in ("wacht", "bezig"):
+                print(x["id"], x["status"], "|", x["tekst"])
+        return
+    for x in v:
+        if x["id"] == vid:
+            x["status"] = status
+            if antwoord:
+                x["antwoord"] = " ".join(antwoord)
+            x["bijgewerkt"] = dt.datetime.now().isoformat(timespec="minutes")
+    bewaar("data/verzoeken.json", v)
+    if status == "klaar":
+        activiteit("controller", "Verzoek van Joshua afgehandeld")
 
 def cmd_nood(actie="status"):
     """Noodvoorraad: kant-en-klare posts voor als een dagelijkse run mislukt.
@@ -1228,5 +1254,6 @@ if __name__ == "__main__":
      "registreer": lambda: cmd_registreer(*x.args), "stats": lambda: cmd_stats(x.args[0]),
      "leer": cmd_leer, "dashboard": cmd_dashboard, "check": cmd_check,
      "log": lambda: cmd_log(*x.args), "vers": lambda: cmd_vers(*x.args), "opruimen": lambda: cmd_opruimen(*x.args), "opgelost": cmd_opgelost,
+     "verzoek": lambda: cmd_verzoek(*x.args),
      "nood": lambda: cmd_nood(*(x.args[:1] or ["status"])),
      "aanvullen": lambda: cmd_aanvullen(bool(x.args and x.args[0] == "check"))}[x.cmd]()
