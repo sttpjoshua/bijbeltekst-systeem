@@ -55,7 +55,7 @@
  {
   "id": "2026-11-08-1",
   "datum": "2026-11-08",
-  "status": "gerenderd",
+  "status": "gepubliceerd",
   "vers_id": "Isaiah-43-19-19",
   "ref": "Jesaja 43:19",
   "tekst": "Ziet, Ik zal wat nieuws maken, nu zal het uitspruiten, zult gijlieden dat niet weten? Ja, Ik zal in de woestijn een weg leggen, en rivieren in de wildernis.",
@@ -137,7 +137,19 @@
    "toepassing": "Schrijf op waar je bang voor bent. Zet er dan naast: God is mijn licht, ook hierin."
   },
   "story": "docs/media/2026-11/2026-11-08-1-story.jpg",
-  "story_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-1-story.jpg"
+  "story_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-1-story.jpg",
+  "gepubliceerd": {
+   "instagram": {
+    "id": "17965958154239578",
+    "url": "https://www.instagram.com/p/DfeHgbfFgF-/",
+    "t": "2026-11-08T07:30+01:00"
+   },
+   "facebook": {
+    "id": "1015160368352770_122133986888879910",
+    "url": "https://www.facebook.com/1015160368352770_122133986888879910",
+    "t": "2026-11-08T07:31+01:00"
+   }
+  }
  },
  {
   "id": "2026-11-08-2",
