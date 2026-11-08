@@ -4,9 +4,21 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bijbeltekst-systeem · Dashboard</title>
+<script>
+(function(){var k="bibleverse_thema",t;try{t=localStorage.getItem(k)}catch(e){}
+  window.zetThema=function(n){try{localStorage.setItem(k,n)}catch(e){}pasToe(n)};
+  function pasToe(n){var d=n==="donker"||(n!=="licht"&&window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches);
+    document.documentElement.setAttribute("data-thema",d?"donker":"licht");window.THEMA=n||"auto";
+    document.querySelectorAll&&document.querySelectorAll(".thema button").forEach(function(b){b.classList.toggle("aan",b.dataset.thema===window.THEMA)});
+    var kn=document.getElementById("themaKnop");if(kn)kn.textContent=d?"☀️":"🌙"}
+  window.pasThemaToe=function(){pasToe(window.THEMA)};
+  pasToe(t||"auto");
+  if(window.matchMedia)matchMedia("(prefers-color-scheme: dark)").addEventListener("change",function(){if(window.THEMA==="auto")pasToe("auto")});
+})();
+</script>
 <style>
 :root{--bg:#f7f5f0;--kaart:#fff;--ink:#1d1b18;--ink2:#5c574f;--ink3:#8f897e;--lijn:#e7e2d8;--accent:#2f5d8a;--accent-zacht:#c9d6e3;--goed:#2e7d4f;--let:#b7791f;--slecht:#b23a3a}
-@media (prefers-color-scheme:dark){:root{--bg:#141310;--kaart:#1e1c18;--ink:#f1ede4;--ink2:#b9b2a5;--ink3:#857e72;--lijn:#2f2c26;--accent:#7fa9d4;--accent-zacht:#34465a;--goed:#5fbf86;--let:#e0a84a;--slecht:#e07070}}
+
 *{box-sizing:border-box}body{margin:0;font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;background:var(--bg);color:var(--ink)}
 main{max-width:1180px;margin:0 auto;padding:28px 20px 60px}
 h1{font-size:22px;margin:0}h2{font-size:15px;margin:0 0 12px;color:var(--ink2);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
@@ -99,7 +111,7 @@ textarea.veld{width:100%;font:inherit;font-size:14px;padding:8px 10px;border:1px
 
 /* ---------- Nieuwe vormgeving (naar de voorbeelden van Joshua) ---------- */
 :root{--bg:#eef1f4;--kaart:#fff;--ink:#17181c;--ink2:#4b5060;--ink3:#8b90a0;--lijn:#eceef2;--accent:#2563eb;--accent-zacht:#e8efff;--goed:#16a36a;--let:#e8a417;--slecht:#e5484d;--zacht:#f6f7f9}
-@media (prefers-color-scheme:dark){:root{--bg:#0f1115;--kaart:#181b21;--ink:#f2f3f5;--ink2:#b8bdc8;--ink3:#7d8391;--lijn:#262a32;--accent:#6c9dff;--accent-zacht:#1d2740;--zacht:#1f232a}}
+html[data-thema=donker]{--bg:#0f1115;--kaart:#181b21;--ink:#f2f3f5;--ink2:#b8bdc8;--ink3:#7d8391;--lijn:#262a32;--accent:#6c9dff;--accent-zacht:#1d2740;--zacht:#1f232a;--goed:#4fca8e;--let:#e8b04a;--slecht:#f07070;color-scheme:dark}
 body{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink)}
 .app{display:grid;grid-template-columns:232px 1fr;max-width:1400px;margin:18px auto;gap:18px;padding:0 18px;align-items:start}
 .zijbalk{position:sticky;top:18px;background:var(--kaart);border-radius:20px;padding:20px 14px;min-height:calc(100vh - 36px);display:flex;flex-direction:column}
@@ -117,7 +129,7 @@ main{max-width:none;margin:0;padding:6px 0 60px;min-width:0}
 .kop{align-items:center;margin-bottom:18px}
 h1{font-size:26px;font-weight:700;letter-spacing:-.01em}
 .pil{border:0;background:var(--kaart);font-weight:500}
-.knop{border-radius:999px;background:var(--ink);padding:9px 16px}
+.knop{border-radius:999px;background:var(--ink);color:var(--kaart)!important;padding:9px 16px}
 .kaart{border:0;border-radius:18px;padding:20px 22px;box-shadow:0 1px 2px rgba(16,24,40,.04)}
 h2{font-size:16px;text-transform:none;letter-spacing:0;color:var(--ink);font-weight:650}
 section{margin-top:18px}.grid{gap:18px}
@@ -139,7 +151,7 @@ textarea.veld,input.veld,select.veld,select,input{border-radius:12px;background:
 .ai-kaart{font:inherit;text-align:left;border:0;border-radius:14px;padding:12px 14px;cursor:pointer;display:flex;flex-direction:column;gap:3px;color:var(--ink)}
 .ai-kaart b{font-size:14px}.ai-kaart span{font-size:12.5px;color:var(--ink2)}
 .ai-kaart.blauw{background:#e9f3ff}.ai-kaart.groen{background:#e3f6ee}.ai-kaart.roze{background:#fdebf6}
-@media (prefers-color-scheme:dark){.ai-kaart.blauw{background:#1b2840}.ai-kaart.groen{background:#173027}.ai-kaart.roze{background:#3a1d31}.ai-pil{background:#2a2142;color:#c4a8ff}}
+html[data-thema=donker] .ai-kaart.blauw{background:#1b2840}html[data-thema=donker] .ai-kaart.groen{background:#173027}html[data-thema=donker] .ai-kaart.roze{background:#3a1d31}html[data-thema=donker] .ai-pil{background:#2a2142;color:#c4a8ff}
 .ai-kaart:hover{filter:brightness(.97)}
 .top{border-color:var(--lijn)}
 table th{color:var(--ink3);text-transform:uppercase;font-size:11px;letter-spacing:.05em}
@@ -156,6 +168,11 @@ table th{color:var(--ink3);text-transform:uppercase;font-size:11px;letter-spacin
   h1{font-size:22px}
   .tegel .getal{font-size:30px}
 }
+.thema{display:flex;background:var(--zacht);border-radius:11px;padding:3px;margin-top:10px}
+.thema button{flex:1;font:inherit;font-size:11.5px;white-space:nowrap;border:0;background:none;color:var(--ink3);padding:6px 4px;border-radius:9px;cursor:pointer}
+.thema button.aan{background:var(--kaart);color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.08)}
+#themaKnop{display:none;border:0;background:var(--kaart);border-radius:999px;width:34px;height:34px;font-size:16px;cursor:pointer}
+@media(max-width:900px){#themaKnop{display:inline-block}}
 </style>
 </head>
 <body>
@@ -171,12 +188,13 @@ table th{color:var(--ink3);text-transform:uppercase;font-size:11px;letter-spacin
     <div class="navkop">Werkplaats</div>
     <a class="navlink" href="kantoor.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h1M14 9h1M9 13h1M14 13h1M10 21v-4h4v4"/></svg><span>Pixel-kantoor</span></a>
   </nav>
-  <div class="zijvoet"><div class="sub">@bibleverse_nl</div><div class="sub" id="bijgewerkt">Laden…</div></div>
+  <div class="zijvoet"><div class="sub">@bibleverse_nl</div><div class="sub" id="bijgewerkt">Laden…</div>
+    <div class="thema"><button data-thema="licht" onclick="zetThema('licht')">☀️ Licht</button><button data-thema="donker" onclick="zetThema('donker')">🌙 Donker</button><button data-thema="auto" onclick="zetThema('auto')">Auto</button></div></div>
 </aside>
 <main>
   <div class="kop">
     <div><h1 id="paginaTitel">Overzicht</h1><div class="sub" id="titel" style="display:none"></div></div>
-    <div class="status"><span id="status" style="display:contents"></span></div>
+    <div class="status"><span id="status" style="display:contents"></span><button id="themaKnop" title="Licht of donker" onclick="zetThema(document.documentElement.getAttribute('data-thema')==='donker'?'licht':'donker')"></button></div>
   </div>
 
   <div class="tab" data-tab="overzicht">
@@ -263,6 +281,7 @@ table th{color:var(--ink3);text-transform:uppercase;font-size:11px;letter-spacin
   </div>
 </main>
 </div>
+<script>pasThemaToe()</script>
 <div id="tip"></div>
 <div id="toast"></div>
 <div id="galerij" onclick="if(event.target===this)this.style.display='none'"><button class="sluit" onclick="galerij.style.display='none'">✕</button><div class="galrij"></div><div class="tel"></div></div>
