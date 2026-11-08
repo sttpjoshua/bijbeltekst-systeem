@@ -227,7 +227,7 @@
    "ref": "Psalm 23:1",
    "tekst": "De HEERE is mijn Herder, mij zal niets ontbreken.",
    "hook": "Lees deze zin twee keer, langzaam.",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "mint",
     "thema": "troost",
@@ -257,12 +257,18 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-4-3.jpg"
    ],
    "thumb": "thumbs/2026-11-08-4.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "instagram",
+    "facebook"
+   ],
+   "links": {
+    "instagram": "https://www.instagram.com/p/DfeoGlvjoPS/",
+    "facebook": "https://www.facebook.com/1015160368352770_122134008476879910"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
-   "online": null
+   "online": "2026-11-08T12:15+01:00"
   },
   {
    "id": "2026-11-08-3",
@@ -477,22 +483,6 @@
  "leergeschiedenis": [],
  "laatste_rapport": null,
  "logboek": [
-  {
-   "t": "2026-11-07T11:07",
-   "soort": "info",
-   "tekst": "Verbinding met Instagram werkt (@bibleverse_nl)"
-  },
-  {
-   "t": "2026-11-07T11:07",
-   "soort": "fout",
-   "tekst": "Token mist rechten: instagram_manage_insights",
-   "opgelost": true
-  },
-  {
-   "t": "2026-11-07T11:08",
-   "soort": "info",
-   "tekst": "Verbinding met Instagram werkt (@bibleverse_nl)"
-  },
   {
    "t": "2026-11-07T11:08",
    "soort": "info",
@@ -781,6 +771,21 @@
    "t": "2026-11-08T12:15",
    "soort": "info",
    "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
+  },
+  {
+   "t": "2026-11-08T12:15",
+   "soort": "info",
+   "tekst": "2026-11-08-4 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-08T12:15",
+   "soort": "info",
+   "tekst": "2026-11-08-4 online op instagram: Psalm 23:1"
+  },
+  {
+   "t": "2026-11-08T12:15",
+   "soort": "info",
+   "tekst": "2026-11-08-4 online op facebook: Psalm 23:1"
   }
  ],
  "recente_fouten": [],
@@ -837,9 +842,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-08T07:30",
+   "ok": "2026-11-08T12:15",
    "laatst_ok": true,
-   "detail": "Jesaja 43:19 geplaatst"
+   "detail": "Psalm 23:1 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-08T12:15",
@@ -871,9 +876,9 @@
    "fout": "2026-11-08T12:15"
   },
   "facebook": {
-   "ok": "2026-11-08T07:31",
+   "ok": "2026-11-08T12:15",
    "laatst_ok": true,
-   "detail": "Jesaja 43:19 geplaatst"
+   "detail": "Psalm 23:1 geplaatst"
   },
   "statistieken": {
    "ok": "2026-11-08T12:15",
@@ -897,7 +902,7 @@
  ],
  "weken": {
   "deze": {
-   "posts": 2,
+   "posts": 3,
    "reach": 9,
    "views": 10,
    "likes": 3,
@@ -979,7 +984,7 @@
   "tot": "2026-11-14",
   "dag": 2,
   "dagen": 7,
-  "online": 2,
+  "online": 3,
   "gemeten": 0
  },
  "voorraad": {

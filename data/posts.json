@@ -360,7 +360,7 @@
  {
   "id": "2026-11-08-4",
   "datum": "2026-11-08",
-  "status": "gerenderd",
+  "status": "gepubliceerd",
   "vers_id": "Psalms-23-1-1",
   "ref": "Psalm 23:1",
   "tekst": "De HEERE is mijn Herder, mij zal niets ontbreken.",
@@ -441,7 +441,19 @@
    "toepassing": "Vraag vandaag in één zin om vreugde en vrede. Let erop waar je die tegenkomt."
   },
   "story": "docs/media/2026-11/2026-11-08-4-story.jpg",
-  "story_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-4-story.jpg"
+  "story_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-4-story.jpg",
+  "gepubliceerd": {
+   "instagram": {
+    "id": "17995270449071511",
+    "url": "https://www.instagram.com/p/DfeoGlvjoPS/",
+    "t": "2026-11-08T12:15+01:00"
+   },
+   "facebook": {
+    "id": "1015160368352770_122134008476879910",
+    "url": "https://www.facebook.com/1015160368352770_122134008476879910",
+    "t": "2026-11-08T12:15+01:00"
+   }
+  }
  },
  {
   "id": "2026-11-08-5",

@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T12:15:11",
+ "updated": "2026-11-08T12:15:54",
  "agents": {
   "verskiezer": {
    "t": "2026-11-07T22:23:58",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-08T07:31:01",
-   "task": "Postte Jesaja 43:19 op facebook",
+   "t": "2026-11-08T12:15:54",
+   "task": "Postte Psalm 23:1 op facebook",
    "state": "done"
   },
   "controller": {
@@ -33,11 +33,11 @@
   }
  },
  "stats": {
-  "posts_today": 1,
-  "posts_total": 2,
+  "posts_today": 2,
+  "posts_total": 3,
   "reach_7d": 7,
   "best_time": "nog onbekend",
-  "next_post": "2026-11-08T12:15:00"
+  "next_post": "2026-11-08T17:45:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
@@ -51,6 +51,18 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "12:15",
+   "msg": "2026-11-08-4 online op facebook: Psalm 23:1"
+  },
+  {
+   "t": "12:15",
+   "msg": "2026-11-08-4 online op instagram: Psalm 23:1"
+  },
+  {
+   "t": "12:15",
+   "msg": "2026-11-08-4 ook als story geplaatst"
+  },
   {
    "t": "12:15",
    "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
@@ -86,18 +98,6 @@
   {
    "t": "00:33",
    "msg": "Bediening: Muziek en foto's in GitHub: beschikbaar (27 nummers)"
-  },
-  {
-   "t": "00:28",
-   "msg": "Bediening: Muziek en foto's in GitHub: NIET beschikbaar, controleer MATERIAAL_PAT"
-  },
-  {
-   "t": "00:21",
-   "msg": "Johannes 14:27 opnieuw gemaakt in stijl hemelsblauw"
-  },
-  {
-   "t": "00:18",
-   "msg": "Bediening: Johannes 14:27 krijgt stijl hemelsblauw; wordt bij de avondcontrole (20:47) opnieuw gemaakt"
   }
  ],
  "lampen": [
