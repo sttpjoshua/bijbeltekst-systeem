@@ -68,6 +68,12 @@ jobs:
           else
             python3 src/publiceer.py ${{ steps.t.outputs.taak }}
           fi
+          # elke maandag bij de tokencontrole: zelftest van beelden en video's
+          if [ "${{ steps.t.outputs.taak }}" = "token" ]; then
+            sudo apt-get install -y -qq ffmpeg >/dev/null 2>&1 || true
+            python3 tools/zelftest.py || true
+            python3 src/systeem.py dashboard
+          fi
       - name: Wijzigingen opslaan
         if: always()
         run: |

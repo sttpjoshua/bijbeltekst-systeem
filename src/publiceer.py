@@ -59,11 +59,35 @@ def wacht_klaar(cid, tok):
         time.sleep(6)
     raise RuntimeError("Instagram verwerking duurde te lang")
 
+def alt_teksten(p):
+    """Alt-tekst per slide: helpt mensen met een schermlezer en laat Instagram/Facebook begrijpen waar de post over gaat."""
+    eerste = f"Tekstbeeld van Bibleverse met het Bijbelvers {p['ref']}: {p['tekst']}"
+    if p.get("reeks_label"):
+        eerste = f"{p['reeks_label'].title()}. " + eerste
+    uit = [eerste]
+    if p.get("betekenis"):
+        uit.append(f"Uitleg bij {p['ref']}, Wat betekent dit: {p['betekenis']}")
+    if p.get("toepassing"):
+        uit.append(f"Toepassing bij {p['ref']}, Vandaag: {p['toepassing']}")
+    return [a[:1000] for a in uit]
+
+def met_alt(methode, url, params, veld, alt):
+    """Probeert met alt-tekst; geeft Meta een fout op dat veld, dan nog een keer zonder (de post gaat altijd voor)."""
+    if alt:
+        try:
+            return http(methode, url, dict(params, **{veld: alt}))
+        except Exception as e:
+            if "alt" not in str(e).lower() and "param" not in str(e).lower():
+                raise
+    return http(methode, url, params)
+
 def publiceer_instagram(p, uid, tok):
     if p["variabelen"]["formaat"] == "carrousel":
         kinderen = []
-        for url in p["media_urls"]:
-            kid = http("POST", f"{API}/{uid}/media", {"image_url": url, "is_carousel_item": "true", "access_token": tok})["id"]
+        alts = alt_teksten(p)
+        for i, url in enumerate(p["media_urls"]):
+            kid = met_alt("POST", f"{API}/{uid}/media", {"image_url": url, "is_carousel_item": "true", "access_token": tok},
+                          "alt_text", alts[i] if i < len(alts) else alts[0])["id"]
             wacht_klaar(kid, tok); kinderen.append(kid)
         cid = http("POST", f"{API}/{uid}/media", {"media_type": "CAROUSEL", "children": ",".join(kinderen),
                                                   "caption": caption(p), "access_token": tok})["id"]
@@ -77,7 +101,8 @@ def publiceer_instagram(p, uid, tok):
         params.update({"media_type": "REELS", "video_url": p["media_url"], "share_to_feed": "true"})
     else:
         params["image_url"] = p["media_url"]
-    cid = http("POST", f"{API}/{uid}/media", params)["id"]
+    cid = (http("POST", f"{API}/{uid}/media", params) if video
+           else met_alt("POST", f"{API}/{uid}/media", params, "alt_text", alt_teksten(p)[0]))["id"]
     # wachten tot Instagram het bestand verwerkt heeft
     for _ in range(40):
         st = http("GET", f"{API}/{cid}", {"fields": "status_code,status", "access_token": tok})
@@ -133,11 +158,14 @@ def publiceer_facebook(p, tok):
     fmt = p["variabelen"]["formaat"]
     tekst = caption(p)
     if fmt == "afbeelding":
-        r = http("POST", f"{API_FB}/{pid}/photos", {"url": p["media_url"], "message": tekst, "access_token": ptok})
+        r = met_alt("POST", f"{API_FB}/{pid}/photos", {"url": p["media_url"], "message": tekst, "access_token": ptok},
+                    "alt_text_custom", alt_teksten(p)[0])
         pk = r.get("post_id") or r["id"]
     elif fmt == "carrousel":
-        ids = [http("POST", f"{API_FB}/{pid}/photos", {"url": u, "published": "false", "access_token": ptok})["id"]
-               for u in p["media_urls"]]
+        alts = alt_teksten(p)
+        ids = [met_alt("POST", f"{API_FB}/{pid}/photos", {"url": u, "published": "false", "access_token": ptok},
+                       "alt_text_custom", alts[i] if i < len(alts) else alts[0])["id"]
+               for i, u in enumerate(p["media_urls"])]
         params = {"message": tekst, "access_token": ptok}
         for i, fid in enumerate(ids):
             params[f"attached_media[{i}]"] = json.dumps({"media_fbid": fid})
