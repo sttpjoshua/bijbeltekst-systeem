@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-09T20:15",
+ "gegenereerd": "2026-11-09T20:32",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -677,7 +677,7 @@
    "ref": "Spreuken 14:8",
    "tekst": "De wijsheid des kloekzinnigen is zijn weg te verstaan; maar dwaasheid der zotten is bedriegerij.",
    "hook": "Even rustig, voor je weer drie dingen tegelijk doet.",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "mint",
     "thema": "humor_herkenbaar",
@@ -712,12 +712,18 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-09-2.mp4"
    ],
    "thumb": "thumbs/2026-11-09-2.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "instagram",
+    "facebook"
+   ],
+   "links": {
+    "instagram": "https://www.instagram.com/reel/DfiFlbNiTXW/",
+    "facebook": "https://www.facebook.com/1467303815509397"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
-   "online": null
+   "online": "2026-11-09T20:32+01:00"
   },
   {
    "id": "2026-11-09-1",
@@ -725,7 +731,7 @@
    "ref": "Psalm 34:3",
    "tekst": "Mijn ziel zal zich beroemen in den HEERE; de zachtmoedigen zullen het horen en verblijd zijn.",
    "hook": "",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "zand",
     "thema": "moed",
@@ -763,10 +769,12 @@
    ],
    "thumb": "thumbs/2026-11-09-1.jpg",
    "platformen": [
-    "instagram"
+    "instagram",
+    "facebook"
    ],
    "links": {
-    "instagram": "https://www.instagram.com/p/DfgsXVZjSTp/"
+    "instagram": "https://www.instagram.com/p/DfgsXVZjSTp/",
+    "facebook": "https://www.facebook.com/1015160368352770_122134137746879910"
    },
    "totaal": {
     "views": 2,
@@ -1238,26 +1246,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-08T00:16",
-   "soort": "info",
-   "tekst": "Statistieken lezen werkt"
-  },
-  {
-   "t": "2026-11-08T00:17",
-   "soort": "info",
-   "tekst": "Bediening: Jesaja 43:19 goedgekeurd"
-  },
-  {
-   "t": "2026-11-08T00:18",
-   "soort": "info",
-   "tekst": "Bediening: Johannes 14:27 krijgt stijl hemelsblauw; wordt bij de avondcontrole (20:47) opnieuw gemaakt"
-  },
-  {
-   "t": "2026-11-08T00:21",
-   "soort": "info",
-   "tekst": "Johannes 14:27 opnieuw gemaakt in stijl hemelsblauw"
-  },
-  {
    "t": "2026-11-08T00:28",
    "soort": "info",
    "tekst": "Bediening: Muziek en foto's in GitHub: NIET beschikbaar, controleer MATERIAAL_PAT"
@@ -1539,6 +1527,26 @@
    "t": "2026-11-09T17:47:55",
    "soort": "info",
    "tekst": "2026-11-09-5 online op instagram: Johannes 14:1"
+  },
+  {
+   "t": "2026-11-09T20:30:46",
+   "soort": "info",
+   "tekst": "2026-11-09-1 online op facebook: Psalm 34:3"
+  },
+  {
+   "t": "2026-11-09T20:32:35",
+   "soort": "info",
+   "tekst": "2026-11-09-2 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-09T20:32:35",
+   "soort": "info",
+   "tekst": "2026-11-09-2 online op instagram: Spreuken 14:8"
+  },
+  {
+   "t": "2026-11-09T20:32:45",
+   "soort": "info",
+   "tekst": "2026-11-09-2 online op facebook: Spreuken 14:8"
   }
  ],
  "recente_fouten": [],
@@ -1615,9 +1623,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-09T17:47",
+   "ok": "2026-11-09T20:32",
    "laatst_ok": true,
-   "detail": "Johannes 14:1 geplaatst"
+   "detail": "Spreuken 14:8 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-09T13:48",
@@ -1649,9 +1657,9 @@
    "fout": "2026-11-08T18:00"
   },
   "facebook": {
-   "ok": "2026-11-09T12:17",
+   "ok": "2026-11-09T20:32",
    "laatst_ok": true,
-   "detail": "Johannes 14:1 geplaatst"
+   "detail": "Spreuken 14:8 geplaatst"
   },
   "statistieken": {
    "ok": "2026-11-09T13:48",
@@ -1691,10 +1699,10 @@
  ],
  "weken": {
   "deze": {
-   "posts": 8,
-   "reach": 72,
-   "views": 110,
-   "likes": 17,
+   "posts": 10,
+   "reach": 73,
+   "views": 112,
+   "likes": 19,
    "comments": 3,
    "saves": 0,
    "shares": 0
@@ -1778,7 +1786,7 @@
   "tot": "2026-11-14",
   "dag": 3,
   "dagen": 7,
-  "online": 8,
+  "online": 10,
   "gemeten": 0
  },
  "voorraad": {

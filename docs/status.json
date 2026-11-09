@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T20:15:26",
+ "updated": "2026-11-09T20:32:45",
  "agents": {
   "verskiezer": {
    "t": "2026-11-08T14:33:06",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-09T17:47:55",
-   "task": "Postte Johannes 14:1 op instagram",
+   "t": "2026-11-09T20:32:45",
+   "task": "Postte Spreuken 14:8 op facebook",
    "state": "done"
   },
   "controller": {
@@ -38,11 +38,11 @@
   }
  },
  "stats": {
-  "posts_today": 2,
-  "posts_total": 8,
+  "posts_today": 4,
+  "posts_total": 10,
   "reach_7d": 17,
   "best_time": "nog onbekend",
-  "next_post": "2026-11-09T07:30:00"
+  "next_post": "2026-11-09T22:00:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
@@ -56,6 +56,22 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "20:32",
+   "msg": "2026-11-09-2 online op facebook: Spreuken 14:8"
+  },
+  {
+   "t": "20:32",
+   "msg": "2026-11-09-2 online op instagram: Spreuken 14:8"
+  },
+  {
+   "t": "20:32",
+   "msg": "2026-11-09-2 ook als story geplaatst"
+  },
+  {
+   "t": "20:30",
+   "msg": "2026-11-09-1 online op facebook: Psalm 34:3"
+  },
   {
    "t": "17:47",
    "msg": "2026-11-09-5 online op instagram: Johannes 14:1"
@@ -87,22 +103,6 @@
   {
    "t": "13:02",
    "msg": "Verbinding met Facebook-pagina werkt (Bibleversenl)"
-  },
-  {
-   "t": "13:02",
-   "msg": "Token heeft alle rechten, ook voor statistieken"
-  },
-  {
-   "t": "13:02",
-   "msg": "Verbinding met Instagram werkt (@bibleverse_nl)"
-  },
-  {
-   "t": "12:17",
-   "msg": "2026-11-09-5 online op facebook: Johannes 14:1"
-  },
-  {
-   "t": "12:16",
-   "msg": "2026-11-09-3 online op instagram: Mattheüs 6:26"
   }
  ],
  "lampen": [

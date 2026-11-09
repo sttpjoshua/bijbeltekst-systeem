@@ -768,7 +768,7 @@
   "reeks_label": "MOED VOOR DE WEEK",
   "id": "2026-11-09-1",
   "datum": "2026-11-09",
-  "status": "gerenderd",
+  "status": "gepubliceerd",
   "vers_id": "Psalms-34-3-3",
   "ref": "Psalm 34:3",
   "tekst": "Mijn ziel zal zich beroemen in den HEERE; de zachtmoedigen zullen het horen en verblijd zijn.",
@@ -884,13 +884,18 @@
     "id": "18080070503772577",
     "url": "https://www.instagram.com/p/DfgsXVZjSTp/",
     "t": "2026-11-09T07:31+01:00"
+   },
+   "facebook": {
+    "id": "1015160368352770_122134137746879910",
+    "url": "https://www.facebook.com/1015160368352770_122134137746879910",
+    "t": "2026-11-09T20:30+01:00"
    }
   }
  },
  {
   "id": "2026-11-09-2",
   "datum": "2026-11-09",
-  "status": "gerenderd",
+  "status": "gepubliceerd",
   "vers_id": "Proverbs-14-8-8",
   "ref": "Spreuken 14:8",
   "tekst": "De wijsheid des kloekzinnigen is zijn weg te verstaan; maar dwaasheid der zotten is bedriegerij.",
@@ -983,7 +988,19 @@
    "kernwoord": "hoop"
   },
   "muziek_start": 50.3,
-  "cover_ms": 3750
+  "cover_ms": 3750,
+  "gepubliceerd": {
+   "instagram": {
+    "id": "18130706048476210",
+    "url": "https://www.instagram.com/reel/DfiFlbNiTXW/",
+    "t": "2026-11-09T20:32+01:00"
+   },
+   "facebook": {
+    "id": "1467303815509397",
+    "url": "https://www.facebook.com/1467303815509397",
+    "t": "2026-11-09T20:32+01:00"
+   }
+  }
  },
  {
   "id": "2026-11-09-3",
