@@ -506,5 +506,25 @@
   "t": "2026-11-09T12:17:07",
   "soort": "info",
   "tekst": "2026-11-09-5 online op facebook: Johannes 14:1"
+ },
+ {
+  "t": "2026-11-09T13:02:24",
+  "soort": "info",
+  "tekst": "Verbinding met Instagram werkt (@bibleverse_nl)"
+ },
+ {
+  "t": "2026-11-09T13:02:24",
+  "soort": "info",
+  "tekst": "Token heeft alle rechten, ook voor statistieken"
+ },
+ {
+  "t": "2026-11-09T13:02:26",
+  "soort": "info",
+  "tekst": "Verbinding met Facebook-pagina werkt (Bibleversenl)"
+ },
+ {
+  "t": "2026-11-09T13:02:28",
+  "soort": "info",
+  "tekst": "Statistieken lezen werkt"
  }
 ]

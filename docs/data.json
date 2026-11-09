@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-09T13:01",
+ "gegenereerd": "2026-11-09T13:03",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1226,26 +1226,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-07T22:48",
-   "soort": "info",
-   "tekst": "Statistieken lezen werkt"
-  },
-  {
-   "t": "2026-11-07T22:53",
-   "soort": "info",
-   "tekst": "Nieuwe frisse huisstijlen toegevoegd (zonsopgang, hemelsblauw, paars, roze, bosgroen, mint, perzik); donker 'avond' komt minder vaak. Posts van 8 november opnieuw gemaakt in de nieuwe stijlen."
-  },
-  {
-   "t": "2026-11-07T22:55",
-   "soort": "info",
-   "tekst": "Voorraad verzen aangevuld naar 300 (Statenvertaling): genoeg voor ongeveer 2 maanden bij 5 posts per dag"
-  },
-  {
-   "t": "2026-11-07T23:02",
-   "soort": "info",
-   "tekst": "Verzen uit de hele Bijbel: de Statenvertaling is doorzocht; losstaande verzen gaan mee als 'ontdekking'. Het systeem leert nu ook welk Bijbelboek, welke lengte en bekend of onbekend het best werkt."
-  },
-  {
    "t": "2026-11-07T23:13",
    "soort": "info",
    "tekst": "Bediening: Jesaja 43:19 goedgekeurd"
@@ -1527,6 +1507,26 @@
    "t": "2026-11-09T12:17:07",
    "soort": "info",
    "tekst": "2026-11-09-5 online op facebook: Johannes 14:1"
+  },
+  {
+   "t": "2026-11-09T13:02:24",
+   "soort": "info",
+   "tekst": "Verbinding met Instagram werkt (@bibleverse_nl)"
+  },
+  {
+   "t": "2026-11-09T13:02:24",
+   "soort": "info",
+   "tekst": "Token heeft alle rechten, ook voor statistieken"
+  },
+  {
+   "t": "2026-11-09T13:02:26",
+   "soort": "info",
+   "tekst": "Verbinding met Facebook-pagina werkt (Bibleversenl)"
+  },
+  {
+   "t": "2026-11-09T13:02:28",
+   "soort": "info",
+   "tekst": "Statistieken lezen werkt"
   }
  ],
  "recente_fouten": [],
@@ -1608,20 +1608,20 @@
    "detail": "Mattheüs 6:26 geplaatst"
   },
   "instagram_lezen": {
-   "ok": "2026-11-08T18:08",
+   "ok": "2026-11-09T13:02",
    "laatst_ok": true,
    "detail": "1 volgers"
   },
   "sleutel_instagram": {
    "verloopt": "nooit",
    "geldig": true,
-   "ok": "2026-11-08T18:08",
+   "ok": "2026-11-09T13:02",
    "laatst_ok": true
   },
   "sleutel_facebook": {
    "verloopt": "nooit",
    "geldig": true,
-   "ok": "2026-11-08T18:08",
+   "ok": "2026-11-09T13:02",
    "laatst_ok": true
   },
   "materiaal_actions": {
@@ -1647,7 +1647,7 @@
    "detail": "1 nieuwe metingen"
   },
   "zelftest": {
-   "ok": "2026-11-08T17:31",
+   "ok": "2026-11-09T13:03",
    "laatst_ok": true,
    "detail": "12 onderdelen gemaakt en gecontroleerd"
   },
@@ -1668,6 +1668,12 @@
    "datum": "2026-11-08",
    "instagram": 1,
    "ig_posts": 4,
+   "facebook": 0
+  },
+  {
+   "datum": "2026-11-09",
+   "instagram": 1,
+   "ig_posts": 8,
    "facebook": 0
   }
  ],

@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T13:01:09",
+ "updated": "2026-11-09T13:03:08",
  "agents": {
   "verskiezer": {
    "t": "2026-11-08T14:33:06",
@@ -22,8 +22,8 @@
    "state": "done"
   },
   "controller": {
-   "t": "2026-11-08T18:40:21",
-   "task": "Overleg aangevraagd: Claude maakt een tussentijdse analyse",
+   "t": "2026-11-09T13:02:24",
+   "task": "Controleerde de verbindingen",
    "state": "done"
   },
   "analist": {
@@ -57,6 +57,22 @@
  ],
  "log": [
   {
+   "t": "13:02",
+   "msg": "Statistieken lezen werkt"
+  },
+  {
+   "t": "13:02",
+   "msg": "Verbinding met Facebook-pagina werkt (Bibleversenl)"
+  },
+  {
+   "t": "13:02",
+   "msg": "Token heeft alle rechten, ook voor statistieken"
+  },
+  {
+   "t": "13:02",
+   "msg": "Verbinding met Instagram werkt (@bibleverse_nl)"
+  },
+  {
    "t": "12:17",
    "msg": "2026-11-09-5 online op facebook: Johannes 14:1"
   },
@@ -87,22 +103,6 @@
   {
    "t": "22:02",
    "msg": "2026-11-08-5 online op facebook: 2 Timotheüs 1:7"
-  },
-  {
-   "t": "22:01",
-   "msg": "2026-11-08-5 online op instagram: 2 Timotheüs 1:7"
-  },
-  {
-   "t": "22:01",
-   "msg": "2026-11-08-5 ook als story geplaatst"
-  },
-  {
-   "t": "20:32",
-   "msg": "2026-11-08-3 online op facebook: Johannes 14:27"
-  },
-  {
-   "t": "20:31",
-   "msg": "2026-11-08-3 online op instagram: Johannes 14:27"
   }
  ],
  "lampen": [
@@ -149,6 +149,7 @@
   "week": 1,
   "reeks": [
    0,
+   1,
    1
   ]
  },
