@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T17:47:55",
+ "updated": "2026-11-09T18:00:58",
  "agents": {
   "verskiezer": {
    "t": "2026-11-08T14:33:06",
@@ -57,20 +57,28 @@
  ],
  "log": [
   {
-   "t": "07:31",
-   "msg": "2026-11-09-4 online op facebook: Spreuken 5:1"
+   "t": "17:47",
+   "msg": "2026-11-09-5 online op instagram: Johannes 14:1"
   },
   {
-   "t": "12:16",
-   "msg": "2026-11-09-3 online op instagram: Mattheüs 6:26"
+   "t": "17:47",
+   "msg": "2026-11-09-5 ook als story geplaatst"
   },
   {
-   "t": "12:16",
-   "msg": "2026-11-09-3 ook als story geplaatst"
+   "t": "17:46",
+   "msg": "2026-11-09-5 online op instagram: Johannes 14:1"
   },
   {
-   "t": "12:17",
-   "msg": "2026-11-09-5 online op facebook: Johannes 14:1"
+   "t": "17:46",
+   "msg": "2026-11-09-5 ook als story geplaatst"
+  },
+  {
+   "t": "13:48",
+   "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
+  },
+  {
+   "t": "13:48",
+   "msg": "Statistieken opgehaald voor 6 posts"
   },
   {
    "t": "13:02",
@@ -89,28 +97,12 @@
    "msg": "Verbinding met Instagram werkt (@bibleverse_nl)"
   },
   {
-   "t": "13:48",
-   "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
+   "t": "12:17",
+   "msg": "2026-11-09-5 online op facebook: Johannes 14:1"
   },
   {
-   "t": "13:48",
-   "msg": "Statistieken opgehaald voor 6 posts"
-  },
-  {
-   "t": "17:46",
-   "msg": "2026-11-09-5 online op instagram: Johannes 14:1"
-  },
-  {
-   "t": "17:46",
-   "msg": "2026-11-09-5 ook als story geplaatst"
-  },
-  {
-   "t": "17:47",
-   "msg": "2026-11-09-5 online op instagram: Johannes 14:1"
-  },
-  {
-   "t": "17:47",
-   "msg": "2026-11-09-5 ook als story geplaatst"
+   "t": "12:16",
+   "msg": "2026-11-09-3 online op instagram: Mattheüs 6:26"
   }
  ],
  "lampen": [
