@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-08T22:02",
+ "gegenereerd": "2026-11-09T07:31",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -526,12 +526,16 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-09-4-3.jpg"
    ],
    "thumb": "thumbs/2026-11-09-4.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "facebook"
+   ],
+   "links": {
+    "facebook": "https://www.facebook.com/1015160368352770_122134087484879910"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
-   "online": null
+   "online": "2026-11-09T07:31+01:00"
   },
   {
    "id": "2026-11-09-3",
@@ -574,12 +578,16 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-09-3.mp4"
    ],
    "thumb": "thumbs/2026-11-09-3.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "facebook"
+   ],
+   "links": {
+    "facebook": "https://www.facebook.com/1633398588289248"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
-   "online": null
+   "online": "2026-11-09T07:31+01:00"
   },
   {
    "id": "2026-11-09-2",
@@ -672,12 +680,16 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-09-1-4.jpg"
    ],
    "thumb": "thumbs/2026-11-09-1.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "instagram"
+   ],
+   "links": {
+    "instagram": "https://www.instagram.com/p/DfgsXVZjSTp/"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
-   "online": null
+   "online": "2026-11-09T07:31+01:00"
   },
   {
    "id": "2026-11-08-5",
@@ -1098,26 +1110,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-07T15:19",
-   "soort": "info",
-   "tekst": "Bediening: Posts per dag ingesteld op 3"
-  },
-  {
-   "t": "2026-11-07T15:19",
-   "soort": "info",
-   "tekst": "Bediening: Snel leren aangezet tot 2026-11-14: 5 posts per dag, elke dag leren"
-  },
-  {
-   "t": "2026-11-07T22:24",
-   "soort": "info",
-   "tekst": "4 extra posts voor 8 november gemaakt (snel leren stond na de dagelijkse run aan)"
-  },
-  {
-   "t": "2026-11-07T22:30",
-   "soort": "info",
-   "tekst": "Te weinig posts voor 2026-11-07: verwacht, snel leren ging vandaag pas aan (geen fout)"
-  },
-  {
    "t": "2026-11-07T22:48",
    "soort": "info",
    "tekst": "Verbinding met Instagram werkt (@bibleverse_nl)"
@@ -1399,6 +1391,26 @@
    "t": "2026-11-08T22:02:06",
    "soort": "info",
    "tekst": "2026-11-08-5 online op facebook: 2 Timotheüs 1:7"
+  },
+  {
+   "t": "2026-11-09T07:31:41",
+   "soort": "info",
+   "tekst": "2026-11-09-1 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-09T07:31:41",
+   "soort": "info",
+   "tekst": "2026-11-09-1 online op instagram: Psalm 34:3"
+  },
+  {
+   "t": "2026-11-09T07:31:49",
+   "soort": "info",
+   "tekst": "2026-11-09-3 online op facebook: Mattheüs 6:26"
+  },
+  {
+   "t": "2026-11-09T07:31:56",
+   "soort": "info",
+   "tekst": "2026-11-09-4 online op facebook: Spreuken 5:1"
   }
  ],
  "recente_fouten": [],
@@ -1475,9 +1487,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-08T22:01",
+   "ok": "2026-11-09T07:31",
    "laatst_ok": true,
-   "detail": "2 Timotheüs 1:7 geplaatst"
+   "detail": "Psalm 34:3 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-08T18:08",
@@ -1503,15 +1515,15 @@
    "ok": "2026-11-08T00:36"
   },
   "reacties": {
-   "ok": "2026-11-08T22:00",
+   "ok": "2026-11-09T07:00",
    "laatst_ok": true,
    "detail": "0 nieuwe reacties",
    "fout": "2026-11-08T18:00"
   },
   "facebook": {
-   "ok": "2026-11-08T22:02",
+   "ok": "2026-11-09T07:31",
    "laatst_ok": true,
-   "detail": "2 Timotheüs 1:7 geplaatst"
+   "detail": "Spreuken 5:1 geplaatst"
   },
   "statistieken": {
    "ok": "2026-11-08T12:15",
@@ -1630,7 +1642,7 @@
  "snel_leren": {
   "start": "2026-11-07",
   "tot": "2026-11-14",
-  "dag": 2,
+  "dag": 3,
   "dagen": 7,
   "online": 6,
   "gemeten": 0
