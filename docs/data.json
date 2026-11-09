@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-09T17:46",
+ "gegenereerd": "2026-11-09T17:47",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -483,7 +483,7 @@
    ],
    "links": {
     "facebook": "https://www.facebook.com/1015160368352770_122134103162879910",
-    "instagram": "https://www.instagram.com/p/DfhysjRj5bA/"
+    "instagram": "https://www.instagram.com/p/Dfhy5Jdl-rt/"
    },
    "totaal": {
     "views": 0,
@@ -1529,6 +1529,16 @@
    "t": "2026-11-09T17:46:17",
    "soort": "info",
    "tekst": "2026-11-09-5 online op instagram: Johannes 14:1"
+  },
+  {
+   "t": "2026-11-09T17:47:55",
+   "soort": "info",
+   "tekst": "2026-11-09-5 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-09T17:47:55",
+   "soort": "info",
+   "tekst": "2026-11-09-5 online op instagram: Johannes 14:1"
   }
  ],
  "recente_fouten": [],
@@ -1605,7 +1615,7 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-09T17:46",
+   "ok": "2026-11-09T17:47",
    "laatst_ok": true,
    "detail": "Johannes 14:1 geplaatst"
   },
