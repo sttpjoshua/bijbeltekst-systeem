@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T17:30:37",
+ "updated": "2026-11-09T17:46:18",
  "agents": {
   "verskiezer": {
    "t": "2026-11-08T14:33:06",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-09T12:17:07",
-   "task": "Postte Johannes 14:1 op facebook",
+   "t": "2026-11-09T17:46:17",
+   "task": "Postte Johannes 14:1 op instagram",
    "state": "done"
   },
   "controller": {
@@ -38,8 +38,8 @@
   }
  },
  "stats": {
-  "posts_today": 1,
-  "posts_total": 7,
+  "posts_today": 2,
+  "posts_total": 8,
   "reach_7d": 17,
   "best_time": "nog onbekend",
   "next_post": "2026-11-09T07:30:00"
@@ -56,6 +56,14 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "17:46",
+   "msg": "2026-11-09-5 online op instagram: Johannes 14:1"
+  },
+  {
+   "t": "17:46",
+   "msg": "2026-11-09-5 ook als story geplaatst"
+  },
   {
    "t": "13:48",
    "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
@@ -95,14 +103,6 @@
   {
    "t": "07:31",
    "msg": "2026-11-09-4 online op facebook: Spreuken 5:1"
-  },
-  {
-   "t": "07:31",
-   "msg": "2026-11-09-3 online op facebook: Mattheüs 6:26"
-  },
-  {
-   "t": "07:31",
-   "msg": "2026-11-09-1 online op instagram: Psalm 34:3"
   }
  ],
  "lampen": [
@@ -118,8 +118,8 @@
   },
   {
    "naam": "Dagelijkse taak",
-   "kleur": "groen",
-   "tekst": "ok"
+   "kleur": "oranje",
+   "tekst": "te lang stil"
   },
   {
    "naam": "Avondcontrole",

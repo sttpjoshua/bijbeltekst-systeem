@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-09T17:30",
+ "gegenereerd": "2026-11-09T17:46",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -440,7 +440,7 @@
    "ref": "Johannes 14:1",
    "tekst": "Uw hart worde niet ontroerd; gijlieden gelooft in God, gelooft ook in Mij.",
    "hook": "Noem één ding dat je onrustig maakt, en leg het dan neer.",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "zonsopgang",
     "thema": "troost",
@@ -478,10 +478,12 @@
    ],
    "thumb": "thumbs/2026-11-09-5.jpg",
    "platformen": [
-    "facebook"
+    "facebook",
+    "instagram"
    ],
    "links": {
-    "facebook": "https://www.facebook.com/1015160368352770_122134103162879910"
+    "facebook": "https://www.facebook.com/1015160368352770_122134103162879910",
+    "instagram": "https://www.instagram.com/p/DfhysjRj5bA/"
    },
    "totaal": {
     "views": 0,
@@ -1226,16 +1228,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-07T23:38",
-   "soort": "info",
-   "tekst": "Carrousels hebben nu één doorlopende achtergrond over de drie slides; bij een foto loopt die zacht over in een rustige, vervaagde versie."
-  },
-  {
-   "t": "2026-11-08T00:16",
-   "soort": "info",
-   "tekst": "Verbinding met Instagram werkt (@bibleverse_nl)"
-  },
-  {
    "t": "2026-11-08T00:16",
    "soort": "info",
    "tekst": "Token heeft alle rechten, ook voor statistieken"
@@ -1527,6 +1519,16 @@
    "t": "2026-11-09T13:48:49",
    "soort": "info",
    "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
+  },
+  {
+   "t": "2026-11-09T17:46:17",
+   "soort": "info",
+   "tekst": "2026-11-09-5 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-09T17:46:17",
+   "soort": "info",
+   "tekst": "2026-11-09-5 online op instagram: Johannes 14:1"
   }
  ],
  "recente_fouten": [],
@@ -1603,9 +1605,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-09T12:16",
+   "ok": "2026-11-09T17:46",
    "laatst_ok": true,
-   "detail": "Mattheüs 6:26 geplaatst"
+   "detail": "Johannes 14:1 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-09T13:48",
@@ -1679,7 +1681,7 @@
  ],
  "weken": {
   "deze": {
-   "posts": 7,
+   "posts": 8,
    "reach": 72,
    "views": 110,
    "likes": 17,
@@ -1766,7 +1768,7 @@
   "tot": "2026-11-14",
   "dag": 3,
   "dagen": 7,
-  "online": 7,
+  "online": 8,
   "gemeten": 0
  },
  "voorraad": {

@@ -1246,7 +1246,7 @@
  {
   "id": "2026-11-09-5",
   "datum": "2026-11-09",
-  "status": "gerenderd",
+  "status": "gepubliceerd",
   "vers_id": "John-14-1-1",
   "ref": "Johannes 14:1",
   "tekst": "Uw hart worde niet ontroerd; gijlieden gelooft in God, gelooft ook in Mij.",
@@ -1364,6 +1364,11 @@
     "id": "1015160368352770_122134103162879910",
     "url": "https://www.facebook.com/1015160368352770_122134103162879910",
     "t": "2026-11-09T12:17+01:00"
+   },
+   "instagram": {
+    "id": "18119035237994749",
+    "url": "https://www.instagram.com/p/DfhysjRj5bA/",
+    "t": "2026-11-09T17:46+01:00"
    }
   }
  },
