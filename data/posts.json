@@ -43,7 +43,7 @@
   "stats": {
    "instagram": {
     "laatst": {
-     "t": "2026-11-09T19:00+01:00",
+     "t": "2026-11-09T22:00+01:00",
      "views": 12,
      "reach": 8,
      "likes": 3,
@@ -126,7 +126,7 @@
   "stats": {
    "instagram": {
     "laatst": {
-     "t": "2026-11-09T19:00+01:00",
+     "t": "2026-11-09T22:00+01:00",
      "views": 15,
      "reach": 5,
      "likes": 3,
@@ -149,7 +149,7 @@
    },
    "facebook": {
     "laatst": {
-     "t": "2026-11-09T19:00+01:00",
+     "t": "2026-11-09T22:00+01:00",
      "views": null,
      "reach": null,
      "likes": 0,
@@ -271,7 +271,7 @@
   "stats": {
    "instagram": {
     "laatst": {
-     "t": "2026-11-09T19:00+01:00",
+     "t": "2026-11-09T22:00+01:00",
      "views": 6,
      "reach": 2,
      "likes": 3,
@@ -294,7 +294,7 @@
    },
    "facebook": {
     "laatst": {
-     "t": "2026-11-09T19:00+01:00",
+     "t": "2026-11-09T22:00+01:00",
      "views": null,
      "reach": null,
      "likes": 0,
@@ -418,7 +418,7 @@
   "stats": {
    "instagram": {
     "laatst": {
-     "t": "2026-11-09T19:00+01:00",
+     "t": "2026-11-09T22:00+01:00",
      "views": 60,
      "reach": 53,
      "likes": 3,
@@ -431,7 +431,7 @@
    },
    "facebook": {
     "laatst": {
-     "t": "2026-11-09T19:00+01:00",
+     "t": "2026-11-09T22:00+01:00",
      "views": 2,
      "reach": null,
      "likes": null,
@@ -540,7 +540,7 @@
   "stats": {
    "instagram": {
     "laatst": {
-     "t": "2026-11-09T19:00+01:00",
+     "t": "2026-11-09T22:00+01:00",
      "views": 13,
      "reach": 3,
      "likes": 2,
@@ -563,7 +563,7 @@
    },
    "facebook": {
     "laatst": {
-     "t": "2026-11-09T19:00+01:00",
+     "t": "2026-11-09T22:00+01:00",
      "views": null,
      "reach": null,
      "likes": 0,
@@ -686,7 +686,7 @@
   "stats": {
    "instagram": {
     "laatst": {
-     "t": "2026-11-09T19:00+01:00",
+     "t": "2026-11-09T22:00+01:00",
      "views": 2,
      "reach": 1,
      "likes": 2,
@@ -699,7 +699,7 @@
    },
    "facebook": {
     "laatst": {
-     "t": "2026-11-09T19:00+01:00",
+     "t": "2026-11-09T22:00+01:00",
      "views": null,
      "reach": null,
      "likes": 0,
@@ -826,7 +826,7 @@
   "stats": {
    "instagram": {
     "laatst": {
-     "t": "2026-11-09T19:00+01:00",
+     "t": "2026-11-09T22:00+01:00",
      "views": 2,
      "reach": 1,
      "likes": 2,
@@ -834,6 +834,19 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
+     "avg_watch_ms": null
+    }
+   },
+   "facebook": {
+    "laatst": {
+     "t": "2026-11-09T22:00+01:00",
+     "views": null,
+     "reach": null,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": null,
+     "follows": null,
      "avg_watch_ms": null
     }
    }
@@ -952,7 +965,34 @@
   "media": "docs/media/2026-11/2026-11-09-2.mp4",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-09-2.mp4",
   "metricool": {},
-  "stats": {},
+  "stats": {
+   "instagram": {
+    "laatst": {
+     "t": "2026-11-09T22:00+01:00",
+     "views": 4,
+     "reach": 1,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "avg_watch_ms": 1445
+    }
+   },
+   "facebook": {
+    "laatst": {
+     "t": "2026-11-09T22:00+01:00",
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "avg_watch_ms": null
+    }
+   }
+  },
   "beeld": null,
   "muziek": "ES_Samadhi (Alpha 10 hz) - Syntropy.mp3",
   "geluid": null,
@@ -1066,7 +1106,7 @@
   "stats": {
    "facebook": {
     "laatst": {
-     "t": "2026-11-09T19:00+01:00",
+     "t": "2026-11-09T22:00+01:00",
      "views": 0,
      "reach": null,
      "likes": null,
@@ -1079,7 +1119,7 @@
    },
    "instagram": {
     "laatst": {
-     "t": "2026-11-09T19:00+01:00",
+     "t": "2026-11-09T22:00+01:00",
      "views": 0,
      "reach": 0,
      "likes": 1,
@@ -1143,7 +1183,7 @@
  {
   "id": "2026-11-09-4",
   "datum": "2026-11-09",
-  "status": "gerenderd",
+  "status": "gepubliceerd",
   "vers_id": "Proverbs-5-1-1",
   "ref": "Spreuken 5:1",
   "tekst": "Mijn zoon! merk op mijn wijsheid, neig uw oor tot mijn verstand.",
@@ -1201,7 +1241,7 @@
   "stats": {
    "facebook": {
     "laatst": {
-     "t": "2026-11-09T19:00+01:00",
+     "t": "2026-11-09T22:00+01:00",
      "views": null,
      "reach": null,
      "likes": 0,
@@ -1257,6 +1297,11 @@
     "id": "1015160368352770_122134087484879910",
     "url": "https://www.facebook.com/1015160368352770_122134087484879910",
     "t": "2026-11-09T07:31+01:00"
+   },
+   "instagram": {
+    "id": "18191770855408969",
+    "url": "https://www.instagram.com/p/DfiP8tiF7-P/",
+    "t": "2026-11-09T22:01+01:00"
    }
   }
  },
@@ -1322,7 +1367,7 @@
   "stats": {
    "facebook": {
     "laatst": {
-     "t": "2026-11-09T19:00+01:00",
+     "t": "2026-11-09T22:00+01:00",
      "views": null,
      "reach": null,
      "likes": 0,
@@ -1335,7 +1380,7 @@
    },
    "instagram": {
     "laatst": {
-     "t": "2026-11-09T19:00+01:00",
+     "t": "2026-11-09T22:00+01:00",
      "views": 0,
      "reach": 0,
      "likes": 0,
