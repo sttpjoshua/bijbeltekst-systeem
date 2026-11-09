@@ -43,7 +43,7 @@
   "stats": {
    "instagram": {
     "laatst": {
-     "t": "2026-11-08T22:00+01:00",
+     "t": "2026-11-09T10:00+01:00",
      "views": 12,
      "reach": 8,
      "likes": 3,
@@ -126,8 +126,8 @@
   "stats": {
    "instagram": {
     "laatst": {
-     "t": "2026-11-08T22:00+01:00",
-     "views": 14,
+     "t": "2026-11-09T10:00+01:00",
+     "views": 15,
      "reach": 5,
      "likes": 3,
      "comments": 0,
@@ -139,7 +139,7 @@
    },
    "facebook": {
     "laatst": {
-     "t": "2026-11-08T22:00+01:00",
+     "t": "2026-11-09T10:00+01:00",
      "views": null,
      "reach": null,
      "likes": 0,
@@ -251,7 +251,7 @@
   "stats": {
    "instagram": {
     "laatst": {
-     "t": "2026-11-08T22:00+01:00",
+     "t": "2026-11-09T10:00+01:00",
      "views": 6,
      "reach": 2,
      "likes": 3,
@@ -264,7 +264,7 @@
    },
    "facebook": {
     "laatst": {
-     "t": "2026-11-08T22:00+01:00",
+     "t": "2026-11-09T10:00+01:00",
      "views": null,
      "reach": null,
      "likes": 0,
@@ -378,20 +378,20 @@
   "stats": {
    "instagram": {
     "laatst": {
-     "t": "2026-11-08T22:00+01:00",
-     "views": 30,
-     "reach": 17,
+     "t": "2026-11-09T10:00+01:00",
+     "views": 60,
+     "reach": 53,
      "likes": 3,
      "comments": 0,
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "avg_watch_ms": 1947
+     "avg_watch_ms": 1690
     }
    },
    "facebook": {
     "laatst": {
-     "t": "2026-11-08T22:00+01:00",
+     "t": "2026-11-09T10:00+01:00",
      "views": 2,
      "reach": null,
      "likes": null,
@@ -500,9 +500,9 @@
   "stats": {
    "instagram": {
     "laatst": {
-     "t": "2026-11-08T22:00+01:00",
-     "views": 11,
-     "reach": 2,
+     "t": "2026-11-09T10:00+01:00",
+     "views": 13,
+     "reach": 3,
      "likes": 2,
      "comments": 0,
      "shares": 0,
@@ -513,7 +513,7 @@
    },
    "facebook": {
     "laatst": {
-     "t": "2026-11-08T22:00+01:00",
+     "t": "2026-11-09T10:00+01:00",
      "views": null,
      "reach": null,
      "likes": 0,
@@ -623,7 +623,34 @@
   "media": "docs/media/2026-11/2026-11-08-5-1.jpg",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-08-5-1.jpg",
   "metricool": {},
-  "stats": {},
+  "stats": {
+   "instagram": {
+    "laatst": {
+     "t": "2026-11-09T10:00+01:00",
+     "views": 2,
+     "reach": 1,
+     "likes": 1,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": 0,
+     "avg_watch_ms": null
+    }
+   },
+   "facebook": {
+    "laatst": {
+     "t": "2026-11-09T10:00+01:00",
+     "views": null,
+     "reach": null,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": null,
+     "follows": null,
+     "avg_watch_ms": null
+    }
+   }
+  },
   "beeld": "pexels-brunoabdiel-5396622.jpg",
   "muziek": null,
   "geluid": null,
@@ -736,7 +763,21 @@
   "media": "docs/media/2026-11/2026-11-09-1-1.jpg",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-09-1-1.jpg",
   "metricool": {},
-  "stats": {},
+  "stats": {
+   "instagram": {
+    "laatst": {
+     "t": "2026-11-09T10:00+01:00",
+     "views": 2,
+     "reach": 1,
+     "likes": 1,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": 0,
+     "avg_watch_ms": null
+    }
+   }
+  },
   "beeld": null,
   "muziek": null,
   "geluid": null,
@@ -945,7 +986,21 @@
   "media": "docs/media/2026-11/2026-11-09-3.mp4",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-09-3.mp4",
   "metricool": {},
-  "stats": {},
+  "stats": {
+   "facebook": {
+    "laatst": {
+     "t": "2026-11-09T10:00+01:00",
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "avg_watch_ms": null
+    }
+   }
+  },
   "beeld": null,
   "muziek": "ES_Meditations - Drift Far Away.mp3",
   "geluid": null,
@@ -1048,7 +1103,21 @@
   "media": "docs/media/2026-11/2026-11-09-4-1.jpg",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-09-4-1.jpg",
   "metricool": {},
-  "stats": {},
+  "stats": {
+   "facebook": {
+    "laatst": {
+     "t": "2026-11-09T10:00+01:00",
+     "views": null,
+     "reach": null,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": null,
+     "follows": null,
+     "avg_watch_ms": null
+    }
+   }
+  },
   "beeld": null,
   "muziek": null,
   "geluid": null,
