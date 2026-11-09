@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-09T12:00",
+ "gegenereerd": "2026-11-09T12:17",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -477,12 +477,16 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-09-5-4.jpg"
    ],
    "thumb": "thumbs/2026-11-09-5.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "facebook"
+   ],
+   "links": {
+    "facebook": "https://www.facebook.com/1015160368352770_122134103162879910"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
-   "online": null
+   "online": "2026-11-09T12:17+01:00"
   },
   {
    "id": "2026-11-09-4",
@@ -561,7 +565,7 @@
    "ref": "Mattheüs 6:26",
    "tekst": "Aanziet de vogelen des hemels, dat zij niet zaaien, noch maaien, noch verzamelen in de schuren; en uw hemelse Vader voedt nochtans dezelve; gaat gij dezelve niet zeer veel te boven?",
    "hook": "Kijk vandaag één keer bewust naar een vogel.",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "salie",
     "thema": "vertrouwen",
@@ -597,10 +601,12 @@
    ],
    "thumb": "thumbs/2026-11-09-3.jpg",
    "platformen": [
-    "facebook"
+    "facebook",
+    "instagram"
    ],
    "links": {
-    "facebook": "https://www.facebook.com/1633398588289248"
+    "facebook": "https://www.facebook.com/1633398588289248",
+    "instagram": "https://www.instagram.com/reel/DfhM74GMg9b/"
    },
    "totaal": {
     "views": 0,
@@ -1194,21 +1200,6 @@
   {
    "t": "2026-11-07T22:48",
    "soort": "info",
-   "tekst": "Verbinding met Instagram werkt (@bibleverse_nl)"
-  },
-  {
-   "t": "2026-11-07T22:48",
-   "soort": "info",
-   "tekst": "Token heeft alle rechten, ook voor statistieken"
-  },
-  {
-   "t": "2026-11-07T22:48",
-   "soort": "info",
-   "tekst": "Verbinding met Facebook-pagina werkt (Bibleversenl)"
-  },
-  {
-   "t": "2026-11-07T22:48",
-   "soort": "info",
    "tekst": "Statistieken lezen werkt"
   },
   {
@@ -1493,6 +1484,21 @@
    "t": "2026-11-09T07:31:56",
    "soort": "info",
    "tekst": "2026-11-09-4 online op facebook: Spreuken 5:1"
+  },
+  {
+   "t": "2026-11-09T12:16:56",
+   "soort": "info",
+   "tekst": "2026-11-09-3 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-09T12:16:56",
+   "soort": "info",
+   "tekst": "2026-11-09-3 online op instagram: Mattheüs 6:26"
+  },
+  {
+   "t": "2026-11-09T12:17:07",
+   "soort": "info",
+   "tekst": "2026-11-09-5 online op facebook: Johannes 14:1"
   }
  ],
  "recente_fouten": [],
@@ -1569,9 +1575,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-09T07:31",
+   "ok": "2026-11-09T12:16",
    "laatst_ok": true,
-   "detail": "Psalm 34:3 geplaatst"
+   "detail": "Mattheüs 6:26 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-08T18:08",
@@ -1603,9 +1609,9 @@
    "fout": "2026-11-08T18:00"
   },
   "facebook": {
-   "ok": "2026-11-09T07:31",
+   "ok": "2026-11-09T12:17",
    "laatst_ok": true,
-   "detail": "Spreuken 5:1 geplaatst"
+   "detail": "Johannes 14:1 geplaatst"
   },
   "statistieken": {
    "ok": "2026-11-08T12:15",
@@ -1639,7 +1645,7 @@
  ],
  "weken": {
   "deze": {
-   "posts": 6,
+   "posts": 7,
    "reach": 72,
    "views": 110,
    "likes": 15,
@@ -1726,7 +1732,7 @@
   "tot": "2026-11-14",
   "dag": 3,
   "dagen": 7,
-  "online": 6,
+  "online": 7,
   "gemeten": 0
  },
  "voorraad": {

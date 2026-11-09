@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T12:00:56",
+ "updated": "2026-11-09T12:17:08",
  "agents": {
   "verskiezer": {
    "t": "2026-11-08T14:33:06",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-09T07:31:56",
-   "task": "Postte Spreuken 5:1 op facebook",
+   "t": "2026-11-09T12:17:07",
+   "task": "Postte Johannes 14:1 op facebook",
    "state": "done"
   },
   "controller": {
@@ -38,8 +38,8 @@
   }
  },
  "stats": {
-  "posts_today": 0,
-  "posts_total": 6,
+  "posts_today": 1,
+  "posts_total": 7,
   "reach_7d": 7,
   "best_time": "nog onbekend",
   "next_post": "2026-11-09T07:30:00"
@@ -56,6 +56,18 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "12:17",
+   "msg": "2026-11-09-5 online op facebook: Johannes 14:1"
+  },
+  {
+   "t": "12:16",
+   "msg": "2026-11-09-3 online op instagram: Mattheüs 6:26"
+  },
+  {
+   "t": "12:16",
+   "msg": "2026-11-09-3 ook als story geplaatst"
+  },
   {
    "t": "07:31",
    "msg": "2026-11-09-4 online op facebook: Spreuken 5:1"
@@ -91,18 +103,6 @@
   {
    "t": "20:31",
    "msg": "2026-11-08-3 online op instagram: Johannes 14:27"
-  },
-  {
-   "t": "20:31",
-   "msg": "2026-11-08-3 ook als story geplaatst"
-  },
-  {
-   "t": "18:40",
-   "msg": "Bediening: Overleg aangevraagd: Claude maakt een tussentijdse analyse"
-  },
-  {
-   "t": "18:27",
-   "msg": "Bediening: Openstaande fouten als opgelost gemarkeerd"
   }
  ],
  "lampen": [
