@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-10T17:30",
+ "gegenereerd": "2026-11-10T17:46",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -266,7 +266,7 @@
    "ref": "Spreuken 26:15",
    "tekst": "De luiaard verbergt zijn hand in den boezem, hij is te moede, om die weder tot zijn mond te brengen.",
    "hook": "Rustig aan, maar niet té rustig.",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "perzik",
     "thema": "humor_herkenbaar",
@@ -303,12 +303,18 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-10-4-4.jpg"
    ],
    "thumb": "thumbs/2026-11-10-4.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "instagram",
+    "facebook"
+   ],
+   "links": {
+    "instagram": "https://www.instagram.com/p/DfkXgntl3On/",
+    "facebook": "https://www.facebook.com/1015160368352770_122134228550879910"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
-   "online": null
+   "online": "2026-11-10T17:46+01:00"
   },
   {
    "id": "2026-11-10-3",
@@ -1344,21 +1350,6 @@
   {
    "t": "2026-11-08T12:15",
    "soort": "info",
-   "tekst": "Statistieken opgehaald voor 1 posts"
-  },
-  {
-   "t": "2026-11-08T12:15",
-   "soort": "info",
-   "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
-  },
-  {
-   "t": "2026-11-08T12:15",
-   "soort": "info",
-   "tekst": "2026-11-08-4 ook als story geplaatst"
-  },
-  {
-   "t": "2026-11-08T12:15",
-   "soort": "info",
    "tekst": "2026-11-08-4 online op instagram: Psalm 23:1"
   },
   {
@@ -1643,6 +1634,21 @@
    "t": "2026-11-10T13:36:03",
    "soort": "info",
    "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
+  },
+  {
+   "t": "2026-11-10T17:46:22",
+   "soort": "info",
+   "tekst": "2026-11-10-4 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-10T17:46:22",
+   "soort": "info",
+   "tekst": "2026-11-10-4 online op instagram: Spreuken 26:15"
+  },
+  {
+   "t": "2026-11-10T17:46:33",
+   "soort": "info",
+   "tekst": "2026-11-10-4 online op facebook: Spreuken 26:15"
   }
  ],
  "recente_fouten": [],
@@ -1737,9 +1743,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-10T12:16",
+   "ok": "2026-11-10T17:46",
    "laatst_ok": true,
-   "detail": "Jesaja 26:3 geplaatst"
+   "detail": "Spreuken 26:15 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-10T13:35",
@@ -1771,9 +1777,9 @@
    "fout": "2026-11-08T18:00"
   },
   "facebook": {
-   "ok": "2026-11-09T20:32",
+   "ok": "2026-11-10T17:46",
    "laatst_ok": true,
-   "detail": "Spreuken 14:8 geplaatst"
+   "detail": "Spreuken 26:15 geplaatst"
   },
   "statistieken": {
    "ok": "2026-11-10T13:36",
@@ -1819,7 +1825,7 @@
  ],
  "weken": {
   "deze": {
-   "posts": 11,
+   "posts": 12,
    "reach": 82,
    "views": 126,
    "likes": 20,
@@ -1978,7 +1984,7 @@
   "tot": "2026-11-14",
   "dag": 4,
   "dagen": 7,
-  "online": 11,
+  "online": 12,
   "gemeten": 1
  },
  "voorraad": {

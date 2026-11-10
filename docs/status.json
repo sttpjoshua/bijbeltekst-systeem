@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T17:30:37",
+ "updated": "2026-11-10T17:46:33",
  "agents": {
   "verskiezer": {
    "t": "2026-11-08T14:33:06",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-10T12:16:19",
-   "task": "Postte Jesaja 26:3 op instagram",
+   "t": "2026-11-10T17:46:33",
+   "task": "Postte Spreuken 26:15 op facebook",
    "state": "done"
   },
   "controller": {
@@ -38,8 +38,8 @@
   }
  },
  "stats": {
-  "posts_today": 0,
-  "posts_total": 11,
+  "posts_today": 1,
+  "posts_total": 12,
   "reach_7d": 75,
   "best_time": "nog onbekend",
   "next_post": "2026-11-10T07:30:00"
@@ -56,6 +56,18 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "17:46",
+   "msg": "2026-11-10-4 online op facebook: Spreuken 26:15"
+  },
+  {
+   "t": "17:46",
+   "msg": "2026-11-10-4 online op instagram: Spreuken 26:15"
+  },
+  {
+   "t": "17:46",
+   "msg": "2026-11-10-4 ook als story geplaatst"
+  },
   {
    "t": "13:36",
    "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
@@ -91,18 +103,6 @@
   {
    "t": "20:32",
    "msg": "2026-11-09-2 online op facebook: Spreuken 14:8"
-  },
-  {
-   "t": "20:32",
-   "msg": "2026-11-09-2 online op instagram: Spreuken 14:8"
-  },
-  {
-   "t": "20:32",
-   "msg": "2026-11-09-2 ook als story geplaatst"
-  },
-  {
-   "t": "20:30",
-   "msg": "2026-11-09-1 online op facebook: Psalm 34:3"
   }
  ],
  "lampen": [
