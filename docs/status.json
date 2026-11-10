@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T22:01:59",
+ "updated": "2026-11-10T07:31:28",
  "agents": {
   "verskiezer": {
    "t": "2026-11-08T14:33:06",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-09T22:01:59",
-   "task": "Postte Spreuken 5:1 op instagram",
+   "t": "2026-11-10T07:31:28",
+   "task": "Postte Psalm 30:3 op instagram",
    "state": "done"
   },
   "controller": {
@@ -38,7 +38,7 @@
   }
  },
  "stats": {
-  "posts_today": 5,
+  "posts_today": 0,
   "posts_total": 11,
   "reach_7d": 17,
   "best_time": "nog onbekend",
@@ -56,6 +56,14 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "07:31",
+   "msg": "2026-11-10-3 online op instagram: Psalm 30:3"
+  },
+  {
+   "t": "07:31",
+   "msg": "2026-11-10-3 ook als story geplaatst"
+  },
   {
    "t": "22:01",
    "msg": "2026-11-09-4 online op instagram: Spreuken 5:1"
@@ -95,14 +103,6 @@
   {
    "t": "17:46",
    "msg": "2026-11-09-5 ook als story geplaatst"
-  },
-  {
-   "t": "13:48",
-   "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
-  },
-  {
-   "t": "13:48",
-   "msg": "Statistieken opgehaald voor 6 posts"
   }
  ],
  "lampen": [
@@ -161,7 +161,7 @@
   "formaat": "video"
  },
  "snel_leren": {
-  "dag": 3,
+  "dag": 4,
   "dagen": 7,
   "tot": "2026-11-14"
  }

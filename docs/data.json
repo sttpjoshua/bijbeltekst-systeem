@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-09T22:01",
+ "gegenereerd": "2026-11-10T07:31",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -330,12 +330,16 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-10-3-3.jpg"
    ],
    "thumb": "thumbs/2026-11-10-3.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "instagram"
+   ],
+   "links": {
+    "instagram": "https://www.instagram.com/p/DfjRIpQF3Fc/"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
-   "online": null
+   "online": "2026-11-10T07:31+01:00"
   },
   {
    "id": "2026-11-10-2",
@@ -1286,16 +1290,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-08T00:37",
-   "soort": "info",
-   "tekst": "Bediening: Psalm 23:1 opnieuw gemaakt in stijl mint"
-  },
-  {
-   "t": "2026-11-08T00:49",
-   "soort": "info",
-   "tekst": "Strategie vernieuwd: weekexperiment met slimmer kiezen, eigen Facebook-tijdstip, kijkduur bij video, vraag onderaan als test, reeksen (Advent, Kerst, maandag moed, zondag vers van de week), stories, levendigere video's. Na snel leren 2 posts per dag."
-  },
-  {
    "t": "2026-11-08T00:49",
    "soort": "info",
    "tekst": "Experiment deze week: stijl en thema"
@@ -1587,6 +1581,16 @@
    "t": "2026-11-09T22:01:59",
    "soort": "info",
    "tekst": "2026-11-09-4 online op instagram: Spreuken 5:1"
+  },
+  {
+   "t": "2026-11-10T07:31:28",
+   "soort": "info",
+   "tekst": "2026-11-10-3 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-10T07:31:28",
+   "soort": "info",
+   "tekst": "2026-11-10-3 online op instagram: Psalm 30:3"
   }
  ],
  "recente_fouten": [],
@@ -1663,9 +1667,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-09T22:01",
+   "ok": "2026-11-10T07:31",
    "laatst_ok": true,
-   "detail": "Spreuken 5:1 geplaatst"
+   "detail": "Psalm 30:3 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-09T13:48",
@@ -1691,7 +1695,7 @@
    "ok": "2026-11-08T00:36"
   },
   "reacties": {
-   "ok": "2026-11-09T22:00",
+   "ok": "2026-11-10T07:00",
    "laatst_ok": true,
    "detail": "0 nieuwe reacties",
    "fout": "2026-11-08T18:00"
@@ -1824,7 +1828,7 @@
  "snel_leren": {
   "start": "2026-11-07",
   "tot": "2026-11-14",
-  "dag": 3,
+  "dag": 4,
   "dagen": 7,
   "online": 11,
   "gemeten": 0
