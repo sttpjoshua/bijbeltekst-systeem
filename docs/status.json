@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T20:15:25",
+ "updated": "2026-11-10T20:32:03",
  "agents": {
   "verskiezer": {
    "t": "2026-11-08T14:33:06",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-10T17:46:33",
-   "task": "Postte Spreuken 26:15 op facebook",
+   "t": "2026-11-10T20:32:03",
+   "task": "Postte Psalm 25:9 op instagram",
    "state": "done"
   },
   "controller": {
@@ -38,11 +38,11 @@
   }
  },
  "stats": {
-  "posts_today": 1,
-  "posts_total": 12,
+  "posts_today": 3,
+  "posts_total": 14,
   "reach_7d": 75,
   "best_time": "nog onbekend",
-  "next_post": "2026-11-10T07:30:00"
+  "next_post": "2026-11-10T20:30:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
@@ -56,6 +56,22 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "20:32",
+   "msg": "2026-11-10-1 online op instagram: Psalm 25:9"
+  },
+  {
+   "t": "20:32",
+   "msg": "2026-11-10-1 ook als story geplaatst"
+  },
+  {
+   "t": "20:30",
+   "msg": "2026-11-10-5 online op facebook: Jesaja 26:3"
+  },
+  {
+   "t": "20:30",
+   "msg": "2026-11-10-3 online op facebook: Psalm 30:3"
+  },
   {
    "t": "17:46",
    "msg": "2026-11-10-4 online op facebook: Spreuken 26:15"
@@ -87,22 +103,6 @@
   {
    "t": "07:31",
    "msg": "2026-11-10-3 online op instagram: Psalm 30:3"
-  },
-  {
-   "t": "07:31",
-   "msg": "2026-11-10-3 ook als story geplaatst"
-  },
-  {
-   "t": "22:01",
-   "msg": "2026-11-09-4 online op instagram: Spreuken 5:1"
-  },
-  {
-   "t": "22:01",
-   "msg": "2026-11-09-4 ook als story geplaatst"
-  },
-  {
-   "t": "20:32",
-   "msg": "2026-11-09-2 online op facebook: Spreuken 14:8"
   }
  ],
  "lampen": [

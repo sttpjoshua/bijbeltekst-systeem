@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-10T20:15",
+ "gegenereerd": "2026-11-10T20:32",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -195,7 +195,7 @@
    "ref": "Jesaja 26:3",
    "tekst": "Het is een bevestigd voornemen, Gij zult allerlei vrede bewaren, want men heeft op U vertrouwd.",
    "hook": "Adem drie keer rustig in en lees dan dit vers.",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "mint",
     "thema": "vertrouwen",
@@ -232,10 +232,12 @@
    ],
    "thumb": "thumbs/2026-11-10-5.jpg",
    "platformen": [
-    "instagram"
+    "instagram",
+    "facebook"
    ],
    "links": {
-    "instagram": "https://www.instagram.com/p/Dfjxu13F066/"
+    "instagram": "https://www.instagram.com/p/Dfjxu13F066/",
+    "facebook": "https://www.facebook.com/1015160368352770_122134241384879910"
    },
    "totaal": {
     "views": 1,
@@ -350,7 +352,7 @@
    "ref": "Psalm 30:3",
    "tekst": "HEERE, mijn God! ik heb tot U geroepen, en Gij hebt mij genezen.",
    "hook": "Een rustig moment, alleen voor jou en God.",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "hemelsblauw",
     "thema": "identiteit",
@@ -387,10 +389,12 @@
    ],
    "thumb": "thumbs/2026-11-10-3.jpg",
    "platformen": [
-    "instagram"
+    "instagram",
+    "facebook"
    ],
    "links": {
-    "instagram": "https://www.instagram.com/p/DfjRIpQF3Fc/"
+    "instagram": "https://www.instagram.com/p/DfjRIpQF3Fc/",
+    "facebook": "https://www.facebook.com/1015160368352770_122134241024879910"
    },
    "totaal": {
     "views": 0,
@@ -505,12 +509,16 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-10-1-3.jpg"
    ],
    "thumb": "thumbs/2026-11-10-1.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "instagram"
+   ],
+   "links": {
+    "instagram": "https://www.instagram.com/p/DfkqdZiAXNs/"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
-   "online": null
+   "online": "2026-11-10T20:32+01:00"
   },
   {
    "id": "2026-11-09-5",
@@ -1376,26 +1384,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-08T12:15",
-   "soort": "info",
-   "tekst": "2026-11-08-4 online op instagram: Psalm 23:1"
-  },
-  {
-   "t": "2026-11-08T12:15",
-   "soort": "info",
-   "tekst": "2026-11-08-4 online op facebook: Psalm 23:1"
-  },
-  {
-   "t": "2026-11-08T14:33",
-   "soort": "info",
-   "tekst": "2 Korinthe 5:6 vervangen door Psalm 34:3 (Los van de context onduidelijk (uitwonen van den Heere))"
-  },
-  {
-   "t": "2026-11-08T14:33",
-   "soort": "info",
-   "tekst": "Job 9:4 vervangen door Openbaring 21:5 (Los van de context dreigend en onduidelijk)"
-  },
-  {
    "t": "2026-11-08T14:36",
    "soort": "fout",
    "tekst": "Privé repo bibleverse-materiaal kon niet gecloned worden (add_repo niet beschikbaar in deze sessie); posts van 9 en 10 nov gebruiken kleurverloop, video's zonder muziek",
@@ -1677,6 +1665,26 @@
    "t": "2026-11-10T17:46:33",
    "soort": "info",
    "tekst": "2026-11-10-4 online op facebook: Spreuken 26:15"
+  },
+  {
+   "t": "2026-11-10T20:30:46",
+   "soort": "info",
+   "tekst": "2026-11-10-3 online op facebook: Psalm 30:3"
+  },
+  {
+   "t": "2026-11-10T20:30:57",
+   "soort": "info",
+   "tekst": "2026-11-10-5 online op facebook: Jesaja 26:3"
+  },
+  {
+   "t": "2026-11-10T20:32:03",
+   "soort": "info",
+   "tekst": "2026-11-10-1 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-10T20:32:03",
+   "soort": "info",
+   "tekst": "2026-11-10-1 online op instagram: Psalm 25:9"
   }
  ],
  "recente_fouten": [],
@@ -1771,9 +1779,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-10T17:46",
+   "ok": "2026-11-10T20:32",
    "laatst_ok": true,
-   "detail": "Spreuken 26:15 geplaatst"
+   "detail": "Psalm 25:9 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-10T13:35",
@@ -1805,9 +1813,9 @@
    "fout": "2026-11-08T18:00"
   },
   "facebook": {
-   "ok": "2026-11-10T17:46",
+   "ok": "2026-11-10T20:30",
    "laatst_ok": true,
-   "detail": "Spreuken 26:15 geplaatst"
+   "detail": "Jesaja 26:3 geplaatst"
   },
   "statistieken": {
    "ok": "2026-11-10T13:36",
@@ -1853,9 +1861,9 @@
  ],
  "weken": {
   "deze": {
-   "posts": 12,
-   "reach": 83,
-   "views": 127,
+   "posts": 14,
+   "reach": 84,
+   "views": 128,
    "likes": 20,
    "comments": 3,
    "saves": 0,
@@ -2012,7 +2020,7 @@
   "tot": "2026-11-14",
   "dag": 4,
   "dagen": 7,
-  "online": 12,
+  "online": 14,
   "gemeten": 1
  },
  "voorraad": {
