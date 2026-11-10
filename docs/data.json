@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-10T12:00",
+ "gegenereerd": "2026-11-10T12:16",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -231,12 +231,16 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-10-5-3.jpg"
    ],
    "thumb": "thumbs/2026-11-10-5.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "instagram"
+   ],
+   "links": {
+    "instagram": "https://www.instagram.com/p/Dfjxu13F066/"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
-   "online": null
+   "online": "2026-11-10T12:16+01:00"
   },
   {
    "id": "2026-11-10-4",
@@ -1318,16 +1322,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-08T00:49",
-   "soort": "info",
-   "tekst": "Experiment deze week: stijl en thema"
-  },
-  {
-   "t": "2026-11-08T07:30",
-   "soort": "info",
-   "tekst": "2026-11-08-1 story mislukt (post zelf staat wel online): 400: {\"error\":{\"message\":\"The requested resource does not exist\",\"type\":\"OAuthException\",\"code\":24,\"error_subcode\":22070"
-  },
-  {
    "t": "2026-11-08T07:30",
    "soort": "info",
    "tekst": "2026-11-08-1 online op instagram: Jesaja 43:19"
@@ -1619,6 +1613,16 @@
    "t": "2026-11-10T07:31:28",
    "soort": "info",
    "tekst": "2026-11-10-3 online op instagram: Psalm 30:3"
+  },
+  {
+   "t": "2026-11-10T12:16:19",
+   "soort": "info",
+   "tekst": "2026-11-10-5 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-10T12:16:19",
+   "soort": "info",
+   "tekst": "2026-11-10-5 online op instagram: Jesaja 26:3"
   }
  ],
  "recente_fouten": [],
@@ -1695,9 +1699,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-10T07:31",
+   "ok": "2026-11-10T12:16",
    "laatst_ok": true,
-   "detail": "Psalm 30:3 geplaatst"
+   "detail": "Jesaja 26:3 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-09T13:48",

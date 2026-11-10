@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T12:00:50",
+ "updated": "2026-11-10T12:16:19",
  "agents": {
   "verskiezer": {
    "t": "2026-11-08T14:33:06",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-10T07:31:28",
-   "task": "Postte Psalm 30:3 op instagram",
+   "t": "2026-11-10T12:16:19",
+   "task": "Postte Jesaja 26:3 op instagram",
    "state": "done"
   },
   "controller": {
@@ -57,6 +57,14 @@
  ],
  "log": [
   {
+   "t": "12:16",
+   "msg": "2026-11-10-5 online op instagram: Jesaja 26:3"
+  },
+  {
+   "t": "12:16",
+   "msg": "2026-11-10-5 ook als story geplaatst"
+  },
+  {
    "t": "07:31",
    "msg": "2026-11-10-3 online op instagram: Psalm 30:3"
   },
@@ -94,14 +102,6 @@
   },
   {
    "t": "17:47",
-   "msg": "2026-11-09-5 ook als story geplaatst"
-  },
-  {
-   "t": "17:46",
-   "msg": "2026-11-09-5 online op instagram: Johannes 14:1"
-  },
-  {
-   "t": "17:46",
    "msg": "2026-11-09-5 ook als story geplaatst"
   }
  ],
