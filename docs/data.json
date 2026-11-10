@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-10T21:15",
+ "gegenereerd": "2026-11-10T21:30",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1385,12 +1385,6 @@
  "logboek": [
   {
    "t": "2026-11-08T14:36",
-   "soort": "fout",
-   "tekst": "Privé repo bibleverse-materiaal kon niet gecloned worden (add_repo niet beschikbaar in deze sessie); posts van 9 en 10 nov gebruiken kleurverloop, video's zonder muziek",
-   "opgelost": true
-  },
-  {
-   "t": "2026-11-08T14:36",
    "soort": "info",
    "tekst": "10 posts klaargezet: 5 voor 9 nov (07:30, 12:15, 17:45, 20:30, 22:00) en 5 voor 10 nov (07:30, 12:15, 17:45, 20:30, 22:00), met reserveverzen"
   },
@@ -1685,6 +1679,11 @@
    "t": "2026-11-10T20:32:03",
    "soort": "info",
    "tekst": "2026-11-10-1 online op instagram: Psalm 25:9"
+  },
+  {
+   "t": "2026-11-10T21:30:34",
+   "soort": "info",
+   "tekst": "Te weinig posts voor 2026-11-11: 0 klaar, 5 ingesteld. De noodvoorraad vult de lege tijdsloten automatisch op."
   }
  ],
  "recente_fouten": [],

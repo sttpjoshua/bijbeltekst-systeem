@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T21:15:25",
+ "updated": "2026-11-10T21:30:35",
  "agents": {
   "verskiezer": {
    "t": "2026-11-08T14:33:06",
@@ -57,6 +57,10 @@
  ],
  "log": [
   {
+   "t": "21:30",
+   "msg": "Te weinig posts voor 2026-11-11: 0 klaar, 5 ingesteld. De noodvoorraad vult de lege tijdsloten automatisch op."
+  },
+  {
    "t": "20:32",
    "msg": "2026-11-10-1 online op instagram: Psalm 25:9"
   },
@@ -99,10 +103,6 @@
   {
    "t": "12:16",
    "msg": "2026-11-10-5 ook als story geplaatst"
-  },
-  {
-   "t": "07:31",
-   "msg": "2026-11-10-3 online op instagram: Psalm 30:3"
   }
  ],
  "lampen": [
