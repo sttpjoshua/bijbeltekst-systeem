@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T20:01:00",
+ "updated": "2026-11-11T20:31:59",
  "agents": {
   "verskiezer": {
    "t": "2026-11-11T17:01:01",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-11T17:46:47",
-   "task": "Postte Prediker 3:1 op facebook",
+   "t": "2026-11-11T20:31:59",
+   "task": "Postte Spreuken 23:18 op facebook",
    "state": "done"
   },
   "controller": {
@@ -38,11 +38,11 @@
   }
  },
  "stats": {
-  "posts_today": 3,
-  "posts_total": 19,
+  "posts_today": 4,
+  "posts_total": 20,
   "reach_7d": 85,
   "best_time": "nog onbekend",
-  "next_post": "2026-11-11T20:30:00"
+  "next_post": "2026-11-11T22:00:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
@@ -56,6 +56,18 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "20:31",
+   "msg": "2026-11-11-n2030 online op facebook: Spreuken 23:18"
+  },
+  {
+   "t": "20:31",
+   "msg": "2026-11-11-n2030 online op instagram: Spreuken 23:18"
+  },
+  {
+   "t": "20:31",
+   "msg": "2026-11-11-n2030 ook als story geplaatst"
+  },
   {
    "t": "17:46",
    "msg": "2026-11-11-n1745 online op facebook: Prediker 3:1"
@@ -90,18 +102,6 @@
   },
   {
    "t": "13:52",
-   "msg": "Bediening: WhatsApp-testbericht klaargezet"
-  },
-  {
-   "t": "13:49",
-   "msg": "Bediening: Voorstel niet gevonden of al afgehandeld"
-  },
-  {
-   "t": "13:45",
-   "msg": "Bediening: WhatsApp-testbericht klaargezet"
-  },
-  {
-   "t": "13:43",
    "msg": "Bediening: WhatsApp-testbericht klaargezet"
   }
  ],

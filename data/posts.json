@@ -2683,7 +2683,7 @@
  },
  {
   "id": "2026-11-11-n2030",
-  "status": "gerenderd",
+  "status": "gepubliceerd",
   "vers_id": "Proverbs-23-18-18",
   "ref": "Spreuken 23:18",
   "tekst": "Want zekerlijk, er is een beloning; en uw verwachting zal niet afgesneden worden.",
@@ -2773,6 +2773,18 @@
    "bron": "NOS",
    "link": "https://nos.nl/l/2638953",
    "zwaar": false
+  },
+  "gepubliceerd": {
+   "instagram": {
+    "id": "18104902274049864",
+    "url": "https://www.instagram.com/p/DfnPOUKAVdU/",
+    "t": "2026-11-11T20:31+01:00"
+   },
+   "facebook": {
+    "id": "1015160368352770_122134336016879910",
+    "url": "https://www.facebook.com/1015160368352770_122134336016879910",
+    "t": "2026-11-11T20:31+01:00"
+   }
   }
  },
  {

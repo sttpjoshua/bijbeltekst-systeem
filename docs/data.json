@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-11T20:01",
+ "gegenereerd": "2026-11-11T20:31",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1335,7 +1335,7 @@
    "ref": "Spreuken 23:18",
    "tekst": "Want zekerlijk, er is een beloning; en uw verwachting zal niet afgesneden worden.",
    "hook": "Vanavond lopen er lampionnen door de straat. Klein licht, maar het maakt verschil.",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "palet": "diep_paars",
     "lettertype": "lora",
@@ -1373,12 +1373,21 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-11-n2030-4.jpg"
    ],
    "thumb": "thumbs/2026-11-11-n2030.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "instagram",
+    "facebook"
+   ],
+   "links": {
+    "instagram": "https://www.instagram.com/p/DfnPOUKAVdU/",
+    "facebook": "https://www.facebook.com/1015160368352770_122134336016879910"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
-   "pub": {},
+   "pub": {
+    "instagram": "2026-11-11T20:31+01:00",
+    "facebook": "2026-11-11T20:31+01:00"
+   },
    "gemist": [],
    "nood": true,
    "nieuws": {
@@ -1388,7 +1397,7 @@
     "link": "https://nos.nl/l/2638953",
     "zwaar": false
    },
-   "online": null
+   "online": "2026-11-11T20:31+01:00"
   },
   {
    "id": "2026-11-11-n1745",
@@ -3058,21 +3067,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-09T22:01:59",
-   "soort": "info",
-   "tekst": "2026-11-09-4 online op instagram: Spreuken 5:1"
-  },
-  {
-   "t": "2026-11-10T07:31:28",
-   "soort": "info",
-   "tekst": "2026-11-10-3 ook als story geplaatst"
-  },
-  {
-   "t": "2026-11-10T07:31:28",
-   "soort": "info",
-   "tekst": "2026-11-10-3 online op instagram: Psalm 30:3"
-  },
-  {
    "t": "2026-11-10T12:16:19",
    "soort": "info",
    "tekst": "2026-11-10-5 ook als story geplaatst"
@@ -3369,6 +3363,21 @@
    "t": "2026-11-11T17:46:47",
    "soort": "info",
    "tekst": "2026-11-11-n1745 online op facebook: Prediker 3:1"
+  },
+  {
+   "t": "2026-11-11T20:31:47",
+   "soort": "info",
+   "tekst": "2026-11-11-n2030 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-11T20:31:47",
+   "soort": "info",
+   "tekst": "2026-11-11-n2030 online op instagram: Spreuken 23:18"
+  },
+  {
+   "t": "2026-11-11T20:31:59",
+   "soort": "info",
+   "tekst": "2026-11-11-n2030 online op facebook: Spreuken 23:18"
   }
  ],
  "recente_fouten": [],
@@ -3443,9 +3452,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-11T17:46",
+   "ok": "2026-11-11T20:31",
    "laatst_ok": true,
-   "detail": "Prediker 3:1 geplaatst"
+   "detail": "Spreuken 23:18 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-11T12:51",
@@ -3477,9 +3486,9 @@
    "fout": "2026-11-08T18:00"
   },
   "facebook": {
-   "ok": "2026-11-11T17:46",
+   "ok": "2026-11-11T20:31",
    "laatst_ok": true,
-   "detail": "Prediker 3:1 geplaatst"
+   "detail": "Spreuken 23:18 geplaatst"
   },
   "statistieken": {
    "ok": "2026-11-11T12:51",
@@ -3542,7 +3551,7 @@
  ],
  "weken": {
   "deze": {
-   "posts": 19,
+   "posts": 20,
    "reach": 124,
    "views": 201,
    "likes": 24,
@@ -3723,7 +3732,7 @@
   "tot": "2026-11-14",
   "dag": 5,
   "dagen": 7,
-  "online": 19,
+  "online": 20,
   "gemeten": 1
  },
  "voorraad": {
