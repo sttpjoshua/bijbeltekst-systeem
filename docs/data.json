@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-11T10:51",
+ "gegenereerd": "2026-11-11T12:16",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1441,7 +1441,7 @@
    "ref": "Jeremia 17:7",
    "tekst": "Gezegend daarentegen is de man, die op den HEERE vertrouwt, en wiens vertrouwen de HEERE is!",
    "hook": "Waar leun jij op als het spannend wordt?",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "palet": "perzik",
     "lettertype": "playfair",
@@ -1477,16 +1477,25 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-2-621-3.jpg"
    ],
    "thumb": "thumbs/nood-20261108-2-621.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "instagram",
+    "facebook"
+   ],
+   "links": {
+    "instagram": "https://www.instagram.com/p/DfmWhb4DX-p/",
+    "facebook": "https://www.facebook.com/1015160368352770_122134299728879910"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
-   "pub": {},
+   "pub": {
+    "instagram": "2026-11-11T12:16+01:00",
+    "facebook": "2026-11-11T12:16+01:00"
+   },
    "gemist": [],
    "nood": true,
    "nieuws": null,
-   "online": null
+   "online": "2026-11-11T12:16+01:00"
   },
   {
    "id": "2026-11-11-n0730",
@@ -2968,31 +2977,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-08T20:32:04",
-   "soort": "info",
-   "tekst": "2026-11-08-3 online op facebook: Johannes 14:27"
-  },
-  {
-   "t": "2026-11-08T22:01:56",
-   "soort": "info",
-   "tekst": "2026-11-08-5 ook als story geplaatst"
-  },
-  {
-   "t": "2026-11-08T22:01:56",
-   "soort": "info",
-   "tekst": "2026-11-08-5 online op instagram: 2 Timotheüs 1:7"
-  },
-  {
-   "t": "2026-11-08T22:02:06",
-   "soort": "info",
-   "tekst": "2026-11-08-5 online op facebook: 2 Timotheüs 1:7"
-  },
-  {
-   "t": "2026-11-09T07:31:41",
-   "soort": "info",
-   "tekst": "2026-11-09-1 ook als story geplaatst"
-  },
-  {
    "t": "2026-11-09T07:31:41",
    "soort": "info",
    "tekst": "2026-11-09-1 online op instagram: Psalm 34:3"
@@ -3270,9 +3254,53 @@
    "t": "2026-11-11T10:51:29",
    "soort": "info",
    "tekst": "Per ongeluk verwijderde beelden (61 bestanden, ook de noodposts van vandaag) teruggezet. Oorzaak: opslaan van media zag ontbrekende lokale bestanden als verwijderd; dat kan nu niet meer."
+  },
+  {
+   "t": "2026-11-11T12:01:02",
+   "soort": "fout",
+   "tekst": "Politiek nieuws (NOS): \"Raad van State: minister van Asiel moet veiligheid Syrië opnieuw beoordelen\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
+   "code": "nieuws_voorstel",
+   "post": "n111112010"
+  },
+  {
+   "t": "2026-11-11T12:01:02",
+   "soort": "fout",
+   "tekst": "Zwaar nieuws (NOS): \"Vijf jaar The Kyiv Independent: hoe bedrijf je journalistiek in een land in oorlog?\". Wil je er een troostende post over? Die gaat dan pas 6 uur na het nieuws online.",
+   "code": "nieuws_voorstel",
+   "post": "n111112011"
+  },
+  {
+   "t": "2026-11-11T12:16:10",
+   "soort": "info",
+   "tekst": "2026-11-11-n1215 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-11T12:16:10",
+   "soort": "info",
+   "tekst": "2026-11-11-n1215 online op instagram: Jeremia 17:7"
+  },
+  {
+   "t": "2026-11-11T12:16:19",
+   "soort": "info",
+   "tekst": "2026-11-11-n1215 online op facebook: Jeremia 17:7"
   }
  ],
- "recente_fouten": [],
+ "recente_fouten": [
+  {
+   "t": "2026-11-11T12:01:02",
+   "soort": "fout",
+   "tekst": "Politiek nieuws (NOS): \"Raad van State: minister van Asiel moet veiligheid Syrië opnieuw beoordelen\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
+   "code": "nieuws_voorstel",
+   "post": "n111112010"
+  },
+  {
+   "t": "2026-11-11T12:01:02",
+   "soort": "fout",
+   "tekst": "Zwaar nieuws (NOS): \"Vijf jaar The Kyiv Independent: hoe bedrijf je journalistiek in een land in oorlog?\". Wil je er een troostende post over? Die gaat dan pas 6 uur na het nieuws online.",
+   "code": "nieuws_voorstel",
+   "post": "n111112011"
+  }
+ ],
  "versen_totaal": 300,
  "reacties": [
   {
@@ -3364,9 +3392,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-11T07:31",
+   "ok": "2026-11-11T12:16",
    "laatst_ok": true,
-   "detail": "Jesaja 32:17 geplaatst"
+   "detail": "Jeremia 17:7 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-10T13:35",
@@ -3392,15 +3420,15 @@
    "ok": "2026-11-08T00:36"
   },
   "reacties": {
-   "ok": "2026-11-11T10:00",
+   "ok": "2026-11-11T12:00",
    "laatst_ok": true,
    "detail": "0 nieuwe reacties",
    "fout": "2026-11-08T18:00"
   },
   "facebook": {
-   "ok": "2026-11-11T07:31",
+   "ok": "2026-11-11T12:16",
    "laatst_ok": true,
-   "detail": "Jesaja 32:17 geplaatst"
+   "detail": "Jeremia 17:7 geplaatst"
   },
   "statistieken": {
    "ok": "2026-11-10T13:36",
@@ -3446,7 +3474,7 @@
  ],
  "weken": {
   "deze": {
-   "posts": 17,
+   "posts": 18,
    "reach": 106,
    "views": 177,
    "likes": 23,
@@ -3627,7 +3655,7 @@
   "tot": "2026-11-14",
   "dag": 5,
   "dagen": 7,
-  "online": 17,
+  "online": 18,
   "gemeten": 1
  },
  "voorraad": {
@@ -3947,7 +3975,30 @@
    "max_per_dag": 2,
    "licht_automatisch": true
   },
-  "recent": []
+  "recent": [
+   {
+    "id": "n111112011",
+    "t": "2026-11-11T07:17+01:00",
+    "bron": "NOS",
+    "kop": "Vijf jaar The Kyiv Independent: hoe bedrijf je journalistiek in een land in oorlog?",
+    "link": "https://nos.nl/l/2638954",
+    "categorie": "zwaar",
+    "zwaar": true,
+    "status": "voorstel",
+    "post": null
+   },
+   {
+    "id": "n111112010",
+    "t": "2026-11-11T11:11+01:00",
+    "bron": "NOS",
+    "kop": "Raad van State: minister van Asiel moet veiligheid Syrië opnieuw beoordelen",
+    "link": "https://nos.nl/l/2638978",
+    "categorie": "politiek",
+    "zwaar": false,
+    "status": "voorstel",
+    "post": null
+   }
+  ]
  },
  "verzoeken": [
   {

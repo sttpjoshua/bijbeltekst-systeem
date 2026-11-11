@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T10:51:29",
+ "updated": "2026-11-11T12:16:19",
  "agents": {
   "verskiezer": {
    "t": "2026-11-11T10:12:16",
@@ -17,14 +17,14 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-11T07:31:40",
-   "task": "Postte Jesaja 32:17 op facebook",
+   "t": "2026-11-11T12:16:19",
+   "task": "Postte Jeremia 17:7 op facebook",
    "state": "done"
   },
   "controller": {
-   "t": "2026-11-11T10:24:12",
-   "task": "Posts klaargezet uit de tekstbank",
-   "state": "done"
+   "t": "2026-11-11T12:01:02",
+   "task": "Zwaar nieuws (NOS): \"Vijf jaar The Kyiv Independent: hoe bedrijf je jo",
+   "state": "error"
   },
   "analist": {
    "t": "2026-11-10T13:35:26",
@@ -38,11 +38,11 @@
   }
  },
  "stats": {
-  "posts_today": 1,
-  "posts_total": 17,
+  "posts_today": 2,
+  "posts_total": 18,
   "reach_7d": 75,
   "best_time": "nog onbekend",
-  "next_post": "2026-11-11T12:15:00"
+  "next_post": "2026-11-11T17:45:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
@@ -56,6 +56,26 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "12:16",
+   "msg": "2026-11-11-n1215 online op facebook: Jeremia 17:7"
+  },
+  {
+   "t": "12:16",
+   "msg": "2026-11-11-n1215 online op instagram: Jeremia 17:7"
+  },
+  {
+   "t": "12:16",
+   "msg": "2026-11-11-n1215 ook als story geplaatst"
+  },
+  {
+   "t": "12:01",
+   "msg": "Zwaar nieuws (NOS): \"Vijf jaar The Kyiv Independent: hoe bedrijf je journalistiek in een land in oorlog?\". Wil"
+  },
+  {
+   "t": "12:01",
+   "msg": "Politiek nieuws (NOS): \"Raad van State: minister van Asiel moet veiligheid Syrië opnieuw beoordelen\". Neutrale"
+  },
   {
    "t": "10:51",
    "msg": "Per ongeluk verwijderde beelden (61 bestanden, ook de noodposts van vandaag) teruggezet. Oorzaak: opslaan van "
@@ -83,26 +103,6 @@
   {
    "t": "10:08",
    "msg": "Zelfstandig 5 posts klaargezet voor 2026-11-14 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "07:31",
-   "msg": "2026-11-11-n0730 online op facebook: Jesaja 32:17"
-  },
-  {
-   "t": "07:31",
-   "msg": "2026-11-11-n0730 online op instagram: Jesaja 32:17"
-  },
-  {
-   "t": "07:31",
-   "msg": "2026-11-11-n0730 ook als story geplaatst"
-  },
-  {
-   "t": "06:00",
-   "msg": "Zelfherstel: Geen post klaar voor 2026-11-11 22:00 → noodpost Romeinen 15:4 ingezet om 22:00"
-  },
-  {
-   "t": "06:00",
-   "msg": "Zelfherstel: Geen post klaar voor 2026-11-11 20:30 → noodpost Kolossenzen 3:17 ingezet om 20:30"
   }
  ],
  "lampen": [

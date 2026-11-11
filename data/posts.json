@@ -2363,7 +2363,7 @@
  },
  {
   "id": "2026-11-11-n1215",
-  "status": "gerenderd",
+  "status": "gepubliceerd",
   "vers_id": "Jeremiah-17-7-7",
   "ref": "Jeremia 17:7",
   "tekst": "Gezegend daarentegen is de man, die op den HEERE vertrouwt, en wiens vertrouwen de HEERE is!",
@@ -2438,7 +2438,19 @@
   "story_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-2-621-story.jpg",
   "goedgekeurd": true,
   "datum": "2026-11-11",
-  "nood": true
+  "nood": true,
+  "gepubliceerd": {
+   "instagram": {
+    "id": "17890137735511706",
+    "url": "https://www.instagram.com/p/DfmWhb4DX-p/",
+    "t": "2026-11-11T12:16+01:00"
+   },
+   "facebook": {
+    "id": "1015160368352770_122134299728879910",
+    "url": "https://www.facebook.com/1015160368352770_122134299728879910",
+    "t": "2026-11-11T12:16+01:00"
+   }
+  }
  },
  {
   "id": "2026-11-11-n1745",
