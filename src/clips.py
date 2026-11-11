@@ -53,6 +53,35 @@ def _vraag(pad, params):
     raise RuntimeError("Coverr gaf geen antwoord: " + " | ".join(fouten))
 
 
+def _download(h, pad):
+    """Haalt de clip op. Probeert de gewone, de download- en de voorvertoningslink, met en zonder sleutel."""
+    key = os.environ.get("COVERR_KEY", "").strip()
+    urls = h.get("urls") or {}
+    fouten = []
+    for soort in ("mp4", "mp4_download", "mp4_preview"):
+        u = urls.get(soort)
+        if not u:
+            continue
+        for kop in ({"User-Agent": "Mozilla/5.0 (bibleverse)"}, {"User-Agent": "Mozilla/5.0 (bibleverse)", "Authorization": f"Bearer {key}"},
+                    {"User-Agent": "Mozilla/5.0 (bibleverse)", "Referer": "https://coverr.co/"}):
+            try:
+                with urllib.request.urlopen(urllib.request.Request(u, headers=kop), timeout=90) as r, open(pad, "wb") as f:
+                    f.write(r.read())
+                if os.path.getsize(pad) > 50000:
+                    try:  # Coverr vraagt om downloads te melden (telt mee voor de makers)
+                        req = urllib.request.Request(f"{API}/videos/{h['id']}/stats/downloads", method="PATCH",
+                                                     headers={"Authorization": f"Bearer {key}", "User-Agent": "bibleverse/1.0"})
+                        urllib.request.urlopen(req, timeout=15).read()
+                    except Exception:
+                        pass
+                    return soort
+            except Exception as e:
+                fouten.append(f"{soort}: {str(e)[:40]}")
+    if os.path.exists(pad):
+        os.remove(pad)
+    raise RuntimeError("; ".join(fouten[:6]))
+
+
 def zoek(term, n=12):
     d = _vraag("/videos", {"query": term, "page_size": n, "urls": "true", "sort": "popular"})
     hits = d.get("hits", [])
@@ -82,7 +111,10 @@ def kies(soort, thema, rnd, gebruikt):
         os.makedirs(MAP, exist_ok=True)
         pad = os.path.join(MAP, f"{h['id']}.mp4")
         if not os.path.exists(pad):
-            urllib.request.urlretrieve(h["urls"]["mp4"], pad)
+            try:
+                _download(h, pad)
+            except Exception as e:
+                print("Download mislukt:", h["id"], e); continue
         return pad, {"id": h["id"], "term": term, "titel": h.get("title"), "staand": h.get("is_vertical")}
     return None, None
 
