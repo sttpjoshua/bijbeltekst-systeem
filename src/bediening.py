@@ -133,10 +133,28 @@ def main(raw):
         if p["status"] == "opnieuw_maken":
             p["status"] = "gerenderd"  # wordt hieronder opnieuw gemaakt (of weer in de wachtrij gezet)
         import random
-        fris = [k for k in S.HUISSTIJLEN if k != p["variabelen"].get("huisstijl") and k != "avond"]
-        nieuw = o.get("huisstijl") if o.get("huisstijl") in S.HUISSTIJLEN else random.choice(fris)
-        p["variabelen"].update(S.HUISSTIJLEN[nieuw]); p["variabelen"]["huisstijl"] = nieuw
-        p.setdefault("keuzebron", {})["huisstijl"] = "joshua"
+        v = p["variabelen"]
+        alleen_anders = any(o.get(k) for k in ("achtergrondbron", "opening")) and not o.get("huisstijl")
+        if not alleen_anders:
+            fris = [k for k in S.HUISSTIJLEN if k != v.get("huisstijl") and k != "avond"]
+            nieuw = o.get("huisstijl") if o.get("huisstijl") in S.HUISSTIJLEN else random.choice(fris)
+            v.update(S.HUISSTIJLEN[nieuw]); v["huisstijl"] = nieuw
+            p.setdefault("keuzebron", {})["huisstijl"] = "joshua"
+        nieuw = v.get("huisstijl")
+        if o.get("achtergrondbron") in ("beeld", "verloop"):
+            v["achtergrondbron"] = o["achtergrondbron"]
+            if o["achtergrondbron"] == "verloop":
+                p["beeld"] = None
+            p.setdefault("keuzebron", {})["achtergrondbron"] = "joshua"
+        if o.get("opening") in ("vers", "stopper", "verhaal") and v.get("formaat") == "carrousel":
+            if o["opening"] == "verhaal" and not (p.get("verhaal_hook") or "").strip():
+                import tekstbank
+                e = tekstbank.laad().get(p.get("vers_id"), {})
+                if not e.get("verhaal"):
+                    raise SystemExit("Voor dit vers staat nog geen openingszin klaar, dus 'verhaal eerst' kan hier niet")
+                p["verhaal_hook"] = e["verhaal"]
+            v["opening"] = o["opening"]
+            p.setdefault("keuzebron", {})["opening"] = "joshua"
         p["goedgekeurd"] = None
         if p["status"] == "gerenderd":
             beeldpost = p["variabelen"]["formaat"] != "video" and p["variabelen"].get("achtergrondbron") != "beeld"
@@ -145,7 +163,7 @@ def main(raw):
                 S.bewaar("data/posts.json", posts)
                 S.cmd_render(p["datum"])
                 posts = S.laad("data/posts.json", [])
-                melding = f"{p['ref']} opnieuw gemaakt in stijl {nieuw}"
+                melding = f"{p['ref']} opnieuw gemaakt (stijl {nieuw}, achtergrond {'foto' if v.get('achtergrondbron') == 'beeld' else 'kleurverloop'}" + (f", eerste slide {v.get('opening')}" if v.get("formaat") == "carrousel" else "") + ")"
             else:
                 # zonder muziek en foto's in GitHub: wachten op een run die ze wel heeft (14:32 of 20:47)
                 nu = dt.datetime.now()

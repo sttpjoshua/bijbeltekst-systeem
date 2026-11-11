@@ -224,6 +224,10 @@ html[data-thema=donker] .kpost .knws{background:#3a2e14;color:#ffd98a}
 @media (max-width:700px){.kal{grid-template-columns:1fr}.kdag{padding:6px}.ladebinnen .lslides img,.ladebinnen .lslides video{height:200px}}
 .bkop{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink3);margin:22px 0 10px;font-weight:700}
 #bedPaneel>.bkop:first-child{margin-top:4px}
+.stb{margin-top:14px;padding:12px;border-radius:12px;background:var(--zacht)}
+.stw{display:flex;flex-wrap:wrap;gap:20px 6px}.sw{width:54px;height:40px;border-radius:8px;border:2px solid transparent;cursor:pointer;position:relative;padding:0}
+.sw span{position:absolute;left:0;right:0;bottom:-15px;font-size:9.5px;color:var(--ink3)}.stw{padding-bottom:14px}
+.sw.aan{border-color:var(--ink);box-shadow:0 0 0 2px var(--kaart) inset}
 </style>
 </head>
 <body>
@@ -764,6 +768,27 @@ function bouwPlanning(){
         ${thumb?`<img class="kt" src="${thumb}" loading="lazy" onerror="this.outerHTML='<span class=kt>${v.formaat==="video"?"▶":"▤"}</span>'">`:`<span class="kt">${v.formaat==="video"?"▶":"▤"}</span>`}
         <div class="kw"><b>${esc(x.ref)}</b><div class="kr"><i class="pd ${st}"></i>${v.tijdslot}<span title="${v.formaat==="video"?"reel":"carrousel"}">${v.formaat==="video"?"▶":"▤"}</span>${x.nieuws?'<span class="knws" title="nieuwspost">📰</span>':""}${x.reeks_label?`<span class="knws" title="${esc(x.reeks_label)}" style="background:var(--accent);color:#fff">★</span>`:""}</div></div></div>`}).join("")}</div>`}).join("");
 }
+
+// ---------- Stijl aanpassen in het zijpaneel ----------
+let STK={};
+function stijlBlok(x){
+  const v=x.variabelen;STK={post:x.id,huisstijl:v.huisstijl,achtergrondbron:v.achtergrondbron==="beeld"?"beeld":"verloop",opening:v.opening||"vers"};
+  const st=Object.keys(STIJLKLEUR);
+  return `<div class="stb"><div class="sub" style="font-weight:600;margin-bottom:6px">Stijl aanpassen</div>
+    <div class="stw">${st.map(k=>`<button class="sw${k===v.huisstijl?" aan":""}" data-k="${k}" title="${k}" style="background:${STIJLKLEUR[k]}" onclick="kiesStijl('huisstijl','${k}',this)"><span>${k}</span></button>`).join("")}</div>
+    <div class="seg" style="margin-top:8px"><span class="sub" style="align-self:center;margin-right:4px">Achtergrond:</span>
+      ${[["verloop","Kleurverloop"],["beeld","Foto"]].map(([k,n])=>`<button class="btn sto-a${STK.achtergrondbron===k?" prim":""}" onclick="kiesStijl('achtergrondbron','${k}',this)">${n}</button>`).join("")}</div>
+    ${v.formaat==="carrousel"?`<div class="seg" style="margin-top:6px"><span class="sub" style="align-self:center;margin-right:4px">Eerste slide:</span>
+      ${[["vers","Vers"],["stopper","Stopper"],["verhaal","Verhaal eerst"]].map(([k,n])=>`<button class="btn sto-o${STK.opening===k?" prim":""}" onclick="kiesStijl('opening','${k}',this)">${n}</button>`).join("")}</div>`:""}
+    <button class="btn prim" style="margin-top:10px" onclick="stuur({actie:'andere_stijl',...STK},this)">Opnieuw maken in deze stijl</button>
+    <div class="sub" style="margin-top:4px">Na 1 tot 3 minuten staat de nieuwe versie in de planning.</div></div>`;
+}
+function kiesStijl(k,w,el){
+  STK[k]=w;
+  const groep=k==="huisstijl"?".sw":k==="achtergrondbron"?".sto-a":".sto-o";
+  el.parentElement.querySelectorAll(groep).forEach(b=>b.classList.remove(k==="huisstijl"?"aan":"prim"));
+  el.classList.add(k==="huisstijl"?"aan":"prim");
+}
 function sluitLade(){document.getElementById("lade").style.display="none"}
 document.addEventListener("keydown",e=>{if(e.key==="Escape"){sluitLade();galerij.style.display="none"}});
 function openLade(id){
@@ -790,6 +815,7 @@ function openLade(id){
     ${m.length?`<div class="lslides">${m.map(u=>u.endsWith(".mp4")?`<video src="${u}" controls playsinline preload="metadata"></video>`:`<img src="${u}" loading="lazy" onclick="toonGalerij('${x.id}')" style="cursor:zoom-in">`).join("")}</div>`
       :`<p style="font-size:15px;line-height:1.5;margin:12px 0">${esc(x.tekst||"")}</p><div class="sub">${plan?"Teksten en beeld worden een dag van tevoren gemaakt. Het plan kan nog veranderen als het systeem iets leert.":"Het beeld wordt nog gemaakt."}</div>`}
     ${x.caption?`<details open><summary class="sub" style="cursor:pointer">Caption</summary><div class="lcap">${esc(x.caption)}</div></details>`:""}
+    ${!plan&&st!=="online"&&x.status==="gerenderd"&&kan?stijlBlok(x):""}
     ${act?(kan?act:`<div class="sub" style="margin-top:10px"><a href="#" onclick="sluitLade();naarSleutel();return false">Koppel eerst je sleutel</a> om deze post aan te passen.</div>`):""}
     <details style="margin-top:12px"><summary class="sub" style="cursor:pointer">Details</summary><div style="margin-top:6px">${["huisstijl","hook_stijl","opening","achtergrondbron","reel_stijl"].filter(k=>v[k]).map(k=>`<span class="tag">${NAMEN[k]||k}: ${esc(v[k])}</span>`).join("")}</div></details>`;
   document.getElementById("lade").style.display="flex";
