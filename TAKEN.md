@@ -124,6 +124,8 @@ Elke reel heeft uitleg: vers frase voor frase, dan "Wat betekent dit?" en "Vanda
 
 Nieuwe reelstijlen (src/reels.py, sinds 11 november, aan/uit met `nieuwe_reels` in config en op het dashboard): `kinetisch` (woord voor woord op de tel, kernwoord alleen en groot, daarna "Betekent:" met de `uitleg`), `beeld` (foto's met snelle zoom en harde cuts) en `reel_haak` = vraag (eerst 1,4 s de vraag-hook). Ook deze stijlen hebben uitleg (de korte `uitleg`), dus de vaste regel blijft gelden.
 
+Reel "herkenbare situatie" (standaard sinds 11 november, Joshua akkoord; `reel_formaat` = situatie in config): clip 1 is een echt videobeeld (Coverr) dat past bij `reel_herkenning` (de herkenningshook uit de tekstbank), dan het hele vers op een rustig beeld (`reel_scene`: natuur, dichtbij of onderweg), dan "WAT BETEKENT DIT?" met de `uitleg`, dan het eindbeeld. Tekst staat `midden` of `boven` (`reel_plaatsing`, wordt getest). De clips kiest src/clips.py op relevantie (woorden in titel en tags, zie KOPPEL; geen dieren, hotels of productbeelden); past niets, dan een sfeerbeeld. Clips staan buiten de repo (../bibleverse-clips) en komen nooit in de publieke repo; zoekresultaten worden een week bewaard in data/clips_zoek.json (gratis Coverr: 50 verzoeken per uur). Lukt het niet, dan wordt het een klassieke reel. Aandeel reels: `reel_aandeel` (0,6 = ongeveer 60%, bijgestuurd op de laatste 14 dagen). Geen voice-over, geen hooktekst behalve de herkenningszin.
+
 ## Kernwoord: dikker en in kleur, nooit een vakje (vaste regel)
 Het kernwoord wordt uitgelicht door het dikker te zetten in een opvallende kleur (zie `_kernstaat` en `_regel` in src/render.py). Nooit een vakje, balk of label eromheen: dat vindt Joshua niet mooi.
 

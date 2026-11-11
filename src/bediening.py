@@ -349,6 +349,13 @@ def main(raw):
     elif a == "nieuwe_reels":
         cfg["nieuwe_reels"] = bool(o.get("aan"))
         melding = "Nieuwe reelstijlen " + ("aan: het systeem test klassiek, kinetisch en bewegend beeld, met en zonder vraag als haak" if cfg["nieuwe_reels"] else "uit: alleen de klassieke reel")
+    elif a == "reel_formaat":
+        cfg["reel_formaat"] = "situatie" if o.get("waarde") == "situatie" else "klassiek"
+        melding = "Reels: " + ("herkenbare situatie met echte video" if cfg["reel_formaat"] == "situatie" else "klassiek") + " (geldt voor reels die vanaf nu gemaakt worden)"
+    elif a == "reel_aandeel":
+        w = o.get("waarde")
+        cfg["reel_aandeel"] = None if w is None else max(0.2, min(0.9, float(w)))
+        melding = "Aandeel reels: " + ("het systeem kiest zelf" if w is None else f"ongeveer {round(cfg['reel_aandeel'] * 100)}%")
     elif a == "reel_tempo":
         cfg["reel_tempo"] = float(o["waarde"])
         melding = f"Tempo nieuwe reels: {dict([(0.8,'langzaam'),(1.0,'rustig'),(1.25,'vlot'),(1.6,'snel')]).get(cfg['reel_tempo'], cfg['reel_tempo'])} (geldt voor reels die vanaf nu gemaakt worden)"
@@ -406,7 +413,7 @@ def main(raw):
                  "andere_stijl": "designer", "post_ander_vers": "verskiezer", "fouten_opgelost": "controller", "reactie_plaatsen": "community", "reactie_negeren": "community", "reactie_liken": "community",
                  "fout_opgelost": "controller", "post_opnieuw": "dispatcher", "post_nood": "controller", "nood_inzetten": "controller",
                  "muziek_toevoegen": "video", "statistieken_nu": "analist", "reacties_nu": "community", "zelftest_nu": "controller",
-                 "run": "dispatcher", "verzoek": "controller", "posts_maken": "verskiezer", "zelfstandig": "controller", "nieuws_maken": "verskiezer", "nieuws_negeren": "verskiezer", "nieuws_instelling": "verskiezer", "nieuwe_reels": "video", "reel_tempo": "video", "whatsapp_test": "controller", "whatsapp_instelling": "controller"}.get(a)
+                 "run": "dispatcher", "verzoek": "controller", "posts_maken": "verskiezer", "zelfstandig": "controller", "nieuws_maken": "verskiezer", "nieuws_negeren": "verskiezer", "nieuws_instelling": "verskiezer", "nieuwe_reels": "video", "reel_tempo": "video", "reel_formaat": "video", "reel_aandeel": "video", "whatsapp_test": "controller", "whatsapp_instelling": "controller"}.get(a)
         if a == "overslaan":
             agent = "video" if (vind(posts, o["post"])["variabelen"].get("formaat") == "video") else "designer"
         if agent:

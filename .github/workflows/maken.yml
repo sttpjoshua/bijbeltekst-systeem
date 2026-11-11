@@ -46,6 +46,8 @@ jobs:
           git clone --depth 1 -q "https://x-access-token:${MATERIAAL_PAT}@github.com/sttpjoshua/bibleverse-materiaal.git" ../bibleverse-materiaal
       - name: Posts maken
         if: steps.werk.outputs.ja == '1'
+        env:
+          COVERR_KEY: ${{ secrets.COVERR_KEY }}
         run: |
           python3 src/systeem.py automaak ${{ inputs.datum }}
           python3 src/systeem.py nood auto || echo "Noodvoorraad aanvullen mislukt"

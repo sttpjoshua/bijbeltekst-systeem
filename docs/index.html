@@ -337,7 +337,7 @@ html[data-thema=donker] .kpost .knws{background:#3a2e14;color:#ffd98a}
       <div class="bed">
         <div class="blok" style="grid-column:1/-1"><h3>Zelfstandig maken (zonder Claude)</h3><div id="bZelf"></div></div>
         <div class="blok" style="grid-column:1/-1"><h3>Nieuws als aanleiding</h3><div id="bNieuws"></div></div>
-        <div class="blok" style="grid-column:1/-1"><h3>Nieuwe reelstijlen</h3><div id="bReels"></div></div>
+        <div class="blok" style="grid-column:1/-1"><h3>Reels</h3><div id="bReels"></div></div>
         <div class="blok"><h3>Aandeel foto-achtergronden: <span id="vBeeld"></span></h3><input type="range" id="rBeeld" min="0" max="50" step="5"><button class="btn" id="sBeeld">Opslaan</button><div class="sub" style="margin-top:6px">Hoeveel posts een eigen foto als achtergrond krijgen in plaats van een kleurverloop.</div></div>
         <div class="blok"><h3>Experimenteren: <span id="vVerk"></span></h3><input type="range" id="rVerk" min="10" max="40" step="5"><button class="btn" id="sVerk">Opslaan</button><div class="sub" style="margin-top:6px">Hoe vaak het systeem iets nieuws probeert in plaats van wat al goed werkt.</div></div>
       </div>
@@ -581,11 +581,12 @@ function bouwBediening(){
       <span class="sub" style="align-self:center;margin:0 4px 0 8px">Max per dag:</span>${[1,2,3].map(k=>`<button class="btn ${ni.max_per_dag===k?"prim":""}" data-o='{"actie":"nieuws_instelling","sleutel":"max_per_dag","waarde":${k}}'>${k}</button>`).join("")}</div>
     <div class="sub" style="margin-top:8px">Rond 7, 12 en 17 uur kijkt het systeem naar het nieuws (NOS en NU.nl). Licht nieuws (weer, Sinterklaas, sport, drukte) wordt vanzelf een post: de eerstvolgende carrousel krijgt een passend vers en een openingszin. Zwaar nieuws en politiek gaan nooit vanzelf: je krijgt een voorstel en het gaat alleen online met jouw akkoord (politiek altijd neutraal, nooit een partij of standpunt). In de post zelf komt nooit nieuwstekst.</div>
     ${nr.length?`<div style="margin-top:10px">${nr.slice(0,8).map(x=>`<div class="sub" style="padding:5px 0;border-top:1px solid var(--lijn)"><b>${esc(x.categorie)}</b>${x.zwaar?" · zwaar":""} · ${esc(x.bron)}: <a href="${esc(x.link||"#")}" target="_blank">${esc(x.kop)}</a> · ${NST[x.status]||x.status}${x.status==="voorstel"?` ${knop("Post maken",{actie:"nieuws_maken",id:x.id},"prim")} ${knop("Negeren",{actie:"nieuws_negeren",id:x.id})}`:""}</div>`).join("")}</div>`:""}`;
-  document.getElementById("bReels").innerHTML=`<div class="seg">${c.nieuwe_reels
-      ?`<button class="btn aan" data-o='{"actie":"nieuwe_reels","aan":false}'>✓ Aan</button>`
-      :`<button class="btn prim" data-o='{"actie":"nieuwe_reels","aan":true}'>Aanzetten</button>`}
-      <span class="sub" style="align-self:center;margin:0 4px 0 8px">Tempo:</span>${[[0.8,"Langzaam"],[1.0,"Rustig"],[1.25,"Vlot"],[1.6,"Snel"]].map(([w,n])=>`<button class="btn ${(c.reel_tempo??1)===w?"prim":""}" data-o='{"actie":"reel_tempo","waarde":${w}}'>${n}</button>`).join("")}</div>
-    <div class="sub" style="margin-top:8px">Aan: het systeem test drie reelstijlen tegen elkaar (klassiek, snel en kinetisch, bewegend beeld), met of zonder een vraag als haak in de eerste seconde. Wat mensen het langst laat kijken, komt vaker.</div>`;
+  const sit=c.reel_formaat==="situatie",ra=c.reel_aandeel;
+  document.getElementById("bReels").innerHTML=`<div class="seg"><span class="sub" style="align-self:center;margin-right:6px">Soort reel:</span>
+      <button class="btn ${sit?"prim":""}" data-o='{"actie":"reel_formaat","waarde":"situatie"}'>Herkenbare situatie</button>
+      <button class="btn ${!sit?"prim":""}" data-o='{"actie":"reel_formaat","waarde":"klassiek"}'>Klassiek</button></div>
+    <div class="seg" style="margin-top:8px"><span class="sub" style="align-self:center;margin-right:6px">Aandeel reels:</span>${[[0.4,"40%"],[0.5,"50%"],[0.6,"60%"],[0.75,"75%"],[null,"Laat het systeem kiezen"]].map(([w,n])=>`<button class="btn ${(ra??null)===w?"prim":""}" data-o='{"actie":"reel_aandeel","waarde":${w}}'>${n}</button>`).join("")}</div>
+    <div class="sub" style="margin-top:8px">Herkenbare situatie: eerst een echt videobeeld met een herkenbare zin, dan het hele vers op een rustig beeld, daarna de uitleg. Tekst midden en tekst boven worden tegen elkaar getest, net als het soort rustbeeld. Vindt het systeem geen passend beeld, dan wordt het een klassieke reel.</div>`;
   const max=c.max_posts_per_dag||3;
   document.getElementById("bPPD").innerHTML=[...Array(max)].map((_,i)=>`<button class="btn ${c.posts_per_dag===i+1?"prim":""}" data-o='{"actie":"posts_per_dag","waarde":${i+1}}'>${i+1}</button>`).join("");
   document.getElementById("bPlat").innerHTML=["instagram","facebook"].map(pl=>{const aan=c.platformen_actief.includes(pl);
