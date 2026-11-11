@@ -57,8 +57,13 @@ def zoek(term, n=12):
     d = _vraag("/videos", {"query": term, "page_size": n, "urls": "true", "sort": "popular"})
     hits = d.get("hits", [])
     # staand beeld heeft voorkeur, verder lang genoeg
-    hits = [h for h in hits if (h.get("duration") or 0) >= 4 and (h.get("urls") or {}).get("mp4")]
-    hits.sort(key=lambda h: (not h.get("is_vertical"), -(h.get("downloads") or 0)))
+    def getal(x):
+        try:
+            return float(x or 0)
+        except (TypeError, ValueError):
+            return 0.0
+    hits = [h for h in hits if getal(h.get("duration")) >= 4 and (h.get("urls") or {}).get("mp4")]
+    hits.sort(key=lambda h: (not h.get("is_vertical"), -getal(h.get("downloads"))))
     return hits
 
 
