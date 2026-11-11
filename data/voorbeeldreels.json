@@ -1,6 +1,6 @@
 {
- "sleutel": false,
- "test": "mislukt: geen COVERR_KEY",
+ "sleutel": true,
+ "test": "mislukt: '>=' not supported between instances of 'str' and 'int'",
  "reels": [
   {
    "ref": "Mattheüs 6:34",
