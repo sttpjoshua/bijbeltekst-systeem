@@ -263,7 +263,7 @@ def maak_reel(post, pad, stijl="kinetisch", haak=None, fotos=None, tempo=1.0):
 # =====================================================================
 # Herkenbare situatie (nieuwe aanpak, 11 nov): echte video, het HELE vers in één keer in beeld.
 # =====================================================================
-PLAATSING = {"onder": 0.70, "midden": 0.47, "boven": 0.25}
+PLAATSING = {"onder": 0.70, "midden": 0.47, "boven": 0.25}  # Joshua (11 nov): midden en boven, die worden getest
 
 
 def _band(plaatsing):

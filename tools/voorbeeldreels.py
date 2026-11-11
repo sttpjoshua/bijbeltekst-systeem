@@ -14,14 +14,15 @@ print(rapport["test"])
 bank = T.laad(); V = {v["id"]: v for v in S.alle_verzen()}
 cfg = S.laad("config.json"); mat = S.materiaal(cfg)
 basis = next(p for p in reversed(S.laad("data/posts.json", [])) if p["variabelen"]["formaat"] == "video")
-voorbeelden = [("Matthew-6-34-34", "natuur", "onder"), ("Psalms-56-4-4", "dichtbij", "midden"),
-               ("Proverbs-20-13-13", "onderweg", "boven"), ("Isaiah-41-13-13", "natuur", "onder")]
+voorbeelden = [("Proverbs-20-13-13", "natuur", "boven"), ("Matthew-6-34-34", "dichtbij", "midden"),
+               ("Matthew-11-28-28", "onderweg", "boven"), ("Psalms-56-4-4", "natuur", "midden")]
 os.makedirs(S.P("docs/media/voorbeelden"), exist_ok=True)
 for i, (vid, scene, pl) in enumerate(voorbeelden):
     x, e = V[vid], bank[vid]
     p = copy.deepcopy(basis)
     p.update(id=f"voorbeeld-{i + 1}", ref=x["ref"], tekst=x["tekst"], vers_id=vid)
     p["variabelen"].update(thema=x["thema"], reel_scene=scene)
+    S.bewaar("data/clips_gebruikt.json", [])  # voorbeelden: alles mag
     T.vul_post(p, e, cfg)
     muz = random.Random(i).choice(mat["muziek"]) if mat["muziek"] else None
     if muz:

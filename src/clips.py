@@ -35,6 +35,30 @@ SCENES = {
 }
 
 
+# Herkenningszin -> zoektermen. De eerste regel die past, wint; anders de lijst van het thema.
+KOPPEL = [
+    (r"snooze|wekker|opstaan|ochtendmens|vroeg op|uit bed", ["alarm clock bed morning", "woman waking up bed", "man turning off alarm"]),
+    (r"piekeren|wakker lag|slapen|nacht|23:00|malen", ["person awake in bed at night", "woman lying in bed thinking", "insomnia bed"]),
+    (r"moe|uitgeput|op is|op bent|geen kracht", ["tired woman sighing", "exhausted man desk", "tired person couch"]),
+    (r"file|druk|haast|stress|agenda|to-do", ["traffic jam cars", "busy office stress", "crowded street rush"]),
+    (r"trein|perron|onderweg|reis", ["train platform waiting", "commuter train window", "person waiting bus stop"]),
+    (r"bang|angst|spannend|eng", ["nervous woman", "man looking worried", "anxious person window"]),
+    (r"verdriet|huil|rouw|mist|gebroken|pijn", ["sad woman window", "man sitting alone sad", "person crying"]),
+    (r"alleen|eenzaam|onzichtbaar|vergeten", ["person alone window", "man alone city", "woman walking alone"]),
+    (r"studeer|studie|examen|tentamen|leren", ["student studying library", "student writing notes", "reading book desk"]),
+    (r"werk|collega|baas|kantoor|maandag", ["office work desk", "colleagues meeting office", "man working laptop"]),
+    (r"koffie", ["making coffee morning", "hands holding coffee"]),
+    (r"buurman|visite|vriend|samen|groepsapp", ["friends talking cafe", "neighbors talking", "friends laughing"]),
+    (r"ruzie|boos|discussie|reageren|mail", ["arguing couple", "angry man phone", "woman typing phone angry"]),
+    (r"lachen|grappig|blij", ["friends laughing", "woman laughing"]),
+    (r"smoes|uitstellen|klusje|later", ["man procrastinating phone couch", "messy desk", "lazy sunday couch"]),
+    (r"dankbaar|cadeau|goed ging", ["family dinner table", "woman smiling sunlight"]),
+    (r"nieuw|begin|eerste dag", ["walking through door", "person starting new job", "road ahead"]),
+    (r"keuze|kiezen|beslissing|weet niet", ["crossroads path", "man thinking window", "woman deciding"]),
+]
+NIET = ("animat", "cartoon", " 3d", "3d ", "cgi", "render", "illustrat", "ai generated", "ai-generated", "generative", "motion graphic")
+
+
 def _vraag(pad, params):
     key = os.environ.get("COVERR_KEY", "").strip()
     if not key:
@@ -91,16 +115,27 @@ def zoek(term, n=12):
             return float(x or 0)
         except (TypeError, ValueError):
             return 0.0
-    hits = [h for h in hits if getal(h.get("duration")) >= 4 and (h.get("urls") or {}).get("mp4")]
+    def echt(h):  # geen animatie of AI-beelden
+        t = " ".join([str(h.get("title") or ""), str(h.get("description") or ""), " ".join(map(str, h.get("tags") or []))]).lower()
+        return not any(w in t for w in NIET)
+    hits = [h for h in hits if getal(h.get("duration")) >= 4 and (h.get("urls") or {}).get("mp4") and echt(h)]
     hits.sort(key=lambda h: (not h.get("is_vertical"), -getal(h.get("downloads"))))
     return hits
 
 
-def kies(soort, thema, rnd, gebruikt):
-    """Eén clip van een scènesoort; vermijdt recent gebruikte clips. Geeft (pad, info) of (None, None)."""
-    opties = SCENES[soort].get(thema, []) + SCENES[soort].get("algemeen", []) if soort == "situatie" else list(SCENES[soort])
-    rnd.shuffle(opties)
-    for term in opties[:4]:
+def kies(soort, thema, rnd, gebruikt, zin=""):
+    """Eén clip van een scènesoort; vermijdt recent gebruikte clips. Geeft (pad, info) of (None, None).
+    Bij 'situatie' bepaalt de herkenningszin de zoektermen (KOPPEL); anders het thema."""
+    import re
+    eerst = []
+    if soort == "situatie" and zin:
+        for patroon, termen in KOPPEL:
+            if re.search(patroon, zin.lower()):
+                eerst = list(termen); rnd.shuffle(eerst); break
+    rest = SCENES[soort].get(thema, []) + SCENES[soort].get("algemeen", []) if soort == "situatie" else list(SCENES[soort])
+    rnd.shuffle(rest)
+    opties = eerst + [t for t in rest if t not in eerst]
+    for term in opties[:5]:
         try:
             hits = [h for h in zoek(term) if h["id"] not in gebruikt]
         except Exception as e:
@@ -126,7 +161,8 @@ def clips_voor(post, rnd=None):
     gebruikt = {x["id"] for x in log[-150:]}
     thema = post["variabelen"].get("thema", "algemeen")
     rust = post["variabelen"].get("reel_scene") or rnd.choice(["natuur", "dichtbij", "onderweg"])
-    a, ia = kies("situatie", thema, rnd, gebruikt)
+    zin = post.get("reel_herkenning") or post.get("verhaal_hook") or post.get("hook") or ""
+    a, ia = kies("situatie", thema, rnd, gebruikt, zin)
     if ia:
         gebruikt.add(ia["id"])
     b, ib = kies(rust, thema, rnd, gebruikt)
