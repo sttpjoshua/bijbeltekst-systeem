@@ -28,5 +28,11 @@
   "soort": "direct",
   "tekst": "🚨 *Bibleverse: probleem*\nZwaar nieuws (NOS): \"Vijf jaar The Kyiv Independent: hoe bedrijf je journalistiek in een land in oorlog?\". Wil je er een troostende post over? Die gaat dan pas 6 uur na het nieuws online.\nOplossen: https://sttpjoshua.github.io/bijbeltekst-systeem/",
   "sleutel": "direct:🚨 *Bibleverse: probleem*\nZwaar nieuws (NOS): \"Vijf jaar The Kyiv Independent: ho"
+ },
+ {
+  "t": "2026-11-11T13:40+01:00",
+  "soort": "test",
+  "tekst": "👋 Testbericht van Bibleverse. De meldingen werken!",
+  "sleutel": "test:2026-11-11T13:40:29"
  }
 ]

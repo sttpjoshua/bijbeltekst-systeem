@@ -777,8 +777,7 @@
   "soort": "fout",
   "tekst": "Politiek nieuws (NOS): \"Raad van State: minister van Asiel moet veiligheid Syrië opnieuw beoordelen\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
   "code": "nieuws_voorstel",
-  "post": "n111112010",
-  "opgelost": true
+  "post": "n111112010"
  },
  {
   "t": "2026-11-11T12:16:10",
@@ -829,5 +828,10 @@
   "t": "2026-11-11T13:38:39",
   "soort": "info",
   "tekst": "Bediening: Fout als opgelost gemarkeerd"
+ },
+ {
+  "t": "2026-11-11T13:40:29",
+  "soort": "info",
+  "tekst": "Bediening: WhatsApp-testbericht klaargezet"
  }
 ]
