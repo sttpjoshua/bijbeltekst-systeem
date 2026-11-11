@@ -63,6 +63,7 @@ DIMENSIES = {
     "reel_scene": ["natuur", "dichtbij", "onderweg"],  # situatie-reel: soort rustig beeld onder het vers
     "reel_haak": ["geen", "vraag"],  # alleen video: eerst 1,4 s een grote vraag in beeld
     "opening": ["vers", "stopper", "verhaal"],  # carrousel: slide 1 het hele vers, een korte grote 'stopper', of eerst de uitleg als haak ('verhaal eerst')
+    "hashtag_stijl": ["mix", "zoekwoord", "zonder"],  # mix = vaste tags uit de tekstbank; zoekwoord = kernwoord, boek en #bijbelvers
     "tijdslot": ["07:30", "12:15", "17:45", "20:30", "22:00"],
 }
 
@@ -770,7 +771,7 @@ def cmd_experiment(stil=False):
     bewaar("config.json", cfg)
     namen = {"huisstijl": "stijl", "thema": "thema", "hook_stijl": "soort hook", "formaat": "carrousel of video",
              "uitleg_op_beeld": "uitleg op beeld", "achtergrondbron": "foto of kleur", "boekgroep": "Bijbelboek",
-             "lengte": "lengte van het vers", "bron": "bekend of onbekend vers", "vraag_onderaan": "vraag onderaan", "opening": "eerste slide (hele vers, stopper of verhaal eerst)", "reel_stijl": "reelstijl", "reel_haak": "vraag als haak in reel", "reel_plaatsing": "plek van de tekst in de reel", "reel_scene": "soort rustbeeld in de reel", "video_uitleg": "video met uitleg"}
+             "lengte": "lengte van het vers", "bron": "bekend of onbekend vers", "vraag_onderaan": "vraag onderaan", "opening": "eerste slide (hele vers, stopper of verhaal eerst)", "reel_stijl": "reelstijl", "reel_haak": "vraag als haak in reel", "hashtag_stijl": "soort hashtags", "reel_plaatsing": "plek van de tekst in de reel", "reel_scene": "soort rustbeeld in de reel", "video_uitleg": "video met uitleg"}
     tekst = "Experiment deze week: " + " en ".join(namen.get(d, d) for d in keuze)
     cmd_log(tekst)
     if not stil:
@@ -1443,6 +1444,27 @@ def _bank_lijst(cfg, posts):
     return [{"id": k, "ref": e.get("ref", k), "kw": e.get("kw", ""), "herkenning": (e.get("hooks") or {}).get("herkenning", ""),
              "uit": k in uit, "laatst": laatst.get(k), "n": aantal.get(k, 0)} for k, e in bank.items()]
 
+def cmd_hashtags_testen():
+    """Geplande posts (vanaf morgen, nog niet geplaatst) verdelen over de drie hashtag-stijlen, zodat de test meteen start."""
+    import tekstbank
+    cfg, posts = laad("config.json"), laad("data/posts.json", [])
+    bank = tekstbank.laad() or {}
+    morgen = (dt.date.today() + dt.timedelta(days=1)).isoformat()
+    opties = DIMENSIES["hashtag_stijl"]
+    n = 0
+    for p in sorted(posts, key=lambda x: (x["datum"], x["id"])):
+        e = bank.get(p.get("vers_id"))
+        if (p["datum"] < morgen or p["status"] not in ("gerenderd", "goedgekeurd") or p.get("gepubliceerd") or not e
+                or p["variabelen"].get("hashtag_stijl")):
+            continue
+        st = opties[n % len(opties)]
+        p["variabelen"]["hashtag_stijl"] = st
+        p.setdefault("keuzebron", {})["hashtag_stijl"] = "test"
+        p["hashtags"] = tekstbank.hashtags_voor(e, p, st, cfg)
+        n += 1
+    bewaar("data/posts.json", posts)
+    print(f"{n} geplande posts verdeeld over {', '.join(opties)}")
+
 def cmd_reels_vernieuwen():
     """Geplande reels (vanaf morgen, nog niet geplaatst) opnieuw laten maken in het huidige reelformaat."""
     cfg, posts = laad("config.json"), laad("data/posts.json", [])
@@ -1583,5 +1605,6 @@ if __name__ == "__main__":
      "nood": lambda: cmd_nood(*(x.args[:1] or ["status"])),
      "automaak": lambda: cmd_automaak(*(x.args[:1] or [""])),
      "reels_vernieuwen": lambda: cmd_reels_vernieuwen(),
+     "hashtags_testen": lambda: cmd_hashtags_testen(),
      "tekstbank": lambda: cmd_tekstbank(*(x.args[:1] or ["status"])),
      "aanvullen": lambda: cmd_aanvullen(bool(x.args and x.args[0] == "check"))}[x.cmd]()

@@ -59,6 +59,25 @@ def problemen(vid, e, vers_tekst=None):
     return uit
 
 
+def hashtags_voor(e, p, stijl, cfg):
+    """Hashtags volgens de geteste stijl: 'mix' (vaste tags uit de bank), 'zoekwoord' (kernwoord, boek en #bijbelvers) of 'zonder'."""
+    import re
+    mx = cfg.get("hashtags_max", 5)
+    if stijl == "zonder":
+        return []
+    if stijl == "zoekwoord":
+        schoon = lambda t: re.sub(r"[^0-9a-zA-Z\u00c0-\u017f]", "", t).lower()
+        boek = re.sub(r"\s+\d+[\d:,.\-\u2013]*$", "", p["ref"])
+        thema = {"vrede_rust": "rust", "humor_herkenbaar": "humor"}.get(p["variabelen"].get("thema"), p["variabelen"].get("thema") or e.get("kw", ""))
+        tags = ["#bijbelvers", "#" + schoon(thema), "#" + schoon(boek)]
+        uit = []
+        for t in tags:
+            if len(t) > 1 and t not in uit:
+                uit.append(t)
+        return uit[:mx]
+    return list(e["tags"])[:mx]
+
+
 def vul_post(p, e, cfg, vermijd=()):
     """Vult een post (status wacht_op_tekst) met teksten uit de bank. Geeft True als het lukte.
     vermijd: hooks die de afgelopen 14 dagen al gebruikt zijn (die worden overgeslagen)."""
@@ -92,7 +111,7 @@ def vul_post(p, e, cfg, vermijd=()):
         caption = "\n\n".join(d for d in delen if d != e["zin"].strip())
     p.update({
         "hook": hook, "beeld_hook": "", "caption": caption,
-        "hashtags": list(e["tags"])[: cfg.get("hashtags_max", 5)],
+        "hashtags": hashtags_voor(e, p, v.get("hashtag_stijl") or "mix", cfg),
         "uitleg": e["uitleg"] if v.get("uitleg_op_beeld") else "",
         "betekenis": e["betekenis"], "toepassing": e["toepassing"],
         "kernwoord": e["kw"], "verhaal_hook": e.get("verhaal", ""),

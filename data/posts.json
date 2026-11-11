@@ -2994,7 +2994,8 @@
    "layout": "links",
    "achtergrond": "radiaal",
    "hook_op_beeld": false,
-   "video_uitleg": null
+   "video_uitleg": null,
+   "hashtag_stijl": "mix"
   },
   "keuzebron": {
    "huisstijl": "experiment",
@@ -3009,7 +3010,8 @@
    "vraag_onderaan": "experiment",
    "opening": "experiment",
    "tijdslot": "experiment",
-   "video_uitleg": "n.v.t."
+   "video_uitleg": "n.v.t.",
+   "hashtag_stijl": "test"
   },
   "hook": "Kun jij blij zijn als niet alles lukt?",
   "beeld_hook": "",
@@ -3200,7 +3202,8 @@
    "reel_stijl": "situatie",
    "reel_haak": "geen",
    "reel_plaatsing": "midden",
-   "reel_scene": "dichtbij"
+   "reel_scene": "dichtbij",
+   "hashtag_stijl": "zoekwoord"
   },
   "keuzebron": {
    "huisstijl": "experiment",
@@ -3218,16 +3221,16 @@
    "video_uitleg": "vaste regel",
    "reel_stijl": "vaste regel",
    "reel_plaatsing": "verkenning",
-   "reel_scene": "verkenning"
+   "reel_scene": "verkenning",
+   "hashtag_stijl": "test"
   },
   "hook": "Voor iedereen die vanavond toch weer drie filmpjes over niks heeft gekeken.",
   "beeld_hook": "",
   "caption": "Voor iedereen die vanavond toch weer drie filmpjes over niks heeft gekeken.\n\n\"Een verstandig hart zal de wetenschap opzoeken; maar de mond der zotten zal met dwaasheid gevoed worden.\"\nSpreuken 15:14\n\nWat je hart voedt, bepaalt wie je wordt. Kies vanavond eens bewust.\n\nWaar voed jij je hart vandaag mee?",
   "hashtags": [
-   "#spreuken",
-   "#wijsheid",
-   "#bijbeltekst",
-   "#herkenbaar"
+   "#bijbelvers",
+   "#humor",
+   "#spreuken"
   ],
   "uitleg": "",
   "betekenis": "Spreuken zet twee mensen naast elkaar: de een zoekt kennis die hem verder helpt, de ander voedt zich met onzin. Wat je tot je neemt, vormt je.",
@@ -3303,7 +3306,8 @@
    "layout": "links",
    "achtergrond": "diagonaal",
    "hook_op_beeld": false,
-   "video_uitleg": null
+   "video_uitleg": null,
+   "hashtag_stijl": "zonder"
   },
   "keuzebron": {
    "huisstijl": "experiment",
@@ -3318,17 +3322,13 @@
    "vraag_onderaan": "experiment",
    "opening": "experiment",
    "tijdslot": "experiment",
-   "video_uitleg": "n.v.t."
+   "video_uitleg": "n.v.t.",
+   "hashtag_stijl": "test"
   },
   "hook": "Lees dit voordat je op snooze drukt.",
   "beeld_hook": "",
   "caption": "Lees dit voordat je op snooze drukt.\n\n\"Een deur keert om op haar herre, alzo de luiaard op zijn bed.\"\nSpreuken 26:14\n\nEen eerlijk en grappig beeld: veel beweging, maar je komt nergens.",
-  "hashtags": [
-   "#spreuken",
-   "#humor",
-   "#bijbeltekst",
-   "#herkenbaar"
-  ],
+  "hashtags": [],
   "uitleg": "Zoals een deur heen en weer draait, zo draait een luiaard zich om in bed.",
   "betekenis": "Spreuken gebruikt een grappig beeld: een deur draait wel, maar blijft op dezelfde plek. Zo is het ook met uitstellen. Je beweegt, maar komt niet vooruit.",
   "toepassing": "Kies één klusje dat je al dagen uitstelt en doe het morgen als eerste, nog voor je telefoon.",
@@ -3404,7 +3404,8 @@
    "layout": "centraal",
    "achtergrond": "diagonaal",
    "hook_op_beeld": false,
-   "video_uitleg": null
+   "video_uitleg": null,
+   "hashtag_stijl": "mix"
   },
   "keuzebron": {
    "huisstijl": "experiment",
@@ -3419,7 +3420,8 @@
    "vraag_onderaan": "experiment",
    "opening": "experiment",
    "tijdslot": "experiment",
-   "video_uitleg": "n.v.t."
+   "video_uitleg": "n.v.t.",
+   "hashtag_stijl": "test"
   },
   "hook": "Even dit, voor je verder gaat.",
   "beeld_hook": "",
@@ -3507,7 +3509,8 @@
    "layout": "links",
    "achtergrond": "diagonaal",
    "hook_op_beeld": false,
-   "video_uitleg": null
+   "video_uitleg": null,
+   "hashtag_stijl": "zoekwoord"
   },
   "keuzebron": {
    "huisstijl": "experiment",
@@ -3522,16 +3525,16 @@
    "vraag_onderaan": "experiment",
    "opening": "experiment",
    "tijdslot": "experiment",
-   "video_uitleg": "n.v.t."
+   "video_uitleg": "n.v.t.",
+   "hashtag_stijl": "test"
   },
   "hook": "Tel even mee: hoeveel haren heb jij?",
   "beeld_hook": "",
   "caption": "Tel even mee: hoeveel haren heb jij?\n\n\"En ook uw haren des hoofds zijn alle geteld. Vreest dan niet; gij gaat vele musjes te boven.\"\nMattheüs 10:30-31\n\nNiemand telt jouw haren. God wel. Zo goed kent Hij je.\n\nWanneer voelde jij je echt gezien?",
   "hashtags": [
+   "#bijbelvers",
    "#identiteit",
-   "#mattheus",
-   "#bijbeltekst",
-   "#waardevol"
+   "#mattheüs"
   ],
   "uitleg": "God kent je tot in het kleinste detail. Je bent meer waard dan je denkt.",
   "betekenis": "Jezus zegt dat God zelfs je haren heeft geteld. Als Hij al op mussen let, hoeveel meer let Hij dan op jou. Je hoeft niet bang te zijn.",
@@ -3614,7 +3617,8 @@
    "reel_stijl": "situatie",
    "reel_haak": "geen",
    "reel_plaatsing": "midden",
-   "reel_scene": "onderweg"
+   "reel_scene": "onderweg",
+   "hashtag_stijl": "zonder"
   },
   "keuzebron": {
    "huisstijl": "experiment",
@@ -3632,17 +3636,13 @@
    "video_uitleg": "vaste regel",
    "reel_stijl": "vaste regel",
    "reel_plaatsing": "strategie",
-   "reel_scene": "verkenning"
+   "reel_scene": "verkenning",
+   "hashtag_stijl": "test"
   },
   "hook": "Voor iedereen die in een vergadering net iets te veel zei.",
   "beeld_hook": "",
   "caption": "Voor iedereen die in een vergadering net iets te veel zei.\n\n\"Een dwaas zelfs, die zwijgt, zal wijs geacht worden, en die zijn lippen toesluit, verstandig.\"\nSpreuken 17:28\n\nSoms is zwijgen het slimste wat je kunt zeggen.\n\nWanneer had jij beter even kunnen zwijgen?",
-  "hashtags": [
-   "#spreuken",
-   "#humor",
-   "#bijbeltekst",
-   "#wijsheid"
-  ],
+  "hashtags": [],
   "uitleg": "Ook een dwaas lijkt wijs als hij zijn mond houdt.",
   "betekenis": "Een eerlijke en grappige spreuk: wie zijn woorden spaart, komt wijzer over. Niet alles wat je denkt, hoeft gezegd te worden.",
   "toepassing": "Wacht vandaag in een gesprek drie seconden voordat je reageert. Kijk of je het dan nog steeds wilt zeggen.",
@@ -3720,7 +3720,8 @@
    "reel_stijl": "situatie",
    "reel_haak": "geen",
    "reel_plaatsing": "midden",
-   "reel_scene": "dichtbij"
+   "reel_scene": "dichtbij",
+   "hashtag_stijl": "mix"
   },
   "keuzebron": {
    "huisstijl": "experiment",
@@ -3738,7 +3739,8 @@
    "video_uitleg": "vaste regel",
    "reel_stijl": "vaste regel",
    "reel_plaatsing": "verkenning",
-   "reel_scene": "verkenning"
+   "reel_scene": "verkenning",
+   "hashtag_stijl": "test"
   },
   "hook": "Voor iedereen die zich afvraagt of het ertoe doet wat hij doet.",
   "beeld_hook": "",
@@ -3827,7 +3829,8 @@
    "reel_stijl": "situatie",
    "reel_haak": "geen",
    "reel_plaatsing": "midden",
-   "reel_scene": "onderweg"
+   "reel_scene": "onderweg",
+   "hashtag_stijl": "zoekwoord"
   },
   "keuzebron": {
    "huisstijl": "experiment",
@@ -3845,16 +3848,16 @@
    "video_uitleg": "vaste regel",
    "reel_stijl": "vaste regel",
    "reel_plaatsing": "verkenning",
-   "reel_scene": "verkenning"
+   "reel_scene": "verkenning",
+   "hashtag_stijl": "test"
   },
   "hook": "Wanneer luisterde jij voor het laatst echt?",
   "beeld_hook": "",
   "caption": "Wanneer luisterde jij voor het laatst echt?\n\n\"Ik zal horen, wat God, de HEERE, spreken zal; want Hij zal tot Zijn volk en tot Zijn gunstgenoten van vrede spreken; maar dat zij niet weder tot dwaasheid keren.\"\nPsalm 85:9\n\nVoor je iets tegen God zegt, mag je eerst luisteren. Hij spreekt over vrede.\n\nWaar heb jij vandaag vrede nodig?",
   "hashtags": [
-   "#vrede",
-   "#psalmen",
-   "#bijbeltekst",
-   "#stilte"
+   "#bijbelvers",
+   "#humor",
+   "#psalm"
   ],
   "uitleg": "Luister naar God: Hij spreekt over vrede voor wie bij Hem hoort.",
   "betekenis": "De dichter neemt zich voor om eerst te luisteren naar wat God zegt. En God spreekt over vrede voor Zijn volk, met de oproep om niet terug te gaan naar dwaasheid.",
@@ -3928,7 +3931,8 @@
    "layout": "citaat",
    "achtergrond": "licht",
    "hook_op_beeld": false,
-   "video_uitleg": null
+   "video_uitleg": null,
+   "hashtag_stijl": "zonder"
   },
   "keuzebron": {
    "huisstijl": "experiment",
@@ -3943,17 +3947,13 @@
    "vraag_onderaan": "experiment",
    "opening": "experiment",
    "tijdslot": "experiment",
-   "video_uitleg": "n.v.t."
+   "video_uitleg": "n.v.t.",
+   "hashtag_stijl": "test"
   },
   "hook": "Wat zou jij doen met meer wijsheid?",
   "beeld_hook": "",
   "caption": "Wat zou jij doen met meer wijsheid?\n\n\"De wijsheid is het voornaamste; verkrijg dan wijsheid, en verkrijg verstand met al uw bezitting.\"\nSpreuken 4:7\n\nWijsheid is een investering die altijd iets oplevert.",
-  "hashtags": [
-   "#wijsheid",
-   "#spreuken",
-   "#bijbeltekst",
-   "#keuzes"
-  ],
+  "hashtags": [],
   "uitleg": "",
   "betekenis": "Spreuken zegt dat wijsheid belangrijker is dan wat je bezit. Wijsheid leert je goede keuzes maken. Daar mag je moeite en tijd in steken.",
   "toepassing": "Kies vandaag één moment om bewust na te denken voordat je iets zegt of beslist.",
@@ -4013,7 +4013,8 @@
    "reel_stijl": "situatie",
    "reel_haak": "geen",
    "reel_plaatsing": "boven",
-   "reel_scene": "onderweg"
+   "reel_scene": "onderweg",
+   "hashtag_stijl": "mix"
   },
   "keuzebron": {
    "huisstijl": "experiment",
@@ -4031,7 +4032,8 @@
    "video_uitleg": "vaste regel",
    "reel_stijl": "vaste regel",
    "reel_plaatsing": "strategie",
-   "reel_scene": "strategie"
+   "reel_scene": "strategie",
+   "hashtag_stijl": "test"
   },
   "hook": "Voor iedereen die klem zit en geen uitweg ziet.",
   "beeld_hook": "",
@@ -4099,7 +4101,8 @@
    "reel_stijl": "situatie",
    "reel_haak": "geen",
    "reel_plaatsing": "boven",
-   "reel_scene": "onderweg"
+   "reel_scene": "onderweg",
+   "hashtag_stijl": "zoekwoord"
   },
   "keuzebron": {
    "huisstijl": "experiment",
@@ -4117,16 +4120,16 @@
    "video_uitleg": "vaste regel",
    "reel_stijl": "vaste regel",
    "reel_plaatsing": "strategie",
-   "reel_scene": "verkenning"
+   "reel_scene": "verkenning",
+   "hashtag_stijl": "test"
   },
   "hook": "Voor iedereen die merkt dat scrollen niet goed voor hem is.",
   "beeld_hook": "",
   "caption": "Voor iedereen die merkt dat scrollen niet goed voor hem is.\n\n\"Behoed uw hart boven al wat te bewaren is, want daaruit zijn de uitgangen des levens.\"\nSpreuken 4:23\n\nWat je hart vult, bepaalt hoe je leeft.",
   "hashtags": [
+   "#bijbelvers",
    "#wijsheid",
-   "#spreuken",
-   "#bijbeltekst",
-   "#hart"
+   "#spreuken"
   ],
   "uitleg": "",
   "betekenis": "Spreuken zegt dat je hart de bron is van wat je doet. Wat je binnenlaat, bepaalt hoe je leeft. Daarom mag je goed letten op wat je hart vult.",
@@ -4182,7 +4185,8 @@
    "layout": "centraal",
    "achtergrond": "diagonaal",
    "hook_op_beeld": false,
-   "video_uitleg": null
+   "video_uitleg": null,
+   "hashtag_stijl": "zonder"
   },
   "keuzebron": {
    "huisstijl": "experiment",
@@ -4197,17 +4201,13 @@
    "vraag_onderaan": "experiment",
    "opening": "experiment",
    "tijdslot": "experiment",
-   "video_uitleg": "n.v.t."
+   "video_uitleg": "n.v.t.",
+   "hashtag_stijl": "test"
   },
   "hook": "Voor iedereen die vannacht lag te piekeren.",
   "beeld_hook": "",
   "caption": "Voor iedereen die vannacht lag te piekeren.\n\n\"Zijt dan niet bezorgd tegen den morgen; want de morgen zal voor het zijne zorgen; elke dag heeft genoeg aan zijn zelfs kwaad.\"\nMattheüs 6:34\n\nVandaag is genoeg. Morgen zorgt God ook.",
-  "hashtags": [
-   "#zorgen",
-   "#vertrouwen",
-   "#bijbeltekst",
-   "#jezus"
-  ],
+  "hashtags": [],
   "uitleg": "Maak je geen zorgen over morgen. Elke dag heeft genoeg aan zijn eigen zorgen.",
   "betekenis": "Jezus zegt dat je niet alle zorgen van de toekomst vandaag hoeft te dragen. Vandaag is genoeg. God zorgt ook voor morgen.",
   "toepassing": "Schrijf de zorgen op die over morgen gaan. Leg het papiertje weg tot morgen.",
@@ -4265,7 +4265,8 @@
    "layout": "centraal",
    "achtergrond": "diagonaal",
    "hook_op_beeld": false,
-   "video_uitleg": null
+   "video_uitleg": null,
+   "hashtag_stijl": "mix"
   },
   "keuzebron": {
    "huisstijl": "experiment",
@@ -4280,7 +4281,8 @@
    "vraag_onderaan": "experiment",
    "opening": "experiment",
    "tijdslot": "experiment",
-   "video_uitleg": "n.v.t."
+   "video_uitleg": "n.v.t.",
+   "hashtag_stijl": "test"
   },
   "hook": "Voor iedereen bij wie het in zijn hoofd nooit stil is.",
   "beeld_hook": "",
@@ -4352,7 +4354,8 @@
    "reel_stijl": "situatie",
    "reel_haak": "geen",
    "reel_plaatsing": "midden",
-   "reel_scene": "natuur"
+   "reel_scene": "natuur",
+   "hashtag_stijl": "zoekwoord"
   },
   "keuzebron": {
    "huisstijl": "experiment",
@@ -4370,16 +4373,16 @@
    "video_uitleg": "vaste regel",
    "reel_stijl": "vaste regel",
    "reel_plaatsing": "verkenning",
-   "reel_scene": "strategie"
+   "reel_scene": "strategie",
+   "hashtag_stijl": "test"
   },
   "hook": "Vers van de week: Ben jij moe van alles wat moet?",
   "beeld_hook": "",
   "caption": "Vers van de week: Ben jij moe van alles wat moet?\n\n\"Neemt Mijn juk op u, en leert van Mij, dat Ik zachtmoedig ben en nederig van hart; en gij zult rust vinden voor uw zielen. Want Mijn juk is zacht, en Mijn last is licht.\"\nMattheüs 11:29-30\n\nBij Jezus mag je uitrusten.\n\nWelke last zou jij willen neerleggen?",
   "hashtags": [
+   "#bijbelvers",
    "#rust",
-   "#jezus",
-   "#bijbeltekst",
-   "#vermoeidheid"
+   "#mattheüs"
   ],
   "uitleg": "",
   "betekenis": "Jezus spreekt tegen mensen die moe zijn van regels en verwachtingen. Hij nodigt ze uit om van Hem te leren. Hij is zachtmoedig, en bij Hem vind je rust.",
@@ -4435,7 +4438,8 @@
    "layout": "centraal",
    "achtergrond": "diagonaal",
    "hook_op_beeld": false,
-   "video_uitleg": null
+   "video_uitleg": null,
+   "hashtag_stijl": "zonder"
   },
   "keuzebron": {
    "huisstijl": "experiment",
@@ -4450,17 +4454,13 @@
    "vraag_onderaan": "experiment",
    "opening": "experiment",
    "tijdslot": "experiment",
-   "video_uitleg": "n.v.t."
+   "video_uitleg": "n.v.t.",
+   "hashtag_stijl": "test"
   },
   "hook": "Een eerlijk vers over hoe mensen zijn.",
   "beeld_hook": "",
   "caption": "Een eerlijk vers over hoe mensen zijn.\n\n\"Gelijk een hond tot zijn uitspuwsel wederkeert, alzo herneemt de zot zijn dwaasheid.\"\nSpreuken 26:11\n\nWe maken allemaal weleens dezelfde fout twee keer.",
-  "hashtags": [
-   "#spreuken",
-   "#humor",
-   "#herkenbaar",
-   "#bijbeltekst"
-  ],
+  "hashtags": [],
   "uitleg": "Zoals een hond terugkeert naar zijn braaksel, zo herhaalt een dwaas zijn domheid.",
   "betekenis": "Spreuken gebruikt een vies beeld om iets duidelijk te maken: we vallen vaak terug in dezelfde fouten. Wijsheid is leren van wat misging.",
   "toepassing": "Welke fout maak jij steeds opnieuw? Kies vandaag één kleine stap om het anders te doen.",
@@ -4522,7 +4522,8 @@
    "reel_stijl": "situatie",
    "reel_haak": "geen",
    "reel_plaatsing": "midden",
-   "reel_scene": "onderweg"
+   "reel_scene": "onderweg",
+   "hashtag_stijl": "mix"
   },
   "keuzebron": {
    "huisstijl": "experiment",
@@ -4540,7 +4541,8 @@
    "video_uitleg": "vaste regel",
    "reel_stijl": "vaste regel",
    "reel_plaatsing": "verkenning",
-   "reel_scene": "strategie"
+   "reel_scene": "strategie",
+   "hashtag_stijl": "test"
   },
   "hook": "Voor iedereen die vastzit in wie hij vroeger was.",
   "beeld_hook": "",
@@ -4609,7 +4611,8 @@
    "reel_stijl": "situatie",
    "reel_haak": "geen",
    "reel_plaatsing": "boven",
-   "reel_scene": "onderweg"
+   "reel_scene": "onderweg",
+   "hashtag_stijl": "zoekwoord"
   },
   "keuzebron": {
    "huisstijl": "experiment",
@@ -4627,16 +4630,16 @@
    "video_uitleg": "vaste regel",
    "reel_stijl": "vaste regel",
    "reel_plaatsing": "strategie",
-   "reel_scene": "strategie"
+   "reel_scene": "strategie",
+   "hashtag_stijl": "test"
   },
   "hook": "Voor iedereen die het gevoel heeft dat het te veel wordt.",
   "beeld_hook": "",
   "caption": "Voor iedereen die het gevoel heeft dat het te veel wordt.\n\n\"Ik vermag alle dingen door Christus, Die mij kracht geeft.\"\nFilippenzen 4:13\n\nDe kracht komt niet uit jou, maar uit Hem.\n\nWaar heb jij vandaag extra kracht voor nodig?",
   "hashtags": [
-   "#kracht",
-   "#filippenzen",
-   "#bijbeltekst",
-   "#moed"
+   "#bijbelvers",
+   "#moed",
+   "#filippenzen"
   ],
   "uitleg": "",
   "betekenis": "Paulus schreef dit vanuit de gevangenis. Hij bedoelt niet dat hij alles kan wat hij wil, maar dat hij in elke situatie kan volhouden, met kracht van Jezus.",
@@ -4696,7 +4699,8 @@
    "reel_stijl": "situatie",
    "reel_haak": "geen",
    "reel_plaatsing": "boven",
-   "reel_scene": "onderweg"
+   "reel_scene": "onderweg",
+   "hashtag_stijl": "zonder"
   },
   "keuzebron": {
    "huisstijl": "experiment",
@@ -4714,17 +4718,13 @@
    "video_uitleg": "vaste regel",
    "reel_stijl": "vaste regel",
    "reel_plaatsing": "strategie",
-   "reel_scene": "verkenning"
+   "reel_scene": "verkenning",
+   "hashtag_stijl": "test"
   },
   "hook": "Een vaste grond, ook als je niets ziet.",
   "beeld_hook": "",
   "caption": "Een vaste grond, ook als je niets ziet.\n\n\"Het geloof nu is een vaste grond der dingen, die men hoopt, en een bewijs der zaken, die men niet ziet.\"\nHebreeën 11:1\n\nGeloof is vertrouwen op wat je nog niet ziet.\n\nWaar hoop jij op dat je nog niet ziet?",
-  "hashtags": [
-   "#geloof",
-   "#hoop",
-   "#bijbeltekst",
-   "#hebreeen"
-  ],
+  "hashtags": [],
   "uitleg": "Geloof is zeker zijn van wat je hoopt, ook als je het nog niet ziet.",
   "betekenis": "De schrijver legt uit wat geloof is: vertrouwen op wat je nog niet kunt zien. Geloof is geen gok, maar een vaste grond onder je voeten.",
   "toepassing": "Waar hoop je op maar zie je nog niets van? Breng het vandaag in gebed bij God.",

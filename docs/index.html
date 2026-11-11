@@ -407,7 +407,7 @@ html[data-thema=donker] .kpost .knws{background:#3a2e14;color:#ffd98a}
 <div id="lade" onclick="if(event.target===this)sluitLade()"><div class="ladebinnen" id="ladeBinnen"></div></div>
 <div id="galerij" onclick="if(event.target===this)this.style.display='none'"><button class="sluit" onclick="galerij.style.display='none'">✕</button><div class="galrij"></div><div class="tel"></div></div>
 <script>
-const NAMEN={huisstijl:"Huisstijl",thema:"Thema",hook_stijl:"Hook-stijl",formaat:"Formaat",uitleg_op_beeld:"Uitleg op beeld",achtergrondbron:"Achtergrond",boekgroep:"Bijbelboek",lengte:"Lengte vers",bron:"Bekend of ontdekking",vraag_onderaan:"Vraag onderaan",opening:"Eerste slide",tijdslot:"Tijdstip",reel_stijl:"Reelstijl",reel_plaatsing:"Tekst in reel",reel_scene:"Rustbeeld in reel"};
+const NAMEN={huisstijl:"Huisstijl",thema:"Thema",hook_stijl:"Hook-stijl",formaat:"Formaat",uitleg_op_beeld:"Uitleg op beeld",achtergrondbron:"Achtergrond",boekgroep:"Bijbelboek",lengte:"Lengte vers",bron:"Bekend of ontdekking",vraag_onderaan:"Vraag onderaan",opening:"Eerste slide",tijdslot:"Tijdstip",reel_stijl:"Reelstijl",reel_plaatsing:"Tekst in reel",reel_scene:"Rustbeeld in reel",hashtag_stijl:"Soort hashtags"};
 const STATUS={wacht_op_tekst:"Wacht op tekst",gerenderd:"Klaar, gaat online",afgekeurd:"Overgeslagen door jou",overgeslagen:"Overgeslagen",gepubliceerd:"Gepubliceerd",fout:"Fout"};
 const fmt=n=>n==null?"–":Number(n).toLocaleString("nl-NL");
 const tip=document.getElementById("tip");
@@ -586,7 +586,7 @@ const bereikVan=x=>x.totaal.reach||x.totaal.views||0;
 function bouwAB(){
   const el=document.getElementById("abKaart");if(!el)return;
   const alle=D.posts.filter(x=>!["afgekeurd","overgeslagen"].includes(x.status)),gem=D.posts.filter(metBereik);
-  const dims=[["formaat","Reel of carrousel"],["reel_plaatsing","Waar staat de tekst in de reel?"],["reel_scene","Welk rustbeeld in de reel?"],["opening","Eerste slide van een carrousel"],["achtergrondbron","Kleurverloop of foto"]];
+  const dims=[["formaat","Reel of carrousel"],["reel_plaatsing","Waar staat de tekst in de reel?"],["reel_scene","Welk rustbeeld in de reel?"],["opening","Eerste slide van een carrousel"],["achtergrondbron","Kleurverloop of foto"],["hashtag_stijl","Welke hashtags?"]];
   let h=`<h2>Wat werkt beter?</h2><div class="sub" style="margin:-6px 0 8px">Gemiddeld bereik per post. Een vergelijking wordt pas betrouwbaar bij ongeveer 8 posts per kant.</div>`;
   let n=0;
   for(const [dim,naam] of dims){
@@ -1079,7 +1079,7 @@ function bouwTop(){
   el.innerHTML=h+(met.length?"":'<div class="sub" style="margin-top:6px">Gesorteerd op bereik; de score komt zodra een post 20 of meer mensen heeft bereikt.</div>');
 }
 const OPTNAAM={afbeelding:"afbeeldingen",video:"video's",carrousel:"carrousels",verloop:"kleurverloop",beeld:"foto-achtergrond",true:"met uitleg op het beeld",false:"zonder uitleg",geen:"geen hook",vraag:"een vraag als hook",herkenning:"een herkenbare hook",uitdaging:"een uitdaging als hook",rustig:"een rustige hook",avond:"stijl avond",zand:"stijl zand",salie:"stijl salie",psalmen:"verzen uit de Psalmen",spreuken:"verzen uit Spreuken",wijsheid:"verzen uit Job, Prediker en Hooglied",profeten:"verzen uit de profeten",evangelien:"verzen uit de evangeliën",brieven:"verzen uit de brieven",kort:"korte verzen",middel:"middellange verzen",lang:"lange verzen",bekend:"bekende verzen",ontdekking:"minder bekende verzen"};
-Object.assign(OPTNAAM,{situatie:"herkenbare situatie",klassiek:"klassieke reel",midden:"tekst in het midden",boven:"tekst boven",natuur:"natuurbeeld",dichtbij:"close-up beeld",onderweg:"beeld onderweg"});
+Object.assign(OPTNAAM,{mix:"vaste mix hashtags",zoekwoord:"zoekwoord-hashtags",zonder:"zonder hashtags",situatie:"herkenbare situatie",klassiek:"klassieke reel",midden:"tekst in het midden",boven:"tekst boven",natuur:"natuurbeeld",dichtbij:"close-up beeld",onderweg:"beeld onderweg"});
 const on=o=>OPTNAAM[o]||String(o).replace("_"," ");
 function bouwInzichten(){
   const el=document.getElementById("inzichten"),nodig=D.min_posts_voor_leren,gem=D.gemeten_posts||0;
