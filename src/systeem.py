@@ -1359,16 +1359,19 @@ def cmd_automaak(modus=""):
         cmd_kies(d)
         posts = laad("data/posts.json", [])
         rnd = random.Random("bank" + d)
+        grens14 = (dt.date.fromisoformat(d) - dt.timedelta(days=14)).isoformat()
+        vermijd = {q.get("hook", "").split(": ", 1)[-1].strip() for q in posts if q["datum"] >= grens14 and q.get("hook")}
         for p in posts:
             if p["datum"] != d or p["status"] != "wacht_op_tekst":
                 continue
             if p["vers_id"] not in bank and not _bankvers_voor(p, posts, bank, cfg, rnd):
                 mislukt.append(p["id"]); continue
-            tekstbank.vul_post(p, bank[p["vers_id"]], cfg)
+            tekstbank.vul_post(p, bank[p["vers_id"]], cfg, vermijd)
+            vermijd.add(p.get("hook", "").split(": ", 1)[-1].strip())
             probleem = valideer_tekst(p, cfg)
             if probleem:  # bankitem klopt niet bij deze post: probeer een ander vers
                 if _bankvers_voor(p, posts, bank, cfg, rnd):
-                    tekstbank.vul_post(p, bank[p["vers_id"]], cfg)
+                    tekstbank.vul_post(p, bank[p["vers_id"]], cfg, vermijd)
                     probleem = valideer_tekst(p, cfg)
             if probleem:
                 mislukt.append(f"{p['id']} ({probleem})")

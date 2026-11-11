@@ -59,10 +59,11 @@ def problemen(vid, e, vers_tekst=None):
     return uit
 
 
-def vul_post(p, e, cfg):
-    """Vult een post (status wacht_op_tekst) met teksten uit de bank. Geeft True als het lukte."""
+def vul_post(p, e, cfg, vermijd=()):
+    """Vult een post (status wacht_op_tekst) met teksten uit de bank. Geeft True als het lukte.
+    vermijd: hooks die de afgelopen 14 dagen al gebruikt zijn (die worden overgeslagen)."""
     v = p["variabelen"]
-    hooks = e.get("hooks") or {}
+    hooks = {k: h for k, h in (e.get("hooks") or {}).items() if h and h.strip() not in vermijd}
     stijl = v.get("hook_stijl")
     if stijl != "geen" and not hooks.get(stijl):
         # deze hookstijl staat niet in de bank: neem een andere en leg dat vast (dan leert het systeem eerlijk)
