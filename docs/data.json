@@ -3013,6 +3013,11 @@
  "laatste_rapport": null,
  "logboek": [
   {
+   "t": "2026-11-09T13:02:28",
+   "soort": "info",
+   "tekst": "Statistieken lezen werkt"
+  },
+  {
    "t": "2026-11-09T13:48:24",
    "soort": "info",
    "tekst": "Statistieken opgehaald voor 6 posts"
