@@ -70,6 +70,21 @@ jobs:
             git clone --depth 1 -q "https://x-access-token:${MATERIAAL_PAT}@github.com/sttpjoshua/bibleverse-materiaal.git" ../bibleverse-materiaal || { echo "Materiaal ophalen mislukt"; exit 0; }
             python3 src/systeem.py aanvullen || echo "Aanvullen mislukt"
           fi
+      - name: "Telegram: knoppen en opdrachten verwerken"
+        if: steps.t.outputs.taak == 'posten'
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          GH_PAT: ${{ secrets.GH_PAT }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_TOKEN: ${{ secrets.FB_TOKEN }}
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_CHAT: ${{ secrets.TG_CHAT }}
+        run: |
+          if [ -n "$TG_TOKEN" ] && python3 src/whatsapp.py heeft_updates; then
+            pip install -q pillow numpy
+            python3 src/whatsapp.py verwerk || echo "Telegram verwerken mislukt"
+          fi
       - name: Uitvoeren
         env:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
@@ -107,7 +122,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           OPDRACHT: ${{ inputs.opdracht }}
         run: |
-          if echo "$OPDRACHT" | grep -q '"posts_maken"'; then gh workflow run maken.yml && echo "Posts maken gestart (dashboard)"; exit 0; fi
+          if echo "$OPDRACHT" | grep -q '"posts_maken"' || [ -f /tmp/start_maken ]; then gh workflow run maken.yml && echo "Posts maken gestart (dashboard of Telegram)"; exit 0; fi
           uur=$(date +%H)
           if [ "$uur" -ge 9 ] && [ "$uur" -le 21 ] && python3 src/systeem.py automaak check; then
             if ! gh run list --workflow maken.yml --status in_progress --json databaseId -q '.[0].databaseId' | grep -q .; then

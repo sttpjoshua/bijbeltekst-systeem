@@ -414,6 +414,9 @@ def volgers_en_tokens():
             g[naam]["geldig"] = bool(d.get("is_valid"))
             g[naam]["ok" if d.get("is_valid") else "fout"] = dt.datetime.now().isoformat(timespec="minutes")
             g[naam]["laatst_ok"] = bool(d.get("is_valid"))
+            if exp and 0 <= (dt.datetime.fromtimestamp(exp, TZ).date() - dt.date.today()).days <= 7:
+                S.cmd_log(f"ACTIE VOOR JOU: de {naam.replace('sleutel_', '').capitalize()}-sleutel verloopt op "
+                          f"{dt.datetime.fromtimestamp(exp, TZ).strftime('%d-%m')}. Vernieuw hem op tijd (zie de stappen in het dashboard).", "fout", "rechten")
         except Exception as e:
             g.setdefault(naam, {})["detail"] = str(e)[:160]
     S.bewaar("data/gezondheid.json", g)
@@ -468,6 +471,26 @@ def reacties_ophalen(posts):
     houd = [r for r in oud.values() if r["status"] in ("nieuw", "voorgesteld") or r.get("geplaatst", r["t"]) >= grens]
     S.bewaar("data/reacties.json", sorted(houd, key=lambda r: r["t"], reverse=True)[:300])
     S.gezond("reacties", fout is None, fout or f"{nieuw_aantal} nieuwe reacties")
+    try:  # nieuwe reacties naar Telegram, met de antwoordopties als knoppen
+        import whatsapp
+        nieuw = [r for r in houd if r["status"] == "nieuw" and not r.get("gemeld")]
+        if len(nieuw) > 5:
+            whatsapp.zet_in_wachtrij(f"💬 *{len(nieuw)} nieuwe reacties* wachten op antwoord. De nieuwste: {nieuw[0]['naam']}: \"{nieuw[0]['tekst'][:120]}\"",
+                                     "reacties", "reacties:" + nieuw[0]["id"])
+        else:
+            for r in nieuw:
+                opt = (r.get("opties") or [])[:3]
+                regels = [f"💬 *Nieuwe reactie* van {r['naam']} op {r['ref']} ({r['platform']}):", f"\"{r['tekst'][:400]}\""]
+                if opt:
+                    regels += ["", "Antwoordopties:"] + [f"{i + 1}. {t}" for i, t in enumerate(opt)]
+                knoppen = [[[f"Plaats {i + 1}", {"actie": "reactie_plaatsen", "reactie": r["id"], "tekst": t}] for i, t in enumerate(opt)]] if opt else []
+                knoppen.append([["♡ Liken", {"actie": "reactie_liken", "reactie": r["id"]}], ["Negeren", {"actie": "reactie_negeren", "reactie": r["id"]}]])
+                whatsapp.zet_in_wachtrij("\n".join(regels), "reacties", "reactie:" + r["id"], knoppen=knoppen)
+        for r in nieuw:
+            r["gemeld"] = True
+        S.bewaar("data/reacties.json", sorted(houd, key=lambda r: r["t"], reverse=True)[:300])
+    except Exception as e:
+        print("Reacties melden mislukt:", e)
     if nieuw_aantal:
         S.activiteit("community", f"{nieuw_aantal} nieuwe reactie{'s' if nieuw_aantal > 1 else ''} gevonden")
     return nieuw_aantal

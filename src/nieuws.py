@@ -314,10 +314,32 @@ def main(forceer=False):
                 entry["opties"] = maak_opties(entry, cat, entry["zwaar"], cfg, posts)
             except Exception as e:
                 print("Opties maken mislukt:", e)
+            meld_voorstel(entry)
         log.append(entry); bekend.add(item["kop"]); nieuw += 1
     S.bewaar(PAD, log[-150:])
     S.gezond("nieuws", True, f"{nieuw} nieuwe aanleidingen")
     print(nieuw, "nieuwe aanleidingen bekeken")
+
+
+def meld_voorstel(e):
+    """Nieuwsvoorstel naar Telegram: de opties als foto's en een knop per optie."""
+    try:
+        import whatsapp
+    except Exception:
+        return
+    opt = e.get("opties") or []
+    soort = "zwaar nieuws, gaat pas 6 uur na het nieuws online" if e["zwaar"] else ("politiek, altijd neutraal" if e["categorie"] == "politiek" else e["categorie"])
+    regels = [f"📰 *Nieuwsvoorstel* ({soort})", f"{e['bron']}: {e['kop']}", ""]
+    for k, o in enumerate(opt):
+        regels.append(f"*Optie {k + 1}:* {o['ref']}\nOpening: \"{o['zin']}\"")
+    if not opt:
+        regels.append("Het systeem kiest zelf een passend vers.")
+    regels.append("\nKies een optie, of pas de openingszin aan in het dashboard.")
+    knoppen = [[[f"Optie {k + 1}", {"actie": "nieuws_maken", "id": e["id"], "keuze": k}] for k in range(len(opt))]] if opt \
+        else [[["Post erover maken", {"actie": "nieuws_maken", "id": e["id"]}]]]
+    knoppen.append([["Negeren", {"actie": "nieuws_negeren", "id": e["id"]}]])
+    fotos = [f"docs/media/nieuws/{e['id']}-{k + 1}-1.jpg" for k in range(len(opt))]
+    whatsapp.zet_in_wachtrij("\n".join(regels), "direct", "nieuws:" + e["id"], knoppen=knoppen, fotos=fotos)
 
 
 def maak_voorstel(nid, keuze=None, zin=None):

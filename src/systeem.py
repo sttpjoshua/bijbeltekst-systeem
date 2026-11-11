@@ -1056,12 +1056,20 @@ def cmd_log(tekst, soort="info", code=None, post=None):
         regel["post"] = post
     log.append(regel)
     bewaar("data/logboek.json", log[-500:])
-    if soort == "fout" and (code in ("post_mislukt", "post_gemist", "te_weinig", "nood_op", "rechten", "nieuws_voorstel", "tekstbank") or tekst.startswith("ACTIE VOOR JOU")):
-        try:  # direct een WhatsApp-seintje (wordt verstuurd door de volgende GitHub-run)
+    if soort == "fout" and (code in ("post_mislukt", "post_gemist", "te_weinig", "nood_op", "rechten", "tekstbank", "maken") or tekst.startswith("ACTIE VOOR JOU")):
+        try:  # direct een seintje via Telegram (wordt verstuurd door de volgende GitHub-run), met knoppen om het meteen op te lossen
             import whatsapp
+            k = {"post_mislukt": [[["🔁 Opnieuw proberen", {"actie": "post_opnieuw", "post": post}], ["Noodpost ervoor in de plaats", {"actie": "post_nood", "post": post}]]],
+                 "post_gemist": [[["📤 Alsnog posten", {"actie": "post_opnieuw", "post": post}], ["Noodposts op lege plekken", {"actie": "nood_inzetten"}]]],
+                 "te_weinig": [[["Noodposts inzetten", {"actie": "nood_inzetten"}], ["Posts nu laten maken", {"actie": "posts_maken"}]]],
+                 "maken": [[["Opnieuw proberen", {"actie": "posts_maken"}], ["Noodposts inzetten", {"actie": "nood_inzetten"}]]],
+                 "rechten": [[["Verbinding testen", {"actie": "test"}]]],
+                 }.get(code, [])
+            if post is None:
+                k = [r for r in k if not any(o.get("post", 1) is None for _, o in r)]
+            k.append([["✓ Opgelost", {"actie": "fout_opgelost", "t": regel["t"]}]])
             whatsapp.zet_in_wachtrij(("🚨 *Bibleverse: " + ("actie voor jou" if tekst.startswith("ACTIE VOOR JOU") else "probleem") + "*\n")
-                                     + tekst.replace("ACTIE VOOR JOU:", "").strip()[:500]
-                                     + "\nOplossen: https://sttpjoshua.github.io/bijbeltekst-systeem/", "direct")
+                                     + tekst.replace("ACTIE VOOR JOU:", "").strip()[:500], "direct", knoppen=k)
         except Exception as e:
             print("WhatsApp-wachtrij:", e)
 

@@ -335,6 +335,7 @@ def main(raw):
         cfg["reel_tempo"] = float(o["waarde"])
         melding = f"Tempo nieuwe reels: {dict([(0.8,'langzaam'),(1.0,'rustig'),(1.25,'vlot'),(1.6,'snel')]).get(cfg['reel_tempo'], cfg['reel_tempo'])} (geldt voor reels die vanaf nu gemaakt worden)"
     elif a == "posts_maken":
+        open("/tmp/start_maken", "w").close()  # de workflow start 'Posts maken' (ook als dit uit Telegram komt)
         melding = "Posts maken gestart: het systeem maakt de ontbrekende posts voor morgen en overmorgen (duurt 10 tot 20 minuten)"
     elif a == "zelfstandig":
         cfg["zelfstandig"] = bool(o.get("aan"))
@@ -395,6 +396,7 @@ def main(raw):
     S.cmd_plan()
     S.cmd_dashboard()
     print(melding or "ok")
+    return melding or "ok"
 
 
 if __name__ == "__main__":

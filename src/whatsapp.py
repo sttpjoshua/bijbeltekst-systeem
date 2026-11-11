@@ -17,13 +17,15 @@ import systeem as S
 
 TZ = ZoneInfo("Europe/Amsterdam")
 DASH = "https://sttpjoshua.github.io/bijbeltekst-systeem/"
-STANDAARD = {"direct": True, "dagelijks": True, "wekelijks": True, "uitschieter": True}
+STANDAARD = {"direct": True, "reacties": True, "dagelijks": True, "wekelijks": True, "uitschieter": True}
 
 def instellingen():
     return {**STANDAARD, **(S.laad("config.json").get("whatsapp") or {})}
 
-def zet_in_wachtrij(tekst, soort="direct", sleutel=None):
-    """Bericht klaarzetten. 'sleutel' voorkomt dat hetzelfde bericht twee keer wordt gestuurd."""
+def zet_in_wachtrij(tekst, soort="direct", sleutel=None, knoppen=None, fotos=None):
+    """Bericht klaarzetten. 'sleutel' voorkomt dat hetzelfde bericht twee keer wordt gestuurd.
+    knoppen: rijen van [label, opdracht] (opdracht = zelfde dict als een dashboardknop); alleen in Telegram.
+    fotos: paden (vanaf de repo) van afbeeldingen die vooraf als album worden gestuurd."""
     q = S.laad("data/wa_wachtrij.json", [])
     sleutel = sleutel or (soort + ":" + tekst[:80])
     if any(m.get("sleutel") == sleutel for m in q):
@@ -31,7 +33,12 @@ def zet_in_wachtrij(tekst, soort="direct", sleutel=None):
     st = S.laad("data/wa_status.json", {})
     if sleutel in st.get("verstuurd", [])[-200:]:
         return
-    q.append({"t": dt.datetime.now(TZ).isoformat(timespec="minutes"), "soort": soort, "tekst": tekst, "sleutel": sleutel})
+    m = {"t": dt.datetime.now(TZ).isoformat(timespec="minutes"), "soort": soort, "tekst": tekst, "sleutel": sleutel}
+    if knoppen:
+        m["knoppen"] = knoppen
+    if fotos:
+        m["fotos"] = fotos
+    q.append(m)
     S.bewaar("data/wa_wachtrij.json", q[-50:])
 
 def kanaal():
@@ -66,12 +73,58 @@ def tg_chat():
             return m["chat"]["id"]
     raise RuntimeError("Telegram-bot gevonden, maar nog geen /start-bericht van jou ontvangen. Stuur je bot /start.")
 
-def stuur(tekst):
+def _knopregels(knoppen):
+    """Zet knoppen om naar Telegram-knoppen; de opdracht zelf blijft bewaard in data/telegram.json."""
+    tg = S.laad("data/telegram.json", {})
+    kb = tg.setdefault("knoppen", {})
+    rijen = []
+    for rij in knoppen or []:
+        r = []
+        for label, opdracht in rij:
+            k = f"{len(kb) + 1:x}{dt.datetime.now().strftime('%d%H%M%S')}"[-12:]
+            kb[k] = {"o": opdracht, "label": label, "t": dt.datetime.now(TZ).isoformat(timespec="minutes")}
+            r.append({"text": label, "callback_data": "k:" + k})
+        rijen.append(r)
+    tg["knoppen"] = dict(list(kb.items())[-300:])
+    S.bewaar("data/telegram.json", tg)
+    return rijen + [[{"text": "Dashboard openen", "url": DASH}]]
+
+def _multipart(velden, bestanden):
+    import uuid
+    grens = uuid.uuid4().hex
+    delen = [f'--{grens}\r\nContent-Disposition: form-data; name="{k}"\r\n\r\n{v}\r\n'.encode() for k, v in velden.items()]
+    for naam, pad in bestanden:
+        delen.append(f'--{grens}\r\nContent-Disposition: form-data; name="{naam}"; filename="{naam}.jpg"\r\nContent-Type: image/jpeg\r\n\r\n'.encode()
+                     + open(pad, "rb").read() + b"\r\n")
+    delen.append(f"--{grens}--\r\n".encode())
+    return b"".join(delen), f"multipart/form-data; boundary={grens}"
+
+def _tg_fotos(paden):
+    """Stuurt tot 10 afbeeldingen als album (uploaden vanaf schijf, want de website is dan nog niet bijgewerkt)."""
+    bestanden = [S.P(p) for p in paden if os.path.exists(S.P(p))][:10]
+    if not bestanden:
+        return
+    token = os.environ["TG_TOKEN"].strip()
+    if len(bestanden) == 1:
+        data, ct = _multipart({"chat_id": tg_chat()}, [("photo", bestanden[0])]); methode = "sendPhoto"
+    else:
+        media = [{"type": "photo", "media": f"attach://f{i}"} for i in range(len(bestanden))]
+        data, ct = _multipart({"chat_id": tg_chat(), "media": json.dumps(media)}, [(f"f{i}", p) for i, p in enumerate(bestanden)])
+        methode = "sendMediaGroup"
+    req = urllib.request.Request(f"https://api.telegram.org/bot{token}/{methode}", data=data, headers={"Content-Type": ct})
+    urllib.request.urlopen(req, timeout=60).read()
+
+def stuur(tekst, knoppen=None, fotos=None):
     if kanaal() == "telegram":
         import html, re
+        if fotos:
+            try:
+                _tg_fotos(fotos)
+            except Exception as e:
+                print("Foto's sturen mislukt:", e)
         opmaak = re.sub(r"\*([^*\n]+)\*", r"<b>\1</b>", html.escape(tekst[:3900], quote=False))  # WhatsApp-*vet* wordt Telegram-vet
         _tg("sendMessage", chat_id=tg_chat(), text=opmaak, parse_mode="HTML", disable_web_page_preview=True,
-            reply_markup={"inline_keyboard": [[{"text": "Dashboard openen", "url": DASH}]]})
+            reply_markup={"inline_keyboard": _knopregels(knoppen)})
         return
     tel, key = os.environ.get("WA_PHONE", "").strip().lstrip("+"), os.environ.get("WA_KEY", "").strip()
     if not tel or not key:
@@ -143,6 +196,131 @@ def uitschieters():
             zet_in_wachtrij(f"🚀 *Uitschieter:* {p['ref']} heeft al {b} bereik, ruim {round(b / max(1, mediaan))} keer zoveel als normaal. "
                             f"Misschien een goede kandidaat om te promoten.\n{DASH}", "uitschieter", "uitschieter:" + p["id"])
 
+
+# ---------- Mijlpalen ----------
+VOLGERS = [10, 25, 50, 100, 250, 500, 1000, 2500, 5000, 10000, 25000, 50000, 100000]
+BEREIK = [100, 500, 1000, 5000, 10000, 50000, 100000]
+
+def mijlpalen(st):
+    gehaald = set(st.get("mijlpalen", []))
+    groei = S.laad("data/groei.json", [])
+    if groei:
+        tot = (groei[-1].get("instagram") or 0) + (groei[-1].get("facebook") or 0)
+        for m in VOLGERS:
+            if tot >= m and f"v{m}" not in gehaald:
+                gehaald.add(f"v{m}")
+                if m >= 25:  # de eerste kleine stapjes niet melden
+                    zet_in_wachtrij(f"🎉 *Mijlpaal:* Bibleverse heeft nu {tot} volgers (Instagram en Facebook samen)!", "uitschieter", f"mijl:v{m}")
+    for p in S.laad("data/posts.json", []):
+        b = beste(p)
+        for m in BEREIK:
+            if b >= m and f"b{m}:{p['id']}" not in gehaald and f"b{m}" not in gehaald:
+                gehaald |= {f"b{m}", f"b{m}:{p['id']}"}
+                zet_in_wachtrij(f"🎉 *Mijlpaal:* voor het eerst een post met meer dan {m} bereik: {p['ref']} ({b}).", "uitschieter", f"mijl:b{m}")
+    st["mijlpalen"] = sorted(gehaald)
+
+# ---------- Telegram: knoppen en opdrachten ----------
+HULP = ("Ik ben de Bibleverse-bot. Opdrachten:\n/vandaag  wat er vandaag online gaat\n/status  hoe het systeem ervoor staat\n"
+        "/pauze  alles stilzetten\n/hervat  weer posten\n\nKnoppen onder mijn berichten werken ook; ik voer ze uit bij de volgende ronde (binnen een kwartier).")
+
+def _antwoord(tekst, knoppen=None):
+    import html
+    _tg("sendMessage", chat_id=tg_chat(), text=html.escape(tekst, quote=False), parse_mode="HTML", disable_web_page_preview=True,
+        reply_markup={"inline_keyboard": _knopregels(knoppen)})
+
+def _vandaag():
+    posts = S.laad("data/posts.json", [])
+    d = dt.date.today().isoformat()
+    rij = sorted((p for p in posts if p["datum"] == d and p["status"] not in ("afgekeurd", "overgeslagen")), key=lambda p: p["variabelen"].get("tijdslot") or "")
+    if not rij:
+        return "Vandaag staat er niets gepland."
+    teken = {"gepubliceerd": "✅", "gerenderd": "⏳", "fout": "⚠️"}
+    regels = ["Vandaag:"] + [f"{teken.get(p['status'], '•')} {p['variabelen'].get('tijdslot')}  {p['ref']} ({'reel' if p['variabelen'].get('formaat') == 'video' else 'carrousel'})"
+                             + (" 📰" if p.get("nieuws") else "") for p in rij]
+    return "\n".join(regels)
+
+def _status():
+    cfg = S.laad("config.json")
+    log = S.laad("data/logboek.json", [])
+    open_ = [l for l in log if l.get("soort") == "fout" and not l.get("opgelost")]
+    posts = S.laad("data/posts.json", [])
+    klaar = [p for p in posts if p["status"] == "gerenderd"]
+    v = S.bank_voorraad(cfg)
+    laatst = max((p for p in posts if p["status"] == "gepubliceerd"), key=lambda p: p["datum"] + (p["variabelen"].get("tijdslot") or ""), default=None)
+    return "\n".join([
+        "⏸ Het systeem staat op PAUZE." if cfg.get("pauze") else "▶ Het systeem draait.",
+        f"Laatste post: {laatst['ref']} ({laatst['datum']} {laatst['variabelen'].get('tijdslot')})" if laatst else "Nog niets geplaatst.",
+        f"Klaar om te posten: {len(klaar)} posts",
+        f"Noodvoorraad: {len(S.nood_klaar())} van {S.NOOD_DOEL}",
+        f"Tekstbank: nog ongeveer {v['dagen']} dagen",
+        f"⚠️ {len(open_)} open probleem/problemen in het dashboard" if open_ else "✅ Geen open problemen"])
+
+def _voer_uit(o):
+    import bediening
+    try:
+        return "✅ " + (bediening.main(json.dumps(o)) or "Gedaan")
+    except SystemExit as e:
+        return "❌ " + str(e)
+    except Exception as e:
+        return "❌ Mislukt: " + str(e)[:200]
+
+def verwerk():
+    """Leest nieuwe Telegram-berichten en knopdrukken van Joshua en voert ze uit (alleen in de publiceer-run)."""
+    if kanaal() != "telegram":
+        return
+    try:
+        chat = str(tg_chat())
+    except Exception as e:
+        print("Telegram:", e); return
+    updates = _tg("getUpdates", timeout=0)
+    if not updates:
+        return
+    _tg("getUpdates", offset=updates[-1]["update_id"] + 1, timeout=0)  # meteen bevestigen: nooit iets dubbel uitvoeren
+    tg = S.laad("data/telegram.json", {})
+    for u in updates:
+        if "callback_query" in u:
+            cq = u["callback_query"]
+            if str(cq.get("message", {}).get("chat", {}).get("id")) != chat:
+                continue
+            k = (cq.get("data") or "")[2:]
+            if k == "klaar":
+                continue
+            knop = tg.get("knoppen", {}).get(k)
+            try:
+                _tg("answerCallbackQuery", callback_query_id=cq["id"], text="Ontvangen")
+            except Exception:
+                pass  # te oud: geen probleem
+            if not knop:
+                _antwoord("Deze knop ken ik niet meer. Kijk even in het dashboard."); continue
+            if knop.get("klaar"):
+                _antwoord(f"'{knop['label']}' is al gedaan."); continue
+            uitkomst = _voer_uit(knop["o"])
+            tg = S.laad("data/telegram.json", {}); tg.setdefault("knoppen", {}).setdefault(k, knop)["klaar"] = True
+            S.bewaar("data/telegram.json", tg)
+            try:
+                _tg("editMessageReplyMarkup", chat_id=chat, message_id=cq["message"]["message_id"],
+                    reply_markup={"inline_keyboard": [[{"text": "✓ " + knop["label"], "callback_data": "k:klaar"}], [{"text": "Dashboard openen", "url": DASH}]]})
+            except Exception:
+                pass
+            _antwoord(uitkomst)
+        elif "message" in u:
+            m = u["message"]
+            if str(m.get("chat", {}).get("id")) != chat:
+                continue
+            t = (m.get("text") or "").strip().lower().split("@")[0]
+            if t == "/vandaag":
+                _antwoord(_vandaag())
+            elif t == "/status":
+                _antwoord(_status())
+            elif t == "/pauze":
+                _antwoord("Weet je het zeker? Dan gaat er niets meer online tot je hervat.", [[["⏸ Ja, pauzeren", {"actie": "pauze", "waarde": True}]]])
+            elif t == "/hervat":
+                _antwoord(_voer_uit({"actie": "pauze", "waarde": False}))
+            elif t in ("/start", "/help", "help", "hulp"):
+                _antwoord(HULP)
+            else:
+                _antwoord("Ik begrijp alleen opdrachten en knoppen.\n\n" + HULP)
+
 def main():
     nu = dt.datetime.now(TZ)
     inst = instellingen()
@@ -154,6 +332,16 @@ def main():
         zet_in_wachtrij(weekverslag(nu), "wekelijks", "week:" + vandaag); st["wekelijks"] = vandaag
     if inst["uitschieter"]:
         uitschieters()
+        mijlpalen(st)
+    if kanaal() == "telegram" and not st.get("menu"):
+        try:  # het menu met opdrachten in Telegram (eenmalig)
+            _tg("setMyCommands", commands=[{"command": "vandaag", "description": "Wat gaat er vandaag online"},
+                                           {"command": "status", "description": "Hoe staat het systeem ervoor"},
+                                           {"command": "pauze", "description": "Alles stilzetten"},
+                                           {"command": "hervat", "description": "Weer posten"}])
+            st["menu"] = True
+        except Exception as e:
+            print("Menu instellen mislukt:", e)
     q = S.laad("data/wa_wachtrij.json", [])
     stil = nu.strftime("%H:%M") >= "22:30" or nu.strftime("%H:%M") < "07:30"
     te_sturen = [m for m in q if inst.get(m["soort"], True) or m["soort"] == "test"]
@@ -163,16 +351,23 @@ def main():
         print("Meldingen nog niet gekoppeld (TG_TOKEN of WA_PHONE/WA_KEY ontbreken); berichten blijven 2 dagen in de wachtrij")
         te_sturen = []
     if te_sturen:
-        try:
-            stuur("\n\n".join(m["tekst"] for m in te_sturen)[:3500])
-            S.gezond("whatsapp", True, f"{len(te_sturen)} bericht(en) verstuurd")
-            verstuurd = st.setdefault("verstuurd", [])
-            verstuurd += [m["sleutel"] for m in te_sturen]
-            st["verstuurd"] = verstuurd[-200:]
-            q = [m for m in q if m not in te_sturen]
-        except Exception as e:
-            S.gezond("whatsapp", False, str(e)[:200])
-            print("Melding versturen mislukt:", e)
+        rijk = [m for m in te_sturen if m.get("knoppen") or m.get("fotos")] if kanaal() == "telegram" else []
+        gewoon = [m for m in te_sturen if m not in rijk]
+        pakketten = ([gewoon] if gewoon else []) + [[m] for m in rijk]
+        verstuurd = st.setdefault("verstuurd", [])
+        for pak in pakketten:
+            try:
+                if len(pak) == 1:
+                    stuur(pak[0]["tekst"][:3500], pak[0].get("knoppen"), pak[0].get("fotos"))
+                else:
+                    stuur("\n\n".join(m["tekst"] for m in pak)[:3500])
+                verstuurd += [m["sleutel"] for m in pak]
+                q = [m for m in q if m not in pak]
+                S.gezond("whatsapp", True, f"{len(pak)} bericht(en) verstuurd")
+            except Exception as e:
+                S.gezond("whatsapp", False, str(e)[:200])
+                print("Melding versturen mislukt:", e)
+        st["verstuurd"] = verstuurd[-200:]
     # wat uitgezet is of te oud (2 dagen), niet eeuwig bewaren
     grens = (nu - dt.timedelta(days=2)).isoformat(timespec="minutes")
     q = [m for m in q if m["t"] >= grens and (inst.get(m["soort"], True) or m["soort"] == "test")]
@@ -180,4 +375,9 @@ def main():
     S.bewaar("data/wa_status.json", st)
 
 if __name__ == "__main__":
-    main()
+    if sys.argv[1:] == ["verwerk"]:
+        verwerk()
+    elif sys.argv[1:] == ["heeft_updates"]:  # exit 0 als er iets te verwerken is
+        sys.exit(0 if kanaal() == "telegram" and _tg("getUpdates", timeout=0) else 1)
+    else:
+        main()
