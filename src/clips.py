@@ -38,7 +38,7 @@ SCENES = {
 # Herkenningszin -> zoektermen. De eerste regel die past, wint; anders de lijst van het thema.
 # patroon in de herkenningszin -> (zoektermen, woorden die in titel/tags moeten staan, sfeerbeelden als niets past)
 KOPPEL = [
-    (r"snooze|wekker|opstaan|ochtendmens|vroeg op|uit bed", ["alarm clock", "waking up", "morning bed", "bedroom morning", "stretching bed"],
+    (r"snooze|wekker|opstaan|ochtendmens|vroeg op|uit bed|vanochtend|ochtend|bleef liggen", ["alarm clock", "waking up", "morning bed", "bedroom morning", "stretching bed"],
      r"alarm|wak|bed|morning|sleep|yawn|stretch", ["sunrise window", "morning coffee", "curtains morning"]),
     (r"piekeren|wakker lag|slapen|nacht|23:00|malen", ["insomnia", "night bed", "awake night", "phone bed", "bed dark"],
      r"bed|night|awake|insomnia|sleep|dark|phone", ["night window", "moon", "city night", "rain window"]),
@@ -60,6 +60,21 @@ KOPPEL = [
     (r"smoes|uitstellen|klusje|later", ["procrastination", "couch", "lazy"], r"couch|sofa|lazy|procrast|phone|tv", ["clock", "coffee"]),
     (r"dankbaar|cadeau|goed ging", ["family dinner", "smiling", "gratitude"], r"family|dinner|smil|together|gift|happy", ["sunset", "flowers"]),
     (r"nieuw|begin|eerste dag", ["door", "new job", "road"], r"door|new|road|start|walk", ["sunrise", "road"]),
+    (r"scroll|instagram|filmpjes|telefoon|social", ["scrolling phone", "phone", "smartphone"],
+     r"phone|scroll|social|screen|smartphone|mobile", ["city night", "rain window"]),
+    (r"vergader|gesprek|ergert|opmerking|gelijk|spijt|zei:|zei waar|mensen|teleurgesteld|gekregen|van een ander", ["conversation", "friends talking", "meeting"],
+     r"talk|conversation|argu|friend|people|chat|discuss|meeting", ["coffee", "rain window"]),
+    (r"bidden|gebed|god |god\.|kind van god", ["praying", "hands", "candle"], r"pray|church|candle|hands|bible|faith", ["candle", "sunrise"]),
+    (r"wacht|geduld|te snel|langzaam", ["waiting", "clock", "bus stop"], r"wait|clock|time|bench|station|watch", ["clouds", "train window"]),
+    (r"danken|dankbaar|moois|zegen|goed is|lach|vrolijk|deal|marktplaats|zing|lied|liefde|hou van|hand nodig|kleding", ["smiling", "friends", "family", "singing car"],
+     r"smil|laugh|happy|friend|family|together|sing|hug|love|joy", ["sunshine", "flowers"]),
+    (r"plannen|controle|regelen|zeker van|zekerheid", ["planning", "calendar", "notebook"], r"plan|calendar|note|desk|writ|schedule", ["coffee", "desk"]),
+    (r"stil|vrede|stil water|in zijn hoofd|van binnen", ["calm lake", "meditation", "quiet"], r"calm|lake|quiet|peace|still|meditat|relax", ["lake", "candle"]),
+    (r"buiten|naar buiten", ["walking park", "outdoors"], r"walk|park|outdoor|nature|path", ["forest", "sunshine"]),
+    (r"zwaar|niet meer kan|zwak|somber|benauwd|onzeker|kwetsbaar|onveilig|storm|diep water|tegenzit|verliest|verloren|loslaten|hoop|troost|kracht|schuiven|anders liep|geslingerd|stevig|vaste grond|zorgen|opziet|tegenop|klem|uitweg|tenen|misging|hulp|in de steek|hart lichter",
+     ["thinking", "rain window", "alone"], r"think|rain|window|alone|sad|worr|lonely|sit", ["storm clouds", "ocean waves", "rain window"]),
+    (r"waard|mooi genoeg|goed genoeg|gekozen|kant geschoven|betekent|ertoe doet|hoort|niet af|wie hij|horen|zoek|vergeet|telt|draait|weet niet|kant op|twijfel|begrijpt|snapt|geloven|vroeger",
+     ["thinking", "mirror", "window"], r"think|mirror|reflect|window|alone|look|sit", ["forest path", "crossroads", "clouds"]),
     (r"keuze|kiezen|beslissing|weet niet", ["crossroads", "thinking", "decision"], r"cross|think|decision|road|path", ["crossroads", "forest path"]),
 ]
 NIET_SITUATIE = ("dog", "cat ", "puppy", "pet ", "hotel", "unbox", "tour", "product", "hourglass", "baby")

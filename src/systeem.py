@@ -1429,6 +1429,35 @@ def automaak_dagen(cfg=None, posts=None):
             uit.append(d)
     return uit
 
+def cmd_reels_vernieuwen():
+    """Geplande reels (vanaf morgen, nog niet geplaatst) opnieuw laten maken in het huidige reelformaat."""
+    cfg, posts = laad("config.json"), laad("data/posts.json", [])
+    strat = vul_strategie_aan(laad("strategie.json") or nieuwe_strategie())
+    morgen = (dt.date.today() + dt.timedelta(days=1)).isoformat()
+    import tekstbank
+    bank = tekstbank.laad()
+    bank = bank.get("verzen", bank) if isinstance(bank, dict) else {}
+    n = 0
+    for p in posts:
+        v = p["variabelen"]
+        if p["datum"] < morgen or v.get("formaat") != "video" or p["status"] not in ("gerenderd", "goedgekeurd", "opnieuw_maken") or p.get("gepubliceerd"):
+            continue
+        if cfg.get("reel_formaat") != "situatie" or (v.get("reel_stijl") == "situatie" and p["status"] != "opnieuw_maken"):
+            continue
+        rnd = random.Random(p["id"] + "situatie")
+        v["reel_stijl"], v["reel_haak"] = "situatie", "geen"
+        p.setdefault("keuzebron", {})["reel_stijl"] = "vaste regel"
+        for d in ("reel_plaatsing", "reel_scene"):
+            v[d], p["keuzebron"][d] = kies_optie(d, strat, cfg["verkenning"], rnd)
+        e = bank.get(p["vers_id"]) or {}
+        if not p.get("reel_herkenning") and (e.get("hooks") or {}).get("herkenning"):
+            p["reel_herkenning"] = e["hooks"]["herkenning"]
+        if not p.get("uitleg") and not p.get("reel_uitleg") and e.get("uitleg"):
+            p["reel_uitleg"] = e["uitleg"]
+        p["status"] = "opnieuw_maken"; n += 1
+    bewaar("data/posts.json", posts)
+    print(f"{n} reels gaan opnieuw gemaakt worden")
+
 def cmd_automaak(modus=""):
     """Zelfstandig posts maken, zonder Claude: kiezen, teksten uit de tekstbank, renderen.
     'check' geeft exit 0 als er werk is (voor GitHub Actions)."""
@@ -1440,7 +1469,9 @@ def cmd_automaak(modus=""):
         print("Pauze staat aan of 'zelfstandig' staat uit."); return
     dagen = [modus] if modus and modus != "check" else automaak_dagen(cfg)
     if modus == "check":
-        sys.exit(0 if dagen or len(nood_klaar()) < NOOD_DOEL else 1)
+        vandaag = dt.date.today().isoformat()
+        opnieuw = any(p["status"] == "opnieuw_maken" and p["datum"] >= vandaag for p in laad("data/posts.json", []))
+        sys.exit(0 if dagen or opnieuw or len(nood_klaar()) < NOOD_DOEL else 1)
     bank = tekstbank.laad()
     activiteit("controller", "Zelfstandig posts maken voor " + ", ".join(dagen) if dagen else "Alles staat klaar", "busy" if dagen else "done")
     gemaakt, mislukt = 0, []
@@ -1470,6 +1501,13 @@ def cmd_automaak(modus=""):
         except SystemExit:
             pass
         gemaakt += len([p for p in laad("data/posts.json", []) if p["datum"] == d and p["status"] == "gerenderd"])
+    # posts die opnieuw gemaakt moeten worden (bijv. reels in een nieuwe stijl)
+    vandaag = dt.date.today().isoformat()
+    for d in sorted({p["datum"] for p in laad("data/posts.json", []) if p["status"] == "opnieuw_maken" and p["datum"] >= vandaag} - set(dagen)):
+        try:
+            cmd_render(d)
+        except SystemExit:
+            pass
     if mislukt:
         cmd_log("Zelfstandig maken lukte niet voor: " + ", ".join(mislukt) + ". De noodvoorraad vangt lege plekken op.", "fout", "te_weinig")
     if dagen:
@@ -1530,5 +1568,6 @@ if __name__ == "__main__":
      "overleg": lambda: cmd_overleg(*x.args),
      "nood": lambda: cmd_nood(*(x.args[:1] or ["status"])),
      "automaak": lambda: cmd_automaak(*(x.args[:1] or [""])),
+     "reels_vernieuwen": lambda: cmd_reels_vernieuwen(),
      "tekstbank": lambda: cmd_tekstbank(*(x.args[:1] or ["status"])),
      "aanvullen": lambda: cmd_aanvullen(bool(x.args and x.args[0] == "check"))}[x.cmd]()

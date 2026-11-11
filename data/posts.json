@@ -3172,7 +3172,7 @@
  {
   "id": "2026-11-12-4",
   "datum": "2026-11-12",
-  "status": "gerenderd",
+  "status": "opnieuw_maken",
   "vers_id": "Proverbs-15-14-14",
   "ref": "Spreuken 15:14",
   "tekst": "Een verstandig hart zal de wetenschap opzoeken; maar de mond der zotten zal met dwaasheid gevoed worden.",
@@ -3196,7 +3196,11 @@
    "layout": "centraal",
    "achtergrond": "diagonaal",
    "hook_op_beeld": false,
-   "video_uitleg": true
+   "video_uitleg": true,
+   "reel_stijl": "situatie",
+   "reel_haak": "geen",
+   "reel_plaatsing": "midden",
+   "reel_scene": "dichtbij"
   },
   "keuzebron": {
    "huisstijl": "experiment",
@@ -3211,7 +3215,10 @@
    "vraag_onderaan": "experiment",
    "opening": "n.v.t.",
    "tijdslot": "experiment",
-   "video_uitleg": "vaste regel"
+   "video_uitleg": "vaste regel",
+   "reel_stijl": "vaste regel",
+   "reel_plaatsing": "verkenning",
+   "reel_scene": "verkenning"
   },
   "hook": "Voor iedereen die vanavond toch weer drie filmpjes over niks heeft gekeken.",
   "beeld_hook": "",
@@ -3265,7 +3272,9 @@
    "betekenis": "Wie op God vertrouwt, staat stevig, zoals een berg die niet beweegt. Dat komt niet door eigen kracht, maar door Wie je vertrouwt.",
    "toepassing": "Schrijf vanavond één zorg op en leg die bewust bij God neer voor je gaat slapen.",
    "kernwoord": "berg"
-  }
+  },
+  "reel_herkenning": "Voor iedereen die vanavond toch weer drie filmpjes over niks heeft gekeken.",
+  "reel_uitleg": "Wat je hart voedt, bepaalt wie je wordt. Kies vanavond eens bewust."
  },
  {
   "id": "2026-11-12-5",
@@ -3577,7 +3586,7 @@
  {
   "id": "2026-11-13-3",
   "datum": "2026-11-13",
-  "status": "gerenderd",
+  "status": "opnieuw_maken",
   "vers_id": "Proverbs-17-28-28",
   "ref": "Spreuken 17:28",
   "tekst": "Een dwaas zelfs, die zwijgt, zal wijs geacht worden, en die zijn lippen toesluit, verstandig.",
@@ -3601,7 +3610,11 @@
    "layout": "citaat",
    "achtergrond": "diagonaal",
    "hook_op_beeld": false,
-   "video_uitleg": true
+   "video_uitleg": true,
+   "reel_stijl": "situatie",
+   "reel_haak": "geen",
+   "reel_plaatsing": "midden",
+   "reel_scene": "onderweg"
   },
   "keuzebron": {
    "huisstijl": "experiment",
@@ -3616,7 +3629,10 @@
    "vraag_onderaan": "experiment",
    "opening": "n.v.t.",
    "tijdslot": "experiment",
-   "video_uitleg": "vaste regel"
+   "video_uitleg": "vaste regel",
+   "reel_stijl": "vaste regel",
+   "reel_plaatsing": "strategie",
+   "reel_scene": "verkenning"
   },
   "hook": "Voor iedereen die in een vergadering net iets te veel zei.",
   "beeld_hook": "",
@@ -3670,12 +3686,13 @@
    "betekenis": "Onze liefde voor God is een antwoord. Hij hield eerst van ons, nog voordat wij iets deden. Daardoor hoef je Zijn liefde niet te verdienen.",
    "toepassing": "Bedank God vandaag in één zin dat Hij als eerste van je hield.",
    "kernwoord": "eerst"
-  }
+  },
+  "reel_herkenning": "Voor iedereen die in een vergadering net iets te veel zei."
  },
  {
   "id": "2026-11-13-4",
   "datum": "2026-11-13",
-  "status": "gerenderd",
+  "status": "opnieuw_maken",
   "vers_id": "Ephesians-2-10-10",
   "ref": "Efeze 2:10",
   "tekst": "Want wij zijn Zijn maaksel, geschapen in Christus Jezus tot goede werken, welke God voorbereid heeft, opdat wij in dezelve zouden wandelen.",
@@ -3699,7 +3716,11 @@
    "layout": "links",
    "achtergrond": "diagonaal",
    "hook_op_beeld": false,
-   "video_uitleg": true
+   "video_uitleg": true,
+   "reel_stijl": "situatie",
+   "reel_haak": "geen",
+   "reel_plaatsing": "midden",
+   "reel_scene": "dichtbij"
   },
   "keuzebron": {
    "huisstijl": "experiment",
@@ -3714,7 +3735,10 @@
    "vraag_onderaan": "experiment",
    "opening": "n.v.t.",
    "tijdslot": "experiment",
-   "video_uitleg": "vaste regel"
+   "video_uitleg": "vaste regel",
+   "reel_stijl": "vaste regel",
+   "reel_plaatsing": "verkenning",
+   "reel_scene": "verkenning"
   },
   "hook": "Voor iedereen die zich afvraagt of het ertoe doet wat hij doet.",
   "beeld_hook": "",
@@ -3768,12 +3792,14 @@
    "betekenis": "Spreuken schetst een grappig maar pijnlijk beeld: wie zich in andermans ruzie mengt, grijpt een hond bij de oren. Je maakt het alleen maar erger, vooral voor jezelf.",
    "toepassing": "Laat vandaag een discussie die niet over jou gaat bewust aan je voorbijgaan.",
    "kernwoord": "hond"
-  }
+  },
+  "reel_herkenning": "Voor iedereen die zich afvraagt of het ertoe doet wat hij doet.",
+  "reel_uitleg": "Je bent geen toeval. God heeft goede dingen voor je klaargezet."
  },
  {
   "id": "2026-11-13-5",
   "datum": "2026-11-13",
-  "status": "gerenderd",
+  "status": "opnieuw_maken",
   "vers_id": "Psalms-85-9-9",
   "ref": "Psalm 85:9",
   "tekst": "Ik zal horen, wat God, de HEERE, spreken zal; want Hij zal tot Zijn volk en tot Zijn gunstgenoten van vrede spreken; maar dat zij niet weder tot dwaasheid keren.",
@@ -3797,7 +3823,11 @@
    "layout": "links",
    "achtergrond": "diagonaal",
    "hook_op_beeld": false,
-   "video_uitleg": true
+   "video_uitleg": true,
+   "reel_stijl": "situatie",
+   "reel_haak": "geen",
+   "reel_plaatsing": "midden",
+   "reel_scene": "onderweg"
   },
   "keuzebron": {
    "huisstijl": "experiment",
@@ -3812,7 +3842,10 @@
    "vraag_onderaan": "experiment",
    "opening": "n.v.t.",
    "tijdslot": "experiment",
-   "video_uitleg": "vaste regel"
+   "video_uitleg": "vaste regel",
+   "reel_stijl": "vaste regel",
+   "reel_plaatsing": "verkenning",
+   "reel_scene": "verkenning"
   },
   "hook": "Wanneer luisterde jij voor het laatst echt?",
   "beeld_hook": "",
@@ -3952,7 +3985,7 @@
  {
   "id": "2026-11-14-2",
   "datum": "2026-11-14",
-  "status": "gerenderd",
+  "status": "opnieuw_maken",
   "vers_id": "Exodus-14-14-14",
   "ref": "Exodus 14:14",
   "tekst": "De HEERE zal voor ulieden strijden, en gij zult stil zijn.",
@@ -3976,7 +4009,11 @@
    "layout": "links",
    "achtergrond": "diagonaal",
    "hook_op_beeld": false,
-   "video_uitleg": true
+   "video_uitleg": true,
+   "reel_stijl": "situatie",
+   "reel_haak": "geen",
+   "reel_plaatsing": "boven",
+   "reel_scene": "onderweg"
   },
   "keuzebron": {
    "huisstijl": "experiment",
@@ -3991,7 +4028,10 @@
    "vraag_onderaan": "experiment",
    "opening": "n.v.t.",
    "tijdslot": "experiment",
-   "video_uitleg": "vaste regel"
+   "video_uitleg": "vaste regel",
+   "reel_stijl": "vaste regel",
+   "reel_plaatsing": "strategie",
+   "reel_scene": "strategie"
   },
   "hook": "Voor iedereen die klem zit en geen uitweg ziet.",
   "beeld_hook": "",
@@ -4025,12 +4065,13 @@
    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-14-2.mp4"
   ],
   "story_url": null,
-  "goedgekeurd": null
+  "goedgekeurd": null,
+  "reel_herkenning": "Voor iedereen die klem zit en geen uitweg ziet."
  },
  {
   "id": "2026-11-14-3",
   "datum": "2026-11-14",
-  "status": "gerenderd",
+  "status": "opnieuw_maken",
   "vers_id": "Proverbs-4-23-23",
   "ref": "Spreuken 4:23",
   "tekst": "Behoed uw hart boven al wat te bewaren is, want daaruit zijn de uitgangen des levens.",
@@ -4054,7 +4095,11 @@
    "layout": "centraal",
    "achtergrond": "verloop",
    "hook_op_beeld": false,
-   "video_uitleg": true
+   "video_uitleg": true,
+   "reel_stijl": "situatie",
+   "reel_haak": "geen",
+   "reel_plaatsing": "boven",
+   "reel_scene": "onderweg"
   },
   "keuzebron": {
    "huisstijl": "experiment",
@@ -4069,7 +4114,10 @@
    "vraag_onderaan": "experiment",
    "opening": "n.v.t.",
    "tijdslot": "experiment",
-   "video_uitleg": "vaste regel"
+   "video_uitleg": "vaste regel",
+   "reel_stijl": "vaste regel",
+   "reel_plaatsing": "strategie",
+   "reel_scene": "verkenning"
   },
   "hook": "Voor iedereen die merkt dat scrollen niet goed voor hem is.",
   "beeld_hook": "",
@@ -4103,7 +4151,9 @@
    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-14-3.mp4"
   ],
   "story_url": null,
-  "goedgekeurd": null
+  "goedgekeurd": null,
+  "reel_herkenning": "Voor iedereen die merkt dat scrollen niet goed voor hem is.",
+  "reel_uitleg": "Bescherm je hart boven alles, want daaruit komt je hele leven."
  },
  {
   "id": "2026-11-14-4",
@@ -4274,7 +4324,7 @@
   "reeks_label": "VERS VAN DE WEEK",
   "id": "2026-11-15-1",
   "datum": "2026-11-15",
-  "status": "gerenderd",
+  "status": "opnieuw_maken",
   "vers_id": "Matthew-11-29-30",
   "ref": "Mattheüs 11:29-30",
   "tekst": "Neemt Mijn juk op u, en leert van Mij, dat Ik zachtmoedig ben en nederig van hart; en gij zult rust vinden voor uw zielen. Want Mijn juk is zacht, en Mijn last is licht.",
@@ -4298,7 +4348,11 @@
    "layout": "kader",
    "achtergrond": "effen",
    "hook_op_beeld": false,
-   "video_uitleg": true
+   "video_uitleg": true,
+   "reel_stijl": "situatie",
+   "reel_haak": "geen",
+   "reel_plaatsing": "midden",
+   "reel_scene": "natuur"
   },
   "keuzebron": {
    "huisstijl": "experiment",
@@ -4313,7 +4367,10 @@
    "vraag_onderaan": "experiment",
    "opening": "n.v.t.",
    "tijdslot": "reeks",
-   "video_uitleg": "vaste regel"
+   "video_uitleg": "vaste regel",
+   "reel_stijl": "vaste regel",
+   "reel_plaatsing": "verkenning",
+   "reel_scene": "strategie"
   },
   "hook": "Vers van de week: Ben jij moe van alles wat moet?",
   "beeld_hook": "",
@@ -4347,7 +4404,9 @@
    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-1.mp4"
   ],
   "story_url": null,
-  "goedgekeurd": null
+  "goedgekeurd": null,
+  "reel_herkenning": "Voor iedereen die al weken op zijn tenen loopt.",
+  "reel_uitleg": "Leer van Jezus. Bij Hem vind je rust, Zijn last is licht."
  },
  {
   "id": "2026-11-15-2",
@@ -4435,7 +4494,7 @@
  {
   "id": "2026-11-15-3",
   "datum": "2026-11-15",
-  "status": "gerenderd",
+  "status": "opnieuw_maken",
   "vers_id": "II_Corinthians-5-17-17",
   "ref": "2 Korinthe 5:17",
   "tekst": "Zo dan, indien iemand in Christus is, die is een nieuw schepsel; het oude is voorbijgegaan, ziet, het is alles nieuw geworden.",
@@ -4459,7 +4518,11 @@
    "layout": "links",
    "achtergrond": "diagonaal",
    "hook_op_beeld": false,
-   "video_uitleg": true
+   "video_uitleg": true,
+   "reel_stijl": "situatie",
+   "reel_haak": "geen",
+   "reel_plaatsing": "midden",
+   "reel_scene": "onderweg"
   },
   "keuzebron": {
    "huisstijl": "experiment",
@@ -4474,7 +4537,10 @@
    "vraag_onderaan": "experiment",
    "opening": "n.v.t.",
    "tijdslot": "experiment",
-   "video_uitleg": "vaste regel"
+   "video_uitleg": "vaste regel",
+   "reel_stijl": "vaste regel",
+   "reel_plaatsing": "verkenning",
+   "reel_scene": "strategie"
   },
   "hook": "Voor iedereen die vastzit in wie hij vroeger was.",
   "beeld_hook": "",
@@ -4508,12 +4574,14 @@
    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-3.mp4"
   ],
   "story_url": null,
-  "goedgekeurd": null
+  "goedgekeurd": null,
+  "reel_herkenning": "Voor iedereen die vastzit in wie hij vroeger was.",
+  "reel_uitleg": "Wie bij Christus hoort, is een nieuw mens. Het oude is voorbij."
  },
  {
   "id": "2026-11-15-4",
   "datum": "2026-11-15",
-  "status": "gerenderd",
+  "status": "opnieuw_maken",
   "vers_id": "Philippians-4-13-13",
   "ref": "Filippenzen 4:13",
   "tekst": "Ik vermag alle dingen door Christus, Die mij kracht geeft.",
@@ -4537,7 +4605,11 @@
    "layout": "centraal",
    "achtergrond": "verloop",
    "hook_op_beeld": false,
-   "video_uitleg": true
+   "video_uitleg": true,
+   "reel_stijl": "situatie",
+   "reel_haak": "geen",
+   "reel_plaatsing": "boven",
+   "reel_scene": "onderweg"
   },
   "keuzebron": {
    "huisstijl": "experiment",
@@ -4552,7 +4624,10 @@
    "vraag_onderaan": "experiment",
    "opening": "n.v.t.",
    "tijdslot": "experiment",
-   "video_uitleg": "vaste regel"
+   "video_uitleg": "vaste regel",
+   "reel_stijl": "vaste regel",
+   "reel_plaatsing": "strategie",
+   "reel_scene": "strategie"
   },
   "hook": "Voor iedereen die het gevoel heeft dat het te veel wordt.",
   "beeld_hook": "",
@@ -4586,12 +4661,14 @@
    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-4.mp4"
   ],
   "story_url": null,
-  "goedgekeurd": null
+  "goedgekeurd": null,
+  "reel_herkenning": "Voor iedereen die het gevoel heeft dat het te veel wordt.",
+  "reel_uitleg": "Ik kan alles aan door Christus, die mij kracht geeft."
  },
  {
   "id": "2026-11-15-5",
   "datum": "2026-11-15",
-  "status": "gerenderd",
+  "status": "opnieuw_maken",
   "vers_id": "Hebrews-11-1-1",
   "ref": "Hebreeën 11:1",
   "tekst": "Het geloof nu is een vaste grond der dingen, die men hoopt, en een bewijs der zaken, die men niet ziet.",
@@ -4615,7 +4692,11 @@
    "layout": "links",
    "achtergrond": "diagonaal",
    "hook_op_beeld": false,
-   "video_uitleg": true
+   "video_uitleg": true,
+   "reel_stijl": "situatie",
+   "reel_haak": "geen",
+   "reel_plaatsing": "boven",
+   "reel_scene": "onderweg"
   },
   "keuzebron": {
    "huisstijl": "experiment",
@@ -4630,7 +4711,10 @@
    "vraag_onderaan": "experiment",
    "opening": "n.v.t.",
    "tijdslot": "experiment",
-   "video_uitleg": "vaste regel"
+   "video_uitleg": "vaste regel",
+   "reel_stijl": "vaste regel",
+   "reel_plaatsing": "strategie",
+   "reel_scene": "verkenning"
   },
   "hook": "Een vaste grond, ook als je niets ziet.",
   "beeld_hook": "",
@@ -4664,6 +4748,7 @@
    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-5.mp4"
   ],
   "story_url": null,
-  "goedgekeurd": null
+  "goedgekeurd": null,
+  "reel_herkenning": "Voor iedereen die wacht op iets dat nog niet komt."
  }
 ]
