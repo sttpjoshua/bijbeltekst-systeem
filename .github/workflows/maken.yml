@@ -48,6 +48,7 @@ jobs:
         if: steps.werk.outputs.ja == '1'
         run: |
           python3 src/systeem.py automaak ${{ inputs.datum }}
+          python3 src/systeem.py nood auto || echo "Noodvoorraad aanvullen mislukt"
           python3 src/systeem.py dashboard
       - name: WhatsApp-updates versturen
         if: always() && steps.werk.outputs.ja == '1'

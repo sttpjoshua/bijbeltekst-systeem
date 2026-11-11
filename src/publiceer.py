@@ -542,12 +542,17 @@ def cmd_statistieken():
         S.cmd_opruimen(30)
     except Exception as e:
         S.cmd_log(f"Opruimen mislukt: {e}", "fout")
-    if S.check_leermodus():  # snel leren: elke dag de gewichten bijwerken
+    leer_st = S.laad("data/gezondheid.json", {}).get("leren") or {}
+    snel = S.check_leermodus()
+    wekelijks = dt.date.today().weekday() == 0 and (leer_st.get("ok") or "")[:10] != dt.date.today().isoformat()
+    if snel or wekelijks:  # snel leren: elke dag; daarna elke maandag (zonder Claude)
         try:
             S.cmd_leer()
-            S.cmd_log("Snel leren: strategie bijgewerkt met de cijfers van gisteren")
+            S.cmd_log("Snel leren: strategie bijgewerkt met de cijfers van gisteren" if snel else "Wekelijks leren: strategie bijgewerkt met de cijfers van afgelopen week")
+            S.gezond("leren", True, "dagelijks (snel leren)" if snel else "wekelijks")
         except Exception as e:
-            S.cmd_log(f"Dagelijks leren mislukt: {e}", "fout")
+            S.cmd_log(f"Leren mislukt: {e}", "fout")
+            S.gezond("leren", False, str(e)[:200])
     S.cmd_plan()
     S.cmd_dashboard()
 

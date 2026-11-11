@@ -1306,6 +1306,9 @@ def cmd_nood(actie="status"):
         uitgesloten = set(cfg.get("verzen_uitsluiten", []))
         kand = [v for v in alle_verzen() if v["bron"] == "bekend" and v["lengte"] != "lang"
                 and v["id"] not in gebruikt and v["ref"] not in uitgesloten]
+        bank = _bank(cfg)
+        if bank is not None:  # zelfstandig: alleen verzen waarvan de teksten in de tekstbank staan
+            kand = [v for v in kand if v["id"] in bank] or [v for v in alle_verzen() if v["id"] in bank and v["id"] not in gebruikt]
         rnd = random.Random(dt.datetime.now().isoformat())
         rnd.shuffle(kand)
         frisse = ["zonsopgang", "hemelsblauw", "paars", "roze", "bosgroen", "mint", "perzik", "zand"]
@@ -1326,6 +1329,22 @@ def cmd_nood(actie="status"):
             nieuw += 1
         bewaar("data/noodvoorraad.json", voorraad)
         print(nieuw, "lege noodposts toegevoegd; schrijf hun teksten in data/noodvoorraad.json en draai: nood render")
+        return
+    if actie == "auto":  # zonder Claude: aanvullen, teksten uit de tekstbank, renderen
+        if len([n for n in voorraad if n["status"] == "gerenderd"]) >= NOOD_DOEL:
+            print("Noodvoorraad is vol"); return
+        cmd_nood("aanvullen")
+        import tekstbank
+        bank, voorraad = tekstbank.laad(), laad("data/noodvoorraad.json", [])
+        for n in voorraad:
+            if n["status"] == "wacht_op_tekst" and n["vers_id"] in bank:
+                tekstbank.vul_post(n, bank[n["vers_id"]], cfg)
+        bewaar("data/noodvoorraad.json", voorraad)
+        cmd_nood("render")
+        klaar = len(nood_klaar())
+        gezond("nood", klaar >= NOOD_DOEL, f"noodvoorraad {klaar}/{NOOD_DOEL}")
+        if klaar:
+            cmd_log(f"Noodvoorraad zelf aangevuld uit de tekstbank: {klaar} van {NOOD_DOEL} klaar")
         return
     if actie == "render":
         n_ok = 0
@@ -1378,7 +1397,7 @@ def cmd_automaak(modus=""):
         print("Pauze staat aan of 'zelfstandig' staat uit."); return
     dagen = [modus] if modus and modus != "check" else automaak_dagen(cfg)
     if modus == "check":
-        sys.exit(0 if dagen else 1)
+        sys.exit(0 if dagen or len(nood_klaar()) < NOOD_DOEL else 1)
     bank = tekstbank.laad()
     activiteit("controller", "Zelfstandig posts maken voor " + ", ".join(dagen) if dagen else "Alles staat klaar", "busy" if dagen else "done")
     gemaakt, mislukt = 0, []

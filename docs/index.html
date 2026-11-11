@@ -837,6 +837,7 @@ function bouwGezondheid(){
       ?item("Posts maken",taak(g.maken,30),g.maken?(g.maken.laatst_ok===false?"Mislukt":"Laatst "+geleden(g.maken.ok))+" · elke ochtend":"elke ochtend vanaf 9:00",g.maken&&g.maken.detail)+
        item("Tekstbank",(D.tekstbank||{}).dagen>=30?"groen":(D.tekstbank||{}).dagen>=10?"oranje":"rood","nog ongeveer "+((D.tekstbank||{}).dagen||0)+" dagen")
       :item("Dagelijkse taak",taak(g.dagelijks,27),g.dagelijks?"Laatst "+geleden(g.dagelijks.ok)+" · elke dag 14:32":"elke dag 14:32, nog niet gemeld",g.dagelijks&&g.dagelijks.detail))+
+    item("Leren",taak(g.leren,24*8),g.leren?(g.leren.laatst_ok===false?"Mislukt":"Laatst "+geleden(g.leren.ok))+" · "+(D.config.leermodus?"elke dag":"elke maandag"):"elke maandag, na snel leren",g.leren&&g.leren.detail)+
     item("Nieuws",!((D.nieuws||{}).instelling||{}).aan?"grijs":taak(g.nieuws,15),!((D.nieuws||{}).instelling||{}).aan?"staat uit":g.nieuws?"Laatst "+geleden(g.nieuws.ok)+" · 7, 12 en 17 uur":"rond 7, 12 en 17 uur",g.nieuws&&g.nieuws.detail)+
     item("Statistieken",taak(g.statistieken,30),g.statistieken?"Laatst "+geleden(g.statistieken.ok)+" · elke nacht":"elke nacht rond 05:15",g.statistieken&&g.statistieken.detail)+
     sleutelItem("sleutel_instagram","Sleutel Instagram")+sleutelItem("sleutel_facebook","Sleutel Facebook")+
