@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-11T13:47",
+ "gegenereerd": "2026-11-11T13:49",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -3013,21 +3013,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-09T13:02:28",
-   "soort": "info",
-   "tekst": "Statistieken lezen werkt"
-  },
-  {
-   "t": "2026-11-09T13:48:24",
-   "soort": "info",
-   "tekst": "Statistieken opgehaald voor 6 posts"
-  },
-  {
-   "t": "2026-11-09T13:48:49",
-   "soort": "info",
-   "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
-  },
-  {
    "t": "2026-11-09T17:46:17",
    "soort": "info",
    "tekst": "2026-11-09-5 ook als story geplaatst"
@@ -3333,6 +3318,11 @@
    "t": "2026-11-11T13:45:30",
    "soort": "info",
    "tekst": "Bediening: WhatsApp-testbericht klaargezet"
+  },
+  {
+   "t": "2026-11-11T13:49:33",
+   "soort": "info",
+   "tekst": "Bediening: Voorstel niet gevonden of al afgehandeld"
   }
  ],
  "recente_fouten": [
@@ -3489,7 +3479,7 @@
    "detail": "10 posts voor MORGEN en OVERMORGEN klaargezet"
   },
   "whatsapp": {
-   "fout": "2026-11-11T13:43",
+   "fout": "2026-11-11T13:46",
    "laatst_ok": false,
    "detail": "Telegram-bot gevonden, maar nog geen /start-bericht van jou ontvangen. Stuur je bot /start."
   }

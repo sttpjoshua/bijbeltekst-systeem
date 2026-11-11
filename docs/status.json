@@ -1,8 +1,8 @@
 {
- "updated": "2026-11-11T13:47:44",
+ "updated": "2026-11-11T13:49:33",
  "agents": {
   "verskiezer": {
-   "t": "2026-11-11T13:32:13",
+   "t": "2026-11-11T13:49:33",
    "task": "Voorstel niet gevonden of al afgehandeld",
    "state": "done"
   },
@@ -57,32 +57,28 @@
  ],
  "log": [
   {
-   "t": "12:01",
-   "msg": "Politiek nieuws (NOS): \"Raad van State: minister van Asiel moet veiligheid Syrië opnieuw beoordelen\". Neutrale"
+   "t": "13:49",
+   "msg": "Bediening: Voorstel niet gevonden of al afgehandeld"
   },
   {
-   "t": "12:16",
-   "msg": "2026-11-11-n1215 online op facebook: Jeremia 17:7"
+   "t": "13:45",
+   "msg": "Bediening: WhatsApp-testbericht klaargezet"
   },
   {
-   "t": "12:16",
-   "msg": "2026-11-11-n1215 online op instagram: Jeremia 17:7"
+   "t": "13:43",
+   "msg": "Bediening: WhatsApp-testbericht klaargezet"
   },
   {
-   "t": "12:16",
-   "msg": "2026-11-11-n1215 ook als story geplaatst"
+   "t": "13:40",
+   "msg": "Bediening: WhatsApp-testbericht klaargezet"
   },
   {
-   "t": "12:51",
-   "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
+   "t": "13:38",
+   "msg": "Bediening: Fout als opgelost gemarkeerd"
   },
   {
-   "t": "12:51",
-   "msg": "Statistieken opgehaald voor 7 posts"
-  },
-  {
-   "t": "13:28",
-   "msg": "Bediening: Nieuws: maximaal per dag 3"
+   "t": "13:32",
+   "msg": "Bediening: Voorstel niet gevonden of al afgehandeld"
   },
   {
    "t": "13:30",
@@ -93,24 +89,20 @@
    "msg": "Nieuwspost: Jesaja 41:10 vervangen door Prediker 3:1 (aanleiding: politiek, NOS)"
   },
   {
-   "t": "13:32",
-   "msg": "Bediening: Voorstel niet gevonden of al afgehandeld"
+   "t": "13:28",
+   "msg": "Bediening: Nieuws: maximaal per dag 3"
   },
   {
-   "t": "13:38",
-   "msg": "Bediening: Fout als opgelost gemarkeerd"
+   "t": "12:51",
+   "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
   },
   {
-   "t": "13:40",
-   "msg": "Bediening: WhatsApp-testbericht klaargezet"
+   "t": "12:51",
+   "msg": "Statistieken opgehaald voor 7 posts"
   },
   {
-   "t": "13:43",
-   "msg": "Bediening: WhatsApp-testbericht klaargezet"
-  },
-  {
-   "t": "13:45",
-   "msg": "Bediening: WhatsApp-testbericht klaargezet"
+   "t": "12:16",
+   "msg": "2026-11-11-n1215 online op facebook: Jeremia 17:7"
   }
  ],
  "lampen": [
