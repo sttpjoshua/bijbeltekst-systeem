@@ -119,6 +119,8 @@ jobs:
         env:
           WA_PHONE: ${{ secrets.WA_PHONE }}
           WA_KEY: ${{ secrets.WA_KEY }}
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_CHAT: ${{ secrets.TG_CHAT }}
         run: python3 src/whatsapp.py || true
       - name: Wijzigingen opslaan
         id: opslaan

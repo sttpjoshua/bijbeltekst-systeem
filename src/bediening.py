@@ -364,7 +364,7 @@ def main(raw):
         melding = f"WhatsApp: {namen.get(o['soort'], o['soort'])} {'aan' if o['aan'] else 'uit'}"
     elif a == "whatsapp_test":
         import whatsapp
-        whatsapp.zet_in_wachtrij("👋 Testbericht van Bibleverse. De WhatsApp-koppeling werkt!", "test",
+        whatsapp.zet_in_wachtrij("👋 Testbericht van Bibleverse. De meldingen werken!", "test",
                                  "test:" + dt.datetime.now().isoformat(timespec="seconds"))
         melding = "WhatsApp-testbericht klaargezet"
     elif a == "test_materiaal":

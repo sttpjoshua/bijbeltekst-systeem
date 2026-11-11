@@ -4,7 +4,10 @@ Alles wat een bericht wil sturen, zet het in data/wa_wachtrij.json (ook Claude-r
 Dit script draait na elke GitHub Actions-run en:
   1. maakt het dagoverzicht (vanaf 21:30), het weekverslag (maandag vanaf 13:00) en uitschieter-meldingen aan;
   2. verstuurt de wachtrij, behalve tussen 22:30 en 07:30 (dan blijft het tot de ochtend staan).
-Geheimen in GitHub: WA_PHONE (bijv. 31612345678) en WA_KEY (de sleutel van CallMeBot).
+Kanaal: Telegram (geheim TG_TOKEN, de sleutel van je eigen bot via @BotFather) heeft voorrang;
+anders WhatsApp via CallMeBot (geheimen WA_PHONE en WA_KEY).
+Telegram: na het aanmaken van de bot stuurt Joshua hem één keer /start; het systeem onthoudt dan zelf
+het chatnummer (data/telegram.json). Daarna luistert de bot naar niemand anders.
 Instellingen in config.json onder "whatsapp": direct, dagelijks, wekelijks, uitschieter (true/false).
 """
 import os, sys, json, urllib.request, urllib.parse, datetime as dt
@@ -31,7 +34,43 @@ def zet_in_wachtrij(tekst, soort="direct", sleutel=None):
     q.append({"t": dt.datetime.now(TZ).isoformat(timespec="minutes"), "soort": soort, "tekst": tekst, "sleutel": sleutel})
     S.bewaar("data/wa_wachtrij.json", q[-50:])
 
+def kanaal():
+    if os.environ.get("TG_TOKEN", "").strip():
+        return "telegram"
+    if os.environ.get("WA_PHONE") and os.environ.get("WA_KEY"):
+        return "whatsapp"
+    return None
+
+def _tg(methode, **data):
+    token = os.environ["TG_TOKEN"].strip()
+    req = urllib.request.Request(f"https://api.telegram.org/bot{token}/{methode}",
+                                 data=json.dumps(data).encode(), headers={"Content-Type": "application/json"})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        uit = json.loads(r.read().decode())
+    if not uit.get("ok"):
+        raise RuntimeError(f"Telegram: {uit.get('description')}")
+    return uit["result"]
+
+def tg_chat():
+    """Het chatnummer van Joshua: uit het geheim TG_CHAT, uit data/telegram.json, of (eenmalig) uit zijn /start-bericht."""
+    if os.environ.get("TG_CHAT", "").strip():
+        return os.environ["TG_CHAT"].strip()
+    tg = S.laad("data/telegram.json", {})
+    if tg.get("chat"):
+        return tg["chat"]
+    for u in _tg("getUpdates", timeout=0):
+        m = u.get("message") or {}
+        if m.get("chat", {}).get("type") == "private" and (m.get("text") or "").startswith("/start"):
+            S.bewaar("data/telegram.json", {"chat": m["chat"]["id"], "sinds": dt.datetime.now(TZ).isoformat(timespec="minutes")})
+            _tg("sendMessage", chat_id=m["chat"]["id"], text="✅ Gekoppeld! Je krijgt hier voortaan de meldingen van Bibleverse.")
+            return m["chat"]["id"]
+    raise RuntimeError("Telegram-bot gevonden, maar nog geen /start-bericht van jou ontvangen. Stuur je bot /start.")
+
 def stuur(tekst):
+    if kanaal() == "telegram":
+        _tg("sendMessage", chat_id=tg_chat(), text=tekst[:4000], disable_web_page_preview=True,
+            reply_markup={"inline_keyboard": [[{"text": "Dashboard openen", "url": DASH}]]})
+        return
     tel, key = os.environ.get("WA_PHONE", "").strip().lstrip("+"), os.environ.get("WA_KEY", "").strip()
     if not tel or not key:
         raise RuntimeError("geen sleutel: voeg WA_PHONE en WA_KEY toe als geheim in GitHub")
@@ -118,8 +157,8 @@ def main():
     te_sturen = [m for m in q if inst.get(m["soort"], True) or m["soort"] == "test"]
     if stil:
         te_sturen = [m for m in te_sturen if m["soort"] == "test"]
-    if te_sturen and not (os.environ.get("WA_PHONE") and os.environ.get("WA_KEY")):
-        print("WhatsApp nog niet gekoppeld (WA_PHONE/WA_KEY ontbreken); berichten blijven 2 dagen in de wachtrij")
+    if te_sturen and not kanaal():
+        print("Meldingen nog niet gekoppeld (TG_TOKEN of WA_PHONE/WA_KEY ontbreken); berichten blijven 2 dagen in de wachtrij")
         te_sturen = []
     if te_sturen:
         try:
@@ -131,7 +170,7 @@ def main():
             q = [m for m in q if m not in te_sturen]
         except Exception as e:
             S.gezond("whatsapp", False, str(e)[:200])
-            print("WhatsApp versturen mislukt:", e)
+            print("Melding versturen mislukt:", e)
     # wat uitgezet is of te oud (2 dagen), niet eeuwig bewaren
     grens = (nu - dt.timedelta(days=2)).isoformat(timespec="minutes")
     q = [m for m in q if m["t"] >= grens and (inst.get(m["soort"], True) or m["soort"] == "test")]
