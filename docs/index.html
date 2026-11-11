@@ -551,7 +551,7 @@ function bouwBediening(){
   const wa=D.whatsapp||{},wg=(D.gezondheid||{}).whatsapp,WAN={direct:["🚨 Direct","alleen als je iets moet doen"],dagelijks:["📊 Dagoverzicht","rond 21:30"],wekelijks:["📅 Weekverslag","maandagmiddag"],uitschieter:["🚀 Uitschieters","als een post ineens hard gaat"]};
   document.getElementById("bWa").innerHTML=`<div class="seg">${Object.entries(WAN).map(([k,[n,u]])=>`<button class="btn ${wa[k]!==false?"aan":""}" title="${u}" data-o='${JSON.stringify({actie:"whatsapp_instelling",soort:k,aan:wa[k]===false})}'>${n} ${wa[k]!==false?"aan":"uit"}</button>`).join("")}
     <button class="btn" data-o='{"actie":"whatsapp_test"}'>Testbericht sturen</button></div>
-    <div class="sub" style="margin-top:6px">${!wg?"Nog niet gekoppeld. Voeg in GitHub de geheimen <b>WA_PHONE</b> (bijv. 31612345678) en <b>WA_KEY</b> (van CallMeBot) toe en stuur een testbericht.":wg.laatst_ok===false?"⚠️ Versturen lukte niet: "+esc(wg.detail||""):"✅ Werkt. Laatst verstuurd "+geleden(wg.ok)+"."} Tussen 22:30 en 07:30 stuur ik niets; wat dan binnenkomt, krijg je 's ochtends.</div>`;
+    <div class="sub" style="margin-top:6px">${!wg?"Nog niet gekoppeld. Maak in Telegram een bot via @BotFather, stuur je bot /start, zet de sleutel in GitHub als geheim <b>TG_TOKEN</b> en stuur een testbericht.":wg.laatst_ok===false?"⚠️ Versturen lukte niet: "+esc(wg.detail||""):"✅ Werkt. Laatst verstuurd "+geleden(wg.ok)+"."} Tussen 22:30 en 07:30 stuur ik niets; wat dan binnenkomt, krijg je 's ochtends.</div>`;
   document.getElementById("bVergeet").onclick=e=>{e.preventDefault();try{localStorage.removeItem(SLEUTEL)}catch(x){}bouwBediening()};
 }
 async function stuur(o,knop){
