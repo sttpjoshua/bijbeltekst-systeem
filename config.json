@@ -47,5 +47,8 @@
   "Job-9-4-4"
  ],
  "zelfstandig": true,
- "nieuwe_reels": false
+ "nieuwe_reels": false,
+ "nieuws": {
+  "max_per_dag": 3
+ }
 }

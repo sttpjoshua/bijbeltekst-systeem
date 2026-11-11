@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-11T13:20",
+ "gegenereerd": "2026-11-11T13:28",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -3005,11 +3005,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-09T07:31:56",
-   "soort": "info",
-   "tekst": "2026-11-09-4 online op facebook: Spreuken 5:1"
-  },
-  {
    "t": "2026-11-09T12:16:56",
    "soort": "info",
    "tekst": "2026-11-09-3 ook als story geplaatst"
@@ -3312,6 +3307,11 @@
    "t": "2026-11-11T12:51:54",
    "soort": "info",
    "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
+  },
+  {
+   "t": "2026-11-11T13:28:35",
+   "soort": "info",
+   "tekst": "Bediening: Nieuws: maximaal per dag 3"
   }
  ],
  "recente_fouten": [
@@ -4000,7 +4000,7 @@
  "nieuws": {
   "instelling": {
    "aan": true,
-   "max_per_dag": 2,
+   "max_per_dag": 3,
    "licht_automatisch": true
   },
   "recent": [
