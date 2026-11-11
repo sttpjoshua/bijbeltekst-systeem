@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-11T10:18",
+ "gegenereerd": "2026-11-11T10:24",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -2642,21 +2642,269 @@
    "gemist": [],
    "nood": false,
    "online": "2026-11-07T12:30+01:00"
+  },
+  {
+   "id": "2026-11-15-5",
+   "datum": "2026-11-15",
+   "ref": "Hebreeën 11:1",
+   "tekst": "Het geloof nu is een vaste grond der dingen, die men hoopt, en een bewijs der zaken, die men niet ziet.",
+   "hook": "Een vaste grond, ook als je niets ziet.",
+   "status": "gerenderd",
+   "variabelen": {
+    "huisstijl": "hemelsblauw",
+    "thema": "hoop",
+    "hook_stijl": "rustig",
+    "formaat": "video",
+    "uitleg_op_beeld": true,
+    "achtergrondbron": "beeld",
+    "boekgroep": "brieven",
+    "lengte": "middel",
+    "bron": "bekend",
+    "vraag_onderaan": true,
+    "opening": null,
+    "tijdslot": "22:00",
+    "tijdslot_fb": "17:45",
+    "palet": "hemelsblauw",
+    "lettertype": "montserrat_zwaar",
+    "layout": "links",
+    "achtergrond": "diagonaal",
+    "hook_op_beeld": false,
+    "video_uitleg": true
+   },
+   "vers_id": "Hebrews-11-1-1",
+   "goedgekeurd": null,
+   "reeks": null,
+   "reeks_label": null,
+   "reserve_ref": null,
+   "caption": "Een vaste grond, ook als je niets ziet.\n\n\"Het geloof nu is een vaste grond der dingen, die men hoopt, en een bewijs der zaken, die men niet ziet.\"\nHebreeën 11:1\n\nGeloof is vertrouwen op wat je nog niet ziet.\n\nWaar hoop jij op dat je nog niet ziet?",
+   "uitleg": "Geloof is zeker zijn van wat je hoopt, ook als je het nog niet ziet.",
+   "media": "docs/media/2026-11/2026-11-15-5.mp4",
+   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-5.mp4",
+   "media_urls": [
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-5.mp4"
+   ],
+   "thumb": "thumbs/2026-11-15-5.jpg",
+   "platformen": [],
+   "links": {},
+   "totaal": {},
+   "per_platform": {},
+   "score": {},
+   "pub": {},
+   "gemist": [],
+   "nood": false,
+   "online": null
+  },
+  {
+   "id": "2026-11-15-4",
+   "datum": "2026-11-15",
+   "ref": "Filippenzen 4:13",
+   "tekst": "Ik vermag alle dingen door Christus, Die mij kracht geeft.",
+   "hook": "Voor iedereen die het gevoel heeft dat het te veel wordt.",
+   "status": "gerenderd",
+   "variabelen": {
+    "huisstijl": "zand",
+    "thema": "moed",
+    "hook_stijl": "herkenning",
+    "formaat": "video",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "beeld",
+    "boekgroep": "brieven",
+    "lengte": "kort",
+    "bron": "bekend",
+    "vraag_onderaan": true,
+    "opening": null,
+    "tijdslot": "17:45",
+    "tijdslot_fb": "12:15",
+    "palet": "zand",
+    "lettertype": "dmserif",
+    "layout": "centraal",
+    "achtergrond": "verloop",
+    "hook_op_beeld": false,
+    "video_uitleg": true
+   },
+   "vers_id": "Philippians-4-13-13",
+   "goedgekeurd": null,
+   "reeks": null,
+   "reeks_label": null,
+   "reserve_ref": null,
+   "caption": "Voor iedereen die het gevoel heeft dat het te veel wordt.\n\n\"Ik vermag alle dingen door Christus, Die mij kracht geeft.\"\nFilippenzen 4:13\n\nDe kracht komt niet uit jou, maar uit Hem.\n\nWaar heb jij vandaag extra kracht voor nodig?",
+   "uitleg": "",
+   "media": "docs/media/2026-11/2026-11-15-4.mp4",
+   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-4.mp4",
+   "media_urls": [
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-4.mp4"
+   ],
+   "thumb": "thumbs/2026-11-15-4.jpg",
+   "platformen": [],
+   "links": {},
+   "totaal": {},
+   "per_platform": {},
+   "score": {},
+   "pub": {},
+   "gemist": [],
+   "nood": false,
+   "online": null
+  },
+  {
+   "id": "2026-11-15-3",
+   "datum": "2026-11-15",
+   "ref": "2 Korinthe 5:17",
+   "tekst": "Zo dan, indien iemand in Christus is, die is een nieuw schepsel; het oude is voorbijgegaan, ziet, het is alles nieuw geworden.",
+   "hook": "Voor iedereen die vastzit in wie hij vroeger was.",
+   "status": "gerenderd",
+   "variabelen": {
+    "huisstijl": "roze",
+    "thema": "identiteit",
+    "hook_stijl": "herkenning",
+    "formaat": "video",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "verloop",
+    "boekgroep": "brieven",
+    "lengte": "middel",
+    "bron": "bekend",
+    "vraag_onderaan": true,
+    "opening": null,
+    "tijdslot": "20:30",
+    "tijdslot_fb": "20:30",
+    "palet": "zachtroze",
+    "lettertype": "cormorant_cursief",
+    "layout": "links",
+    "achtergrond": "diagonaal",
+    "hook_op_beeld": false,
+    "video_uitleg": true
+   },
+   "vers_id": "II_Corinthians-5-17-17",
+   "goedgekeurd": null,
+   "reeks": null,
+   "reeks_label": null,
+   "reserve_ref": null,
+   "caption": "Voor iedereen die vastzit in wie hij vroeger was.\n\n\"Zo dan, indien iemand in Christus is, die is een nieuw schepsel; het oude is voorbijgegaan, ziet, het is alles nieuw geworden.\"\n2 Korinthe 5:17\n\nBij God mag je opnieuw beginnen.\n\nWaar wil jij opnieuw mee beginnen?",
+   "uitleg": "",
+   "media": "docs/media/2026-11/2026-11-15-3.mp4",
+   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-3.mp4",
+   "media_urls": [
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-3.mp4"
+   ],
+   "thumb": "thumbs/2026-11-15-3.jpg",
+   "platformen": [],
+   "links": {},
+   "totaal": {},
+   "per_platform": {},
+   "score": {},
+   "pub": {},
+   "gemist": [],
+   "nood": false,
+   "online": null
+  },
+  {
+   "id": "2026-11-15-2",
+   "datum": "2026-11-15",
+   "ref": "Spreuken 26:11",
+   "tekst": "Gelijk een hond tot zijn uitspuwsel wederkeert, alzo herneemt de zot zijn dwaasheid.",
+   "hook": "Een eerlijk vers over hoe mensen zijn.",
+   "status": "gerenderd",
+   "variabelen": {
+    "huisstijl": "mint",
+    "thema": "humor_herkenbaar",
+    "hook_stijl": "rustig",
+    "formaat": "carrousel",
+    "uitleg_op_beeld": true,
+    "achtergrondbron": "beeld",
+    "boekgroep": "spreuken",
+    "lengte": "kort",
+    "bron": "bekend",
+    "vraag_onderaan": false,
+    "opening": "stopper",
+    "tijdslot": "07:30",
+    "tijdslot_fb": "12:15",
+    "palet": "mint",
+    "lettertype": "dmserif",
+    "layout": "centraal",
+    "achtergrond": "diagonaal",
+    "hook_op_beeld": false,
+    "video_uitleg": null
+   },
+   "vers_id": "Proverbs-26-11-11",
+   "goedgekeurd": null,
+   "reeks": null,
+   "reeks_label": null,
+   "reserve_ref": null,
+   "caption": "Een eerlijk vers over hoe mensen zijn.\n\n\"Gelijk een hond tot zijn uitspuwsel wederkeert, alzo herneemt de zot zijn dwaasheid.\"\nSpreuken 26:11\n\nWe maken allemaal weleens dezelfde fout twee keer.",
+   "uitleg": "Zoals een hond terugkeert naar zijn braaksel, zo herhaalt een dwaas zijn domheid.",
+   "media": "docs/media/2026-11/2026-11-15-2-1.jpg",
+   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-2-1.jpg",
+   "media_urls": [
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-2-1.jpg",
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-2-2.jpg",
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-2-3.jpg",
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-2-4.jpg"
+   ],
+   "thumb": "thumbs/2026-11-15-2.jpg",
+   "platformen": [],
+   "links": {},
+   "totaal": {},
+   "per_platform": {},
+   "score": {},
+   "pub": {},
+   "gemist": [],
+   "nood": false,
+   "online": null
+  },
+  {
+   "id": "2026-11-15-1",
+   "datum": "2026-11-15",
+   "ref": "Mattheüs 11:29-30",
+   "tekst": "Neemt Mijn juk op u, en leert van Mij, dat Ik zachtmoedig ben en nederig van hart; en gij zult rust vinden voor uw zielen. Want Mijn juk is zacht, en Mijn last is licht.",
+   "hook": "Vers van de week: Ben jij moe van alles wat moet?",
+   "status": "gerenderd",
+   "variabelen": {
+    "huisstijl": "salie",
+    "thema": "vrede_rust",
+    "hook_stijl": "vraag",
+    "formaat": "video",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "beeld",
+    "boekgroep": "evangelien",
+    "lengte": "middel",
+    "bron": "bekend",
+    "vraag_onderaan": true,
+    "opening": null,
+    "tijdslot": "12:15",
+    "tijdslot_fb": "07:30",
+    "palet": "salie",
+    "lettertype": "cormorant",
+    "layout": "kader",
+    "achtergrond": "effen",
+    "hook_op_beeld": false,
+    "video_uitleg": true
+   },
+   "vers_id": "Matthew-11-29-30",
+   "goedgekeurd": null,
+   "reeks": "Vers van de week",
+   "reeks_label": "VERS VAN DE WEEK",
+   "reserve_ref": null,
+   "caption": "Vers van de week: Ben jij moe van alles wat moet?\n\n\"Neemt Mijn juk op u, en leert van Mij, dat Ik zachtmoedig ben en nederig van hart; en gij zult rust vinden voor uw zielen. Want Mijn juk is zacht, en Mijn last is licht.\"\nMattheüs 11:29-30\n\nBij Jezus mag je uitrusten.\n\nWelke last zou jij willen neerleggen?",
+   "uitleg": "",
+   "media": "docs/media/2026-11/2026-11-15-1.mp4",
+   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-1.mp4",
+   "media_urls": [
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-1.mp4"
+   ],
+   "thumb": "thumbs/2026-11-15-1.jpg",
+   "platformen": [],
+   "links": {},
+   "totaal": {},
+   "per_platform": {},
+   "score": {},
+   "pub": {},
+   "gemist": [],
+   "nood": false,
+   "online": null
   }
  ],
  "leergeschiedenis": [],
  "laatste_rapport": null,
  "logboek": [
-  {
-   "t": "2026-11-08T18:26:07",
-   "soort": "info",
-   "tekst": "Bediening: Fout als opgelost gemarkeerd"
-  },
-  {
-   "t": "2026-11-08T18:27:40",
-   "soort": "info",
-   "tekst": "Bediening: Openstaande fouten als opgelost gemarkeerd"
-  },
   {
    "t": "2026-11-08T18:40:21",
    "soort": "info",
@@ -2947,6 +3195,17 @@
    "soort": "fout",
    "tekst": "Tekstbank bijna op: nog genoeg nieuwe verzen voor ongeveer 5 dagen (25 van 47). Daarna herhaalt het systeem de oudste verzen.",
    "code": "tekstbank"
+  },
+  {
+   "t": "2026-11-11T10:24:12",
+   "soort": "info",
+   "tekst": "Zelfstandig 5 posts klaargezet voor 2026-11-15 (teksten uit de tekstbank)."
+  },
+  {
+   "t": "2026-11-11T10:24:12",
+   "soort": "fout",
+   "tekst": "Tekstbank bijna op: nog genoeg nieuwe verzen voor ongeveer 4 dagen (20 van 47). Daarna herhaalt het systeem de oudste verzen.",
+   "code": "tekstbank"
   }
  ],
  "recente_fouten": [
@@ -2954,6 +3213,12 @@
    "t": "2026-11-11T10:08:31",
    "soort": "fout",
    "tekst": "Tekstbank bijna op: nog genoeg nieuwe verzen voor ongeveer 5 dagen (25 van 47). Daarna herhaalt het systeem de oudste verzen.",
+   "code": "tekstbank"
+  },
+  {
+   "t": "2026-11-11T10:24:12",
+   "soort": "fout",
+   "tekst": "Tekstbank bijna op: nog genoeg nieuwe verzen voor ongeveer 4 dagen (20 van 47). Daarna herhaalt het systeem de oudste verzen.",
    "code": "tekstbank"
   }
  ],
@@ -3301,8 +3566,8 @@
    },
    "moed": {
     "totaal": 44,
-    "beschikbaar": 38,
-    "nooit": 40
+    "beschikbaar": 37,
+    "nooit": 39
    },
    "liefde": {
     "totaal": 67,
@@ -3311,8 +3576,8 @@
    },
    "hoop": {
     "totaal": 44,
-    "beschikbaar": 41,
-    "nooit": 41
+    "beschikbaar": 40,
+    "nooit": 40
    },
    "vertrouwen": {
     "totaal": 58,
@@ -3326,8 +3591,8 @@
    },
    "humor_herkenbaar": {
     "totaal": 30,
-    "beschikbaar": 24,
-    "nooit": 24
+    "beschikbaar": 23,
+    "nooit": 23
    },
    "dankbaarheid": {
     "totaal": 92,
@@ -3336,13 +3601,13 @@
    },
    "identiteit": {
     "totaal": 33,
-    "beschikbaar": 30,
-    "nooit": 30
+    "beschikbaar": 29,
+    "nooit": 29
    },
    "vrede_rust": {
     "totaal": 42,
-    "beschikbaar": 39,
-    "nooit": 39
+    "beschikbaar": 38,
+    "nooit": 38
    }
   },
   "verzen_totaal": 558,
@@ -3357,7 +3622,15 @@
     "keer": 1
    },
    {
+    "naam": "ES_Angelica - David Edward.mp3",
+    "keer": 1
+   },
+   {
     "naam": "ES_Bed Time - Traditional.mp3",
+    "keer": 1
+   },
+   {
+    "naam": "ES_Lights of Destination - Helmut Schenker.mp3",
     "keer": 1
    },
    {
@@ -3366,6 +3639,10 @@
    },
    {
     "naam": "ES_Meditations - Drift Far Away.mp3",
+    "keer": 1
+   },
+   {
+    "naam": "ES_Mind Flow - Aashray Harishankar.mp3",
     "keer": 1
    },
    {
@@ -3389,15 +3666,15 @@
     "keer": 1
    },
    {
+    "naam": "ES_The Pulsation of Tranquility - Cora Zea.mp3",
+    "keer": 1
+   },
+   {
     "naam": "ES_Walk in the Forest - Center of Attention.mp3",
     "keer": 1
    },
    {
     "naam": "ES_A Marvelous Companion - Rachel Sandy.mp3",
-    "keer": 0
-   },
-   {
-    "naam": "ES_Angelica - David Edward.mp3",
     "keer": 0
    },
    {
@@ -3421,19 +3698,11 @@
     "keer": 0
    },
    {
-    "naam": "ES_Lights of Destination - Helmut Schenker.mp3",
-    "keer": 0
-   },
-   {
     "naam": "ES_Like Breathing - Sam Rankin.mp3",
     "keer": 0
    },
    {
     "naam": "ES_Lost in Time - Aiyo.mp3",
-    "keer": 0
-   },
-   {
-    "naam": "ES_Mind Flow - Aashray Harishankar.mp3",
     "keer": 0
    },
    {
@@ -3446,10 +3715,6 @@
    },
    {
     "naam": "ES_That's What Christmas Is About (Instrumental Version) - Loving Caliber.mp3",
-    "keer": 0
-   },
-   {
-    "naam": "ES_The Pulsation of Tranquility - Cora Zea.mp3",
     "keer": 0
    },
    {
@@ -3467,6 +3732,10 @@
   ],
   "beelden": [
    {
+    "naam": "pexels-alessandro-kelvin-1248577-2376272.jpg",
+    "keer": 1
+   },
+   {
     "naam": "pexels-brunoabdiel-5396622.jpg",
     "keer": 1
    },
@@ -3476,6 +3745,10 @@
    },
    {
     "naam": "pexels-dima-langemann-154794175-10633172.jpg",
+    "keer": 1
+   },
+   {
+    "naam": "pexels-gyozo-morocz-517633466-16411308.jpg",
     "keer": 1
    },
    {
@@ -3491,6 +3764,10 @@
     "keer": 1
    },
    {
+    "naam": "pexels-rebornfilmes-36114793.jpg",
+    "keer": 1
+   },
+   {
     "naam": "pexels-thalittlemarc-28864326.jpg",
     "keer": 1
    },
@@ -3499,12 +3776,12 @@
     "keer": 1
    },
    {
-    "naam": "pexels-yusuf-kaya-288172498-18179575.jpg",
+    "naam": "pexels-yusuf-kaya-288172498-17409279.jpg",
     "keer": 1
    },
    {
-    "naam": "pexels-alessandro-kelvin-1248577-2376272.jpg",
-    "keer": 0
+    "naam": "pexels-yusuf-kaya-288172498-18179575.jpg",
+    "keer": 1
    },
    {
     "naam": "pexels-dang-vu-hai-683750211-34035083.jpg",
@@ -3516,10 +3793,6 @@
    },
    {
     "naam": "pexels-fernanda-leticia-536417725-24811280.jpg",
-    "keer": 0
-   },
-   {
-    "naam": "pexels-gyozo-morocz-517633466-16411308.jpg",
     "keer": 0
    },
    {
@@ -3548,14 +3821,6 @@
    },
    {
     "naam": "pexels-rahimegul-27617156.jpg",
-    "keer": 0
-   },
-   {
-    "naam": "pexels-rebornfilmes-36114793.jpg",
-    "keer": 0
-   },
-   {
-    "naam": "pexels-yusuf-kaya-288172498-17409279.jpg",
     "keer": 0
    }
   ],
@@ -3599,8 +3864,8 @@
  },
  "tekstbank": {
   "verzen": 197,
-  "vrij": 175,
-  "dagen": 35,
+  "vrij": 20,
+  "dagen": 4,
   "zelfstandig": true
  },
  "verzoeken": [
@@ -3621,226 +3886,6 @@
   "uitschieter": true
  },
  "planning": [
-  {
-   "datum": "2026-11-15",
-   "ref": "Mattheüs 11:29-30",
-   "tekst": "Neemt Mijn juk op u, en leert van Mij, dat Ik zachtmoedig ben en nederig van hart; en gij zult rust vinden voor uw zielen. Want Mijn juk is zacht, en Mijn last is licht.",
-   "vers_id": "Matthew-11-29-30",
-   "variabelen": {
-    "huisstijl": "salie",
-    "thema": "vrede_rust",
-    "hook_stijl": "vraag",
-    "formaat": "video",
-    "uitleg_op_beeld": false,
-    "achtergrondbron": "beeld",
-    "boekgroep": "evangelien",
-    "lengte": "middel",
-    "bron": "bekend",
-    "vraag_onderaan": true,
-    "opening": null,
-    "tijdslot": "12:15",
-    "tijdslot_fb": "07:30",
-    "palet": "salie",
-    "lettertype": "cormorant",
-    "layout": "kader",
-    "achtergrond": "effen",
-    "hook_op_beeld": false,
-    "video_uitleg": true
-   },
-   "keuzebron": {
-    "huisstijl": "experiment",
-    "thema": "reeks",
-    "hook_stijl": "experiment",
-    "formaat": "experiment",
-    "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "experiment",
-    "boekgroep": "experiment",
-    "lengte": "experiment",
-    "bron": "experiment",
-    "vraag_onderaan": "experiment",
-    "opening": "n.v.t.",
-    "tijdslot": "reeks",
-    "video_uitleg": "vaste regel"
-   },
-   "reeks": "Vers van de week",
-   "reeks_label": "VERS VAN DE WEEK"
-  },
-  {
-   "datum": "2026-11-15",
-   "ref": "Spreuken 26:11",
-   "tekst": "Gelijk een hond tot zijn uitspuwsel wederkeert, alzo herneemt de zot zijn dwaasheid.",
-   "vers_id": "Proverbs-26-11-11",
-   "variabelen": {
-    "huisstijl": "mint",
-    "thema": "humor_herkenbaar",
-    "hook_stijl": "rustig",
-    "formaat": "carrousel",
-    "uitleg_op_beeld": true,
-    "achtergrondbron": "beeld",
-    "boekgroep": "spreuken",
-    "lengte": "kort",
-    "bron": "bekend",
-    "vraag_onderaan": false,
-    "opening": "stopper",
-    "tijdslot": "07:30",
-    "tijdslot_fb": "12:15",
-    "palet": "mint",
-    "lettertype": "dmserif",
-    "layout": "centraal",
-    "achtergrond": "diagonaal",
-    "hook_op_beeld": false,
-    "video_uitleg": null
-   },
-   "keuzebron": {
-    "huisstijl": "experiment",
-    "thema": "experiment",
-    "hook_stijl": "experiment",
-    "formaat": "experiment",
-    "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "experiment",
-    "boekgroep": "experiment",
-    "lengte": "experiment",
-    "bron": "experiment",
-    "vraag_onderaan": "experiment",
-    "opening": "experiment",
-    "tijdslot": "experiment",
-    "video_uitleg": "n.v.t."
-   },
-   "reeks": null,
-   "reeks_label": null
-  },
-  {
-   "datum": "2026-11-15",
-   "ref": "2 Korinthe 5:17",
-   "tekst": "Zo dan, indien iemand in Christus is, die is een nieuw schepsel; het oude is voorbijgegaan, ziet, het is alles nieuw geworden.",
-   "vers_id": "II_Corinthians-5-17-17",
-   "variabelen": {
-    "huisstijl": "roze",
-    "thema": "identiteit",
-    "hook_stijl": "herkenning",
-    "formaat": "video",
-    "uitleg_op_beeld": false,
-    "achtergrondbron": "verloop",
-    "boekgroep": "brieven",
-    "lengte": "middel",
-    "bron": "bekend",
-    "vraag_onderaan": true,
-    "opening": null,
-    "tijdslot": "20:30",
-    "tijdslot_fb": "20:30",
-    "palet": "zachtroze",
-    "lettertype": "cormorant_cursief",
-    "layout": "links",
-    "achtergrond": "diagonaal",
-    "hook_op_beeld": false,
-    "video_uitleg": true
-   },
-   "keuzebron": {
-    "huisstijl": "experiment",
-    "thema": "experiment",
-    "hook_stijl": "experiment",
-    "formaat": "experiment",
-    "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "experiment",
-    "boekgroep": "experiment",
-    "lengte": "experiment",
-    "bron": "experiment",
-    "vraag_onderaan": "experiment",
-    "opening": "n.v.t.",
-    "tijdslot": "experiment",
-    "video_uitleg": "vaste regel"
-   },
-   "reeks": null,
-   "reeks_label": null
-  },
-  {
-   "datum": "2026-11-15",
-   "ref": "Filippenzen 4:13",
-   "tekst": "Ik vermag alle dingen door Christus, Die mij kracht geeft.",
-   "vers_id": "Philippians-4-13-13",
-   "variabelen": {
-    "huisstijl": "zand",
-    "thema": "moed",
-    "hook_stijl": "herkenning",
-    "formaat": "video",
-    "uitleg_op_beeld": false,
-    "achtergrondbron": "beeld",
-    "boekgroep": "brieven",
-    "lengte": "kort",
-    "bron": "bekend",
-    "vraag_onderaan": true,
-    "opening": null,
-    "tijdslot": "17:45",
-    "tijdslot_fb": "12:15",
-    "palet": "zand",
-    "lettertype": "dmserif",
-    "layout": "centraal",
-    "achtergrond": "verloop",
-    "hook_op_beeld": false,
-    "video_uitleg": true
-   },
-   "keuzebron": {
-    "huisstijl": "experiment",
-    "thema": "experiment",
-    "hook_stijl": "experiment",
-    "formaat": "experiment",
-    "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "experiment",
-    "boekgroep": "experiment",
-    "lengte": "experiment",
-    "bron": "experiment",
-    "vraag_onderaan": "experiment",
-    "opening": "n.v.t.",
-    "tijdslot": "experiment",
-    "video_uitleg": "vaste regel"
-   },
-   "reeks": null,
-   "reeks_label": null
-  },
-  {
-   "datum": "2026-11-15",
-   "ref": "Hebreeën 11:1",
-   "tekst": "Het geloof nu is een vaste grond der dingen, die men hoopt, en een bewijs der zaken, die men niet ziet.",
-   "vers_id": "Hebrews-11-1-1",
-   "variabelen": {
-    "huisstijl": "hemelsblauw",
-    "thema": "hoop",
-    "hook_stijl": "rustig",
-    "formaat": "video",
-    "uitleg_op_beeld": true,
-    "achtergrondbron": "beeld",
-    "boekgroep": "brieven",
-    "lengte": "middel",
-    "bron": "bekend",
-    "vraag_onderaan": true,
-    "opening": null,
-    "tijdslot": "22:00",
-    "tijdslot_fb": "17:45",
-    "palet": "hemelsblauw",
-    "lettertype": "montserrat_zwaar",
-    "layout": "links",
-    "achtergrond": "diagonaal",
-    "hook_op_beeld": false,
-    "video_uitleg": true
-   },
-   "keuzebron": {
-    "huisstijl": "experiment",
-    "thema": "experiment",
-    "hook_stijl": "experiment",
-    "formaat": "experiment",
-    "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "experiment",
-    "boekgroep": "experiment",
-    "lengte": "experiment",
-    "bron": "experiment",
-    "vraag_onderaan": "experiment",
-    "opening": "n.v.t.",
-    "tijdslot": "experiment",
-    "video_uitleg": "vaste regel"
-   },
-   "reeks": null,
-   "reeks_label": null
-  },
   {
    "datum": "2026-11-16",
    "ref": "Jozua 1:9",

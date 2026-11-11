@@ -1,19 +1,19 @@
 {
- "updated": "2026-11-11T10:18:50",
+ "updated": "2026-11-11T10:24:12",
  "agents": {
   "verskiezer": {
-   "t": "2026-11-11T10:03:27",
-   "task": "Koos Spreuken 24:3, Jesaja 30:15, Jakobus 3:17, Mattheüs 21:22, Jesaja 26:12",
+   "t": "2026-11-11T10:12:16",
+   "task": "Koos Mattheüs 11:29-30, Spreuken 26:11, 2 Korinthe 5:17, Filippenzen 4:13, Hebreeën 11:1",
    "state": "done"
   },
   "designer": {
-   "t": "2026-11-11T10:08:31",
-   "task": "Ontwierp Psalm 62:6 in stijl mint",
+   "t": "2026-11-11T10:24:12",
+   "task": "Ontwierp Hebreeën 11:1 in stijl hemelsblauw",
    "state": "done"
   },
   "video": {
-   "t": "2026-11-11T10:08:29",
-   "task": "Monteerde video Spreuken 4:23 met muziek",
+   "t": "2026-11-11T10:24:12",
+   "task": "Monteerde video Hebreeën 11:1 met muziek",
    "state": "done"
   },
   "dispatcher": {
@@ -22,8 +22,8 @@
    "state": "done"
   },
   "controller": {
-   "t": "2026-11-11T10:08:31",
-   "task": "Tekstbank bijna op: nog genoeg nieuwe verzen voor ongeveer 5 dagen (25",
+   "t": "2026-11-11T10:24:12",
+   "task": "Tekstbank bijna op: nog genoeg nieuwe verzen voor ongeveer 4 dagen (20",
    "state": "error"
   },
   "analist": {
@@ -56,6 +56,14 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "10:24",
+   "msg": "Tekstbank bijna op: nog genoeg nieuwe verzen voor ongeveer 4 dagen (20 van 47). Daarna herhaalt het systeem de"
+  },
+  {
+   "t": "10:24",
+   "msg": "Zelfstandig 5 posts klaargezet voor 2026-11-15 (teksten uit de tekstbank)."
+  },
   {
    "t": "10:08",
    "msg": "Tekstbank bijna op: nog genoeg nieuwe verzen voor ongeveer 5 dagen (25 van 47). Daarna herhaalt het systeem de"
@@ -95,14 +103,6 @@
   {
    "t": "06:00",
    "msg": "Zelfherstel: Geen post klaar voor 2026-11-11 07:30 → noodpost Jesaja 32:17 ingezet om 07:30"
-  },
-  {
-   "t": "22:03",
-   "msg": "2026-11-10-2 online op facebook: Openbaring 21:5"
-  },
-  {
-   "t": "22:03",
-   "msg": "2026-11-10-2 online op instagram: Openbaring 21:5"
   }
  ],
  "lampen": [
