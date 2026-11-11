@@ -511,18 +511,22 @@ def cmd_opruimen(dagen=30):
     """Verwijdert media van posts die langer dan `dagen` geleden online gingen; de thumb blijft."""
     posts = laad("data/posts.json", [])
     grens = (dt.date.today() - dt.timedelta(days=int(dagen))).isoformat()
-    weg = 0
+    weg, weggehaald = 0, []
     for p in posts:
         if p.get("status") in ("gepubliceerd", "overgeslagen", "fout", "afgekeurd") and p["datum"] < grens and p.get("media"):
             if os.path.exists(P(p["media"])):
                 if not p.get("thumb"):
                     p["thumb"] = maak_thumb(P(p["media"]), p["id"])
                 os.remove(P(p["media"])); weg += 1
+            weggehaald.append(p["media"])
             for extra in (p.get("media_extra", []) or []) + ([p["story"]] if p.get("story") else []):
+                weggehaald.append(extra)
                 if os.path.exists(P(extra)):
                     os.remove(P(extra))
             p["media"], p["media_extra"] = None, []
     bewaar("data/posts.json", posts)
+    if weggehaald:  # tools/media.py verwijdert alleen wat hier bewust staat
+        bewaar("data/media_weg.json", laad("data/media_weg.json", []) + weggehaald)
     if weg:
         cmd_log(f"Opgeruimd: media van {weg} oude posts verwijderd (voorvertoning bewaard)")
     print(weg, "bestanden opgeruimd")

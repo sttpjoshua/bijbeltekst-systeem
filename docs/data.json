@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-11T10:45",
+ "gegenereerd": "2026-11-11T10:51",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -2968,11 +2968,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-08T20:31:54",
-   "soort": "info",
-   "tekst": "2026-11-08-3 online op instagram: Johannes 14:27"
-  },
-  {
    "t": "2026-11-08T20:32:04",
    "soort": "info",
    "tekst": "2026-11-08-3 online op facebook: Johannes 14:27"
@@ -3270,6 +3265,11 @@
    "t": "2026-11-11T10:45:20",
    "soort": "info",
    "tekst": "Nieuwe reelstijlen weer uit: Joshua wil reels helemaal anders aanpakken."
+  },
+  {
+   "t": "2026-11-11T10:51:29",
+   "soort": "info",
+   "tekst": "Per ongeluk verwijderde beelden (61 bestanden, ook de noodposts van vandaag) teruggezet. Oorzaak: opslaan van media zag ontbrekende lokale bestanden als verwijderd; dat kan nu niet meer."
   }
  ],
  "recente_fouten": [],

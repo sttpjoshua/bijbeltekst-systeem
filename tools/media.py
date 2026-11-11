@@ -40,9 +40,24 @@ def koppel():
         shutil.rmtree(tijdelijk, ignore_errors=True)
     print("docs/media gekoppeld aan branch", BRANCH)
 
+WEG = os.path.join(ROOT, "data", "media_weg.json")
+
 def bewaar(bericht="Media bijgewerkt"):
+    """Legt nieuwe en gewijzigde media vast. Bestanden die lokaal ontbreken worden NIET als verwijderd gezien
+    (een onvolledige werkmap mag nooit beelden van geplande posts weggooien). Alleen wat in data/media_weg.json
+    staat (bewust opgeruimd door 'systeem.py opruimen') wordt echt verwijderd."""
+    import json
     koppel()
-    git("add", "-A", cwd=MAP)
+    git("add", "--ignore-removal", ".", cwd=MAP)
+    try:
+        weg = json.load(open(WEG))
+    except (FileNotFoundError, ValueError):
+        weg = []
+    for rel in weg:
+        r = rel[len("docs/media/"):] if rel.startswith("docs/media/") else rel
+        git("rm", "-q", "--cached", "--ignore-unmatch", r, cwd=MAP, check=False)
+    if weg:
+        json.dump([], open(WEG, "w"))
     if git("diff", "--cached", "--quiet", cwd=MAP, check=False).returncode == 0:
         print("Geen nieuwe media"); return
     git("-c", "user.name=bijbeltekst-bot", "-c", "user.email=actions@users.noreply.github.com", "commit", "-qm", bericht, cwd=MAP)
@@ -57,7 +72,7 @@ def samenpersen():
     koppel()
     git("pull", "-q", "--rebase", "origin", BRANCH, cwd=MAP, check=False)
     git("checkout", "-q", "--orphan", "media-nieuw", cwd=MAP)
-    git("add", "-A", cwd=MAP)
+    git("add", "--ignore-removal", ".", cwd=MAP)
     git("-c", "user.name=bijbeltekst-bot", "-c", "user.email=actions@users.noreply.github.com", "commit", "-qm", "Media (samengeperst)", cwd=MAP)
     git("push", "-q", "--force", "origin", f"HEAD:{BRANCH}", cwd=MAP)
     git("branch", "-f", BRANCH, "HEAD", cwd=MAP, check=False)
