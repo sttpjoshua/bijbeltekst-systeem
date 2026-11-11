@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T12:16:19",
+ "updated": "2026-11-11T12:51:54",
  "agents": {
   "verskiezer": {
    "t": "2026-11-11T10:12:16",
@@ -27,8 +27,8 @@
    "state": "error"
   },
   "analist": {
-   "t": "2026-11-10T13:35:26",
-   "task": "Las cijfers van 9 posts",
+   "t": "2026-11-11T12:51:08",
+   "task": "Las cijfers van 7 posts",
    "state": "done"
   },
   "community": {
@@ -40,13 +40,13 @@
  "stats": {
   "posts_today": 2,
   "posts_total": 18,
-  "reach_7d": 75,
+  "reach_7d": 85,
   "best_time": "nog onbekend",
   "next_post": "2026-11-11T17:45:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
-  "instagram": 73,
+  "instagram": 83,
   "facebook": 2,
   "youtube": 0,
   "tiktok": 0
@@ -56,6 +56,14 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "12:51",
+   "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
+  },
+  {
+   "t": "12:51",
+   "msg": "Statistieken opgehaald voor 7 posts"
+  },
   {
    "t": "12:16",
    "msg": "2026-11-11-n1215 online op facebook: Jeremia 17:7"
@@ -95,14 +103,6 @@
   {
    "t": "10:24",
    "msg": "Zelfstandig 5 posts klaargezet voor 2026-11-15 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "10:08",
-   "msg": "Tekstbank bijna op: nog genoeg nieuwe verzen voor ongeveer 5 dagen (25 van 47). Daarna herhaalt het systeem de"
-  },
-  {
-   "t": "10:08",
-   "msg": "Zelfstandig 5 posts klaargezet voor 2026-11-14 (teksten uit de tekstbank)."
   }
  ],
  "lampen": [
@@ -151,6 +151,7 @@
    0,
    1,
    1,
+   3,
    3
   ]
  },
