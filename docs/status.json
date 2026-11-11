@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T21:19:22",
+ "updated": "2026-11-11T22:05:26",
  "agents": {
   "verskiezer": {
    "t": "2026-11-11T17:01:01",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-11T20:31:59",
-   "task": "Postte Spreuken 23:18 op facebook",
+   "t": "2026-11-11T22:05:26",
+   "task": "Postte Romeinen 15:4 op facebook",
    "state": "done"
   },
   "controller": {
@@ -32,17 +32,17 @@
    "state": "done"
   },
   "community": {
-   "t": "2026-11-11T21:10:42",
+   "t": "2026-11-11T22:04:05",
    "task": "1 nieuwe reactie gevonden",
    "state": "done"
   }
  },
  "stats": {
-  "posts_today": 4,
-  "posts_total": 20,
+  "posts_today": 5,
+  "posts_total": 21,
   "reach_7d": 85,
   "best_time": "nog onbekend",
-  "next_post": "2026-11-11T22:00:00"
+  "next_post": "2026-11-12T07:30:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
@@ -56,6 +56,18 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "22:05",
+   "msg": "2026-11-11-n2200 online op facebook: Romeinen 15:4"
+  },
+  {
+   "t": "22:05",
+   "msg": "2026-11-11-n2200 online op instagram: Romeinen 15:4"
+  },
+  {
+   "t": "22:05",
+   "msg": "2026-11-11-n2200 ook als story geplaatst"
+  },
   {
    "t": "21:10",
    "msg": "Bediening: WhatsApp-testbericht klaargezet"
@@ -91,18 +103,6 @@
   {
    "t": "17:01",
    "msg": "Nieuwspost: Kolossenzen 3:17 vervangen door Spreuken 23:18 (aanleiding: sintmaarten, NOS)"
-  },
-  {
-   "t": "14:35",
-   "msg": "10 posts klaar voor MORGEN (12-11) en OVERMORGEN (13-11), door het systeem zelf gemaakt en gecontroleerd"
-  },
-  {
-   "t": "14:35",
-   "msg": "Reserveverzen gekozen en geschreven voor 12 en 13 november; hook van 13-11 12:15 aangepast aan het tijdstip"
-  },
-  {
-   "t": "14:35",
-   "msg": "Materiaalrepo niet gekloond in deze run (add_repo ontbreekt); geen gevolgen, posts waren al gemaakt"
   }
  ],
  "lampen": [
