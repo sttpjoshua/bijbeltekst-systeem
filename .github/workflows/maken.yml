@@ -1,0 +1,82 @@
+name: Posts maken (zelfstandig)
+
+# Maakt elke dag de posts voor morgen en overmorgen: kiezen, teksten uit de tekstbank, renderen.
+# Geen Claude nodig. Start vanzelf vanuit 'Publiceren en meten' als er posts ontbreken, of met de hand.
+on:
+  schedule:
+    - cron: "23 12 * * *"
+  workflow_dispatch:
+    inputs:
+      datum:
+        description: "Leeg = morgen en overmorgen; of een datum (JJJJ-MM-DD)"
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: maken
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    outputs:
+      gewijzigd: ${{ steps.opslaan.outputs.gewijzigd }}
+    env:
+      TZ: Europe/Amsterdam
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Is er werk?
+        id: werk
+        run: |
+          if [ -n "${{ inputs.datum }}" ] || python3 src/systeem.py automaak check; then echo "ja=1" >> $GITHUB_OUTPUT; else echo "Alles staat al klaar."; fi
+      - name: Benodigdheden
+        if: steps.werk.outputs.ja == '1'
+        env:
+          MATERIAAL_PAT: ${{ secrets.MATERIAAL_PAT }}
+        run: |
+          pip install -q pillow numpy
+          sudo apt-get install -y -qq ffmpeg >/dev/null
+          python3 tools/media.py koppel
+          git clone --depth 1 -q "https://x-access-token:${MATERIAAL_PAT}@github.com/sttpjoshua/bibleverse-materiaal.git" ../bibleverse-materiaal
+      - name: Posts maken
+        if: steps.werk.outputs.ja == '1'
+        run: |
+          python3 src/systeem.py automaak ${{ inputs.datum }}
+          python3 src/systeem.py dashboard
+      - name: WhatsApp-updates versturen
+        if: always() && steps.werk.outputs.ja == '1'
+        env:
+          WA_PHONE: ${{ secrets.WA_PHONE }}
+          WA_KEY: ${{ secrets.WA_KEY }}
+        run: python3 src/whatsapp.py || true
+      - name: Wijzigingen opslaan
+        id: opslaan
+        if: always() && steps.werk.outputs.ja == '1'
+        run: |
+          git config user.name "bijbeltekst-bot"
+          git config user.email "actions@users.noreply.github.com"
+          sh tools/git_instellen.sh
+          if python3 tools/media.py bewaar "Media: zelfstandig gemaakt" | grep -q gepusht; then echo "gewijzigd=1" >> $GITHUB_OUTPUT; fi
+          git add -A
+          if git diff --cached --quiet; then exit 0; fi
+          echo "gewijzigd=1" >> $GITHUB_OUTPUT
+          git commit -m "Automatisch: posts gemaakt uit de tekstbank"
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main && git push && break
+            git rebase --abort 2>/dev/null; sleep 7
+          done
+
+  website:
+    needs: run
+    if: always() && needs.run.outputs.gewijzigd == '1'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/pages.yml

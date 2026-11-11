@@ -239,6 +239,32 @@ def reeks_voor(datum, posts):
         return uit
     return None
 
+def _bank(cfg):
+    """De tekstbank als het systeem zelfstandig werkt (config 'zelfstandig'), anders None."""
+    if not cfg.get("zelfstandig"):
+        return None
+    import tekstbank
+    return tekstbank.laad()
+
+def _oudste_bankverzen(bank, posts, cfg, n=25):
+    """Alle bankverzen zijn recent gebruikt: neem de verzen die het langst geleden zijn geplaatst."""
+    laatst = {}
+    for q in posts:
+        laatst[q["vers_id"]] = max(laatst.get(q["vers_id"], ""), q["datum"])
+    weg = set(cfg.get("verzen_uitsluiten", []))
+    return sorted([x for x in alle_verzen() if x["id"] in bank and x["id"] not in weg], key=lambda x: laatst.get(x["id"], ""))[:n]
+
+def bank_voorraad(cfg=None, posts=None):
+    """Hoeveel bankverzen nog niet in de herhaalperiode zijn gebruikt, en voor hoeveel dagen dat genoeg is."""
+    import tekstbank
+    cfg = cfg or laad("config.json"); posts = posts if posts is not None else laad("data/posts.json", [])
+    bank = tekstbank.laad()
+    grens = (dt.date.today() - dt.timedelta(days=cfg["vers_niet_herhalen_dagen"])).isoformat()
+    recent = {p["vers_id"] for p in posts if p["datum"] >= grens} | set(cfg.get("verzen_uitsluiten", []))
+    vrij = len([k for k in bank if k not in recent])
+    per_dag = max(1, min(cfg["posts_per_dag"], cfg["max_posts_per_dag"]))
+    return {"verzen": len(bank), "vrij": vrij, "dagen": vrij // per_dag}
+
 def kies_posts(datum, cfg, strat, posts, verzen, mat, n_start, n, gebruikte_slots, rnd, reeks=True):
     """Kiest n nieuwe posts voor een datum. Raakt geen bestanden aan."""
     grens = (dt.date.fromisoformat(datum) - dt.timedelta(days=cfg["vers_niet_herhalen_dagen"])).isoformat()
@@ -280,7 +306,10 @@ def kies_posts(datum, cfg, strat, posts, verzen, mat, n_start, n, gebruikte_slot
                 v["achtergrondbron"], bron["achtergrondbron"] = "verloop", "limiet"
         # Uit de hele Bijbel: eerst alles laten kloppen, dan stap voor stap loslaten
         vrij = [x for x in alle_verzen() if x["id"] not in recent]
-        if reekspost and reekspost.get("vers"):
+        bank = _bank(cfg)
+        if bank is not None:  # zelfstandig: alleen verzen waarvoor de teksten al klaarstaan
+            vrij = [x for x in vrij if x["id"] in bank] or _oudste_bankverzen(bank, posts + nieuw, cfg)
+        if reekspost and reekspost.get("vers") and (bank is None or reekspost["vers"]["id"] in bank):
             vrij = [reekspost["vers"]]  # vaste reeks: dit vers, ook als het eerder gebruikt is
         kandidaten = []
         for velden in (("thema", "boekgroep", "lengte", "bron"), ("thema", "boekgroep", "bron"), ("thema", "bron"),
@@ -288,7 +317,7 @@ def kies_posts(datum, cfg, strat, posts, verzen, mat, n_start, n, gebruikte_slot
             kandidaten = [x for x in vrij if all(x[f] == v[f] for f in velden)]
             if kandidaten:
                 break
-        kandidaten = kandidaten or alle_verzen()
+        kandidaten = kandidaten or vrij or alle_verzen()
         vers = rnd.choices(kandidaten, weights=[x.get("kwaliteit", 6) ** 2 for x in kandidaten])[0]
         for f in ("thema", "boekgroep", "lengte", "bron"):
             v[f] = vers[f]  # wat er echt gepost wordt, telt mee bij het leren
@@ -875,6 +904,7 @@ def dashboard_extra(cfg, posts):
             "gemeten_posts": gemeten, "snel_leren": snel, "voorraad": voorraad,
             "herstel": [h for h in laad("data/herstel.json", []) if h["t"] >= (nu - dt.timedelta(days=7)).isoformat()][::-1][:30],
             "nood": {"klaar": len(nood_klaar()), "doel": NOOD_DOEL},
+            "tekstbank": {**bank_voorraad(cfg), "zelfstandig": bool(cfg.get("zelfstandig"))},
             "verzoeken": laad("data/verzoeken.json", [])[-20:][::-1],
             "overleg": laad("data/overleg.json", [])[-1:],
             "whatsapp": {**{"direct": True, "dagelijks": True, "wekelijks": True, "uitschieter": True}, **(cfg.get("whatsapp") or {})}}
@@ -1282,6 +1312,112 @@ def cmd_nood(actie="status"):
         bewaar("data/noodvoorraad.json", voorraad)
         print(n_ok, "noodposts gemaakt;", len([n for n in voorraad if n["status"] == "gerenderd"]), "klaar")
 
+def _bankvers_voor(p, posts, bank, cfg, rnd):
+    """Post zonder bankteksten (bijv. uit een oude planning): ander vers uit de bank met hetzelfde thema."""
+    grens = (dt.date.fromisoformat(p["datum"]) - dt.timedelta(days=cfg["vers_niet_herhalen_dagen"])).isoformat()
+    recent = {q["vers_id"] for q in posts if q["datum"] >= grens} | set(cfg.get("verzen_uitsluiten", []))
+    vrij = [x for x in alle_verzen() if x["id"] in bank and x["id"] not in recent] or _oudste_bankverzen(bank, posts, cfg)
+    if not vrij:
+        return False
+    zelfde = [x for x in vrij if x["thema"] == p["variabelen"]["thema"]] or vrij
+    x = rnd.choice(zelfde)
+    p.update({k: x[k] for k in ("ref", "tekst")}); p["vers_id"] = x["id"]; p["vertaling"] = x.get("vertaling", "SV")
+    for f in ("thema", "boekgroep", "lengte", "bron"):
+        p["variabelen"][f] = x[f]
+    if p["variabelen"].get("opening") == "stopper" and len(x["tekst"]) < 70:
+        p["variabelen"]["opening"] = "vers"
+    return True
+
+def automaak_dagen(cfg=None, posts=None):
+    """Dagen (morgen en overmorgen) waarvoor nog niet genoeg posts klaarstaan."""
+    cfg = cfg or laad("config.json"); posts = posts if posts is not None else laad("data/posts.json", [])
+    nodig = min(cfg["posts_per_dag"], cfg["max_posts_per_dag"])
+    uit = []
+    for k in (1, 2):
+        d = (dt.date.today() + dt.timedelta(days=k)).isoformat()
+        klaar = [p for p in posts if p["datum"] == d and p["status"] in ("gerenderd", "gepubliceerd", "goedgekeurd", "deels")]
+        if len(klaar) < nodig or any(p["datum"] == d and p["status"] == "wacht_op_tekst" for p in posts):
+            uit.append(d)
+    return uit
+
+def cmd_automaak(modus=""):
+    """Zelfstandig posts maken, zonder Claude: kiezen, teksten uit de tekstbank, renderen.
+    'check' geeft exit 0 als er werk is (voor GitHub Actions)."""
+    import tekstbank
+    cfg = laad("config.json")
+    if cfg.get("pauze") or not cfg.get("zelfstandig"):
+        if modus == "check":
+            sys.exit(1)
+        print("Pauze staat aan of 'zelfstandig' staat uit."); return
+    dagen = [modus] if modus and modus != "check" else automaak_dagen(cfg)
+    if modus == "check":
+        sys.exit(0 if dagen else 1)
+    bank = tekstbank.laad()
+    activiteit("controller", "Zelfstandig posts maken voor " + ", ".join(dagen) if dagen else "Alles staat klaar", "busy" if dagen else "done")
+    gemaakt, mislukt = 0, []
+    for d in dagen:
+        cmd_kies(d)
+        posts = laad("data/posts.json", [])
+        rnd = random.Random("bank" + d)
+        for p in posts:
+            if p["datum"] != d or p["status"] != "wacht_op_tekst":
+                continue
+            if p["vers_id"] not in bank and not _bankvers_voor(p, posts, bank, cfg, rnd):
+                mislukt.append(p["id"]); continue
+            tekstbank.vul_post(p, bank[p["vers_id"]], cfg)
+            probleem = valideer_tekst(p, cfg)
+            if probleem:  # bankitem klopt niet bij deze post: probeer een ander vers
+                if _bankvers_voor(p, posts, bank, cfg, rnd):
+                    tekstbank.vul_post(p, bank[p["vers_id"]], cfg)
+                    probleem = valideer_tekst(p, cfg)
+            if probleem:
+                mislukt.append(f"{p['id']} ({probleem})")
+        bewaar("data/posts.json", posts)
+        try:
+            cmd_render(d)
+        except SystemExit:
+            pass
+        gemaakt += len([p for p in laad("data/posts.json", []) if p["datum"] == d and p["status"] == "gerenderd"])
+    if mislukt:
+        cmd_log("Zelfstandig maken lukte niet voor: " + ", ".join(mislukt) + ". De noodvoorraad vangt lege plekken op.", "fout", "te_weinig")
+    if dagen:
+        cmd_log(f"Zelfstandig {gemaakt} posts klaargezet voor {', '.join(dagen)} (teksten uit de tekstbank).")
+    v = bank_voorraad(cfg)
+    if v["dagen"] < 10:
+        cmd_log(f"Tekstbank bijna op: nog genoeg nieuwe verzen voor ongeveer {v['dagen']} dagen ({v['vrij']} van {v['verzen']}). "
+                "Daarna herhaalt het systeem de oudste verzen.", "fout", "tekstbank")
+    activiteit("controller", "Posts klaargezet uit de tekstbank")
+    cmd_plan()
+
+def cmd_tekstbank(actie="status"):
+    """status | check | zaai (bestaande handgeschreven posts in de bank zetten)"""
+    import tekstbank
+    bank = tekstbank.laad()
+    verzen = {x["id"]: x for x in alle_verzen()}
+    if actie == "zaai":
+        n = 0
+        for p in laad("data/posts.json", []) + laad("data/noodvoorraad.json", []):
+            if p["vers_id"] in bank:
+                continue
+            e = tekstbank.uit_post(p)
+            if e and not tekstbank.problemen(p["vers_id"], e, p["tekst"]):
+                bank[p["vers_id"]] = e; n += 1
+        tekstbank.bewaar(bank); print(n, "verzen uit bestaande posts toegevoegd")
+    elif actie == "check":
+        fout = 0
+        for k, e in bank.items():
+            pr = tekstbank.problemen(k, e, verzen[k]["tekst"] if k in verzen else None)
+            if k not in verzen:
+                pr.append("vers_id onbekend")
+            elif e.get("ref") != verzen[k]["ref"]:
+                pr.append(f"ref {e.get('ref')} hoort {verzen[k]['ref']} te zijn")
+            if pr:
+                fout += 1; print(k, "|", "; ".join(pr))
+        print(len(bank), "verzen,", fout, "met problemen")
+        if fout:
+            sys.exit(1)
+    print(json.dumps(bank_voorraad(), ensure_ascii=False))
+
 if __name__ == "__main__":
     a = argparse.ArgumentParser()
     a.add_argument("cmd"); a.add_argument("args", nargs="*")
@@ -1300,4 +1436,6 @@ if __name__ == "__main__":
      "verzoek": lambda: cmd_verzoek(*x.args),
      "overleg": lambda: cmd_overleg(*x.args),
      "nood": lambda: cmd_nood(*(x.args[:1] or ["status"])),
+     "automaak": lambda: cmd_automaak(*(x.args[:1] or [""])),
+     "tekstbank": lambda: cmd_tekstbank(*(x.args[:1] or ["status"])),
      "aanvullen": lambda: cmd_aanvullen(bool(x.args and x.args[0] == "check"))}[x.cmd]()

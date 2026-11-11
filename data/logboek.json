@@ -716,5 +716,16 @@
   "t": "2026-11-11T07:31:40",
   "soort": "info",
   "tekst": "2026-11-11-n0730 online op facebook: Jesaja 32:17"
+ },
+ {
+  "t": "2026-11-11T10:08:31",
+  "soort": "info",
+  "tekst": "Zelfstandig 5 posts klaargezet voor 2026-11-14 (teksten uit de tekstbank)."
+ },
+ {
+  "t": "2026-11-11T10:08:31",
+  "soort": "fout",
+  "tekst": "Tekstbank bijna op: nog genoeg nieuwe verzen voor ongeveer 5 dagen (25 van 47). Daarna herhaalt het systeem de oudste verzen.",
+  "code": "tekstbank"
  }
 ]

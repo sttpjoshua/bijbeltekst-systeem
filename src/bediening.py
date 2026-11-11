@@ -187,7 +187,21 @@ def main(raw):
         S.cmd_vervang(p["id"], "gekozen door Joshua")
         posts, cfg = S.laad("data/posts.json", []), S.laad("config.json")
         p = vind(posts, o["post"])
-        melding = f"Ander vers gekozen: {p['ref']}. De teksten en het beeld worden bij de avondcontrole (20:47) gemaakt"
+        import tekstbank
+        e = tekstbank.laad().get(p["vers_id"]) if cfg.get("zelfstandig") else None
+        if e:  # zelfstandig: teksten uit de bank en meteen opnieuw maken
+            tekstbank.vul_post(p, e, cfg)
+            p["status"] = "klaar_voor_render" if (p["variabelen"]["formaat"] != "video" and p["variabelen"].get("achtergrondbron") != "beeld") or materiaal_er() else "opnieuw_maken"
+            S.bewaar("data/posts.json", posts)
+            if p["status"] == "klaar_voor_render":
+                try:
+                    S.cmd_render(p["datum"])
+                except SystemExit:
+                    pass
+            posts, cfg = S.laad("data/posts.json", []), S.laad("config.json")
+            melding = f"Ander vers gekozen: {p['ref']} (teksten uit de tekstbank" + (", meteen opnieuw gemaakt)" if vind(posts, o["post"])["status"] == "gerenderd" else "; het beeld wordt bij de volgende run gemaakt)")
+        else:
+            melding = f"Ander vers gekozen: {p['ref']}. De teksten en het beeld worden bij de avondcontrole (20:47) gemaakt"
     elif a == "fouten_opgelost":
         S.cmd_opgelost()
         melding = "Openstaande fouten als opgelost gemarkeerd"
@@ -299,6 +313,11 @@ def main(raw):
         import subprocess
         r = subprocess.run([sys.executable, "tools/zelftest.py"], capture_output=True, text=True)
         melding = "Zelftest: " + ((r.stdout or r.stderr).strip().splitlines() or ["klaar"])[-1][:120]
+    elif a == "posts_maken":
+        melding = "Posts maken gestart: het systeem maakt de ontbrekende posts voor morgen en overmorgen (duurt 10 tot 20 minuten)"
+    elif a == "zelfstandig":
+        cfg["zelfstandig"] = bool(o.get("aan"))
+        melding = "Zelfstandig maken staat " + ("aan: posts worden gemaakt uit de tekstbank, zonder Claude" if cfg["zelfstandig"] else "uit: Claude maakt de posts")
     elif a == "run":
         melding = "Controle gestart: alles wat klaarstaat gaat nu online"
     elif a == "verzoek":
@@ -347,7 +366,7 @@ def main(raw):
                  "andere_stijl": "designer", "post_ander_vers": "verskiezer", "fouten_opgelost": "controller", "reactie_plaatsen": "community", "reactie_negeren": "community", "reactie_liken": "community",
                  "fout_opgelost": "controller", "post_opnieuw": "dispatcher", "post_nood": "controller", "nood_inzetten": "controller",
                  "muziek_toevoegen": "video", "statistieken_nu": "analist", "reacties_nu": "community", "zelftest_nu": "controller",
-                 "run": "dispatcher", "verzoek": "controller", "whatsapp_test": "controller", "whatsapp_instelling": "controller"}.get(a)
+                 "run": "dispatcher", "verzoek": "controller", "posts_maken": "verskiezer", "zelfstandig": "controller", "whatsapp_test": "controller", "whatsapp_instelling": "controller"}.get(a)
         if a == "overslaan":
             agent = "video" if (vind(posts, o["post"])["variabelen"].get("formaat") == "video") else "designer"
         if agent:

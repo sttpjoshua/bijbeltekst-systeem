@@ -18,6 +18,7 @@ on:
 
 permissions:
   contents: write
+  actions: write   # om 'Posts maken' te starten als er posts ontbreken
 
 concurrency:
   group: bijbeltekst
@@ -91,6 +92,19 @@ jobs:
             sudo apt-get install -y -qq ffmpeg >/dev/null 2>&1 || true
             python3 tools/zelftest.py || true
             python3 src/systeem.py dashboard
+          fi
+      - name: Ontbrekende posts laten maken (zelfstandig, zonder Claude)
+        if: steps.t.outputs.taak == 'posten' || steps.t.outputs.taak == 'bediening'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          OPDRACHT: ${{ inputs.opdracht }}
+        run: |
+          if echo "$OPDRACHT" | grep -q '"posts_maken"'; then gh workflow run maken.yml && echo "Posts maken gestart (dashboard)"; exit 0; fi
+          uur=$(date +%H)
+          if [ "$uur" -ge 9 ] && [ "$uur" -le 21 ] && python3 src/systeem.py automaak check; then
+            if ! gh run list --workflow maken.yml --status in_progress --json databaseId -q '.[0].databaseId' | grep -q .; then
+              gh workflow run maken.yml && echo "Posts maken gestart"
+            fi
           fi
       - name: WhatsApp-updates versturen
         if: always()
