@@ -109,7 +109,7 @@ def _vraag(post):
     return h
 
 
-def maak_reel(post, pad, stijl="kinetisch", haak=None, fotos=None):
+def maak_reel(post, pad, stijl="kinetisch", haak=None, fotos=None, tempo=1.0):
     """Maakt een reel in de nieuwe stijl. fotos: lijst met paden (voor stijl 'beeld'). Geeft het pad terug."""
     rnd = random.Random(post["id"])
     v = post["variabelen"]
@@ -122,10 +122,12 @@ def maak_reel(post, pad, stijl="kinetisch", haak=None, fotos=None):
     beats = R._beats(post["muziek_pad"], post.get("muziek_start", 0), 20) if post.get("muziek_pad") else []
 
     # ---------- tijdlijn ----------
-    t0 = 1.4 if vraag else 0.0
-    per = [max(0.36, 0.17 * len(b.split()) + 0.16 + (0.22 if kern and kern in [R._kaal(w) for w in b.split()] else 0)) for b in brokken]
-    vt = _tijden(len(brokken), t0 + 0.05, per, beats)
-    ref_t = vt[-1] + 0.15
+    # tempo: 1.0 = rustig (standaard), hoger = sneller, lager = langzamer
+    tr = 1.0 / max(0.5, min(2.0, tempo))
+    t0 = 2.0 * tr if vraag else 0.0
+    per = [tr * max(0.62, 0.27 * len(b.split()) + 0.34 + (0.45 if kern and kern in [R._kaal(w) for w in b.split()] else 0)) for b in brokken]
+    vt = _tijden(len(brokken), t0 + 0.05, per, beats, minimaal=0.5 * tr)
+    ref_t = vt[-1] + 0.25
     u_brok = []
     if uitleg:  # breek op leestekens, en lange stukken in tweeën
         for zin in [z.strip() for z in re.split(r"(?<=[,.;:!?])\s+", uitleg) if z.strip()]:
@@ -134,14 +136,14 @@ def maak_reel(post, pad, stijl="kinetisch", haak=None, fotos=None):
                 u_brok.append(zin)
             else:
                 h = (len(ws) + 1) // 2; u_brok += [" ".join(ws[:h]), " ".join(ws[h:])]
-    ut = _tijden(len(u_brok), ref_t + 0.9, [max(0.42, 0.16 * len(b.split()) + 0.2) for b in u_brok], beats) if u_brok else [ref_t + 0.9]
-    eind_t = ut[-1] + 0.1
-    duur = round(eind_t + 1.8, 2)
+    ut = _tijden(len(u_brok), ref_t + 1.3 * tr, [tr * max(0.75, 0.27 * len(b.split()) + 0.45) for b in u_brok], beats, minimaal=0.5 * tr) if u_brok else [ref_t + 1.3 * tr]
+    eind_t = ut[-1] + 0.15
+    duur = round(eind_t + 2.6 * tr, 2)
 
     # ---------- achtergrond ----------
     if stijl == "beeld" and fotos:
         delen = max(2, min(len(fotos), 3))
-        grenzen = [t0] + [vt[len(brokken) * k // delen] for k in range(1, delen)] + [ref_t + 0.9, duur + 1]
+        grenzen = [t0] + [vt[len(brokken) * k // delen] for k in range(1, delen)] + [ref_t + 1.3 * tr, duur + 1]
         bgs = []
         for i, fp in enumerate((fotos * 3)[:delen + 1]):
             im = ImageOps.exif_transpose(Image.open(fp)).convert("RGB")

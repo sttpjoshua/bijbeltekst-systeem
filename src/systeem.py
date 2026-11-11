@@ -440,7 +440,7 @@ def render_een(p, cfg, map_rel):
                 fotos = [os.path.join(m, f) for f in random.Random(p["id"]).sample(alle, min(3, len(alle)))] if alle else []
                 if not fotos:
                     rs = p["variabelen"]["reel_stijl"] = "kinetisch"
-            reels.maak_reel(p, P(rel), rs, p["variabelen"].get("reel_haak"), fotos)
+            reels.maak_reel(p, P(rel), rs, p["variabelen"].get("reel_haak"), fotos, cfg.get("reel_tempo", 1.0))
         else:
             (maak_video if ext == "mp4" else maak_afbeelding)(p, P(rel))
         p["media"], p["media_extra"] = rel, []
@@ -827,7 +827,7 @@ def cmd_dashboard():
     rapporten = sorted(os.listdir(P("rapporten"))) if os.path.isdir(P("rapporten")) else []
     extra = dashboard_extra(cfg, posts)
     data = {"gegenereerd": dt.datetime.now().isoformat(timespec="minutes"), "repo": cfg.get("github_repo", ""),
-            "config": {k: cfg.get(k) for k in ("pauze", "kanaalnaam", "posts_per_dag", "max_posts_per_dag", "verkenning", "platformen_actief", "max_aandeel_beeld", "verzen_uitsluiten", "leermodus", "leermodus_tot", "goedkeuren", "experiment", "stories", "zelfstandig", "nieuwe_reels")},
+            "config": {k: cfg.get(k) for k in ("pauze", "kanaalnaam", "posts_per_dag", "max_posts_per_dag", "verkenning", "platformen_actief", "max_aandeel_beeld", "verzen_uitsluiten", "leermodus", "leermodus_tot", "goedkeuren", "experiment", "stories", "zelfstandig", "nieuwe_reels", "reel_tempo")},
             "strategie": strat, "posts": lijst,
             "leergeschiedenis": laad("data/leergeschiedenis.json", []),
             "laatste_rapport": laad(f"rapporten/{rapporten[-1]}") if rapporten else None,

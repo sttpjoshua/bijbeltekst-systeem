@@ -12,7 +12,7 @@ Dit bestand is de handleiding voor Claude bij elke geplande run. Volg het letter
 - Heeft een post `"vertaling": "NBV21"`, zet dan direct onder de referentie in de caption: `NBV21 © Nederlands-Vlaams Bijbelgenootschap` (Joshua heeft toestemming van het NBG). Laat bij NBV21-posts `uitleg_op_beeld` gewoon zoals gekozen.
 - Geen lange streep (het teken U+2014) in captions of hooks.
 - Geen engagement-bait ("typ amen", "deel met 10 mensen", "zegen als je...").
-- Respectvol: geen spot met het geloof, geen politiek, geen beloften over gezondheid of geld.
+- Respectvol: geen spot met het geloof, politiek alleen neutraal en alleen met akkoord van Joshua (nooit een partij of standpunt), geen beloften over gezondheid of geld.
 - Bij een fout: `python3 src/systeem.py log "<wat er misging>" fout`, ga door met wat wel kan, en meld het in je eindbericht.
 - Commit en push aan het eind van elke run, ook als er iets misging (anders verdwijnt het logboek).
 
@@ -60,7 +60,7 @@ Staat `zelfstandig` op true in `config.json`, dan maakt het systeem zelf de post
 - Reeksen: de reeksnaam wordt automatisch voor de hook gezet ("Advent, dag 3: ..."). Voor Advent (29 nov t/m 24 dec) mag je voor de reeksverzen een eigen item maken met uitleg in het licht van Advent.
 
 ## Nieuws als aanleiding (sinds 11 november)
-`src/nieuws.py` kijkt rond 7, 12 en 17 uur naar NOS en NU.nl. Licht nieuws (weer, Sinterklaas, sport, drukte, examens, klok, koopjes) wordt vanzelf een post: de eerstvolgende carrousel krijgt een vers uit de tekstbank met een passend thema, opening 'verhaal' en een openingszin uit `LICHT` in nieuws.py. Zwaar nieuws (rampen, aanslagen) is altijd een voorstel voor Joshua (dashboard en WhatsApp), en gaat pas 6 uur na het nieuws online. Politiek nooit. Maximaal 2 per dag (`config.json` › `nieuws`). In de post zelf komt nooit nieuwstekst of een kop (NOS-voorwaarden: koppen alleen met bronvermelding, niet-commercieel). Wil je nieuwe soorten aanleidingen toevoegen: alleen in `LICHT`, met woorden, thema's en 2 of 3 openingszinnen die ook los van het nieuws kloppen.
+`src/nieuws.py` kijkt rond 7, 12 en 17 uur naar NOS en NU.nl. Licht nieuws (weer, Sinterklaas, sport, drukte, examens, klok, koopjes) wordt vanzelf een post: de eerstvolgende carrousel krijgt een vers uit de tekstbank met een passend thema, opening 'verhaal' en een openingszin uit `LICHT` in nieuws.py. Zwaar nieuws (rampen, aanslagen) is altijd een voorstel voor Joshua (dashboard en WhatsApp), en gaat pas 6 uur na het nieuws online. Politiek (sinds 11 nov): ook alleen als voorstel, maximaal 1 per dag, en alleen online met Joshua's akkoord; altijd neutraal, nooit een partij, politicus of standpunt. Maximaal 2 per dag (`config.json` › `nieuws`). In de post zelf komt nooit nieuwstekst of een kop (NOS-voorwaarden: koppen alleen met bronvermelding, niet-commercieel). Wil je nieuwe soorten aanleidingen toevoegen: alleen in `LICHT`, met woorden, thema's en 2 of 3 openingszinnen die ook los van het nieuws kloppen.
 
 ## Dagelijkse run
 **Staat `zelfstandig` aan, dan sla je stap 2 t/m 4 over** (het systeem maakt de posts zelf) en doe je alleen: zelfherstel, verzoeken, reacties, de tekstbank controleren en zo nodig aanvullen, en controleren of de posts van morgen goed zijn gemaakt (bekijk er één met Read).

@@ -3,7 +3,8 @@
 Drie keer per dag (rond 7, 12 en 17 uur) leest GitHub Actions een paar nieuwsfeeds.
 - Koppen worden alleen gebruikt als SIGNAAL: in de post zelf komt nooit nieuwstekst of een kop.
   Op het dashboard staat de kop met bronvermelding, zodat Joshua ziet waarom een post is gemaakt.
-- Politiek wordt altijd overgeslagen.
+- Politiek nieuws wordt nooit automatisch een post: het wordt een voorstel (max 1 per dag), Joshua beslist.
+  De post blijft neutraal: geen partij, politicus of standpunt.
 - Licht nieuws (weer, Sinterklaas, sport, drukte...) wordt automatisch een post: de eerstvolgende
   carrousel van vandaag of morgen krijgt een vers uit de tekstbank met een passend thema en opent
   met een 'verhaal eerst'-zin die bij de aanleiding past.
@@ -80,6 +81,10 @@ LICHT = {
                         "Ze noemen het de somberste dag van het jaar. Hier is iets van hoop.",
                         "Voel je je somber vandaag? Je bent niet de enige."]),
 }
+# Politiek: nooit automatisch, altijd eerst akkoord van Joshua. Neutraal: nooit een partij, politicus of standpunt kiezen.
+POLITIEK_ZINNEN = ["Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.",
+                   "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.",
+                   "Veel meningen, veel onrust. Even terug naar wat vaststaat."]
 ZWAAR_ZINNEN = ["Er gebeurt veel in de wereld dat zwaar is. Even stil, samen.",
                 "Soms is het nieuws te zwaar voor woorden. Dan is er dit.",
                 "Voor iedereen die vandaag geraakt is door wat er gebeurde."]
@@ -118,10 +123,10 @@ def ophalen():
 def indelen(kop):
     """(soort, categorie) of None. soort: 'licht' of 'zwaar'."""
     k = " " + kop.lower() + " "
-    if any(w in k for w in POLITIEK):
-        return None
     if any(w in k for w in ZWAAR):
         return ("zwaar", "zwaar") if any(w in k for w in ZWAAR_GROOT) else None
+    if any(w in k for w in POLITIEK):
+        return ("politiek", "politiek")
     for cat, r in LICHT.items():
         if any(w in k for w in r["woorden"]):
             return ("licht", cat)
@@ -152,7 +157,7 @@ def maak_nieuwspost(item, cat, zwaar, cfg, posts, rnd, na=None):
     if not p or len(nieuwsposts_op(posts, p["datum"])) >= _cfg(cfg)["max_per_dag"]:
         return None
     bank = tekstbank.laad()
-    themas = ["troost", "hoop", "vrede_rust"] if zwaar else LICHT[cat]["themas"]
+    themas = ["troost", "hoop", "vrede_rust"] if zwaar else (["wijsheid", "vrede_rust", "vertrouwen"] if cat == "politiek" else LICHT[cat]["themas"])
     grens = (dt.date.today() - dt.timedelta(days=cfg["vers_niet_herhalen_dagen"])).isoformat()
     recent = {q["vers_id"] for q in posts if q["datum"] >= grens} | set(cfg.get("verzen_uitsluiten", []))
     vrij = [x for x in S.alle_verzen() if x["id"] in bank and x["id"] not in recent and x["thema"] in themas and bank[x["id"]].get("verhaal")]
@@ -169,7 +174,7 @@ def maak_nieuwspost(item, cat, zwaar, cfg, posts, rnd, na=None):
     p["beeld"] = None
     p.setdefault("keuzebron", {}).update({"opening": "nieuws", "aanleiding": "nieuws"})
     tekstbank.vul_post(p, bank[x["id"]], cfg)
-    zin = rnd.choice(ZWAAR_ZINNEN if zwaar else LICHT[cat]["zinnen"])
+    zin = rnd.choice(ZWAAR_ZINNEN if zwaar else (POLITIEK_ZINNEN if cat == "politiek" else LICHT[cat]["zinnen"]))
     p["verhaal_hook"] = zin
     # de openingszin is ook de eerste regel van de caption (zo snapt de lezer waarom dit vers vandaag)
     delen = p["caption"].split("\n\n")
@@ -206,6 +211,7 @@ def main(forceer=False):
     rnd = random.Random(dt.datetime.now().isoformat(timespec="hours"))
     vandaag = dt.date.today().isoformat()
     recente_cats = {x["categorie"] for x in log if x.get("status") == "gemaakt" and x["t"][:10] >= (dt.date.today() - dt.timedelta(days=3)).isoformat()}
+    politiek_vandaag = any(x["categorie"] == "politiek" and x.get("status") in ("voorstel", "gemaakt") and x["t"][:10] == vandaag for x in log)
     zwaar_recent = any(x["categorie"] == "zwaar" and x["t"][:10] >= (dt.date.today() - dt.timedelta(days=2)).isoformat() for x in log)
     nieuw = 0
     for item in ophalen()[:40]:
@@ -216,7 +222,13 @@ def main(forceer=False):
             continue
         soort, cat = r
         entry = dict(item, id=f"n{dt.datetime.now():%m%d%H%M}{nieuw}", categorie=cat, zwaar=soort == "zwaar", status="gezien")
-        if soort == "zwaar":
+        if soort == "politiek":  # nooit automatisch: één voorstel per dag, Joshua beslist
+            if politiek_vandaag:
+                continue
+            entry["status"] = "voorstel"; politiek_vandaag = True
+            S.cmd_log(f"Politiek nieuws ({item['bron']}): \"{item['kop'][:90]}\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
+                      "fout", "nieuws_voorstel", entry["id"])
+        elif soort == "zwaar":
             if zwaar_recent:
                 continue
             entry["status"] = "voorstel"; zwaar_recent = True
