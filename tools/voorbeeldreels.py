@@ -6,7 +6,7 @@ import systeem as S, tekstbank as T, reels, clips
 
 rapport = {"sleutel": bool(os.environ.get("COVERR_KEY")), "test": None, "reels": []}
 try:
-    h = clips.zoek("sunrise")
+    h = clips.zoek("sunrise")  # komt uit de bewaarde resultaten als dat kan
     rapport["test"] = f"ok: {len(h)} clips gevonden voor 'sunrise'"
 except Exception as e:
     rapport["test"] = "mislukt: " + str(e)[:300]

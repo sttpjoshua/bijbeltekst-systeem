@@ -109,9 +109,32 @@ def _download(h, pad):
 ZOEKLOG = {}
 
 
+CACHE = "data/clips_zoek.json"
+GEBLOKKEERD = []  # na een 403/429 (limiet bereikt) niet verder vragen in deze run
+
+
 def zoek(term, n=12):
-    d = _vraag("/videos", {"query": term, "page_size": n, "urls": "true", "sort": "popular"})
-    hits = d.get("hits", [])
+    """Zoekt clips. Resultaten worden een week bewaard (de gratis Coverr-API staat 50 verzoeken per uur toe)."""
+    import datetime as dt
+    cache = S.laad(CACHE, {})
+    c = cache.get(term)
+    if c and c.get("t", "") >= (dt.date.today() - dt.timedelta(days=7)).isoformat():
+        hits = c["hits"]
+    else:
+        if GEBLOKKEERD:
+            ZOEKLOG[term] = "overgeslagen (limiet)"
+            raise RuntimeError("Coverr-limiet bereikt")
+        try:
+            d = _vraag("/videos", {"query": term, "page_size": n, "urls": "true", "sort": "popular"})
+        except Exception as e:
+            ZOEKLOG[term] = "fout: " + str(e)[:60]
+            if "403" in str(e) or "429" in str(e):
+                GEBLOKKEERD.append(term)
+            raise
+        hits = [{k: h.get(k) for k in ("id", "title", "description", "tags", "is_vertical", "duration", "downloads", "aspect_ratio")}
+                | {"urls": {k: (h.get("urls") or {}).get(k) for k in ("mp4", "mp4_download", "mp4_preview")}} for h in d.get("hits", [])]
+        cache[term] = {"t": dt.date.today().isoformat(), "hits": hits}
+        S.bewaar(CACHE, dict(list(cache.items())[-300:]))
     # staand beeld heeft voorkeur, verder lang genoeg
     def getal(x):
         try:
