@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T13:01:41",
+ "updated": "2026-11-11T13:20:37",
  "agents": {
   "verskiezer": {
    "t": "2026-11-11T10:12:16",
@@ -23,7 +23,7 @@
   },
   "controller": {
    "t": "2026-11-11T12:01:02",
-   "task": "Zwaar nieuws (NOS): \"Vijf jaar The Kyiv Independent: hoe bedrijf je jo",
+   "task": "Politiek nieuws (NOS): \"Raad van State: minister van Asiel moet veilig",
    "state": "error"
   },
   "analist": {

@@ -768,7 +768,8 @@
   "soort": "fout",
   "tekst": "Zwaar nieuws (NOS): \"Vijf jaar The Kyiv Independent: hoe bedrijf je journalistiek in een land in oorlog?\". Wil je er een troostende post over? Die gaat dan pas 6 uur na het nieuws online.",
   "code": "nieuws_voorstel",
-  "post": "n111112011"
+  "post": "n111112011",
+  "opgelost": true
  },
  {
   "t": "2026-11-11T12:16:10",

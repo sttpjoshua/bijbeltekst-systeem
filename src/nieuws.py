@@ -30,7 +30,8 @@ ZWAAR = ["dodelijk", "doden", "dode ", "omgekomen", "aanslag", "ramp", "oorlog",
          "schietpartij", "overleden", "explosie", "aardbeving", "overstroming", "neergestort", "gijzeling",
          "vermist", "steekpartij", "brand ", "zwaargewond", "kinderen dood"]
 # Zwaar nieuws dat groot genoeg is om een voorstel waard te zijn (de rest wordt genegeerd)
-ZWAAR_GROOT = ["aanslag", "ramp", "aardbeving", "overstroming", "neergestort", "oorlog"]
+# (geen 'oorlog': lopende oorlogen staan dagelijks in het nieuws, ook in achtergrondverhalen)
+ZWAAR_GROOT = ["aanslag", "ramp", "aardbeving", "overstroming", "neergestort"]
 
 # Lichte aanleidingen: woorden in de kop, thema's voor het vers, en openingszinnen (geen nieuwstekst)
 LICHT = {
