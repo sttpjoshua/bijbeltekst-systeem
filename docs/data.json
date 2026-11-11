@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-11T16:02",
+ "gegenereerd": "2026-11-11T17:46",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1332,9 +1332,9 @@
   {
    "id": "2026-11-11-n2030",
    "datum": "2026-11-11",
-   "ref": "Kolossenzen 3:17",
-   "tekst": "En al wat gij doet met woorden of met werken, doet het alles in de Naam van de Heere Jezus, dankende God en de Vader door Hem.",
-   "hook": "Ook gewone dingen kunnen een dankjewel zijn.",
+   "ref": "Spreuken 23:18",
+   "tekst": "Want zekerlijk, er is een beloning; en uw verwachting zal niet afgesneden worden.",
+   "hook": "Vanavond lopen er lampionnen door de straat. Klein licht, maar het maakt verschil.",
    "status": "gerenderd",
    "variabelen": {
     "palet": "diep_paars",
@@ -1342,35 +1342,37 @@
     "layout": "links",
     "achtergrond": "radiaal",
     "huisstijl": "paars",
-    "thema": "dankbaarheid",
+    "thema": "hoop",
     "hook_stijl": "geen",
     "formaat": "carrousel",
     "uitleg_op_beeld": false,
     "achtergrondbron": "verloop",
-    "boekgroep": "brieven",
-    "lengte": "middel",
+    "boekgroep": "spreuken",
+    "lengte": "kort",
     "bron": "bekend",
     "vraag_onderaan": true,
-    "opening": "vers",
+    "opening": "verhaal",
     "tijdslot": "20:30",
     "hook_op_beeld": false,
-    "tijdslot_fb": null
+    "tijdslot_fb": null,
+    "aanleiding": "nieuws"
    },
-   "vers_id": "Colossians-3-17-17",
-   "goedgekeurd": true,
+   "vers_id": "Proverbs-23-18-18",
+   "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
    "reserve_ref": null,
-   "caption": "Ook gewone dingen kunnen een dankjewel zijn.\n\n\"En al wat gij doet met woorden of met werken, doet het alles in de Naam van de Heere Jezus, dankende God en de Vader door Hem.\"\nKolossenzen 3:17\n\nAlles wat je doet mag je doen met God erbij, en met dankbaarheid.\n\nVoor welk gewoon ding ben jij vandaag dankbaar?",
+   "caption": "Vanavond lopen er lampionnen door de straat. Klein licht, maar het maakt verschil.\n\n\"Want zekerlijk, er is een beloning; en uw verwachting zal niet afgesneden worden.\"\nSpreuken 23:18\n\nHoop op God loopt niet dood.\n\nWaar hoop jij al lang op?",
    "uitleg": "",
-   "media": "docs/media/nood/nood-20261108-4-840-1.jpg",
-   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-4-840-1.jpg",
+   "media": "docs/media/2026-11/2026-11-11-n2030-1.jpg",
+   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-11-n2030-1.jpg",
    "media_urls": [
-    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-4-840-1.jpg",
-    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-4-840-2.jpg",
-    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-4-840-3.jpg"
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-11-n2030-1.jpg",
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-11-n2030-2.jpg",
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-11-n2030-3.jpg",
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-11-n2030-4.jpg"
    ],
-   "thumb": "thumbs/nood-20261108-4-840.jpg",
+   "thumb": "thumbs/2026-11-11-n2030.jpg",
    "platformen": [],
    "links": {},
    "totaal": {},
@@ -1379,7 +1381,13 @@
    "pub": {},
    "gemist": [],
    "nood": true,
-   "nieuws": null,
+   "nieuws": {
+    "categorie": "sintmaarten",
+    "kop": "Wekdienst 11/11: Elfde van de Elfde en Sint-Maarten gevierd • Online misbruikzaak voor de rechter",
+    "bron": "NOS",
+    "link": "https://nos.nl/l/2638953",
+    "zwaar": false
+   },
    "online": null
   },
   {
@@ -1388,7 +1396,7 @@
    "ref": "Prediker 3:1",
    "tekst": "Alles heeft een bestemden tijd, en alle voornemen onder den hemel heeft zijn tijd.",
    "hook": "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "palet": "hemelsblauw",
     "lettertype": "montserrat_zwaar",
@@ -1426,12 +1434,21 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-11-n1745-4.jpg"
    ],
    "thumb": "thumbs/2026-11-11-n1745.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "instagram",
+    "facebook"
+   ],
+   "links": {
+    "instagram": "https://www.instagram.com/p/Dfm8UsfjXLs/",
+    "facebook": "https://www.facebook.com/1015160368352770_122134324028879910"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
-   "pub": {},
+   "pub": {
+    "instagram": "2026-11-11T17:46+01:00",
+    "facebook": "2026-11-11T17:46+01:00"
+   },
    "gemist": [],
    "nood": true,
    "nieuws": {
@@ -1441,7 +1458,7 @@
     "link": "https://nos.nl/l/2638978",
     "zwaar": false
    },
-   "online": null
+   "online": "2026-11-11T17:46+01:00"
   },
   {
    "id": "2026-11-11-n1215",
@@ -3013,26 +3030,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-09T20:32:35",
-   "soort": "info",
-   "tekst": "2026-11-09-2 ook als story geplaatst"
-  },
-  {
-   "t": "2026-11-09T20:32:35",
-   "soort": "info",
-   "tekst": "2026-11-09-2 online op instagram: Spreuken 14:8"
-  },
-  {
-   "t": "2026-11-09T20:32:45",
-   "soort": "info",
-   "tekst": "2026-11-09-2 online op facebook: Spreuken 14:8"
-  },
-  {
-   "t": "2026-11-09T22:01:59",
-   "soort": "info",
-   "tekst": "2026-11-09-4 ook als story geplaatst"
-  },
-  {
    "t": "2026-11-09T22:01:59",
    "soort": "info",
    "tekst": "2026-11-09-4 online op instagram: Spreuken 5:1"
@@ -3324,6 +3321,26 @@
    "t": "2026-11-11T14:35:32",
    "soort": "info",
    "tekst": "10 posts klaar voor MORGEN (12-11) en OVERMORGEN (13-11), door het systeem zelf gemaakt en gecontroleerd"
+  },
+  {
+   "t": "2026-11-11T17:01:01",
+   "soort": "info",
+   "tekst": "Nieuwspost: Kolossenzen 3:17 vervangen door Spreuken 23:18 (aanleiding: sintmaarten, NOS)"
+  },
+  {
+   "t": "2026-11-11T17:46:38",
+   "soort": "info",
+   "tekst": "2026-11-11-n1745 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-11T17:46:38",
+   "soort": "info",
+   "tekst": "2026-11-11-n1745 online op instagram: Prediker 3:1"
+  },
+  {
+   "t": "2026-11-11T17:46:47",
+   "soort": "info",
+   "tekst": "2026-11-11-n1745 online op facebook: Prediker 3:1"
   }
  ],
  "recente_fouten": [],
@@ -3418,9 +3435,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-11T12:16",
+   "ok": "2026-11-11T17:46",
    "laatst_ok": true,
-   "detail": "Jeremia 17:7 geplaatst"
+   "detail": "Prediker 3:1 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-11T12:51",
@@ -3446,15 +3463,15 @@
    "ok": "2026-11-08T00:36"
   },
   "reacties": {
-   "ok": "2026-11-11T16:00",
+   "ok": "2026-11-11T17:00",
    "laatst_ok": true,
    "detail": "0 nieuwe reacties",
    "fout": "2026-11-08T18:00"
   },
   "facebook": {
-   "ok": "2026-11-11T12:16",
+   "ok": "2026-11-11T17:46",
    "laatst_ok": true,
-   "detail": "Jeremia 17:7 geplaatst"
+   "detail": "Prediker 3:1 geplaatst"
   },
   "statistieken": {
    "ok": "2026-11-11T12:51",
@@ -3476,6 +3493,11 @@
    "laatst_ok": true,
    "detail": "9 bericht(en) verstuurd",
    "ok": "2026-11-11T13:52"
+  },
+  "nieuws": {
+   "ok": "2026-11-11T17:01",
+   "laatst_ok": true,
+   "detail": "1 nieuwe aanleidingen"
   }
  },
  "groei": [
@@ -3512,7 +3534,7 @@
  ],
  "weken": {
   "deze": {
-   "posts": 18,
+   "posts": 19,
    "reach": 120,
    "views": 196,
    "likes": 24,
@@ -3693,7 +3715,7 @@
   "tot": "2026-11-14",
   "dag": 5,
   "dagen": 7,
-  "online": 18,
+  "online": 19,
   "gemeten": 1
  },
  "voorraad": {
@@ -3715,8 +3737,8 @@
    },
    "hoop": {
     "totaal": 44,
-    "beschikbaar": 40,
-    "nooit": 40
+    "beschikbaar": 39,
+    "nooit": 39
    },
    "vertrouwen": {
     "totaal": 58,
@@ -3735,8 +3757,8 @@
    },
    "dankbaarheid": {
     "totaal": 92,
-    "beschikbaar": 88,
-    "nooit": 88
+    "beschikbaar": 89,
+    "nooit": 89
    },
    "identiteit": {
     "totaal": 33,
@@ -4003,7 +4025,7 @@
  },
  "tekstbank": {
   "verzen": 197,
-  "vrij": 169,
+  "vrij": 168,
   "dagen": 33,
   "zelfstandig": true
  },
@@ -4014,6 +4036,18 @@
    "licht_automatisch": true
   },
   "recent": [
+   {
+    "id": "n111117000",
+    "t": "2026-11-11T06:44+01:00",
+    "bron": "NOS",
+    "kop": "Wekdienst 11/11: Elfde van de Elfde en Sint-Maarten gevierd • Online misbruikzaak voor de rechter",
+    "link": "https://nos.nl/l/2638953",
+    "categorie": "sintmaarten",
+    "zwaar": false,
+    "status": "gemaakt",
+    "post": "2026-11-11-n2030",
+    "opties": null
+   },
    {
     "id": "n111112011",
     "t": "2026-11-11T07:17+01:00",

@@ -1,14 +1,14 @@
 {
- "updated": "2026-11-11T16:02:01",
+ "updated": "2026-11-11T17:46:47",
  "agents": {
   "verskiezer": {
-   "t": "2026-11-11T13:49:33",
-   "task": "Voorstel niet gevonden of al afgehandeld",
+   "t": "2026-11-11T17:01:01",
+   "task": "Nieuwspost gemaakt: Spreuken 23:18",
    "state": "done"
   },
   "designer": {
-   "t": "2026-11-11T13:30:13",
-   "task": "Ontwierp Prediker 3:1 in stijl hemelsblauw",
+   "t": "2026-11-11T17:01:01",
+   "task": "Ontwierp Spreuken 23:18 in stijl paars",
    "state": "done"
   },
   "video": {
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-11T12:16:19",
-   "task": "Postte Jeremia 17:7 op facebook",
+   "t": "2026-11-11T17:46:47",
+   "task": "Postte Prediker 3:1 op facebook",
    "state": "done"
   },
   "controller": {
@@ -38,11 +38,11 @@
   }
  },
  "stats": {
-  "posts_today": 2,
-  "posts_total": 18,
+  "posts_today": 3,
+  "posts_total": 19,
   "reach_7d": 85,
   "best_time": "nog onbekend",
-  "next_post": "2026-11-11T17:45:00"
+  "next_post": "2026-11-11T20:30:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
@@ -56,6 +56,22 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "17:46",
+   "msg": "2026-11-11-n1745 online op facebook: Prediker 3:1"
+  },
+  {
+   "t": "17:46",
+   "msg": "2026-11-11-n1745 online op instagram: Prediker 3:1"
+  },
+  {
+   "t": "17:46",
+   "msg": "2026-11-11-n1745 ook als story geplaatst"
+  },
+  {
+   "t": "17:01",
+   "msg": "Nieuwspost: Kolossenzen 3:17 vervangen door Spreuken 23:18 (aanleiding: sintmaarten, NOS)"
+  },
   {
    "t": "14:35",
    "msg": "10 posts klaar voor MORGEN (12-11) en OVERMORGEN (13-11), door het systeem zelf gemaakt en gecontroleerd"
@@ -87,22 +103,6 @@
   {
    "t": "13:43",
    "msg": "Bediening: WhatsApp-testbericht klaargezet"
-  },
-  {
-   "t": "13:40",
-   "msg": "Bediening: WhatsApp-testbericht klaargezet"
-  },
-  {
-   "t": "13:38",
-   "msg": "Bediening: Fout als opgelost gemarkeerd"
-  },
-  {
-   "t": "13:32",
-   "msg": "Bediening: Voorstel niet gevonden of al afgehandeld"
-  },
-  {
-   "t": "13:30",
-   "msg": "Bediening: Nieuwspost klaargezet: Prediker 3:1 op 2026-11-11 om 17:45"
   }
  ],
  "lampen": [

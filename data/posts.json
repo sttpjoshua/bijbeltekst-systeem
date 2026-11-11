@@ -2551,7 +2551,7 @@
  },
  {
   "id": "2026-11-11-n1745",
-  "status": "gerenderd",
+  "status": "gepubliceerd",
   "vers_id": "Ecclesiastes-3-1-1",
   "ref": "Prediker 3:1",
   "tekst": "Alles heeft een bestemden tijd, en alle voornemen onder den hemel heeft zijn tijd.",
@@ -2640,6 +2640,18 @@
    "bron": "NOS",
    "link": "https://nos.nl/l/2638978",
    "zwaar": false
+  },
+  "gepubliceerd": {
+   "instagram": {
+    "id": "18099703271649747",
+    "url": "https://www.instagram.com/p/Dfm8UsfjXLs/",
+    "t": "2026-11-11T17:46+01:00"
+   },
+   "facebook": {
+    "id": "1015160368352770_122134324028879910",
+    "url": "https://www.facebook.com/1015160368352770_122134324028879910",
+    "t": "2026-11-11T17:46+01:00"
+   }
   }
  },
  {
