@@ -1,9 +1,9 @@
 {
- "updated": "2026-11-11T13:30:23",
+ "updated": "2026-11-11T13:32:13",
  "agents": {
   "verskiezer": {
-   "t": "2026-11-11T13:30:13",
-   "task": "Nieuwspost klaargezet: Prediker 3:1 op 2026-11-11 om 17:45",
+   "t": "2026-11-11T13:32:13",
+   "task": "Voorstel niet gevonden of al afgehandeld",
    "state": "done"
   },
   "designer": {
@@ -22,9 +22,9 @@
    "state": "done"
   },
   "controller": {
-   "t": "2026-11-11T10:24:12",
-   "task": "Posts klaargezet uit de tekstbank",
-   "state": "done"
+   "t": "2026-11-11T12:01:02",
+   "task": "Politiek nieuws (NOS): \"Raad van State: minister van Asiel moet veilig",
+   "state": "error"
   },
   "analist": {
    "t": "2026-11-11T12:51:08",
@@ -57,28 +57,28 @@
  ],
  "log": [
   {
-   "t": "10:24",
-   "msg": "Tekstbank bijna op: nog genoeg nieuwe verzen voor ongeveer 4 dagen (20 van 47). Daarna herhaalt het systeem de"
+   "t": "13:32",
+   "msg": "Bediening: Voorstel niet gevonden of al afgehandeld"
   },
   {
-   "t": "10:38",
-   "msg": "Nieuwe reelstijlen aangezet (Joshua koos: alle drie testen). Vanaf de posts van 16 november."
+   "t": "13:30",
+   "msg": "Bediening: Nieuwspost klaargezet: Prediker 3:1 op 2026-11-11 om 17:45"
   },
   {
-   "t": "10:45",
-   "msg": "Nieuwe reelstijlen weer uit: Joshua wil reels helemaal anders aanpakken."
+   "t": "13:30",
+   "msg": "Nieuwspost: Jesaja 41:10 vervangen door Prediker 3:1 (aanleiding: politiek, NOS)"
   },
   {
-   "t": "10:51",
-   "msg": "Per ongeluk verwijderde beelden (61 bestanden, ook de noodposts van vandaag) teruggezet. Oorzaak: opslaan van "
+   "t": "13:28",
+   "msg": "Bediening: Nieuws: maximaal per dag 3"
   },
   {
-   "t": "12:01",
-   "msg": "Zwaar nieuws (NOS): \"Vijf jaar The Kyiv Independent: hoe bedrijf je journalistiek in een land in oorlog?\". Wil"
+   "t": "12:51",
+   "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
   },
   {
-   "t": "12:01",
-   "msg": "Politiek nieuws (NOS): \"Raad van State: minister van Asiel moet veiligheid Syrië opnieuw beoordelen\". Neutrale"
+   "t": "12:51",
+   "msg": "Statistieken opgehaald voor 7 posts"
   },
   {
    "t": "12:16",
@@ -93,24 +93,16 @@
    "msg": "2026-11-11-n1215 ook als story geplaatst"
   },
   {
-   "t": "12:51",
-   "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
+   "t": "12:01",
+   "msg": "Politiek nieuws (NOS): \"Raad van State: minister van Asiel moet veiligheid Syrië opnieuw beoordelen\". Neutrale"
   },
   {
-   "t": "12:51",
-   "msg": "Statistieken opgehaald voor 7 posts"
+   "t": "12:01",
+   "msg": "Zwaar nieuws (NOS): \"Vijf jaar The Kyiv Independent: hoe bedrijf je journalistiek in een land in oorlog?\". Wil"
   },
   {
-   "t": "13:28",
-   "msg": "Bediening: Nieuws: maximaal per dag 3"
-  },
-  {
-   "t": "13:30",
-   "msg": "Bediening: Nieuwspost klaargezet: Prediker 3:1 op 2026-11-11 om 17:45"
-  },
-  {
-   "t": "13:30",
-   "msg": "Nieuwspost: Jesaja 41:10 vervangen door Prediker 3:1 (aanleiding: politiek, NOS)"
+   "t": "12:01",
+   "msg": "Politiek nieuws (NOS): \"Raad van State: minister van Asiel moet veiligheid Syrië opnieuw beoordelen\". Neutrale"
   }
  ],
  "lampen": [

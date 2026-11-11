@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-11T13:30",
+ "gegenereerd": "2026-11-11T13:32",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -3013,26 +3013,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-09T12:16:56",
-   "soort": "info",
-   "tekst": "2026-11-09-3 ook als story geplaatst"
-  },
-  {
-   "t": "2026-11-09T12:16:56",
-   "soort": "info",
-   "tekst": "2026-11-09-3 online op instagram: Mattheüs 6:26"
-  },
-  {
-   "t": "2026-11-09T12:17:07",
-   "soort": "info",
-   "tekst": "2026-11-09-5 online op facebook: Johannes 14:1"
-  },
-  {
-   "t": "2026-11-09T13:02:24",
-   "soort": "info",
-   "tekst": "Verbinding met Instagram werkt (@bibleverse_nl)"
-  },
-  {
    "t": "2026-11-09T13:02:24",
    "soort": "info",
    "tekst": "Token heeft alle rechten, ook voor statistieken"
@@ -3338,9 +3318,22 @@
    "t": "2026-11-11T13:30:13",
    "soort": "info",
    "tekst": "Bediening: Nieuwspost klaargezet: Prediker 3:1 op 2026-11-11 om 17:45"
+  },
+  {
+   "t": "2026-11-11T13:32:13",
+   "soort": "info",
+   "tekst": "Bediening: Voorstel niet gevonden of al afgehandeld"
   }
  ],
- "recente_fouten": [],
+ "recente_fouten": [
+  {
+   "t": "2026-11-11T12:01:02",
+   "soort": "fout",
+   "tekst": "Politiek nieuws (NOS): \"Raad van State: minister van Asiel moet veiligheid Syrië opnieuw beoordelen\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
+   "code": "nieuws_voorstel",
+   "post": "n111112010"
+  }
+ ],
  "versen_totaal": 300,
  "reacties": [
   {
