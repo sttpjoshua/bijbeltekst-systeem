@@ -29,32 +29,32 @@ SCENES = {
         "identiteit": ["woman mirror", "portrait smiling", "person looking at camera", "teenager thinking"],
         "humor_herkenbaar": ["snooze alarm bed", "spilled coffee", "cat lazy", "dog sleeping", "person procrastinating phone"],
     },
-    "natuur": ["sunrise clouds", "ocean waves slow", "forest sunlight", "mountain lake", "wheat field wind", "sunset sky", "calm sea"],
-    "dichtbij": ["hands holding coffee", "candle flame", "hands open light", "flower close up", "pages of book", "rain drops leaves"],
-    "onderweg": ["cycling netherlands", "train window landscape", "rain on car window", "walking in rain", "city lights night"],
+    "natuur": ["sunrise", "ocean", "forest", "lake", "wheat field", "sunset", "clouds", "mountains"],
+    "dichtbij": ["candle", "coffee", "flowers", "hands", "book", "rain drops", "tea"],
+    "onderweg": ["cycling", "train window", "rain window", "walking rain", "city night", "road trip"],
 }
 
 
 # Herkenningszin -> zoektermen. De eerste regel die past, wint; anders de lijst van het thema.
 KOPPEL = [
-    (r"snooze|wekker|opstaan|ochtendmens|vroeg op|uit bed", ["alarm clock bed morning", "woman waking up bed", "man turning off alarm"]),
-    (r"piekeren|wakker lag|slapen|nacht|23:00|malen", ["person awake in bed at night", "woman lying in bed thinking", "insomnia bed"]),
-    (r"moe|uitgeput|op is|op bent|geen kracht", ["tired woman sighing", "exhausted man desk", "tired person couch"]),
-    (r"file|druk|haast|stress|agenda|to-do", ["traffic jam cars", "busy office stress", "crowded street rush"]),
-    (r"trein|perron|onderweg|reis", ["train platform waiting", "commuter train window", "person waiting bus stop"]),
-    (r"bang|angst|spannend|eng", ["nervous woman", "man looking worried", "anxious person window"]),
-    (r"verdriet|huil|rouw|mist|gebroken|pijn", ["sad woman window", "man sitting alone sad", "person crying"]),
-    (r"alleen|eenzaam|onzichtbaar|vergeten", ["person alone window", "man alone city", "woman walking alone"]),
-    (r"studeer|studie|examen|tentamen|leren", ["student studying library", "student writing notes", "reading book desk"]),
-    (r"werk|collega|baas|kantoor|maandag", ["office work desk", "colleagues meeting office", "man working laptop"]),
-    (r"koffie", ["making coffee morning", "hands holding coffee"]),
-    (r"buurman|visite|vriend|samen|groepsapp", ["friends talking cafe", "neighbors talking", "friends laughing"]),
-    (r"ruzie|boos|discussie|reageren|mail", ["arguing couple", "angry man phone", "woman typing phone angry"]),
-    (r"lachen|grappig|blij", ["friends laughing", "woman laughing"]),
-    (r"smoes|uitstellen|klusje|later", ["man procrastinating phone couch", "messy desk", "lazy sunday couch"]),
-    (r"dankbaar|cadeau|goed ging", ["family dinner table", "woman smiling sunlight"]),
-    (r"nieuw|begin|eerste dag", ["walking through door", "person starting new job", "road ahead"]),
-    (r"keuze|kiezen|beslissing|weet niet", ["crossroads path", "man thinking window", "woman deciding"]),
+    (r"snooze|wekker|opstaan|ochtendmens|vroeg op|uit bed", ["alarm clock", "waking up", "morning bed"]),
+    (r"piekeren|wakker lag|slapen|nacht|23:00|malen", ["insomnia", "night bed", "awake night"]),
+    (r"moe|uitgeput|op is|op bent|geen kracht|te veel|teveel", ["tired", "exhausted", "stress"]),
+    (r"file|druk|haast|stress|agenda|to-do", ["traffic", "stress", "busy street"]),
+    (r"trein|perron|onderweg|reis", ["train", "commute", "bus stop"]),
+    (r"bang|angst|spannend|eng", ["anxious", "worried", "nervous"]),
+    (r"verdriet|huil|rouw|mist|gebroken|pijn", ["sad", "crying", "grief"]),
+    (r"alleen|eenzaam|onzichtbaar|vergeten", ["alone", "lonely", "solitude"]),
+    (r"studeer|studie|examen|tentamen|leren", ["studying", "student", "homework"]),
+    (r"werk|collega|baas|kantoor|maandag", ["office", "working laptop", "meeting"]),
+    (r"koffie", ["coffee"]),
+    (r"buurman|visite|vriend|samen|groepsapp", ["friends", "neighbors", "talking"]),
+    (r"ruzie|boos|discussie|reageren|mail", ["argument", "angry", "frustrated"]),
+    (r"lachen|grappig|blij", ["laughing", "smiling"]),
+    (r"smoes|uitstellen|klusje|later", ["procrastination", "couch", "lazy"]),
+    (r"dankbaar|cadeau|goed ging", ["family dinner", "smiling", "gratitude"]),
+    (r"nieuw|begin|eerste dag", ["door", "new job", "road"]),
+    (r"keuze|kiezen|beslissing|weet niet", ["crossroads", "thinking", "decision"]),
 ]
 NIET = ("animat", "cartoon", " 3d", "3d ", "cgi", "render", "illustrat", "ai generated", "ai-generated", "generative", "motion graphic")
 
@@ -106,6 +106,9 @@ def _download(h, pad):
     raise RuntimeError("; ".join(fouten[:6]))
 
 
+ZOEKLOG = {}
+
+
 def zoek(term, n=12):
     d = _vraag("/videos", {"query": term, "page_size": n, "urls": "true", "sort": "popular"})
     hits = d.get("hits", [])
@@ -120,6 +123,7 @@ def zoek(term, n=12):
         return not any(w in t for w in NIET)
     hits = [h for h in hits if getal(h.get("duration")) >= 4 and (h.get("urls") or {}).get("mp4") and echt(h)]
     hits.sort(key=lambda h: (not h.get("is_vertical"), -getal(h.get("downloads"))))
+    ZOEKLOG[term] = len(hits)
     return hits
 
 

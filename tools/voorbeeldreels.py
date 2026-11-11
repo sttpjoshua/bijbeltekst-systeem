@@ -36,5 +36,6 @@ for i, (vid, scene, pl) in enumerate(voorbeelden):
     except Exception as ex:
         traceback.print_exc()
         rapport["reels"].append({"ref": x["ref"], "fout": str(ex)[:300]})
+rapport["zoektermen"] = clips.ZOEKLOG
 S.bewaar("data/voorbeeldreels.json", rapport)
 print(json.dumps(rapport, ensure_ascii=False, indent=1))
