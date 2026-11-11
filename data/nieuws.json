@@ -19,5 +19,16 @@
   "categorie": "zwaar",
   "zwaar": true,
   "status": "genegeerd"
+ },
+ {
+  "bron": "NOS",
+  "kop": "Wekdienst 11/11: Elfde van de Elfde en Sint-Maarten gevierd • Online misbruikzaak voor de rechter",
+  "link": "https://nos.nl/l/2638953",
+  "t": "2026-11-11T06:44+01:00",
+  "id": "n111117000",
+  "categorie": "sintmaarten",
+  "zwaar": false,
+  "status": "gemaakt",
+  "post": "2026-11-11-n2030"
  }
 ]

@@ -28,7 +28,7 @@
   "ok": "2026-11-08T00:36"
  },
  "reacties": {
-  "ok": "2026-11-11T16:00",
+  "ok": "2026-11-11T17:00",
   "laatst_ok": true,
   "detail": "0 nieuwe reacties",
   "fout": "2026-11-08T18:00"
@@ -58,5 +58,10 @@
   "laatst_ok": true,
   "detail": "9 bericht(en) verstuurd",
   "ok": "2026-11-11T13:52"
+ },
+ "nieuws": {
+  "ok": "2026-11-11T17:01",
+  "laatst_ok": true,
+  "detail": "1 nieuwe aanleidingen"
  }
 }

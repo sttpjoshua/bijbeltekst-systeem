@@ -2645,9 +2645,9 @@
  {
   "id": "2026-11-11-n2030",
   "status": "gerenderd",
-  "vers_id": "Colossians-3-17-17",
-  "ref": "Kolossenzen 3:17",
-  "tekst": "En al wat gij doet met woorden of met werken, doet het alles in de Naam van de Heere Jezus, dankende God en de Vader door Hem.",
+  "vers_id": "Proverbs-23-18-18",
+  "ref": "Spreuken 23:18",
+  "tekst": "Want zekerlijk, er is een beloning; en uw verwachting zal niet afgesneden worden.",
   "vertaling": "SV",
   "variabelen": {
    "palet": "diep_paars",
@@ -2655,19 +2655,20 @@
    "layout": "links",
    "achtergrond": "radiaal",
    "huisstijl": "paars",
-   "thema": "dankbaarheid",
+   "thema": "hoop",
    "hook_stijl": "geen",
    "formaat": "carrousel",
    "uitleg_op_beeld": false,
    "achtergrondbron": "verloop",
-   "boekgroep": "brieven",
-   "lengte": "middel",
+   "boekgroep": "spreuken",
+   "lengte": "kort",
    "bron": "bekend",
    "vraag_onderaan": true,
-   "opening": "vers",
+   "opening": "verhaal",
    "tijdslot": "20:30",
    "hook_op_beeld": false,
-   "tijdslot_fb": null
+   "tijdslot_fb": null,
+   "aanleiding": "nieuws"
   },
   "keuzebron": {
    "huisstijl": "nood",
@@ -2680,27 +2681,28 @@
    "lengte": "nood",
    "bron": "nood",
    "vraag_onderaan": "nood",
-   "opening": "nood",
-   "tijdslot": "nood"
+   "opening": "nieuws",
+   "tijdslot": "nood",
+   "aanleiding": "nieuws"
   },
-  "hook": "Ook gewone dingen kunnen een dankjewel zijn.",
+  "hook": "Vanavond lopen er lampionnen door de straat. Klein licht, maar het maakt verschil.",
   "beeld_hook": "",
-  "caption": "Ook gewone dingen kunnen een dankjewel zijn.\n\n\"En al wat gij doet met woorden of met werken, doet het alles in de Naam van de Heere Jezus, dankende God en de Vader door Hem.\"\nKolossenzen 3:17\n\nAlles wat je doet mag je doen met God erbij, en met dankbaarheid.\n\nVoor welk gewoon ding ben jij vandaag dankbaar?",
+  "caption": "Vanavond lopen er lampionnen door de straat. Klein licht, maar het maakt verschil.\n\n\"Want zekerlijk, er is een beloning; en uw verwachting zal niet afgesneden worden.\"\nSpreuken 23:18\n\nHoop op God loopt niet dood.\n\nWaar hoop jij al lang op?",
   "hashtags": [
-   "#dankbaarheid",
-   "#kolossenzen",
+   "#hoop",
+   "#spreuken",
    "#bijbeltekst",
-   "#jezus",
-   "#geloof"
+   "#toekomst"
   ],
   "uitleg": "",
-  "betekenis": "Paulus schrijft dat geloof niet alleen voor de zondag is. Je werk, je woorden en je dagelijkse dingen mag je doen met Jezus erbij en met een dankbaar hart.",
-  "toepassing": "Kies één klus die je vandaag moet doen en doe hem bewust als een bedankje aan God.",
-  "kernwoord": "dankende",
-  "media": "docs/media/nood/nood-20261108-4-840-1.jpg",
+  "betekenis": "Spreuken belooft dat hoop op God niet voor niets is. Ook als je het nu niet ziet, is er een toekomst. Je verwachting wordt niet teleurgesteld.",
+  "toepassing": "Schrijf op waar je op hoopt. Bewaar het en kijk er over een maand weer naar.",
+  "kernwoord": "verwachting",
+  "media": "docs/media/2026-11/2026-11-11-n2030-1.jpg",
   "media_extra": [
-   "docs/media/nood/nood-20261108-4-840-2.jpg",
-   "docs/media/nood/nood-20261108-4-840-3.jpg"
+   "docs/media/2026-11/2026-11-11-n2030-2.jpg",
+   "docs/media/2026-11/2026-11-11-n2030-3.jpg",
+   "docs/media/2026-11/2026-11-11-n2030-4.jpg"
   ],
   "beeld": null,
   "muziek": null,
@@ -2708,18 +2710,31 @@
   "metricool": {},
   "stats": {},
   "handle": "@bibleverse_nl",
-  "thumb": "thumbs/nood-20261108-4-840.jpg",
-  "story": "docs/media/nood/nood-20261108-4-840-story.jpg",
-  "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-4-840-1.jpg",
+  "thumb": "thumbs/2026-11-11-n2030.jpg",
+  "story": "docs/media/2026-11/2026-11-11-n2030-story.jpg",
+  "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-11-n2030-1.jpg",
   "media_urls": [
-   "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-4-840-1.jpg",
-   "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-4-840-2.jpg",
-   "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-4-840-3.jpg"
+   "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-11-n2030-1.jpg",
+   "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-11-n2030-2.jpg",
+   "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-11-n2030-3.jpg",
+   "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-11-n2030-4.jpg"
   ],
-  "story_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-4-840-story.jpg",
-  "goedgekeurd": true,
+  "story_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-11-n2030-story.jpg",
+  "goedgekeurd": null,
   "datum": "2026-11-11",
-  "nood": true
+  "nood": true,
+  "verhaal_hook": "Vanavond lopen er lampionnen door de straat. Klein licht, maar het maakt verschil.",
+  "tekstbron": "tekstbank",
+  "reel_uitleg": "Er is zeker een toekomst, en je hoop wordt niet afgesneden.",
+  "reel_vraag": "Waar hoop jij op?",
+  "reel_herkenning": "Voor iedereen die bijna de hoop opgaf.",
+  "nieuws": {
+   "categorie": "sintmaarten",
+   "kop": "Wekdienst 11/11: Elfde van de Elfde en Sint-Maarten gevierd • Online misbruikzaak voor de rechter",
+   "bron": "NOS",
+   "link": "https://nos.nl/l/2638953",
+   "zwaar": false
+  }
  },
  {
   "id": "2026-11-11-n2200",
