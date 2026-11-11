@@ -316,6 +316,7 @@ def main(forceer=False):
                 print("Opties maken mislukt:", e)
         log.append(entry); bekend.add(item["kop"]); nieuw += 1
     S.bewaar(PAD, log[-150:])
+    S.gezond("nieuws", True, f"{nieuw} nieuwe aanleidingen")
     print(nieuw, "nieuwe aanleidingen bekeken")
 
 

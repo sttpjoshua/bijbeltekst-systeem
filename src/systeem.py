@@ -1417,6 +1417,7 @@ def cmd_automaak(modus=""):
         cmd_log(f"Tekstbank bijna op: nog genoeg nieuwe verzen voor ongeveer {v['dagen']} dagen ({v['vrij']} van {v['verzen']}). "
                 "Daarna herhaalt het systeem de oudste verzen.", "fout", "tekstbank")
     activiteit("controller", "Posts klaargezet uit de tekstbank")
+    gezond("maken", not mislukt, f"{gemaakt} posts klaargezet" + (f", {len(mislukt)} mislukt" if mislukt else ""))
     cmd_plan()
 
 def cmd_tekstbank(actie="status"):

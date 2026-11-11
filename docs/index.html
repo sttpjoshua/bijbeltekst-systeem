@@ -199,6 +199,31 @@ html[data-thema=donker] .pl.ok{background:#173027;color:#7fe0b0}html[data-thema=
 .nk-slides{display:flex;gap:4px;overflow-x:auto;margin-bottom:8px}.nk-slides img{width:92px;height:115px;object-fit:cover;border-radius:6px;cursor:zoom-in}
 .nk-optie textarea{width:100%;box-sizing:border-box;font:inherit;font-size:13px;border:1px solid var(--lijn);border-radius:8px;padding:6px;background:var(--kaart,#fff);color:inherit;resize:vertical}
 .nk-cap{white-space:pre-line;font-size:12px;color:var(--ink2);max-height:140px;overflow:auto;margin:6px 0}
+.pkop{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.pd{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px;vertical-align:middle;flex:none;box-sizing:border-box}
+.pd.online{background:#16a36b}.pd.klaar{background:#2f6fe4}.pd.maken{background:#f0a020}.pd.plan{background:transparent;border:1.5px solid var(--ink3)}.pd.fout{background:#d93838}
+.legenda{display:flex;flex-wrap:wrap;gap:12px;font-size:12px;color:var(--ink2)}
+.kal{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:8px}
+.kdag{border:1px solid var(--lijn);border-radius:12px;padding:8px;background:var(--bg);min-width:0}
+.kdag.vandaag{border:2px solid var(--accent,#2f6fe4);background:var(--kaart)}
+.kdag h3{font-size:12.5px;margin:2px 4px 8px;display:flex;justify-content:space-between;align-items:baseline;font-weight:700}
+.kdag h3 span{color:var(--ink3);font-weight:500}.kdag.vandaag h3{color:var(--accent,#2f6fe4)}
+.kpost{display:flex;gap:7px;align-items:center;padding:6px;border-radius:9px;cursor:pointer;background:var(--kaart);border:1px solid var(--lijn);margin-bottom:6px;min-width:0}
+.kpost:hover{border-color:var(--ink3)}
+.kpost .kt{width:30px;height:38px;border-radius:5px;object-fit:cover;flex:none;background:var(--zacht);display:grid;place-items:center;font-size:12px;color:var(--ink3)}
+.kpost .kw{min-width:0;flex:1}.kpost .kw b{display:block;font-size:12.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.kpost .kr{font-size:11px;color:var(--ink2);display:flex;gap:5px;align-items:center;white-space:nowrap;overflow:hidden}
+.kpost.plan{background:transparent;border-style:dashed;opacity:.8}
+.kpost .knws{font-size:10.5px;background:#fff3d6;color:#7a4f00;border-radius:5px;padding:0 4px}
+html[data-thema=donker] .kpost .knws{background:#3a2e14;color:#ffd98a}
+#lade{position:fixed;inset:0;background:rgba(0,0,0,.35);display:none;z-index:45;justify-content:flex-end}
+.ladebinnen{width:min(520px,100%);height:100%;overflow:auto;background:var(--kaart);color:var(--ink);padding:20px 22px 40px;box-shadow:-10px 0 30px rgba(0,0,0,.15)}
+.ladebinnen .lslides{display:flex;gap:6px;overflow-x:auto;margin:10px 0 12px}.ladebinnen .lslides img,.ladebinnen .lslides video{height:260px;border-radius:8px;flex:none}
+.ladebinnen .lact{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:8px}
+.ladebinnen .lcap{white-space:pre-line;font-size:13px;color:var(--ink2);background:var(--zacht);border-radius:8px;padding:10px;margin-top:6px}
+@media (max-width:700px){.kal{grid-template-columns:1fr}.kdag{padding:6px}.ladebinnen .lslides img,.ladebinnen .lslides video{height:200px}}
+.bkop{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink3);margin:22px 0 10px;font-weight:700}
+#bedPaneel>.bkop:first-child{margin-top:4px}
 </style>
 </head>
 <body>
@@ -237,7 +262,7 @@ html[data-thema=donker] .pl.ok{background:#173027;color:#7fe0b0}html[data-thema=
           <button class="ai-kaart roze" data-vraagclaude="Zoek uit waarom er de afgelopen dagen iets mislukte en los het op."><b>Iets mislukt?</b><span>Ik zoek de oorzaak en los het op.</span></button>
         </div>
         <textarea class="veld" id="vTekst" rows="3" placeholder="Bijvoorbeeld: maak de posts van morgen opnieuw in een lichtere stijl, of: zoek uit waarom Facebook mislukt."></textarea>
-        <div class="seg" style="margin-top:8px;align-items:center"><button class="btn prim" id="vStuur">Versturen</button><span class="sub">Claude pakt het op bij de volgende run (14:32 of 20:47).</span></div>
+        <div class="seg" style="margin-top:8px;align-items:center"><button class="btn prim" id="vStuur">Versturen</button><span class="sub">Claude pakt dit op zodra hij weer aan het systeem werkt. Heeft het haast? Zeg het dan ook even in de chat met Claude.</span></div>
         <div id="verzoeken" style="margin-top:10px"></div>
       </div>
     </section>
@@ -250,13 +275,13 @@ html[data-thema=donker] .pl.ok{background:#173027;color:#7fe0b0}html[data-thema=
   </div>
 
   <div class="tab" data-tab="planning">
-  <section class="kaart" id="planning">
-    <h2>Planning komende dagen</h2>
-    <div class="legenda"><span class="st-online">● Online</span><span class="st-klaar">● Klaar, gaat vanzelf online</span><span class="st-maken">◐ Wordt vandaag gemaakt (14:32 of 20:47)</span><span class="st-plan">○ Voorlopig plan</span></div>
-    <div class="plan" id="planDagen"></div>
-    <div class="sub" style="margin-top:10px">Het voorlopige plan wordt elke nacht opnieuw gemaakt met wat het systeem geleerd heeft, en na elke wijziging in Bediening. Een dag van tevoren worden de posts echt gemaakt; dan verschijnt het beeld. Klik op een post om de tekst te zien.</div>
+  <section class="kaart" id="planning" style="margin-top:0">
+    <div class="pkop"><h2 style="margin:0">Komende dagen</h2>
+      <div class="legenda"><span><i class="pd online"></i>Online</span><span><i class="pd klaar"></i>Klaar, gaat vanzelf online</span><span><i class="pd maken"></i>Wordt nog gemaakt</span><span><i class="pd plan"></i>Voorlopig plan</span><span><i class="pd fout"></i>Mislukt</span><span>▤ carrousel · ▶ reel · 📰 nieuws · ★ reeks</span></div></div>
+    <div class="kal" id="planDagen"></div>
+    <div class="sub" style="margin-top:10px">Klik op een post voor de voorvertoning en om hem nu te posten, te verplaatsen, over te slaan of een ander vers te kiezen. Posts worden een dag van tevoren gemaakt; daarvoor is het een voorlopig plan.</div>
   </section>
-    <section class="kaart"><h2>Klaarstaande posts</h2><div class="sub" style="margin:-6px 0 6px">Nu posten, verplaatsen of overslaan.</div><div id="bWacht"></div></section>
+  <div id="bWacht" style="display:none"></div>
   </div>
 
   <div class="tab" data-tab="resultaten">
@@ -270,11 +295,11 @@ html[data-thema=donker] .pl.ok{background:#173027;color:#7fe0b0}html[data-thema=
       <div class="kaart"><h2>Beste posts</h2><div id="topPosts"></div></div>
     </section>
     <section class="kaart"><h2>Wat het systeem geleerd heeft</h2><div id="inzichten"></div></section>
-  <section class="kaart">
-    <h2>Voorkeuren per variabele</h2>
-    <div class="sub" style="margin:-6px 0 14px">1,0 is neutraal. Hoger betekent dat het systeem deze optie vaker kiest. n = aantal gemeten posts.</div>
+  <section class="kaart"><details id="gewDet">
+    <summary style="cursor:pointer;list-style:none"><h2 style="display:inline">Voorkeuren per variabele ▾</h2> <span class="sub" id="gewSam"></span></summary>
+    <div class="sub" style="margin:10px 0 14px">1,0 is neutraal. Hoger betekent dat het systeem deze optie vaker kiest. n = aantal gemeten posts.</div>
     <div class="grid g2" id="gewichten"></div>
-  </section>
+  </details></section>
   </div>
 
   <div class="tab" data-tab="posts">
@@ -297,18 +322,28 @@ html[data-thema=donker] .pl.ok{background:#173027;color:#7fe0b0}html[data-thema=
     <h2>Instellingen</h2>
     <div id="bedSleutel"></div>
     <div id="bedPaneel" style="display:none">
+      <h3 class="bkop">📤 Posten</h3>
       <div class="bed">
         <div class="blok"><h3>Systeem</h3><div class="seg" id="bPauze"></div><div class="sub" style="margin-top:6px">Pauze zet alles stil. Er gaat niets meer online tot je hervat.</div></div>
         <div class="blok"><h3>Posts per dag</h3><div class="seg" id="bPPD"></div></div>
+        <div class="blok"><h3>Platformen</h3><div class="seg" id="bPlat"></div><div class="sub" style="margin-top:6px">YouTube en TikTok komen er later bij.</div></div>
+        <div class="blok"><h3>Snel leren</h3><div id="bLeer"></div></div>
+      </div>
+      <h3 class="bkop">✍️ Inhoud</h3>
+      <div class="bed">
         <div class="blok" style="grid-column:1/-1"><h3>Zelfstandig maken (zonder Claude)</h3><div id="bZelf"></div></div>
         <div class="blok" style="grid-column:1/-1"><h3>Nieuws als aanleiding</h3><div id="bNieuws"></div></div>
         <div class="blok" style="grid-column:1/-1"><h3>Nieuwe reelstijlen</h3><div id="bReels"></div></div>
-        <div class="blok"><h3>Snel leren</h3><div id="bLeer"></div></div>
-        <div class="blok"><h3>Platformen</h3><div class="seg" id="bPlat"></div><div class="sub" style="margin-top:6px">YouTube en TikTok komen er later bij.</div></div>
-        <div class="blok" style="grid-column:1/-1"><h3>Meldingen op je telefoon (Telegram)</h3><div id="bWa"></div></div>
-        <div class="blok"><h3>Verbinding</h3><button class="btn" id="bTest">Verbinding testen</button><div class="sub" style="margin-top:6px">Controleert de koppeling met Instagram en Facebook.</div></div>
-        <div class="blok"><h3>Aandeel foto-achtergronden: <span id="vBeeld"></span></h3><input type="range" id="rBeeld" min="0" max="50" step="5"><button class="btn" id="sBeeld">Opslaan</button></div>
+        <div class="blok"><h3>Aandeel foto-achtergronden: <span id="vBeeld"></span></h3><input type="range" id="rBeeld" min="0" max="50" step="5"><button class="btn" id="sBeeld">Opslaan</button><div class="sub" style="margin-top:6px">Hoeveel posts een eigen foto als achtergrond krijgen in plaats van een kleurverloop.</div></div>
         <div class="blok"><h3>Experimenteren: <span id="vVerk"></span></h3><input type="range" id="rVerk" min="10" max="40" step="5"><button class="btn" id="sVerk">Opslaan</button><div class="sub" style="margin-top:6px">Hoe vaak het systeem iets nieuws probeert in plaats van wat al goed werkt.</div></div>
+      </div>
+      <h3 class="bkop">🔔 Meldingen</h3>
+      <div class="bed">
+        <div class="blok" style="grid-column:1/-1"><h3>Meldingen op je telefoon (Telegram)</h3><div id="bWa"></div></div>
+      </div>
+      <h3 class="bkop">🔌 Verbinding</h3>
+      <div class="bed">
+        <div class="blok"><h3>Instagram en Facebook</h3><button class="btn" id="bTest">Verbinding testen</button><div class="sub" style="margin-top:6px">Controleert de koppeling met Instagram en Facebook.</div></div>
       </div>
       <div id="bedMelding"></div>
       <div class="sub" style="margin-top:8px">Een opdracht wordt binnen een minuut uitgevoerd. Het dashboard ververst daarna vanzelf (dat duurt meestal 1 tot 3 minuten). <a href="#" id="bVergeet">Sleutel van dit apparaat verwijderen</a></div>
@@ -316,7 +351,7 @@ html[data-thema=donker] .pl.ok{background:#173027;color:#7fe0b0}html[data-thema=
   </section>
 
     <section class="grid g2">
-      <div class="kaart"><h2>Voorraad verzen</h2><div id="voorraad"></div></div>
+      <div class="kaart"><h2>Voorraad</h2><div id="voorraad"></div></div>
       <div class="kaart"><h2>Logboek</h2><div class="log" id="logboek"></div></div>
     </section>
   </div>
@@ -325,6 +360,7 @@ html[data-thema=donker] .pl.ok{background:#173027;color:#7fe0b0}html[data-thema=
 <script>pasThemaToe()</script>
 <div id="tip"></div>
 <div id="toast"></div>
+<div id="lade" onclick="if(event.target===this)sluitLade()"><div class="ladebinnen" id="ladeBinnen"></div></div>
 <div id="galerij" onclick="if(event.target===this)this.style.display='none'"><button class="sluit" onclick="galerij.style.display='none'">✕</button><div class="galrij"></div><div class="tel"></div></div>
 <script>
 const NAMEN={huisstijl:"Huisstijl",thema:"Thema",hook_stijl:"Hook-stijl",formaat:"Formaat",uitleg_op_beeld:"Uitleg op beeld",achtergrondbron:"Achtergrond",boekgroep:"Bijbelboek",lengte:"Lengte vers",bron:"Bekend of ontdekking",vraag_onderaan:"Vraag onderaan",opening:"Eerste slide",tijdslot:"Tijdstip"};
@@ -350,6 +386,8 @@ function bouw(){
       :`<button class="knop" style="border:0;cursor:pointer" data-o='{"actie":"pauze","waarde":true}' data-vraag="Alles stilzetten? Er gaat niets meer online tot je op Hervatten klikt.">⏸ Noodstop</button>`);
 
   const p=D.posts;
+  try{const gem=D.posts.filter(x=>x.totaal&&(x.totaal.reach!=null||x.totaal.views!=null)&&x.score&&Object.keys(x.score).length).length;
+    document.getElementById("gewSam").textContent=gem<6?`(wordt interessant vanaf 6 gemeten posts; nu ${gem})`:"";if(gem>=6)document.getElementById("gewDet").open=true}catch(e){}
   bouwNieuwsKeuze();bouwAandacht();bouwReacties();bouwVolgende();bouwLaatst();bouwVerzoeken();bouwGezondheid();bouwTegels();bouwSnelLeren();bouwGroei();bouwTop();bouwInzichten();bouwVoorraad();
 
   // logboek
@@ -445,7 +483,8 @@ const ACTIES={
   statistieken:f=>knop("Opnieuw ophalen",{actie:"statistieken_nu"},"prim"),
 };
 function bouwAandacht(){
-  const f=(D.recente_fouten||[]).slice().reverse(),el=document.getElementById("aandacht"),n=D.nood||{klaar:6,doel:6};
+  const nopen=new Set(((D.nieuws||{}).recent||[]).filter(x=>x.status==="voorstel").map(x=>x.id));
+  const f=(D.recente_fouten||[]).filter(x=>x.code!=="nieuws_voorstel").slice().reverse(),el=document.getElementById("aandacht"),n=D.nood||{klaar:6,doel:6};
   const extra=[];
   if(n.klaar<2)extra.push(`<div class="melding info"><div class="wat"><b>Noodvoorraad bijna op</b> (${n.klaar} van ${n.doel})</div><div class="sub">Die posts vangen een mislukte dagelijkse run op.</div><div class="acties"><button class="btn prim" data-vraagclaude="Vul de noodvoorraad aan tot 6 posts.">Vraag Claude om aan te vullen</button></div></div>`);
   const openR=(D.reacties||[]).filter(r=>r.status==="nieuw"||r.status==="voorgesteld");
@@ -630,9 +669,10 @@ function platLabels(x,kort){
   const c=D.config||{},v=x.variabelen||{},act=c.platformen_actief||[];
   return PLATFORMEN.map(([k,n])=>{
     const nm=kort?{instagram:"IG",facebook:"FB",youtube:"YT",tiktok:"TT"}[k]:n;
-    if(!act.includes(k))return (k==="youtube"||k==="tiktok")?`<span class="pl uit" title="${n} komt er later bij">${nm} · binnenkort</span>`:`<span class="pl uit" title="${n} staat uit">${nm} · uit</span>`;
+    if(!act.includes(k))return "";
     const pub=(x.pub||{})[k],link=(x.links||{})[k];
     if(pub)return `<a class="pl ok" href="${link||"#"}" target="_blank" title="Staat online op ${n}: openen">${nm} ✓ ${String(pub).slice(11,16)}</a>`;
+    if(x.status==="gepubliceerd"&&!(x.gemist||[]).includes(k))return "";
     if((x.gemist||[]).includes(k)||x.status==="fout")return `<span class="pl fout" title="Niet geplaatst op ${n}">${nm} ⚠ mislukt</span>`;
     const t=k==="facebook"&&v.tijdslot_fb?v.tijdslot_fb:v.tijdslot;
     return `<span class="pl wacht" title="Gepland op ${n}">${nm} ⏳ ${t||""}</span>`}).join("");
@@ -696,27 +736,63 @@ function kiesNieuws(id,k,btn){
   if(zin.length<15||zin.length>160){melding("De openingszin moet tussen 15 en 160 tekens zijn","fout");return}
   stuur({actie:"nieuws_maken",id,keuze:k,zin},btn);
 }
+function postStatus(x){
+  if(x.soort==="plan")return "plan";if(x.soort==="maken"||x.status==="wacht_op_tekst"||x.status==="klaar_voor_render"||x.status==="opnieuw_maken")return "maken";
+  if(x.status==="fout")return "fout";if(x.status==="gepubliceerd")return "online";
+  const act=(D.config.platformen_actief||[]);const pub=Object.keys(x.pub||{});
+  if(pub.length&&pub.length>=act.length)return "online";if((x.gemist||[]).length)return "fout";return "klaar";
+}
 function bouwPlanning(){
   const el=document.getElementById("planDagen");if(!el)return;
   if(D.config.pauze){el.innerHTML='<div class="leeg sub">Het systeem staat op pauze. Er is niets gepland.</div>';return}
-  const vandaag=new Date().toISOString().slice(0,10);
-  const echt=D.posts.filter(x=>x.datum>=vandaag&&x.status!=="afgekeurd"&&x.status!=="overgeslagen").map(x=>({...x,soort:x.status==="gepubliceerd"?"online":"klaar"}));
-  const morgen=new Date(Date.now()+2*864e5).toISOString().slice(0,10);
-  const plan=(D.planning||[]).map(x=>({...x,soort:x.datum<=morgen?"maken":"plan",status:"plan",id:"plan-"+x.datum+x.variabelen.tijdslot}));
+  const vandaag=new Date().toLocaleDateString("sv-SE");
+  const echt=D.posts.filter(x=>x.datum>=vandaag&&x.status!=="afgekeurd"&&x.status!=="overgeslagen").map(x=>({...x,soort:"echt"}));
+  const morgen=new Date(Date.now()+2*864e5).toLocaleDateString("sv-SE");
+  const bezet=new Set(echt.map(x=>x.datum+x.variabelen.tijdslot));
+  const plan=(D.planning||[]).filter(x=>!bezet.has(x.datum+x.variabelen.tijdslot)).map(x=>({...x,soort:x.datum<=morgen?"maken":"plan",status:"plan",id:"plan-"+x.datum+x.variabelen.tijdslot}));
   const alles=[...echt,...plan];
-  const dagen=[...new Set(alles.map(x=>x.datum))].sort();
-  if(!dagen.length){el.innerHTML='<div class="leeg sub">Nog geen planning. Die verschijnt na de volgende nachtelijke run.</div>';return}
+  const dagen=[...new Set(alles.map(x=>x.datum))].sort().slice(0,8);
+  if(!dagen.length){el.innerHTML='<div class="leeg sub">Nog geen planning.</div>';return}
   window._plan=Object.fromEntries(plan.map(x=>[x.id,x]));
   el.innerHTML=dagen.map(d=>{
     const items=alles.filter(x=>x.datum===d).sort((a,b)=>a.variabelen.tijdslot.localeCompare(b.variabelen.tijdslot));
-    const dt=new Date(d+"T12:00");const naam=d===vandaag?"Vandaag":dt.toLocaleDateString("nl-NL",{weekday:"long"});
-    return `<div class="dag"><h3>${naam[0].toUpperCase()+naam.slice(1)}<span>${dt.toLocaleDateString("nl-NL",{day:"numeric",month:"short"})}</span></h3>${items.map(x=>{
-      const v=x.variabelen,exp=x.keuzebron&&Object.entries(x.keuzebron).some(([k,b])=>b==="verkenning"&&k!=="tijdslot");
-      const kleur=STIJLKLEUR[v.huisstijl]||"#999";v.huisstijl=v.huisstijl||(v.palet||"").replace("_"," ");
-      const klik=(x.soort==="plan"||x.soort==="maken")?`toonPlan('${x.id}')`:`toonGalerij('${x.id}')`;
-      return `<div class="slot" style="cursor:pointer" onclick="${klik}"><span class="tijd">${v.tijdslot}</span><div class="wat"><b class="st-${x.soort}">${{plan:"○",maken:"◐"}[x.soort]||"●"} ${x.ref}</b>
-        ${x.reeks_label?`<span class="tag" style="background:var(--accent);color:#fff;border-color:var(--accent)">${x.reeks_label}</span><br>`:""}<span class="sub">${FORMAAT[v.formaat]||v.formaat} · ${v.thema.replace("_"," ")}</span><br>${nieuwsLabel(x)}${x.soort==="plan"||x.soort==="maken"?"":`<div>${platLabels(x,true)}</div>`}
-        <span class="sub"><span class="stip" style="background:${kleur}"></span>${v.huisstijl}${v.achtergrondbron==="beeld"?" · foto":""}</span></div></div>`}).join("")}</div>`}).join("");
+    const dt=new Date(d+"T12:00");let naam=d===vandaag?"Vandaag":dt.toLocaleDateString("nl-NL",{weekday:"long"});
+    return `<div class="kdag${d===vandaag?" vandaag":""}"><h3>${naam[0].toUpperCase()+naam.slice(1)}<span>${dt.toLocaleDateString("nl-NL",{day:"numeric",month:"short"})}</span></h3>${items.map(x=>{
+      const v=x.variabelen,st=postStatus(x),m=x.soort==="echt"?mediaVan(x).filter(u=>!u.endsWith(".mp4")):[];
+      const thumb=x.thumb||m[0];
+      return `<div class="kpost ${x.soort==="echt"?"":"plan"}" onclick="openLade('${x.id}')" title="${esc(x.ref)}">
+        ${thumb?`<img class="kt" src="${thumb}" loading="lazy" onerror="this.outerHTML='<span class=kt>${v.formaat==="video"?"▶":"▤"}</span>'">`:`<span class="kt">${v.formaat==="video"?"▶":"▤"}</span>`}
+        <div class="kw"><b>${esc(x.ref)}</b><div class="kr"><i class="pd ${st}"></i>${v.tijdslot}<span title="${v.formaat==="video"?"reel":"carrousel"}">${v.formaat==="video"?"▶":"▤"}</span>${x.nieuws?'<span class="knws" title="nieuwspost">📰</span>':""}${x.reeks_label?`<span class="knws" title="${esc(x.reeks_label)}" style="background:var(--accent);color:#fff">★</span>`:""}</div></div></div>`}).join("")}</div>`}).join("");
+}
+function sluitLade(){document.getElementById("lade").style.display="none"}
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){sluitLade();galerij.style.display="none"}});
+function openLade(id){
+  const x=id.startsWith("plan-")?window._plan[id]:D.posts.find(p=>p.id===id);if(!x)return;
+  const v=x.variabelen,plan=id.startsWith("plan-"),m=plan?[]:mediaVan(x),st=plan?(x.soort==="maken"?"maken":"plan"):postStatus(x);
+  const STT={online:"Online",klaar:"Klaar, gaat vanzelf online",maken:"Wordt nog gemaakt",plan:"Voorlopig plan",fout:"Mislukt"};
+  const o=a=>JSON.stringify(a).replace(/'/g,"&#39;");
+  const kan=sleutel();
+  let act="";
+  if(!plan&&st!=="online"){
+    act=`<div class="lact">${x.status==="gerenderd"?`<button class="btn prim" data-o='${o({actie:"nu_posten",post:x.id})}' data-vraag="${esc(x.ref)} nu meteen posten?">Nu posten</button>`:""}
+      <input class="veld" type="date" value="${x.datum}" id="d_${x.id}"><input class="veld" type="time" value="${v.tijdslot}" id="t_${x.id}"><button class="btn" data-tijd="${x.id}">Verplaats</button></div>
+      <div class="lact"><button class="btn" data-o='${o({actie:"post_ander_vers",post:x.id})}' data-vraag="Ander vers kiezen voor deze plek?">Ander vers</button>
+      <button class="btn" data-o='${o({actie:"overslaan",post:x.id})}' data-vraag="Deze post overslaan? Hij gaat dan niet online.">Overslaan</button>
+      ${x.vers_id?`<button class="btn" data-o='${o({actie:"vers_uitsluiten",vers_id:x.vers_id,ref:x.ref})}' data-vraag="${esc(x.ref)} nooit meer gebruiken?">Vers nooit meer</button>`:""}</div>`;
+  } else if(plan&&x.vers_id){
+    act=`<div class="lact"><button class="btn" data-o='${o({actie:"ander_vers",vers_id:x.vers_id,ref:x.ref})}'>Ander vers kiezen</button><button class="btn" data-o='${o({actie:"vers_uitsluiten",vers_id:x.vers_id,ref:x.ref})}' data-vraag="${esc(x.ref)} nooit meer gebruiken?">Vers nooit meer</button></div>`;
+  }
+  document.getElementById("ladeBinnen").innerHTML=`<div style="display:flex;justify-content:space-between;align-items:center"><span class="sub"><i class="pd ${st}"></i>${STT[st]}</span><button class="btn" onclick="sluitLade()">✕ Sluiten</button></div>
+    <h2 style="margin:8px 0 2px">${esc(x.ref)}</h2>
+    <div class="sub">${new Date(x.datum+"T12:00").toLocaleDateString("nl-NL",{weekday:"long",day:"numeric",month:"long"})} om ${v.tijdslot} · ${v.formaat==="video"?"reel":"carrousel"} · ${esc((v.thema||"").replace("_"," "))}${x.nood?" · noodpost":""}</div>
+    ${nieuwsLabel(x)}
+    ${plan?"":`<div style="margin-top:6px">${platLabels(x)}</div>`}
+    ${m.length?`<div class="lslides">${m.map(u=>u.endsWith(".mp4")?`<video src="${u}" controls playsinline preload="metadata"></video>`:`<img src="${u}" loading="lazy" onclick="toonGalerij('${x.id}')" style="cursor:zoom-in">`).join("")}</div>`
+      :`<p style="font-size:15px;line-height:1.5;margin:12px 0">${esc(x.tekst||"")}</p><div class="sub">${plan?"Teksten en beeld worden een dag van tevoren gemaakt. Het plan kan nog veranderen als het systeem iets leert.":"Het beeld wordt nog gemaakt."}</div>`}
+    ${x.caption?`<details open><summary class="sub" style="cursor:pointer">Caption</summary><div class="lcap">${esc(x.caption)}</div></details>`:""}
+    ${act?(kan?act:`<div class="sub" style="margin-top:10px"><a href="#" onclick="sluitLade();naarSleutel();return false">Koppel eerst je sleutel</a> om deze post aan te passen.</div>`):""}
+    <details style="margin-top:12px"><summary class="sub" style="cursor:pointer">Details</summary><div style="margin-top:6px">${["huisstijl","hook_stijl","opening","achtergrondbron","reel_stijl"].filter(k=>v[k]).map(k=>`<span class="tag">${NAMEN[k]||k}: ${esc(v[k])}</span>`).join("")}</div></details>`;
+  document.getElementById("lade").style.display="flex";
 }
 function toonPlan(id){
   const x=window._plan[id];if(!x)return;const v=x.variabelen;
@@ -757,8 +833,11 @@ function bouwGezondheid(){
     return item("Wekker (GitHub)",u>2?"rood":u>0.75||mis>2?"oranje":"groen",`Laatst ${geleden(r.created_at)}${mis?`, ${mis} mislukt van de laatste 8`:""}`,"Elke 15 minuten kijkt GitHub of er iets online moet")};
   document.getElementById("gzLijst").innerHTML=
     plat("instagram","Instagram")+plat("facebook","Facebook")+wekker()+
-    item("Dagelijkse taak",taak(g.dagelijks,27),g.dagelijks?"Laatst "+geleden(g.dagelijks.ok)+" · elke dag 14:32":"elke dag 14:32, nog niet gemeld",g.dagelijks&&g.dagelijks.detail)+
-    item("Avondcontrole",taak(g.avondcontrole,27),g.avondcontrole?"Laatst "+geleden(g.avondcontrole.ok)+" · elke avond 20:47":"elke avond 20:47, eerste keer zondag",g.avondcontrole&&g.avondcontrole.detail)+
+    (D.config.zelfstandig
+      ?item("Posts maken",taak(g.maken,30),g.maken?(g.maken.laatst_ok===false?"Mislukt":"Laatst "+geleden(g.maken.ok))+" · elke ochtend":"elke ochtend vanaf 9:00",g.maken&&g.maken.detail)+
+       item("Tekstbank",(D.tekstbank||{}).dagen>=30?"groen":(D.tekstbank||{}).dagen>=10?"oranje":"rood","nog ongeveer "+((D.tekstbank||{}).dagen||0)+" dagen")
+      :item("Dagelijkse taak",taak(g.dagelijks,27),g.dagelijks?"Laatst "+geleden(g.dagelijks.ok)+" · elke dag 14:32":"elke dag 14:32, nog niet gemeld",g.dagelijks&&g.dagelijks.detail))+
+    item("Nieuws",!((D.nieuws||{}).instelling||{}).aan?"grijs":taak(g.nieuws,15),!((D.nieuws||{}).instelling||{}).aan?"staat uit":g.nieuws?"Laatst "+geleden(g.nieuws.ok)+" · 7, 12 en 17 uur":"rond 7, 12 en 17 uur",g.nieuws&&g.nieuws.detail)+
     item("Statistieken",taak(g.statistieken,30),g.statistieken?"Laatst "+geleden(g.statistieken.ok)+" · elke nacht":"elke nacht rond 05:15",g.statistieken&&g.statistieken.detail)+
     sleutelItem("sleutel_instagram","Sleutel Instagram")+sleutelItem("sleutel_facebook","Sleutel Facebook")+
     item("Zelftest",taak(g.zelftest,24*8),g.zelftest?(g.zelftest.laatst_ok===false?"Problemen gevonden":"Laatst "+geleden(g.zelftest.ok))+" · elke maandag":"elke maandag, eerste keer 9 november",g.zelftest&&g.zelftest.detail)+
@@ -856,7 +935,7 @@ function bouwVoorraad(){
   const mz=v.muziek||[],bd=v.beelden||[],mx=a=>a.length?a[0].keer:0,ongebruikt=a=>a.filter(x=>!x.keer).length;
   el.innerHTML=`<div class="grid g2"><div>
     <b><span class="lamp ${kl}" style="display:inline-block;margin-right:6px"></span>${beschikbaar} verzen beschikbaar</b> <span class="sub">· genoeg voor ongeveer ${dagen} dagen bij ${v.per_dag} per dag</span>
-    <div class="sub" style="margin:2px 0 10px">Een vers mag 60 dagen niet terugkomen. Totaal ${v.verzen_totaal}: ${v.bekend||0} bekende verzen en ${v.ontdekking||0} minder bekende uit de hele Bijbel${v.nbv21?`, waarvan ${v.nbv21} NBV21`:""}. Nog ${v.kandidaten||0} verzen uit de Bijbel wachten op keuring; elke week worden er zo'n 80 beoordeeld en de goede komen erbij. De wekelijkse analyse vult 10 verzen bij${dagen<21?", en bij minder dan 21 dagen ook de dagelijkse run":""}.</div>
+    <div class="sub" style="margin:2px 0 10px">Een vers mag 60 dagen niet terugkomen. Totaal ${v.verzen_totaal}: ${v.bekend||0} bekende verzen en ${v.ontdekking||0} minder bekende uit de hele Bijbel${v.nbv21?`, waarvan ${v.nbv21} NBV21`:""}. Zelfstandig maken gebruikt alleen verzen uit de tekstbank (${(D.tekstbank||{}).verzen||0} verzen, genoeg voor ongeveer ${(D.tekstbank||{}).dagen||0} dagen); Claude vult die bank af en toe aan.</div>
     ${th.sort((a,b)=>a[1].beschikbaar-b[1].beschikbaar).map(([k,x])=>`<div class="thema-rij"><span>${k.replace("_"," ")}</span><div class="bk"><div style="width:${x.beschikbaar/max*100}%"></div></div><span class="sub" style="text-align:right">${x.beschikbaar} van ${x.totaal}</span></div>`).join("")}
   </div><div>
     <b>Muziek: ${mz.length} nummers</b><div class="sub" style="margin-bottom:10px">${ongebruikt(mz)} nog nooit gebruikt · vaakst gebruikt: ${mx(mz)}x${mz[0]&&mz[0].keer?` (${mz[0].naam.replace(/^ES_/,"").replace(/\.mp3$/,"").slice(0,40)})`:""}</div>
