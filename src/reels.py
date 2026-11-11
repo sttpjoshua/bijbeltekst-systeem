@@ -258,3 +258,143 @@ def maak_reel(post, pad, stijl="kinetisch", haak=None, fotos=None, tempo=1.0):
     post["cover_ms"] = cover or int((t0 + 1.0) * 1000)
     post["duur"] = duur
     return pad
+
+
+# =====================================================================
+# Herkenbare situatie (nieuwe aanpak, 11 nov): echte video, het HELE vers in één keer in beeld.
+# =====================================================================
+PLAATSING = {"onder": 0.70, "midden": 0.47, "boven": 0.25}
+
+
+def _band(plaatsing):
+    """Donkere laag achter de tekst, zodat witte tekst op elk videobeeld leesbaar is."""
+    import numpy as np
+    y = np.linspace(0, 1, H)[:, None]
+    if plaatsing == "onder":
+        a = np.clip((y - 0.42) / 0.40, 0, 1) ** 1.3 * 190
+    elif plaatsing == "boven":
+        a = np.clip((0.58 - y) / 0.40, 0, 1) ** 1.3 * 190
+    else:
+        a = 70 + 90 * np.exp(-((y - 0.47) / 0.22) ** 2)
+    a = np.repeat(a, B, axis=1).astype("uint8")
+    laag = Image.new("RGBA", (B, H), (8, 8, 12, 0))
+    laag.putalpha(Image.fromarray(a, "L"))
+    return laag
+
+
+def _schaduw(im, r=10, sterkte=0.6):
+    sch = Image.new("RGBA", im.size, (0, 0, 0, 0))
+    sch.putalpha(im.split()[3].filter(ImageFilter.GaussianBlur(r)).point(lambda a: int(a * sterkte)))
+    sch.alpha_composite(im)
+    return sch
+
+
+def _tekstvlak(post, regels_spec, plaatsing):
+    """regels_spec: lijst van (soort, tekst). soort: label | hook | vers | uitleg | ref | merk. Geeft een RGBA-beeld van het hele scherm."""
+    v = post["variabelen"]
+    serif = v.get("lettertype", "playfair")
+    wit, goud = (250, 248, 242, 255), (255, 212, 140, 255)
+    laag = Image.new("RGBA", (B, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(laag)
+    blokken = []
+    for soort, tekst in regels_spec:
+        if soort == "vers":
+            g = 74
+            while True:
+                f = R._font(serif, g); rg = R._wrap(tekst, f, int(B * 0.82), d)
+                if len(rg) * g * 1.3 <= H * 0.42 or g <= 40:
+                    break
+                g -= 4
+            blokken.append(("vers", rg, f, int(g * 1.3)))
+        elif soort in ("hook", "uitleg"):
+            f = R._font("montserrat" if soort == "hook" else serif, 72 if soort == "hook" else 58)
+            rg = R._wrap(tekst, f, int(B * 0.82), d)
+            blokken.append((soort, rg, f, int(f.size * 1.3)))
+        else:
+            f = R._klein_font({"label": 30, "ref": 34, "merk": 26}[soort], b"SemiBold" if soort != "merk" else b"Medium")
+            if soort == "ref":
+                blokken.append(("ruimte", [""], f, 26))
+            blokken.append((soort, [tekst], f, int(f.size * 1.9)))
+    hoogte = sum(lh * len(rg) for _, rg, _, lh in blokken)
+    y = int(H * PLAATSING[plaatsing] - hoogte / 2)
+    staat = R._kernstaat(post, wit[:3], goud[:3])
+    for soort, rg, f, lh in blokken:
+        for r in rg:
+            if soort == "vers":
+                R._regel(d, B // 2, y, r, f, wit, goud, staat, False)
+            elif soort == "ruimte":
+                pass
+            else:
+                kl = goud if soort in ("label", "ref") else wit
+                d.text((B // 2, y), r, font=f, fill=kl, anchor="ma")
+            y += lh
+    return _schaduw(laag)
+
+
+def maak_situatie(post, pad, clips, plaatsing="onder"):
+    """Reel 'herkenbare situatie': clip 1 met een herkenbare zin, dan een rustige clip met het hele vers,
+    de uitleg en een eindbeeld. clips: 1 of 2 lokale mp4's. Geeft het pad terug."""
+    import tempfile
+    v = post["variabelen"]
+    if not clips:
+        raise RuntimeError("geen clips")
+    a, b = clips[0], clips[-1]
+    hook = (post.get("reel_herkenning") or post.get("verhaal_hook") or post.get("hook") or "").strip()
+    uitleg = (post.get("uitleg") or post.get("reel_uitleg") or "").strip()
+    t1 = 3.8 if hook else 0.0
+    lees = max(5.5, min(11.0, len(post["tekst"]) / 13 + 2.0))
+    t_uit = 4.8 if uitleg else 0.0
+    t_eind = 2.4
+    duur = round(t1 + lees + t_uit + t_eind, 2)
+    tmp = tempfile.mkdtemp()
+    band = _band(plaatsing)
+    segs = []  # (png, start, duur)
+    def png(naam, spec, extra_band=True):
+        im = band.copy() if extra_band else Image.new("RGBA", (B, H), (0, 0, 0, 0))
+        im.alpha_composite(_tekstvlak(post, spec, plaatsing))
+        p = os.path.join(tmp, naam + ".png"); im.save(p); return p
+    if hook:
+        segs.append((png("hook", [("hook", hook)]), 0.0, t1))
+    segs.append((png("vers", [("vers", post["tekst"]), ("ref", post["ref"].upper())]), t1, lees))
+    if uitleg:
+        segs.append((png("uitleg", [("label", "WAT BETEKENT DIT?"), ("uitleg", uitleg)]), t1 + lees, t_uit))
+    eind = Image.new("RGBA", (B, H), (8, 8, 12, 150))
+    eind.alpha_composite(_tekstvlak(post, [("ref", post["ref"].upper()), ("merk", "BIBLEVERSE  ·  @bibleverse_nl")], "midden"))
+    pe = os.path.join(tmp, "eind.png"); eind.save(pe)
+    segs.append((pe, t1 + lees + t_uit, t_eind))
+
+    vul = "scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,setsar=1,fps=30,eq=saturation=0.92:brightness=-0.03"
+    cmd = ["ffmpeg", "-y", "-loglevel", "error",
+           "-stream_loop", "-1", "-t", str(max(t1, 0.5) + 0.5), "-i", a,
+           "-stream_loop", "-1", "-t", str(duur - t1 + 0.6), "-i", b]
+    for p, s, dd in segs:
+        cmd += ["-loop", "1", "-t", str(dd), "-i", p]
+    f = [f"[0:v]{vul},trim=0:{max(t1, 0.5)},setpts=PTS-STARTPTS[a]", f"[1:v]{vul},trim=0:{duur - t1 + 0.4},setpts=PTS-STARTPTS[b]"]
+    if hook:
+        f.append(f"[a][b]xfade=transition=fade:duration=0.45:offset={t1 - 0.45}[bg0]")
+    else:
+        f.append("[b]null[bg0]")
+    vorig = "bg0"
+    for i, (p, s, dd) in enumerate(segs):
+        k = i + 2
+        f.append(f"[{k}:v]format=rgba,fade=t=in:st=0:d=0.35:alpha=1,fade=t=out:st={max(0, dd - 0.3)}:d=0.3:alpha=1,setpts=PTS-STARTPTS+{s}/TB[t{i}]")
+        f.append(f"[{vorig}][t{i}]overlay=eof_action=pass:format=auto[v{i}]")
+        vorig = f"v{i}"
+    f.append(f"[{vorig}]trim=0:{duur},setpts=PTS-STARTPTS,format=yuv420p[uit]")
+    cmd += ["-filter_complex", ";".join(f), "-map", "[uit]"]
+    if post.get("muziek_pad"):
+        cmd += ["-ss", str(post.get("muziek_start", 0)), "-t", str(duur), "-i", post["muziek_pad"]]
+        cmd[cmd.index("-filter_complex") + 1] += f";[{len(segs) + 2}:a]volume=0.85,afade=t=in:st=0:d=0.3,afade=t=out:st={duur - 1.2}:d=1.2[au]"
+        cmd += ["-map", "[au]", "-c:a", "aac"]
+    cmd += ["-c:v", "libx264", "-preset", "veryfast", "-crf", "21", "-movflags", "+faststart", "-t", str(duur), pad]
+    # ffmpeg wil alle -i vóór -filter_complex: zet de muziekinput naar voren
+    if post.get("muziek_pad"):
+        i_m = cmd.index(post["muziek_pad"])
+        muz = cmd[i_m - 5:i_m + 1]
+        del cmd[i_m - 5:i_m + 1]
+        i_f = cmd.index("-filter_complex")
+        cmd[i_f:i_f] = muz
+    subprocess.run(cmd, check=True)
+    post["cover_ms"] = int((t1 + 1.5) * 1000)
+    post["duur"] = duur
+    return pad

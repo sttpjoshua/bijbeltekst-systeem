@@ -1,0 +1,45 @@
+name: Voorbeeldreels maken
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: maken
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      TZ: Europe/Amsterdam
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Benodigdheden
+        env:
+          MATERIAAL_PAT: ${{ secrets.MATERIAAL_PAT }}
+        run: |
+          pip install -q pillow numpy
+          sudo apt-get install -y -qq ffmpeg >/dev/null
+          python3 tools/media.py koppel
+          git clone --depth 1 -q "https://x-access-token:${MATERIAAL_PAT}@github.com/sttpjoshua/bibleverse-materiaal.git" ../bibleverse-materiaal
+      - name: Voorbeelden maken
+        env:
+          COVERR_KEY: ${{ secrets.COVERR_KEY }}
+        run: python3 tools/voorbeeldreels.py
+      - name: Opslaan
+        if: always()
+        run: |
+          git config user.name "bijbeltekst-bot"
+          git config user.email "actions@users.noreply.github.com"
+          sh tools/git_instellen.sh
+          python3 tools/media.py bewaar "Media: voorbeeldreels" || true
+          git add data/voorbeeldreels.json data/clips_gebruikt.json || true
+          git commit -m "Voorbeeldreels (herkenbare situatie)" || exit 0
+          for i in 1 2 3 4 5; do git pull --rebase origin main && git push && break; git rebase --abort 2>/dev/null; sleep 7; done
