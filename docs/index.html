@@ -170,6 +170,40 @@ table th{color:var(--ink3);text-transform:uppercase;font-size:11px;letter-spacin
   h1{font-size:22px}
   .tegel .getal{font-size:30px}
 }
+/* vandaag, weekvergelijking, A/B, tekstbank, maandrapport */
+.vd-kop{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.vd-status{display:flex;align-items:center;gap:10px;font-size:15px;margin:6px 0 12px}.vd-status .groot{font-size:24px}
+.vd-posts{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.vd-post{background:var(--zacht);border-radius:12px;padding:8px 12px;font-size:13px;min-width:150px;cursor:pointer;border-left:4px solid var(--lijn)}
+.vd-post.online{border-left-color:var(--goed)}.vd-post.gepland{border-left-color:var(--accent,#2f6fe4)}.vd-post.fout{border-left-color:var(--slecht)}
+.vd-post b{display:block;font-size:14px}.vd-post .sub{margin:0}
+.mini{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px}
+.mini>div{background:var(--zacht);border-radius:12px;padding:10px 12px}.mini .g{font-size:24px;font-weight:650;font-variant-numeric:tabular-nums}.mini .l{font-size:12.5px;color:var(--ink3)}
+.mini .d{font-size:12px;margin-top:2px}.d.op{color:var(--goed)}.d.neer{color:var(--slecht)}
+.ab{margin:12px 0}.ab h3{font-size:13.5px;margin:0 0 6px}
+.ab .r{display:grid;grid-template-columns:minmax(110px,170px) 1fr auto;gap:10px;align-items:center;padding:4px 0;font-size:13px}
+.ab .bal{background:var(--zacht);border-radius:6px;height:14px;overflow:hidden}.ab .bal i{display:block;height:100%;background:var(--accent,#2f6fe4);border-radius:6px}
+.ab .z{font-size:11.5px;color:var(--ink3);margin-left:6px;font-weight:500}
+.tbr{display:grid;grid-template-columns:minmax(120px,170px) 1fr auto;gap:10px;align-items:start;padding:8px 0;border-top:1px solid var(--lijn);font-size:13px}
+.tbr.uit{opacity:.55}.tbr .kw{display:inline-block;background:var(--zacht);border-radius:8px;padding:1px 7px;font-size:11.5px;margin-left:4px}
+.tbr input{width:100%;font:inherit;padding:6px 8px;border:1px solid var(--lijn);border-radius:8px;background:var(--bg);color:var(--ink)}
+.tbf{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}.tbf input,.tbf select{font:inherit;padding:6px 9px;border:1px solid var(--lijn);border-radius:8px;background:var(--bg);color:var(--ink)}
+.mnd-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:10px}
+@media print{body.printmaand .zijbalk,body.printmaand .kop,body.printmaand #meldingBalk,body.printmaand .tabs{display:none!important}
+  body.printmaand .tab{display:none!important}body.printmaand .tab[data-tab=resultaten]{display:block!important}
+  body.printmaand .tab[data-tab=resultaten]>*:not(#maandKaart){display:none!important}body.printmaand #maandKaart .btn,body.printmaand #maandKaart select{display:none}}
+@media(max-width:900px){
+  .tabs{position:fixed!important;left:0;right:0;bottom:0;z-index:30;background:var(--kaart);border-top:1px solid var(--lijn)!important;padding:4px 4px calc(4px + env(safe-area-inset-bottom))!important;flex-wrap:nowrap!important;justify-content:space-around;gap:0!important;margin:0}
+  .tabs button{flex:1;flex-direction:column;gap:2px!important;padding:6px 2px!important;font-size:10.5px!important;justify-content:center;align-items:center;position:relative;border-radius:8px}
+  .tabs button svg{display:block!important;width:20px!important;height:20px!important}
+  .tabs .navkop,.tabs .navlink{display:none!important}
+  .tabs .teller{position:absolute;top:1px;right:16%;margin:0;font-size:10px}
+  main{padding-bottom:92px!important}
+  .kaart{padding:14px 14px!important}
+  .ab .r,.tbr{grid-template-columns:1fr auto}.ab .r .bal{grid-column:1/-1;order:3}.tbr>:nth-child(2){grid-column:1/-1;order:3}
+  .vd-post{flex:1 1 140px}
+  table.lg{font-size:12px}
+}
 .thema{display:flex;background:var(--zacht);border-radius:11px;padding:3px;margin-top:10px}
 .thema button{flex:1;font:inherit;font-size:11.5px;white-space:nowrap;border:0;background:none;color:var(--ink3);padding:6px 4px;border-radius:9px;cursor:pointer}
 .thema button.aan{background:var(--kaart);color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.08)}
@@ -254,8 +288,9 @@ html[data-thema=donker] .kpost .knws{background:#3a2e14;color:#ffd98a}
   </div>
 
   <div class="tab" data-tab="overzicht">
-    <section class="kaart" id="nieuwsKeuze" style="margin-top:0;display:none"></section>
-    <section class="kaart" id="aandacht" style="margin-top:0"></section>
+    <section class="kaart" id="vandaag" style="margin-top:0"></section>
+    <section class="kaart" id="nieuwsKeuze" style="display:none"></section>
+    <section class="kaart" id="aandacht"></section>
     <div class="grid g4" id="tegels" style="margin-top:14px"></div>
     <section class="grid g2">
       <div class="kaart"><h2>Volgende posts</h2><div id="volgende"></div><a href="#planning" class="sub" onclick="tab('planning');return false">Hele planning bekijken →</a></div>
@@ -289,7 +324,8 @@ html[data-thema=donker] .kpost .knws{background:#3a2e14;color:#ffd98a}
   </div>
 
   <div class="tab" data-tab="resultaten">
-    <section class="kaart" style="margin-top:0"><h2>Laatst geplaatst</h2>
+    <section class="kaart" id="weekVgl" style="margin-top:0"></section>
+    <section class="kaart"><h2>Laatst geplaatst</h2>
       <div class="sub" style="margin:-6px 0 10px">Klik op een kolom om te sorteren. Het label vergelijkt elke post met het gemiddelde van alle gemeten posts.</div>
       <div class="filters" id="lgFilters"></div>
       <div class="lgwrap"><table class="lg" id="lgTabel"></table></div></section>
@@ -298,7 +334,9 @@ html[data-thema=donker] .kpost .knws{background:#3a2e14;color:#ffd98a}
       <div class="kaart"><h2>Groei volgers</h2><div id="groei"></div></div>
       <div class="kaart"><h2>Beste posts</h2><div id="topPosts"></div></div>
     </section>
+    <section class="kaart" id="abKaart"></section>
     <section class="kaart"><h2>Wat het systeem geleerd heeft</h2><div id="inzichten"></div></section>
+    <section class="kaart" id="maandKaart"></section>
   <section class="kaart"><details id="gewDet">
     <summary style="cursor:pointer;list-style:none"><h2 style="display:inline">Voorkeuren per variabele ▾</h2> <span class="sub" id="gewSam"></span></summary>
     <div class="sub" style="margin:10px 0 14px">1,0 is neutraal. Hoger betekent dat het systeem deze optie vaker kiest. n = aantal gemeten posts.</div>
@@ -341,6 +379,8 @@ html[data-thema=donker] .kpost .knws{background:#3a2e14;color:#ffd98a}
         <div class="blok"><h3>Aandeel foto-achtergronden: <span id="vBeeld"></span></h3><input type="range" id="rBeeld" min="0" max="50" step="5"><button class="btn" id="sBeeld">Opslaan</button><div class="sub" style="margin-top:6px">Hoeveel posts een eigen foto als achtergrond krijgen in plaats van een kleurverloop.</div></div>
         <div class="blok"><h3>Experimenteren: <span id="vVerk"></span></h3><input type="range" id="rVerk" min="10" max="40" step="5"><button class="btn" id="sVerk">Opslaan</button><div class="sub" style="margin-top:6px">Hoe vaak het systeem iets nieuws probeert in plaats van wat al goed werkt.</div></div>
       </div>
+      <h3 class="bkop">📚 Tekstbank</h3>
+      <div class="bed"><div class="blok" style="grid-column:1/-1"><div id="bTekstbank"></div></div></div>
       <h3 class="bkop">🔔 Meldingen</h3>
       <div class="bed">
         <div class="blok" style="grid-column:1/-1"><h3>Meldingen op je telefoon (Telegram)</h3><div id="bWa"></div></div>
@@ -367,7 +407,7 @@ html[data-thema=donker] .kpost .knws{background:#3a2e14;color:#ffd98a}
 <div id="lade" onclick="if(event.target===this)sluitLade()"><div class="ladebinnen" id="ladeBinnen"></div></div>
 <div id="galerij" onclick="if(event.target===this)this.style.display='none'"><button class="sluit" onclick="galerij.style.display='none'">✕</button><div class="galrij"></div><div class="tel"></div></div>
 <script>
-const NAMEN={huisstijl:"Huisstijl",thema:"Thema",hook_stijl:"Hook-stijl",formaat:"Formaat",uitleg_op_beeld:"Uitleg op beeld",achtergrondbron:"Achtergrond",boekgroep:"Bijbelboek",lengte:"Lengte vers",bron:"Bekend of ontdekking",vraag_onderaan:"Vraag onderaan",opening:"Eerste slide",tijdslot:"Tijdstip"};
+const NAMEN={huisstijl:"Huisstijl",thema:"Thema",hook_stijl:"Hook-stijl",formaat:"Formaat",uitleg_op_beeld:"Uitleg op beeld",achtergrondbron:"Achtergrond",boekgroep:"Bijbelboek",lengte:"Lengte vers",bron:"Bekend of ontdekking",vraag_onderaan:"Vraag onderaan",opening:"Eerste slide",tijdslot:"Tijdstip",reel_stijl:"Reelstijl",reel_plaatsing:"Tekst in reel",reel_scene:"Rustbeeld in reel"};
 const STATUS={wacht_op_tekst:"Wacht op tekst",gerenderd:"Klaar, gaat online",afgekeurd:"Overgeslagen door jou",overgeslagen:"Overgeslagen",gepubliceerd:"Gepubliceerd",fout:"Fout"};
 const fmt=n=>n==null?"–":Number(n).toLocaleString("nl-NL");
 const tip=document.getElementById("tip");
@@ -392,7 +432,7 @@ function bouw(){
   const p=D.posts;
   try{const gem=D.posts.filter(x=>x.totaal&&(x.totaal.reach!=null||x.totaal.views!=null)&&x.score&&Object.keys(x.score).length).length;
     document.getElementById("gewSam").textContent=gem<6?`(wordt interessant vanaf 6 gemeten posts; nu ${gem})`:"";if(gem>=6)document.getElementById("gewDet").open=true}catch(e){}
-  bouwNieuwsKeuze();bouwAandacht();bouwReacties();bouwVolgende();bouwLaatst();bouwVerzoeken();bouwGezondheid();bouwTegels();bouwSnelLeren();bouwGroei();bouwTop();bouwInzichten();bouwVoorraad();
+  bouwNieuwsKeuze();bouwAandacht();bouwVandaag();bouwWeekVgl();bouwAB();bouwMaand();bouwTekstbank();bouwReacties();bouwVolgende();bouwLaatst();bouwVerzoeken();bouwGezondheid();bouwTegels();bouwSnelLeren();bouwGroei();bouwTop();bouwInzichten();bouwVoorraad();
 
   // logboek
   document.getElementById("logboek").innerHTML=(D.logboek||[]).slice().reverse().map(l=>`<div class="${l.soort==="fout"&&!l.opgelost?"fout":""}"><span class="t">${l.t.replace("T"," ")}</span>${l.tekst.length>170?l.tekst.slice(0,170)+"…":l.tekst}${l.opgelost?' <span style="color:var(--goed)">(opgelost)</span>':""}</div>`).join("")||'<div class="leeg">Nog niets gelogd.</div>';
@@ -486,25 +526,134 @@ const ACTIES={
   verbinding:f=>knop("Verbinding testen",{actie:"test"},"prim"),
   statistieken:f=>knop("Opnieuw ophalen",{actie:"statistieken_nu"},"prim"),
 };
+const WEG=(()=>{try{return new Set(JSON.parse(localStorage.getItem("bv_weg")||"[]"))}catch(e){return new Set()}})();
+function wegKlik(id){WEG.add(id);try{localStorage.setItem("bv_weg",JSON.stringify([...WEG].slice(-60)))}catch(e){}bouwAandacht();bouwVandaag()}
+let NODIG=0;
 function bouwAandacht(){
-  const nopen=new Set(((D.nieuws||{}).recent||[]).filter(x=>x.status==="voorstel").map(x=>x.id));
+  const nopen=((D.nieuws||{}).recent||[]).filter(x=>x.status==="voorstel");
   const f=(D.recente_fouten||[]).filter(x=>x.code!=="nieuws_voorstel").slice().reverse(),el=document.getElementById("aandacht"),n=D.nood||{klaar:6,doel:6};
-  const extra=[];
-  if(n.klaar<2)extra.push(`<div class="melding info"><div class="wat"><b>Noodvoorraad bijna op</b> (${n.klaar} van ${n.doel})</div><div class="sub">Die posts vangen een mislukte dagelijkse run op.</div><div class="acties"><button class="btn prim" data-vraagclaude="Vul de noodvoorraad aan tot 6 posts.">Vraag Claude om aan te vullen</button></div></div>`);
+  const extra=[],info=[];
+  if(nopen.length)extra.push(`<div class="melding info" style="border-left-color:var(--accent)"><div class="wat"><b>📰 ${nopen.length} nieuwsvoorstel${nopen.length>1?"len":""}</b>: kies wat er gemaakt wordt</div><div class="sub">${nopen.slice(0,2).map(x=>esc(x.kop)).join(" · ")}</div><div class="acties"><button class="btn prim" onclick="document.getElementById('nieuwsKeuze').scrollIntoView({behavior:'smooth'})">Bekijken en kiezen</button></div></div>`);
+  if(n.klaar<2)extra.push(`<div class="melding info"><div class="wat"><b>Noodvoorraad bijna op</b> (${n.klaar} van ${n.doel})</div><div class="sub">Die posts vangen een mislukte dagelijkse run op.</div><div class="acties">${knop("Nu aanvullen",{actie:"posts_maken"},"prim")}<button class="btn" data-vraagclaude="Vul de noodvoorraad aan tot 6 posts.">Vraag Claude</button></div></div>`);
   const openR=(D.reacties||[]).filter(r=>r.status==="nieuw"||r.status==="voorgesteld");
   if(openR.length)extra.push(`<div class="melding info" style="border-left-color:var(--accent)"><div class="wat"><b>💬 ${openR.length} nieuwe reactie${openR.length>1?"s":""}</b></div><div class="sub">${openR.slice(0,2).map(r=>`${esc(r.naam)}: “${esc(r.tekst.slice(0,60))}”`).join(" · ")}</div><div class="acties"><button class="btn prim" onclick="tab('inbox')">Bekijken en beantwoorden</button></div></div>`);
-  const klaar=(D.verzoeken||[]).filter(v=>v.status==="klaar"&&uurGeleden(v.bijgewerkt||v.t)<24);
-  if(klaar.length)extra.push(`<div class="melding info" style="border-left-color:var(--goed)"><div class="wat"><b>Claude heeft ${klaar.length} verzoek${klaar.length>1?"en":""} afgehandeld</b></div><div class="sub">Zie "Vraag Claude" hieronder.</div></div>`);
-  document.getElementById("tAandacht").textContent=f.length||"";
-  if(!f.length&&!extra.length){
-    const v=D.posts.filter(x=>x.status==="gerenderd").sort((a,b)=>(a.datum+a.variabelen.tijdslot).localeCompare(b.datum+b.variabelen.tijdslot))[0];
-    el.innerHTML=`<div class="allesgoed"><span class="groot">✅</span><div><b>Alles loopt.</b><div class="sub">${v?`Volgende post: ${v.ref}, ${new Date(v.datum).toLocaleDateString("nl-NL",{weekday:"long"})} om ${v.variabelen.tijdslot}.`:"Er staat nog geen post klaar; de dagelijkse taak maakt ze."} ${(D.herstel||[]).length?`Deze week ${(D.herstel||[]).length} keer zelf iets opgelost.`:""}</div></div></div>`;
-    return}
-  el.innerHTML=`<h2>Aandacht nodig</h2>`+extra.join("")+f.map(x=>{
+  const tb=D.tekstbank||{};
+  if(tb.zelfstandig&&tb.dagen<10)extra.push(`<div class="melding info"><div class="wat"><b>Tekstbank bijna op</b>: nog ongeveer ${tb.dagen} dagen aan nieuwe verzen</div><div class="sub">Daarna herhaalt het systeem de oudste verzen. Vraag Claude om de bank aan te vullen.</div><div class="acties"><button class="btn prim" data-vraagclaude="Vul de tekstbank aan met nieuwe verzen, teksten en herkenningszinnen.">Vraag Claude</button></div></div>`);
+  (D.verzoeken||[]).filter(v=>v.status==="klaar"&&uurGeleden(v.bijgewerkt||v.t)<72&&!WEG.has("v"+v.id)).forEach(v=>info.push(`<div class="melding info" style="border-left-color:var(--goed)"><div class="wat"><b>Claude heeft een verzoek afgehandeld</b>: ${esc((v.tekst||"").slice(0,90))}</div><div class="sub">${esc((v.antwoord||"").slice(0,200))}</div><div class="acties"><button class="btn" onclick="wegKlik('v${esc(v.id)}')">✓ Gelezen</button></div></div>`));
+  NODIG=f.length+extra.length;
+  document.getElementById("tAandacht").textContent=NODIG||"";
+  if(!f.length&&!extra.length&&!info.length){
+    el.style.display="none";return}
+  el.style.display="";
+  if(!f.length&&!extra.length){el.innerHTML=`<h2>Meldingen</h2>`+info.join("");return}
+  el.innerHTML=`<h2>Wat moet ik doen? <span class="sub" style="font-weight:500">${NODIG} ${NODIG===1?"ding wacht":"dingen wachten"} op jou</span></h2>`+extra.join("")+f.map(x=>{
     const jij=x.tekst.startsWith("ACTIE VOOR JOU");
     const acties=(ACTIES[x.code]?ACTIES[x.code](x):"")+
       `<button class="btn" data-vraagclaude="${esc("Los dit op: "+x.tekst)}">Vraag Claude</button>`+knop("✓ Opgelost",{actie:"fout_opgelost",t:x.t});
-    return `<div class="melding"><div class="wat">${jij?"<b>Actie voor jou:</b> "+esc(x.tekst.replace(/^ACTIE VOOR JOU:\s*/,"")):esc(x.tekst)}</div><div class="sub">${geleden(x.t)}</div><div class="acties">${acties}</div>${["rechten","verbinding"].includes(x.code)||/recht|token/i.test(x.tekst)?stappenMeta():""}</div>`}).join("");
+    return `<div class="melding"><div class="wat">${jij?"<b>Actie voor jou:</b> "+esc(x.tekst.replace(/^ACTIE VOOR JOU:\s*/,"")):esc(x.tekst)}</div><div class="sub">${geleden(x.t)}</div><div class="acties">${acties}</div>${["rechten","verbinding"].includes(x.code)||/recht|token/i.test(x.tekst)?stappenMeta():""}</div>`}).join("")+info.join("");
+}
+function lokaleDatum(d=new Date()){return d.toLocaleDateString("sv-SE")}
+function bouwVandaag(){
+  const el=document.getElementById("vandaag");if(!el)return;
+  const vd=lokaleDatum(),dagnaam=new Date().toLocaleDateString("nl-NL",{weekday:"long",day:"numeric",month:"long"});
+  const lijst=D.posts.filter(x=>x.datum===vd&&!["afgekeurd","overgeslagen"].includes(x.status)).sort((a,b)=>(a.variabelen.tijdslot||"").localeCompare(b.variabelen.tijdslot||""));
+  const online=lijst.filter(x=>x.status==="gepubliceerd").length;
+  const nu=new Date().toTimeString().slice(0,5);
+  const chips=lijst.map(x=>{
+    const g=x.status==="gepubliceerd",gemist=(x.gemist||[]).length>0&&!g,laat=!g&&(x.variabelen.tijdslot||"99")<nu;
+    const k=g?"online":(gemist||laat)?"fout":"gepland",st=g?"✓ online":gemist?"⚠ gemist":laat?"⏳ wordt gepost":"gepland";
+    const ico=x.variabelen.formaat==="video"?"▶ reel":"▤ carrousel";
+    return `<div class="vd-post ${k}" onclick="openLade('${x.id}')"><b>${x.variabelen.tijdslot||""} · ${esc(x.ref)}</b><div class="sub">${ico} · ${st}</div></div>`}).join("");
+  const volgende=D.posts.filter(x=>x.status==="gerenderd"&&(x.datum+(x.variabelen.tijdslot||""))>vd+nu).sort((a,b)=>(a.datum+a.variabelen.tijdslot).localeCompare(b.datum+b.variabelen.tijdslot))[0];
+  const status=D.config.pauze?`<span class="groot">⏸</span><div><b>Gepauzeerd</b><div class="sub">Er gaat niets online tot je op Hervatten klikt.</div></div>`
+    :NODIG?`<span class="groot">👀</span><div><b>${NODIG} ${NODIG===1?"ding wacht":"dingen wachten"} op jou</b><div class="sub">Zie hieronder bij "Wat moet ik doen?".</div></div>`
+    :`<span class="groot">✅</span><div><b>Alles loopt.</b><div class="sub">${volgende?`Volgende post: ${volgende.datum===vd?"vandaag":new Date(volgende.datum).toLocaleDateString("nl-NL",{weekday:"long"})} om ${volgende.variabelen.tijdslot} (${esc(volgende.ref)}).`:"Er staat nog geen post klaar; de dagelijkse taak maakt ze."}</div></div>`;
+  el.innerHTML=`<div class="vd-kop"><h2 style="margin:0">Vandaag · ${dagnaam}</h2><span class="sub">${lijst.length?`${online} van ${lijst.length} online`:"Geen posts vandaag"}</span></div>
+    <div class="vd-status">${status}</div>
+    ${chips?`<div class="vd-posts">${chips}</div>`:""}`;
+}
+function delta(nu,vor){if(!vor)return nu?`<div class="d">eerste week met cijfers</div>`:"";const p=Math.round((nu-vor)/vor*100);return `<div class="d ${p>=0?"op":"neer"}">${p>=0?"▲ +":"▼ "}${p}% t.o.v. vorige week</div>`}
+function bouwWeekVgl(){
+  const el=document.getElementById("weekVgl");if(!el)return;
+  const w=D.weken||{},d=w.deze||{},v=w.vorige||{};
+  const gr=(D.groei||[]).filter(x=>x.instagram!=null),g7=gr.slice(-8),dv=g7.length>1?g7[g7.length-1].instagram-g7[0].instagram:null;
+  const t=(g,l,k)=>`<div><div class="g">${fmt(d[k])}</div><div class="l">${l}</div>${delta(d[k],v[k])}</div>`;
+  el.innerHTML=`<h2>Deze week</h2><div class="sub" style="margin:-6px 0 10px">Laatste 7 dagen, vergeleken met de 7 dagen daarvoor.</div><div class="mini">${t(0,"bereik","reach")}${t(0,"weergaven","views")}${t(0,"likes","likes")}${t(0,"reacties","comments")}${t(0,"opgeslagen","saves")}${t(0,"posts geplaatst","posts")}
+    <div><div class="g">${dv==null?"–":(dv>=0?"+":"")+dv}</div><div class="l">nieuwe volgers (7 d)</div></div></div>`;
+}
+const metBereik=x=>x.status==="gepubliceerd"&&x.totaal&&(x.totaal.reach!=null||x.totaal.views!=null);
+const bereikVan=x=>x.totaal.reach||x.totaal.views||0;
+function bouwAB(){
+  const el=document.getElementById("abKaart");if(!el)return;
+  const alle=D.posts.filter(x=>!["afgekeurd","overgeslagen"].includes(x.status)),gem=D.posts.filter(metBereik);
+  const dims=[["formaat","Reel of carrousel"],["reel_plaatsing","Waar staat de tekst in de reel?"],["reel_scene","Welk rustbeeld in de reel?"],["opening","Eerste slide van een carrousel"],["achtergrondbron","Kleurverloop of foto"]];
+  let h=`<h2>Wat werkt beter?</h2><div class="sub" style="margin:-6px 0 8px">Gemiddeld bereik per post. Een vergelijking wordt pas betrouwbaar bij ongeveer 8 posts per kant.</div>`;
+  let n=0;
+  for(const [dim,naam] of dims){
+    const opts={};
+    alle.forEach(x=>{const o=x.variabelen[dim];if(o==null)return;(opts[o]=opts[o]||{n:0,m:0,som:0,gepland:0}).gepland++});
+    gem.forEach(x=>{const o=x.variabelen[dim];if(o==null)return;const q=opts[o]||(opts[o]={n:0,m:0,som:0,gepland:0});q.n++;q.som+=bereikVan(x)});
+    const rijen=Object.entries(opts).filter(([k,q])=>q.gepland>0);if(rijen.length<2)continue;
+    const max=Math.max(1,...rijen.map(([k,q])=>q.n?q.som/q.n:0));
+    const minN=Math.min(...rijen.map(([k,q])=>q.n));
+    const z=minN>=8?"redelijk zeker":minN>=3?"eerste aanwijzing":"te vroeg om te zeggen";
+    n++;
+    h+=`<div class="ab"><h3>${naam}<span class="z">${z}</span></h3>`+rijen.sort((a,b)=>(b[1].n?b[1].som/b[1].n:0)-(a[1].n?a[1].som/a[1].n:0)).map(([k,q])=>{const g=q.n?Math.round(q.som/q.n):null;
+      return `<div class="r"><span>${esc(on(k))}</span><div class="bal"><i style="width:${g?Math.max(4,g/max*100):0}%"></i></div><span>${g==null?"nog niets gemeten":g+" bereik"} <span class="sub">· ${q.n} gemeten, ${q.gepland-q.n} gepland</span></span></div>`}).join("")+`</div>`}
+  el.innerHTML=h+(n?"":'<div class="leeg">Zodra er van meerdere opties posts zijn geplaatst, verschijnt hier een vergelijking.</div>');
+}
+let MAANDSEL=null;
+function bouwMaand(){
+  const el=document.getElementById("maandKaart");if(!el)return;
+  const maanden=[...new Set(D.posts.filter(x=>x.status==="gepubliceerd").map(x=>x.datum.slice(0,7)))].sort().reverse();
+  if(!maanden.length){el.innerHTML=`<h2>Maandrapport</h2><div class="leeg">Zodra er posts zijn geplaatst, verschijnt hier een maandoverzicht.</div>`;return}
+  const m=MAANDSEL&&maanden.includes(MAANDSEL)?MAANDSEL:maanden[0];
+  const ps=D.posts.filter(x=>x.status==="gepubliceerd"&&x.datum.startsWith(m)),gm=ps.filter(metBereik);
+  const som=k=>ps.reduce((a,x)=>a+((x.totaal||{})[k]||0),0);
+  const reels=ps.filter(x=>x.variabelen.formaat==="video").length,nieuws=ps.filter(x=>x.variabelen.aanleiding==="nieuws").length;
+  const top=gm.slice().sort((a,b)=>bereikVan(b)-bereikVan(a))[0];
+  const th={};gm.forEach(x=>{const k=x.variabelen.thema;(th[k]=th[k]||[]).push(bereikVan(x))});
+  const thr=Object.entries(th).filter(([k,v])=>v.length>=2).map(([k,v])=>[k,v.reduce((a,b)=>a+b)/v.length,v.length]).sort((a,b)=>b[1]-a[1]);
+  const gr=(D.groei||[]).filter(x=>x.instagram!=null&&x.datum.startsWith(m)),dv=gr.length>1?gr[gr.length-1].instagram-gr[0].instagram:null;
+  const naam=new Date(m+"-15").toLocaleDateString("nl-NL",{month:"long",year:"numeric"});
+  const ins=(D.strategie.inzichten||[]).filter(i=>(i.datum||"").startsWith(m)).slice(-2);
+  el.innerHTML=`<div class="vd-kop"><h2 style="margin:0">Maandrapport · ${naam}</h2><span><select id="mndKies" class="veld" style="width:auto">${maanden.map(x=>`<option value="${x}" ${x===m?"selected":""}>${new Date(x+"-15").toLocaleDateString("nl-NL",{month:"long",year:"numeric"})}</option>`).join("")}</select> <button class="btn" id="mndPrint">Afdrukken of opslaan als PDF</button></span></div>
+    <div class="mini" style="margin-top:12px"><div><div class="g">${ps.length}</div><div class="l">posts geplaatst</div><div class="d">${reels} reels, ${ps.length-reels} carrousels</div></div>
+      <div><div class="g">${fmt(som("reach")||som("views"))}</div><div class="l">bereik totaal</div></div>
+      <div><div class="g">${fmt(som("likes"))}</div><div class="l">likes</div></div>
+      <div><div class="g">${fmt(som("comments"))}</div><div class="l">reacties</div></div>
+      <div><div class="g">${fmt(som("saves"))}</div><div class="l">opgeslagen</div></div>
+      <div><div class="g">${dv==null?"–":(dv>=0?"+":"")+dv}</div><div class="l">volgers Instagram</div></div></div>
+    <div class="mnd-g">${top?`<div class="inzicht"><div class="sub">Beste post</div><b>${esc(top.ref)}</b> (${top.variabelen.formaat==="video"?"reel":"carrousel"}, ${top.datum})<div class="sub">bereik ${fmt(bereikVan(top))} · ${fmt(top.totaal.likes)} likes</div></div>`:""}
+      ${thr.length?`<div class="inzicht"><div class="sub">Thema's op bereik</div>${thr.slice(0,3).map(x=>`<div>${esc(on(x[0]))}: gem. ${Math.round(x[1])} (${x[2]} posts)</div>`).join("")}</div>`:""}
+      <div class="inzicht"><div class="sub">Aanleiding</div>${nieuws} nieuwsposts, ${ps.length-nieuws} tijdloos</div>
+      ${ins.map(i=>`<div class="inzicht"><div class="sub">Analyse ${esc(i.datum)}</div>${esc(i.tekst)}</div>`).join("")}</div>`;
+  document.getElementById("mndKies").onchange=e=>{MAANDSEL=e.target.value;bouwMaand()};
+  document.getElementById("mndPrint").onclick=()=>{document.body.classList.add("printmaand");const w=()=>{document.body.classList.remove("printmaand");window.removeEventListener("afterprint",w)};window.addEventListener("afterprint",w);window.print()};
+}
+const TB={q:"",f:"alle",n:30,edit:null};
+function bouwTekstbank(){
+  const el=document.getElementById("bTekstbank");if(!el)return;
+  const L=D.tekstbank_lijst||[],tb=D.tekstbank||{};
+  const uit=L.filter(x=>x.uit).length,nooit=L.filter(x=>!x.n).length;
+  const q=TB.q.toLowerCase();
+  let r=L.filter(x=>(TB.f==="alle"||(TB.f==="uit"&&x.uit)||(TB.f==="nooit"&&!x.n)||(TB.f==="gebruikt"&&x.n))&&(!q||(x.ref+" "+x.kw+" "+x.herkenning).toLowerCase().includes(q)));
+  r.sort((a,b)=>(a.laatst||"0").localeCompare(b.laatst||"0")||a.ref.localeCompare(b.ref));
+  const toon=r.slice(0,TB.n);
+  el.innerHTML=`<div class="sub">${L.length} verzen in de bank, ${nooit} nog nooit gebruikt, ${uit} uitgezet. Genoeg voor ongeveer <b>${tb.dagen??"?"} dagen</b>. Een uitgezet vers wordt niet meer gekozen.</div>
+    <div class="tbf"><input id="tbZoek" placeholder="Zoek op vers, kernwoord of zin" value="${esc(TB.q)}"><select id="tbF">${[["alle","Alle"],["nooit","Nog nooit gebruikt"],["gebruikt","Al gebruikt"],["uit","Uitgezet"]].map(([k,n])=>`<option value="${k}" ${TB.f===k?"selected":""}>${n}</option>`).join("")}</select></div>`+
+    toon.map(x=>`<div class="tbr ${x.uit?"uit":""}"><div><b>${esc(x.ref)}</b>${x.kw?`<span class="kw">${esc(x.kw)}</span>`:""}<div class="sub">${x.laatst?"laatst: "+x.laatst:"nog nooit"}${x.n>1?" · "+x.n+"x":""}</div></div>
+      <div>${TB.edit===x.id?`<input id="tbIn" value="${esc(x.herkenning)}" maxlength="90"><div class="sub">Begint meestal met "Voor iedereen die…". Maximaal 90 tekens, geen streepje.</div>`:`<span class="sub" style="font-size:13px">${esc(x.herkenning)||"(geen herkenningszin)"}</span>`}</div>
+      <div class="seg">${TB.edit===x.id?`<button class="btn prim" data-tbs="${esc(x.id)}">Opslaan</button><button class="btn" data-tbx="1">Annuleren</button>`:`<button class="btn" data-tbe="${esc(x.id)}" title="Herkenningszin aanpassen">✎</button><button class="btn ${x.uit?"prim":""}" data-tbu="${esc(x.id)}">${x.uit?"Aanzetten":"Uitzetten"}</button>`}</div></div>`).join("")+
+    (r.length>toon.length?`<div style="margin-top:10px"><button class="btn" id="tbMeer">Toon meer (${r.length-toon.length} verborgen)</button></div>`:"")+(!r.length?'<div class="leeg">Geen verzen gevonden.</div>':"");
+  const zoek=document.getElementById("tbZoek");if(zoek)zoek.oninput=e=>{TB.q=e.target.value;TB.n=30;const pos=e.target.selectionStart;bouwTekstbank();const z=document.getElementById("tbZoek");z.focus();z.setSelectionRange(pos,pos)};
+  const f=document.getElementById("tbF");if(f)f.onchange=e=>{TB.f=e.target.value;TB.n=30;bouwTekstbank()};
+  const meer=document.getElementById("tbMeer");if(meer)meer.onclick=()=>{TB.n+=40;bouwTekstbank()};
+  const byId=id=>L.find(x=>x.id===id)||{};
+  el.querySelectorAll("[data-tbe]").forEach(b=>b.onclick=()=>{TB.edit=b.dataset.tbe;bouwTekstbank();const i=document.getElementById("tbIn");if(i)i.focus()});
+  el.querySelectorAll("[data-tbx]").forEach(b=>b.onclick=()=>{TB.edit=null;bouwTekstbank()});
+  el.querySelectorAll("[data-tbs]").forEach(b=>b.onclick=()=>{const id=b.dataset.tbs,t=document.getElementById("tbIn").value.trim();TB.edit=null;stuur({actie:"tekstbank_hook",vers_id:id,ref:byId(id).ref,tekst:t},b)});
+  el.querySelectorAll("[data-tbu]").forEach(b=>b.onclick=()=>{const id=b.dataset.tbu,x=byId(id);stuur({actie:"tekstbank_vers",vers_id:id,ref:x.ref,aan:!!x.uit},b)});
 }
 function bouwReacties(){
   const el=document.getElementById("reactiesKaart"),open=(D.reacties||[]).filter(r=>r.status==="nieuw"||r.status==="voorgesteld");
@@ -930,6 +1079,7 @@ function bouwTop(){
   el.innerHTML=h+(met.length?"":'<div class="sub" style="margin-top:6px">Gesorteerd op bereik; de score komt zodra een post 20 of meer mensen heeft bereikt.</div>');
 }
 const OPTNAAM={afbeelding:"afbeeldingen",video:"video's",carrousel:"carrousels",verloop:"kleurverloop",beeld:"foto-achtergrond",true:"met uitleg op het beeld",false:"zonder uitleg",geen:"geen hook",vraag:"een vraag als hook",herkenning:"een herkenbare hook",uitdaging:"een uitdaging als hook",rustig:"een rustige hook",avond:"stijl avond",zand:"stijl zand",salie:"stijl salie",psalmen:"verzen uit de Psalmen",spreuken:"verzen uit Spreuken",wijsheid:"verzen uit Job, Prediker en Hooglied",profeten:"verzen uit de profeten",evangelien:"verzen uit de evangeliën",brieven:"verzen uit de brieven",kort:"korte verzen",middel:"middellange verzen",lang:"lange verzen",bekend:"bekende verzen",ontdekking:"minder bekende verzen"};
+Object.assign(OPTNAAM,{situatie:"herkenbare situatie",klassiek:"klassieke reel",midden:"tekst in het midden",boven:"tekst boven",natuur:"natuurbeeld",dichtbij:"close-up beeld",onderweg:"beeld onderweg"});
 const on=o=>OPTNAAM[o]||String(o).replace("_"," ");
 function bouwInzichten(){
   const el=document.getElementById("inzichten"),nodig=D.min_posts_voor_leren,gem=D.gemeten_posts||0;

@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-11T21:00",
+ "gegenereerd": "2026-11-11T21:09",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -5009,6 +5009,1781 @@
    },
    "reeks": null,
    "reeks_label": null
+  }
+ ],
+ "tekstbank_lijst": [
+  {
+   "id": "Acts-1-8-8",
+   "ref": "Handelingen 1:8",
+   "kw": "kracht",
+   "herkenning": "",
+   "uit": false,
+   "laatst": "2026-11-13",
+   "n": 1
+  },
+  {
+   "id": "Colossians-2-7-7",
+   "ref": "Kolossenzen 2:7",
+   "kw": "dankzegging",
+   "herkenning": "Voor iedereen die stevig wil staan.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Colossians-3-2-2",
+   "ref": "Kolossenzen 3:2",
+   "kw": "boven",
+   "herkenning": "Voor iedereen die vastloopt in dagelijkse zorgen.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Deuteronomy-31-6-6",
+   "ref": "Deuteronomium 31:6",
+   "kw": "verlaten",
+   "herkenning": "Voor iedereen die ergens nieuw begint.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Deuteronomy-31-8-8",
+   "ref": "Deuteronomium 31:8",
+   "kw": "voor",
+   "herkenning": "Voor iedereen die opziet tegen morgen.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Ecclesiastes-1-9-9",
+   "ref": "Prediker 1:9",
+   "kw": "nieuws",
+   "herkenning": "Voor iedereen die zijn oude kleding weer modern ziet worden.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Ecclesiastes-10-18-18",
+   "ref": "Prediker 10:18",
+   "kw": "luiheid",
+   "herkenning": "Voor iedereen met een klusjeslijst die alleen maar langer wordt.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Ecclesiastes-11-4-4",
+   "ref": "Prediker 11:4",
+   "kw": "wind",
+   "herkenning": "Voor iedereen die nog wacht op het perfecte moment om te beginnen.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Ecclesiastes-12-12-12",
+   "ref": "Prediker 12:12",
+   "kw": "vermoeiing",
+   "herkenning": "Voor iedereen die vanavond nog moet studeren.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Ecclesiastes-3-1-1",
+   "ref": "Prediker 3:1",
+   "kw": "tijd",
+   "herkenning": "Voor iedereen die vindt dat alles te snel of te langzaam gaat.",
+   "uit": false,
+   "laatst": "2026-11-11",
+   "n": 1
+  },
+  {
+   "id": "Ecclesiastes-4-9-10",
+   "ref": "Prediker 4:9-10",
+   "kw": "Twee",
+   "herkenning": "Voor iedereen met een vriend die er altijd is.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Ecclesiastes-9-10-10",
+   "ref": "Prediker 9:10",
+   "kw": "macht",
+   "herkenning": "Voor iedereen die vandaag geen zin heeft in zijn werk.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Ephesians-2-10-10",
+   "ref": "Efeze 2:10",
+   "kw": "maaksel",
+   "herkenning": "Voor iedereen die zich afvraagt of het ertoe doet wat hij doet.",
+   "uit": false,
+   "laatst": "2026-11-13",
+   "n": 1
+  },
+  {
+   "id": "Ephesians-5-20-20",
+   "ref": "Efeze 5:20",
+   "kw": "Dankende",
+   "herkenning": "Voor iedereen die vandaag even wil stilstaan bij wat goed is.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Ephesians-6-10-10",
+   "ref": "Efeze 6:10",
+   "kw": "krachtig",
+   "herkenning": "Voor iedereen die vandaag zwak voelt.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Exodus-14-14-14",
+   "ref": "Exodus 14:14",
+   "kw": "strijden",
+   "herkenning": "Voor iedereen die klem zit en geen uitweg ziet.",
+   "uit": false,
+   "laatst": "2026-11-14",
+   "n": 1
+  },
+  {
+   "id": "Galatians-2-20-20",
+   "ref": "Galaten 2:20",
+   "kw": "leeft",
+   "herkenning": "Voor iedereen die zoekt naar wie hij echt is.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Galatians-3-26-26",
+   "ref": "Galaten 3:26",
+   "kw": "kinderen",
+   "herkenning": "Voor iedereen die zich buitengesloten voelt.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Genesis-1-27-27",
+   "ref": "Genesis 1:27",
+   "kw": "beeld",
+   "herkenning": "Voor iedereen die zich vandaag niets waard voelt.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Habakkuk-3-18-18",
+   "ref": "Habakuk 3:18",
+   "kw": "vreugde",
+   "herkenning": "",
+   "uit": false,
+   "laatst": "2026-11-12",
+   "n": 1
+  },
+  {
+   "id": "Hebrews-10-23-23",
+   "ref": "Hebreeën 10:23",
+   "kw": "getrouw",
+   "herkenning": "Voor iedereen die bijna wil loslaten.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Hebrews-11-1-1",
+   "ref": "Hebreeën 11:1",
+   "kw": "geloof",
+   "herkenning": "Voor iedereen die wacht op iets dat nog niet komt.",
+   "uit": false,
+   "laatst": "2026-11-15",
+   "n": 1
+  },
+  {
+   "id": "Hebrews-11-6-6",
+   "ref": "Hebreeën 11:6",
+   "kw": "geloof",
+   "herkenning": "Voor iedereen die twijfelt maar toch zoekt.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Hebrews-6-19-19",
+   "ref": "Hebreeën 6:19",
+   "kw": "anker",
+   "herkenning": "Voor iedereen die heen en weer geslingerd wordt.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "II_Corinthians-1-4-4",
+   "ref": "2 Korinthe 1:4",
+   "kw": "vertroost",
+   "herkenning": "Voor iedereen die weet hoe zwaar het kan zijn.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "II_Corinthians-5-17-17",
+   "ref": "2 Korinthe 5:17",
+   "kw": "nieuw",
+   "herkenning": "Voor iedereen die vastzit in wie hij vroeger was.",
+   "uit": false,
+   "laatst": "2026-11-15",
+   "n": 1
+  },
+  {
+   "id": "I_Corinthians-13-13-13",
+   "ref": "1 Korinthe 13:13",
+   "kw": "liefde",
+   "herkenning": "Voor iedereen die vergeet wat echt telt.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "I_Corinthians-13-4-4",
+   "ref": "1 Korinthe 13:4",
+   "kw": "liefde",
+   "herkenning": "Voor iedereen die vandaag weinig geduld heeft.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "I_Corinthians-16-13-13",
+   "ref": "1 Korinthe 16:13",
+   "kw": "sterk",
+   "herkenning": "Voor iedereen die vandaag moed nodig heeft.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "I_John-3-1-1",
+   "ref": "1 Johannes 3:1",
+   "kw": "Ziet",
+   "herkenning": "Voor iedereen die zich vandaag geen kind van God voelt.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "I_John-3-18-18",
+   "ref": "1 Johannes 3:18",
+   "kw": "daad",
+   "herkenning": "Voor iedereen die vaak 'ik hou van je' zegt.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "I_John-4-10-10",
+   "ref": "1 Johannes 4:10",
+   "kw": "liefde",
+   "herkenning": "Voor iedereen die denkt dat hij Gods liefde moet verdienen.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "I_John-4-19-19",
+   "ref": "1 Johannes 4:19",
+   "kw": "eerst",
+   "herkenning": "Voor iedereen die denkt dat hij liefde moet verdienen.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "I_John-4-7-7",
+   "ref": "1 Johannes 4:7",
+   "kw": "liefde",
+   "herkenning": "Voor iedereen die vandaag liefde wil geven.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "I_John-4-8-8",
+   "ref": "1 Johannes 4:8",
+   "kw": "liefde",
+   "herkenning": "Voor iedereen die moeite heeft met iemand in zijn omgeving.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "I_Peter-2-9-9",
+   "ref": "1 Petrus 2:9",
+   "kw": "uitverkoren",
+   "herkenning": "Voor iedereen die zich vandaag niet gekozen voelt.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "I_Peter-4-8-8",
+   "ref": "1 Petrus 4:8",
+   "kw": "liefde",
+   "herkenning": "Voor iedereen die zich vandaag aan iemand ergert.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "I_Peter-5-7-7",
+   "ref": "1 Petrus 5:7",
+   "kw": "zorgt",
+   "herkenning": "Voor iedereen die vannacht lag te malen.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "I_Samuel-16-7-7",
+   "ref": "1 Samuël 16:7",
+   "kw": "hart",
+   "herkenning": "Voor iedereen die zich vandaag niet mooi genoeg voelt.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "I_Thessalonians-5-16-18",
+   "ref": "1 Thessalonicenzen 5:16-18",
+   "kw": "Dankt",
+   "herkenning": "Voor iedereen die vandaag weinig reden ziet om te danken.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Isaiah-12-2-2",
+   "ref": "Jesaja 12:2",
+   "kw": "vrezen",
+   "herkenning": "Voor iedereen die vandaag bang is.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Isaiah-26-12-12",
+   "ref": "Jesaja 26:12",
+   "kw": "vrede",
+   "herkenning": "Voor iedereen die altijd meer moet presteren.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Isaiah-26-3-3",
+   "ref": "Jesaja 26:3",
+   "kw": "vrede",
+   "herkenning": "",
+   "uit": false,
+   "laatst": "2026-11-10",
+   "n": 1
+  },
+  {
+   "id": "Isaiah-26-4-4",
+   "ref": "Jesaja 26:4",
+   "kw": "rotssteen",
+   "herkenning": "Voor iedereen die vaste grond zoekt.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Isaiah-30-15-15",
+   "ref": "Jesaja 30:15",
+   "kw": "stilheid",
+   "herkenning": "Voor iedereen die denkt dat hij harder moet werken.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Isaiah-40-29-29",
+   "ref": "Jesaja 40:29",
+   "kw": "kracht",
+   "herkenning": "Voor iedereen die vandaag geen kracht meer heeft.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Isaiah-40-31-31",
+   "ref": "Jesaja 40:31",
+   "kw": "kracht",
+   "herkenning": "Voor iedereen die op is en toch door moet.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Isaiah-41-13-13",
+   "ref": "Jesaja 41:13",
+   "kw": "rechterhand",
+   "herkenning": "Voor iedereen die vandaag een hand nodig heeft.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Isaiah-43-1-1",
+   "ref": "Jesaja 43:1",
+   "kw": "naam",
+   "herkenning": "Voor iedereen die zich vandaag onzichtbaar voelt.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Isaiah-43-2-2",
+   "ref": "Jesaja 43:2",
+   "kw": "water",
+   "herkenning": "Voor iedereen die nu door diep water gaat.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Isaiah-43-4-4",
+   "ref": "Jesaja 43:4",
+   "kw": "kostelijk",
+   "herkenning": "Voor iedereen die zich vandaag weinig waard voelt.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Isaiah-49-16-16",
+   "ref": "Jesaja 49:16",
+   "kw": "handpalmen",
+   "herkenning": "Voor iedereen die zich vandaag vergeten voelt.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Isaiah-54-10-10",
+   "ref": "Jesaja 54:10",
+   "kw": "wijken",
+   "herkenning": "Voor iedereen bij wie alles aan het schuiven is.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Isaiah-55-12-12",
+   "ref": "Jesaja 55:12",
+   "kw": "vrede",
+   "herkenning": "Voor iedereen die vandaag naar buiten kan.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Isaiah-62-3-3",
+   "ref": "Jesaja 62:3",
+   "kw": "kroon",
+   "herkenning": "Voor iedereen die zich vandaag aan de kant geschoven voelt.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Isaiah-64-8-8",
+   "ref": "Jesaja 64:8",
+   "kw": "pottenbakker",
+   "herkenning": "Voor iedereen die het gevoel heeft dat hij nog niet af is.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Isaiah-66-13-13",
+   "ref": "Jesaja 66:13",
+   "kw": "moeder",
+   "herkenning": "Voor iedereen die vandaag troost nodig heeft.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "James-1-17-17",
+   "ref": "Jakobus 1:17",
+   "kw": "gave",
+   "herkenning": "Voor iedereen die vandaag iets moois kreeg.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "James-1-19-19",
+   "ref": "Jakobus 1:19",
+   "kw": "horen",
+   "herkenning": "Voor iedereen die vandaag een lastig gesprek heeft.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "James-1-5-5",
+   "ref": "Jakobus 1:5",
+   "kw": "wijsheid",
+   "herkenning": "Voor iedereen die vandaag niet weet wat hij moet kiezen.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "James-3-13-13",
+   "ref": "Jakobus 3:13",
+   "kw": "wijs",
+   "herkenning": "Voor iedereen die altijd gelijk wil hebben.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Jeremiah-1-5-5",
+   "ref": "Jeremia 1:5",
+   "kw": "gekend",
+   "herkenning": "Voor iedereen die zich afvraagt of hij ertoe doet.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Jeremiah-29-11-11",
+   "ref": "Jeremia 29:11",
+   "kw": "vredes",
+   "herkenning": "Voor iedereen die niet weet hoe het verder moet.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Jeremiah-31-3-3",
+   "ref": "Jeremia 31:3",
+   "kw": "eeuwige",
+   "herkenning": "Voor iedereen die bang is om liefde te verliezen.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "John-1-12-12",
+   "ref": "Johannes 1:12",
+   "kw": "kinderen",
+   "herkenning": "Voor iedereen die zoekt naar een plek om bij te horen.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "John-13-34-34",
+   "ref": "Johannes 13:34",
+   "kw": "liefhebt",
+   "herkenning": "Voor iedereen die vandaag geen zin heeft in mensen.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "John-14-1-1",
+   "ref": "Johannes 14:1",
+   "kw": "hart",
+   "herkenning": "",
+   "uit": false,
+   "laatst": "2026-11-09",
+   "n": 1
+  },
+  {
+   "id": "John-15-12-12",
+   "ref": "Johannes 15:12",
+   "kw": "gebod",
+   "herkenning": "Voor iedereen die zoekt wat het belangrijkste is.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "John-15-13-13",
+   "ref": "Johannes 15:13",
+   "kw": "vrienden",
+   "herkenning": "Voor iedereen met een vriend die altijd voor hem klaarstaat.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "John-15-15-15",
+   "ref": "Johannes 15:15",
+   "kw": "vrienden",
+   "herkenning": "Voor iedereen die bidden lastig vindt.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "John-15-16-16",
+   "ref": "Johannes 15:16",
+   "kw": "uitverkoren",
+   "herkenning": "Voor iedereen die nooit als eerste gekozen werd.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "John-15-9-9",
+   "ref": "Johannes 15:9",
+   "kw": "blijft",
+   "herkenning": "Voor iedereen die vandaag liefde nodig heeft.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "John-16-33-33",
+   "ref": "Johannes 16:33",
+   "kw": "overwonnen",
+   "herkenning": "Voor iedereen die het nu moeilijk heeft.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "John-3-16-16",
+   "ref": "Johannes 3:16",
+   "kw": "lief",
+   "herkenning": "Voor iedereen die denkt dat God ver weg is.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Joshua-1-6-6",
+   "ref": "Jozua 1:6",
+   "kw": "moed",
+   "herkenning": "Voor iedereen die vandaag iets groots moet beginnen.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Joshua-1-9-9",
+   "ref": "Jozua 1:9",
+   "kw": "moed",
+   "herkenning": "Voor iedereen die vandaag iets spannends moet doen.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Lamentations-3-22-23",
+   "ref": "Klaagliederen 3:22-23",
+   "kw": "trouw",
+   "herkenning": "Voor iedereen die opziet tegen morgen.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Lamentations-3-24-24",
+   "ref": "Klaagliederen 3:24",
+   "kw": "Deel",
+   "herkenning": "Voor iedereen die veel verloren heeft.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Mark-6-31-31",
+   "ref": "Markus 6:31",
+   "kw": "rust",
+   "herkenning": "Voor iedereen die het zo druk heeft dat hij vergeet te eten.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Matthew-10-30-31",
+   "ref": "Mattheüs 10:30-31",
+   "kw": "geteld",
+   "herkenning": "",
+   "uit": false,
+   "laatst": "2026-11-13",
+   "n": 1
+  },
+  {
+   "id": "Matthew-11-28-28",
+   "ref": "Mattheüs 11:28",
+   "kw": "rust",
+   "herkenning": "Voor iedereen die het gevoel heeft dat het te veel is.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Matthew-11-29-30",
+   "ref": "Mattheüs 11:29-30",
+   "kw": "rust",
+   "herkenning": "Voor iedereen die al weken op zijn tenen loopt.",
+   "uit": false,
+   "laatst": "2026-11-15",
+   "n": 1
+  },
+  {
+   "id": "Matthew-5-14-14",
+   "ref": "Mattheüs 5:14",
+   "kw": "licht",
+   "herkenning": "Voor iedereen die denkt dat hij niets betekent.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Matthew-6-26-26",
+   "ref": "Mattheüs 6:26",
+   "kw": "vogelen",
+   "herkenning": "",
+   "uit": false,
+   "laatst": "2026-11-09",
+   "n": 1
+  },
+  {
+   "id": "Matthew-6-34-34",
+   "ref": "Mattheüs 6:34",
+   "kw": "bezorgd",
+   "herkenning": "Voor iedereen die vannacht lag te piekeren.",
+   "uit": false,
+   "laatst": "2026-11-14",
+   "n": 1
+  },
+  {
+   "id": "Matthew-7-3-3",
+   "ref": "Mattheüs 7:3",
+   "kw": "balk",
+   "herkenning": "Voor iedereen die net iets van een ander vond.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Micah-6-8-8",
+   "ref": "Micha 6:8",
+   "kw": "ootmoediglijk",
+   "herkenning": "Voor iedereen die zich afvraagt wat God eigenlijk wil.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Micah-7-7-7",
+   "ref": "Micha 7:7",
+   "kw": "horen",
+   "herkenning": "Voor iedereen die denkt dat zijn gebed niet aankomt.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Nahum-1-7-7",
+   "ref": "Nahum 1:7",
+   "kw": "goed",
+   "herkenning": "Voor iedereen die vandaag benauwd is.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Numbers-6-24-26",
+   "ref": "Numeri 6:24-26",
+   "kw": "vrede",
+   "herkenning": "Voor iedereen die vandaag een zegen kan gebruiken.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Philippians-4-13-13",
+   "ref": "Filippenzen 4:13",
+   "kw": "kracht",
+   "herkenning": "Voor iedereen die het gevoel heeft dat het te veel wordt.",
+   "uit": false,
+   "laatst": "2026-11-15",
+   "n": 1
+  },
+  {
+   "id": "Philippians-4-6-7",
+   "ref": "Filippenzen 4:6-7",
+   "kw": "bezorgd",
+   "herkenning": "Voor iedereen die vannacht wakker lag van zorgen.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Proverbs-1-7-7",
+   "ref": "Spreuken 1:7",
+   "kw": "beginsel",
+   "herkenning": "Voor iedereen die vandaag iets nieuws moet leren.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Proverbs-10-26-26",
+   "ref": "Spreuken 10:26",
+   "kw": "luie",
+   "herkenning": "Voor iedereen die weleens samenwerkt met iemand zonder zin.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Proverbs-12-16-16",
+   "ref": "Spreuken 12:16",
+   "kw": "toorn",
+   "herkenning": "Voor iedereen die vandaag een vervelende opmerking kreeg.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Proverbs-12-25-25",
+   "ref": "Spreuken 12:25",
+   "kw": "woord",
+   "herkenning": "Voor iedereen die vandaag gebukt gaat onder zorgen.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Proverbs-14-8-8",
+   "ref": "Spreuken 14:8",
+   "kw": "wijsheid",
+   "herkenning": "",
+   "uit": false,
+   "laatst": "2026-11-09",
+   "n": 1
+  },
+  {
+   "id": "Proverbs-15-14-14",
+   "ref": "Spreuken 15:14",
+   "kw": "wetenschap",
+   "herkenning": "Voor iedereen die vanavond toch weer drie filmpjes over niks heeft gekeken.",
+   "uit": false,
+   "laatst": "2026-11-12",
+   "n": 1
+  },
+  {
+   "id": "Proverbs-16-18-18",
+   "ref": "Spreuken 16:18",
+   "kw": "val",
+   "herkenning": "Voor iedereen die net iets te zeker van zijn zaak was.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Proverbs-16-3-3",
+   "ref": "Spreuken 16:3",
+   "kw": "werken",
+   "herkenning": "Voor iedereen die vandaag een volle agenda heeft.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Proverbs-16-9-9",
+   "ref": "Spreuken 16:9",
+   "kw": "gang",
+   "herkenning": "Voor iedereen bij wie het anders liep dan gepland.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Proverbs-17-22-22",
+   "ref": "Spreuken 17:22",
+   "kw": "blij",
+   "herkenning": "Voor iedereen die vandaag wel een lach kan gebruiken.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Proverbs-17-28-28",
+   "ref": "Spreuken 17:28",
+   "kw": "zwijgt",
+   "herkenning": "Voor iedereen die in een vergadering net iets te veel zei.",
+   "uit": false,
+   "laatst": "2026-11-13",
+   "n": 1
+  },
+  {
+   "id": "Proverbs-18-21-21",
+   "ref": "Spreuken 18:21",
+   "kw": "tong",
+   "herkenning": "Voor iedereen die weleens iets zei waar hij spijt van had.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Proverbs-19-21-21",
+   "ref": "Spreuken 19:21",
+   "kw": "raad",
+   "herkenning": "Voor iedereen die vol plannen zit.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Proverbs-19-24-24",
+   "ref": "Spreuken 19:24",
+   "kw": "luiaard",
+   "herkenning": "Voor iedereen die te moe is om op te staan voor de afstandsbediening.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Proverbs-2-6-6",
+   "ref": "Spreuken 2:6",
+   "kw": "wijsheid",
+   "herkenning": "Voor iedereen die vandaag iets niet begrijpt.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Proverbs-20-13-13",
+   "ref": "Spreuken 20:13",
+   "kw": "slaap",
+   "herkenning": "Voor iedereen die vanochtend vijf keer op snooze drukte.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Proverbs-20-14-14",
+   "ref": "Spreuken 20:14",
+   "kw": "koper",
+   "herkenning": "Voor iedereen die net een geweldige deal op Marktplaats scoorde.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Proverbs-22-13-13",
+   "ref": "Spreuken 22:13",
+   "kw": "leeuw",
+   "herkenning": "Voor iedereen die vandaag een smoes zocht om niet te sporten.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Proverbs-23-18-18",
+   "ref": "Spreuken 23:18",
+   "kw": "verwachting",
+   "herkenning": "Voor iedereen die bijna de hoop opgaf.",
+   "uit": false,
+   "laatst": "2026-11-11",
+   "n": 1
+  },
+  {
+   "id": "Proverbs-24-33-34",
+   "ref": "Spreuken 24:33-34",
+   "kw": "sluimerens",
+   "herkenning": "Voor iedereen die vanochtend nog even bleef liggen.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Proverbs-25-17-17",
+   "ref": "Spreuken 25:17",
+   "kw": "voet",
+   "herkenning": "Voor iedereen met een buurman die net te vaak aanbelt.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Proverbs-26-11-11",
+   "ref": "Spreuken 26:11",
+   "kw": "dwaasheid",
+   "herkenning": "Voor iedereen die zei: dit doe ik nooit meer.",
+   "uit": false,
+   "laatst": "2026-11-15",
+   "n": 1
+  },
+  {
+   "id": "Proverbs-26-14-14",
+   "ref": "Spreuken 26:14",
+   "kw": "luiaard",
+   "herkenning": "",
+   "uit": false,
+   "laatst": "2026-11-12",
+   "n": 1
+  },
+  {
+   "id": "Proverbs-26-15-15",
+   "ref": "Spreuken 26:15",
+   "kw": "luiaard",
+   "herkenning": "",
+   "uit": false,
+   "laatst": "2026-11-10",
+   "n": 1
+  },
+  {
+   "id": "Proverbs-26-17-17",
+   "ref": "Spreuken 26:17",
+   "kw": "twist",
+   "herkenning": "Voor iedereen die een reactie typte onder een discussie die hem niet aanging.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Proverbs-27-14-14",
+   "ref": "Spreuken 27:14",
+   "kw": "morgens",
+   "herkenning": "Voor iedereen die 's ochtends geen woord wil horen.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Proverbs-27-17-17",
+   "ref": "Spreuken 27:17",
+   "kw": "scherpt",
+   "herkenning": "Voor iedereen met een vriend die altijd eerlijk is.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Proverbs-29-11-11",
+   "ref": "Spreuken 29:11",
+   "kw": "wijze",
+   "herkenning": "Voor iedereen die net een boze mail wilde versturen.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Proverbs-29-25-25",
+   "ref": "Spreuken 29:25",
+   "kw": "strik",
+   "herkenning": "Voor iedereen die zich te veel aantrekt van anderen.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Proverbs-30-5-5",
+   "ref": "Spreuken 30:5",
+   "kw": "Schild",
+   "herkenning": "Voor iedereen die niet meer weet wat hij kan geloven.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Proverbs-4-23-23",
+   "ref": "Spreuken 4:23",
+   "kw": "hart",
+   "herkenning": "Voor iedereen die merkt dat scrollen niet goed voor hem is.",
+   "uit": false,
+   "laatst": "2026-11-14",
+   "n": 1
+  },
+  {
+   "id": "Proverbs-4-7-7",
+   "ref": "Spreuken 4:7",
+   "kw": "wijsheid",
+   "herkenning": "Voor iedereen die voor een lastige keuze staat.",
+   "uit": false,
+   "laatst": "2026-11-14",
+   "n": 1
+  },
+  {
+   "id": "Proverbs-5-1-1",
+   "ref": "Spreuken 5:1",
+   "kw": "oor",
+   "herkenning": "",
+   "uit": false,
+   "laatst": "2026-11-09",
+   "n": 1
+  },
+  {
+   "id": "Psalms-100-4-4",
+   "ref": "Psalm 100:4",
+   "kw": "lof",
+   "herkenning": "Voor iedereen die bidden vooral als vragen ziet.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-103-1-1",
+   "ref": "Psalm 103:1",
+   "kw": "ziel",
+   "herkenning": "Voor iedereen die vandaag zijn ziel wakker moet schudden.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-103-2-2",
+   "ref": "Psalm 103:2",
+   "kw": "vergeet",
+   "herkenning": "Voor iedereen die vooral onthoudt wat misging.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-107-1-1",
+   "ref": "Psalm 107:1",
+   "kw": "goedertierenheid",
+   "herkenning": "Voor iedereen die terugkijkt en ziet dat God hielp.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-112-7-7",
+   "ref": "Psalm 112:7",
+   "kw": "vast",
+   "herkenning": "Voor iedereen die onrustig wordt van het nieuws.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-116-7-7",
+   "ref": "Psalm 116:7",
+   "kw": "rust",
+   "herkenning": "Voor iedereen die niet kan ophouden met piekeren.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-118-14-14",
+   "ref": "Psalm 118:14",
+   "kw": "Sterkte",
+   "herkenning": "Voor iedereen die vandaag kracht zoekt.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-118-24-24",
+   "ref": "Psalm 118:24",
+   "kw": "dag",
+   "herkenning": "Voor iedereen die vanochtend zonder zin begon.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-118-6-6",
+   "ref": "Psalm 118:6",
+   "kw": "vrezen",
+   "herkenning": "Voor iedereen die vandaag iets spannends moet zeggen.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-119-165-165",
+   "ref": "Psalm 119:165",
+   "kw": "vrede",
+   "herkenning": "Voor iedereen die vrede zoekt.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-119-50-50",
+   "ref": "Psalm 119:50",
+   "kw": "troost",
+   "herkenning": "Voor iedereen die het nu zwaar heeft.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-121-1-2",
+   "ref": "Psalm 121:1-2",
+   "kw": "hulp",
+   "herkenning": "Voor iedereen die vandaag hulp nodig heeft.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-125-1-1",
+   "ref": "Psalm 125:1",
+   "kw": "wankelt",
+   "herkenning": "Voor iedereen die vandaag onzeker is.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-127-2-2",
+   "ref": "Psalm 127:2",
+   "kw": "slaap",
+   "herkenning": "Voor iedereen die tot laat doorwerkt.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-130-5-5",
+   "ref": "Psalm 130:5",
+   "kw": "verwacht",
+   "herkenning": "Voor iedereen die al lang op iets wacht.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-131-2-2",
+   "ref": "Psalm 131:2",
+   "kw": "kind",
+   "herkenning": "Voor iedereen die altijd iets moet.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-136-1-1",
+   "ref": "Psalm 136:1",
+   "kw": "goed",
+   "herkenning": "Voor iedereen die vandaag even moet horen dat God goed is.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-136-26-26",
+   "ref": "Psalm 136:26",
+   "kw": "hemels",
+   "herkenning": "Voor iedereen die vandaag iets zoekt wat blijft.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-139-14-14",
+   "ref": "Psalm 139:14",
+   "kw": "wonderbaarlijk",
+   "herkenning": "Voor iedereen die vandaag niet tevreden is over zichzelf.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-143-8-8",
+   "ref": "Psalm 143:8",
+   "kw": "morgenstond",
+   "herkenning": "Voor iedereen die vanochtend niet wist welke kant op.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-145-18-18",
+   "ref": "Psalm 145:18",
+   "kw": "nabij",
+   "herkenning": "Voor iedereen die denkt dat God ver weg is.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-146-5-5",
+   "ref": "Psalm 146:5",
+   "kw": "Hulp",
+   "herkenning": "Voor iedereen die teleurgesteld is in mensen.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-147-3-3",
+   "ref": "Psalm 147:3",
+   "kw": "geneest",
+   "herkenning": "Voor iedereen die van binnen pijn heeft.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-150-6-6",
+   "ref": "Psalm 150:6",
+   "kw": "adem",
+   "herkenning": "Voor iedereen die vandaag gewoon dankbaar is dat hij ademt.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-16-11-11",
+   "ref": "Psalm 16:11",
+   "kw": "vreugde",
+   "herkenning": "Voor iedereen die zoekt naar echte vreugde.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-18-3-3",
+   "ref": "Psalm 18:3",
+   "kw": "Steenrots",
+   "herkenning": "Voor iedereen die vaste grond zoekt.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-20-8-8",
+   "ref": "Psalm 20:8",
+   "kw": "Naam",
+   "herkenning": "Voor iedereen die zekerheid zoekt in de verkeerde dingen.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-23-2-3",
+   "ref": "Psalm 23:2-3",
+   "kw": "verkwikt",
+   "herkenning": "Voor iedereen die toe is aan stil water.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-25-9-9",
+   "ref": "Psalm 25:9",
+   "kw": "leiden",
+   "herkenning": "",
+   "uit": false,
+   "laatst": "2026-11-10",
+   "n": 1
+  },
+  {
+   "id": "Psalms-27-1-1",
+   "ref": "Psalm 27:1",
+   "kw": "vrezen",
+   "herkenning": "Voor iedereen die vandaag ergens tegenop ziet.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-27-14-14",
+   "ref": "Psalm 27:14",
+   "kw": "Wacht",
+   "herkenning": "Voor iedereen die het wachten moe is.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-28-7-7",
+   "ref": "Psalm 28:7",
+   "kw": "Schild",
+   "herkenning": "Voor iedereen die zich vandaag kwetsbaar voelt.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-29-11-11",
+   "ref": "Psalm 29:11",
+   "kw": "vrede",
+   "herkenning": "Voor iedereen die midden in een storm zit.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-30-3-3",
+   "ref": "Psalm 30:3",
+   "kw": "geroepen",
+   "herkenning": "",
+   "uit": false,
+   "laatst": "2026-11-10",
+   "n": 1
+  },
+  {
+   "id": "Psalms-30-6-6",
+   "ref": "Psalm 30:6",
+   "kw": "gejuich",
+   "herkenning": "Voor iedereen die vannacht gehuild heeft.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-33-22-22",
+   "ref": "Psalm 33:22",
+   "kw": "hopen",
+   "herkenning": "Voor iedereen die niet weet wat hij moet bidden.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-34-19-19",
+   "ref": "Psalm 34:19",
+   "kw": "nabij",
+   "herkenning": "Voor iedereen die vandaag verdriet heeft.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-34-2-2",
+   "ref": "Psalm 34:2",
+   "kw": "tijd",
+   "herkenning": "Voor iedereen die vandaag weinig zin heeft om te danken.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-37-3-3",
+   "ref": "Psalm 37:3",
+   "kw": "goede",
+   "herkenning": "Voor iedereen die zich druk maakt om wat niet eerlijk is.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-37-5-5",
+   "ref": "Psalm 37:5",
+   "kw": "Wentel",
+   "herkenning": "Voor iedereen die alles zelf wil regelen.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-37-7-7",
+   "ref": "Psalm 37:7",
+   "kw": "Zwijg",
+   "herkenning": "Voor iedereen die net door Instagram scrolde en zich slechter voelt.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-39-8-8",
+   "ref": "Psalm 39:8",
+   "kw": "hoop",
+   "herkenning": "Voor iedereen die zich afvraagt waar het allemaal om draait.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-42-6-6",
+   "ref": "Psalm 42:6",
+   "kw": "onrustig",
+   "herkenning": "Voor iedereen die zich vandaag somber voelt.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-46-11-11",
+   "ref": "Psalm 46:11",
+   "kw": "Laat",
+   "herkenning": "Voor iedereen die alles onder controle wil houden.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-46-2-2",
+   "ref": "Psalm 46:2",
+   "kw": "Toevlucht",
+   "herkenning": "Voor iedereen die zich vandaag benauwd voelt.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-47-7-7",
+   "ref": "Psalm 47:7",
+   "kw": "psalmzingt",
+   "herkenning": "Voor iedereen die in de auto harder zingt dan in de kerk.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-56-12-12",
+   "ref": "Psalm 56:12",
+   "kw": "vertrouw",
+   "herkenning": "Voor iedereen die vandaag opziet tegen iemand.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-56-4-4",
+   "ref": "Psalm 56:4",
+   "kw": "vertrouwen",
+   "herkenning": "Voor iedereen die vannacht wakker lag van zorgen.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-62-2-2",
+   "ref": "Psalm 62:2",
+   "kw": "stil",
+   "herkenning": "Voor iedereen bij wie het van binnen nooit stil is.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-62-6-6",
+   "ref": "Psalm 62:6",
+   "kw": "zwijg",
+   "herkenning": "Voor iedereen bij wie het in zijn hoofd nooit stil is.",
+   "uit": false,
+   "laatst": "2026-11-14",
+   "n": 1
+  },
+  {
+   "id": "Psalms-71-5-5",
+   "ref": "Psalm 71:5",
+   "kw": "jeugd",
+   "herkenning": "Voor iedereen die al zijn hele leven met God meeloopt.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-73-26-26",
+   "ref": "Psalm 73:26",
+   "kw": "Rotssteen",
+   "herkenning": "Voor iedereen die vandaag niet meer kan.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-85-9-9",
+   "ref": "Psalm 85:9",
+   "kw": "vrede",
+   "herkenning": "",
+   "uit": false,
+   "laatst": "2026-11-13",
+   "n": 1
+  },
+  {
+   "id": "Psalms-9-11-11",
+   "ref": "Psalm 9:11",
+   "kw": "verlaten",
+   "herkenning": "Voor iedereen die zich vandaag in de steek gelaten voelt.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-9-2-2",
+   "ref": "Psalm 9:2",
+   "kw": "wonderen",
+   "herkenning": "Voor iedereen die vandaag iets moois meemaakte.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-91-1-2",
+   "ref": "Psalm 91:1-2",
+   "kw": "schuilplaats",
+   "herkenning": "Voor iedereen die zich vandaag onveilig voelt.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-92-2-2",
+   "ref": "Psalm 92:2",
+   "kw": "goed",
+   "herkenning": "Voor iedereen die vandaag zijn hart lichter wil maken.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-94-19-19",
+   "ref": "Psalm 94:19",
+   "kw": "gedachten",
+   "herkenning": "Voor iedereen die vannacht lag te malen.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Psalms-95-2-2",
+   "ref": "Psalm 95:2",
+   "kw": "juichen",
+   "herkenning": "Voor iedereen die vandaag wel een vrolijk lied kan gebruiken.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Revelation_of_John-21-4-4",
+   "ref": "Openbaring 21:4",
+   "kw": "tranen",
+   "herkenning": "Voor iedereen die vandaag iemand mist.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Revelation_of_John-21-5-5",
+   "ref": "Openbaring 21:5",
+   "kw": "nieuw",
+   "herkenning": "",
+   "uit": false,
+   "laatst": "2026-11-10",
+   "n": 1
+  },
+  {
+   "id": "Romans-12-12-12",
+   "ref": "Romeinen 12:12",
+   "kw": "hoop",
+   "herkenning": "Voor iedereen die het nu even zwaar heeft.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Romans-12-18-18",
+   "ref": "Romeinen 12:18",
+   "kw": "vrede",
+   "herkenning": "Voor iedereen met een moeilijke relatie in zijn leven.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Romans-5-5-5",
+   "ref": "Romeinen 5:5",
+   "kw": "hoop",
+   "herkenning": "Voor iedereen die te vaak teleurgesteld is.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Romans-5-8-8",
+   "ref": "Romeinen 5:8",
+   "kw": "zondaars",
+   "herkenning": "Voor iedereen die denkt dat hij niet goed genoeg is.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Romans-8-16-16",
+   "ref": "Romeinen 8:16",
+   "kw": "kinderen",
+   "herkenning": "Voor iedereen die twijfelt of hij wel bij God hoort.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Romans-8-24-25",
+   "ref": "Romeinen 8:24-25",
+   "kw": "hoop",
+   "herkenning": "Voor iedereen die het wachten moe is.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Romans-8-28-28",
+   "ref": "Romeinen 8:28",
+   "kw": "goede",
+   "herkenning": "Voor iedereen die niet snapt waarom iets gebeurt.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Romans-8-31-31",
+   "ref": "Romeinen 8:31",
+   "kw": "voor",
+   "herkenning": "Voor iedereen die het gevoel heeft dat alles tegenzit.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Romans-8-37-37",
+   "ref": "Romeinen 8:37",
+   "kw": "overwinnaars",
+   "herkenning": "Voor iedereen die het gevoel heeft dat hij verliest.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Song_of_Solomon-8-7-7",
+   "ref": "Hooglied 8:7",
+   "kw": "liefde",
+   "herkenning": "Voor iedereen die een liefde heeft die door alles heen bleef.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
+  },
+  {
+   "id": "Zephaniah-3-17-17",
+   "ref": "Sefanja 3:17",
+   "kw": "verheugen",
+   "herkenning": "Voor iedereen die denkt dat God vooral boos op hem is.",
+   "uit": false,
+   "laatst": null,
+   "n": 0
   }
  ]
 }

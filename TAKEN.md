@@ -150,3 +150,10 @@ Na het schrijven en renderen van de posts (dagelijkse run, en avondcontrole als 
 - Een gebedsverzoek of verdriet: meelevend, zonder preek ("Wat verdrietig, we bidden met je mee 🤍"). Bij signalen van acuut gevaar (zelfbeschadiging of zelfdoding): schrijf een rustig, zorgzaam antwoord dat verwijst naar 113 Zelfmoordpreventie (0800-0113, gratis) en zet in `notitie` "aandacht Joshua".
 - Geen discussies over leerstellige kwesties, politiek of andere kerken; bij een kritische of trollende reactie: `voorstel` leeg, status "voorgesteld" en `notitie` "beter negeren".
 - Geen engagement-bait, geen links, geen lange streep, niets beloven namens Joshua.
+
+
+## Dashboard (11 november, na de reel-update)
+- Overzicht: bovenaan "Vandaag" (status, posts van vandaag met tijd en staat), daaronder "Wat moet ik doen?" met nieuwsvoorstellen, reacties, fouten, lege noodvoorraad en lage tekstbank in één lijst. Afgehandelde verzoeken van Claude verdwijnen met "Gelezen" (onthouden in de browser).
+- Resultaten: "Deze week" met verschil t.o.v. vorige week, "Wat werkt beter?" (gemiddeld bereik per optie: reel of carrousel, tekst midden of boven, rustbeeld, eerste slide, achtergrond, met zekerheidslabel) en een maandrapport dat je kunt afdrukken of als PDF opslaan.
+- Beheer: blok "Tekstbank" (zoeken, filter, vers uit- of aanzetten, herkenningszin aanpassen). Acties `tekstbank_vers` en `tekstbank_hook` in src/bediening.py; uitzetten gebruikt `verzen_uitsluiten`. Een aangepaste herkenningszin geldt voor reels die nog gemaakt worden.
+- Telefoon: tabbalk onderaan met iconen en compactere kaarten.

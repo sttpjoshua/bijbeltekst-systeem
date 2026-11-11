@@ -964,6 +964,7 @@ def dashboard_extra(cfg, posts):
             "herstel": [h for h in laad("data/herstel.json", []) if h["t"] >= (nu - dt.timedelta(days=7)).isoformat()][::-1][:30],
             "nood": {"klaar": len(nood_klaar()), "doel": NOOD_DOEL},
             "tekstbank": {**bank_voorraad(cfg), "zelfstandig": bool(cfg.get("zelfstandig"))},
+            "tekstbank_lijst": _bank_lijst(cfg, posts),
             "nieuws": {"instelling": {**{"aan": True, "max_per_dag": 2, "licht_automatisch": True}, **(cfg.get("nieuws") or {})},
                        "recent": [{k: x.get(k) for k in ("id", "t", "bron", "kop", "link", "categorie", "zwaar", "status", "post", "opties")}
                                   for x in laad("data/nieuws.json", [])[-25:]][::-1]},
@@ -1428,6 +1429,19 @@ def automaak_dagen(cfg=None, posts=None):
         if len(klaar) < nodig or any(p["datum"] == d and p["status"] == "wacht_op_tekst" for p in posts):
             uit.append(d)
     return uit
+
+def _bank_lijst(cfg, posts):
+    """Voor het dashboard: alle verzen in de tekstbank met herkenningszin, laatst geplaatst en of ze uit staan."""
+    import tekstbank
+    bank = tekstbank.laad() or {}
+    uit = set(cfg.get("verzen_uitsluiten", []))
+    laatst, aantal = {}, {}
+    for p in posts:
+        v = p.get("vers_id")
+        if v:
+            laatst[v] = max(laatst.get(v, ""), p["datum"]); aantal[v] = aantal.get(v, 0) + 1
+    return [{"id": k, "ref": e.get("ref", k), "kw": e.get("kw", ""), "herkenning": (e.get("hooks") or {}).get("herkenning", ""),
+             "uit": k in uit, "laatst": laatst.get(k), "n": aantal.get(k, 0)} for k, e in bank.items()]
 
 def cmd_reels_vernieuwen():
     """Geplande reels (vanaf morgen, nog niet geplaatst) opnieuw laten maken in het huidige reelformaat."""

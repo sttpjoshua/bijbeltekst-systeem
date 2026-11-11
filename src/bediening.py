@@ -91,6 +91,31 @@ def main(raw):
         if vid not in lijst:
             lijst.append(vid)
         melding = f"Vers {o.get('ref', vid)} wordt niet meer gebruikt"
+    elif a == "tekstbank_vers":
+        vid = o["vers_id"]
+        lijst = cfg.setdefault("verzen_uitsluiten", [])
+        if o.get("aan"):
+            cfg["verzen_uitsluiten"] = [x for x in lijst if x != vid]
+            melding = f"Vers {o.get('ref', vid)} staat weer aan in de tekstbank"
+        else:
+            if vid not in lijst:
+                lijst.append(vid)
+            melding = f"Vers {o.get('ref', vid)} staat uit in de tekstbank"
+    elif a == "tekstbank_hook":
+        import tekstbank as T
+        bank = T.laad()
+        e = bank.get(o["vers_id"])
+        tekst = " ".join(str(o.get("tekst", "")).split())
+        if e is None:
+            raise SystemExit("Dit vers staat niet in de tekstbank")
+        if not (8 <= len(tekst) <= 90) or "\u2014" in tekst or "\u2013" in tekst:
+            raise SystemExit("De zin moet 8 tot 90 tekens zijn en mag geen streepje (\u2014 of \u2013) bevatten")
+        e.setdefault("hooks", {})["herkenning"] = tekst
+        T.bewaar(bank)
+        for q in posts:  # posts die nog niet gerenderd zijn krijgen de nieuwe zin
+            if q.get("vers_id") == o["vers_id"] and q["status"] in ("wacht_op_tekst", "klaar_voor_render"):
+                q["reel_herkenning"] = tekst
+        melding = f"Herkenningszin van {o.get('ref', o['vers_id'])} aangepast (geldt voor reels die nog gemaakt worden)"
     elif a == "leermodus":
         if o["aan"]:
             dagen = int(o.get("dagen", 14))
@@ -413,7 +438,7 @@ def main(raw):
                  "andere_stijl": "designer", "post_ander_vers": "verskiezer", "fouten_opgelost": "controller", "reactie_plaatsen": "community", "reactie_negeren": "community", "reactie_liken": "community",
                  "fout_opgelost": "controller", "post_opnieuw": "dispatcher", "post_nood": "controller", "nood_inzetten": "controller",
                  "muziek_toevoegen": "video", "statistieken_nu": "analist", "reacties_nu": "community", "zelftest_nu": "controller",
-                 "run": "dispatcher", "verzoek": "controller", "posts_maken": "verskiezer", "zelfstandig": "controller", "nieuws_maken": "verskiezer", "nieuws_negeren": "verskiezer", "nieuws_instelling": "verskiezer", "nieuwe_reels": "video", "reel_tempo": "video", "reel_formaat": "video", "reel_aandeel": "video", "whatsapp_test": "controller", "whatsapp_instelling": "controller"}.get(a)
+                 "run": "dispatcher", "verzoek": "controller", "posts_maken": "verskiezer", "zelfstandig": "controller", "nieuws_maken": "verskiezer", "nieuws_negeren": "verskiezer", "nieuws_instelling": "verskiezer", "nieuwe_reels": "video", "tekstbank_vers": "verskiezer", "tekstbank_hook": "verskiezer", "reel_tempo": "video", "reel_formaat": "video", "reel_aandeel": "video", "whatsapp_test": "controller", "whatsapp_instelling": "controller"}.get(a)
         if a == "overslaan":
             agent = "video" if (vind(posts, o["post"])["variabelen"].get("formaat") == "video") else "designer"
         if agent:
