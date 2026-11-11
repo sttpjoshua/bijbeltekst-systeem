@@ -726,7 +726,8 @@
   "t": "2026-11-11T10:08:31",
   "soort": "fout",
   "tekst": "Tekstbank bijna op: nog genoeg nieuwe verzen voor ongeveer 5 dagen (25 van 47). Daarna herhaalt het systeem de oudste verzen.",
-  "code": "tekstbank"
+  "code": "tekstbank",
+  "opgelost": true
  },
  {
   "t": "2026-11-11T10:24:12",
@@ -737,6 +738,7 @@
   "t": "2026-11-11T10:24:12",
   "soort": "fout",
   "tekst": "Tekstbank bijna op: nog genoeg nieuwe verzen voor ongeveer 4 dagen (20 van 47). Daarna herhaalt het systeem de oudste verzen.",
-  "code": "tekstbank"
+  "code": "tekstbank",
+  "opgelost": true
  }
 ]

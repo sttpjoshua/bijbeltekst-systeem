@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T10:32:27",
+ "updated": "2026-11-11T10:33:32",
  "agents": {
   "verskiezer": {
    "t": "2026-11-11T10:12:16",
@@ -23,8 +23,8 @@
   },
   "controller": {
    "t": "2026-11-11T10:24:12",
-   "task": "Tekstbank bijna op: nog genoeg nieuwe verzen voor ongeveer 4 dagen (20",
-   "state": "error"
+   "task": "Posts klaargezet uit de tekstbank",
+   "state": "done"
   },
   "analist": {
    "t": "2026-11-10T13:35:26",
