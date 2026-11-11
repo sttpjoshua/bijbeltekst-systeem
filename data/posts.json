@@ -2205,7 +2205,7 @@
  },
  {
   "id": "2026-11-11-n0730",
-  "status": "gerenderd",
+  "status": "gepubliceerd",
   "vers_id": "Isaiah-32-17-17",
   "ref": "Jesaja 32:17",
   "tekst": "En het werk der gerechtigheid zal vrede zijn; en de werking der gerechtigheid zal zijn gerustheid en zekerheid tot in eeuwigheid.",
@@ -2280,7 +2280,19 @@
   "story_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-1-301-story.jpg",
   "goedgekeurd": true,
   "datum": "2026-11-11",
-  "nood": true
+  "nood": true,
+  "gepubliceerd": {
+   "instagram": {
+    "id": "17915532183510592",
+    "url": "https://www.instagram.com/p/Dfl17nqF9e5/",
+    "t": "2026-11-11T07:31+01:00"
+   },
+   "facebook": {
+    "id": "1015160368352770_122134283504879910",
+    "url": "https://www.facebook.com/1015160368352770_122134283504879910",
+    "t": "2026-11-11T07:31+01:00"
+   }
+  }
  },
  {
   "id": "2026-11-11-n1215",

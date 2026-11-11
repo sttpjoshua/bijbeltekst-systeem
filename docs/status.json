@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T06:00:41",
+ "updated": "2026-11-11T07:31:40",
  "agents": {
   "verskiezer": {
    "t": "2026-11-08T14:33:06",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-10T22:03:13",
-   "task": "Postte Openbaring 21:5 op facebook",
+   "t": "2026-11-11T07:31:40",
+   "task": "Postte Jesaja 32:17 op facebook",
    "state": "done"
   },
   "controller": {
@@ -38,11 +38,11 @@
   }
  },
  "stats": {
-  "posts_today": 0,
-  "posts_total": 16,
+  "posts_today": 1,
+  "posts_total": 17,
   "reach_7d": 75,
   "best_time": "nog onbekend",
-  "next_post": "2026-11-11T07:30:00"
+  "next_post": "2026-11-11T12:15:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
@@ -56,6 +56,18 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "07:31",
+   "msg": "2026-11-11-n0730 online op facebook: Jesaja 32:17"
+  },
+  {
+   "t": "07:31",
+   "msg": "2026-11-11-n0730 online op instagram: Jesaja 32:17"
+  },
+  {
+   "t": "07:31",
+   "msg": "2026-11-11-n0730 ook als story geplaatst"
+  },
   {
    "t": "06:00",
    "msg": "Zelfherstel: Geen post klaar voor 2026-11-11 22:00 → noodpost Romeinen 15:4 ingezet om 22:00"
@@ -91,18 +103,6 @@
   {
    "t": "22:01",
    "msg": "2026-11-10-1 online op facebook: Psalm 25:9"
-  },
-  {
-   "t": "21:30",
-   "msg": "Te weinig posts voor 2026-11-11: 0 klaar, 5 ingesteld. De noodvoorraad vult de lege tijdsloten automatisch op."
-  },
-  {
-   "t": "20:32",
-   "msg": "2026-11-10-1 online op instagram: Psalm 25:9"
-  },
-  {
-   "t": "20:32",
-   "msg": "2026-11-10-1 ook als story geplaatst"
   }
  ],
  "lampen": [

@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-11T06:00",
+ "gegenereerd": "2026-11-11T07:31",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -391,7 +391,7 @@
    "ref": "Jesaja 32:17",
    "tekst": "En het werk der gerechtigheid zal vrede zijn; en de werking der gerechtigheid zal zijn gerustheid en zekerheid tot in eeuwigheid.",
    "hook": "Echte rust begint bij wat goed is.",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "palet": "zachtroze",
     "lettertype": "cormorant_cursief",
@@ -427,12 +427,18 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-1-301-3.jpg"
    ],
    "thumb": "thumbs/nood-20261108-1-301.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "instagram",
+    "facebook"
+   ],
+   "links": {
+    "instagram": "https://www.instagram.com/p/Dfl17nqF9e5/",
+    "facebook": "https://www.facebook.com/1015160368352770_122134283504879910"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
-   "online": null
+   "online": "2026-11-11T07:31+01:00"
   },
   {
    "id": "2026-11-10-5",
@@ -1675,23 +1681,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-08T18:11:56",
-   "soort": "info",
-   "tekst": "Bediening: Reacties opgehaald: 1 nieuw"
-  },
-  {
-   "t": "2026-11-08T18:19:03",
-   "soort": "fout",
-   "tekst": "ACTIE VOOR JOU: liken van reacties op instagram lukt nog niet. Voeg het recht instagram_manage_engagement toe aan de app en maak het token opnieuw aan (zelfde stappen als bij de reactierechten). Melding van Meta: 400: {\"error\":{\"message\":\"Unsupported post request. Object with ID '18400547434202863' does not exist, cannot be loaded due to missing permissions, or",
-   "code": "rechten",
-   "opgelost": true
-  },
-  {
-   "t": "2026-11-08T18:19:03",
-   "soort": "info",
-   "tekst": "Bediening: Liken lukte niet: recht ontbreekt (zie melding)"
-  },
-  {
    "t": "2026-11-08T18:20:42",
    "soort": "info",
    "tekst": "Bediening: Antwoord geplaatst bij shaquana_brandsma (Spreuken 15:1)"
@@ -1975,6 +1964,21 @@
    "t": "2026-11-11T06:00:41",
    "soort": "info",
    "tekst": "Zelfherstel: Geen post klaar voor 2026-11-11 22:00 → noodpost Romeinen 15:4 ingezet om 22:00"
+  },
+  {
+   "t": "2026-11-11T07:31:31",
+   "soort": "info",
+   "tekst": "2026-11-11-n0730 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-11T07:31:31",
+   "soort": "info",
+   "tekst": "2026-11-11-n0730 online op instagram: Jesaja 32:17"
+  },
+  {
+   "t": "2026-11-11T07:31:40",
+   "soort": "info",
+   "tekst": "2026-11-11-n0730 online op facebook: Jesaja 32:17"
   }
  ],
  "recente_fouten": [],
@@ -2069,9 +2073,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-10T22:03",
+   "ok": "2026-11-11T07:31",
    "laatst_ok": true,
-   "detail": "Openbaring 21:5 geplaatst"
+   "detail": "Jesaja 32:17 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-10T13:35",
@@ -2097,15 +2101,15 @@
    "ok": "2026-11-08T00:36"
   },
   "reacties": {
-   "ok": "2026-11-10T23:00",
+   "ok": "2026-11-11T07:00",
    "laatst_ok": true,
    "detail": "0 nieuwe reacties",
    "fout": "2026-11-08T18:00"
   },
   "facebook": {
-   "ok": "2026-11-10T22:03",
+   "ok": "2026-11-11T07:31",
    "laatst_ok": true,
-   "detail": "Openbaring 21:5 geplaatst"
+   "detail": "Jesaja 32:17 geplaatst"
   },
   "statistieken": {
    "ok": "2026-11-10T13:36",
@@ -2151,7 +2155,7 @@
  ],
  "weken": {
   "deze": {
-   "posts": 16,
+   "posts": 17,
    "reach": 85,
    "views": 129,
    "likes": 20,
@@ -2310,7 +2314,7 @@
   "tot": "2026-11-14",
   "dag": 5,
   "dagen": 7,
-  "online": 16,
+  "online": 17,
   "gemeten": 1
  },
  "voorraad": {
