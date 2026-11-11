@@ -16,9 +16,9 @@
      "post": "voorbeeld-1"
     },
     {
-     "id": "hhgJdLR9PR",
-     "term": "ocean waves slow",
-     "titel": "Large waves break onto a rocky shore",
+     "id": "4u3wjjU6IB",
+     "term": "sunrise",
+     "titel": "Sunrise on the beach",
      "staand": false,
      "post": "voorbeeld-1"
     }
@@ -26,43 +26,12 @@
    "duur": 19.62
   },
   {
-   "bestand": "docs/media/voorbeelden/situatie-2-dichtbij-midden.mp4",
    "ref": "Mattheüs 6:34",
-   "scene": "dichtbij",
-   "plaatsing": "midden",
-   "clips": [
-    {
-     "id": "QVZd7hJfOj",
-     "term": "hands open light",
-     "titel": "Woman opens laptop at airport",
-     "staand": false,
-     "post": "voorbeeld-2"
-    }
-   ],
-   "duur": 22.0
+   "fout": "geen clips"
   },
   {
-   "bestand": "docs/media/voorbeelden/situatie-3-onderweg-boven.mp4",
    "ref": "Mattheüs 11:28",
-   "scene": "onderweg",
-   "plaatsing": "boven",
-   "clips": [
-    {
-     "id": "IgpOMzThv2",
-     "term": "man sitting on bench",
-     "titel": "Man sitting on a bench",
-     "staand": false,
-     "post": "voorbeeld-3"
-    },
-    {
-     "id": "wPVNA4PN5i",
-     "term": "city lights night",
-     "titel": "London at night",
-     "staand": false,
-     "post": "voorbeeld-3"
-    }
-   ],
-   "duur": 19.31
+   "fout": "geen clips"
   },
   {
    "bestand": "docs/media/voorbeelden/situatie-4-natuur-midden.mp4",
@@ -71,14 +40,19 @@
    "plaatsing": "midden",
    "clips": [
     {
-     "id": "PpWluZqMGi",
-     "term": "sunrise clouds",
-     "titel": "A beautiful sunrise in Lisbon",
+     "id": "qxDJzCJHLM",
+     "term": "sunrise",
+     "titel": "Sunrise over Muriwai Beach",
      "staand": false,
      "post": "voorbeeld-4"
     }
    ],
    "duur": 17.0
   }
- ]
+ ],
+ "zoektermen": {
+  "sunrise": 12,
+  "student studying night": 0,
+  "man sitting on bench": 12
+ }
 }
