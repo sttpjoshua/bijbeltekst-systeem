@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-11T13:49",
+ "gegenereerd": "2026-11-11T13:52",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -3015,11 +3015,6 @@
   {
    "t": "2026-11-09T17:46:17",
    "soort": "info",
-   "tekst": "2026-11-09-5 ook als story geplaatst"
-  },
-  {
-   "t": "2026-11-09T17:46:17",
-   "soort": "info",
    "tekst": "2026-11-09-5 online op instagram: Johannes 14:1"
   },
   {
@@ -3323,6 +3318,11 @@
    "t": "2026-11-11T13:49:33",
    "soort": "info",
    "tekst": "Bediening: Voorstel niet gevonden of al afgehandeld"
+  },
+  {
+   "t": "2026-11-11T13:52:50",
+   "soort": "info",
+   "tekst": "Bediening: WhatsApp-testbericht klaargezet"
   }
  ],
  "recente_fouten": [
@@ -3479,7 +3479,7 @@
    "detail": "10 posts voor MORGEN en OVERMORGEN klaargezet"
   },
   "whatsapp": {
-   "fout": "2026-11-11T13:46",
+   "fout": "2026-11-11T13:49",
    "laatst_ok": false,
    "detail": "Telegram-bot gevonden, maar nog geen /start-bericht van jou ontvangen. Stuur je bot /start."
   }

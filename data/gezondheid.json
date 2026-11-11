@@ -55,7 +55,8 @@
  },
  "whatsapp": {
   "fout": "2026-11-11T13:49",
-  "laatst_ok": false,
-  "detail": "Telegram-bot gevonden, maar nog geen /start-bericht van jou ontvangen. Stuur je bot /start."
+  "laatst_ok": true,
+  "detail": "9 bericht(en) verstuurd",
+  "ok": "2026-11-11T13:52"
  }
 }

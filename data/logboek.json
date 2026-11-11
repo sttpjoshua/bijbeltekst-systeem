@@ -848,5 +848,10 @@
   "t": "2026-11-11T13:49:33",
   "soort": "info",
   "tekst": "Bediening: Voorstel niet gevonden of al afgehandeld"
+ },
+ {
+  "t": "2026-11-11T13:52:50",
+  "soort": "info",
+  "tekst": "Bediening: WhatsApp-testbericht klaargezet"
  }
 ]
