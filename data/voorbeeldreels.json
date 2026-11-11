@@ -3,10 +3,10 @@
  "test": "ok: 12 clips gevonden voor 'sunrise'",
  "reels": [
   {
-   "bestand": "docs/media/voorbeelden/situatie-1-natuur-onder.mp4",
-   "ref": "Mattheüs 6:34",
+   "bestand": "docs/media/voorbeelden/situatie-1-natuur-boven.mp4",
+   "ref": "Spreuken 20:13",
    "scene": "natuur",
-   "plaatsing": "onder",
+   "plaatsing": "boven",
    "clips": [
     {
      "id": "8YOn9Ojq2k",
@@ -16,28 +16,21 @@
      "post": "voorbeeld-1"
     },
     {
-     "id": "PpWluZqMGi",
-     "term": "sunrise clouds",
-     "titel": "A beautiful sunrise in Lisbon",
+     "id": "hhgJdLR9PR",
+     "term": "ocean waves slow",
+     "titel": "Large waves break onto a rocky shore",
      "staand": false,
      "post": "voorbeeld-1"
     }
    ],
-   "duur": 22.0
+   "duur": 19.62
   },
   {
    "bestand": "docs/media/voorbeelden/situatie-2-dichtbij-midden.mp4",
-   "ref": "Psalm 56:4",
+   "ref": "Mattheüs 6:34",
    "scene": "dichtbij",
    "plaatsing": "midden",
    "clips": [
-    {
-     "id": "pwXr8zT1Rb",
-     "term": "student studying night",
-     "titel": "Teenage Boy Sitting at the Desk, Browsing on his Laptop at Night",
-     "staand": false,
-     "post": "voorbeeld-2"
-    },
     {
      "id": "QVZd7hJfOj",
      "term": "hands open light",
@@ -46,11 +39,11 @@
      "post": "voorbeeld-2"
     }
    ],
-   "duur": 17.0
+   "duur": 22.0
   },
   {
    "bestand": "docs/media/voorbeelden/situatie-3-onderweg-boven.mp4",
-   "ref": "Spreuken 20:13",
+   "ref": "Mattheüs 11:28",
    "scene": "onderweg",
    "plaatsing": "boven",
    "clips": [
@@ -62,37 +55,30 @@
      "post": "voorbeeld-3"
     },
     {
-     "id": "ZC95qCKSgr",
+     "id": "wPVNA4PN5i",
      "term": "city lights night",
-     "titel": "Timelapse of Modern Cityscape from Sunset to Night",
+     "titel": "London at night",
      "staand": false,
      "post": "voorbeeld-3"
     }
    ],
-   "duur": 19.62
+   "duur": 19.31
   },
   {
-   "bestand": "docs/media/voorbeelden/situatie-4-natuur-onder.mp4",
-   "ref": "Jesaja 41:13",
+   "bestand": "docs/media/voorbeelden/situatie-4-natuur-midden.mp4",
+   "ref": "Psalm 56:4",
    "scene": "natuur",
-   "plaatsing": "onder",
+   "plaatsing": "midden",
    "clips": [
     {
-     "id": "qJ735fIgn9",
-     "term": "man sitting on bench",
-     "titel": "Doing yoga in the park",
-     "staand": false,
-     "post": "voorbeeld-4"
-    },
-    {
-     "id": "YCTycIAOKM",
-     "term": "ocean waves slow",
-     "titel": "Slow waves",
+     "id": "PpWluZqMGi",
+     "term": "sunrise clouds",
+     "titel": "A beautiful sunrise in Lisbon",
      "staand": false,
      "post": "voorbeeld-4"
     }
    ],
-   "duur": 19.92
+   "duur": 17.0
   }
  ]
 }
