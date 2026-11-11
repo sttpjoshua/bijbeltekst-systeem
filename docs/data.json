@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-11T20:31",
+ "gegenereerd": "2026-11-11T20:34",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -30,7 +30,9 @@
   "stories": true,
   "zelfstandig": true,
   "nieuwe_reels": false,
-  "reel_tempo": null
+  "reel_tempo": null,
+  "reel_formaat": "situatie",
+  "reel_aandeel": 0.6
  },
  "strategie": {
   "versie": 1,
@@ -103,7 +105,17 @@
    "reel_stijl": {
     "klassiek": 1.0,
     "kinetisch": 1.0,
-    "beeld": 1.0
+    "beeld": 1.0,
+    "situatie": 1.0
+   },
+   "reel_plaatsing": {
+    "midden": 1.0,
+    "boven": 1.0
+   },
+   "reel_scene": {
+    "natuur": 1.0,
+    "dichtbij": 1.0,
+    "onderweg": 1.0
    },
    "reel_haak": {
     "geen": 1.0,
@@ -190,7 +202,17 @@
    "reel_stijl": {
     "klassiek": 0,
     "kinetisch": 0,
-    "beeld": 0
+    "beeld": 0,
+    "situatie": 0
+   },
+   "reel_plaatsing": {
+    "midden": 0,
+    "boven": 0
+   },
+   "reel_scene": {
+    "natuur": 0,
+    "dichtbij": 0,
+    "onderweg": 0
    },
    "reel_haak": {
     "geen": 0,
@@ -3682,6 +3704,28 @@
   },
   {
    "dimensie": "reel_stijl",
+   "opties": [
+    {
+     "optie": null,
+     "gem": 1.0,
+     "n": 1
+    }
+   ],
+   "metingen": 1
+  },
+  {
+   "dimensie": "reel_plaatsing",
+   "opties": [
+    {
+     "optie": null,
+     "gem": 1.0,
+     "n": 1
+    }
+   ],
+   "metingen": 1
+  },
+  {
+   "dimensie": "reel_scene",
    "opties": [
     {
      "optie": null,
