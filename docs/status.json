@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T13:40:29",
+ "updated": "2026-11-11T13:43:13",
  "agents": {
   "verskiezer": {
    "t": "2026-11-11T13:32:13",
@@ -22,9 +22,9 @@
    "state": "done"
   },
   "controller": {
-   "t": "2026-11-11T13:38:39",
-   "task": "Fout als opgelost gemarkeerd",
-   "state": "done"
+   "t": "2026-11-11T12:01:02",
+   "task": "Politiek nieuws (NOS): \"Raad van State: minister van Asiel moet veilig",
+   "state": "error"
   },
   "analist": {
    "t": "2026-11-11T12:51:08",
@@ -57,12 +57,40 @@
  ],
  "log": [
   {
-   "t": "12:01",
-   "msg": "Politiek nieuws (NOS): \"Raad van State: minister van Asiel moet veiligheid Syrië opnieuw beoordelen\". Neutrale"
+   "t": "13:43",
+   "msg": "Bediening: WhatsApp-testbericht klaargezet"
   },
   {
-   "t": "12:01",
-   "msg": "Zwaar nieuws (NOS): \"Vijf jaar The Kyiv Independent: hoe bedrijf je journalistiek in een land in oorlog?\". Wil"
+   "t": "13:40",
+   "msg": "Bediening: WhatsApp-testbericht klaargezet"
+  },
+  {
+   "t": "13:38",
+   "msg": "Bediening: Fout als opgelost gemarkeerd"
+  },
+  {
+   "t": "13:32",
+   "msg": "Bediening: Voorstel niet gevonden of al afgehandeld"
+  },
+  {
+   "t": "13:30",
+   "msg": "Bediening: Nieuwspost klaargezet: Prediker 3:1 op 2026-11-11 om 17:45"
+  },
+  {
+   "t": "13:30",
+   "msg": "Nieuwspost: Jesaja 41:10 vervangen door Prediker 3:1 (aanleiding: politiek, NOS)"
+  },
+  {
+   "t": "13:28",
+   "msg": "Bediening: Nieuws: maximaal per dag 3"
+  },
+  {
+   "t": "12:51",
+   "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
+  },
+  {
+   "t": "12:51",
+   "msg": "Statistieken opgehaald voor 7 posts"
   },
   {
    "t": "12:16",
@@ -75,38 +103,6 @@
   {
    "t": "12:16",
    "msg": "2026-11-11-n1215 ook als story geplaatst"
-  },
-  {
-   "t": "12:51",
-   "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
-  },
-  {
-   "t": "12:51",
-   "msg": "Statistieken opgehaald voor 7 posts"
-  },
-  {
-   "t": "13:28",
-   "msg": "Bediening: Nieuws: maximaal per dag 3"
-  },
-  {
-   "t": "13:30",
-   "msg": "Bediening: Nieuwspost klaargezet: Prediker 3:1 op 2026-11-11 om 17:45"
-  },
-  {
-   "t": "13:30",
-   "msg": "Nieuwspost: Jesaja 41:10 vervangen door Prediker 3:1 (aanleiding: politiek, NOS)"
-  },
-  {
-   "t": "13:32",
-   "msg": "Bediening: Voorstel niet gevonden of al afgehandeld"
-  },
-  {
-   "t": "13:38",
-   "msg": "Bediening: Fout als opgelost gemarkeerd"
-  },
-  {
-   "t": "13:40",
-   "msg": "Bediening: WhatsApp-testbericht klaargezet"
   }
  ],
  "lampen": [

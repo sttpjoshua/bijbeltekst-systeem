@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-11T13:40",
+ "gegenereerd": "2026-11-11T13:43",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -3013,16 +3013,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-09T13:02:26",
-   "soort": "info",
-   "tekst": "Verbinding met Facebook-pagina werkt (Bibleversenl)"
-  },
-  {
-   "t": "2026-11-09T13:02:28",
-   "soort": "info",
-   "tekst": "Statistieken lezen werkt"
-  },
-  {
    "t": "2026-11-09T13:48:24",
    "soort": "info",
    "tekst": "Statistieken opgehaald voor 6 posts"
@@ -3328,9 +3318,22 @@
    "t": "2026-11-11T13:40:29",
    "soort": "info",
    "tekst": "Bediening: WhatsApp-testbericht klaargezet"
+  },
+  {
+   "t": "2026-11-11T13:43:13",
+   "soort": "info",
+   "tekst": "Bediening: WhatsApp-testbericht klaargezet"
   }
  ],
- "recente_fouten": [],
+ "recente_fouten": [
+  {
+   "t": "2026-11-11T12:01:02",
+   "soort": "fout",
+   "tekst": "Politiek nieuws (NOS): \"Raad van State: minister van Asiel moet veiligheid Syrië opnieuw beoordelen\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
+   "code": "nieuws_voorstel",
+   "post": "n111112010"
+  }
+ ],
  "versen_totaal": 300,
  "reacties": [
   {
@@ -3474,6 +3477,11 @@
    "ok": "2026-11-08T14:36",
    "laatst_ok": true,
    "detail": "10 posts voor MORGEN en OVERMORGEN klaargezet"
+  },
+  "whatsapp": {
+   "fout": "2026-11-11T13:40",
+   "laatst_ok": false,
+   "detail": "Telegram-bot gevonden, maar nog geen /start-bericht van jou ontvangen. Stuur je bot /start."
   }
  },
  "groei": [

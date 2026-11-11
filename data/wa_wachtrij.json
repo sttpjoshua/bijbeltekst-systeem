@@ -34,5 +34,11 @@
   "soort": "test",
   "tekst": "👋 Testbericht van Bibleverse. De meldingen werken!",
   "sleutel": "test:2026-11-11T13:40:29"
+ },
+ {
+  "t": "2026-11-11T13:43+01:00",
+  "soort": "test",
+  "tekst": "👋 Testbericht van Bibleverse. De meldingen werken!",
+  "sleutel": "test:2026-11-11T13:43:13"
  }
 ]
