@@ -1,22 +1,22 @@
 {
  "sleutel": true,
- "test": "mislukt: '>=' not supported between instances of 'str' and 'int'",
+ "test": "ok: 12 clips gevonden voor 'sunrise'",
  "reels": [
   {
    "ref": "Mattheüs 6:34",
-   "fout": "geen clips"
+   "fout": "HTTP Error 403: Forbidden"
   },
   {
    "ref": "Psalm 56:4",
-   "fout": "geen clips"
+   "fout": "HTTP Error 403: Forbidden"
   },
   {
    "ref": "Spreuken 20:13",
-   "fout": "geen clips"
+   "fout": "HTTP Error 403: Forbidden"
   },
   {
    "ref": "Jesaja 41:13",
-   "fout": "geen clips"
+   "fout": "HTTP Error 403: Forbidden"
   }
  ]
 }
