@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-11T22:05",
+ "gegenereerd": "2026-11-11T23:01",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -3607,7 +3607,7 @@
    "ok": "2026-11-08T00:36"
   },
   "reacties": {
-   "ok": "2026-11-11T22:04",
+   "ok": "2026-11-11T23:01",
    "laatst_ok": true,
    "detail": "1 nieuwe reacties",
    "fout": "2026-11-08T18:00"
@@ -3636,7 +3636,7 @@
    "fout": "2026-11-11T13:49",
    "laatst_ok": true,
    "detail": "1 bericht(en) verstuurd",
-   "ok": "2026-11-11T21:58"
+   "ok": "2026-11-11T22:05"
   },
   "nieuws": {
    "ok": "2026-11-11T17:01",
