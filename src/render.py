@@ -637,8 +637,9 @@ def maak_video(post, pad, duur=None):
     return pad
 
 
-def _tekstslide(post, titel, body, pad, nummer, bg=None):
-    """Slide 2 en 3 van een carrousel: titel + lopende tekst in de huisstijl."""
+def _tekstslide(post, titel, body, pad, nummer, bg=None, groot=False):
+    """Tekstslide van een carrousel: titel + lopende tekst in de huisstijl.
+    groot=True: de 'verhaal eerst'-opening, zonder titel, grotere letters en een veeg-teken."""
     b, h = 1080, 1350
     v = post["variabelen"]
     pal = PALETTEN[v["palet"]]
@@ -650,23 +651,28 @@ def _tekstslide(post, titel, body, pad, nummer, bg=None):
     if v["layout"] == "kader":
         p = int(b * 0.06)
         d.rectangle([p, p, b - p, h - p], outline=accent + (200,), width=3)
-    tf = _klein_font(int(b * 0.03), b"Bold")
-    _woordmerk(d, b // 2, int(h * 0.16), titel, tf, accent + (255,), int(b * 0.008))
-    grootte = int(b * 0.058)
+    if titel:
+        tf = _klein_font(int(b * 0.03), b"Bold")
+        _woordmerk(d, b // 2, int(h * 0.16), titel, tf, accent + (255,), int(b * 0.008))
+    grootte = int(b * (0.085 if groot else 0.058))
+    ruimte = 0.62 if groot else 0.55
     while grootte > 26:
         f = _font(v["lettertype"], grootte)
         regels = _wrap(body, f, b - 2 * marge, d)
-        lh = int(grootte * 1.38)
-        if lh * len(regels) <= h * 0.55:
+        lh = int(grootte * (1.28 if groot else 1.38))
+        if lh * len(regels) <= h * ruimte:
             break
         grootte -= 2
-    y0 = int(h * 0.27) + (int(h * 0.55) - lh * len(regels)) // 2
+    y0 = int(h * (0.18 if groot else 0.27)) + (int(h * ruimte) - lh * len(regels)) // 2
     links = v["layout"] == "links"
     staat = _kernstaat(post, kleur, accent)
     for i, r in enumerate(regels):
         _regel(d, marge if links else b // 2, y0 + i * lh, r, f, kleur + (255,), accent + (255,), staat, links)
+    if groot:  # geen referentie (die komt op de volgende slides), wel een veeg-teken
+        d.text((b // 2, int(h * 0.86)), "swipe  \u2192", font=_klein_font(int(b * 0.03), b"SemiBold"), fill=accent + (230,), anchor="ma")
     rf = _klein_font(int(b * 0.026), b"SemiBold")
-    d.text((b // 2, int(h * 0.85)), (post["ref"] + ("  \u00b7  NBV21" if post.get("vertaling") == "NBV21" else "")).upper(), font=rf, fill=accent + (220,), anchor="ma")
+    if not groot:
+        d.text((b // 2, int(h * 0.85)), (post["ref"] + ("  \u00b7  NBV21" if post.get("vertaling") == "NBV21" else "")).upper(), font=rf, fill=accent + (220,), anchor="ma")
     hy = h - int(h * (0.115 if v["layout"] == "kader" else 0.085))
     _woordmerk(d, b // 2, hy, "BIBLEVERSE", _klein_font(int(b * 0.024), b"Bold"), accent + (235,), int(b * 0.009))
     if post.get("handle"):
@@ -699,28 +705,42 @@ def _panorama(post, b, h, n=3):
     return achtergrond(B, h, v["palet"], stijl, post["id"])
 
 def maak_carrousel(post, basis):
-    """Slides op één doorlopende achtergrond: (stopper,) vers, betekenis, toepassing. Geeft de lijst met paden terug."""
+    """Slides op één doorlopende achtergrond. Volgorde hangt af van variabelen.opening:
+    vers:     vers, betekenis, vandaag
+    stopper:  stopper, vers, betekenis, vandaag
+    verhaal:  openingszin uit de uitleg, stopper, vers, vandaag (de uitleg is dan de haak)
+    Geeft de lijst met paden terug."""
     b, h = 1080, 1350
-    stopper = post["variabelen"].get("opening") == "stopper"
-    n = 4 if stopper else 3
+    opening = post["variabelen"].get("opening") or "vers"
+    hook = (post.get("verhaal_hook") or "").strip()
+    if opening == "verhaal" and not hook:
+        opening = "stopper"  # zonder openingszin valt hij terug op de stopper
+    kern = kernwoord(post)
+    frag = stopper_fragment(post["tekst"], kern)
+    met_stopper = opening == "stopper" or (opening == "verhaal" and frag.strip() != post["tekst"].strip() and len(post["tekst"]) >= 70)
+    volgorde = (["verhaal"] if opening == "verhaal" else []) + (["stopper"] if met_stopper else []) + ["vers"] + \
+               ([] if opening == "verhaal" else ["betekenis"]) + ["vandaag"]
+    n = len(volgorde)
     paden = [basis.replace(".jpg", f"-{i}.jpg") for i in range(1, n + 1)]
     pano = _panorama(post, b, h, n)
     delen = [pano.crop((i * b, 0, (i + 1) * b, h)) for i in range(n)]
     eerste = dict(post, variabelen=dict(post["variabelen"], uitleg_op_beeld=False))
-    k = 0
-    if stopper:
-        kern = kernwoord(post)
-        maak_afbeelding(dict(eerste, tekst=stopper_fragment(post["tekst"], kern), _stopper=True),
-                        paden[0], bg=delen[0])
-        k = 1
-    maak_afbeelding(eerste, paden[k], bg=delen[k])
-    if not stopper:  # klein veeg-teken rechtsonder op slide 1
-        im = Image.open(paden[0]).convert("RGBA"); d = ImageDraw.Draw(im)
-        acc = _kleuren(post)[1]
-        d.text((im.width - 70, im.height - 70), "\u2192", font=_klein_font(44, b"Medium"), fill=acc + (220,), anchor="mm")
-        im.convert("RGB").save(paden[0], quality=93)
-    _tekstslide(post, "WAT BETEKENT DIT?", post["betekenis"], paden[k + 1], 2, bg=delen[k + 1])
-    _tekstslide(post, "VANDAAG", post["toepassing"], paden[k + 2], 3, bg=delen[k + 2])
+    for i, soort in enumerate(volgorde):
+        if soort == "verhaal":
+            _tekstslide(post, None, hook, paden[i], 1, bg=delen[i], groot=True)
+        elif soort == "stopper":
+            maak_afbeelding(dict(eerste, tekst=frag, _stopper=True), paden[i], bg=delen[i])
+        elif soort == "vers":
+            maak_afbeelding(eerste, paden[i], bg=delen[i])
+            if i == 0:  # klein veeg-teken rechtsonder op slide 1
+                im = Image.open(paden[0]).convert("RGBA"); d = ImageDraw.Draw(im)
+                acc = _kleuren(post)[1]
+                d.text((im.width - 70, im.height - 70), "\u2192", font=_klein_font(44, b"Medium"), fill=acc + (220,), anchor="mm")
+                im.convert("RGB").save(paden[0], quality=93)
+        elif soort == "betekenis":
+            _tekstslide(post, "WAT BETEKENT DIT?", post["betekenis"], paden[i], i + 1, bg=delen[i])
+        else:
+            _tekstslide(post, "VANDAAG", post["toepassing"], paden[i], i + 1, bg=delen[i])
     return paden
 
 

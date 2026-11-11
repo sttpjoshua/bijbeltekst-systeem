@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-11T07:31",
+ "gegenereerd": "2026-11-11T09:57",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -99,7 +99,8 @@
    },
    "opening": {
     "vers": 1.0,
-    "stopper": 1.0
+    "stopper": 1.0,
+    "verhaal": 1.0
    },
    "tijdslot": {
     "07:30": 1.0,
@@ -176,7 +177,8 @@
    },
    "opening": {
     "vers": 0,
-    "stopper": 0
+    "stopper": 0,
+    "verhaal": 0
    },
    "tijdslot": {
     "07:30": 0,
@@ -189,6 +191,530 @@
   "inzichten": []
  },
  "posts": [
+  {
+   "id": "2026-11-13-5",
+   "datum": "2026-11-13",
+   "ref": "Psalm 85:9",
+   "tekst": "Ik zal horen, wat God, de HEERE, spreken zal; want Hij zal tot Zijn volk en tot Zijn gunstgenoten van vrede spreken; maar dat zij niet weder tot dwaasheid keren.",
+   "hook": "Wanneer luisterde jij voor het laatst echt?",
+   "status": "gerenderd",
+   "variabelen": {
+    "huisstijl": "hemelsblauw",
+    "thema": "humor_herkenbaar",
+    "hook_stijl": "vraag",
+    "formaat": "video",
+    "uitleg_op_beeld": true,
+    "achtergrondbron": "verloop",
+    "boekgroep": "psalmen",
+    "lengte": "middel",
+    "bron": "ontdekking",
+    "vraag_onderaan": false,
+    "opening": null,
+    "tijdslot": "07:30",
+    "tijdslot_fb": "17:45",
+    "palet": "hemelsblauw",
+    "lettertype": "montserrat_zwaar",
+    "layout": "links",
+    "achtergrond": "diagonaal",
+    "hook_op_beeld": false,
+    "video_uitleg": true
+   },
+   "vers_id": "Psalms-85-9-9",
+   "goedgekeurd": null,
+   "reeks": null,
+   "reeks_label": null,
+   "reserve_ref": null,
+   "caption": "Wanneer luisterde jij voor het laatst echt?\n\n\"Ik zal horen, wat God, de HEERE, spreken zal; want Hij zal tot Zijn volk en tot Zijn gunstgenoten van vrede spreken; maar dat zij niet weder tot dwaasheid keren.\"\nPsalm 85:9\n\nVoor je iets tegen God zegt, mag je eerst luisteren. Hij spreekt over vrede.\n\nWaar heb jij vandaag vrede nodig?",
+   "uitleg": "Luister naar God: Hij spreekt over vrede voor wie bij Hem hoort.",
+   "media": "docs/media/2026-11/2026-11-13-5.mp4",
+   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-13-5.mp4",
+   "media_urls": [
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-13-5.mp4"
+   ],
+   "thumb": "thumbs/2026-11-13-5.jpg",
+   "platformen": [],
+   "links": {},
+   "totaal": {},
+   "per_platform": {},
+   "score": {},
+   "pub": {},
+   "gemist": [],
+   "nood": false,
+   "online": null
+  },
+  {
+   "id": "2026-11-13-4",
+   "datum": "2026-11-13",
+   "ref": "Efeze 2:10",
+   "tekst": "Want wij zijn Zijn maaksel, geschapen in Christus Jezus tot goede werken, welke God voorbereid heeft, opdat wij in dezelve zouden wandelen.",
+   "hook": "Voor iedereen die zich afvraagt of het ertoe doet wat hij doet.",
+   "status": "gerenderd",
+   "variabelen": {
+    "huisstijl": "zonsopgang",
+    "thema": "identiteit",
+    "hook_stijl": "herkenning",
+    "formaat": "video",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "beeld",
+    "boekgroep": "brieven",
+    "lengte": "middel",
+    "bron": "bekend",
+    "vraag_onderaan": false,
+    "opening": null,
+    "tijdslot": "17:45",
+    "tijdslot_fb": "07:30",
+    "palet": "zonsopgang_fris",
+    "lettertype": "lora",
+    "layout": "links",
+    "achtergrond": "diagonaal",
+    "hook_op_beeld": false,
+    "video_uitleg": true
+   },
+   "vers_id": "Ephesians-2-10-10",
+   "goedgekeurd": null,
+   "reeks": null,
+   "reeks_label": null,
+   "reserve_ref": null,
+   "caption": "Voor iedereen die zich afvraagt of het ertoe doet wat hij doet.\n\n\"Want wij zijn Zijn maaksel, geschapen in Christus Jezus tot goede werken, welke God voorbereid heeft, opdat wij in dezelve zouden wandelen.\"\nEfeze 2:10\n\nJe bent geen toeval. God heeft goede dingen voor je klaargezet.\n\nWelk goed werk ligt vandaag voor jou klaar?",
+   "uitleg": "",
+   "media": "docs/media/2026-11/2026-11-13-4.mp4",
+   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-13-4.mp4",
+   "media_urls": [
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-13-4.mp4"
+   ],
+   "thumb": "thumbs/2026-11-13-4.jpg",
+   "platformen": [],
+   "links": {},
+   "totaal": {},
+   "per_platform": {},
+   "score": {},
+   "pub": {},
+   "gemist": [],
+   "nood": false,
+   "online": null
+  },
+  {
+   "id": "2026-11-13-3",
+   "datum": "2026-11-13",
+   "ref": "Spreuken 17:28",
+   "tekst": "Een dwaas zelfs, die zwijgt, zal wijs geacht worden, en die zijn lippen toesluit, verstandig.",
+   "hook": "Voor iedereen die in een vergadering net iets te veel zei.",
+   "status": "gerenderd",
+   "variabelen": {
+    "huisstijl": "perzik",
+    "thema": "humor_herkenbaar",
+    "hook_stijl": "herkenning",
+    "formaat": "video",
+    "uitleg_op_beeld": true,
+    "achtergrondbron": "verloop",
+    "boekgroep": "spreuken",
+    "lengte": "middel",
+    "bron": "bekend",
+    "vraag_onderaan": false,
+    "opening": null,
+    "tijdslot": "20:30",
+    "tijdslot_fb": "22:00",
+    "palet": "perzik",
+    "lettertype": "playfair",
+    "layout": "citaat",
+    "achtergrond": "diagonaal",
+    "hook_op_beeld": false,
+    "video_uitleg": true
+   },
+   "vers_id": "Proverbs-17-28-28",
+   "goedgekeurd": null,
+   "reeks": null,
+   "reeks_label": null,
+   "reserve_ref": null,
+   "caption": "Voor iedereen die in een vergadering net iets te veel zei.\n\n\"Een dwaas zelfs, die zwijgt, zal wijs geacht worden, en die zijn lippen toesluit, verstandig.\"\nSpreuken 17:28\n\nSoms is zwijgen het slimste wat je kunt zeggen.\n\nWanneer had jij beter even kunnen zwijgen?",
+   "uitleg": "Ook een dwaas lijkt wijs als hij zijn mond houdt.",
+   "media": "docs/media/2026-11/2026-11-13-3.mp4",
+   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-13-3.mp4",
+   "media_urls": [
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-13-3.mp4"
+   ],
+   "thumb": "thumbs/2026-11-13-3.jpg",
+   "platformen": [],
+   "links": {},
+   "totaal": {},
+   "per_platform": {},
+   "score": {},
+   "pub": {},
+   "gemist": [],
+   "nood": false,
+   "online": null
+  },
+  {
+   "id": "2026-11-13-2",
+   "datum": "2026-11-13",
+   "ref": "Mattheüs 10:30-31",
+   "tekst": "En ook uw haren des hoofds zijn alle geteld. Vreest dan niet; gij gaat vele musjes te boven.",
+   "hook": "Tel even mee: hoeveel haren heb jij?",
+   "status": "gerenderd",
+   "variabelen": {
+    "huisstijl": "zonsopgang",
+    "thema": "identiteit",
+    "hook_stijl": "uitdaging",
+    "formaat": "carrousel",
+    "uitleg_op_beeld": true,
+    "achtergrondbron": "verloop",
+    "boekgroep": "evangelien",
+    "lengte": "middel",
+    "bron": "bekend",
+    "vraag_onderaan": true,
+    "opening": "stopper",
+    "tijdslot": "22:00",
+    "tijdslot_fb": "20:30",
+    "palet": "zonsopgang_fris",
+    "lettertype": "lora",
+    "layout": "links",
+    "achtergrond": "diagonaal",
+    "hook_op_beeld": false,
+    "video_uitleg": null
+   },
+   "vers_id": "Matthew-10-30-31",
+   "goedgekeurd": null,
+   "reeks": null,
+   "reeks_label": null,
+   "reserve_ref": null,
+   "caption": "Tel even mee: hoeveel haren heb jij?\n\n\"En ook uw haren des hoofds zijn alle geteld. Vreest dan niet; gij gaat vele musjes te boven.\"\nMattheüs 10:30-31\n\nNiemand telt jouw haren. God wel. Zo goed kent Hij je.\n\nWanneer voelde jij je echt gezien?",
+   "uitleg": "God kent je tot in het kleinste detail. Je bent meer waard dan je denkt.",
+   "media": "docs/media/2026-11/2026-11-13-2-1.jpg",
+   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-13-2-1.jpg",
+   "media_urls": [
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-13-2-1.jpg",
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-13-2-2.jpg",
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-13-2-3.jpg",
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-13-2-4.jpg"
+   ],
+   "thumb": "thumbs/2026-11-13-2.jpg",
+   "platformen": [],
+   "links": {},
+   "totaal": {},
+   "per_platform": {},
+   "score": {},
+   "pub": {},
+   "gemist": [],
+   "nood": false,
+   "online": null
+  },
+  {
+   "id": "2026-11-13-1",
+   "datum": "2026-11-13",
+   "ref": "Handelingen 1:8",
+   "tekst": "Maar gij zult ontvangen de kracht des Heiligen Geestes, Die over u komen zal; en gij zult Mijn getuigen zijn, zo te Jeruzalem, als in geheel Judea en Samaria, en tot aan het uiterste der aarde.",
+   "hook": "Even dit, voor je aan je dag begint.",
+   "status": "gerenderd",
+   "variabelen": {
+    "huisstijl": "mint",
+    "thema": "moed",
+    "hook_stijl": "rustig",
+    "formaat": "carrousel",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "verloop",
+    "boekgroep": "brieven",
+    "lengte": "lang",
+    "bron": "bekend",
+    "vraag_onderaan": true,
+    "opening": "stopper",
+    "tijdslot": "12:15",
+    "tijdslot_fb": "20:30",
+    "palet": "mint",
+    "lettertype": "dmserif",
+    "layout": "centraal",
+    "achtergrond": "diagonaal",
+    "hook_op_beeld": false,
+    "video_uitleg": null
+   },
+   "vers_id": "Acts-1-8-8",
+   "goedgekeurd": null,
+   "reeks": null,
+   "reeks_label": null,
+   "reserve_ref": null,
+   "caption": "Even dit, voor je aan je dag begint.\n\n\"Maar gij zult ontvangen de kracht des Heiligen Geestes, Die over u komen zal; en gij zult Mijn getuigen zijn, zo te Jeruzalem, als in geheel Judea en Samaria, en tot aan het uiterste der aarde.\"\nHandelingen 1:8\n\nJe hoeft niet op eigen kracht te getuigen. God geeft de kracht die je nodig hebt.\n\nWaar heb jij vandaag Gods kracht voor nodig?",
+   "uitleg": "",
+   "media": "docs/media/2026-11/2026-11-13-1-1.jpg",
+   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-13-1-1.jpg",
+   "media_urls": [
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-13-1-1.jpg",
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-13-1-2.jpg",
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-13-1-3.jpg",
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-13-1-4.jpg"
+   ],
+   "thumb": "thumbs/2026-11-13-1.jpg",
+   "platformen": [],
+   "links": {},
+   "totaal": {},
+   "per_platform": {},
+   "score": {},
+   "pub": {},
+   "gemist": [],
+   "nood": false,
+   "online": null
+  },
+  {
+   "id": "2026-11-12-5",
+   "datum": "2026-11-12",
+   "ref": "Spreuken 26:14",
+   "tekst": "Een deur keert om op haar herre, alzo de luiaard op zijn bed.",
+   "hook": "Lees dit voordat je op snooze drukt.",
+   "status": "gerenderd",
+   "variabelen": {
+    "huisstijl": "zonsopgang",
+    "thema": "humor_herkenbaar",
+    "hook_stijl": "uitdaging",
+    "formaat": "carrousel",
+    "uitleg_op_beeld": true,
+    "achtergrondbron": "beeld",
+    "boekgroep": "spreuken",
+    "lengte": "kort",
+    "bron": "bekend",
+    "vraag_onderaan": false,
+    "opening": "vers",
+    "tijdslot": "22:00",
+    "tijdslot_fb": "17:45",
+    "palet": "zonsopgang_fris",
+    "lettertype": "lora",
+    "layout": "links",
+    "achtergrond": "diagonaal",
+    "hook_op_beeld": false,
+    "video_uitleg": null
+   },
+   "vers_id": "Proverbs-26-14-14",
+   "goedgekeurd": null,
+   "reeks": null,
+   "reeks_label": null,
+   "reserve_ref": null,
+   "caption": "Lees dit voordat je op snooze drukt.\n\n\"Een deur keert om op haar herre, alzo de luiaard op zijn bed.\"\nSpreuken 26:14\n\nEen eerlijk en grappig beeld: veel beweging, maar je komt nergens.",
+   "uitleg": "Zoals een deur heen en weer draait, zo draait een luiaard zich om in bed.",
+   "media": "docs/media/2026-11/2026-11-12-5-1.jpg",
+   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-5-1.jpg",
+   "media_urls": [
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-5-1.jpg",
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-5-2.jpg",
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-5-3.jpg"
+   ],
+   "thumb": "thumbs/2026-11-12-5.jpg",
+   "platformen": [],
+   "links": {},
+   "totaal": {},
+   "per_platform": {},
+   "score": {},
+   "pub": {},
+   "gemist": [],
+   "nood": false,
+   "online": null
+  },
+  {
+   "id": "2026-11-12-4",
+   "datum": "2026-11-12",
+   "ref": "Spreuken 15:14",
+   "tekst": "Een verstandig hart zal de wetenschap opzoeken; maar de mond der zotten zal met dwaasheid gevoed worden.",
+   "hook": "Voor iedereen die vanavond toch weer drie filmpjes over niks heeft gekeken.",
+   "status": "gerenderd",
+   "variabelen": {
+    "huisstijl": "mint",
+    "thema": "humor_herkenbaar",
+    "hook_stijl": "herkenning",
+    "formaat": "video",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "verloop",
+    "boekgroep": "spreuken",
+    "lengte": "middel",
+    "bron": "ontdekking",
+    "vraag_onderaan": true,
+    "opening": null,
+    "tijdslot": "20:30",
+    "tijdslot_fb": "20:30",
+    "palet": "mint",
+    "lettertype": "dmserif",
+    "layout": "centraal",
+    "achtergrond": "diagonaal",
+    "hook_op_beeld": false,
+    "video_uitleg": true
+   },
+   "vers_id": "Proverbs-15-14-14",
+   "goedgekeurd": null,
+   "reeks": null,
+   "reeks_label": null,
+   "reserve_ref": null,
+   "caption": "Voor iedereen die vanavond toch weer drie filmpjes over niks heeft gekeken.\n\n\"Een verstandig hart zal de wetenschap opzoeken; maar de mond der zotten zal met dwaasheid gevoed worden.\"\nSpreuken 15:14\n\nWat je hart voedt, bepaalt wie je wordt. Kies vanavond eens bewust.\n\nWaar voed jij je hart vandaag mee?",
+   "uitleg": "",
+   "media": "docs/media/2026-11/2026-11-12-4.mp4",
+   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-4.mp4",
+   "media_urls": [
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-4.mp4"
+   ],
+   "thumb": "thumbs/2026-11-12-4.jpg",
+   "platformen": [],
+   "links": {},
+   "totaal": {},
+   "per_platform": {},
+   "score": {},
+   "pub": {},
+   "gemist": [],
+   "nood": false,
+   "online": null
+  },
+  {
+   "id": "2026-11-12-3",
+   "datum": "2026-11-12",
+   "ref": "Psalm 119:99",
+   "tekst": "Ik ben verstandiger dan al mijn leraars, omdat Uw getuigenissen mijn betrachting zijn.",
+   "hook": "",
+   "status": "gerenderd",
+   "variabelen": {
+    "huisstijl": "perzik",
+    "thema": "wijsheid",
+    "hook_stijl": "geen",
+    "formaat": "carrousel",
+    "uitleg_op_beeld": true,
+    "achtergrondbron": "verloop",
+    "boekgroep": "psalmen",
+    "lengte": "kort",
+    "bron": "ontdekking",
+    "vraag_onderaan": false,
+    "opening": "vers",
+    "tijdslot": "17:45",
+    "tijdslot_fb": "20:30",
+    "palet": "perzik",
+    "lettertype": "playfair",
+    "layout": "citaat",
+    "achtergrond": "diagonaal",
+    "hook_op_beeld": false,
+    "video_uitleg": null
+   },
+   "vers_id": "Psalms-119-99-99",
+   "goedgekeurd": null,
+   "reeks": null,
+   "reeks_label": null,
+   "reserve_ref": null,
+   "caption": "\"Ik ben verstandiger dan al mijn leraars, omdat Uw getuigenissen mijn betrachting zijn.\"\nPsalm 119:99\n\nEchte wijsheid begint niet bij een diploma, maar bij luisteren naar God.",
+   "uitleg": "Wie Gods woorden overdenkt, leert meer dan uit alle boeken.",
+   "media": "docs/media/2026-11/2026-11-12-3-1.jpg",
+   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-3-1.jpg",
+   "media_urls": [
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-3-1.jpg",
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-3-2.jpg",
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-3-3.jpg"
+   ],
+   "thumb": "thumbs/2026-11-12-3.jpg",
+   "platformen": [],
+   "links": {},
+   "totaal": {},
+   "per_platform": {},
+   "score": {},
+   "pub": {},
+   "gemist": [],
+   "nood": false,
+   "online": null
+  },
+  {
+   "id": "2026-11-12-2",
+   "datum": "2026-11-12",
+   "ref": "Habakuk 3:18",
+   "tekst": "Zo zal ik nochtans in den HEERE van vreugde opspringen, ik zal mij verheugen in den God mijns heils.",
+   "hook": "Kun jij blij zijn als niet alles lukt?",
+   "status": "gerenderd",
+   "variabelen": {
+    "huisstijl": "paars",
+    "thema": "dankbaarheid",
+    "hook_stijl": "vraag",
+    "formaat": "carrousel",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "beeld",
+    "boekgroep": "profeten",
+    "lengte": "middel",
+    "bron": "bekend",
+    "vraag_onderaan": false,
+    "opening": "vers",
+    "tijdslot": "12:15",
+    "tijdslot_fb": "22:00",
+    "palet": "diep_paars",
+    "lettertype": "lora",
+    "layout": "links",
+    "achtergrond": "radiaal",
+    "hook_op_beeld": false,
+    "video_uitleg": null
+   },
+   "vers_id": "Habakkuk-3-18-18",
+   "goedgekeurd": null,
+   "reeks": null,
+   "reeks_label": null,
+   "reserve_ref": null,
+   "caption": "Kun jij blij zijn als niet alles lukt?\n\n\"Zo zal ik nochtans in den HEERE van vreugde opspringen, ik zal mij verheugen in den God mijns heils.\"\nHabakuk 3:18\n\nHabakuk zegt dit terwijl alles tegenzit. Zijn vreugde hangt niet af van de omstandigheden.",
+   "uitleg": "",
+   "media": "docs/media/2026-11/2026-11-12-2-1.jpg",
+   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-2-1.jpg",
+   "media_urls": [
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-2-1.jpg",
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-2-2.jpg",
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-2-3.jpg"
+   ],
+   "thumb": "thumbs/2026-11-12-2.jpg",
+   "platformen": [],
+   "links": {},
+   "totaal": {},
+   "per_platform": {},
+   "score": {},
+   "pub": {},
+   "gemist": [],
+   "nood": false,
+   "online": null
+  },
+  {
+   "id": "2026-11-12-1",
+   "datum": "2026-11-12",
+   "ref": "Kolossenzen 1:12",
+   "tekst": "Dankende den Vader, Die ons bekwaam gemaakt heeft, om deel te hebben in de erve der heiligen in het licht.",
+   "hook": "",
+   "status": "gerenderd",
+   "variabelen": {
+    "huisstijl": "paars",
+    "thema": "dankbaarheid",
+    "hook_stijl": "geen",
+    "formaat": "carrousel",
+    "uitleg_op_beeld": true,
+    "achtergrondbron": "beeld",
+    "boekgroep": "brieven",
+    "lengte": "middel",
+    "bron": "ontdekking",
+    "vraag_onderaan": false,
+    "opening": "vers",
+    "tijdslot": "07:30",
+    "tijdslot_fb": "12:15",
+    "palet": "diep_paars",
+    "lettertype": "lora",
+    "layout": "links",
+    "achtergrond": "radiaal",
+    "hook_op_beeld": false,
+    "video_uitleg": null
+   },
+   "vers_id": "Colossians-1-12-12",
+   "goedgekeurd": null,
+   "reeks": null,
+   "reeks_label": null,
+   "reserve_ref": null,
+   "caption": "\"Dankende den Vader, Die ons bekwaam gemaakt heeft, om deel te hebben in de erve der heiligen in het licht.\"\nKolossenzen 1:12\n\nJe hoeft je plek bij God niet te verdienen. Hij heeft je die al gegeven.",
+   "uitleg": "Dank God: Hij geeft je een plek in Zijn licht.",
+   "media": "docs/media/2026-11/2026-11-12-1-1.jpg",
+   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-1-1.jpg",
+   "media_urls": [
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-1-1.jpg",
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-1-2.jpg",
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-1-3.jpg"
+   ],
+   "thumb": "thumbs/2026-11-12-1.jpg",
+   "platformen": [],
+   "links": {},
+   "totaal": {},
+   "per_platform": {},
+   "score": {},
+   "pub": {},
+   "gemist": [],
+   "nood": false,
+   "online": null
+  },
   {
    "id": "2026-11-11-n2200",
    "datum": "2026-11-11",
@@ -236,6 +762,9 @@
    "totaal": {},
    "per_platform": {},
    "score": {},
+   "pub": {},
+   "gemist": [],
+   "nood": true,
    "online": null
   },
   {
@@ -285,6 +814,9 @@
    "totaal": {},
    "per_platform": {},
    "score": {},
+   "pub": {},
+   "gemist": [],
+   "nood": true,
    "online": null
   },
   {
@@ -334,6 +866,9 @@
    "totaal": {},
    "per_platform": {},
    "score": {},
+   "pub": {},
+   "gemist": [],
+   "nood": true,
    "online": null
   },
   {
@@ -383,6 +918,9 @@
    "totaal": {},
    "per_platform": {},
    "score": {},
+   "pub": {},
+   "gemist": [],
+   "nood": true,
    "online": null
   },
   {
@@ -438,6 +976,12 @@
    "totaal": {},
    "per_platform": {},
    "score": {},
+   "pub": {
+    "instagram": "2026-11-11T07:31+01:00",
+    "facebook": "2026-11-11T07:31+01:00"
+   },
+   "gemist": [],
+   "nood": true,
    "online": "2026-11-11T07:31+01:00"
   },
   {
@@ -521,6 +1065,12 @@
     }
    },
    "score": {},
+   "pub": {
+    "instagram": "2026-11-10T12:16+01:00",
+    "facebook": "2026-11-10T20:30+01:00"
+   },
+   "gemist": [],
+   "nood": false,
    "online": "2026-11-10T12:16+01:00"
   },
   {
@@ -605,6 +1155,12 @@
     }
    },
    "score": {},
+   "pub": {
+    "instagram": "2026-11-10T17:46+01:00",
+    "facebook": "2026-11-10T17:46+01:00"
+   },
+   "gemist": [],
+   "nood": false,
    "online": "2026-11-10T17:46+01:00"
   },
   {
@@ -688,6 +1244,12 @@
     }
    },
    "score": {},
+   "pub": {
+    "instagram": "2026-11-10T07:31+01:00",
+    "facebook": "2026-11-10T20:30+01:00"
+   },
+   "gemist": [],
+   "nood": false,
    "online": "2026-11-10T07:31+01:00"
   },
   {
@@ -742,6 +1304,12 @@
    "totaal": {},
    "per_platform": {},
    "score": {},
+   "pub": {
+    "instagram": "2026-11-10T22:03+01:00",
+    "facebook": "2026-11-10T22:03+01:00"
+   },
+   "gemist": [],
+   "nood": false,
    "online": "2026-11-10T22:03+01:00"
   },
   {
@@ -815,6 +1383,12 @@
     }
    },
    "score": {},
+   "pub": {
+    "instagram": "2026-11-10T20:32+01:00",
+    "facebook": "2026-11-10T22:01+01:00"
+   },
+   "gemist": [],
+   "nood": false,
    "online": "2026-11-10T20:32+01:00"
   },
   {
@@ -899,6 +1473,12 @@
     }
    },
    "score": {},
+   "pub": {
+    "facebook": "2026-11-09T12:17+01:00",
+    "instagram": "2026-11-09T17:47+01:00"
+   },
+   "gemist": [],
+   "nood": false,
    "online": "2026-11-09T12:17+01:00"
   },
   {
@@ -982,6 +1562,12 @@
     }
    },
    "score": {},
+   "pub": {
+    "facebook": "2026-11-09T07:31+01:00",
+    "instagram": "2026-11-09T22:01+01:00"
+   },
+   "gemist": [],
+   "nood": false,
    "online": "2026-11-09T07:31+01:00"
   },
   {
@@ -1064,6 +1650,12 @@
     }
    },
    "score": {},
+   "pub": {
+    "facebook": "2026-11-09T07:31+01:00",
+    "instagram": "2026-11-09T12:16+01:00"
+   },
+   "gemist": [],
+   "nood": false,
    "online": "2026-11-09T07:31+01:00"
   },
   {
@@ -1146,6 +1738,12 @@
     }
    },
    "score": {},
+   "pub": {
+    "instagram": "2026-11-09T20:32+01:00",
+    "facebook": "2026-11-09T20:32+01:00"
+   },
+   "gemist": [],
+   "nood": false,
    "online": "2026-11-09T20:32+01:00"
   },
   {
@@ -1230,6 +1828,12 @@
     }
    },
    "score": {},
+   "pub": {
+    "instagram": "2026-11-09T07:31+01:00",
+    "facebook": "2026-11-09T20:30+01:00"
+   },
+   "gemist": [],
+   "nood": false,
    "online": "2026-11-09T07:31+01:00"
   },
   {
@@ -1307,6 +1911,12 @@
     }
    },
    "score": {},
+   "pub": {
+    "instagram": "2026-11-08T22:01+01:00",
+    "facebook": "2026-11-08T22:02+01:00"
+   },
+   "gemist": [],
+   "nood": false,
    "online": "2026-11-08T22:01+01:00"
   },
   {
@@ -1384,6 +1994,12 @@
     }
    },
    "score": {},
+   "pub": {
+    "instagram": "2026-11-08T12:15+01:00",
+    "facebook": "2026-11-08T12:15+01:00"
+   },
+   "gemist": [],
+   "nood": false,
    "online": "2026-11-08T12:15+01:00"
   },
   {
@@ -1462,6 +2078,12 @@
    "score": {
     "instagram": 1.0
    },
+   "pub": {
+    "instagram": "2026-11-08T20:31+01:00",
+    "facebook": "2026-11-08T20:32+01:00"
+   },
+   "gemist": [],
+   "nood": false,
    "online": "2026-11-08T20:31+01:00"
   },
   {
@@ -1539,6 +2161,12 @@
     }
    },
    "score": {},
+   "pub": {
+    "instagram": "2026-11-08T17:45+01:00",
+    "facebook": "2026-11-08T17:45+01:00"
+   },
+   "gemist": [],
+   "nood": false,
    "online": "2026-11-08T17:45+01:00"
   },
   {
@@ -1616,6 +2244,12 @@
     }
    },
    "score": {},
+   "pub": {
+    "instagram": "2026-11-08T07:30+01:00",
+    "facebook": "2026-11-08T07:31+01:00"
+   },
+   "gemist": [],
+   "nood": false,
    "online": "2026-11-08T07:30+01:00"
   },
   {
@@ -1674,6 +2308,11 @@
     }
    },
    "score": {},
+   "pub": {
+    "instagram": "2026-11-07T12:30+01:00"
+   },
+   "gemist": [],
+   "nood": false,
    "online": "2026-11-07T12:30+01:00"
   }
  ],
@@ -2101,7 +2740,7 @@
    "ok": "2026-11-08T00:36"
   },
   "reacties": {
-   "ok": "2026-11-11T07:00",
+   "ok": "2026-11-11T09:00",
    "laatst_ok": true,
    "detail": "0 nieuwe reacties",
    "fout": "2026-11-08T18:00"
@@ -2326,8 +2965,8 @@
    },
    "moed": {
     "totaal": 44,
-    "beschikbaar": 39,
-    "nooit": 41
+    "beschikbaar": 38,
+    "nooit": 40
    },
    "liefde": {
     "totaal": 67,
@@ -2346,23 +2985,23 @@
    },
    "wijsheid": {
     "totaal": 92,
-    "beschikbaar": 90,
-    "nooit": 90
+    "beschikbaar": 89,
+    "nooit": 89
    },
    "humor_herkenbaar": {
     "totaal": 30,
-    "beschikbaar": 28,
-    "nooit": 28
+    "beschikbaar": 24,
+    "nooit": 24
    },
    "dankbaarheid": {
     "totaal": 92,
-    "beschikbaar": 90,
-    "nooit": 90
+    "beschikbaar": 88,
+    "nooit": 88
    },
    "identiteit": {
     "totaal": 33,
-    "beschikbaar": 32,
-    "nooit": 32
+    "beschikbaar": 30,
+    "nooit": 30
    },
    "vrede_rust": {
     "totaal": 42,
@@ -2377,6 +3016,10 @@
   "ontdekking": 258,
   "per_dag": 5,
   "muziek": [
+   {
+    "naam": "ES_A Higher Calling - Mandala Dreams.mp3",
+    "keer": 1
+   },
    {
     "naam": "ES_Bed Time - Traditional.mp3",
     "keer": 1
@@ -2394,8 +3037,16 @@
     "keer": 1
    },
    {
-    "naam": "ES_A Higher Calling - Mandala Dreams.mp3",
-    "keer": 0
+    "naam": "ES_Silent Memories - Calm Shores.mp3",
+    "keer": 1
+   },
+   {
+    "naam": "ES_Surroundings - Helmut Schenker.mp3",
+    "keer": 1
+   },
+   {
+    "naam": "ES_The Bird's World - Elm Lake.mp3",
+    "keer": 1
    },
    {
     "naam": "ES_A Marvelous Companion - Rachel Sandy.mp3",
@@ -2450,23 +3101,11 @@
     "keer": 0
    },
    {
-    "naam": "ES_Silent Memories - Calm Shores.mp3",
-    "keer": 0
-   },
-   {
     "naam": "ES_Softest of Feathers - Calm Shores.mp3",
     "keer": 0
    },
    {
-    "naam": "ES_Surroundings - Helmut Schenker.mp3",
-    "keer": 0
-   },
-   {
     "naam": "ES_That's What Christmas Is About (Instrumental Version) - Loving Caliber.mp3",
-    "keer": 0
-   },
-   {
-    "naam": "ES_The Bird's World - Elm Lake.mp3",
     "keer": 0
    },
    {
@@ -2496,6 +3135,22 @@
     "keer": 1
    },
    {
+    "naam": "pexels-dima-langemann-154794175-10633172.jpg",
+    "keer": 1
+   },
+   {
+    "naam": "pexels-hoangmanh-39726915.jpg",
+    "keer": 1
+   },
+   {
+    "naam": "pexels-molnartamasphotography-29202982.jpg",
+    "keer": 1
+   },
+   {
+    "naam": "pexels-vanngo-ng-105653827-38504182.jpg",
+    "keer": 1
+   },
+   {
     "naam": "pexels-alessandro-kelvin-1248577-2376272.jpg",
     "keer": 0
    },
@@ -2508,10 +3163,6 @@
     "keer": 0
    },
    {
-    "naam": "pexels-dima-langemann-154794175-10633172.jpg",
-    "keer": 0
-   },
-   {
     "naam": "pexels-eugene-golovesov-1810803-17898540.jpg",
     "keer": 0
    },
@@ -2521,10 +3172,6 @@
    },
    {
     "naam": "pexels-gyozo-morocz-517633466-16411308.jpg",
-    "keer": 0
-   },
-   {
-    "naam": "pexels-hoangmanh-39726915.jpg",
     "keer": 0
    },
    {
@@ -2552,10 +3199,6 @@
     "keer": 0
    },
    {
-    "naam": "pexels-molnartamasphotography-29202982.jpg",
-    "keer": 0
-   },
-   {
     "naam": "pexels-molnartamasphotography-29202983.jpg",
     "keer": 0
    },
@@ -2569,10 +3212,6 @@
    },
    {
     "naam": "pexels-thalittlemarc-28864326.jpg",
-    "keer": 0
-   },
-   {
-    "naam": "pexels-vanngo-ng-105653827-38504182.jpg",
     "keer": 0
    },
    {
@@ -2641,666 +3280,6 @@
  },
  "planning": [
   {
-   "datum": "2026-11-11",
-   "ref": "Micha 6:8",
-   "tekst": "Hij heeft u bekend gemaakt, o mens! wat goed is; en wat eist de HEERE van u, dan recht te doen, en weldadigheid lief te hebben, en ootmoediglijk te wandelen met uw God?",
-   "vers_id": "Micah-6-8-8",
-   "variabelen": {
-    "huisstijl": "zand",
-    "thema": "wijsheid",
-    "hook_stijl": "geen",
-    "formaat": "video",
-    "uitleg_op_beeld": true,
-    "achtergrondbron": "verloop",
-    "boekgroep": "profeten",
-    "lengte": "middel",
-    "bron": "bekend",
-    "vraag_onderaan": true,
-    "opening": null,
-    "tijdslot": "22:00",
-    "tijdslot_fb": "22:00",
-    "palet": "zand",
-    "lettertype": "dmserif",
-    "layout": "centraal",
-    "achtergrond": "verloop",
-    "hook_op_beeld": false,
-    "video_uitleg": true
-   },
-   "keuzebron": {
-    "huisstijl": "experiment",
-    "thema": "experiment",
-    "hook_stijl": "experiment",
-    "formaat": "experiment",
-    "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "experiment",
-    "boekgroep": "experiment",
-    "lengte": "experiment",
-    "bron": "experiment",
-    "vraag_onderaan": "experiment",
-    "opening": "n.v.t.",
-    "tijdslot": "experiment",
-    "video_uitleg": "vaste regel"
-   },
-   "reeks": null,
-   "reeks_label": null
-  },
-  {
-   "datum": "2026-11-11",
-   "ref": "1 Korinthe 1:3",
-   "tekst": "Genade zij u en vrede van God onzen Vader, en den Heere Jezus Christus.",
-   "vers_id": "I_Corinthians-1-3-3",
-   "variabelen": {
-    "huisstijl": "salie",
-    "thema": "vrede_rust",
-    "hook_stijl": "herkenning",
-    "formaat": "carrousel",
-    "uitleg_op_beeld": true,
-    "achtergrondbron": "verloop",
-    "boekgroep": "brieven",
-    "lengte": "kort",
-    "bron": "ontdekking",
-    "vraag_onderaan": true,
-    "opening": "stopper",
-    "tijdslot": "20:30",
-    "tijdslot_fb": "07:30",
-    "palet": "salie",
-    "lettertype": "cormorant",
-    "layout": "kader",
-    "achtergrond": "effen",
-    "hook_op_beeld": false,
-    "video_uitleg": null
-   },
-   "keuzebron": {
-    "huisstijl": "experiment",
-    "thema": "experiment",
-    "hook_stijl": "experiment",
-    "formaat": "experiment",
-    "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "experiment",
-    "boekgroep": "experiment",
-    "lengte": "experiment",
-    "bron": "experiment",
-    "vraag_onderaan": "experiment",
-    "opening": "experiment",
-    "tijdslot": "experiment",
-    "video_uitleg": "n.v.t."
-   },
-   "reeks": null,
-   "reeks_label": null
-  },
-  {
-   "datum": "2026-11-11",
-   "ref": "2 Timotheüs 2:1",
-   "tekst": "Gij dan, mijn zoon, word gesterkt in de genade, die in Christus Jezus is.",
-   "vers_id": "II_Timothy-2-1-1",
-   "variabelen": {
-    "huisstijl": "zonsopgang",
-    "thema": "moed",
-    "hook_stijl": "herkenning",
-    "formaat": "video",
-    "uitleg_op_beeld": false,
-    "achtergrondbron": "verloop",
-    "boekgroep": "brieven",
-    "lengte": "kort",
-    "bron": "ontdekking",
-    "vraag_onderaan": false,
-    "opening": null,
-    "tijdslot": "17:45",
-    "tijdslot_fb": "17:45",
-    "palet": "zonsopgang_fris",
-    "lettertype": "lora",
-    "layout": "links",
-    "achtergrond": "diagonaal",
-    "hook_op_beeld": false,
-    "video_uitleg": true
-   },
-   "keuzebron": {
-    "huisstijl": "experiment",
-    "thema": "experiment",
-    "hook_stijl": "experiment",
-    "formaat": "experiment",
-    "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "experiment",
-    "boekgroep": "experiment",
-    "lengte": "experiment",
-    "bron": "experiment",
-    "vraag_onderaan": "experiment",
-    "opening": "n.v.t.",
-    "tijdslot": "experiment",
-    "video_uitleg": "vaste regel"
-   },
-   "reeks": null,
-   "reeks_label": null
-  },
-  {
-   "datum": "2026-11-11",
-   "ref": "Nahum 1:7",
-   "tekst": "De HEERE is goed, Hij is ter sterkte in den dag der benauwdheid, en Hij kent hen, die op Hem betrouwen.",
-   "vers_id": "Nahum-1-7-7",
-   "variabelen": {
-    "huisstijl": "avond",
-    "thema": "vertrouwen",
-    "hook_stijl": "herkenning",
-    "formaat": "carrousel",
-    "uitleg_op_beeld": true,
-    "achtergrondbron": "beeld",
-    "boekgroep": "profeten",
-    "lengte": "middel",
-    "bron": "bekend",
-    "vraag_onderaan": false,
-    "opening": "vers",
-    "tijdslot": "07:30",
-    "tijdslot_fb": "20:30",
-    "palet": "nacht",
-    "lettertype": "playfair",
-    "layout": "citaat",
-    "achtergrond": "licht",
-    "hook_op_beeld": false,
-    "video_uitleg": null
-   },
-   "keuzebron": {
-    "huisstijl": "experiment",
-    "thema": "experiment",
-    "hook_stijl": "experiment",
-    "formaat": "experiment",
-    "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "experiment",
-    "boekgroep": "experiment",
-    "lengte": "experiment",
-    "bron": "experiment",
-    "vraag_onderaan": "experiment",
-    "opening": "experiment",
-    "tijdslot": "experiment",
-    "video_uitleg": "n.v.t."
-   },
-   "reeks": null,
-   "reeks_label": null
-  },
-  {
-   "datum": "2026-11-11",
-   "ref": "Filippenzen 4:6",
-   "tekst": "Weest in geen ding bezorgd; maar laat uw begeerten in alles, door bidden en smeken, met dankzegging bekend worden bij God.",
-   "vers_id": "Philippians-4-6-6",
-   "variabelen": {
-    "huisstijl": "zonsopgang",
-    "thema": "dankbaarheid",
-    "hook_stijl": "vraag",
-    "formaat": "carrousel",
-    "uitleg_op_beeld": true,
-    "achtergrondbron": "beeld",
-    "boekgroep": "brieven",
-    "lengte": "middel",
-    "bron": "ontdekking",
-    "vraag_onderaan": false,
-    "opening": "stopper",
-    "tijdslot": "12:15",
-    "tijdslot_fb": "22:00",
-    "palet": "zonsopgang_fris",
-    "lettertype": "lora",
-    "layout": "links",
-    "achtergrond": "diagonaal",
-    "hook_op_beeld": false,
-    "video_uitleg": null
-   },
-   "keuzebron": {
-    "huisstijl": "experiment",
-    "thema": "experiment",
-    "hook_stijl": "experiment",
-    "formaat": "experiment",
-    "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "experiment",
-    "boekgroep": "experiment",
-    "lengte": "experiment",
-    "bron": "experiment",
-    "vraag_onderaan": "experiment",
-    "opening": "experiment",
-    "tijdslot": "experiment",
-    "video_uitleg": "n.v.t."
-   },
-   "reeks": null,
-   "reeks_label": null
-  },
-  {
-   "datum": "2026-11-12",
-   "ref": "Kolossenzen 1:12",
-   "tekst": "Dankende den Vader, Die ons bekwaam gemaakt heeft, om deel te hebben in de erve der heiligen in het licht.",
-   "vers_id": "Colossians-1-12-12",
-   "variabelen": {
-    "huisstijl": "paars",
-    "thema": "dankbaarheid",
-    "hook_stijl": "geen",
-    "formaat": "carrousel",
-    "uitleg_op_beeld": true,
-    "achtergrondbron": "beeld",
-    "boekgroep": "brieven",
-    "lengte": "middel",
-    "bron": "ontdekking",
-    "vraag_onderaan": false,
-    "opening": "vers",
-    "tijdslot": "07:30",
-    "tijdslot_fb": "12:15",
-    "palet": "diep_paars",
-    "lettertype": "lora",
-    "layout": "links",
-    "achtergrond": "radiaal",
-    "hook_op_beeld": false,
-    "video_uitleg": null
-   },
-   "keuzebron": {
-    "huisstijl": "experiment",
-    "thema": "experiment",
-    "hook_stijl": "experiment",
-    "formaat": "experiment",
-    "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "experiment",
-    "boekgroep": "experiment",
-    "lengte": "experiment",
-    "bron": "experiment",
-    "vraag_onderaan": "experiment",
-    "opening": "experiment",
-    "tijdslot": "experiment",
-    "video_uitleg": "n.v.t."
-   },
-   "reeks": null,
-   "reeks_label": null
-  },
-  {
-   "datum": "2026-11-12",
-   "ref": "Habakuk 3:18",
-   "tekst": "Zo zal ik nochtans in den HEERE van vreugde opspringen, ik zal mij verheugen in den God mijns heils.",
-   "vers_id": "Habakkuk-3-18-18",
-   "variabelen": {
-    "huisstijl": "paars",
-    "thema": "dankbaarheid",
-    "hook_stijl": "vraag",
-    "formaat": "carrousel",
-    "uitleg_op_beeld": false,
-    "achtergrondbron": "beeld",
-    "boekgroep": "profeten",
-    "lengte": "middel",
-    "bron": "bekend",
-    "vraag_onderaan": false,
-    "opening": "vers",
-    "tijdslot": "12:15",
-    "tijdslot_fb": "22:00",
-    "palet": "diep_paars",
-    "lettertype": "lora",
-    "layout": "links",
-    "achtergrond": "radiaal",
-    "hook_op_beeld": false,
-    "video_uitleg": null
-   },
-   "keuzebron": {
-    "huisstijl": "experiment",
-    "thema": "experiment",
-    "hook_stijl": "experiment",
-    "formaat": "experiment",
-    "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "experiment",
-    "boekgroep": "experiment",
-    "lengte": "experiment",
-    "bron": "experiment",
-    "vraag_onderaan": "experiment",
-    "opening": "experiment",
-    "tijdslot": "experiment",
-    "video_uitleg": "n.v.t."
-   },
-   "reeks": null,
-   "reeks_label": null
-  },
-  {
-   "datum": "2026-11-12",
-   "ref": "Psalm 119:99",
-   "tekst": "Ik ben verstandiger dan al mijn leraars, omdat Uw getuigenissen mijn betrachting zijn.",
-   "vers_id": "Psalms-119-99-99",
-   "variabelen": {
-    "huisstijl": "perzik",
-    "thema": "wijsheid",
-    "hook_stijl": "geen",
-    "formaat": "carrousel",
-    "uitleg_op_beeld": true,
-    "achtergrondbron": "verloop",
-    "boekgroep": "psalmen",
-    "lengte": "kort",
-    "bron": "ontdekking",
-    "vraag_onderaan": false,
-    "opening": "vers",
-    "tijdslot": "17:45",
-    "tijdslot_fb": "20:30",
-    "palet": "perzik",
-    "lettertype": "playfair",
-    "layout": "citaat",
-    "achtergrond": "diagonaal",
-    "hook_op_beeld": false,
-    "video_uitleg": null
-   },
-   "keuzebron": {
-    "huisstijl": "experiment",
-    "thema": "experiment",
-    "hook_stijl": "experiment",
-    "formaat": "experiment",
-    "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "experiment",
-    "boekgroep": "experiment",
-    "lengte": "experiment",
-    "bron": "experiment",
-    "vraag_onderaan": "experiment",
-    "opening": "experiment",
-    "tijdslot": "experiment",
-    "video_uitleg": "n.v.t."
-   },
-   "reeks": null,
-   "reeks_label": null
-  },
-  {
-   "datum": "2026-11-12",
-   "ref": "Spreuken 15:14",
-   "tekst": "Een verstandig hart zal de wetenschap opzoeken; maar de mond der zotten zal met dwaasheid gevoed worden.",
-   "vers_id": "Proverbs-15-14-14",
-   "variabelen": {
-    "huisstijl": "mint",
-    "thema": "humor_herkenbaar",
-    "hook_stijl": "herkenning",
-    "formaat": "video",
-    "uitleg_op_beeld": false,
-    "achtergrondbron": "verloop",
-    "boekgroep": "spreuken",
-    "lengte": "middel",
-    "bron": "ontdekking",
-    "vraag_onderaan": true,
-    "opening": null,
-    "tijdslot": "20:30",
-    "tijdslot_fb": "20:30",
-    "palet": "mint",
-    "lettertype": "dmserif",
-    "layout": "centraal",
-    "achtergrond": "diagonaal",
-    "hook_op_beeld": false,
-    "video_uitleg": true
-   },
-   "keuzebron": {
-    "huisstijl": "experiment",
-    "thema": "experiment",
-    "hook_stijl": "experiment",
-    "formaat": "experiment",
-    "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "experiment",
-    "boekgroep": "experiment",
-    "lengte": "experiment",
-    "bron": "experiment",
-    "vraag_onderaan": "experiment",
-    "opening": "n.v.t.",
-    "tijdslot": "experiment",
-    "video_uitleg": "vaste regel"
-   },
-   "reeks": null,
-   "reeks_label": null
-  },
-  {
-   "datum": "2026-11-12",
-   "ref": "Spreuken 26:14",
-   "tekst": "Een deur keert om op haar herre, alzo de luiaard op zijn bed.",
-   "vers_id": "Proverbs-26-14-14",
-   "variabelen": {
-    "huisstijl": "zonsopgang",
-    "thema": "humor_herkenbaar",
-    "hook_stijl": "uitdaging",
-    "formaat": "carrousel",
-    "uitleg_op_beeld": true,
-    "achtergrondbron": "beeld",
-    "boekgroep": "spreuken",
-    "lengte": "kort",
-    "bron": "bekend",
-    "vraag_onderaan": false,
-    "opening": "vers",
-    "tijdslot": "22:00",
-    "tijdslot_fb": "17:45",
-    "palet": "zonsopgang_fris",
-    "lettertype": "lora",
-    "layout": "links",
-    "achtergrond": "diagonaal",
-    "hook_op_beeld": false,
-    "video_uitleg": null
-   },
-   "keuzebron": {
-    "huisstijl": "experiment",
-    "thema": "experiment",
-    "hook_stijl": "experiment",
-    "formaat": "experiment",
-    "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "experiment",
-    "boekgroep": "experiment",
-    "lengte": "experiment",
-    "bron": "experiment",
-    "vraag_onderaan": "experiment",
-    "opening": "experiment",
-    "tijdslot": "experiment",
-    "video_uitleg": "n.v.t."
-   },
-   "reeks": null,
-   "reeks_label": null
-  },
-  {
-   "datum": "2026-11-13",
-   "ref": "Handelingen 1:8",
-   "tekst": "Maar gij zult ontvangen de kracht des Heiligen Geestes, Die over u komen zal; en gij zult Mijn getuigen zijn, zo te Jeruzalem, als in geheel Judea en Samaria, en tot aan het uiterste der aarde.",
-   "vers_id": "Acts-1-8-8",
-   "variabelen": {
-    "huisstijl": "mint",
-    "thema": "moed",
-    "hook_stijl": "rustig",
-    "formaat": "carrousel",
-    "uitleg_op_beeld": false,
-    "achtergrondbron": "verloop",
-    "boekgroep": "brieven",
-    "lengte": "lang",
-    "bron": "bekend",
-    "vraag_onderaan": true,
-    "opening": "stopper",
-    "tijdslot": "12:15",
-    "tijdslot_fb": "20:30",
-    "palet": "mint",
-    "lettertype": "dmserif",
-    "layout": "centraal",
-    "achtergrond": "diagonaal",
-    "hook_op_beeld": false,
-    "video_uitleg": null
-   },
-   "keuzebron": {
-    "huisstijl": "experiment",
-    "thema": "experiment",
-    "hook_stijl": "experiment",
-    "formaat": "experiment",
-    "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "experiment",
-    "boekgroep": "experiment",
-    "lengte": "experiment",
-    "bron": "experiment",
-    "vraag_onderaan": "experiment",
-    "opening": "experiment",
-    "tijdslot": "experiment",
-    "video_uitleg": "n.v.t."
-   },
-   "reeks": null,
-   "reeks_label": null
-  },
-  {
-   "datum": "2026-11-13",
-   "ref": "Mattheüs 10:30-31",
-   "tekst": "En ook uw haren des hoofds zijn alle geteld. Vreest dan niet; gij gaat vele musjes te boven.",
-   "vers_id": "Matthew-10-30-31",
-   "variabelen": {
-    "huisstijl": "zonsopgang",
-    "thema": "identiteit",
-    "hook_stijl": "uitdaging",
-    "formaat": "carrousel",
-    "uitleg_op_beeld": true,
-    "achtergrondbron": "verloop",
-    "boekgroep": "evangelien",
-    "lengte": "middel",
-    "bron": "bekend",
-    "vraag_onderaan": true,
-    "opening": "stopper",
-    "tijdslot": "22:00",
-    "tijdslot_fb": "20:30",
-    "palet": "zonsopgang_fris",
-    "lettertype": "lora",
-    "layout": "links",
-    "achtergrond": "diagonaal",
-    "hook_op_beeld": false,
-    "video_uitleg": null
-   },
-   "keuzebron": {
-    "huisstijl": "experiment",
-    "thema": "experiment",
-    "hook_stijl": "experiment",
-    "formaat": "experiment",
-    "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "experiment",
-    "boekgroep": "experiment",
-    "lengte": "experiment",
-    "bron": "experiment",
-    "vraag_onderaan": "experiment",
-    "opening": "experiment",
-    "tijdslot": "experiment",
-    "video_uitleg": "n.v.t."
-   },
-   "reeks": null,
-   "reeks_label": null
-  },
-  {
-   "datum": "2026-11-13",
-   "ref": "Spreuken 17:28",
-   "tekst": "Een dwaas zelfs, die zwijgt, zal wijs geacht worden, en die zijn lippen toesluit, verstandig.",
-   "vers_id": "Proverbs-17-28-28",
-   "variabelen": {
-    "huisstijl": "perzik",
-    "thema": "humor_herkenbaar",
-    "hook_stijl": "herkenning",
-    "formaat": "video",
-    "uitleg_op_beeld": true,
-    "achtergrondbron": "verloop",
-    "boekgroep": "spreuken",
-    "lengte": "middel",
-    "bron": "bekend",
-    "vraag_onderaan": false,
-    "opening": null,
-    "tijdslot": "20:30",
-    "tijdslot_fb": "22:00",
-    "palet": "perzik",
-    "lettertype": "playfair",
-    "layout": "citaat",
-    "achtergrond": "diagonaal",
-    "hook_op_beeld": false,
-    "video_uitleg": true
-   },
-   "keuzebron": {
-    "huisstijl": "experiment",
-    "thema": "experiment",
-    "hook_stijl": "experiment",
-    "formaat": "experiment",
-    "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "experiment",
-    "boekgroep": "experiment",
-    "lengte": "experiment",
-    "bron": "experiment",
-    "vraag_onderaan": "experiment",
-    "opening": "n.v.t.",
-    "tijdslot": "experiment",
-    "video_uitleg": "vaste regel"
-   },
-   "reeks": null,
-   "reeks_label": null
-  },
-  {
-   "datum": "2026-11-13",
-   "ref": "Efeze 2:10",
-   "tekst": "Want wij zijn Zijn maaksel, geschapen in Christus Jezus tot goede werken, welke God voorbereid heeft, opdat wij in dezelve zouden wandelen.",
-   "vers_id": "Ephesians-2-10-10",
-   "variabelen": {
-    "huisstijl": "zonsopgang",
-    "thema": "identiteit",
-    "hook_stijl": "herkenning",
-    "formaat": "video",
-    "uitleg_op_beeld": false,
-    "achtergrondbron": "beeld",
-    "boekgroep": "brieven",
-    "lengte": "middel",
-    "bron": "bekend",
-    "vraag_onderaan": false,
-    "opening": null,
-    "tijdslot": "17:45",
-    "tijdslot_fb": "07:30",
-    "palet": "zonsopgang_fris",
-    "lettertype": "lora",
-    "layout": "links",
-    "achtergrond": "diagonaal",
-    "hook_op_beeld": false,
-    "video_uitleg": true
-   },
-   "keuzebron": {
-    "huisstijl": "experiment",
-    "thema": "experiment",
-    "hook_stijl": "experiment",
-    "formaat": "experiment",
-    "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "experiment",
-    "boekgroep": "experiment",
-    "lengte": "experiment",
-    "bron": "experiment",
-    "vraag_onderaan": "experiment",
-    "opening": "n.v.t.",
-    "tijdslot": "experiment",
-    "video_uitleg": "vaste regel"
-   },
-   "reeks": null,
-   "reeks_label": null
-  },
-  {
-   "datum": "2026-11-13",
-   "ref": "Psalm 85:9",
-   "tekst": "Ik zal horen, wat God, de HEERE, spreken zal; want Hij zal tot Zijn volk en tot Zijn gunstgenoten van vrede spreken; maar dat zij niet weder tot dwaasheid keren.",
-   "vers_id": "Psalms-85-9-9",
-   "variabelen": {
-    "huisstijl": "hemelsblauw",
-    "thema": "humor_herkenbaar",
-    "hook_stijl": "vraag",
-    "formaat": "video",
-    "uitleg_op_beeld": true,
-    "achtergrondbron": "verloop",
-    "boekgroep": "psalmen",
-    "lengte": "middel",
-    "bron": "ontdekking",
-    "vraag_onderaan": false,
-    "opening": null,
-    "tijdslot": "07:30",
-    "tijdslot_fb": "17:45",
-    "palet": "hemelsblauw",
-    "lettertype": "montserrat_zwaar",
-    "layout": "links",
-    "achtergrond": "diagonaal",
-    "hook_op_beeld": false,
-    "video_uitleg": true
-   },
-   "keuzebron": {
-    "huisstijl": "experiment",
-    "thema": "experiment",
-    "hook_stijl": "experiment",
-    "formaat": "experiment",
-    "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "experiment",
-    "boekgroep": "experiment",
-    "lengte": "experiment",
-    "bron": "experiment",
-    "vraag_onderaan": "experiment",
-    "opening": "n.v.t.",
-    "tijdslot": "experiment",
-    "video_uitleg": "vaste regel"
-   },
-   "reeks": null,
-   "reeks_label": null
-  },
-  {
    "datum": "2026-11-14",
    "ref": "Spreuken 24:3",
    "tekst": "Door wijsheid wordt een huis gebouwd, en door verstandigheid bevestigd.",
@@ -3346,9 +3325,9 @@
   },
   {
    "datum": "2026-11-14",
-   "ref": "Jesaja 32:17",
-   "tekst": "En het werk der gerechtigheid zal vrede zijn; en de werking der gerechtigheid zal zijn gerustheid en zekerheid tot in eeuwigheid.",
-   "vers_id": "Isaiah-32-17-17",
+   "ref": "Jesaja 30:15",
+   "tekst": "Want alzo zegt de Heere HEERE, de Heilige Israels: Door wederkering en rust zoudt gijlieden behouden worden, in stilheid en in vertrouwen zou uw sterkte zijn; doch gij hebt niet gewild.",
+   "vers_id": "Isaiah-30-15-15",
    "variabelen": {
     "huisstijl": "roze",
     "thema": "vrede_rust",
@@ -3357,7 +3336,7 @@
     "uitleg_op_beeld": true,
     "achtergrondbron": "beeld",
     "boekgroep": "profeten",
-    "lengte": "middel",
+    "lengte": "lang",
     "bron": "bekend",
     "vraag_onderaan": false,
     "opening": null,
@@ -3874,17 +3853,17 @@
   },
   {
    "datum": "2026-11-16",
-   "ref": "Mattheüs 19:19",
-   "tekst": "Eer uw vader en moeder; en: Gij zult uw naaste liefhebben als uzelven.",
-   "vers_id": "Matthew-19-19-19",
+   "ref": "2 Timotheüs 2:1",
+   "tekst": "Gij dan, mijn zoon, word gesterkt in de genade, die in Christus Jezus is.",
+   "vers_id": "II_Timothy-2-1-1",
    "variabelen": {
     "huisstijl": "bosgroen",
     "thema": "moed",
     "hook_stijl": "geen",
     "formaat": "video",
     "uitleg_op_beeld": true,
-    "achtergrondbron": "verloop",
-    "boekgroep": "evangelien",
+    "achtergrondbron": "beeld",
+    "boekgroep": "brieven",
     "lengte": "kort",
     "bron": "ontdekking",
     "vraag_onderaan": true,
@@ -3904,7 +3883,7 @@
     "hook_stijl": "experiment",
     "formaat": "experiment",
     "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "limiet",
+    "achtergrondbron": "experiment",
     "boekgroep": "experiment",
     "lengte": "experiment",
     "bron": "experiment",
@@ -3962,9 +3941,9 @@
   },
   {
    "datum": "2026-11-17",
-   "ref": "Jeremia 1:8",
-   "tekst": "Vrees niet voor hun aangezicht, want Ik ben met u, om u te redden, spreekt de HEERE.",
-   "vers_id": "Jeremiah-1-8-8",
+   "ref": "Mattheüs 19:19",
+   "tekst": "Eer uw vader en moeder; en: Gij zult uw naaste liefhebben als uzelven.",
+   "vers_id": "Matthew-19-19-19",
    "variabelen": {
     "huisstijl": "zonsopgang",
     "thema": "moed",
@@ -3972,7 +3951,7 @@
     "formaat": "video",
     "uitleg_op_beeld": true,
     "achtergrondbron": "beeld",
-    "boekgroep": "profeten",
+    "boekgroep": "evangelien",
     "lengte": "kort",
     "bron": "ontdekking",
     "vraag_onderaan": false,
@@ -4059,7 +4038,7 @@
     "hook_stijl": "geen",
     "formaat": "carrousel",
     "uitleg_op_beeld": false,
-    "achtergrondbron": "verloop",
+    "achtergrondbron": "beeld",
     "boekgroep": "psalmen",
     "lengte": "kort",
     "bron": "bekend",
@@ -4080,7 +4059,7 @@
     "hook_stijl": "experiment",
     "formaat": "experiment",
     "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "limiet",
+    "achtergrondbron": "experiment",
     "boekgroep": "experiment",
     "lengte": "experiment",
     "bron": "experiment",
@@ -4138,9 +4117,9 @@
   },
   {
    "datum": "2026-11-17",
-   "ref": "Psalm 10:17",
-   "tekst": "HEERE! Gij hebt den wens der zachtmoedigen gehoord; Gij zult hun hart sterken, Uw oor zal opmerken.",
-   "vers_id": "Psalms-10-17-17",
+   "ref": "Jeremia 1:8",
+   "tekst": "Vrees niet voor hun aangezicht, want Ik ben met u, om u te redden, spreekt de HEERE.",
+   "vers_id": "Jeremiah-1-8-8",
    "variabelen": {
     "huisstijl": "paars",
     "thema": "moed",
@@ -4148,8 +4127,8 @@
     "formaat": "carrousel",
     "uitleg_op_beeld": false,
     "achtergrondbron": "verloop",
-    "boekgroep": "psalmen",
-    "lengte": "middel",
+    "boekgroep": "profeten",
+    "lengte": "kort",
     "bron": "ontdekking",
     "vraag_onderaan": true,
     "opening": "stopper",
@@ -4159,6 +4138,226 @@
     "lettertype": "lora",
     "layout": "links",
     "achtergrond": "radiaal",
+    "hook_op_beeld": false,
+    "video_uitleg": null
+   },
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "opening": "experiment",
+    "tijdslot": "experiment",
+    "video_uitleg": "n.v.t."
+   },
+   "reeks": null,
+   "reeks_label": null
+  },
+  {
+   "datum": "2026-11-18",
+   "ref": "Job 4:6",
+   "tekst": "Was niet uw vreze Gods uw hoop, en de oprechtheid uwer wegen uw verwachting?",
+   "vers_id": "Job-4-6-6",
+   "variabelen": {
+    "huisstijl": "salie",
+    "thema": "hoop",
+    "hook_stijl": "rustig",
+    "formaat": "video",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "beeld",
+    "boekgroep": "wijsheid",
+    "lengte": "kort",
+    "bron": "ontdekking",
+    "vraag_onderaan": true,
+    "opening": null,
+    "tijdslot": "07:30",
+    "tijdslot_fb": "20:30",
+    "palet": "salie",
+    "lettertype": "cormorant",
+    "layout": "kader",
+    "achtergrond": "effen",
+    "hook_op_beeld": false,
+    "video_uitleg": true
+   },
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "opening": "n.v.t.",
+    "tijdslot": "experiment",
+    "video_uitleg": "vaste regel"
+   },
+   "reeks": null,
+   "reeks_label": null
+  },
+  {
+   "datum": "2026-11-18",
+   "ref": "Psalm 57:4",
+   "tekst": "Hij zal van den hemel zenden, en mij verlossen, te schande makende dengene, die mij zoekt op te slokken. God zal Zijn goedertierenheid en Zijn waarheid zenden.",
+   "vers_id": "Psalms-57-4-4",
+   "variabelen": {
+    "huisstijl": "zonsopgang",
+    "thema": "liefde",
+    "hook_stijl": "herkenning",
+    "formaat": "carrousel",
+    "uitleg_op_beeld": true,
+    "achtergrondbron": "verloop",
+    "boekgroep": "psalmen",
+    "lengte": "middel",
+    "bron": "ontdekking",
+    "vraag_onderaan": true,
+    "opening": "vers",
+    "tijdslot": "12:15",
+    "tijdslot_fb": "17:45",
+    "palet": "zonsopgang_fris",
+    "lettertype": "lora",
+    "layout": "links",
+    "achtergrond": "diagonaal",
+    "hook_op_beeld": false,
+    "video_uitleg": null
+   },
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "opening": "experiment",
+    "tijdslot": "experiment",
+    "video_uitleg": "n.v.t."
+   },
+   "reeks": null,
+   "reeks_label": null
+  },
+  {
+   "datum": "2026-11-18",
+   "ref": "Klaagliederen 3:22",
+   "tekst": "Het zijn de goedertierenheden des HEEREN, dat wij niet vernield zijn, dat Zijn barmhartigheden geen einde hebben.",
+   "vers_id": "Lamentations-3-22-22",
+   "variabelen": {
+    "huisstijl": "bosgroen",
+    "thema": "dankbaarheid",
+    "hook_stijl": "vraag",
+    "formaat": "video",
+    "uitleg_op_beeld": true,
+    "achtergrondbron": "verloop",
+    "boekgroep": "profeten",
+    "lengte": "middel",
+    "bron": "bekend",
+    "vraag_onderaan": true,
+    "opening": null,
+    "tijdslot": "22:00",
+    "tijdslot_fb": "20:30",
+    "palet": "bosgroen",
+    "lettertype": "montserrat_zwaar",
+    "layout": "links",
+    "achtergrond": "diagonaal",
+    "hook_op_beeld": false,
+    "video_uitleg": true
+   },
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "opening": "n.v.t.",
+    "tijdslot": "experiment",
+    "video_uitleg": "vaste regel"
+   },
+   "reeks": null,
+   "reeks_label": null
+  },
+  {
+   "datum": "2026-11-18",
+   "ref": "Psalm 27:14",
+   "tekst": "Wacht op den HEERE, zijt sterk, en Hij zal uw hart versterken, ja, wacht op den HEERE.",
+   "vers_id": "Psalms-27-14-14",
+   "variabelen": {
+    "huisstijl": "hemelsblauw",
+    "thema": "moed",
+    "hook_stijl": "rustig",
+    "formaat": "video",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "beeld",
+    "boekgroep": "psalmen",
+    "lengte": "kort",
+    "bron": "bekend",
+    "vraag_onderaan": false,
+    "opening": null,
+    "tijdslot": "20:30",
+    "tijdslot_fb": "07:30",
+    "palet": "hemelsblauw",
+    "lettertype": "montserrat_zwaar",
+    "layout": "links",
+    "achtergrond": "diagonaal",
+    "hook_op_beeld": false,
+    "video_uitleg": true
+   },
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "opening": "n.v.t.",
+    "tijdslot": "experiment",
+    "video_uitleg": "vaste regel"
+   },
+   "reeks": null,
+   "reeks_label": null
+  },
+  {
+   "datum": "2026-11-18",
+   "ref": "Job 30:26",
+   "tekst": "Nochtans toen ik het goede verwachtte, zo kwam het kwade; toen ik hoopte naar het licht, zo kwam de donkerheid.",
+   "vers_id": "Job-30-26-26",
+   "variabelen": {
+    "huisstijl": "salie",
+    "thema": "hoop",
+    "hook_stijl": "geen",
+    "formaat": "carrousel",
+    "uitleg_op_beeld": true,
+    "achtergrondbron": "verloop",
+    "boekgroep": "wijsheid",
+    "lengte": "middel",
+    "bron": "ontdekking",
+    "vraag_onderaan": false,
+    "opening": "stopper",
+    "tijdslot": "17:45",
+    "tijdslot_fb": "07:30",
+    "palet": "salie",
+    "lettertype": "cormorant",
+    "layout": "kader",
+    "achtergrond": "effen",
     "hook_op_beeld": false,
     "video_uitleg": null
    },

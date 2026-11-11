@@ -58,7 +58,7 @@ DIMENSIES = {
     "lengte": ["kort", "middel", "lang"],
     "bron": ["bekend", "ontdekking"],
     "vraag_onderaan": [True, False],
-    "opening": ["vers", "stopper"],  # carrousel: slide 1 het hele vers, of eerst een korte, grote 'stopper'
+    "opening": ["vers", "stopper", "verhaal"],  # carrousel: slide 1 het hele vers, een korte grote 'stopper', of eerst de uitleg als haak ('verhaal eerst')
     "tijdslot": ["07:30", "12:15", "17:45", "20:30", "22:00"],
 }
 
@@ -305,7 +305,7 @@ def kies_posts(datum, cfg, strat, posts, verzen, mat, n_start, n, gebruikte_slot
                       "vertaling": vers.get("vertaling", "SV"),
                       "variabelen": v, "keuzebron": bron,
                       "hook": "", "beeld_hook": "", "caption": "", "hashtags": [],
-                      "uitleg": "", "betekenis": "", "toepassing": "", "kernwoord": "",
+                      "uitleg": "", "betekenis": "", "toepassing": "", "kernwoord": "", "verhaal_hook": "",
                       "media": None, "media_url": None, "metricool": {}, "stats": {},
                       "beeld": None, "muziek": None, "geluid": None})
     return nieuw
@@ -520,6 +520,12 @@ def valideer_tekst(p, cfg):
         return "kernwoord moet letterlijk één woord uit het vers zijn"
     if p["variabelen"].get("uitleg_op_beeld") and not (0 < len(p.get("uitleg", "")) <= 110):
         return "uitleg ontbreekt of is langer dan 110 tekens"
+    if p["variabelen"].get("opening") == "verhaal":
+        vh = (p.get("verhaal_hook") or "").strip()
+        if not (25 <= len(vh) <= 140):
+            return "verhaal_hook ontbreekt of heeft niet 25 tot 140 tekens (opening 'verhaal')"
+        if "\u2014" in vh:
+            return "gebruik geen lange streep"
     if p["variabelen"]["formaat"] == "carrousel" or p["variabelen"].get("video_uitleg"):
         for veld in ("betekenis", "toepassing"):
             if not (20 <= len(p.get(veld, "")) <= 320):
@@ -676,7 +682,7 @@ def cmd_experiment(stil=False):
     bewaar("config.json", cfg)
     namen = {"huisstijl": "stijl", "thema": "thema", "hook_stijl": "soort hook", "formaat": "carrousel of video",
              "uitleg_op_beeld": "uitleg op beeld", "achtergrondbron": "foto of kleur", "boekgroep": "Bijbelboek",
-             "lengte": "lengte van het vers", "bron": "bekend of onbekend vers", "vraag_onderaan": "vraag onderaan", "opening": "eerste slide (stopper of hele vers)", "video_uitleg": "video met uitleg"}
+             "lengte": "lengte van het vers", "bron": "bekend of onbekend vers", "vraag_onderaan": "vraag onderaan", "opening": "eerste slide (hele vers, stopper of verhaal eerst)", "video_uitleg": "video met uitleg"}
     tekst = "Experiment deze week: " + " en ".join(namen.get(d, d) for d in keuze)
     cmd_log(tekst)
     if not stil:
@@ -767,6 +773,7 @@ def cmd_dashboard():
                       "caption": p.get("caption", ""), "uitleg": p.get("uitleg", ""), "media": p.get("media"), "media_url": p.get("media_url"), "media_urls": p.get("media_urls"), "thumb": p.get("thumb"),
                       "platformen": list(p.get("gepubliceerd", {}).keys()),
                       "links": {k: v.get("url") for k, v in p.get("gepubliceerd", {}).items()}, "totaal": tot, "per_platform": per, "score": sc.get(p["id"], {}),
+                      "pub": {k: v.get("t") for k, v in p.get("gepubliceerd", {}).items()}, "gemist": p.get("gemist", []), "nood": p.get("nood", False),
                       "online": min((g["t"] for g in p.get("gepubliceerd", {}).values()), default=None)})
     rapporten = sorted(os.listdir(P("rapporten"))) if os.path.isdir(P("rapporten")) else []
     extra = dashboard_extra(cfg, posts)
@@ -1256,7 +1263,7 @@ def cmd_nood(actie="status"):
                              "status": "wacht_op_tekst", "vers_id": v["id"], "ref": v["ref"], "tekst": v["tekst"],
                              "vertaling": v.get("vertaling", "SV"), "variabelen": var,
                              "keuzebron": {k: "nood" for k in DIMENSIES}, "hook": "", "beeld_hook": "", "caption": "",
-                             "hashtags": [], "uitleg": "", "betekenis": "", "toepassing": "", "kernwoord": "",
+                             "hashtags": [], "uitleg": "", "betekenis": "", "toepassing": "", "kernwoord": "", "verhaal_hook": "",
                              "media": None, "media_extra": [], "beeld": None, "muziek": None, "geluid": None,
                              "metricool": {}, "stats": {}})
             nieuw += 1

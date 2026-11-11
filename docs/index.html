@@ -184,6 +184,14 @@ table th{color:var(--ink3);text-transform:uppercase;font-size:11px;letter-spacin
 .rc textarea{margin-bottom:8px}
 .platform{font-size:11px;font-weight:600;padding:2px 7px;border-radius:6px}.platform.instagram{background:#fdebf6;color:#b0307d}.platform.facebook{background:#e9f0ff;color:#2459c9}
 html[data-thema=donker] .platform.instagram{background:#3a1d31;color:#f39ad0}html[data-thema=donker] .platform.facebook{background:#1b2840;color:#8fb2ff}
+.pl{display:inline-flex;align-items:center;gap:4px;font-size:11.5px;font-weight:600;padding:2px 7px;border-radius:7px;margin:2px 4px 2px 0;background:var(--zacht);color:var(--ink2);text-decoration:none;white-space:nowrap}
+.pl.ok{background:#e3f6ee;color:#127a52}.pl.fout{background:#fdecec;color:#b42318}.pl.wacht{background:#e9f0ff;color:#2459c9}.pl.uit{opacity:.55}
+html[data-thema=donker] .pl.ok{background:#173027;color:#7fe0b0}html[data-thema=donker] .pl.fout{background:#3a1d22;color:#ffb3b3}html[data-thema=donker] .pl.wacht{background:#1b2840;color:#9dbbff}
+.lg{width:100%;border-collapse:collapse;font-size:13px}.lg th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink3);padding:8px 6px;cursor:pointer;white-space:nowrap;border-bottom:1px solid var(--lijn)}
+.lg td{padding:9px 6px;border-bottom:1px solid var(--lijn);vertical-align:middle}.lg td.n{text-align:right;font-variant-numeric:tabular-nums}.lg th.n{text-align:right}
+.lg .pimg{display:flex;gap:10px;align-items:center;cursor:pointer}.lg .pimg img{width:40px;height:50px;object-fit:cover;border-radius:6px;background:var(--zacht)}
+.lbl{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:99px}.lbl.goed{background:#e3f6ee;color:#127a52}.lbl.mid{background:#fff3d6;color:#8a5a00}.lbl.laag{background:#fdecec;color:#b42318}.lbl.nog{background:var(--zacht);color:var(--ink3)}
+.lgwrap{overflow-x:auto}
 </style>
 </head>
 <body>
@@ -244,6 +252,10 @@ html[data-thema=donker] .platform.instagram{background:#3a1d31;color:#f39ad0}htm
   </div>
 
   <div class="tab" data-tab="resultaten">
+    <section class="kaart" style="margin-top:0"><h2>Laatst geplaatst</h2>
+      <div class="sub" style="margin:-6px 0 10px">Klik op een kolom om te sorteren. Het label vergelijkt elke post met het gemiddelde van alle gemeten posts.</div>
+      <div class="filters" id="lgFilters"></div>
+      <div class="lgwrap"><table class="lg" id="lgTabel"></table></div></section>
     <div id="snelLeren"></div>
     <section class="grid g2" style="margin-top:0">
       <div class="kaart"><h2>Groei volgers</h2><div id="groei"></div></div>
@@ -327,7 +339,7 @@ function bouw(){
       :`<button class="knop" style="border:0;cursor:pointer" data-o='{"actie":"pauze","waarde":true}' data-vraag="Alles stilzetten? Er gaat niets meer online tot je op Hervatten klikt.">⏸ Noodstop</button>`);
 
   const p=D.posts;
-  bouwAandacht();bouwReacties();bouwVolgende();bouwVerzoeken();bouwGezondheid();bouwTegels();bouwSnelLeren();bouwGroei();bouwTop();bouwInzichten();bouwVoorraad();
+  bouwAandacht();bouwReacties();bouwVolgende();bouwLaatst();bouwVerzoeken();bouwGezondheid();bouwTegels();bouwSnelLeren();bouwGroei();bouwTop();bouwInzichten();bouwVoorraad();
 
   // logboek
   document.getElementById("logboek").innerHTML=(D.logboek||[]).slice().reverse().map(l=>`<div class="${l.soort==="fout"&&!l.opgelost?"fout":""}"><span class="t">${l.t.replace("T"," ")}</span>${l.tekst.length>170?l.tekst.slice(0,170)+"…":l.tekst}${l.opgelost?' <span style="color:var(--goed)">(opgelost)</span>':""}</div>`).join("")||'<div class="leeg">Nog niets gelogd.</div>';
@@ -461,7 +473,7 @@ function bouwReacties(){
 }
 function bouwVolgende(){
   const v=D.posts.filter(x=>x.status==="gerenderd").sort((a,b)=>(a.datum+a.variabelen.tijdslot).localeCompare(b.datum+b.variabelen.tijdslot)).slice(0,4);
-  document.getElementById("volgende").innerHTML=v.length?v.map(x=>`<div class="top" onclick="toonGalerij('${x.id}')">${miniaturen(x)}<div class="info"><b>${x.ref}</b><div class="sub">${new Date(x.datum).toLocaleDateString("nl-NL",{weekday:"short",day:"numeric",month:"short"})} om ${x.variabelen.tijdslot} · ${x.variabelen.formaat}${x.nood?" · noodpost":""}</div></div></div>`).join(""):'<div class="leeg">Er staat nu niets klaar.</div>';
+  document.getElementById("volgende").innerHTML=v.length?v.map(x=>`<div class="top" onclick="toonGalerij('${x.id}')">${miniaturen(x)}<div class="info"><b>${x.ref}</b><div class="sub">${new Date(x.datum).toLocaleDateString("nl-NL",{weekday:"short",day:"numeric",month:"short"})} om ${x.variabelen.tijdslot} · ${x.variabelen.formaat}${x.nood?" · noodpost":""}</div><div>${platLabels(x,true)}</div></div></div>`).join(""):'<div class="leeg">Er staat nu niets klaar.</div>';
 }
 function bouwVerzoeken(){
   const ST={wacht:["⏳ Wacht","var(--let)"],bezig:["🔧 Bezig","var(--accent)"],klaar:["✓ Klaar","var(--goed)"],geannuleerd:["Ingetrokken","var(--ink3)"]};
@@ -477,7 +489,7 @@ function bouwBediening(){
     const img=x.thumb||(x.media_url&&x.media_url.endsWith(".jpg")?x.media_url:"");
     return `<div class="wacht">${miniaturen(x)}
       <div class="info"><b>${x.ref}</b> <span class="tag">${x.variabelen.formaat}${x.media_urls&&x.media_urls.length>1?" · "+x.media_urls.length+" slides":""}</span><span class="tag">${x.variabelen.thema.replace("_"," ")}</span>
-        <div class="sub">${STATUS[x.status]||x.status} · ${x.datum} om ${x.variabelen.tijdslot}${mediaVan(x).length?` · <a href="#" onclick="toonGalerij('${x.id}');return false">bekijken</a>`:""}</div></div>
+        <div class="sub">${STATUS[x.status]||x.status} · ${x.datum} om ${x.variabelen.tijdslot}${mediaVan(x).length?` · <a href="#" onclick="toonGalerij('${x.id}');return false">bekijken</a>`:""}</div><div>${platLabels(x,true)}</div></div>
       <div class="acties">
         ${x.status==="gerenderd"?`<button class="btn prim" data-o='${JSON.stringify({actie:"nu_posten",post:x.id}).replace(/'/g,"&#39;")}'>Nu posten</button>`:""}
         <input class="veld" type="date" value="${x.datum}" id="d_${x.id}"><input class="veld" type="time" value="${x.variabelen.tijdslot}" id="t_${x.id}">
@@ -573,6 +585,51 @@ function miniaturen(x){
 // ---------- Planning ----------
 const STIJLKLEUR={avond:"#2b2f4a",zand:"#d9c3a0",salie:"#a8b8a0",zonsopgang:"#ff6f61",hemelsblauw:"#5aa6e6",paars:"#6a3fc0",roze:"#f7a1b8",bosgroen:"#3f8a5c",mint:"#8fdcc7",perzik:"#ffc28b"};
 const FORMAAT={afbeelding:"🖼 Afbeelding",video:"▶ Video",carrousel:"▤ Carrousel"};
+
+// ---------- Platformlabels: waar komt/staat een post? ----------
+const PLATFORMEN=[["instagram","Instagram"],["facebook","Facebook"],["youtube","YouTube"],["tiktok","TikTok"]];
+function platLabels(x,kort){
+  const c=D.config||{},v=x.variabelen||{},act=c.platformen_actief||[];
+  return PLATFORMEN.map(([k,n])=>{
+    const nm=kort?{instagram:"IG",facebook:"FB",youtube:"YT",tiktok:"TT"}[k]:n;
+    if(!act.includes(k))return (k==="youtube"||k==="tiktok")?`<span class="pl uit" title="${n} komt er later bij">${nm} · binnenkort</span>`:`<span class="pl uit" title="${n} staat uit">${nm} · uit</span>`;
+    const pub=(x.pub||{})[k],link=(x.links||{})[k];
+    if(pub)return `<a class="pl ok" href="${link||"#"}" target="_blank" title="Staat online op ${n}: openen">${nm} ✓ ${String(pub).slice(11,16)}</a>`;
+    if((x.gemist||[]).includes(k)||x.status==="fout")return `<span class="pl fout" title="Niet geplaatst op ${n}">${nm} ⚠ mislukt</span>`;
+    const t=k==="facebook"&&v.tijdslot_fb?v.tijdslot_fb:v.tijdslot;
+    return `<span class="pl wacht" title="Gepland op ${n}">${nm} ⏳ ${t||""}</span>`}).join("");
+}
+
+// ---------- Laatst geplaatst: alle geplaatste posts met cijfers ----------
+let LG={sort:"datum",af:true,f:{}};
+function lgWaarde(x,k){const t=x.totaal||{},pp=x.per_platform||{};
+  if(k==="datum")return (x.online||x.datum+"T"+x.variabelen.tijdslot);
+  if(k==="bereik")return t.reach??t.views??null;if(k==="weergaven")return t.views??null;
+  if(k==="kijktijd"){const i=pp.instagram||{};return i.avg_watch_ms??null}
+  if(k==="score")return lgScore(x);return t[k]??null}
+function lgScore(x){const t=x.totaal||{};if(t.reach==null&&t.views==null)return null;
+  return (t.reach||t.views||0)+3*(t.likes||0)+6*(t.saves||0)+8*(t.shares||0)+4*(t.comments||0)}
+function bouwLaatst(){
+  const el=document.getElementById("lgTabel");if(!el)return;
+  const alle=D.posts.filter(x=>x.status==="gepubliceerd"||Object.keys(x.pub||{}).length);
+  const sc=alle.map(lgScore).filter(v=>v!=null).sort((a,b)=>a-b),med=sc.length?sc[Math.floor(sc.length/2)]:null;
+  const opts=(k,naam,fn)=>{const w=[...new Set(alle.map(fn).filter(Boolean))].sort();return `<select data-lgf="${k}"><option value="">${naam}</option>${w.map(o=>`<option${LG.f[k]===o?" selected":""}>${o}</option>`).join("")}</select>`};
+  document.getElementById("lgFilters").innerHTML=opts("formaat","Alle formaten",x=>x.variabelen.formaat)+opts("stijl","Alle stijlen",x=>x.variabelen.huisstijl)+opts("thema","Alle thema's",x=>x.variabelen.thema)+opts("platform","Alle platformen",x=>null)
+    .replace('<option value="">Alle platformen</option>','<option value="">Alle platformen</option><option'+(LG.f.platform==="instagram"?" selected":"")+'>instagram</option><option'+(LG.f.platform==="facebook"?" selected":"")+'>facebook</option>');
+  document.querySelectorAll("[data-lgf]").forEach(s=>s.onchange=()=>{LG.f[s.dataset.lgf]=s.value;bouwLaatst()});
+  let rijen=alle.filter(x=>(!LG.f.formaat||x.variabelen.formaat===LG.f.formaat)&&(!LG.f.stijl||x.variabelen.huisstijl===LG.f.stijl)&&(!LG.f.thema||x.variabelen.thema===LG.f.thema)&&(!LG.f.platform||(x.pub||{})[LG.f.platform]));
+  rijen.sort((a,b)=>{const va=lgWaarde(a,LG.sort),vb=lgWaarde(b,LG.sort);if(va==null&&vb==null)return 0;if(va==null)return 1;if(vb==null)return -1;return (va<vb?-1:va>vb?1:0)*(LG.af?-1:1)});
+  const kol=[["datum","Post",""],["platform","Platformen",""],["bereik","Bereik","n"],["likes","Likes","n"],["saves","Bewaard","n"],["shares","Gedeeld","n"],["comments","Reacties","n"],["kijktijd","Kijktijd","n"],["score","Oordeel",""]];
+  const lbl=x=>{const v=lgScore(x);if(v==null||med==null||sc.length<4)return `<span class="lbl nog" title="Nog te weinig cijfers om te vergelijken">nog meten</span>`;
+    return v>=med*1.3?`<span class="lbl goed">🟢 goed</span>`:v>=med*0.7?`<span class="lbl mid">🟡 gemiddeld</span>`:`<span class="lbl laag">🔴 onder gemiddeld</span>`};
+  const n=v=>v==null?"<span class='sub'>–</span>":v;
+  el.innerHTML=`<thead><tr>${kol.map(([k,t,c])=>`<th class="${c}" data-lgs="${k}">${t}${LG.sort===k?(LG.af?" ↓":" ↑"):""}</th>`).join("")}</tr></thead><tbody>`+
+    (rijen.length?rijen.slice(0,60).map(x=>{const t=x.totaal||{},kt=lgWaarde(x,"kijktijd");
+      return `<tr><td><div class="pimg" onclick="toonGalerij('${x.id}')">${x.thumb||x.media_url?`<img src="${x.thumb||x.media_url}" alt="">`:""}<div><b>${x.ref}</b><div class="sub">${new Date(x.datum).toLocaleDateString("nl-NL",{weekday:"short",day:"numeric",month:"short"})} · ${x.variabelen.tijdslot} · ${x.variabelen.formaat}${x.nood?" · noodpost":""}</div></div></div></td>
+        <td>${platLabels(x,true)}</td><td class="n">${n(t.reach??t.views)}</td><td class="n">${n(t.likes)}</td><td class="n">${n(t.saves)}</td><td class="n">${n(t.shares)}</td><td class="n">${n(t.comments)}</td>
+        <td class="n">${kt==null?"<span class='sub'>–</span>":(kt/1000).toFixed(1)+" s"}</td><td>${lbl(x)}</td></tr>`}).join(""):`<tr><td colspan="9" class="leeg">Nog niets geplaatst dat aan deze filters voldoet.</td></tr>`)+"</tbody>";
+  el.querySelectorAll("[data-lgs]").forEach(th=>th.onclick=()=>{const k=th.dataset.lgs;if(k==="platform")return;LG.af=LG.sort===k?!LG.af:true;LG.sort=k;bouwLaatst()});
+}
 function bouwPlanning(){
   const el=document.getElementById("planDagen");if(!el)return;
   if(D.config.pauze){el.innerHTML='<div class="leeg sub">Het systeem staat op pauze. Er is niets gepland.</div>';return}
@@ -592,7 +649,7 @@ function bouwPlanning(){
       const kleur=STIJLKLEUR[v.huisstijl]||"#999";v.huisstijl=v.huisstijl||(v.palet||"").replace("_"," ");
       const klik=(x.soort==="plan"||x.soort==="maken")?`toonPlan('${x.id}')`:`toonGalerij('${x.id}')`;
       return `<div class="slot" style="cursor:pointer" onclick="${klik}"><span class="tijd">${v.tijdslot}</span><div class="wat"><b class="st-${x.soort}">${{plan:"○",maken:"◐"}[x.soort]||"●"} ${x.ref}</b>
-        ${x.reeks_label?`<span class="tag" style="background:var(--accent);color:#fff;border-color:var(--accent)">${x.reeks_label}</span><br>`:""}<span class="sub">${FORMAAT[v.formaat]||v.formaat} · ${v.thema.replace("_"," ")}${v.tijdslot_fb&&v.tijdslot_fb!==v.tijdslot?` · FB ${v.tijdslot_fb}`:""}</span><br>
+        ${x.reeks_label?`<span class="tag" style="background:var(--accent);color:#fff;border-color:var(--accent)">${x.reeks_label}</span><br>`:""}<span class="sub">${FORMAAT[v.formaat]||v.formaat} · ${v.thema.replace("_"," ")}</span><br>${x.soort==="plan"||x.soort==="maken"?"":`<div>${platLabels(x,true)}</div>`}
         <span class="sub"><span class="stip" style="background:${kleur}"></span>${v.huisstijl}${v.achtergrondbron==="beeld"?" · foto":""}</span></div></div>`}).join("")}</div>`}).join("");
 }
 function toonPlan(id){
