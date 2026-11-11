@@ -58,6 +58,8 @@ DIMENSIES = {
     "lengte": ["kort", "middel", "lang"],
     "bron": ["bekend", "ontdekking"],
     "vraag_onderaan": [True, False],
+    "reel_stijl": ["klassiek", "kinetisch", "beeld"],  # alleen video; de nieuwe stijlen pas als config 'nieuwe_reels' aan staat
+    "reel_haak": ["geen", "vraag"],  # alleen video: eerst 1,4 s een grote vraag in beeld
     "opening": ["vers", "stopper", "verhaal"],  # carrousel: slide 1 het hele vers, een korte grote 'stopper', of eerst de uitleg als haak ('verhaal eerst')
     "tijdslot": ["07:30", "12:15", "17:45", "20:30", "22:00"],
 }
@@ -328,6 +330,12 @@ def kies_posts(datum, cfg, strat, posts, verzen, mat, n_start, n, gebruikte_slot
         v["aanleiding"] = "kalender" if reekspost else "tijdloos"  # 'nieuws' zet src/nieuws.py
         # vaste regel (Joshua, 8 nov): een reel heeft altijd uitleg, zoals de carrousel
         v["video_uitleg"], bron["video_uitleg"] = (True, "vaste regel") if v["formaat"] == "video" else (None, "n.v.t.")
+        if v["formaat"] != "video":
+            v["reel_stijl"], bron["reel_stijl"], v["reel_haak"], bron["reel_haak"] = None, "n.v.t.", None, "n.v.t."
+        elif not cfg.get("nieuwe_reels"):
+            v["reel_stijl"], bron["reel_stijl"], v["reel_haak"], bron["reel_haak"] = "klassiek", "uit", "geen", "uit"
+        elif v["reel_stijl"] == "beeld" and (mat is not None and not mat["beelden"]):
+            v["reel_stijl"], bron["reel_stijl"] = "kinetisch", "geen foto's"
         recent.add(vers["id"])
         nieuw.append({**({"reeks": reekspost["naam"], "reeks_label": reekspost["label"]} if reekspost else {}),
                       "id": f"{datum}-{n_start + i + 1}", "datum": datum, "status": "wacht_op_tekst",
@@ -423,7 +431,18 @@ def render_een(p, cfg, map_rel):
         rels = [os.path.relpath(x, ROOT) for x in paden]
         p["media"], p["media_extra"] = rels[0], rels[1:]
     else:
-        (maak_video if ext == "mp4" else maak_afbeelding)(p, P(rel))
+        rs = p["variabelen"].get("reel_stijl") or "klassiek"
+        if ext == "mp4" and rs != "klassiek":
+            import reels
+            fotos = []
+            if rs == "beeld":
+                m = materiaal_map(); alle = materiaal(cfg)["beelden"]
+                fotos = [os.path.join(m, f) for f in random.Random(p["id"]).sample(alle, min(3, len(alle)))] if alle else []
+                if not fotos:
+                    rs = p["variabelen"]["reel_stijl"] = "kinetisch"
+            reels.maak_reel(p, P(rel), rs, p["variabelen"].get("reel_haak"), fotos)
+        else:
+            (maak_video if ext == "mp4" else maak_afbeelding)(p, P(rel))
         p["media"], p["media_extra"] = rel, []
     p["thumb"] = maak_thumb(P(p["media"]), p["id"], (p.get("cover_ms") or 4000) / 1000)
     if fmt == "carrousel":
@@ -712,7 +731,7 @@ def cmd_experiment(stil=False):
     bewaar("config.json", cfg)
     namen = {"huisstijl": "stijl", "thema": "thema", "hook_stijl": "soort hook", "formaat": "carrousel of video",
              "uitleg_op_beeld": "uitleg op beeld", "achtergrondbron": "foto of kleur", "boekgroep": "Bijbelboek",
-             "lengte": "lengte van het vers", "bron": "bekend of onbekend vers", "vraag_onderaan": "vraag onderaan", "opening": "eerste slide (hele vers, stopper of verhaal eerst)", "video_uitleg": "video met uitleg"}
+             "lengte": "lengte van het vers", "bron": "bekend of onbekend vers", "vraag_onderaan": "vraag onderaan", "opening": "eerste slide (hele vers, stopper of verhaal eerst)", "reel_stijl": "reelstijl", "reel_haak": "vraag als haak in reel", "video_uitleg": "video met uitleg"}
     tekst = "Experiment deze week: " + " en ".join(namen.get(d, d) for d in keuze)
     cmd_log(tekst)
     if not stil:
@@ -808,7 +827,7 @@ def cmd_dashboard():
     rapporten = sorted(os.listdir(P("rapporten"))) if os.path.isdir(P("rapporten")) else []
     extra = dashboard_extra(cfg, posts)
     data = {"gegenereerd": dt.datetime.now().isoformat(timespec="minutes"), "repo": cfg.get("github_repo", ""),
-            "config": {k: cfg.get(k) for k in ("pauze", "kanaalnaam", "posts_per_dag", "max_posts_per_dag", "verkenning", "platformen_actief", "max_aandeel_beeld", "verzen_uitsluiten", "leermodus", "leermodus_tot", "goedkeuren", "experiment", "stories", "zelfstandig")},
+            "config": {k: cfg.get(k) for k in ("pauze", "kanaalnaam", "posts_per_dag", "max_posts_per_dag", "verkenning", "platformen_actief", "max_aandeel_beeld", "verzen_uitsluiten", "leermodus", "leermodus_tot", "goedkeuren", "experiment", "stories", "zelfstandig", "nieuwe_reels")},
             "strategie": strat, "posts": lijst,
             "leergeschiedenis": laad("data/leergeschiedenis.json", []),
             "laatste_rapport": laad(f"rapporten/{rapporten[-1]}") if rapporten else None,

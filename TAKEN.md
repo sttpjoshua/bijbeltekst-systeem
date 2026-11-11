@@ -119,6 +119,8 @@ Joshua wil geen losse afbeeldingen meer: een beeldpost is altijd een carrousel (
 ## Reels (vaste regel)
 Elke reel heeft uitleg: vers frase voor frase, dan "Wat betekent dit?" en "Vandaag" met voortgangsbalkje, omslag op het volle vers, naadloze loop, oplichtend kernwoord en overgangen op de muziek. Dus bij elke video `betekenis` en `toepassing` schrijven.
 
+Nieuwe reelstijlen (src/reels.py, sinds 11 november, aan/uit met `nieuwe_reels` in config en op het dashboard): `kinetisch` (woord voor woord op de tel, kernwoord alleen en groot, daarna "Betekent:" met de `uitleg`), `beeld` (foto's met snelle zoom en harde cuts) en `reel_haak` = vraag (eerst 1,4 s de vraag-hook). Ook deze stijlen hebben uitleg (de korte `uitleg`), dus de vaste regel blijft gelden.
+
 ## Kernwoord: dikker en in kleur, nooit een vakje (vaste regel)
 Het kernwoord wordt uitgelicht door het dikker te zetten in een opvallende kleur (zie `_kernstaat` en `_regel` in src/render.py). Nooit een vakje, balk of label eromheen: dat vindt Joshua niet mooi.
 

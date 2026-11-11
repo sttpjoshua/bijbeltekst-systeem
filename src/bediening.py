@@ -328,6 +328,9 @@ def main(raw):
         n[o["sleutel"]] = o["waarde"]
         namen = {"aan": "nieuwsposts", "licht_automatisch": "licht nieuws automatisch", "max_per_dag": "maximaal per dag"}
         melding = f"Nieuws: {namen.get(o['sleutel'], o['sleutel'])} {o['waarde'] if o['sleutel'] == 'max_per_dag' else ('aan' if o['waarde'] else 'uit')}"
+    elif a == "nieuwe_reels":
+        cfg["nieuwe_reels"] = bool(o.get("aan"))
+        melding = "Nieuwe reelstijlen " + ("aan: het systeem test klassiek, kinetisch en bewegend beeld, met en zonder vraag als haak" if cfg["nieuwe_reels"] else "uit: alleen de klassieke reel")
     elif a == "posts_maken":
         melding = "Posts maken gestart: het systeem maakt de ontbrekende posts voor morgen en overmorgen (duurt 10 tot 20 minuten)"
     elif a == "zelfstandig":
@@ -381,7 +384,7 @@ def main(raw):
                  "andere_stijl": "designer", "post_ander_vers": "verskiezer", "fouten_opgelost": "controller", "reactie_plaatsen": "community", "reactie_negeren": "community", "reactie_liken": "community",
                  "fout_opgelost": "controller", "post_opnieuw": "dispatcher", "post_nood": "controller", "nood_inzetten": "controller",
                  "muziek_toevoegen": "video", "statistieken_nu": "analist", "reacties_nu": "community", "zelftest_nu": "controller",
-                 "run": "dispatcher", "verzoek": "controller", "posts_maken": "verskiezer", "zelfstandig": "controller", "nieuws_maken": "verskiezer", "nieuws_negeren": "verskiezer", "nieuws_instelling": "verskiezer", "whatsapp_test": "controller", "whatsapp_instelling": "controller"}.get(a)
+                 "run": "dispatcher", "verzoek": "controller", "posts_maken": "verskiezer", "zelfstandig": "controller", "nieuws_maken": "verskiezer", "nieuws_negeren": "verskiezer", "nieuws_instelling": "verskiezer", "nieuwe_reels": "video", "whatsapp_test": "controller", "whatsapp_instelling": "controller"}.get(a)
         if a == "overslaan":
             agent = "video" if (vind(posts, o["post"])["variabelen"].get("formaat") == "video") else "designer"
         if agent:

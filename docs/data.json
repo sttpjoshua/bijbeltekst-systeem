@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-11T10:33",
+ "gegenereerd": "2026-11-11T10:37",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -28,7 +28,8 @@
    "tot": "2026-11-14"
   },
   "stories": true,
-  "zelfstandig": true
+  "zelfstandig": true,
+  "nieuwe_reels": null
  },
  "strategie": {
   "versie": 1,
@@ -97,6 +98,15 @@
    "vraag_onderaan": {
     "True": 1.0,
     "False": 1.0
+   },
+   "reel_stijl": {
+    "klassiek": 1.0,
+    "kinetisch": 1.0,
+    "beeld": 1.0
+   },
+   "reel_haak": {
+    "geen": 1.0,
+    "vraag": 1.0
    },
    "opening": {
     "vers": 1.0,
@@ -175,6 +185,15 @@
    "vraag_onderaan": {
     "True": 0,
     "False": 0
+   },
+   "reel_stijl": {
+    "klassiek": 0,
+    "kinetisch": 0,
+    "beeld": 0
+   },
+   "reel_haak": {
+    "geen": 0,
+    "vraag": 0
    },
    "opening": {
     "vers": 0,
@@ -3546,6 +3565,28 @@
   },
   {
    "dimensie": "vraag_onderaan",
+   "opties": [
+    {
+     "optie": null,
+     "gem": 1.0,
+     "n": 1
+    }
+   ],
+   "metingen": 1
+  },
+  {
+   "dimensie": "reel_stijl",
+   "opties": [
+    {
+     "optie": null,
+     "gem": 1.0,
+     "n": 1
+    }
+   ],
+   "metingen": 1
+  },
+  {
+   "dimensie": "reel_haak",
    "opties": [
     {
      "optie": null,
