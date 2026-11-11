@@ -1,56 +1,56 @@
 {
-  "pauze": false,
-  "kanaalnaam": "Bibleverse",
-  "handle": "@bibleverse_nl",
-  "tijdzone": "Europe/Amsterdam",
-  "github_repo": "sttpjoshua/bijbeltekst-systeem",
-  "posts_per_dag": 5,
-  "max_posts_per_dag": 5,
-  "verkenning": 0.4,
-  "platformen_actief": [
-    "instagram",
-    "facebook"
+ "pauze": false,
+ "kanaalnaam": "Bibleverse",
+ "handle": "@bibleverse_nl",
+ "tijdzone": "Europe/Amsterdam",
+ "github_repo": "sttpjoshua/bijbeltekst-systeem",
+ "posts_per_dag": 5,
+ "max_posts_per_dag": 5,
+ "verkenning": 0.4,
+ "platformen_actief": [
+  "instagram",
+  "facebook"
+ ],
+ "platformen_later": [
+  "youtube",
+  "tiktok"
+ ],
+ "vers_niet_herhalen_dagen": 60,
+ "min_posts_voor_leren": 6,
+ "max_gewicht_verschuiving_per_week": 0.15,
+ "hashtags_max": 5,
+ "opmerkingen": "pauze=true zet alles stil, ook posts die al klaarstaan. Eerste week 1 post per dag; daarna verhoogt het systeem zelf naar 2.",
+ "max_aandeel_beeld": 0.33,
+ "beelden_overslaan": [
+  "pexels-strannik-sk-35101279.jpg",
+  "pexels-vialyn-chen-1091642248-20653781.jpg"
+ ],
+ "leermodus_vorige": {
+  "posts_per_dag": 2,
+  "max_posts_per_dag": 3,
+  "verkenning": 0.2
+ },
+ "leermodus": true,
+ "leermodus_tot": "2026-11-14",
+ "leermodus_start": "2026-11-07",
+ "stories": true,
+ "experiment": {
+  "dims": [
+   "huisstijl",
+   "thema"
   ],
-  "platformen_later": [
-    "youtube",
-    "tiktok"
-  ],
-  "vers_niet_herhalen_dagen": 60,
-  "min_posts_voor_leren": 6,
-  "max_gewicht_verschuiving_per_week": 0.15,
-  "hashtags_max": 5,
-  "opmerkingen": "pauze=true zet alles stil, ook posts die al klaarstaan. Eerste week 1 post per dag; daarna verhoogt het systeem zelf naar 2.",
-  "max_aandeel_beeld": 0.33,
-  "beelden_overslaan": [
-    "pexels-strannik-sk-35101279.jpg",
-    "pexels-vialyn-chen-1091642248-20653781.jpg"
-  ],
-  "leermodus_vorige": {
-    "posts_per_dag": 2,
-    "max_posts_per_dag": 3,
-    "verkenning": 0.2
-  },
-  "leermodus": true,
-  "leermodus_tot": "2026-11-14",
-  "leermodus_start": "2026-11-07",
-  "stories": true,
-  "experiment": {
-    "dims": [
-      "huisstijl",
-      "thema"
-    ],
-    "van": "2026-11-08",
-    "tot": "2026-11-14"
-  },
-  "verzen_uitsluiten": [
-    "II_Corinthians-5-6-6",
-    "Job-9-4-4"
-  ],
-  "zelfstandig": true,
-  "nieuwe_reels": false,
-  "nieuws": {
-    "max_per_dag": 3
-  },
-  "reel_formaat": "situatie",
-  "reel_aandeel": 0.6
+  "van": "2026-11-08",
+  "tot": "2026-11-14"
+ },
+ "verzen_uitsluiten": [
+  "II_Corinthians-5-6-6",
+  "Job-9-4-4"
+ ],
+ "zelfstandig": true,
+ "nieuwe_reels": false,
+ "nieuws": {
+  "max_per_dag": 3
+ },
+ "reel_formaat": "situatie",
+ "reel_aandeel": 0.6
 }

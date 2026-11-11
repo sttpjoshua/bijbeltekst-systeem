@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T21:09:32",
+ "updated": "2026-11-11T21:10:42",
  "agents": {
   "verskiezer": {
    "t": "2026-11-11T17:01:01",
@@ -22,8 +22,8 @@
    "state": "done"
   },
   "controller": {
-   "t": "2026-11-11T20:40:48",
-   "task": "Posts klaargezet uit de tekstbank",
+   "t": "2026-11-11T21:10:30",
+   "task": "WhatsApp-testbericht klaargezet",
    "state": "done"
   },
   "analist": {
@@ -32,7 +32,7 @@
    "state": "done"
   },
   "community": {
-   "t": "2026-11-11T21:00:59",
+   "t": "2026-11-11T21:10:42",
    "task": "1 nieuwe reactie gevonden",
    "state": "done"
   }
@@ -56,6 +56,10 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "21:10",
+   "msg": "Bediening: WhatsApp-testbericht klaargezet"
+  },
   {
    "t": "20:40",
    "msg": "Zelfstandig 10 posts klaargezet voor 2026-11-12, 2026-11-13 (teksten uit de tekstbank)."
@@ -99,10 +103,6 @@
   {
    "t": "14:35",
    "msg": "Materiaalrepo niet gekloond in deze run (add_repo ontbreekt); geen gevolgen, posts waren al gemaakt"
-  },
-  {
-   "t": "14:35",
-   "msg": "Zelf opgelost: open melding over politiek nieuws (Raad van State) was al afgehandeld; Joshua koos de post, die"
   }
  ],
  "lampen": [

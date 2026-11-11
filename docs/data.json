@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-11T21:09",
+ "gegenereerd": "2026-11-11T21:10",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -3129,11 +3129,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-10T12:16:19",
-   "soort": "info",
-   "tekst": "2026-11-10-5 online op instagram: Jesaja 26:3"
-  },
-  {
    "t": "2026-11-10T13:35:26",
    "soort": "info",
    "tekst": "Statistieken opgehaald voor 9 posts"
@@ -3440,6 +3435,11 @@
    "t": "2026-11-11T20:40:48",
    "soort": "info",
    "tekst": "Zelfstandig 10 posts klaargezet voor 2026-11-12, 2026-11-13 (teksten uit de tekstbank)."
+  },
+  {
+   "t": "2026-11-11T21:10:30",
+   "soort": "info",
+   "tekst": "Bediening: WhatsApp-testbericht klaargezet"
   }
  ],
  "recente_fouten": [],
@@ -3542,7 +3542,7 @@
    "ok": "2026-11-08T00:36"
   },
   "reacties": {
-   "ok": "2026-11-11T21:00",
+   "ok": "2026-11-11T21:10",
    "laatst_ok": true,
    "detail": "1 nieuwe reacties",
    "fout": "2026-11-08T18:00"
