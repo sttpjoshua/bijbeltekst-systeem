@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T13:32:13",
+ "updated": "2026-11-11T13:38:39",
  "agents": {
   "verskiezer": {
    "t": "2026-11-11T13:32:13",
@@ -22,9 +22,9 @@
    "state": "done"
   },
   "controller": {
-   "t": "2026-11-11T12:01:02",
-   "task": "Politiek nieuws (NOS): \"Raad van State: minister van Asiel moet veilig",
-   "state": "error"
+   "t": "2026-11-11T13:38:39",
+   "task": "Fout als opgelost gemarkeerd",
+   "state": "done"
   },
   "analist": {
    "t": "2026-11-11T12:51:08",
@@ -56,6 +56,10 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "13:38",
+   "msg": "Bediening: Fout als opgelost gemarkeerd"
+  },
   {
    "t": "13:32",
    "msg": "Bediening: Voorstel niet gevonden of al afgehandeld"
@@ -99,10 +103,6 @@
   {
    "t": "12:01",
    "msg": "Zwaar nieuws (NOS): \"Vijf jaar The Kyiv Independent: hoe bedrijf je journalistiek in een land in oorlog?\". Wil"
-  },
-  {
-   "t": "12:01",
-   "msg": "Politiek nieuws (NOS): \"Raad van State: minister van Asiel moet veiligheid Syrië opnieuw beoordelen\". Neutrale"
   }
  ],
  "lampen": [

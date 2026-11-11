@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-11T13:32",
+ "gegenereerd": "2026-11-11T13:38",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -3013,11 +3013,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-09T13:02:24",
-   "soort": "info",
-   "tekst": "Token heeft alle rechten, ook voor statistieken"
-  },
-  {
    "t": "2026-11-09T13:02:26",
    "soort": "info",
    "tekst": "Verbinding met Facebook-pagina werkt (Bibleversenl)"
@@ -3261,7 +3256,8 @@
    "soort": "fout",
    "tekst": "Politiek nieuws (NOS): \"Raad van State: minister van Asiel moet veiligheid Syrië opnieuw beoordelen\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
    "code": "nieuws_voorstel",
-   "post": "n111112010"
+   "post": "n111112010",
+   "opgelost": true
   },
   {
    "t": "2026-11-11T12:01:02",
@@ -3323,17 +3319,14 @@
    "t": "2026-11-11T13:32:13",
    "soort": "info",
    "tekst": "Bediening: Voorstel niet gevonden of al afgehandeld"
-  }
- ],
- "recente_fouten": [
+  },
   {
-   "t": "2026-11-11T12:01:02",
-   "soort": "fout",
-   "tekst": "Politiek nieuws (NOS): \"Raad van State: minister van Asiel moet veiligheid Syrië opnieuw beoordelen\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
-   "code": "nieuws_voorstel",
-   "post": "n111112010"
+   "t": "2026-11-11T13:38:39",
+   "soort": "info",
+   "tekst": "Bediening: Fout als opgelost gemarkeerd"
   }
  ],
+ "recente_fouten": [],
  "versen_totaal": 300,
  "reacties": [
   {
