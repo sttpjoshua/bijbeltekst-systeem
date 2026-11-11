@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T10:43:41",
+ "updated": "2026-11-11T10:45:20",
  "agents": {
   "verskiezer": {
    "t": "2026-11-11T10:12:16",
@@ -57,6 +57,10 @@
  ],
  "log": [
   {
+   "t": "10:45",
+   "msg": "Nieuwe reelstijlen weer uit: Joshua wil reels helemaal anders aanpakken."
+  },
+  {
    "t": "10:38",
    "msg": "Nieuwe reelstijlen aangezet (Joshua koos: alle drie testen). Vanaf de posts van 16 november."
   },
@@ -99,10 +103,6 @@
   {
    "t": "06:00",
    "msg": "Zelfherstel: Geen post klaar voor 2026-11-11 17:45 → noodpost Jesaja 41:10 ingezet om 17:45"
-  },
-  {
-   "t": "06:00",
-   "msg": "Zelfherstel: Geen post klaar voor 2026-11-11 12:15 → noodpost Jeremia 17:7 ingezet om 12:15"
   }
  ],
  "lampen": [
