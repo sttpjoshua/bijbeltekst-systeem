@@ -161,21 +161,23 @@ def _doelpost(posts, nu, na=None):
     return min(kand, key=lambda x: x[0])[1] if kand else None
 
 
-def maak_nieuwspost(item, cat, zwaar, cfg, posts, rnd, na=None):
-    """Zet de eerstvolgende carrousel om naar een post met dit nieuws als aanleiding. Geeft de post of None."""
-    nu = dt.datetime.now()
-    p = _doelpost(posts, nu, na)
-    if not p or len(nieuwsposts_op(posts, p["datum"])) >= _cfg(cfg)["max_per_dag"]:
-        return None
-    bank = tekstbank.laad()
-    themas = ["troost", "hoop", "vrede_rust"] if zwaar else (["wijsheid", "vrede_rust", "vertrouwen"] if cat == "politiek" else LICHT[cat]["themas"])
+def _themas(cat, zwaar):
+    return ["troost", "hoop", "vrede_rust"] if zwaar else (["wijsheid", "vrede_rust", "vertrouwen"] if cat == "politiek" else LICHT[cat]["themas"])
+
+
+def _zinnen(cat, zwaar):
+    return ZWAAR_ZINNEN if zwaar else (POLITIEK_ZINNEN if cat == "politiek" else LICHT[cat]["zinnen"])
+
+
+def _vrije_verzen(cat, zwaar, cfg, posts, bank):
     grens = (dt.date.today() - dt.timedelta(days=cfg["vers_niet_herhalen_dagen"])).isoformat()
     recent = {q["vers_id"] for q in posts if q["datum"] >= grens} | set(cfg.get("verzen_uitsluiten", []))
-    vrij = [x for x in S.alle_verzen() if x["id"] in bank and x["id"] not in recent and x["thema"] in themas and bank[x["id"]].get("verhaal")]
-    if not vrij:
-        return None
-    x = rnd.choice(vrij)
-    oud = p["ref"]
+    return [x for x in S.alle_verzen() if x["id"] in bank and x["id"] not in recent
+            and x["thema"] in _themas(cat, zwaar) and bank[x["id"]].get("verhaal")]
+
+
+def _vul_nieuws(p, x, zin, item, cat, zwaar, bank, cfg):
+    """Maakt van post p een nieuwspost met vers x en openingszin zin (alleen in het geheugen)."""
     p.update({"vers_id": x["id"], "ref": x["ref"], "tekst": x["tekst"], "vertaling": x.get("vertaling", "SV")})
     v = p["variabelen"]
     for f in ("thema", "boekgroep", "lengte", "bron"):
@@ -185,13 +187,63 @@ def maak_nieuwspost(item, cat, zwaar, cfg, posts, rnd, na=None):
     p["beeld"] = None
     p.setdefault("keuzebron", {}).update({"opening": "nieuws", "aanleiding": "nieuws"})
     tekstbank.vul_post(p, bank[x["id"]], cfg)
-    zin = rnd.choice(ZWAAR_ZINNEN if zwaar else (POLITIEK_ZINNEN if cat == "politiek" else LICHT[cat]["zinnen"]))
     p["verhaal_hook"] = zin
     # de openingszin is ook de eerste regel van de caption (zo snapt de lezer waarom dit vers vandaag)
     delen = p["caption"].split("\n\n")
     p["caption"] = "\n\n".join([zin] + delen[1 if p.get("hook") else 0:])
     p["hook"] = zin
     p["nieuws"] = {"categorie": cat, "kop": item["kop"], "bron": item["bron"], "link": item["link"], "zwaar": zwaar}
+
+
+def maak_opties(item, cat, zwaar, cfg, posts, n=3):
+    """Drie voorstellen (ander vers en andere openingszin) met voorvertoning, om uit te kiezen in het dashboard."""
+    import copy
+    from render import maak_carrousel
+    bank = tekstbank.laad()
+    vrij = _vrije_verzen(cat, zwaar, cfg, posts, bank)
+    rnd = random.Random(item["kop"])
+    rnd.shuffle(vrij)
+    zinnen = list(_zinnen(cat, zwaar)); rnd.shuffle(zinnen)
+    basis = _doelpost(posts, dt.datetime.now()) or next((q for q in reversed(posts) if q["variabelen"].get("formaat") == "carrousel"), None)
+    if not basis or not vrij:
+        return []
+    os.makedirs(S.P("docs/media/nieuws"), exist_ok=True)
+    uit = []
+    for k, x in enumerate(vrij[:n]):
+        p = copy.deepcopy(basis)
+        p["id"] = f"{item['id']}-{k + 1}"
+        zin = zinnen[k % len(zinnen)]
+        _vul_nieuws(p, x, zin, item, cat, zwaar, bank, cfg)
+        try:
+            paden = maak_carrousel(p, S.P(f"docs/media/nieuws/{p['id']}.jpg"))
+            eig, naam = cfg["github_repo"].split("/")
+            media = [f"https://{eig}.github.io/{naam}/" + os.path.relpath(q, S.P("docs")) for q in paden]
+        except Exception as e:
+            print("Voorvertoning mislukt:", e); media = []
+        uit.append({"vers_id": x["id"], "ref": x["ref"], "tekst": x["tekst"], "zin": zin, "kernwoord": p.get("kernwoord"),
+                    "betekenis": p.get("betekenis"), "toepassing": p.get("toepassing"), "caption": p["caption"], "media": media})
+    return uit
+
+
+def maak_nieuwspost(item, cat, zwaar, cfg, posts, rnd, na=None, vers_id=None, zin=None):
+    """Zet de eerstvolgende carrousel om naar een post met dit nieuws als aanleiding. Geeft de post of None.
+    vers_id en zin: de keuze van Joshua (anders kiest het systeem zelf)."""
+    nu = dt.datetime.now()
+    p = _doelpost(posts, nu, na)
+    if not p or len(nieuwsposts_op(posts, p["datum"])) >= _cfg(cfg)["max_per_dag"]:
+        return None
+    bank = tekstbank.laad()
+    alle = {x["id"]: x for x in S.alle_verzen()}
+    if vers_id and vers_id in alle and vers_id in bank:
+        x = alle[vers_id]
+    else:
+        vrij = _vrije_verzen(cat, zwaar, cfg, posts, bank)
+        if not vrij:
+            return None
+        x = rnd.choice(vrij)
+    oud = p["ref"]
+    zin = (zin or "").strip() or rnd.choice(_zinnen(cat, zwaar))
+    _vul_nieuws(p, x, zin, item, cat, zwaar, bank, cfg)
     p["status"] = "klaar_voor_render"
     S.bewaar("data/posts.json", posts)
     try:
@@ -257,12 +309,17 @@ def main(forceer=False):
                 entry.update(status="gemaakt", post=p["id"]); recente_cats.add(cat)
             else:
                 entry["status"] = "geen_plek"
+        if entry["status"] == "voorstel":
+            try:
+                entry["opties"] = maak_opties(entry, cat, entry["zwaar"], cfg, posts)
+            except Exception as e:
+                print("Opties maken mislukt:", e)
         log.append(entry); bekend.add(item["kop"]); nieuw += 1
     S.bewaar(PAD, log[-150:])
     print(nieuw, "nieuwe aanleidingen bekeken")
 
 
-def maak_voorstel(nid):
+def maak_voorstel(nid, keuze=None, zin=None):
     """Joshua keurt een voorstel goed (dashboard): maak de post, bij zwaar nieuws pas 6 uur na het nieuws."""
     cfg = S.laad("config.json")
     log = S.laad(PAD, [])
@@ -273,7 +330,12 @@ def maak_voorstel(nid):
     na = None
     if e["zwaar"]:
         na = dt.datetime.fromisoformat(e["t"]).astimezone().replace(tzinfo=None) + dt.timedelta(hours=6)
-    p = maak_nieuwspost(e, e["categorie"], e["zwaar"], cfg, posts, random.Random(nid), na)
+    opt = (e.get("opties") or [])
+    gekozen = opt[int(keuze)] if keuze is not None and str(keuze).isdigit() and int(keuze) < len(opt) else {}
+    zin = (zin or "").strip() or gekozen.get("zin")
+    if zin and not 15 <= len(zin) <= 160:
+        return "De openingszin moet tussen 15 en 160 tekens zijn"
+    p = maak_nieuwspost(e, e["categorie"], e["zwaar"], cfg, posts, random.Random(nid), na, gekozen.get("vers_id"), zin)
     if not p:
         return "Geen geschikte carrousel gevonden in de komende 36 uur; het voorstel blijft staan"
     e.update(status="gemaakt", post=p["id"])

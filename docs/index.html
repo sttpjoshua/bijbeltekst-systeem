@@ -194,6 +194,11 @@ html[data-thema=donker] .pl.ok{background:#173027;color:#7fe0b0}html[data-thema=
 .lgwrap{overflow-x:auto}
 .nws{display:block;margin:4px 0 2px;padding:5px 9px;border-radius:8px;background:#fff3d6;color:#7a4f00;font-size:12px;line-height:1.35}
 .nws a{color:inherit;font-weight:600}html[data-thema=donker] .nws{background:#3a2e14;color:#ffd98a}
+.nk-opties{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:10px}
+.nk-optie{border:1px solid var(--lijn);border-radius:12px;padding:10px;background:var(--zacht)}
+.nk-slides{display:flex;gap:4px;overflow-x:auto;margin-bottom:8px}.nk-slides img{width:92px;height:115px;object-fit:cover;border-radius:6px;cursor:zoom-in}
+.nk-optie textarea{width:100%;box-sizing:border-box;font:inherit;font-size:13px;border:1px solid var(--lijn);border-radius:8px;padding:6px;background:var(--kaart,#fff);color:inherit;resize:vertical}
+.nk-cap{white-space:pre-line;font-size:12px;color:var(--ink2);max-height:140px;overflow:auto;margin:6px 0}
 </style>
 </head>
 <body>
@@ -220,6 +225,7 @@ html[data-thema=donker] .pl.ok{background:#173027;color:#7fe0b0}html[data-thema=
   </div>
 
   <div class="tab" data-tab="overzicht">
+    <section class="kaart" id="nieuwsKeuze" style="margin-top:0;display:none"></section>
     <section class="kaart" id="aandacht" style="margin-top:0"></section>
     <div class="grid g4" id="tegels" style="margin-top:14px"></div>
     <section class="grid g2">
@@ -344,7 +350,7 @@ function bouw(){
       :`<button class="knop" style="border:0;cursor:pointer" data-o='{"actie":"pauze","waarde":true}' data-vraag="Alles stilzetten? Er gaat niets meer online tot je op Hervatten klikt.">⏸ Noodstop</button>`);
 
   const p=D.posts;
-  bouwAandacht();bouwReacties();bouwVolgende();bouwLaatst();bouwVerzoeken();bouwGezondheid();bouwTegels();bouwSnelLeren();bouwGroei();bouwTop();bouwInzichten();bouwVoorraad();
+  bouwNieuwsKeuze();bouwAandacht();bouwReacties();bouwVolgende();bouwLaatst();bouwVerzoeken();bouwGezondheid();bouwTegels();bouwSnelLeren();bouwGroei();bouwTop();bouwInzichten();bouwVoorraad();
 
   // logboek
   document.getElementById("logboek").innerHTML=(D.logboek||[]).slice().reverse().map(l=>`<div class="${l.soort==="fout"&&!l.opgelost?"fout":""}"><span class="t">${l.t.replace("T"," ")}</span>${l.tekst.length>170?l.tekst.slice(0,170)+"…":l.tekst}${l.opgelost?' <span style="color:var(--goed)">(opgelost)</span>':""}</div>`).join("")||'<div class="leeg">Nog niets gelogd.</div>';
@@ -661,6 +667,34 @@ function bouwLaatst(){
         <td>${platLabels(x,true)}</td><td class="n">${n(t.reach??t.views)}</td><td class="n">${n(t.likes)}</td><td class="n">${n(t.saves)}</td><td class="n">${n(t.shares)}</td><td class="n">${n(t.comments)}</td>
         <td class="n">${kt==null?"<span class='sub'>–</span>":(kt/1000).toFixed(1)+" s"}</td><td>${lbl(x)}</td></tr>`}).join(""):`<tr><td colspan="9" class="leeg">Nog niets geplaatst dat aan deze filters voldoet.</td></tr>`)+"</tbody>";
   el.querySelectorAll("[data-lgs]").forEach(th=>th.onclick=()=>{const k=th.dataset.lgs;if(k==="platform")return;LG.af=LG.sort===k?!LG.af:true;LG.sort=k;bouwLaatst()});
+}
+
+// ---------- Nieuwsvoorstellen: kies wat er gemaakt wordt ----------
+function bouwNieuwsKeuze(){
+  const el=document.getElementById("nieuwsKeuze");if(!el)return;
+  const open=((D.nieuws||{}).recent||[]).filter(x=>x.status==="voorstel");
+  if(!open.length){el.style.display="none";el.innerHTML="";return}
+  el.style.display="";
+  el.innerHTML=`<h2>📰 Nieuwsvoorstel: kies wat er gemaakt wordt</h2>`+open.map(x=>{
+    const soort=x.zwaar?"zwaar nieuws (gaat pas 6 uur na het nieuws online)":x.categorie==="politiek"?"politiek (altijd neutraal)":x.categorie;
+    const opties=x.opties||[];
+    return `<div style="margin:8px 0 18px"><div><b>${esc(x.bron)}:</b> <a href="${esc(x.link||"#")}" target="_blank">${esc(x.kop)}</a></div>
+      <div class="sub">Soort: ${esc(soort)} · ${geleden(x.t)}</div>
+      ${opties.length?`<div class="nk-opties">${opties.map((o,k)=>`<div class="nk-optie">
+        <div class="nk-slides">${(o.media||[]).map(u=>`<img src="${u}" loading="lazy" onclick="window.open('${u}','_blank')" onerror="this.remove()">`).join("")}</div>
+        <b>Optie ${k+1}: ${esc(o.ref)}</b>
+        <div class="sub" style="margin:4px 0 2px">Openingszin (slide 1 en eerste regel caption), pas gerust aan:</div>
+        <textarea rows="3" id="nkz-${x.id}-${k}">${esc(o.zin)}</textarea>
+        <details><summary class="sub" style="cursor:pointer">Caption bekijken</summary><div class="nk-cap">${esc(o.caption)}</div></details>
+        <button class="btn prim" style="margin-top:6px" onclick="kiesNieuws('${x.id}',${k},this)">Kies deze</button></div>`).join("")}</div>`
+      :`<div class="sub" style="margin-top:6px">Er zijn geen opties gemaakt; het systeem kiest dan zelf een passend vers.</div>${knop("Post erover maken",{actie:"nieuws_maken",id:x.id},"prim")}`}
+      <div style="margin-top:8px">${knop("Negeren",{actie:"nieuws_negeren",id:x.id})}</div></div>`}).join("");
+}
+function kiesNieuws(id,k,btn){
+  if(!sleutel())return naarSleutel();
+  const zin=document.getElementById(`nkz-${id}-${k}`).value.trim();
+  if(zin.length<15||zin.length>160){melding("De openingszin moet tussen 15 en 160 tekens zijn","fout");return}
+  stuur({actie:"nieuws_maken",id,keuze:k,zin},btn);
 }
 function bouwPlanning(){
   const el=document.getElementById("planDagen");if(!el)return;

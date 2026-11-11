@@ -315,7 +315,7 @@ def main(raw):
         melding = "Zelftest: " + ((r.stdout or r.stderr).strip().splitlines() or ["klaar"])[-1][:120]
     elif a in ("nieuws_maken", "nieuws_negeren"):
         import nieuws
-        melding = nieuws.maak_voorstel(o["id"]) if a == "nieuws_maken" else nieuws.negeer(o["id"])
+        melding = nieuws.maak_voorstel(o["id"], o.get("keuze"), o.get("zin")) if a == "nieuws_maken" else nieuws.negeer(o["id"])
         if a == "nieuws_negeren" or melding.startswith("Nieuwspost"):
             log = S.laad("data/logboek.json", [])
             for l in log:

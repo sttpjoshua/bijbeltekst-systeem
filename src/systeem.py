@@ -930,7 +930,7 @@ def dashboard_extra(cfg, posts):
             "nood": {"klaar": len(nood_klaar()), "doel": NOOD_DOEL},
             "tekstbank": {**bank_voorraad(cfg), "zelfstandig": bool(cfg.get("zelfstandig"))},
             "nieuws": {"instelling": {**{"aan": True, "max_per_dag": 2, "licht_automatisch": True}, **(cfg.get("nieuws") or {})},
-                       "recent": [{k: x.get(k) for k in ("id", "t", "bron", "kop", "link", "categorie", "zwaar", "status", "post")}
+                       "recent": [{k: x.get(k) for k in ("id", "t", "bron", "kop", "link", "categorie", "zwaar", "status", "post", "opties")}
                                   for x in laad("data/nieuws.json", [])[-25:]][::-1]},
             "verzoeken": laad("data/verzoeken.json", [])[-20:][::-1],
             "overleg": laad("data/overleg.json", [])[-1:],
