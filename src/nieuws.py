@@ -23,15 +23,17 @@ FEEDS = [("NOS", "https://feeds.nos.nl/nosnieuwsalgemeen"),
          ("NOS", "https://feeds.nos.nl/nosnieuwsbinnenland"),
          ("NU.nl", "https://www.nu.nl/rss/Algemeen")]
 
-POLITIEK = ["kabinet", "minister", "verkiezing", "partij", "tweede kamer", "eerste kamer", "coalitie", "premier",
+POLITIEK = ["regering", "kabinet", "minister", "verkiezing", "partij", "tweede kamer", "eerste kamer", "coalitie", "premier",
             "president", "formatie", "motie", "kamerlid", "pvv", "vvd", "d66", "cda", "bbb", "groenlinks", "nsc",
-            "trump", "poetin", "navo", "demonstratie", "protest", "stikstof", "asiel", "migratie"]
-ZWAAR = ["dodelijk", "doden", "dode ", "omgekomen", "aanslag", "ramp", "oorlog", "slachtoffer", "vermoord",
+            "trump", "poetin", "navo", "demonstratie", "protest", "stikstof", "asiel", "migratie",
+            "vredesgesprek", "vredesoverleg", "vredesakkoord", "staakt-het-vuren", "bestand ", "oekraïne", "rusland",
+            "gaza", "israël", "iran", "sancties", "top in", "benelux-top", "eu-top"]
+ZWAAR = ["orkaan", "tsunami", "dodelijk", "doden", "dode ", "omgekomen", "aanslag", "ramp", "oorlog", "slachtoffer", "vermoord",
          "schietpartij", "overleden", "explosie", "aardbeving", "overstroming", "neergestort", "gijzeling",
          "vermist", "steekpartij", "brand ", "zwaargewond", "kinderen dood"]
 # Zwaar nieuws dat groot genoeg is om een voorstel waard te zijn (de rest wordt genegeerd)
 # (geen 'oorlog': lopende oorlogen staan dagelijks in het nieuws, ook in achtergrondverhalen)
-ZWAAR_GROOT = ["aanslag", "ramp", "aardbeving", "overstroming", "neergestort"]
+ZWAAR_GROOT = ["aanslag", "ramp", "aardbeving", "overstroming", "neergestort", "orkaan", "tsunami"]
 
 # Lichte aanleidingen: woorden in de kop, thema's voor het vers, en openingszinnen (geen nieuwstekst)
 LICHT = {
@@ -49,10 +51,14 @@ LICHT = {
                   themas=["vrede_rust", "dankbaarheid"], zinnen=[
                       "Het is heet vandaag. Zoek de schaduw, en even rust.",
                       "Een warme dag. Neem het rustig, ook van binnen."]),
-    "regen": dict(woorden=["regenachtig", "grijze dag", "veel regen", "buien"],
+    "regen": dict(woorden=["regenachtig", "grijze dag", "veel regen", "buien", " regen", "natste", "koudste", "nat weer", "somber weer", "herfstweer"],
                   themas=["hoop", "troost", "vrede_rust"], zinnen=[
                       "Grijze lucht vandaag. Hier is iets van licht.",
                       "Regen tegen het raam. Even binnen blijven bij God."]),
+    "sintmaarten": dict(woorden=["sint-maarten", "sint maarten", "lampion"],
+                        themas=["hoop", "dankbaarheid", "liefde"], zinnen=[
+                            "Vanavond lopen er lampionnen door de straat. Klein licht, maar het maakt verschil.",
+                            "Sint-Maarten deelde zijn mantel. Wie kun jij vandaag iets geven?"]),
     "sinterklaas": dict(woorden=["sinterklaas", "intocht", "pakjesavond", "pepernoten"],
                         themas=["dankbaarheid", "liefde"], zinnen=[
                             "Het is de tijd van cadeautjes. Dit is er één die niet ophoudt.",
@@ -124,8 +130,12 @@ def ophalen():
 def indelen(kop):
     """(soort, categorie) of None. soort: 'licht' of 'zwaar'."""
     k = " " + kop.lower() + " "
-    if any(w in k for w in ZWAAR):
-        return ("zwaar", "zwaar") if any(w in k for w in ZWAAR_GROOT) else None
+    if any(w in k for w in ZWAAR_GROOT):
+        return ("zwaar", "zwaar")
+    if any(w in k for w in POLITIEK):  # ook als er een zwaar woord in staat (bijv. vredesgesprekken over een oorlog)
+        return ("politiek", "politiek")
+    if any(w in k for w in ZWAAR):  # klein zwaar nieuws (ongeluk, steekpartij): niets mee doen
+        return None
     if any(w in k for w in POLITIEK):
         return ("politiek", "politiek")
     for cat, r in LICHT.items():
