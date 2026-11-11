@@ -9,9 +9,9 @@
    "plaatsing": "boven",
    "clips": [
     {
-     "id": "8YOn9Ojq2k",
-     "term": "man sitting on bench",
-     "titel": "Reading a book in the park ",
+     "id": "K7ha0mUURG",
+     "term": "alarm clock",
+     "titel": "Nap timer hourglass",
      "staand": false,
      "post": "voorbeeld-1"
     },
@@ -26,12 +26,50 @@
    "duur": 19.62
   },
   {
+   "bestand": "docs/media/voorbeelden/situatie-2-dichtbij-midden.mp4",
    "ref": "Mattheüs 6:34",
-   "fout": "geen clips"
+   "scene": "dichtbij",
+   "plaatsing": "midden",
+   "clips": [
+    {
+     "id": "stl3WzyvXa",
+     "term": "night bed",
+     "titel": "Unboxing a Minimalist White Gift Box on Cozy Bedroom Bed",
+     "staand": true,
+     "post": "voorbeeld-2"
+    },
+    {
+     "id": "B44HwoJh9T",
+     "term": "coffee",
+     "titel": "Woman enjoying her coffee",
+     "staand": false,
+     "post": "voorbeeld-2"
+    }
+   ],
+   "duur": 22.0
   },
   {
+   "bestand": "docs/media/voorbeelden/situatie-3-onderweg-boven.mp4",
    "ref": "Mattheüs 11:28",
-   "fout": "geen clips"
+   "scene": "onderweg",
+   "plaatsing": "boven",
+   "clips": [
+    {
+     "id": "BA5vRvQH3E",
+     "term": "exhausted",
+     "titel": "Dog sleeping on the floor",
+     "staand": false,
+     "post": "voorbeeld-3"
+    },
+    {
+     "id": "fwwKKUlRGF",
+     "term": "city night",
+     "titel": "Night city from a moving car",
+     "staand": false,
+     "post": "voorbeeld-3"
+    }
+   ],
+   "duur": 19.31
   },
   {
    "bestand": "docs/media/voorbeelden/situatie-4-natuur-midden.mp4",
@@ -40,9 +78,16 @@
    "plaatsing": "midden",
    "clips": [
     {
-     "id": "qxDJzCJHLM",
-     "term": "sunrise",
-     "titel": "Sunrise over Muriwai Beach",
+     "id": "tHLihgx1i6",
+     "term": "night bed",
+     "titel": "Hotel room tour",
+     "staand": false,
+     "post": "voorbeeld-4"
+    },
+    {
+     "id": "HncD51ZzmZ",
+     "term": "ocean",
+     "titel": "Waves in the ocean ",
      "staand": false,
      "post": "voorbeeld-4"
     }
@@ -52,7 +97,12 @@
  ],
  "zoektermen": {
   "sunrise": 12,
-  "student studying night": 0,
-  "man sitting on bench": 12
+  "alarm clock": 1,
+  "awake night": 0,
+  "night bed": 4,
+  "coffee": 11,
+  "exhausted": 1,
+  "city night": 11,
+  "ocean": 12
  }
 }
