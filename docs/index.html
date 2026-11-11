@@ -293,6 +293,7 @@ html[data-thema=donker] .pl.ok{background:#173027;color:#7fe0b0}html[data-thema=
         <div class="blok"><h3>Systeem</h3><div class="seg" id="bPauze"></div><div class="sub" style="margin-top:6px">Pauze zet alles stil. Er gaat niets meer online tot je hervat.</div></div>
         <div class="blok"><h3>Posts per dag</h3><div class="seg" id="bPPD"></div></div>
         <div class="blok" style="grid-column:1/-1"><h3>Zelfstandig maken (zonder Claude)</h3><div id="bZelf"></div></div>
+        <div class="blok" style="grid-column:1/-1"><h3>Nieuws als aanleiding</h3><div id="bNieuws"></div></div>
         <div class="blok"><h3>Snel leren</h3><div id="bLeer"></div></div>
         <div class="blok"><h3>Platformen</h3><div class="seg" id="bPlat"></div><div class="sub" style="margin-top:6px">YouTube en TikTok komen er later bij.</div></div>
         <div class="blok" style="grid-column:1/-1"><h3>WhatsApp-updates</h3><div id="bWa"></div></div>
@@ -425,6 +426,7 @@ function stappenMeta(){const r=D.repo;return `<details><summary>Stappenplan</sum
 const ACTIES={
   post_mislukt:f=>knop("Opnieuw proberen",{actie:"post_opnieuw",post:f.post},"prim")+knop("Vervangen door noodpost",{actie:"post_nood",post:f.post}),
   post_gemist:f=>knop("Alsnog posten",{actie:"post_opnieuw",post:f.post},"prim")+knop("Noodposts op lege plekken",{actie:"nood_inzetten"}),
+  nieuws_voorstel:f=>knop("Post erover maken",{actie:"nieuws_maken",id:f.post},"prim")+knop("Negeren",{actie:"nieuws_negeren",id:f.post}),
   tekstbank:f=>`<button class="btn prim" data-vraagclaude="Vul de tekstbank aan met 60 nieuwe verzen (zie TAKEN.md, Tekstbank).">Vraag Claude om aan te vullen</button>`,
   te_weinig:f=>knop("Noodposts inzetten",{actie:"nood_inzetten"},"prim")+knop("Posts nu laten maken",{actie:"posts_maken"})+`<button class="btn" data-vraagclaude="Er staan te weinig posts klaar. Maak de ontbrekende posts voor vandaag en morgen.">Vraag Claude om posts te maken</button>`,
   nood_op:f=>`<button class="btn prim" data-vraagclaude="Vul de noodvoorraad aan tot 6 posts.">Vraag Claude om aan te vullen</button>`,
@@ -519,6 +521,14 @@ function bouwBediening(){
       ${knop("Ontbrekende posts nu maken",{actie:"posts_maken"})}
       <button class="btn" data-vraagclaude="Vul de tekstbank aan met 60 nieuwe verzen (zie TAKEN.md, Tekstbank).">Vraag Claude om de tekstbank aan te vullen</button></div>
     <div class="sub" style="margin-top:8px">Elke ochtend vanaf 9:00 kiest het systeem zelf de posts voor morgen en overmorgen, vult de teksten in uit de tekstbank en maakt de beelden. Tekstbank: <b>${tb.verzen}</b> verzen, waarvan <b>${tb.vrij}</b> nog niet recent gebruikt: genoeg voor ongeveer <b style="color:${tb.dagen<10?"var(--rood,#c0392b)":"inherit"}">${tb.dagen} dagen</b>. Daarna herhaalt hij de verzen die het langst geleden zijn geplaatst.</div>`;
+  const ni=(D.nieuws||{}).instelling||{aan:true,max_per_dag:2,licht_automatisch:true},nr=(D.nieuws||{}).recent||[];
+  const NST={gemaakt:"✅ post gemaakt",voorstel:"⏳ wacht op jou",genegeerd:"genegeerd",overgeslagen:"overgeslagen (al genoeg)",geen_plek:"geen plek vrij",gezien:"gezien"};
+  document.getElementById("bNieuws").innerHTML=`<div class="seg">
+      ${ni.aan?`<button class="btn aan" data-o='{"actie":"nieuws_instelling","sleutel":"aan","waarde":false}'>✓ Aan</button>`:`<button class="btn prim" data-o='{"actie":"nieuws_instelling","sleutel":"aan","waarde":true}'>Aanzetten</button>`}
+      ${ni.licht_automatisch?`<button class="btn aan" data-o='{"actie":"nieuws_instelling","sleutel":"licht_automatisch","waarde":false}' title="Uitzetten: dan vraagt hij ook bij licht nieuws eerst jouw akkoord">✓ Licht nieuws automatisch</button>`:`<button class="btn" data-o='{"actie":"nieuws_instelling","sleutel":"licht_automatisch","waarde":true}'>Licht nieuws automatisch</button>`}
+      <span class="sub" style="align-self:center;margin:0 4px 0 8px">Max per dag:</span>${[1,2,3].map(k=>`<button class="btn ${ni.max_per_dag===k?"prim":""}" data-o='{"actie":"nieuws_instelling","sleutel":"max_per_dag","waarde":${k}}'>${k}</button>`).join("")}</div>
+    <div class="sub" style="margin-top:8px">Rond 7, 12 en 17 uur kijkt het systeem naar het nieuws (NOS en NU.nl). Licht nieuws (weer, Sinterklaas, sport, drukte) wordt vanzelf een post: de eerstvolgende carrousel krijgt een passend vers en een openingszin. Zwaar nieuws gaat nooit vanzelf: je krijgt een voorstel. Politiek wordt altijd overgeslagen. In de post zelf komt nooit nieuwstekst.</div>
+    ${nr.length?`<div style="margin-top:10px">${nr.slice(0,8).map(x=>`<div class="sub" style="padding:5px 0;border-top:1px solid var(--lijn)"><b>${esc(x.categorie)}</b>${x.zwaar?" · zwaar":""} · ${esc(x.bron)}: <a href="${esc(x.link||"#")}" target="_blank">${esc(x.kop)}</a> · ${NST[x.status]||x.status}${x.status==="voorstel"?` ${knop("Post maken",{actie:"nieuws_maken",id:x.id},"prim")} ${knop("Negeren",{actie:"nieuws_negeren",id:x.id})}`:""}</div>`).join("")}</div>`:""}`;
   const max=c.max_posts_per_dag||3;
   document.getElementById("bPPD").innerHTML=[...Array(max)].map((_,i)=>`<button class="btn ${c.posts_per_dag===i+1?"prim":""}" data-o='{"actie":"posts_per_dag","waarde":${i+1}}'>${i+1}</button>`).join("");
   document.getElementById("bPlat").innerHTML=["instagram","facebook"].map(pl=>{const aan=c.platformen_actief.includes(pl);
@@ -634,7 +644,7 @@ function bouwLaatst(){
   const n=v=>v==null?"<span class='sub'>–</span>":v;
   el.innerHTML=`<thead><tr>${kol.map(([k,t,c])=>`<th class="${c}" data-lgs="${k}">${t}${LG.sort===k?(LG.af?" ↓":" ↑"):""}</th>`).join("")}</tr></thead><tbody>`+
     (rijen.length?rijen.slice(0,60).map(x=>{const t=x.totaal||{},kt=lgWaarde(x,"kijktijd");
-      return `<tr><td><div class="pimg" onclick="toonGalerij('${x.id}')">${x.thumb||x.media_url?`<img src="${x.thumb||x.media_url}" alt="">`:""}<div><b>${x.ref}</b><div class="sub">${new Date(x.datum).toLocaleDateString("nl-NL",{weekday:"short",day:"numeric",month:"short"})} · ${x.variabelen.tijdslot} · ${x.variabelen.formaat}${x.nood?" · noodpost":""}</div></div></div></td>
+      return `<tr><td><div class="pimg" onclick="toonGalerij('${x.id}')">${x.thumb||x.media_url?`<img src="${x.thumb||x.media_url}" alt="">`:""}<div><b>${x.ref}</b><div class="sub">${new Date(x.datum).toLocaleDateString("nl-NL",{weekday:"short",day:"numeric",month:"short"})} · ${x.variabelen.tijdslot} · ${x.variabelen.formaat}${x.nood?" · noodpost":""}${x.nieuws?` · <span title="Aanleiding: ${esc(x.nieuws.kop)} (${esc(x.nieuws.bron)})">📰 ${esc(x.nieuws.categorie)}</span>`:""}</div></div></div></td>
         <td>${platLabels(x,true)}</td><td class="n">${n(t.reach??t.views)}</td><td class="n">${n(t.likes)}</td><td class="n">${n(t.saves)}</td><td class="n">${n(t.shares)}</td><td class="n">${n(t.comments)}</td>
         <td class="n">${kt==null?"<span class='sub'>–</span>":(kt/1000).toFixed(1)+" s"}</td><td>${lbl(x)}</td></tr>`}).join(""):`<tr><td colspan="9" class="leeg">Nog niets geplaatst dat aan deze filters voldoet.</td></tr>`)+"</tbody>";
   el.querySelectorAll("[data-lgs]").forEach(th=>th.onclick=()=>{const k=th.dataset.lgs;if(k==="platform")return;LG.af=LG.sort===k?!LG.af:true;LG.sort=k;bouwLaatst()});

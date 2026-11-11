@@ -313,6 +313,21 @@ def main(raw):
         import subprocess
         r = subprocess.run([sys.executable, "tools/zelftest.py"], capture_output=True, text=True)
         melding = "Zelftest: " + ((r.stdout or r.stderr).strip().splitlines() or ["klaar"])[-1][:120]
+    elif a in ("nieuws_maken", "nieuws_negeren"):
+        import nieuws
+        melding = nieuws.maak_voorstel(o["id"]) if a == "nieuws_maken" else nieuws.negeer(o["id"])
+        if a == "nieuws_negeren" or melding.startswith("Nieuwspost"):
+            log = S.laad("data/logboek.json", [])
+            for l in log:
+                if l.get("code") == "nieuws_voorstel" and l.get("post") == o["id"]:
+                    l["opgelost"] = True
+            S.bewaar("data/logboek.json", log)
+        posts, cfg = S.laad("data/posts.json", []), S.laad("config.json")
+    elif a == "nieuws_instelling":
+        n = cfg.setdefault("nieuws", {})
+        n[o["sleutel"]] = o["waarde"]
+        namen = {"aan": "nieuwsposts", "licht_automatisch": "licht nieuws automatisch", "max_per_dag": "maximaal per dag"}
+        melding = f"Nieuws: {namen.get(o['sleutel'], o['sleutel'])} {o['waarde'] if o['sleutel'] == 'max_per_dag' else ('aan' if o['waarde'] else 'uit')}"
     elif a == "posts_maken":
         melding = "Posts maken gestart: het systeem maakt de ontbrekende posts voor morgen en overmorgen (duurt 10 tot 20 minuten)"
     elif a == "zelfstandig":
@@ -366,7 +381,7 @@ def main(raw):
                  "andere_stijl": "designer", "post_ander_vers": "verskiezer", "fouten_opgelost": "controller", "reactie_plaatsen": "community", "reactie_negeren": "community", "reactie_liken": "community",
                  "fout_opgelost": "controller", "post_opnieuw": "dispatcher", "post_nood": "controller", "nood_inzetten": "controller",
                  "muziek_toevoegen": "video", "statistieken_nu": "analist", "reacties_nu": "community", "zelftest_nu": "controller",
-                 "run": "dispatcher", "verzoek": "controller", "posts_maken": "verskiezer", "zelfstandig": "controller", "whatsapp_test": "controller", "whatsapp_instelling": "controller"}.get(a)
+                 "run": "dispatcher", "verzoek": "controller", "posts_maken": "verskiezer", "zelfstandig": "controller", "nieuws_maken": "verskiezer", "nieuws_negeren": "verskiezer", "nieuws_instelling": "verskiezer", "whatsapp_test": "controller", "whatsapp_instelling": "controller"}.get(a)
         if a == "overslaan":
             agent = "video" if (vind(posts, o["post"])["variabelen"].get("formaat") == "video") else "designer"
         if agent:

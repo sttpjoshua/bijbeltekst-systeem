@@ -59,6 +59,9 @@ Staat `zelfstandig` op true in `config.json`, dan maakt het systeem zelf de post
 - Daarna `python3 src/systeem.py tekstbank check` (moet zonder problemen zijn), commit en push.
 - Reeksen: de reeksnaam wordt automatisch voor de hook gezet ("Advent, dag 3: ..."). Voor Advent (29 nov t/m 24 dec) mag je voor de reeksverzen een eigen item maken met uitleg in het licht van Advent.
 
+## Nieuws als aanleiding (sinds 11 november)
+`src/nieuws.py` kijkt rond 7, 12 en 17 uur naar NOS en NU.nl. Licht nieuws (weer, Sinterklaas, sport, drukte, examens, klok, koopjes) wordt vanzelf een post: de eerstvolgende carrousel krijgt een vers uit de tekstbank met een passend thema, opening 'verhaal' en een openingszin uit `LICHT` in nieuws.py. Zwaar nieuws (rampen, aanslagen) is altijd een voorstel voor Joshua (dashboard en WhatsApp), en gaat pas 6 uur na het nieuws online. Politiek nooit. Maximaal 2 per dag (`config.json` › `nieuws`). In de post zelf komt nooit nieuwstekst of een kop (NOS-voorwaarden: koppen alleen met bronvermelding, niet-commercieel). Wil je nieuwe soorten aanleidingen toevoegen: alleen in `LICHT`, met woorden, thema's en 2 of 3 openingszinnen die ook los van het nieuws kloppen.
+
 ## Dagelijkse run
 **Staat `zelfstandig` aan, dan sla je stap 2 t/m 4 over** (het systeem maakt de posts zelf) en doe je alleen: zelfherstel, verzoeken, reacties, de tekstbank controleren en zo nodig aanvullen, en controleren of de posts van morgen goed zijn gemaakt (bekijk er één met Read).
 Het online zetten zelf doet GitHub Actions (`.github/workflows/publiceren.yml`, elk kwartier) en het ophalen van statistieken ook (dagelijks). Deze run maakt de posts van MORGEN én OVERMORGEN klaar (twee dagen buffer: als een run een keer mislukt, staat er toch genoeg klaar). Voor MORGEN zijn de meeste posts meestal al gemaakt; vul alleen aan wat ontbreekt.

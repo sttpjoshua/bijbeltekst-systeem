@@ -93,6 +93,14 @@ jobs:
             python3 tools/zelftest.py || true
             python3 src/systeem.py dashboard
           fi
+      - name: Nieuws bekijken (rond 7, 12 en 17 uur)
+        if: steps.t.outputs.taak == 'posten'
+        run: |
+          uur=$(date +%H); min=$(date +%M)
+          if { [ "$uur" = "07" ] || [ "$uur" = "12" ] || [ "$uur" = "17" ]; } && [ "$min" -lt 15 ]; then
+            pip install -q pillow numpy
+            python3 src/nieuws.py || echo "Nieuws bekijken mislukt"
+          fi
       - name: Ontbrekende posts laten maken (zelfstandig, zonder Claude)
         if: steps.t.outputs.taak == 'posten' || steps.t.outputs.taak == 'bediening'
         env:

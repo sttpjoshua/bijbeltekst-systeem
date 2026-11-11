@@ -325,6 +325,7 @@ def kies_posts(datum, cfg, strat, posts, verzen, mat, n_start, n, gebruikte_slot
             v["opening"], bron["opening"] = None, "n.v.t."  # alleen carrousels hebben een opening
         elif v["opening"] == "stopper" and len(vers["tekst"]) < 70:
             v["opening"], bron["opening"] = "vers", "kort vers"  # een kort vers is zelf al de stopper
+        v["aanleiding"] = "kalender" if reekspost else "tijdloos"  # 'nieuws' zet src/nieuws.py
         # vaste regel (Joshua, 8 nov): een reel heeft altijd uitleg, zoals de carrousel
         v["video_uitleg"], bron["video_uitleg"] = (True, "vaste regel") if v["formaat"] == "video" else (None, "n.v.t.")
         recent.add(vers["id"])
@@ -802,7 +803,7 @@ def cmd_dashboard():
                       "caption": p.get("caption", ""), "uitleg": p.get("uitleg", ""), "media": p.get("media"), "media_url": p.get("media_url"), "media_urls": p.get("media_urls"), "thumb": p.get("thumb"),
                       "platformen": list(p.get("gepubliceerd", {}).keys()),
                       "links": {k: v.get("url") for k, v in p.get("gepubliceerd", {}).items()}, "totaal": tot, "per_platform": per, "score": sc.get(p["id"], {}),
-                      "pub": {k: v.get("t") for k, v in p.get("gepubliceerd", {}).items()}, "gemist": p.get("gemist", []), "nood": p.get("nood", False),
+                      "pub": {k: v.get("t") for k, v in p.get("gepubliceerd", {}).items()}, "gemist": p.get("gemist", []), "nood": p.get("nood", False), "nieuws": p.get("nieuws"),
                       "online": min((g["t"] for g in p.get("gepubliceerd", {}).values()), default=None)})
     rapporten = sorted(os.listdir(P("rapporten"))) if os.path.isdir(P("rapporten")) else []
     extra = dashboard_extra(cfg, posts)
@@ -905,6 +906,9 @@ def dashboard_extra(cfg, posts):
             "herstel": [h for h in laad("data/herstel.json", []) if h["t"] >= (nu - dt.timedelta(days=7)).isoformat()][::-1][:30],
             "nood": {"klaar": len(nood_klaar()), "doel": NOOD_DOEL},
             "tekstbank": {**bank_voorraad(cfg), "zelfstandig": bool(cfg.get("zelfstandig"))},
+            "nieuws": {"instelling": {**{"aan": True, "max_per_dag": 2, "licht_automatisch": True}, **(cfg.get("nieuws") or {})},
+                       "recent": [{k: x.get(k) for k in ("id", "t", "bron", "kop", "link", "categorie", "zwaar", "status", "post")}
+                                  for x in laad("data/nieuws.json", [])[-25:]][::-1]},
             "verzoeken": laad("data/verzoeken.json", [])[-20:][::-1],
             "overleg": laad("data/overleg.json", [])[-1:],
             "whatsapp": {**{"direct": True, "dagelijks": True, "wekelijks": True, "uitschieter": True}, **(cfg.get("whatsapp") or {})}}
@@ -1029,7 +1033,7 @@ def cmd_log(tekst, soort="info", code=None, post=None):
         regel["post"] = post
     log.append(regel)
     bewaar("data/logboek.json", log[-500:])
-    if soort == "fout" and (code in ("post_mislukt", "post_gemist", "te_weinig", "nood_op", "rechten") or tekst.startswith("ACTIE VOOR JOU")):
+    if soort == "fout" and (code in ("post_mislukt", "post_gemist", "te_weinig", "nood_op", "rechten", "nieuws_voorstel", "tekstbank") or tekst.startswith("ACTIE VOOR JOU")):
         try:  # direct een WhatsApp-seintje (wordt verstuurd door de volgende GitHub-run)
             import whatsapp
             whatsapp.zet_in_wachtrij(("🚨 *Bibleverse: " + ("actie voor jou" if tekst.startswith("ACTIE VOOR JOU") else "probleem") + "*\n")
