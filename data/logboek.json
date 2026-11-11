@@ -772,6 +772,14 @@
   "opgelost": true
  },
  {
+  "t": "2026-11-11T12:01:02",
+  "soort": "fout",
+  "tekst": "Politiek nieuws (NOS): \"Raad van State: minister van Asiel moet veiligheid Syrië opnieuw beoordelen\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
+  "code": "nieuws_voorstel",
+  "post": "n111112010",
+  "opgelost": true
+ },
+ {
   "t": "2026-11-11T12:16:10",
   "soort": "info",
   "tekst": "2026-11-11-n1215 ook als story geplaatst"
@@ -800,5 +808,15 @@
   "t": "2026-11-11T13:28:35",
   "soort": "info",
   "tekst": "Bediening: Nieuws: maximaal per dag 3"
+ },
+ {
+  "t": "2026-11-11T13:30:13",
+  "soort": "info",
+  "tekst": "Nieuwspost: Jesaja 41:10 vervangen door Prediker 3:1 (aanleiding: politiek, NOS)"
+ },
+ {
+  "t": "2026-11-11T13:30:13",
+  "soort": "info",
+  "tekst": "Bediening: Nieuwspost klaargezet: Prediker 3:1 op 2026-11-11 om 17:45"
  }
 ]

@@ -2552,9 +2552,9 @@
  {
   "id": "2026-11-11-n1745",
   "status": "gerenderd",
-  "vers_id": "Isaiah-41-10-10",
-  "ref": "Jesaja 41:10",
-  "tekst": "Vrees niet, want Ik ben met u; zijt niet verbaasd, want Ik ben uw God; Ik sterk u, ook help Ik u, ook ondersteun Ik u met de rechterhand Mijner gerechtigheid.",
+  "vers_id": "Ecclesiastes-3-1-1",
+  "ref": "Prediker 3:1",
+  "tekst": "Alles heeft een bestemden tijd, en alle voornemen onder den hemel heeft zijn tijd.",
   "vertaling": "SV",
   "variabelen": {
    "palet": "hemelsblauw",
@@ -2562,19 +2562,20 @@
    "layout": "links",
    "achtergrond": "diagonaal",
    "huisstijl": "hemelsblauw",
-   "thema": "troost",
+   "thema": "wijsheid",
    "hook_stijl": "geen",
    "formaat": "carrousel",
    "uitleg_op_beeld": false,
    "achtergrondbron": "verloop",
-   "boekgroep": "profeten",
-   "lengte": "middel",
+   "boekgroep": "wijsheid",
+   "lengte": "kort",
    "bron": "bekend",
    "vraag_onderaan": true,
-   "opening": "vers",
+   "opening": "verhaal",
    "tijdslot": "17:45",
    "hook_op_beeld": false,
-   "tijdslot_fb": null
+   "tijdslot_fb": null,
+   "aanleiding": "nieuws"
   },
   "keuzebron": {
    "huisstijl": "nood",
@@ -2587,27 +2588,28 @@
    "lengte": "nood",
    "bron": "nood",
    "vraag_onderaan": "nood",
-   "opening": "nood",
-   "tijdslot": "nood"
+   "opening": "nieuws",
+   "tijdslot": "nood",
+   "aanleiding": "nieuws"
   },
-  "hook": "Je hoeft het niet alleen te dragen.",
+  "hook": "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.",
   "beeld_hook": "",
-  "caption": "Je hoeft het niet alleen te dragen.\n\n\"Vrees niet, want Ik ben met u; zijt niet verbaasd, want Ik ben uw God; Ik sterk u, ook help Ik u, ook ondersteun Ik u met de rechterhand Mijner gerechtigheid.\"\nJesaja 41:10\n\nGod belooft erbij te zijn, juist als je bang bent.\n\nWaar heb jij vandaag Gods kracht nodig?",
+  "caption": "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.\n\n\"Alles heeft een bestemden tijd, en alle voornemen onder den hemel heeft zijn tijd.\"\nPrediker 3:1\n\nElk seizoen in je leven heeft zijn tijd.\n\nIn welk seizoen van je leven zit jij nu?",
   "hashtags": [
-   "#troost",
-   "#moed",
+   "#wijsheid",
+   "#prediker",
    "#bijbeltekst",
-   "#jesaja",
-   "#geloof"
+   "#seizoenen"
   ],
   "uitleg": "",
-  "betekenis": "God spreekt een volk toe dat bang is en zich verloren voelt. Hij belooft drie dingen: Ik ben met je, Ik geef je kracht en Ik houd je vast.",
-  "toepassing": "Schrijf op waar je vandaag tegen opziet en lees dit vers er hardop bij voordat je begint.",
-  "kernwoord": "sterk",
-  "media": "docs/media/nood/nood-20261108-3-384-1.jpg",
+  "betekenis": "Prediker zegt dat het leven seizoenen heeft. Er is een tijd om te lachen en een tijd om te huilen. Niet alles hoeft nu. Elk seizoen gaat voorbij.",
+  "toepassing": "In welk seizoen zit je nu? Accepteer vandaag dat het mag zijn zoals het is.",
+  "kernwoord": "tijd",
+  "media": "docs/media/2026-11/2026-11-11-n1745-1.jpg",
   "media_extra": [
-   "docs/media/nood/nood-20261108-3-384-2.jpg",
-   "docs/media/nood/nood-20261108-3-384-3.jpg"
+   "docs/media/2026-11/2026-11-11-n1745-2.jpg",
+   "docs/media/2026-11/2026-11-11-n1745-3.jpg",
+   "docs/media/2026-11/2026-11-11-n1745-4.jpg"
   ],
   "beeld": null,
   "muziek": null,
@@ -2615,18 +2617,30 @@
   "metricool": {},
   "stats": {},
   "handle": "@bibleverse_nl",
-  "thumb": "thumbs/nood-20261108-3-384.jpg",
-  "story": "docs/media/nood/nood-20261108-3-384-story.jpg",
-  "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-3-384-1.jpg",
+  "thumb": "thumbs/2026-11-11-n1745.jpg",
+  "story": "docs/media/2026-11/2026-11-11-n1745-story.jpg",
+  "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-11-n1745-1.jpg",
   "media_urls": [
-   "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-3-384-1.jpg",
-   "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-3-384-2.jpg",
-   "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-3-384-3.jpg"
+   "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-11-n1745-1.jpg",
+   "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-11-n1745-2.jpg",
+   "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-11-n1745-3.jpg",
+   "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-11-n1745-4.jpg"
   ],
-  "story_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-3-384-story.jpg",
-  "goedgekeurd": true,
+  "story_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-11-n1745-story.jpg",
+  "goedgekeurd": null,
   "datum": "2026-11-11",
-  "nood": true
+  "nood": true,
+  "verhaal_hook": "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.",
+  "tekstbron": "tekstbank",
+  "reel_uitleg": "Alles heeft zijn tijd. Voor alles onder de hemel is een moment.",
+  "reel_vraag": "In welk seizoen zit jij?",
+  "nieuws": {
+   "categorie": "politiek",
+   "kop": "Raad van State: minister van Asiel moet veiligheid Syrië opnieuw beoordelen",
+   "bron": "NOS",
+   "link": "https://nos.nl/l/2638978",
+   "zwaar": false
+  }
  },
  {
   "id": "2026-11-11-n2030",

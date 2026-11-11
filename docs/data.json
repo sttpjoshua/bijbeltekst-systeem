@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-11T13:28",
+ "gegenereerd": "2026-11-11T13:30",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1385,9 +1385,9 @@
   {
    "id": "2026-11-11-n1745",
    "datum": "2026-11-11",
-   "ref": "Jesaja 41:10",
-   "tekst": "Vrees niet, want Ik ben met u; zijt niet verbaasd, want Ik ben uw God; Ik sterk u, ook help Ik u, ook ondersteun Ik u met de rechterhand Mijner gerechtigheid.",
-   "hook": "Je hoeft het niet alleen te dragen.",
+   "ref": "Prediker 3:1",
+   "tekst": "Alles heeft een bestemden tijd, en alle voornemen onder den hemel heeft zijn tijd.",
+   "hook": "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.",
    "status": "gerenderd",
    "variabelen": {
     "palet": "hemelsblauw",
@@ -1395,35 +1395,37 @@
     "layout": "links",
     "achtergrond": "diagonaal",
     "huisstijl": "hemelsblauw",
-    "thema": "troost",
+    "thema": "wijsheid",
     "hook_stijl": "geen",
     "formaat": "carrousel",
     "uitleg_op_beeld": false,
     "achtergrondbron": "verloop",
-    "boekgroep": "profeten",
-    "lengte": "middel",
+    "boekgroep": "wijsheid",
+    "lengte": "kort",
     "bron": "bekend",
     "vraag_onderaan": true,
-    "opening": "vers",
+    "opening": "verhaal",
     "tijdslot": "17:45",
     "hook_op_beeld": false,
-    "tijdslot_fb": null
+    "tijdslot_fb": null,
+    "aanleiding": "nieuws"
    },
-   "vers_id": "Isaiah-41-10-10",
-   "goedgekeurd": true,
+   "vers_id": "Ecclesiastes-3-1-1",
+   "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
    "reserve_ref": null,
-   "caption": "Je hoeft het niet alleen te dragen.\n\n\"Vrees niet, want Ik ben met u; zijt niet verbaasd, want Ik ben uw God; Ik sterk u, ook help Ik u, ook ondersteun Ik u met de rechterhand Mijner gerechtigheid.\"\nJesaja 41:10\n\nGod belooft erbij te zijn, juist als je bang bent.\n\nWaar heb jij vandaag Gods kracht nodig?",
+   "caption": "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.\n\n\"Alles heeft een bestemden tijd, en alle voornemen onder den hemel heeft zijn tijd.\"\nPrediker 3:1\n\nElk seizoen in je leven heeft zijn tijd.\n\nIn welk seizoen van je leven zit jij nu?",
    "uitleg": "",
-   "media": "docs/media/nood/nood-20261108-3-384-1.jpg",
-   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-3-384-1.jpg",
+   "media": "docs/media/2026-11/2026-11-11-n1745-1.jpg",
+   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-11-n1745-1.jpg",
    "media_urls": [
-    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-3-384-1.jpg",
-    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-3-384-2.jpg",
-    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-3-384-3.jpg"
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-11-n1745-1.jpg",
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-11-n1745-2.jpg",
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-11-n1745-3.jpg",
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-11-n1745-4.jpg"
    ],
-   "thumb": "thumbs/nood-20261108-3-384.jpg",
+   "thumb": "thumbs/2026-11-11-n1745.jpg",
    "platformen": [],
    "links": {},
    "totaal": {},
@@ -1432,7 +1434,13 @@
    "pub": {},
    "gemist": [],
    "nood": true,
-   "nieuws": null,
+   "nieuws": {
+    "categorie": "politiek",
+    "kop": "Raad van State: minister van Asiel moet veiligheid Syrië opnieuw beoordelen",
+    "bron": "NOS",
+    "link": "https://nos.nl/l/2638978",
+    "zwaar": false
+   },
    "online": null
   },
   {
@@ -3284,6 +3292,14 @@
    "opgelost": true
   },
   {
+   "t": "2026-11-11T12:01:02",
+   "soort": "fout",
+   "tekst": "Politiek nieuws (NOS): \"Raad van State: minister van Asiel moet veiligheid Syrië opnieuw beoordelen\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
+   "code": "nieuws_voorstel",
+   "post": "n111112010",
+   "opgelost": true
+  },
+  {
    "t": "2026-11-11T12:16:10",
    "soort": "info",
    "tekst": "2026-11-11-n1215 ook als story geplaatst"
@@ -3312,17 +3328,19 @@
    "t": "2026-11-11T13:28:35",
    "soort": "info",
    "tekst": "Bediening: Nieuws: maximaal per dag 3"
-  }
- ],
- "recente_fouten": [
+  },
   {
-   "t": "2026-11-11T12:01:02",
-   "soort": "fout",
-   "tekst": "Politiek nieuws (NOS): \"Raad van State: minister van Asiel moet veiligheid Syrië opnieuw beoordelen\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
-   "code": "nieuws_voorstel",
-   "post": "n111112010"
+   "t": "2026-11-11T13:30:13",
+   "soort": "info",
+   "tekst": "Nieuwspost: Jesaja 41:10 vervangen door Prediker 3:1 (aanleiding: politiek, NOS)"
+  },
+  {
+   "t": "2026-11-11T13:30:13",
+   "soort": "info",
+   "tekst": "Bediening: Nieuwspost klaargezet: Prediker 3:1 op 2026-11-11 om 17:45"
   }
  ],
+ "recente_fouten": [],
  "versen_totaal": 300,
  "reacties": [
   {
@@ -3690,8 +3708,8 @@
   "verzen": {
    "troost": {
     "totaal": 56,
-    "beschikbaar": 52,
-    "nooit": 52
+    "beschikbaar": 53,
+    "nooit": 53
    },
    "moed": {
     "totaal": 44,
@@ -3715,8 +3733,8 @@
    },
    "wijsheid": {
     "totaal": 92,
-    "beschikbaar": 87,
-    "nooit": 87
+    "beschikbaar": 86,
+    "nooit": 86
    },
    "humor_herkenbaar": {
     "totaal": 30,
@@ -3993,8 +4011,8 @@
  },
  "tekstbank": {
   "verzen": 197,
-  "vrij": 170,
-  "dagen": 34,
+  "vrij": 169,
+  "dagen": 33,
   "zelfstandig": true
  },
  "nieuws": {
@@ -4023,8 +4041,8 @@
     "link": "https://nos.nl/l/2638978",
     "categorie": "politiek",
     "zwaar": false,
-    "status": "voorstel",
-    "post": null
+    "status": "gemaakt",
+    "post": "2026-11-11-n1745"
    }
   ]
  },
@@ -4244,9 +4262,9 @@
   },
   {
    "datum": "2026-11-16",
-   "ref": "Prediker 3:1",
-   "tekst": "Alles heeft een bestemden tijd, en alle voornemen onder den hemel heeft zijn tijd.",
-   "vers_id": "Ecclesiastes-3-1-1",
+   "ref": "Jakobus 1:5",
+   "tekst": "En indien iemand van u wijsheid ontbreekt, dat hij ze van God begere, Die een iegelijk mildelijk geeft, en niet verwijt; en zij zal hem gegeven worden.",
+   "vers_id": "James-1-5-5",
    "variabelen": {
     "huisstijl": "salie",
     "thema": "wijsheid",
@@ -4254,8 +4272,8 @@
     "formaat": "video",
     "uitleg_op_beeld": false,
     "achtergrondbron": "verloop",
-    "boekgroep": "wijsheid",
-    "lengte": "kort",
+    "boekgroep": "brieven",
+    "lengte": "middel",
     "bron": "bekend",
     "vraag_onderaan": false,
     "reel_stijl": "klassiek",
@@ -4636,9 +4654,9 @@
   },
   {
    "datum": "2026-11-18",
-   "ref": "Jakobus 1:5",
-   "tekst": "En indien iemand van u wijsheid ontbreekt, dat hij ze van God begere, Die een iegelijk mildelijk geeft, en niet verwijt; en zij zal hem gegeven worden.",
-   "vers_id": "James-1-5-5",
+   "ref": "Jakobus 1:19",
+   "tekst": "Zo dan, mijn geliefde broeders, een iegelijk mens zij ras om te horen, traag om te spreken, traag tot toorn.",
+   "vers_id": "James-1-19-19",
    "variabelen": {
     "huisstijl": "paars",
     "thema": "wijsheid",

@@ -1,5 +1,5 @@
 {
- "gemaakt": "2026-11-11T13:28",
+ "gemaakt": "2026-11-11T13:30",
  "strategie_versie": 1,
  "posts": [
   {
@@ -272,9 +272,9 @@
    "id": "2026-11-16-5",
    "datum": "2026-11-16",
    "status": "wacht_op_tekst",
-   "vers_id": "Ecclesiastes-3-1-1",
-   "ref": "Prediker 3:1",
-   "tekst": "Alles heeft een bestemden tijd, en alle voornemen onder den hemel heeft zijn tijd.",
+   "vers_id": "James-1-5-5",
+   "ref": "Jakobus 1:5",
+   "tekst": "En indien iemand van u wijsheid ontbreekt, dat hij ze van God begere, Die een iegelijk mildelijk geeft, en niet verwijt; en zij zal hem gegeven worden.",
    "vertaling": "SV",
    "variabelen": {
     "huisstijl": "salie",
@@ -283,8 +283,8 @@
     "formaat": "video",
     "uitleg_op_beeld": false,
     "achtergrondbron": "verloop",
-    "boekgroep": "wijsheid",
-    "lengte": "kort",
+    "boekgroep": "brieven",
+    "lengte": "middel",
     "bron": "bekend",
     "vraag_onderaan": false,
     "reel_stijl": "klassiek",
@@ -800,9 +800,9 @@
    "id": "2026-11-18-3",
    "datum": "2026-11-18",
    "status": "wacht_op_tekst",
-   "vers_id": "James-1-5-5",
-   "ref": "Jakobus 1:5",
-   "tekst": "En indien iemand van u wijsheid ontbreekt, dat hij ze van God begere, Die een iegelijk mildelijk geeft, en niet verwijt; en zij zal hem gegeven worden.",
+   "vers_id": "James-1-19-19",
+   "ref": "Jakobus 1:19",
+   "tekst": "Zo dan, mijn geliefde broeders, een iegelijk mens zij ras om te horen, traag om te spreken, traag tot toorn.",
    "vertaling": "SV",
    "variabelen": {
     "huisstijl": "paars",
