@@ -9,16 +9,16 @@
    "plaatsing": "boven",
    "clips": [
     {
-     "id": "K7ha0mUURG",
-     "term": "alarm clock",
-     "titel": "Nap timer hourglass",
+     "id": "Rpv1QpABdN",
+     "term": "morning bed",
+     "titel": "Girl waking up and using phone",
      "staand": false,
      "post": "voorbeeld-1"
     },
     {
-     "id": "4u3wjjU6IB",
-     "term": "sunrise",
-     "titel": "Sunrise on the beach",
+     "id": "27KwMoV3Hn",
+     "term": "mountains",
+     "titel": "Mountains in the fog",
      "staand": false,
      "post": "voorbeeld-1"
     }
@@ -32,16 +32,16 @@
    "plaatsing": "midden",
    "clips": [
     {
-     "id": "stl3WzyvXa",
+     "id": "prMnnHapxD",
      "term": "night bed",
-     "titel": "Unboxing a Minimalist White Gift Box on Cozy Bedroom Bed",
-     "staand": true,
+     "titel": "Person in bed on their iPhone",
+     "staand": false,
      "post": "voorbeeld-2"
     },
     {
-     "id": "B44HwoJh9T",
-     "term": "coffee",
-     "titel": "Woman enjoying her coffee",
+     "id": "DJLiEDq9gl",
+     "term": "tea",
+     "titel": "Woman soaking a tea bag in a cup",
      "staand": false,
      "post": "voorbeeld-2"
     }
@@ -55,16 +55,16 @@
    "plaatsing": "boven",
    "clips": [
     {
-     "id": "BA5vRvQH3E",
-     "term": "exhausted",
-     "titel": "Dog sleeping on the floor",
+     "id": "uDybSbfx4A",
+     "term": "tired",
+     "titel": "A girl working at her office desk feeling tired",
      "staand": false,
      "post": "voorbeeld-3"
     },
     {
-     "id": "fwwKKUlRGF",
+     "id": "KGlm0yZAD1",
      "term": "city night",
-     "titel": "Night city from a moving car",
+     "titel": "Gloomy city at night",
      "staand": false,
      "post": "voorbeeld-3"
     }
@@ -78,16 +78,16 @@
    "plaatsing": "midden",
    "clips": [
     {
-     "id": "tHLihgx1i6",
+     "id": "prMnnHapxD",
      "term": "night bed",
-     "titel": "Hotel room tour",
+     "titel": "Person in bed on their iPhone",
      "staand": false,
      "post": "voorbeeld-4"
     },
     {
-     "id": "HncD51ZzmZ",
-     "term": "ocean",
-     "titel": "Waves in the ocean ",
+     "id": "xqjInIc3Ng",
+     "term": "sunrise",
+     "titel": "Sun shining on leaves",
      "staand": false,
      "post": "voorbeeld-4"
     }
@@ -98,11 +98,19 @@
  "zoektermen": {
   "sunrise": 12,
   "alarm clock": 1,
-  "awake night": 0,
+  "waking up": 12,
+  "morning bed": 3,
+  "bedroom morning": 3,
+  "mountains": 12,
+  "insomnia": 2,
   "night bed": 4,
-  "coffee": 11,
+  "awake night": 0,
+  "phone bed": 7,
+  "tea": 12,
+  "tired": 12,
   "exhausted": 1,
-  "city night": 11,
-  "ocean": 12
+  "stress": 0,
+  "overwhelmed": 0,
+  "city night": 11
  }
 }
