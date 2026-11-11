@@ -22,14 +22,16 @@ jobs:
         with:
           python-version: "3.12"
       - name: Benodigdheden
+        timeout-minutes: 8
         env:
           MATERIAAL_PAT: ${{ secrets.MATERIAAL_PAT }}
         run: |
-          pip install -q pillow numpy
-          sudo apt-get install -y -qq ffmpeg >/dev/null
-          python3 tools/media.py koppel
-          git clone --depth 1 -q "https://x-access-token:${MATERIAAL_PAT}@github.com/sttpjoshua/bibleverse-materiaal.git" ../bibleverse-materiaal
+          echo "pip"; pip install -q pillow numpy
+          echo "ffmpeg"; sudo apt-get update -qq >/dev/null 2>&1 || true; sudo apt-get install -y -qq ffmpeg >/dev/null
+          echo "media"; python3 tools/media.py koppel
+          echo "materiaal"; git clone --depth 1 -q "https://x-access-token:${MATERIAAL_PAT}@github.com/sttpjoshua/bibleverse-materiaal.git" ../bibleverse-materiaal
       - name: Voorbeelden maken
+        timeout-minutes: 20
         env:
           COVERR_KEY: ${{ secrets.COVERR_KEY }}
         run: python3 tools/voorbeeldreels.py
