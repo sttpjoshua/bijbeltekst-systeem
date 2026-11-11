@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-10T22:03",
+ "gegenereerd": "2026-11-11T06:00",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -189,6 +189,251 @@
   "inzichten": []
  },
  "posts": [
+  {
+   "id": "2026-11-11-n2200",
+   "datum": "2026-11-11",
+   "ref": "Romeinen 15:4",
+   "tekst": "Want al wat te voren geschreven is, dat is tot onze lering te voren geschreven, opdat wij, door lijdzaamheid en vertroosting der Schriften, hoop hebben zouden.",
+   "hook": "De Bijbel is geschreven met jou in gedachten.",
+   "status": "gerenderd",
+   "variabelen": {
+    "palet": "zand",
+    "lettertype": "dmserif",
+    "layout": "centraal",
+    "achtergrond": "verloop",
+    "huisstijl": "zand",
+    "thema": "hoop",
+    "hook_stijl": "geen",
+    "formaat": "carrousel",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "verloop",
+    "boekgroep": "brieven",
+    "lengte": "middel",
+    "bron": "bekend",
+    "vraag_onderaan": true,
+    "opening": "vers",
+    "tijdslot": "22:00",
+    "hook_op_beeld": false,
+    "tijdslot_fb": null
+   },
+   "vers_id": "Romans-15-4-4",
+   "goedgekeurd": true,
+   "reeks": null,
+   "reeks_label": null,
+   "reserve_ref": null,
+   "caption": "De Bijbel is geschreven met jou in gedachten.\n\n\"Want al wat te voren geschreven is, dat is tot onze lering te voren geschreven, opdat wij, door lijdzaamheid en vertroosting der Schriften, hoop hebben zouden.\"\nRomeinen 15:4\n\nWat vroeger is opgeschreven, mag jou vandaag hoop geven.\n\nWelk Bijbelverhaal geeft jou hoop?",
+   "uitleg": "",
+   "media": "docs/media/nood/nood-20261108-5-581-1.jpg",
+   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-5-581-1.jpg",
+   "media_urls": [
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-5-581-1.jpg",
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-5-581-2.jpg",
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-5-581-3.jpg"
+   ],
+   "thumb": "thumbs/nood-20261108-5-581.jpg",
+   "platformen": [],
+   "links": {},
+   "totaal": {},
+   "per_platform": {},
+   "score": {},
+   "online": null
+  },
+  {
+   "id": "2026-11-11-n2030",
+   "datum": "2026-11-11",
+   "ref": "Kolossenzen 3:17",
+   "tekst": "En al wat gij doet met woorden of met werken, doet het alles in de Naam van de Heere Jezus, dankende God en de Vader door Hem.",
+   "hook": "Ook gewone dingen kunnen een dankjewel zijn.",
+   "status": "gerenderd",
+   "variabelen": {
+    "palet": "diep_paars",
+    "lettertype": "lora",
+    "layout": "links",
+    "achtergrond": "radiaal",
+    "huisstijl": "paars",
+    "thema": "dankbaarheid",
+    "hook_stijl": "geen",
+    "formaat": "carrousel",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "verloop",
+    "boekgroep": "brieven",
+    "lengte": "middel",
+    "bron": "bekend",
+    "vraag_onderaan": true,
+    "opening": "vers",
+    "tijdslot": "20:30",
+    "hook_op_beeld": false,
+    "tijdslot_fb": null
+   },
+   "vers_id": "Colossians-3-17-17",
+   "goedgekeurd": true,
+   "reeks": null,
+   "reeks_label": null,
+   "reserve_ref": null,
+   "caption": "Ook gewone dingen kunnen een dankjewel zijn.\n\n\"En al wat gij doet met woorden of met werken, doet het alles in de Naam van de Heere Jezus, dankende God en de Vader door Hem.\"\nKolossenzen 3:17\n\nAlles wat je doet mag je doen met God erbij, en met dankbaarheid.\n\nVoor welk gewoon ding ben jij vandaag dankbaar?",
+   "uitleg": "",
+   "media": "docs/media/nood/nood-20261108-4-840-1.jpg",
+   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-4-840-1.jpg",
+   "media_urls": [
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-4-840-1.jpg",
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-4-840-2.jpg",
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-4-840-3.jpg"
+   ],
+   "thumb": "thumbs/nood-20261108-4-840.jpg",
+   "platformen": [],
+   "links": {},
+   "totaal": {},
+   "per_platform": {},
+   "score": {},
+   "online": null
+  },
+  {
+   "id": "2026-11-11-n1745",
+   "datum": "2026-11-11",
+   "ref": "Jesaja 41:10",
+   "tekst": "Vrees niet, want Ik ben met u; zijt niet verbaasd, want Ik ben uw God; Ik sterk u, ook help Ik u, ook ondersteun Ik u met de rechterhand Mijner gerechtigheid.",
+   "hook": "Je hoeft het niet alleen te dragen.",
+   "status": "gerenderd",
+   "variabelen": {
+    "palet": "hemelsblauw",
+    "lettertype": "montserrat_zwaar",
+    "layout": "links",
+    "achtergrond": "diagonaal",
+    "huisstijl": "hemelsblauw",
+    "thema": "troost",
+    "hook_stijl": "geen",
+    "formaat": "carrousel",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "verloop",
+    "boekgroep": "profeten",
+    "lengte": "middel",
+    "bron": "bekend",
+    "vraag_onderaan": true,
+    "opening": "vers",
+    "tijdslot": "17:45",
+    "hook_op_beeld": false,
+    "tijdslot_fb": null
+   },
+   "vers_id": "Isaiah-41-10-10",
+   "goedgekeurd": true,
+   "reeks": null,
+   "reeks_label": null,
+   "reserve_ref": null,
+   "caption": "Je hoeft het niet alleen te dragen.\n\n\"Vrees niet, want Ik ben met u; zijt niet verbaasd, want Ik ben uw God; Ik sterk u, ook help Ik u, ook ondersteun Ik u met de rechterhand Mijner gerechtigheid.\"\nJesaja 41:10\n\nGod belooft erbij te zijn, juist als je bang bent.\n\nWaar heb jij vandaag Gods kracht nodig?",
+   "uitleg": "",
+   "media": "docs/media/nood/nood-20261108-3-384-1.jpg",
+   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-3-384-1.jpg",
+   "media_urls": [
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-3-384-1.jpg",
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-3-384-2.jpg",
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-3-384-3.jpg"
+   ],
+   "thumb": "thumbs/nood-20261108-3-384.jpg",
+   "platformen": [],
+   "links": {},
+   "totaal": {},
+   "per_platform": {},
+   "score": {},
+   "online": null
+  },
+  {
+   "id": "2026-11-11-n1215",
+   "datum": "2026-11-11",
+   "ref": "Jeremia 17:7",
+   "tekst": "Gezegend daarentegen is de man, die op den HEERE vertrouwt, en wiens vertrouwen de HEERE is!",
+   "hook": "Waar leun jij op als het spannend wordt?",
+   "status": "gerenderd",
+   "variabelen": {
+    "palet": "perzik",
+    "lettertype": "playfair",
+    "layout": "citaat",
+    "achtergrond": "diagonaal",
+    "huisstijl": "perzik",
+    "thema": "vertrouwen",
+    "hook_stijl": "geen",
+    "formaat": "carrousel",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "verloop",
+    "boekgroep": "profeten",
+    "lengte": "middel",
+    "bron": "bekend",
+    "vraag_onderaan": true,
+    "opening": "vers",
+    "tijdslot": "12:15",
+    "hook_op_beeld": false,
+    "tijdslot_fb": null
+   },
+   "vers_id": "Jeremiah-17-7-7",
+   "goedgekeurd": true,
+   "reeks": null,
+   "reeks_label": null,
+   "reserve_ref": null,
+   "caption": "Waar leun jij op als het spannend wordt?\n\n\"Gezegend daarentegen is de man, die op den HEERE vertrouwt, en wiens vertrouwen de HEERE is!\"\nJeremia 17:7\n\nVertrouwen op God is geen zwakte, het is een stevige basis.\n\nWaar vind jij het moeilijk om God te vertrouwen?",
+   "uitleg": "",
+   "media": "docs/media/nood/nood-20261108-2-621-1.jpg",
+   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-2-621-1.jpg",
+   "media_urls": [
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-2-621-1.jpg",
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-2-621-2.jpg",
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-2-621-3.jpg"
+   ],
+   "thumb": "thumbs/nood-20261108-2-621.jpg",
+   "platformen": [],
+   "links": {},
+   "totaal": {},
+   "per_platform": {},
+   "score": {},
+   "online": null
+  },
+  {
+   "id": "2026-11-11-n0730",
+   "datum": "2026-11-11",
+   "ref": "Jesaja 32:17",
+   "tekst": "En het werk der gerechtigheid zal vrede zijn; en de werking der gerechtigheid zal zijn gerustheid en zekerheid tot in eeuwigheid.",
+   "hook": "Echte rust begint bij wat goed is.",
+   "status": "gerenderd",
+   "variabelen": {
+    "palet": "zachtroze",
+    "lettertype": "cormorant_cursief",
+    "layout": "links",
+    "achtergrond": "diagonaal",
+    "huisstijl": "roze",
+    "thema": "vrede_rust",
+    "hook_stijl": "geen",
+    "formaat": "carrousel",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "verloop",
+    "boekgroep": "profeten",
+    "lengte": "middel",
+    "bron": "bekend",
+    "vraag_onderaan": true,
+    "opening": "vers",
+    "tijdslot": "07:30",
+    "hook_op_beeld": false,
+    "tijdslot_fb": null
+   },
+   "vers_id": "Isaiah-32-17-17",
+   "goedgekeurd": true,
+   "reeks": null,
+   "reeks_label": null,
+   "reserve_ref": null,
+   "caption": "Echte rust begint bij wat goed is.\n\n\"En het werk der gerechtigheid zal vrede zijn; en de werking der gerechtigheid zal zijn gerustheid en zekerheid tot in eeuwigheid.\"\nJesaja 32:17\n\nWie doet wat goed is, vindt rust die blijft.\n\nWaar verlang jij op dit moment het meest naar rust?",
+   "uitleg": "",
+   "media": "docs/media/nood/nood-20261108-1-301-1.jpg",
+   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-1-301-1.jpg",
+   "media_urls": [
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-1-301-1.jpg",
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-1-301-2.jpg",
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-1-301-3.jpg"
+   ],
+   "thumb": "thumbs/nood-20261108-1-301.jpg",
+   "platformen": [],
+   "links": {},
+   "totaal": {},
+   "per_platform": {},
+   "score": {},
+   "online": null
+  },
   {
    "id": "2026-11-10-5",
    "datum": "2026-11-10",
@@ -1430,31 +1675,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-08T17:45:55",
-   "soort": "info",
-   "tekst": "2026-11-08-2 online op facebook: Spreuken 15:1"
-  },
-  {
-   "t": "2026-11-08T18:08:26",
-   "soort": "info",
-   "tekst": "Verbinding met Instagram werkt (@bibleverse_nl)"
-  },
-  {
-   "t": "2026-11-08T18:08:26",
-   "soort": "info",
-   "tekst": "Token heeft alle rechten, ook voor statistieken"
-  },
-  {
-   "t": "2026-11-08T18:08:27",
-   "soort": "info",
-   "tekst": "Verbinding met Facebook-pagina werkt (Bibleversenl)"
-  },
-  {
-   "t": "2026-11-08T18:08:29",
-   "soort": "info",
-   "tekst": "Statistieken lezen werkt"
-  },
-  {
    "t": "2026-11-08T18:11:56",
    "soort": "info",
    "tekst": "Bediening: Reacties opgehaald: 1 nieuw"
@@ -1730,6 +1950,31 @@
    "t": "2026-11-10T22:03:13",
    "soort": "info",
    "tekst": "2026-11-10-2 online op facebook: Openbaring 21:5"
+  },
+  {
+   "t": "2026-11-11T06:00:41",
+   "soort": "info",
+   "tekst": "Zelfherstel: Geen post klaar voor 2026-11-11 07:30 → noodpost Jesaja 32:17 ingezet om 07:30"
+  },
+  {
+   "t": "2026-11-11T06:00:41",
+   "soort": "info",
+   "tekst": "Zelfherstel: Geen post klaar voor 2026-11-11 12:15 → noodpost Jeremia 17:7 ingezet om 12:15"
+  },
+  {
+   "t": "2026-11-11T06:00:41",
+   "soort": "info",
+   "tekst": "Zelfherstel: Geen post klaar voor 2026-11-11 17:45 → noodpost Jesaja 41:10 ingezet om 17:45"
+  },
+  {
+   "t": "2026-11-11T06:00:41",
+   "soort": "info",
+   "tekst": "Zelfherstel: Geen post klaar voor 2026-11-11 20:30 → noodpost Kolossenzen 3:17 ingezet om 20:30"
+  },
+  {
+   "t": "2026-11-11T06:00:41",
+   "soort": "info",
+   "tekst": "Zelfherstel: Geen post klaar voor 2026-11-11 22:00 → noodpost Romeinen 15:4 ingezet om 22:00"
   }
  ],
  "recente_fouten": [],
@@ -1852,7 +2097,7 @@
    "ok": "2026-11-08T00:36"
   },
   "reacties": {
-   "ok": "2026-11-10T22:00",
+   "ok": "2026-11-10T23:00",
    "laatst_ok": true,
    "detail": "0 nieuwe reacties",
    "fout": "2026-11-08T18:00"
@@ -2063,7 +2308,7 @@
  "snel_leren": {
   "start": "2026-11-07",
   "tot": "2026-11-14",
-  "dag": 4,
+  "dag": 5,
   "dagen": 7,
   "online": 16,
   "gemeten": 1
@@ -2072,8 +2317,8 @@
   "verzen": {
    "troost": {
     "totaal": 56,
-    "beschikbaar": 53,
-    "nooit": 53
+    "beschikbaar": 52,
+    "nooit": 52
    },
    "moed": {
     "totaal": 44,
@@ -2087,13 +2332,13 @@
    },
    "hoop": {
     "totaal": 44,
-    "beschikbaar": 42,
-    "nooit": 42
+    "beschikbaar": 41,
+    "nooit": 41
    },
    "vertrouwen": {
     "totaal": 58,
-    "beschikbaar": 56,
-    "nooit": 56
+    "beschikbaar": 55,
+    "nooit": 55
    },
    "wijsheid": {
     "totaal": 92,
@@ -2107,8 +2352,8 @@
    },
    "dankbaarheid": {
     "totaal": 92,
-    "beschikbaar": 91,
-    "nooit": 91
+    "beschikbaar": 90,
+    "nooit": 90
    },
    "identiteit": {
     "totaal": 33,
@@ -2117,8 +2362,8 @@
    },
    "vrede_rust": {
     "totaal": 42,
-    "beschikbaar": 42,
-    "nooit": 42
+    "beschikbaar": 41,
+    "nooit": 41
    }
   },
   "verzen_totaal": 558,
@@ -2337,9 +2582,40 @@
   ],
   "materiaal_bijgewerkt": "2026-11-07"
  },
- "herstel": [],
+ "herstel": [
+  {
+   "t": "2026-11-11T06:00",
+   "probleem": "Geen post klaar voor 2026-11-11 22:00",
+   "actie": "noodpost Romeinen 15:4 ingezet om 22:00",
+   "ok": true
+  },
+  {
+   "t": "2026-11-11T06:00",
+   "probleem": "Geen post klaar voor 2026-11-11 20:30",
+   "actie": "noodpost Kolossenzen 3:17 ingezet om 20:30",
+   "ok": true
+  },
+  {
+   "t": "2026-11-11T06:00",
+   "probleem": "Geen post klaar voor 2026-11-11 17:45",
+   "actie": "noodpost Jesaja 41:10 ingezet om 17:45",
+   "ok": true
+  },
+  {
+   "t": "2026-11-11T06:00",
+   "probleem": "Geen post klaar voor 2026-11-11 12:15",
+   "actie": "noodpost Jeremia 17:7 ingezet om 12:15",
+   "ok": true
+  },
+  {
+   "t": "2026-11-11T06:00",
+   "probleem": "Geen post klaar voor 2026-11-11 07:30",
+   "actie": "noodpost Jesaja 32:17 ingezet om 07:30",
+   "ok": true
+  }
+ ],
  "nood": {
-  "klaar": 6,
+  "klaar": 1,
   "doel": 6
  },
  "verzoeken": [

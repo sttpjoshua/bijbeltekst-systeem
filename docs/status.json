@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T22:03:13",
+ "updated": "2026-11-11T06:00:41",
  "agents": {
   "verskiezer": {
    "t": "2026-11-08T14:33:06",
@@ -22,8 +22,8 @@
    "state": "done"
   },
   "controller": {
-   "t": "2026-11-09T13:02:24",
-   "task": "Controleerde de verbindingen",
+   "t": "2026-11-11T06:00:41",
+   "task": "Zelf opgelost: noodpost Romeinen 15:4 ingezet om 22:00",
    "state": "done"
   },
   "analist": {
@@ -38,11 +38,11 @@
   }
  },
  "stats": {
-  "posts_today": 5,
+  "posts_today": 0,
   "posts_total": 16,
   "reach_7d": 75,
   "best_time": "nog onbekend",
-  "next_post": null
+  "next_post": "2026-11-11T07:30:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
@@ -56,6 +56,26 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "06:00",
+   "msg": "Zelfherstel: Geen post klaar voor 2026-11-11 22:00 → noodpost Romeinen 15:4 ingezet om 22:00"
+  },
+  {
+   "t": "06:00",
+   "msg": "Zelfherstel: Geen post klaar voor 2026-11-11 20:30 → noodpost Kolossenzen 3:17 ingezet om 20:30"
+  },
+  {
+   "t": "06:00",
+   "msg": "Zelfherstel: Geen post klaar voor 2026-11-11 17:45 → noodpost Jesaja 41:10 ingezet om 17:45"
+  },
+  {
+   "t": "06:00",
+   "msg": "Zelfherstel: Geen post klaar voor 2026-11-11 12:15 → noodpost Jeremia 17:7 ingezet om 12:15"
+  },
+  {
+   "t": "06:00",
+   "msg": "Zelfherstel: Geen post klaar voor 2026-11-11 07:30 → noodpost Jesaja 32:17 ingezet om 07:30"
+  },
   {
    "t": "22:03",
    "msg": "2026-11-10-2 online op facebook: Openbaring 21:5"
@@ -83,26 +103,6 @@
   {
    "t": "20:32",
    "msg": "2026-11-10-1 ook als story geplaatst"
-  },
-  {
-   "t": "20:30",
-   "msg": "2026-11-10-5 online op facebook: Jesaja 26:3"
-  },
-  {
-   "t": "20:30",
-   "msg": "2026-11-10-3 online op facebook: Psalm 30:3"
-  },
-  {
-   "t": "17:46",
-   "msg": "2026-11-10-4 online op facebook: Spreuken 26:15"
-  },
-  {
-   "t": "17:46",
-   "msg": "2026-11-10-4 online op instagram: Spreuken 26:15"
-  },
-  {
-   "t": "17:46",
-   "msg": "2026-11-10-4 ook als story geplaatst"
   }
  ],
  "lampen": [
@@ -162,7 +162,7 @@
   "formaat": "video"
  },
  "snel_leren": {
-  "dag": 4,
+  "dag": 5,
   "dagen": 7,
   "tot": "2026-11-14"
  }
