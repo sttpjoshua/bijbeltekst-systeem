@@ -1,0 +1,22 @@
+{
+ "sleutel": false,
+ "test": "mislukt: geen COVERR_KEY",
+ "reels": [
+  {
+   "ref": "Mattheüs 6:34",
+   "fout": "geen clips"
+  },
+  {
+   "ref": "Psalm 56:4",
+   "fout": "geen clips"
+  },
+  {
+   "ref": "Spreuken 20:13",
+   "fout": "geen clips"
+  },
+  {
+   "ref": "Jesaja 41:13",
+   "fout": "geen clips"
+  }
+ ]
+}
