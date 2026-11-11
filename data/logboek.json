@@ -755,5 +755,19 @@
   "t": "2026-11-11T10:51:29",
   "soort": "info",
   "tekst": "Per ongeluk verwijderde beelden (61 bestanden, ook de noodposts van vandaag) teruggezet. Oorzaak: opslaan van media zag ontbrekende lokale bestanden als verwijderd; dat kan nu niet meer."
+ },
+ {
+  "t": "2026-11-11T12:01:02",
+  "soort": "fout",
+  "tekst": "Politiek nieuws (NOS): \"Raad van State: minister van Asiel moet veiligheid Syrië opnieuw beoordelen\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
+  "code": "nieuws_voorstel",
+  "post": "n111112010"
+ },
+ {
+  "t": "2026-11-11T12:01:02",
+  "soort": "fout",
+  "tekst": "Zwaar nieuws (NOS): \"Vijf jaar The Kyiv Independent: hoe bedrijf je journalistiek in een land in oorlog?\". Wil je er een troostende post over? Die gaat dan pas 6 uur na het nieuws online.",
+  "code": "nieuws_voorstel",
+  "post": "n111112011"
  }
 ]
