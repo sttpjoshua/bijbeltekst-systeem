@@ -68,7 +68,9 @@ def tg_chat():
 
 def stuur(tekst):
     if kanaal() == "telegram":
-        _tg("sendMessage", chat_id=tg_chat(), text=tekst[:4000], disable_web_page_preview=True,
+        import html, re
+        opmaak = re.sub(r"\*([^*\n]+)\*", r"<b>\1</b>", html.escape(tekst[:3900], quote=False))  # WhatsApp-*vet* wordt Telegram-vet
+        _tg("sendMessage", chat_id=tg_chat(), text=opmaak, parse_mode="HTML", disable_web_page_preview=True,
             reply_markup={"inline_keyboard": [[{"text": "Dashboard openen", "url": DASH}]]})
         return
     tel, key = os.environ.get("WA_PHONE", "").strip().lstrip("+"), os.environ.get("WA_KEY", "").strip()
