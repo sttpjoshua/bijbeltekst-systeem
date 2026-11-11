@@ -777,7 +777,8 @@
   "soort": "fout",
   "tekst": "Politiek nieuws (NOS): \"Raad van State: minister van Asiel moet veiligheid Syrië opnieuw beoordelen\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
   "code": "nieuws_voorstel",
-  "post": "n111112010"
+  "post": "n111112010",
+  "opgelost": true
  },
  {
   "t": "2026-11-11T12:16:10",
@@ -853,5 +854,25 @@
   "t": "2026-11-11T13:52:50",
   "soort": "info",
   "tekst": "Bediening: WhatsApp-testbericht klaargezet"
+ },
+ {
+  "t": "2026-11-11T14:35:31",
+  "soort": "info",
+  "tekst": "Zelf opgelost: open melding over politiek nieuws (Raad van State) was al afgehandeld; Joshua koos de post, die staat als Prediker 3:1 vandaag om 17:45 klaar. Melding gesloten."
+ },
+ {
+  "t": "2026-11-11T14:35:31",
+  "soort": "info",
+  "tekst": "Materiaalrepo niet gekloond in deze run (add_repo ontbreekt); geen gevolgen, posts waren al gemaakt"
+ },
+ {
+  "t": "2026-11-11T14:35:31",
+  "soort": "info",
+  "tekst": "Reserveverzen gekozen en geschreven voor 12 en 13 november; hook van 13-11 12:15 aangepast aan het tijdstip"
+ },
+ {
+  "t": "2026-11-11T14:35:32",
+  "soort": "info",
+  "tekst": "10 posts klaar voor MORGEN (12-11) en OVERMORGEN (13-11), door het systeem zelf gemaakt en gecontroleerd"
  }
 ]
