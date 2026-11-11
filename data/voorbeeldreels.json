@@ -3,20 +3,96 @@
  "test": "ok: 12 clips gevonden voor 'sunrise'",
  "reels": [
   {
+   "bestand": "docs/media/voorbeelden/situatie-1-natuur-onder.mp4",
    "ref": "Mattheüs 6:34",
-   "fout": "HTTP Error 403: Forbidden"
+   "scene": "natuur",
+   "plaatsing": "onder",
+   "clips": [
+    {
+     "id": "8YOn9Ojq2k",
+     "term": "man sitting on bench",
+     "titel": "Reading a book in the park ",
+     "staand": false,
+     "post": "voorbeeld-1"
+    },
+    {
+     "id": "PpWluZqMGi",
+     "term": "sunrise clouds",
+     "titel": "A beautiful sunrise in Lisbon",
+     "staand": false,
+     "post": "voorbeeld-1"
+    }
+   ],
+   "duur": 22.0
   },
   {
+   "bestand": "docs/media/voorbeelden/situatie-2-dichtbij-midden.mp4",
    "ref": "Psalm 56:4",
-   "fout": "HTTP Error 403: Forbidden"
+   "scene": "dichtbij",
+   "plaatsing": "midden",
+   "clips": [
+    {
+     "id": "pwXr8zT1Rb",
+     "term": "student studying night",
+     "titel": "Teenage Boy Sitting at the Desk, Browsing on his Laptop at Night",
+     "staand": false,
+     "post": "voorbeeld-2"
+    },
+    {
+     "id": "QVZd7hJfOj",
+     "term": "hands open light",
+     "titel": "Woman opens laptop at airport",
+     "staand": false,
+     "post": "voorbeeld-2"
+    }
+   ],
+   "duur": 17.0
   },
   {
+   "bestand": "docs/media/voorbeelden/situatie-3-onderweg-boven.mp4",
    "ref": "Spreuken 20:13",
-   "fout": "HTTP Error 403: Forbidden"
+   "scene": "onderweg",
+   "plaatsing": "boven",
+   "clips": [
+    {
+     "id": "IgpOMzThv2",
+     "term": "man sitting on bench",
+     "titel": "Man sitting on a bench",
+     "staand": false,
+     "post": "voorbeeld-3"
+    },
+    {
+     "id": "ZC95qCKSgr",
+     "term": "city lights night",
+     "titel": "Timelapse of Modern Cityscape from Sunset to Night",
+     "staand": false,
+     "post": "voorbeeld-3"
+    }
+   ],
+   "duur": 19.62
   },
   {
+   "bestand": "docs/media/voorbeelden/situatie-4-natuur-onder.mp4",
    "ref": "Jesaja 41:13",
-   "fout": "HTTP Error 403: Forbidden"
+   "scene": "natuur",
+   "plaatsing": "onder",
+   "clips": [
+    {
+     "id": "qJ735fIgn9",
+     "term": "man sitting on bench",
+     "titel": "Doing yoga in the park",
+     "staand": false,
+     "post": "voorbeeld-4"
+    },
+    {
+     "id": "YCTycIAOKM",
+     "term": "ocean waves slow",
+     "titel": "Slow waves",
+     "staand": false,
+     "post": "voorbeeld-4"
+    }
+   ],
+   "duur": 19.92
   }
  ]
 }
