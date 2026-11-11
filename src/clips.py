@@ -36,26 +36,33 @@ SCENES = {
 
 
 # Herkenningszin -> zoektermen. De eerste regel die past, wint; anders de lijst van het thema.
+# patroon in de herkenningszin -> (zoektermen, woorden die in titel/tags moeten staan, sfeerbeelden als niets past)
 KOPPEL = [
-    (r"snooze|wekker|opstaan|ochtendmens|vroeg op|uit bed", ["alarm clock", "waking up", "morning bed"]),
-    (r"piekeren|wakker lag|slapen|nacht|23:00|malen", ["insomnia", "night bed", "awake night"]),
-    (r"moe|uitgeput|op is|op bent|geen kracht|te veel|teveel", ["tired", "exhausted", "stress"]),
-    (r"file|druk|haast|stress|agenda|to-do", ["traffic", "stress", "busy street"]),
-    (r"trein|perron|onderweg|reis", ["train", "commute", "bus stop"]),
-    (r"bang|angst|spannend|eng", ["anxious", "worried", "nervous"]),
-    (r"verdriet|huil|rouw|mist|gebroken|pijn", ["sad", "crying", "grief"]),
-    (r"alleen|eenzaam|onzichtbaar|vergeten", ["alone", "lonely", "solitude"]),
-    (r"studeer|studie|examen|tentamen|leren", ["studying", "student", "homework"]),
-    (r"werk|collega|baas|kantoor|maandag", ["office", "working laptop", "meeting"]),
-    (r"koffie", ["coffee"]),
-    (r"buurman|visite|vriend|samen|groepsapp", ["friends", "neighbors", "talking"]),
-    (r"ruzie|boos|discussie|reageren|mail", ["argument", "angry", "frustrated"]),
-    (r"lachen|grappig|blij", ["laughing", "smiling"]),
-    (r"smoes|uitstellen|klusje|later", ["procrastination", "couch", "lazy"]),
-    (r"dankbaar|cadeau|goed ging", ["family dinner", "smiling", "gratitude"]),
-    (r"nieuw|begin|eerste dag", ["door", "new job", "road"]),
-    (r"keuze|kiezen|beslissing|weet niet", ["crossroads", "thinking", "decision"]),
+    (r"snooze|wekker|opstaan|ochtendmens|vroeg op|uit bed", ["alarm clock", "waking up", "morning bed", "bedroom morning", "stretching bed"],
+     r"alarm|wak|bed|morning|sleep|yawn|stretch", ["sunrise window", "morning coffee", "curtains morning"]),
+    (r"piekeren|wakker lag|slapen|nacht|23:00|malen", ["insomnia", "night bed", "awake night", "phone bed", "bed dark"],
+     r"bed|night|awake|insomnia|sleep|dark|phone", ["night window", "moon", "city night", "rain window"]),
+    (r"moe|uitgeput|op is|op bent|geen kracht|te veel|teveel", ["tired", "exhausted", "stress", "overwhelmed", "tired office"],
+     r"tired|exhaust|stress|overwhelm|work|desk|laptop|head|sigh|rest", ["rain window", "train window", "empty road"]),
+    (r"file|druk|haast|stress|agenda|to-do", ["traffic", "stress", "busy street", "rush hour"],
+     r"traffic|stress|busy|rush|crowd|street|car", ["busy street", "city timelapse"]),
+    (r"trein|perron|onderweg|reis", ["train", "commute", "bus stop", "train window"],
+     r"train|commut|bus|station|platform|travel", ["train window", "road trip"]),
+    (r"bang|angst|spannend|eng", ["anxious", "worried", "nervous"], r"anx|worr|nervous|alone|dark|think", ["storm clouds", "rain window"]),
+    (r"verdriet|huil|rouw|mist|gebroken|pijn", ["sad", "crying", "grief"], r"sad|cry|grief|tear|alone|window", ["rain window", "candle"]),
+    (r"alleen|eenzaam|onzichtbaar|vergeten", ["alone", "lonely", "solitude"], r"alone|lonely|solitude|empty|bench|window", ["empty street", "bench"]),
+    (r"studeer|studie|examen|tentamen|leren", ["studying", "student", "homework"], r"stud|book|homework|desk|notes|laptop", ["desk lamp", "book"]),
+    (r"werk|collega|baas|kantoor|maandag", ["office", "working laptop", "meeting"], r"office|work|laptop|desk|meeting|typing", ["coffee", "desk"]),
+    (r"koffie", ["coffee"], r"coffee|cup|mug", ["coffee"]),
+    (r"buurman|visite|vriend|samen|groepsapp", ["friends", "neighbors", "talking"], r"friend|talk|people|together|laugh|chat|phone", ["coffee", "table"]),
+    (r"ruzie|boos|discussie|reageren|mail", ["argument", "angry", "frustrated"], r"argu|angry|frustrat|phone|laptop|typing", ["storm clouds", "rain window"]),
+    (r"lachen|grappig|blij", ["laughing", "smiling"], r"laugh|smil|happy|fun", ["sunshine", "flowers"]),
+    (r"smoes|uitstellen|klusje|later", ["procrastination", "couch", "lazy"], r"couch|sofa|lazy|procrast|phone|tv", ["clock", "coffee"]),
+    (r"dankbaar|cadeau|goed ging", ["family dinner", "smiling", "gratitude"], r"family|dinner|smil|together|gift|happy", ["sunset", "flowers"]),
+    (r"nieuw|begin|eerste dag", ["door", "new job", "road"], r"door|new|road|start|walk", ["sunrise", "road"]),
+    (r"keuze|kiezen|beslissing|weet niet", ["crossroads", "thinking", "decision"], r"cross|think|decision|road|path", ["crossroads", "forest path"]),
 ]
+NIET_SITUATIE = ("dog", "cat ", "puppy", "pet ", "hotel", "unbox", "tour", "product", "hourglass", "baby")
 NIET = ("animat", "cartoon", " 3d", "3d ", "cgi", "render", "illustrat", "ai generated", "ai-generated", "generative", "motion graphic")
 
 
@@ -150,19 +157,61 @@ def zoek(term, n=12):
     return hits
 
 
+def _tekst(h):
+    return " ".join([str(h.get("title") or ""), str(h.get("description") or ""), " ".join(map(str, h.get("tags") or []))]).lower()
+
+
+def _haal(h, term):
+    os.makedirs(MAP, exist_ok=True)
+    pad = os.path.join(MAP, f"{h['id']}.mp4")
+    if not os.path.exists(pad):
+        _download(h, pad)
+    return pad, {"id": h["id"], "term": term, "titel": h.get("title"), "staand": h.get("is_vertical")}
+
+
 def kies(soort, thema, rnd, gebruikt, zin=""):
     """Eén clip van een scènesoort; vermijdt recent gebruikte clips. Geeft (pad, info) of (None, None).
-    Bij 'situatie' bepaalt de herkenningszin de zoektermen (KOPPEL); anders het thema."""
+    Bij 'situatie' bepaalt de herkenningszin de zoektermen (KOPPEL) en moet de clip echt bij de zin passen
+    (woorden in titel of tags); past niets, dan een sfeerbeeld dat bij het moment past."""
     import re
-    eerst = []
     if soort == "situatie" and zin:
-        for patroon, termen in KOPPEL:
-            if re.search(patroon, zin.lower()):
-                eerst = list(termen); rnd.shuffle(eerst); break
+        for patroon, termen, woorden, sfeer in KOPPEL:
+            if not re.search(patroon, zin.lower()):
+                continue
+            kandidaten = []
+            for term in termen[:4]:
+                try:
+                    hits = zoek(term)
+                except Exception as e:
+                    print("Zoeken mislukt:", e); continue
+                for h in hits:
+                    t = _tekst(h)
+                    if h["id"] in gebruikt or any(w in t for w in NIET_SITUATIE):
+                        continue
+                    score = len(re.findall(woorden, t))
+                    if score:
+                        kandidaten.append((score + (0.5 if h.get("is_vertical") else 0) + rnd.random() * 0.3, term, h))
+            kandidaten.sort(key=lambda x: -x[0])
+            for _, term, h in kandidaten[:3]:
+                try:
+                    return _haal(h, term)
+                except Exception as e:
+                    print("Download mislukt:", h["id"], e)
+            sfeer = list(sfeer); rnd.shuffle(sfeer)
+            for term in sfeer[:3]:
+                try:
+                    hits = [h for h in zoek(term) if h["id"] not in gebruikt]
+                except Exception as e:
+                    print("Zoeken mislukt:", e); continue
+                for h in hits[:3]:
+                    try:
+                        return _haal(h, term + " (sfeer)")
+                    except Exception as e:
+                        print("Download mislukt:", h["id"], e)
+            break
     rest = SCENES[soort].get(thema, []) + SCENES[soort].get("algemeen", []) if soort == "situatie" else list(SCENES[soort])
     rnd.shuffle(rest)
-    opties = eerst + [t for t in rest if t not in eerst]
-    for term in opties[:5]:
+    for term in rest[:4]:
         try:
             hits = [h for h in zoek(term) if h["id"] not in gebruikt]
         except Exception as e:
@@ -170,14 +219,10 @@ def kies(soort, thema, rnd, gebruikt, zin=""):
         if not hits:
             continue
         h = hits[min(len(hits) - 1, rnd.randrange(3))]
-        os.makedirs(MAP, exist_ok=True)
-        pad = os.path.join(MAP, f"{h['id']}.mp4")
-        if not os.path.exists(pad):
-            try:
-                _download(h, pad)
-            except Exception as e:
-                print("Download mislukt:", h["id"], e); continue
-        return pad, {"id": h["id"], "term": term, "titel": h.get("title"), "staand": h.get("is_vertical")}
+        try:
+            return _haal(h, term)
+        except Exception as e:
+            print("Download mislukt:", h["id"], e); continue
     return None, None
 
 
