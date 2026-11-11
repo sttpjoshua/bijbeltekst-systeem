@@ -57,7 +57,7 @@ jobs:
         run: |
           if [ -n "$MATERIAAL_PAT" ]; then
             git clone --depth 1 -q "https://x-access-token:${MATERIAAL_PAT}@github.com/sttpjoshua/bibleverse-materiaal.git" ../bibleverse-materiaal || echo "Materiaal ophalen mislukt"
-            sudo apt-get install -y -qq ffmpeg >/dev/null || true
+            sh tools/ffmpeg.sh || true
           fi
       - name: Video's zonder muziek aanvullen (als een run zonder materiaal ze maakte)
         if: steps.t.outputs.taak == 'posten'
@@ -66,7 +66,7 @@ jobs:
         run: |
           if [ -n "$MATERIAAL_PAT" ] && python3 src/systeem.py aanvullen check; then
             pip install -q pillow numpy
-            sudo apt-get install -y -qq ffmpeg >/dev/null || true
+            sh tools/ffmpeg.sh || true
             git clone --depth 1 -q "https://x-access-token:${MATERIAAL_PAT}@github.com/sttpjoshua/bibleverse-materiaal.git" ../bibleverse-materiaal || { echo "Materiaal ophalen mislukt"; exit 0; }
             python3 src/systeem.py aanvullen || echo "Aanvullen mislukt"
           fi
@@ -104,7 +104,7 @@ jobs:
           # elke maandag bij de tokencontrole: zelftest van beelden en video's
           if [ "${{ steps.t.outputs.taak }}" = "token" ]; then
             python3 tools/media.py samenpersen || true   # oude versies van beelden uit de geschiedenis
-            sudo apt-get install -y -qq ffmpeg >/dev/null 2>&1 || true
+            sh tools/ffmpeg.sh || true
             python3 tools/zelftest.py || true
             python3 src/systeem.py dashboard
           fi

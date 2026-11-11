@@ -41,7 +41,7 @@ jobs:
           MATERIAAL_PAT: ${{ secrets.MATERIAAL_PAT }}
         run: |
           pip install -q pillow numpy
-          sudo apt-get install -y -qq ffmpeg >/dev/null
+          sh tools/ffmpeg.sh
           python3 tools/media.py koppel
           git clone --depth 1 -q "https://x-access-token:${MATERIAAL_PAT}@github.com/sttpjoshua/bibleverse-materiaal.git" ../bibleverse-materiaal
       - name: Posts maken
