@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T20:32:57",
+ "updated": "2026-11-12T20:35:56",
  "agents": {
   "verskiezer": {
    "t": "2026-11-12T13:05:11",
@@ -17,7 +17,7 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-12T20:32:57",
+   "t": "2026-11-12T20:35:55",
    "task": "Postte Spreuken 15:14 op facebook",
    "state": "done"
   },
@@ -57,32 +57,12 @@
  ],
  "log": [
   {
-   "t": "20:32",
-   "msg": "2026-11-12-4 online op facebook: Spreuken 15:14"
+   "t": "14:37",
+   "msg": "Dagelijkse run (zelfstandig): 10 posts voor 13 en 14 november gecontroleerd, reserveverzen voor 14 november in"
   },
   {
-   "t": "20:32",
-   "msg": "2026-11-12-4 online op instagram: Spreuken 15:14"
-  },
-  {
-   "t": "20:32",
-   "msg": "2026-11-12-4 ook als story geplaatst"
-  },
-  {
-   "t": "20:31",
-   "msg": "2026-11-12-3 online op facebook: Psalm 20:8"
-  },
-  {
-   "t": "19:02",
+   "t": "14:45",
    "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
-   "t": "18:06",
-   "msg": "Bediening: 1 Johannes 4:7 opnieuw gemaakt (stijl papier_blauw, achtergrond kleurverloop, eerste slide verhaal)"
-  },
-  {
-   "t": "18:03",
-   "msg": "Bediening: 1 Johannes 4:7 opnieuw gemaakt (stijl papier_blauw, achtergrond kleurverloop, eerste slide verhaal)"
   },
   {
    "t": "17:46",
@@ -97,12 +77,48 @@
    "msg": "2026-11-12-3 ook als story geplaatst"
   },
   {
-   "t": "14:45",
+   "t": "18:03",
+   "msg": "Bediening: 1 Johannes 4:7 opnieuw gemaakt (stijl papier_blauw, achtergrond kleurverloop, eerste slide verhaal)"
+  },
+  {
+   "t": "18:06",
+   "msg": "Bediening: 1 Johannes 4:7 opnieuw gemaakt (stijl papier_blauw, achtergrond kleurverloop, eerste slide verhaal)"
+  },
+  {
+   "t": "19:02",
    "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
   },
   {
-   "t": "14:37",
-   "msg": "Dagelijkse run (zelfstandig): 10 posts voor 13 en 14 november gecontroleerd, reserveverzen voor 14 november in"
+   "t": "20:31",
+   "msg": "2026-11-12-3 online op facebook: Psalm 20:8"
+  },
+  {
+   "t": "20:32",
+   "msg": "2026-11-12-4 online op facebook: Spreuken 15:14"
+  },
+  {
+   "t": "20:32",
+   "msg": "2026-11-12-4 online op instagram: Spreuken 15:14"
+  },
+  {
+   "t": "20:32",
+   "msg": "2026-11-12-4 ook als story geplaatst"
+  },
+  {
+   "t": "20:34",
+   "msg": "2026-11-12-3 online op facebook: Psalm 20:8"
+  },
+  {
+   "t": "20:35",
+   "msg": "2026-11-12-4 online op facebook: Spreuken 15:14"
+  },
+  {
+   "t": "20:35",
+   "msg": "2026-11-12-4 online op instagram: Spreuken 15:14"
+  },
+  {
+   "t": "20:35",
+   "msg": "2026-11-12-4 ook als story geplaatst"
   }
  ],
  "lampen": [

@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-12T20:32",
+ "gegenereerd": "2026-11-12T20:35",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1598,8 +1598,8 @@
     "facebook"
    ],
    "links": {
-    "instagram": "https://www.instagram.com/reel/Dfp0DcShY6i/",
-    "facebook": "https://www.facebook.com/1533085548880750"
+    "instagram": "https://www.instagram.com/reel/Dfp0Z3RJE9b/",
+    "facebook": "https://www.facebook.com/29654055367511139"
    },
    "totaal": {},
    "per_platform": {},
@@ -1625,13 +1625,13 @@
    },
    "momenten": {},
    "pub": {
-    "instagram": "2026-11-12T20:32+01:00",
-    "facebook": "2026-11-12T20:32+01:00"
+    "instagram": "2026-11-12T20:35+01:00",
+    "facebook": "2026-11-12T20:35+01:00"
    },
    "gemist": [],
    "nood": false,
    "nieuws": null,
-   "online": "2026-11-12T20:32+01:00"
+   "online": "2026-11-12T20:35+01:00"
   },
   {
    "id": "2026-11-12-3",
@@ -1685,7 +1685,7 @@
    ],
    "links": {
     "instagram": "https://www.instagram.com/p/DfphIwVjQBO/",
-    "facebook": "https://www.facebook.com/1015160368352770_122134423388879910"
+    "facebook": "https://www.facebook.com/1015160368352770_122134423898879910"
    },
    "totaal": {
     "views": 0,
@@ -1741,7 +1741,7 @@
    },
    "pub": {
     "instagram": "2026-11-12T17:46+01:00",
-    "facebook": "2026-11-12T20:31+01:00"
+    "facebook": "2026-11-12T20:34+01:00"
    },
    "gemist": [],
    "nood": false,
@@ -4855,6 +4855,26 @@
    "t": "2026-11-12T20:32:57",
    "soort": "info",
    "tekst": "2026-11-12-4 online op facebook: Spreuken 15:14"
+  },
+  {
+   "t": "2026-11-12T20:34:12",
+   "soort": "info",
+   "tekst": "2026-11-12-3 online op facebook: Psalm 20:8"
+  },
+  {
+   "t": "2026-11-12T20:35:47",
+   "soort": "info",
+   "tekst": "2026-11-12-4 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-12T20:35:47",
+   "soort": "info",
+   "tekst": "2026-11-12-4 online op instagram: Spreuken 15:14"
+  },
+  {
+   "t": "2026-11-12T20:35:55",
+   "soort": "info",
+   "tekst": "2026-11-12-4 online op facebook: Spreuken 15:14"
   }
  ],
  "recente_fouten": [],
@@ -4939,7 +4959,7 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-12T20:32",
+   "ok": "2026-11-12T20:35",
    "laatst_ok": true,
    "detail": "Spreuken 15:14 geplaatst"
   },
@@ -4973,7 +4993,7 @@
    "fout": "2026-11-08T18:00"
   },
   "facebook": {
-   "ok": "2026-11-12T20:32",
+   "ok": "2026-11-12T20:35",
    "laatst_ok": true,
    "detail": "Spreuken 15:14 geplaatst"
   },
