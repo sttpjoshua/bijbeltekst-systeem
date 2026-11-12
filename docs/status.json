@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T13:31:07",
+ "updated": "2026-11-12T13:41:41",
  "agents": {
   "verskiezer": {
    "t": "2026-11-12T13:05:11",
@@ -27,12 +27,12 @@
    "state": "done"
   },
   "analist": {
-   "t": "2026-11-11T14:35:23",
-   "task": "Tussentijds overleg gehouden",
+   "t": "2026-11-12T13:40:09",
+   "task": "Las cijfers van 12 posts",
    "state": "done"
   },
   "community": {
-   "t": "2026-11-12T13:05:20",
+   "t": "2026-11-12T13:41:41",
    "task": "1 nieuwe reactie gevonden",
    "state": "done"
   }
@@ -40,14 +40,14 @@
  "stats": {
   "posts_today": 1,
   "posts_total": 22,
-  "reach_7d": 85,
+  "reach_7d": 137,
   "best_time": "nog onbekend",
   "next_post": "2026-11-12T12:15:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
-  "instagram": 83,
-  "facebook": 2,
+  "instagram": 133,
+  "facebook": 4,
   "youtube": 0,
   "tiktok": 0
  },
@@ -56,6 +56,14 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "13:41",
+   "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
+  },
+  {
+   "t": "13:40",
+   "msg": "Statistieken opgehaald voor 12 posts"
+  },
   {
    "t": "13:31",
    "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
@@ -95,14 +103,6 @@
   {
    "t": "09:45",
    "msg": "Bediening: Psalm 46:2 opnieuw gemaakt (stijl meelees-abrikoos, achtergrond kleurverloop)"
-  },
-  {
-   "t": "09:19",
-   "msg": "Zelfstandig 5 posts klaargezet voor 2026-11-13 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "09:14",
-   "msg": "Zelfstandig 5 posts klaargezet voor 2026-11-14 (teksten uit de tekstbank)."
   }
  ],
  "lampen": [
@@ -152,14 +152,15 @@
    1,
    1,
    3,
+   3,
    3
   ]
  },
  "top_post": {
-  "ref": "Johannes 14:27",
-  "thumb": "thumbs/2026-11-08-3.jpg",
-  "bereik": 55,
-  "score": 1.0,
+  "ref": "Openbaring 21:5",
+  "thumb": "thumbs/2026-11-10-2.jpg",
+  "bereik": 45,
+  "score": 1.03,
   "formaat": "video"
  },
  "snel_leren": {

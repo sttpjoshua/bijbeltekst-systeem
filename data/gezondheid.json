@@ -5,20 +5,20 @@
   "detail": "Psalm 9:2 geplaatst"
  },
  "instagram_lezen": {
-  "ok": "2026-11-11T12:51",
+  "ok": "2026-11-12T13:41",
   "laatst_ok": true,
   "detail": "3 volgers"
  },
  "sleutel_instagram": {
   "verloopt": "nooit",
   "geldig": true,
-  "ok": "2026-11-11T12:51",
+  "ok": "2026-11-12T13:41",
   "laatst_ok": true
  },
  "sleutel_facebook": {
   "verloopt": "nooit",
   "geldig": true,
-  "ok": "2026-11-11T12:51",
+  "ok": "2026-11-12T13:41",
   "laatst_ok": true
  },
  "materiaal_actions": {
@@ -28,7 +28,7 @@
   "ok": "2026-11-12T09:45"
  },
  "reacties": {
-  "ok": "2026-11-12T13:05",
+  "ok": "2026-11-12T13:41",
   "laatst_ok": true,
   "detail": "1 nieuwe reacties",
   "fout": "2026-11-08T18:00"
@@ -39,9 +39,9 @@
   "detail": "Kolossenzen 1:12 geplaatst"
  },
  "statistieken": {
-  "ok": "2026-11-11T12:51",
+  "ok": "2026-11-12T13:41",
   "laatst_ok": true,
-  "detail": "7 nieuwe metingen"
+  "detail": "12 nieuwe metingen"
  },
  "zelftest": {
   "ok": "2026-11-09T13:03",
@@ -73,5 +73,10 @@
   "ok": "2026-11-11T20:49",
   "laatst_ok": true,
   "detail": "alles klopte"
+ },
+ "leren": {
+  "ok": "2026-11-12T13:41",
+  "laatst_ok": true,
+  "detail": "dagelijks (snel leren)"
  }
 }
