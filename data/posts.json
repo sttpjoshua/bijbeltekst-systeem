@@ -3204,7 +3204,7 @@
    "lengte": "middel",
    "bron": "bekend",
    "vraag_onderaan": false,
-   "opening": "verhaal",
+   "opening": "vers",
    "tijdslot": "17:45",
    "tijdslot_fb": "20:30",
    "palet": "perzik",
@@ -3213,23 +3213,27 @@
    "achtergrond": "diagonaal",
    "hook_op_beeld": false,
    "video_uitleg": null,
-   "aanleiding": "nieuws"
+   "aanleiding": "nieuws",
+   "carrousel_stijl": "markeren",
+   "reel_kleur": "abrikoos"
   },
   "keuzebron": {
-   "huisstijl": "experiment",
+   "huisstijl": "joshua",
    "thema": "experiment",
    "hook_stijl": "experiment",
    "formaat": "experiment",
    "uitleg_op_beeld": "experiment",
-   "achtergrondbron": "experiment",
+   "achtergrondbron": "joshua",
    "boekgroep": "experiment",
    "lengte": "experiment",
    "bron": "experiment",
    "vraag_onderaan": "experiment",
-   "opening": "nieuws",
+   "opening": "joshua",
    "tijdslot": "experiment",
    "video_uitleg": "n.v.t.",
-   "aanleiding": "nieuws"
+   "aanleiding": "nieuws",
+   "carrousel_stijl": "joshua",
+   "reel_kleur": "joshua"
   },
   "hook": "Veel meningen, veel onrust. Even terug naar wat vaststaat.",
   "beeld_hook": "",
@@ -3254,16 +3258,14 @@
   "handle": "@bibleverse_nl",
   "media_extra": [
    "docs/media/2026-11/2026-11-12-3-2.jpg",
-   "docs/media/2026-11/2026-11-12-3-3.jpg",
-   "docs/media/2026-11/2026-11-12-3-4.jpg"
+   "docs/media/2026-11/2026-11-12-3-3.jpg"
   ],
   "thumb": "thumbs/2026-11-12-3.jpg",
   "story": "docs/media/2026-11/2026-11-12-3-story.jpg",
   "media_urls": [
    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-3-1.jpg",
    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-3-2.jpg",
-   "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-3-3.jpg",
-   "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-3-4.jpg"
+   "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-3-3.jpg"
   ],
   "story_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-3-story.jpg",
   "goedgekeurd": null,

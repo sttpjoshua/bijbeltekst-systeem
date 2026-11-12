@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-12T12:31",
+ "gegenereerd": "2026-11-12T12:43",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1281,7 +1281,7 @@
     "lengte": "middel",
     "bron": "bekend",
     "vraag_onderaan": false,
-    "opening": "verhaal",
+    "opening": "vers",
     "tijdslot": "17:45",
     "tijdslot_fb": "20:30",
     "palet": "perzik",
@@ -1290,7 +1290,9 @@
     "achtergrond": "diagonaal",
     "hook_op_beeld": false,
     "video_uitleg": null,
-    "aanleiding": "nieuws"
+    "aanleiding": "nieuws",
+    "carrousel_stijl": "markeren",
+    "reel_kleur": "abrikoos"
    },
    "vers_id": "Psalms-20-8-8",
    "goedgekeurd": null,
@@ -1304,8 +1306,7 @@
    "media_urls": [
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-3-1.jpg",
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-3-2.jpg",
-    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-3-3.jpg",
-    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-3-4.jpg"
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-3-3.jpg"
    ],
    "thumb": "thumbs/2026-11-12-3.jpg",
    "platformen": [],
@@ -3649,11 +3650,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-11T07:31:31",
-   "soort": "info",
-   "tekst": "2026-11-11-n0730 online op instagram: Jesaja 32:17"
-  },
-  {
    "t": "2026-11-11T07:31:40",
    "soort": "info",
    "tekst": "2026-11-11-n0730 online op facebook: Jesaja 32:17"
@@ -3963,6 +3959,11 @@
    "t": "2026-11-12T12:17:12",
    "soort": "info",
    "tekst": "2026-11-12-2 online op instagram: Psalm 9:2"
+  },
+  {
+   "t": "2026-11-12T12:43:45",
+   "soort": "info",
+   "tekst": "Bediening: Psalm 20:8 opnieuw gemaakt (stijl meelees-abrikoos, achtergrond kleurverloop, eerste slide vers)"
   }
  ],
  "recente_fouten": [],
@@ -6990,7 +6991,7 @@
     "hook_stijl": "uitdaging",
     "formaat": "video",
     "uitleg_op_beeld": true,
-    "achtergrondbron": "verloop",
+    "achtergrondbron": "beeld",
     "boekgroep": "wijsheid",
     "lengte": "middel",
     "bron": "bekend",
@@ -7019,7 +7020,7 @@
     "hook_stijl": "experiment",
     "formaat": "aandeel reels",
     "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "limiet",
+    "achtergrondbron": "experiment",
     "boekgroep": "experiment",
     "lengte": "experiment",
     "bron": "experiment",

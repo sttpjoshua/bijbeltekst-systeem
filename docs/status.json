@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T12:31:14",
+ "updated": "2026-11-12T12:43:47",
  "agents": {
   "verskiezer": {
    "t": "2026-11-12T12:01:31",
@@ -7,8 +7,8 @@
    "state": "done"
   },
   "designer": {
-   "t": "2026-11-12T12:01:31",
-   "task": "Ontwierp Psalm 92:2 in stijl zonsopgang",
+   "t": "2026-11-12T12:43:45",
+   "task": "Psalm 20:8 opnieuw gemaakt (stijl meelees-abrikoos, achtergrond kleurv",
    "state": "done"
   },
   "video": {
@@ -57,6 +57,10 @@
  ],
  "log": [
   {
+   "t": "12:43",
+   "msg": "Bediening: Psalm 20:8 opnieuw gemaakt (stijl meelees-abrikoos, achtergrond kleurverloop, eerste slide vers)"
+  },
+  {
    "t": "12:17",
    "msg": "2026-11-12-2 online op instagram: Psalm 9:2"
   },
@@ -98,10 +102,6 @@
   },
   {
    "t": "09:02",
-   "msg": "Zelfstandig 10 posts klaargezet voor 2026-11-13, 2026-11-14 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "08:18",
    "msg": "Zelfstandig 10 posts klaargezet voor 2026-11-13, 2026-11-14 (teksten uit de tekstbank)."
   }
  ],
