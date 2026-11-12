@@ -19,6 +19,45 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PAD = os.path.join(ROOT, "data", "tekstbank.json")
 HOOKSTIJLEN = ("vraag", "herkenning", "uitdaging", "rustig")
 
+# Ochtendposts (Joshua, 12 nov): het 07:30-slot krijgt altijd een vers voor een goede start van de dag
+OCHTEND_VERZEN = frozenset("""
+Lamentations-3-22-23 Psalms-118-24-24 Psalms-143-8-8 Psalms-30-6-6
+Psalms-27-1-1 Psalms-92-2-2 Psalms-100-4-4 Psalms-103-1-1
+Psalms-103-2-2 Psalms-107-1-1 Psalms-136-1-1 Psalms-95-2-2
+Psalms-9-2-2 Psalms-118-14-14 Psalms-28-7-7 Psalms-16-11-11
+Psalms-34-2-2 Psalms-150-6-6 Psalms-46-2-2 Psalms-37-5-5
+Psalms-25-9-9 Isaiah-40-31-31 Isaiah-40-29-29 Isaiah-41-13-13
+Isaiah-43-1-1 Isaiah-12-2-2 Isaiah-26-3-3 Isaiah-55-12-12
+Isaiah-43-4-4 Joshua-1-9-9 Joshua-1-6-6 Deuteronomy-31-6-6
+Deuteronomy-31-8-8 Jeremiah-29-11-11 Zephaniah-3-17-17 Nahum-1-7-7
+Philippians-4-13-13 Philippians-4-6-7 Romans-8-31-31 Romans-8-37-37
+Romans-12-12-12 Romans-5-5-5 Ephesians-6-10-10 Ephesians-2-10-10
+Ephesians-5-20-20 I_Corinthians-16-13-13 I_Thessalonians-5-16-18 Colossians-2-7-7
+Matthew-5-14-14 Matthew-6-34-34 Matthew-11-28-28 John-14-1-1
+John-16-33-33 Hebrews-10-23-23 James-1-17-17 James-1-5-5
+II_Corinthians-5-17-17 Revelation_of_John-21-5-5 Proverbs-16-3-3 Habakkuk-3-18-18
+Psalms-121-1-2 Psalms-56-4-4 Psalms-118-6-6 Psalms-62-2-2
+""".split())
+OCHTEND_OPENERS = (
+    "Goedemorgen. Een vers voor het begin van je dag.",
+    "Goedemorgen. Begin je dag hiermee.",
+    "Een nieuwe dag. Neem dit vers mee.",
+    "Goedemorgen. Dit is voor jou, vandaag.",
+    "Een goede start begint hier.",
+    "Goedemorgen. Mag deze dag goed beginnen.",
+    "Vandaag is een nieuwe kans. Lees dit eerst.",
+)
+
+
+def ochtend_opener(p):
+    """Wisselende ochtendopening, vast per post (zelfde datum geeft dezelfde regel)."""
+    return OCHTEND_OPENERS[sum(map(ord, p["datum"])) % len(OCHTEND_OPENERS)]
+
+
+def is_ochtend(p):
+    return (p.get("variabelen") or {}).get("tijdslot", "99") < "10:00"
+
+
 
 def laad():
     try:
@@ -97,6 +136,10 @@ def vul_post(p, e, cfg, vermijd=()):
         label = p["reeks_label"].split("·")[0].strip().capitalize()
         dag = p["reeks_label"].split("·")[1].strip().lower() if "·" in p["reeks_label"] else ""
         hook = f"{label}{', ' + dag if dag else ''}: {hook}" if hook else f"{label}{', ' + dag if dag else ''}."
+    if is_ochtend(p):
+        hook = ochtend_opener(p)
+        if p.get("reeks_label"):
+            hook = f"{label}{', ' + dag if dag else ''}. {hook}"
     vers = f"\"{p['tekst']}\"\n{p['ref']}"
     if p.get("vertaling") == "NBV21":
         vers += "\nNBV21 © Nederlands-Vlaams Bijbelgenootschap"
@@ -117,7 +160,7 @@ def vul_post(p, e, cfg, vermijd=()):
         "kernwoord": e["kw"], "verhaal_hook": e.get("verhaal", ""),
         "tekstbron": "tekstbank",
         "reel_uitleg": e.get("uitleg", ""), "reel_vraag": (e.get("hooks") or {}).get("vraag", ""),
-        "reel_herkenning": (e.get("hooks") or {}).get("herkenning", ""),
+        "reel_herkenning": ochtend_opener(p) if is_ochtend(p) else (e.get("hooks") or {}).get("herkenning", ""),
     })
     return True
 

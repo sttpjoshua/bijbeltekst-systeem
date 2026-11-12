@@ -159,3 +159,6 @@ Na het schrijven en renderen van de posts (dagelijkse run, en avondcontrole als 
 - Telefoon: tabbalk onderaan met iconen en compactere kaarten.
 
 - Hashtags worden getest (11 november, Joshua koos meetesten): dimensie `hashtag_stijl` = `mix` (vaste tags uit de tekstbank, bijna altijd met #bijbeltekst), `zoekwoord` (#bijbelvers, het thema en het bijbelboek) of `zonder`. Het systeem leert welke stijl beter scoort; zie "Wat werkt beter?" op het dashboard. Hashtags zijn volgens Instagram geen bereikmiddel maar context voor zoeken; maximaal 5 per post. `python3 src/systeem.py hashtags_testen` verdeelt geplande posts over de drie stijlen.
+
+## Ochtendposts (12 nov)
+Het 07:30-slot is de ochtendpost (Joshua): altijd een vers voor een goede start van de dag (`OCHTEND_VERZEN` in src/tekstbank.py), caption opent met een wisselende Goedemorgen-regel (`OCHTEND_OPENERS`, ook als herkenningsregel in de reel), reels openen met ochtendbeeld (eerste regel in `clips.KOPPEL`), carrousels krijgen een lichte stijl (`LICHTE_STIJLEN`). Andere tijdsloten sparen de ochtendverzen. `python3 src/systeem.py ochtend_vernieuwen` maakt geplande ochtendposts vanaf morgen opnieuw.

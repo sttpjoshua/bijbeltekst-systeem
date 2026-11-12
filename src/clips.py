@@ -38,6 +38,8 @@ SCENES = {
 # Herkenningszin -> zoektermen. De eerste regel die past, wint; anders de lijst van het thema.
 # patroon in de herkenningszin -> (zoektermen, woorden die in titel/tags moeten staan, sfeerbeelden als niets past)
 KOPPEL = [
+    (r"goedemorgen|nieuwe dag|goede start|begin je dag|nieuwe kans|dag goed beginnen", ["sunrise", "morning coffee", "morning light window", "sunrise mountain", "morning nature"],
+     r"sunrise|sunlight|morning|coffee|dawn|light|window|golden", ["sunrise window", "morning coffee", "curtains morning"]),
     (r"snooze|wekker|opstaan|ochtendmens|vroeg op|uit bed|vanochtend|ochtend|bleef liggen", ["alarm clock", "waking up", "morning bed", "bedroom morning", "stretching bed"],
      r"alarm|wak|bed|morning|sleep|yawn|stretch", ["sunrise window", "morning coffee", "curtains morning"]),
     (r"piekeren|wakker lag|slapen|nacht|23:00|malen", ["insomnia", "night bed", "awake night", "phone bed", "bed dark"],

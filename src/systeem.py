@@ -46,6 +46,8 @@ HUISSTIJLEN = {
     "perzik":      {"palet": "perzik",          "lettertype": "playfair",          "layout": "citaat",   "achtergrond": "diagonaal"},
 }
 
+LICHTE_STIJLEN = ("zonsopgang", "hemelsblauw", "mint", "perzik", "roze", "zand")
+
 DIMENSIES = {
     "huisstijl": list(HUISSTIJLEN),
     "thema": ["troost", "moed", "liefde", "hoop", "vertrouwen", "wijsheid", "humor_herkenbaar",
@@ -300,6 +302,8 @@ def kies_posts(datum, cfg, strat, posts, verzen, mat, n_start, n, gebruikte_slot
         gebruikte_slots.add(v["tijdslot"])
         # Facebook krijgt een eigen tijdstip, geleerd uit de Facebook-cijfers
         v["tijdslot_fb"] = thompson("tijdslot", DIMENSIES["tijdslot"], stats_fb, rnd, cfg["verkenning"] / 0.2)
+        if v["tijdslot"] < "10:00" and v["huisstijl"] not in LICHTE_STIJLEN:  # ochtend: de lichtste kleuren
+            v["huisstijl"], bron["huisstijl"] = rnd.choice(LICHTE_STIJLEN), "ochtend"
         v.update(HUISSTIJLEN[v["huisstijl"]])
         v["hook_op_beeld"] = False  # Joshua wil geen hooktekst op het beeld
         # Aandeel reels (Joshua, 11 nov: ongeveer 60%): bijsturen op de laatste 14 dagen
@@ -324,6 +328,15 @@ def kies_posts(datum, cfg, strat, posts, verzen, mat, n_start, n, gebruikte_slot
         bank = _bank(cfg)
         if bank is not None:  # zelfstandig: alleen verzen waarvoor de teksten al klaarstaan
             vrij = [x for x in vrij if x["id"] in bank] or _oudste_bankverzen(bank, posts + nieuw, cfg)
+        import tekstbank as _tb
+        if v["tijdslot"] < "10:00":  # ochtend: alleen verzen voor een goede start van de dag
+            och = [x for x in vrij if x["id"] in _tb.OCHTEND_VERZEN]
+            if och:
+                vrij = och
+        else:  # andere tijdsloten sparen de ochtendverzen, tenzij er niets anders over is
+            rest = [x for x in vrij if x["id"] not in _tb.OCHTEND_VERZEN]
+            if rest:
+                vrij = rest
         if reekspost and reekspost.get("vers") and (bank is None or reekspost["vers"]["id"] in bank):
             vrij = [reekspost["vers"]]  # vaste reeks: dit vers, ook als het eerder gebruikt is
         kandidaten = []
@@ -1494,6 +1507,43 @@ def cmd_reels_vernieuwen():
     bewaar("data/posts.json", posts)
     print(f"{n} reels gaan opnieuw gemaakt worden")
 
+def cmd_ochtend_vernieuwen():
+    """Geplande 07:30-posts (vanaf morgen, nog niet geplaatst) krijgen een ochtendvers en ochtendstijl."""
+    cfg, strat = laad("config.json"), vul_strategie_aan(laad("strategie.json") or nieuwe_strategie())
+    posts = laad("data/posts.json", [])
+    morgen = (dt.date.today() + dt.timedelta(days=1)).isoformat()
+    import tekstbank
+    n = 0
+    for p in sorted(posts, key=lambda x: x["datum"]):
+        v = p["variabelen"]
+        if p["datum"] < morgen or v.get("tijdslot", "99") >= "10:00" or p.get("reeks") or p.get("gepubliceerd"):
+            continue
+        if p["status"] not in ("gerenderd", "goedgekeurd", "wacht_op_tekst", "opnieuw_maken"):
+            continue
+        if p["vers_id"] not in tekstbank.OCHTEND_VERZEN:
+            rest = [x for x in posts if x is not p]
+            nieuw = None
+            for poging in range(30):
+                c = kies_posts(p["datum"], cfg, strat, rest, laad("data/verzen.json"), None, 0, 1, {"12:15", "17:45", "20:30", "22:00"},
+                               random.Random(f"{p['id']}ochtend{poging}"), reeks=False)[0]
+                if c["variabelen"]["tijdslot"] < "10:00" and c["vers_id"] in tekstbank.OCHTEND_VERZEN:
+                    nieuw = c; break
+            if not nieuw:
+                continue
+            p.update({k: nieuw[k] for k in ("vers_id", "ref", "tekst", "vertaling")})
+            for f in ("thema", "boekgroep", "lengte", "bron"):
+                v[f] = nieuw["variabelen"][f]
+            p.update({"hook": "", "caption": "", "hashtags": [], "uitleg": "", "betekenis": "", "toepassing": ""})
+        if v.get("formaat") == "carrousel" and v.get("huisstijl") not in LICHTE_STIJLEN:
+            v["huisstijl"] = random.Random(p["id"] + "licht").choice(LICHTE_STIJLEN)
+            v.update(HUISSTIJLEN[v["huisstijl"]])
+            p.setdefault("keuzebron", {})["huisstijl"] = "ochtend"
+        v["tijdslot"] = "07:30"
+        p["status"] = "wacht_op_tekst"; n += 1
+        print(p["datum"], p["ref"], v.get("formaat"))
+    bewaar("data/posts.json", posts)
+    print(f"{n} ochtendposts gaan opnieuw gemaakt worden")
+
 def cmd_automaak(modus=""):
     """Zelfstandig posts maken, zonder Claude: kiezen, teksten uit de tekstbank, renderen.
     'check' geeft exit 0 als er werk is (voor GitHub Actions)."""
@@ -1605,6 +1655,7 @@ if __name__ == "__main__":
      "nood": lambda: cmd_nood(*(x.args[:1] or ["status"])),
      "automaak": lambda: cmd_automaak(*(x.args[:1] or [""])),
      "reels_vernieuwen": lambda: cmd_reels_vernieuwen(),
+     "ochtend_vernieuwen": lambda: cmd_ochtend_vernieuwen(),
      "hashtags_testen": lambda: cmd_hashtags_testen(),
      "tekstbank": lambda: cmd_tekstbank(*(x.args[:1] or ["status"])),
      "aanvullen": lambda: cmd_aanvullen(bool(x.args and x.args[0] == "check"))}[x.cmd]()
