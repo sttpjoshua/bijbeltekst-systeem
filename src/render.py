@@ -164,11 +164,21 @@ def _schaduw_papier(b, h, palet, rnd):
         # een eindblad
         blad_vorm(maskd, x, y, a, blad * 0.9, blad * 0.27)
     lagen = []
-    for blur, sterkte, n in ((3.0, 0.5, 2), (7.0, 0.28, 2)):  # scherpere en vager schaduw voor diepte
+    eenheid = min(w, hh * 0.8)  # takgrootte volgt de hoogte, zodat een brede panorama niet reuzenbladeren krijgt
+    aantal = max(3, int(round(w / (hh * 0.75))) * 2)  # meer takken naarmate het beeld breder is
+    for blur, sterkte in ((4.5, 0.6), (9.0, 0.4)):  # zacht en nog zachter, voor diepte
         m = Image.new("L", (w, hh), 0); dm = ImageDraw.Draw(m)
-        for _ in range(n):
-            start = (rnd.uniform(w * 0.7, w * 1.1), rnd.uniform(-hh * 0.05, hh * 0.45))
-            tak(dm, start, rnd.uniform(1.95, 2.45), rnd.randint(int(hh * 0.2), int(hh * 0.32)), rnd.uniform(w * 0.05, w * 0.075), 1.0)
+        for i in range(aantal):
+            kant = rnd.choice(("boven", "boven", "onder", "zij"))
+            if kant == "boven":
+                start = (rnd.uniform(0, w), -hh * 0.04); hoek = math.pi / 2 + rnd.uniform(-0.6, 0.6)
+            elif kant == "onder":
+                start = (rnd.uniform(0, w), hh * 1.04); hoek = -math.pi / 2 + rnd.uniform(-0.6, 0.6)
+            else:
+                links = rnd.random() < 0.5
+                start = (-w * 0.02 if links else w * 1.02, rnd.uniform(hh * 0.1, hh * 0.9))
+                hoek = (rnd.uniform(-0.5, 0.5) if links else math.pi + rnd.uniform(-0.5, 0.5))
+            tak(dm, start, hoek, rnd.randint(int(hh * 0.2), int(hh * 0.34)), eenheid * rnd.uniform(0.15, 0.21), 1.0)
         lagen.append((m.filter(ImageFilter.GaussianBlur(blur)).resize((b, h), Image.BICUBIC), sterkte))
     skyg = Image.new("L", (b, h), 0)
     sd = ImageDraw.Draw(skyg)
@@ -178,7 +188,7 @@ def _schaduw_papier(b, h, palet, rnd):
     warm = Image.new("RGB", (b, h), (255, 244, 220))
     img = Image.composite(warm, basis, licht.point(lambda x: int(x * 0.35)))  # lichtbundel: iets warmer en lichter
     for m, sterkte in lagen:
-        img = Image.composite(donker, img, m.point(lambda x, st=sterkte: int(x * st * 0.5)))
+        img = Image.composite(donker, img, m.point(lambda x, st=sterkte: int(x * st * 0.34)))
     return img
 
 def _verloop_plus(b, h, palet, stijl):
