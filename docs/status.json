@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T22:03:20",
+ "updated": "2026-11-12T23:01:10",
  "agents": {
   "verskiezer": {
    "t": "2026-11-12T13:05:11",
@@ -32,7 +32,7 @@
    "state": "done"
   },
   "community": {
-   "t": "2026-11-12T22:01:14",
+   "t": "2026-11-12T23:01:10",
    "task": "1 nieuwe reactie gevonden",
    "state": "done"
   }
