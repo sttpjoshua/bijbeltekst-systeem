@@ -841,7 +841,7 @@ function miniaturen(x){
 }
 
 // ---------- Planning ----------
-const STIJLKLEUR={avond:"#2b2f4a",zand:"#d9c3a0",salie:"#a8b8a0",zonsopgang:"#ff6f61",hemelsblauw:"#5aa6e6",paars:"#6a3fc0",roze:"#f7a1b8",bosgroen:"#3f8a5c",mint:"#8fdcc7",perzik:"#ffc28b"};
+const STIJLKLEUR={avond:"#2b2f4a",zand:"#d9c3a0",salie:"#a8b8a0",zonsopgang:"#ff6f61",hemelsblauw:"#5aa6e6",paars:"#6a3fc0",roze:"#f7a1b8",bosgroen:"#3f8a5c",mint:"#8fdcc7",perzik:"#ffc28b",papier_rood:"#9b2a40",papier_groen:"#2f5a41",papier_blauw:"#24406b",schaduw_rood:"#c98a96",schaduw_groen:"#8fae9a",schaduw_blauw:"#8d9fc0"};
 const FORMAAT={afbeelding:"🖼 Afbeelding",video:"▶ Video",carrousel:"▤ Carrousel"};
 
 // ---------- Platformlabels: waar komt/staat een post? ----------
@@ -1149,7 +1149,7 @@ function bouwTop(){
   el.innerHTML=h+(met.length?"":'<div class="sub" style="margin-top:6px">Gesorteerd op bereik; de score komt zodra een post 20 of meer mensen heeft bereikt.</div>');
 }
 const OPTNAAM={afbeelding:"afbeeldingen",video:"video's",carrousel:"carrousels",verloop:"kleurverloop",beeld:"foto-achtergrond",true:"met uitleg op het beeld",false:"zonder uitleg",geen:"geen hook",vraag:"een vraag als hook",herkenning:"een herkenbare hook",uitdaging:"een uitdaging als hook",rustig:"een rustige hook",avond:"stijl avond",zand:"stijl zand",salie:"stijl salie",psalmen:"verzen uit de Psalmen",spreuken:"verzen uit Spreuken",wijsheid:"verzen uit Job, Prediker en Hooglied",profeten:"verzen uit de profeten",evangelien:"verzen uit de evangeliën",brieven:"verzen uit de brieven",kort:"korte verzen",middel:"middellange verzen",lang:"lange verzen",bekend:"bekende verzen",ontdekking:"minder bekende verzen"};
-Object.assign(OPTNAAM,{mix:"vaste mix hashtags",zoekwoord:"zoekwoord-hashtags",zonder:"zonder hashtags",situatie:"herkenbare situatie",markeren:"meelees-stijl",standaard:"standaard carrousel",abrikoos:"abrikoos",mint:"mint",hemel:"hemelsblauw",roze:"roze",goud:"goud",klassiek:"klassieke reel",midden:"tekst in het midden",boven:"tekst boven",natuur:"natuurbeeld",dichtbij:"close-up beeld",onderweg:"beeld onderweg"});
+Object.assign(OPTNAAM,{papier_rood:"papier, rood",papier_groen:"papier, groen",papier_blauw:"papier, blauw",schaduw_rood:"papier met schaduw, rood",schaduw_groen:"papier met schaduw, groen",schaduw_blauw:"papier met schaduw, blauw",mix:"vaste mix hashtags",zoekwoord:"zoekwoord-hashtags",zonder:"zonder hashtags",situatie:"herkenbare situatie",markeren:"meelees-stijl",standaard:"standaard carrousel",abrikoos:"abrikoos",mint:"mint",hemel:"hemelsblauw",roze:"roze",goud:"goud",klassiek:"klassieke reel",midden:"tekst in het midden",boven:"tekst boven",natuur:"natuurbeeld",dichtbij:"close-up beeld",onderweg:"beeld onderweg"});
 const on=o=>OPTNAAM[o]||String(o).replace("_"," ");
 function bouwExperimenten(){
   const el=document.getElementById("experimenten"),x=D.experimenten;if(!el||!x){return}
