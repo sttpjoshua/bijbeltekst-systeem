@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-12T08:45",
+ "gegenereerd": "2026-11-12T09:01",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -106,7 +106,8 @@
     "klassiek": 1.0,
     "kinetisch": 1.0,
     "beeld": 1.0,
-    "situatie": 1.0
+    "situatie": 1.0,
+    "markeren": 1.0
    },
    "reel_plaatsing": {
     "midden": 1.0,
@@ -208,7 +209,8 @@
     "klassiek": 0,
     "kinetisch": 0,
     "beeld": 0,
-    "situatie": 0
+    "situatie": 0,
+    "markeren": 0
    },
    "reel_plaatsing": {
     "midden": 0,
@@ -3631,7 +3633,7 @@
    "ok": "2026-11-08T00:36"
   },
   "reacties": {
-   "ok": "2026-11-12T08:01",
+   "ok": "2026-11-12T09:01",
    "laatst_ok": true,
    "detail": "1 nieuwe reacties",
    "fout": "2026-11-08T18:00"
