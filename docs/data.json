@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-12T13:15",
+ "gegenereerd": "2026-11-12T13:31",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -4317,11 +4317,6 @@
  "logboek": [
   {
    "t": "2026-11-11T10:24:12",
-   "soort": "info",
-   "tekst": "Zelfstandig 5 posts klaargezet voor 2026-11-15 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "2026-11-11T10:24:12",
    "soort": "fout",
    "tekst": "Tekstbank bijna op: nog genoeg nieuwe verzen voor ongeveer 4 dagen (20 van 47). Daarna herhaalt het systeem de oudste verzen.",
    "code": "tekstbank",
@@ -4628,6 +4623,11 @@
    "t": "2026-11-12T13:05:11",
    "soort": "info",
    "tekst": "Bediening: Nieuwsposts aangepast: Psalm 20:8 (17:45), 1 Johannes 3:1 (22:00)"
+  },
+  {
+   "t": "2026-11-12T13:31:07",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
   }
  ],
  "recente_fouten": [],
