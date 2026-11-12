@@ -398,3 +398,139 @@ def maak_situatie(post, pad, clips, plaatsing="onder"):
     post["cover_ms"] = int((t1 + 1.5) * 1000)
     post["duur"] = duur
     return pad
+
+
+def _papier():
+    """Warme, lichte papierachtergrond met zachte lichtval en fijn korrel."""
+    import numpy as np
+    rnd = np.random.RandomState(7)
+    y, x = np.mgrid[0:H, 0:B]
+    licht = 1.0 - 0.07 * (((x - B * 0.42) / B) ** 2 + ((y - H * 0.38) / H) ** 2) * 4
+    basis = np.array([247, 243, 234], dtype=float)
+    a = basis[None, None, :] * licht[:, :, None] + rnd.normal(0, 1.6, (H, B, 1))
+    return Image.fromarray(np.clip(a, 0, 255).astype("uint8"), "RGB").convert("RGBA")
+
+
+def _streep(d, x0, x1, yc, h, kleur, seed):
+    """Markeerstreep met licht scheve, ruwe uiteinden, tot x1."""
+    rnd = random.Random(seed)
+    j = lambda: rnd.uniform(-5, 5)
+    pts = [(x0 - 6 + j(), yc - h / 2 + j()), (x1 + 4 + j(), yc - h / 2 + 3 + j()),
+           (x1 + 10 + j(), yc + h / 2 + j()), (x0 - 10 + j(), yc + h / 2 - 3 + j())]
+    d.polygon(pts, fill=kleur)
+
+
+def _sier(d, cy, kleur):
+    """Eenvoudig getekend sierlijntje met hartje (eigen ontwerp)."""
+    cx = B // 2
+    d.line([(cx - 330, cy + 8), (cx - 60, cy + 8)], fill=kleur, width=5)
+    d.line([(cx + 60, cy + 8), (cx + 330, cy + 8)], fill=kleur, width=5)
+    for s in (-1, 1):
+        d.ellipse([cx + s * 340 - 6, cy + 2, cx + s * 340 + 6, cy + 14], fill=kleur)
+    pts = []
+    for i in range(61):
+        a = i / 60 * 2 * math.pi
+        hx = 16 * math.sin(a) ** 3
+        hy = 13 * math.cos(a) - 5 * math.cos(2 * a) - 2 * math.cos(3 * a) - math.cos(4 * a)
+        pts.append((cx + hx * 2.3, cy - 6 - hy * 2.3))
+    d.line(pts + [pts[0]], fill=kleur, width=5, joint="curve")
+
+
+def maak_markeren(post, pad):
+    """Reel 'markeren': een papieren pagina waarop het vers regel voor regel met een markeerstreep wordt gemarkeerd.
+    Kernwoord vet en in kleur, nooit in een vak. Rustig, met uitleg."""
+    import numpy as np
+    v = post["variabelen"]
+    serif = v.get("lettertype", "playfair")
+    inkt, accent, strook = (46, 38, 32, 255), (178, 88, 48, 255), (240, 205, 150, 175)
+    hook = (post.get("reel_herkenning") or "").strip()
+    uitleg = (post.get("uitleg") or post.get("reel_uitleg") or "").strip()
+    papier = _papier()
+    meet = ImageDraw.Draw(Image.new("RGBA", (B, 10)))
+    g = 80
+    while True:
+        f = R._font(serif, g); rg = R._wrap(post["tekst"], f, int(B * 0.80), meet)
+        if len(rg) * g * 1.5 <= H * 0.44 or g <= 44:
+            break
+        g -= 4
+    lh = int(g * 1.5)
+    y0 = int(H * 0.42 - len(rg) * lh / 2)
+    # vaste lagen: sierlijn boven en onder, tekst
+    tekst = Image.new("RGBA", (B, H), (0, 0, 0, 0)); dt_ = ImageDraw.Draw(tekst)
+    _sier(dt_, y0 - 150, (60, 52, 46, 255))
+    staat = R._kernstaat(post, inkt[:3], accent[:3])
+    lijnen = []
+    for i, r in enumerate(rg):
+        yy = y0 + i * lh
+        w = R._regel(dt_, B // 2, yy, r, f, inkt, accent, staat, False)
+        lijnen.append((B / 2 - w / 2, B / 2 + w / 2, yy + g * 0.55))
+    yb = y0 + len(rg) * lh + 40
+    _sier(dt_, yb + 110, (60, 52, 46, 255))
+    ref = Image.new("RGBA", (B, H), (0, 0, 0, 0)); dr = ImageDraw.Draw(ref)
+    dr.text((B // 2, yb + 220), post["ref"].upper(), font=R._klein_font(36, b"SemiBold"), fill=accent, anchor="ma")
+    uit = Image.new("RGBA", (B, H), (0, 0, 0, 0)); du = ImageDraw.Draw(uit)
+    if uitleg:
+        fu = R._font(serif, 56); ru = R._wrap(uitleg, fu, int(B * 0.80), du)
+        yu = int(H * 0.40 - len(ru) * 76 / 2)
+        du.text((B // 2, yu - 90), "WAT BETEKENT DIT?", font=R._klein_font(32, b"SemiBold"), fill=accent, anchor="ma")
+        for i, r in enumerate(ru):
+            du.text((B // 2, yu + i * 76), r, font=fu, fill=inkt, anchor="ma")
+    eind = Image.new("RGBA", (B, H), (0, 0, 0, 0)); de = ImageDraw.Draw(eind)
+    _sier(de, int(H * 0.40), (60, 52, 46, 255))
+    de.text((B // 2, int(H * 0.40) + 120), post["ref"].upper(), font=R._klein_font(40, b"SemiBold"), fill=accent, anchor="ma")
+    de.text((B // 2, int(H * 0.40) + 200), "BIBLEVERSE  ·  @bibleverse_nl", font=R._klein_font(28, b"Medium"), fill=(90, 80, 72, 255), anchor="ma")
+    hk = Image.new("RGBA", (B, H), (0, 0, 0, 0)); dh = ImageDraw.Draw(hk)
+    if hook:
+        fh = R._font(serif, 70); rh = R._wrap(hook, fh, int(B * 0.80), dh)
+        for i, r in enumerate(rh):
+            dh.text((B // 2, int(H * 0.40) - len(rh) * 46 + i * 92), r, font=fh, fill=inkt, anchor="ma")
+    t1 = 3.4 if hook else 0.0
+    per = 1.25
+    lees = 0.8 + per * len(rg) + max(2.5, len(post["tekst"]) / 22)
+    t_uit = 4.8 if uitleg else 0.0
+    t_eind = 2.4
+    duur = round(t1 + lees + t_uit + t_eind, 2)
+    cmd = ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{B}x{H}", "-r", str(FPS), "-i", "-"]
+    if post.get("muziek_pad"):
+        cmd += ["-ss", str(post.get("muziek_start", 0)), "-t", str(duur), "-i", post["muziek_pad"],
+                "-af", f"volume=0.85,afade=t=in:st=0:d=0.3,afade=t=out:st={duur - 1.2}:d=1.2", "-c:a", "aac"]
+    cmd += ["-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p", "-movflags", "+faststart", "-t", str(duur), pad]
+    pr = subprocess.Popen(cmd, stdin=subprocess.PIPE)
+    def mix(basis, laag, a):
+        if a <= 0:
+            return basis
+        if a < 1:
+            laag = laag.copy(); laag.putalpha(laag.split()[3].point(lambda x: int(x * a)))
+        basis = basis.copy(); basis.alpha_composite(laag); return basis
+    n = int(duur * FPS)
+    cache_vers = None
+    for k in range(n):
+        t = k / FPS
+        fr = papier
+        if t < t1:
+            fr = mix(fr, hk, min(1, t / 0.4, (t1 - t) / 0.4 + 0.0001))
+        elif t < t1 + lees + 0.3:
+            tv = t - t1
+            a_in = min(1, tv / 0.5)
+            a_uit = 1.0 if t < t1 + lees else max(0, 1 - (t - t1 - lees) / 0.3)
+            st = Image.new("RGBA", (B, H), (0, 0, 0, 0)); ds = ImageDraw.Draw(st)
+            for i, (xa, xb, yc) in enumerate(lijnen):
+                s0 = 0.8 + i * per
+                p = _ease((tv - s0) / (per * 0.9))
+                if p > 0:
+                    _streep(ds, xa, xa + (xb - xa) * p, yc + 6, g * 1.02, strook, 100 + i)
+            fr = mix(fr, st, a_in * a_uit)
+            fr = mix(fr, tekst, a_in * a_uit)
+            fr = mix(fr, ref, a_in * a_uit)
+        elif t < t1 + lees + t_uit:
+            tu = t - t1 - lees
+            fr = mix(fr, uit, min(1, tu / 0.4, (t_uit - tu) / 0.3 + 0.0001))
+        else:
+            fr = mix(fr, eind, min(1, (t - t1 - lees - t_uit) / 0.4))
+        pr.stdin.write(np.asarray(fr.convert("RGB")).tobytes())
+    pr.stdin.close()
+    if pr.wait() != 0:
+        raise RuntimeError("ffmpeg mislukt")
+    post["cover_ms"] = int((t1 + 3.5) * 1000)
+    post["duur"] = duur
+    return pad
