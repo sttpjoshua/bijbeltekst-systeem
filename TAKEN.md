@@ -176,3 +176,10 @@ Carrousel in de meelees-stijl (12 nov): dimensie `carrousel_stijl` (standaard | 
 - Strikter experiment: `experiment_aantal` (1) onderdeel per week; bij `strikt_experiment` staan hook_stijl, uitleg_op_beeld, achtergrondbron, vraag_onderaan, reel_haak, opening en hashtag_stijl dan bijna vast op wat werkt. Stijl, kleur en thema blijven afwisselen. Tijdens snel leren blijft alles breed.
 - Eerste-uurmeting (`1u`): `vroege_cijfers` in publiceer.py, elke 15 minuten, 60 tot 180 minuten na plaatsing. Telt voor de helft mee en wordt apart vergeleken.
 - Nieuwe tijdsloten: `cmd_tijd_voorstel` (bij elk nieuw weekexperiment, maximaal om de 14 dagen): scoren twee naastliggende slots boven gemiddeld (min. 4 metingen), dan komt de tijd ertussen als extra slot in config `extra_tijdsloten`. Slecht scorend extra slot (6 metingen, onder 0,9) verdwijnt weer.
+
+## Nieuwsposts directer (12 nov)
+- De eerste zin noemt het moment bij naam (storm, sneeuw, Sinterklaas, Sint-Maarten, Black Friday, klok verzet en meer), nooit een kop of bron. Bij bepaalde woorden in de kop staan specifiekere zinnen vooraan (bijv. Sinterklaas: intocht of pakjesavond).
+- Het vers wordt gekozen op het onderwerp: zoekwoorden per aanleiding (`vers_woorden`) in de verstekst en uitleg, plus het thema; de best passende eerst.
+- Een brugzin (`bruggen`) legt uit waarom dit vers bij het moment past: in de uitleg op het beeld (als die getoond wordt) en in de caption.
+- Valse treffers aangescherpt: 'tropisch' alleen nog als tropische temperaturen, 'regen' alleen als regenval, regenbuien of regenachtig.
+- Politiek en zwaar nieuws blijven altijd een voorstel dat Joshua goedkeurt.
