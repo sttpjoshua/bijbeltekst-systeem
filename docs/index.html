@@ -925,42 +925,46 @@ const MEELEES={abrikoos:"#F7D9B5",mint:"#BFE6D3",hemel:"#BDD7F4",roze:"#F4C4D0",
 const MEELNAAM={abrikoos:"abrikoos",mint:"mint",hemel:"hemelsblauw",roze:"roze",goud:"goud"};
 function stijlBlok(x){
   const v=x.variabelen,vid=v.formaat==="video",isM=(vid?v.reel_stijl:v.carrousel_stijl)==="markeren";
-  STK={post:x.id,huisstijl:v.huisstijl,achtergrondbron:v.achtergrondbron==="beeld"?"beeld":"verloop",opening:v.opening||"vers",meelees:isM?(v.reel_kleur||"abrikoos"):"",reel_stijl:vid?(v.reel_stijl||"klassiek"):""};
+  STK={post:x.id,huisstijl:v.huisstijl,achtergrondbron:v.achtergrondbron==="beeld"?"beeld":"verloop",opening:v.opening||"vers",meelees:isM?(v.reel_kleur||"abrikoos"):"",reel_stijl:vid?(isM?"markeren":(v.reel_stijl||"klassiek")):""};
   const st=Object.keys(STIJLKLEUR);
+  const vars=vid?[["situatie","Herkenbare situatie (video's)"],["markeren","Meelees-stijl (markeerstreep)"],["klassiek","Klassiek"],["kinetisch","Kinetisch"],["beeld","Foto's"]]
+                :[["standaard","Standaard carrousel"],["markeren","Meelees-stijl (markeerstreep)"]];
+  const huidig=vid?STK.reel_stijl:(isM?"markeren":"standaard");
+  STK.variant=huidig;
   return `<div class="stb"><div class="sub" style="font-weight:600;margin-bottom:6px">Stijl aanpassen</div>
-    ${vid?`<div class="seg" style="margin-bottom:8px"><span class="sub" style="align-self:center;margin-right:4px">Reelstijl:</span>
-      ${[["situatie","Herkenbare situatie"],["klassiek","Klassiek"],["kinetisch","Kinetisch"],["beeld","Foto's"]].map(([k,n])=>`<button class="btn sto-r${!isM&&STK.reel_stijl===k?" prim":""}" onclick="kiesReel('${k}',this)">${n}</button>`).join("")}</div>`:""}
-    <div class="sub" style="margin:2px 0 4px">Meelees-stijl (markeerstreep)</div>
-    <div class="stw">${Object.keys(MEELEES).map(k=>`<button class="sw sm${k===STK.meelees?" aan":""}" data-k="${k}" title="${MEELNAAM[k]}" style="background:${MEELEES[k]}" onclick="kiesMeelees('${k}',this)"><span>${MEELNAAM[k]}</span></button>`).join("")}</div>
-    <div class="sub" style="margin:10px 0 4px">Andere stijlen</div>
-    <div class="stw">${st.map(k=>`<button class="sw${!STK.meelees&&k===v.huisstijl?" aan":""}" data-k="${k}" title="${k}" style="background:${STIJLKLEUR[k]}" onclick="kiesStijl('huisstijl','${k}',this)"><span>${k}</span></button>`).join("")}</div>
+    <div class="sub" style="margin:2px 0 4px">Soort ${vid?"reel":"carrousel"}</div>
+    <div class="seg" style="flex-wrap:wrap;gap:6px">${vars.map(([k,n])=>`<button class="btn sto-v${huidig===k?" prim":""}" data-k="${k}" onclick="kiesVariant('${k}',this)">${n}</button>`).join("")}</div>
+    <div class="vk vk-m" style="display:${huidig==="markeren"?"block":"none"}"><div class="sub" style="margin:10px 0 4px">Kleur en lettertype</div>
+    <div class="stw">${Object.keys(MEELEES).map(k=>`<button class="sw sm${k===STK.meelees?" aan":""}" data-k="${k}" title="${MEELNAAM[k]}" style="background:${MEELEES[k]}" onclick="kiesMeelees('${k}',this)"><span>${MEELNAAM[k]}</span></button>`).join("")}</div></div>
+    <div class="vk vk-h" style="display:${huidig==="markeren"?"none":"block"}"><div class="sub" style="margin:10px 0 4px">Kleurstijl</div>
+    <div class="stw">${st.map(k=>`<button class="sw${k===v.huisstijl?" aan":""}" data-k="${k}" title="${k}" style="background:${STIJLKLEUR[k]}" onclick="kiesStijl('huisstijl','${k}',this)"><span>${k}</span></button>`).join("")}</div>
     <div class="seg" style="margin-top:8px"><span class="sub" style="align-self:center;margin-right:4px">Achtergrond:</span>
       ${[["verloop","Kleurverloop"],["beeld","Foto"]].map(([k,n])=>`<button class="btn sto-a${STK.achtergrondbron===k?" prim":""}" onclick="kiesStijl('achtergrondbron','${k}',this)">${n}</button>`).join("")}</div>
     ${v.formaat==="carrousel"?`<div class="seg" style="margin-top:6px"><span class="sub" style="align-self:center;margin-right:4px">Eerste slide:</span>
-      ${[["vers","Vers"],["stopper","Stopper"],["verhaal","Verhaal eerst"]].map(([k,n])=>`<button class="btn sto-o${STK.opening===k?" prim":""}" onclick="kiesStijl('opening','${k}',this)">${n}</button>`).join("")}</div>`:""}
+      ${[["vers","Vers"],["stopper","Stopper"],["verhaal","Verhaal eerst"]].map(([k,n])=>`<button class="btn sto-o${STK.opening===k?" prim":""}" onclick="kiesStijl('opening','${k}',this)">${n}</button>`).join("")}</div>`:""}</div>
     <button class="btn prim" style="margin-top:10px" onclick="stuur({actie:'andere_stijl',...STK},this)">Opnieuw maken in deze stijl</button>
     <div class="sub" style="margin-top:4px">Na 1 tot 3 minuten staat de nieuwe versie in de planning.</div></div>`;
 }
 function kiesStijl(k,w,el){
   STK[k]=w;
-  if(k==="huisstijl"){STK.meelees="";el.closest(".stb").querySelectorAll(".sm").forEach(b=>b.classList.remove("aan"))}
-  const groep=k==="huisstijl"?".sw:not(.sm)":k==="achtergrondbron"?".sto-a":".sto-o";
+  const groep=k==="huisstijl"?".sw":k==="achtergrondbron"?".sto-a":".sto-o";
   el.parentElement.querySelectorAll(groep).forEach(b=>b.classList.remove(k==="huisstijl"?"aan":"prim"));
   el.classList.add(k==="huisstijl"?"aan":"prim");
 }
+function kiesVariant(k,el){
+  const stb=el.closest(".stb");
+  stb.querySelectorAll(".sto-v").forEach(b=>b.classList.remove("prim"));el.classList.add("prim");
+  STK.variant=k;
+  const m=k==="markeren";
+  stb.querySelector(".vk-m").style.display=m?"block":"none";
+  stb.querySelector(".vk-h").style.display=m?"none":"block";
+  if(m){STK.meelees=STK.meelees||"abrikoos";if(!stb.querySelector(".sm.aan"))stb.querySelector(".sm").classList.add("aan");STK.reel_stijl="markeren"}
+  else{STK.meelees="";if(STK.reel_stijl!==undefined&&STK.reel_stijl!==""||k!=="standaard")STK.reel_stijl=k==="standaard"?"":k}
+}
 function kiesMeelees(k,el){
   STK.meelees=k;
-  const stb=el.closest(".stb");
-  stb.querySelectorAll(".sw").forEach(b=>b.classList.remove("aan"));
-  stb.querySelectorAll(".sto-r").forEach(b=>b.classList.remove("prim"));
+  el.parentElement.querySelectorAll(".sm").forEach(b=>b.classList.remove("aan"));
   el.classList.add("aan");
-}
-function kiesReel(k,el){
-  STK.reel_stijl=k;STK.meelees="";
-  const stb=el.closest(".stb");
-  stb.querySelectorAll(".sm").forEach(b=>b.classList.remove("aan"));
-  el.parentElement.querySelectorAll(".sto-r").forEach(b=>b.classList.remove("prim"));
-  el.classList.add("prim");
 }
 function sluitLade(){document.getElementById("lade").style.display="none"}
 document.addEventListener("keydown",e=>{if(e.key==="Escape"){sluitLade();galerij.style.display="none"}});
