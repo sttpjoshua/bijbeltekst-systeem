@@ -56,5 +56,8 @@
  },
  "reel_formaat": "situatie",
  "reel_aandeel": 0.6,
- "markeer_aandeel": 0.25
+ "markeer_aandeel": 0.25,
+ "verzen_later": {
+  "I_John-3-1-1": "2026-12-12"
+ }
 }
