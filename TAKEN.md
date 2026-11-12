@@ -183,3 +183,8 @@ Carrousel in de meelees-stijl (12 nov): dimensie `carrousel_stijl` (standaard | 
 - Een brugzin (`bruggen`) legt uit waarom dit vers bij het moment past: in de uitleg op het beeld (als die getoond wordt) en in de caption.
 - Valse treffers aangescherpt: 'tropisch' alleen nog als tropische temperaturen, 'regen' alleen als regenval, regenbuien of regenachtig.
 - Politiek en zwaar nieuws blijven altijd een voorstel dat Joshua goedkeurt.
+
+## Dashboard opgeruimd (12 nov)
+- Overzicht: Experimenten en Gezondheid standaard ingeklapt (Gezondheid opent zelf bij problemen), Experimenten onder Volgende posts.
+- Resultaten: tabel Laatst geplaatst, Beste posts en Snel leren weg (staan op Alle cijfers en in de Experimenten-kaart); Wat werkt beter, Maandrapport en Geleerd ingeklapt.
+- Verse-wissel op een nieuwspost behoudt openingszin en brug (nieuws.behoud_nieuws).

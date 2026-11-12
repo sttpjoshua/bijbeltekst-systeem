@@ -82,6 +82,8 @@ input[type=range]{width:100%}input.veld,select.veld{font:inherit;font-size:13px;
 .gz{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
 .gzi{border:1px solid var(--lijn);border-radius:10px;padding:8px 10px;font-size:13px;line-height:1.35;background:var(--bg)}
 .gzi b{display:flex;align-items:center;gap:6px}.gzi .sub{font-size:12px}
+summary.klapkop{cursor:pointer;list-style:none;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}summary.klapkop::-webkit-details-marker{display:none}summary.klapkop h2{margin:0;display:inline}
+summary.klapkop::after{content:"▾";margin-left:auto;color:var(--i2,#888)}details[open]>summary.klapkop::after{content:"▴"}details.klap[open]>summary.klapkop,#gzDet[open]>summary.klapkop{margin-bottom:12px}
 .lamp{width:10px;height:10px;border-radius:50%;flex:0 0 auto}.lamp.groen{background:var(--goed)}.lamp.oranje{background:var(--let)}.lamp.rood{background:var(--slecht)}.lamp.grijs{background:var(--ink3);opacity:.5}
 .delta{font-size:12px;font-weight:600;margin-left:6px}.delta.op{color:var(--goed)}.delta.af{color:var(--slecht)}
 .tegel .klein{font-size:12px;color:var(--ink3);margin-top:2px}
@@ -303,7 +305,6 @@ html[data-thema=donker] .kpost .knws{background:#3a2e14;color:#ffd98a}
     <section class="kaart" id="nieuwsKeuze" style="display:none"></section>
     <section class="kaart" id="aandacht"></section>
     <div class="grid g4" id="tegels" style="margin-top:14px"></div>
-    <section class="kaart" id="experimenten"></section>
     <section class="grid g2">
       <div class="kaart"><h2>Volgende posts</h2><div id="volgende"></div><a href="#planning" class="sub" onclick="tab('planning');return false">Hele planning bekijken →</a></div>
       <div class="kaart" id="claudeVak"><div class="ai-kop"><span class="ai-pil">✦ Claude</span></div><h3 class="ai-titel">Vraag me iets</h3>
@@ -317,7 +318,8 @@ html[data-thema=donker] .kpost .knws{background:#3a2e14;color:#ffd98a}
         <div id="verzoeken" style="margin-top:10px"></div>
       </div>
     </section>
-    <section class="kaart" id="gezondheid"><h2>Gezondheid</h2><div class="sub" style="margin:-6px 0 10px">Klik op een blokje om die controle nu te laten draaien.</div><div class="gz" id="gzLijst"></div><div id="herstelLijst" style="margin-top:12px"></div></section>
+    <section class="kaart" id="experimenten"></section>
+    <section class="kaart" id="gezondheid"><details id="gzDet"><summary class="klapkop"><h2>Gezondheid</h2><span class="sub" id="gzSam"></span></summary><div class="sub" style="margin:-6px 0 10px">Klik op een blokje om die controle nu te laten draaien.</div><div class="gz" id="gzLijst"></div><div id="herstelLijst" style="margin-top:12px"></div></details></section>
   </div>
 
   <div class="tab" data-tab="inbox">
@@ -336,17 +338,9 @@ html[data-thema=donker] .kpost .knws{background:#3a2e14;color:#ffd98a}
   </div>
 
   <div class="tab" data-tab="resultaten">
-    <div class="sub" style="margin:0 0 10px">Alle metingen per post, het verloop per dag en de beste tijden staan op de pagina <a href="cijfers.html">Alle cijfers</a>.</div>
+    <div class="sub" style="margin:0 0 10px">De volledige tabel met alle posts, de beste posts, het verloop per dag en de beste tijden staan op de pagina <a href="cijfers.html">Alle cijfers</a>.</div>
     <section class="kaart" id="weekVgl" style="margin-top:0"></section>
-    <section class="kaart"><h2>Laatst geplaatst</h2>
-      <div class="sub" style="margin:-6px 0 10px">Klik op een kolom om te sorteren. Het label vergelijkt elke post met het gemiddelde van alle gemeten posts.</div>
-      <div class="filters" id="lgFilters"></div>
-      <div class="lgwrap"><table class="lg" id="lgTabel"></table></div></section>
-    <div id="snelLeren"></div>
-    <section class="grid g2" style="margin-top:0">
-      <div class="kaart"><h2>Groei volgers</h2><div id="groei"></div></div>
-      <div class="kaart"><h2>Beste posts</h2><div id="topPosts"></div></div>
-    </section>
+    <section class="kaart"><h2>Groei volgers</h2><div id="groei"></div></section>
     <section class="kaart" id="abKaart"></section>
     <section class="kaart"><h2>Wat het systeem geleerd heeft</h2><div id="inzichten"></div></section>
     <section class="kaart" id="maandKaart"></section>
@@ -446,6 +440,11 @@ function bouw(){
   try{const gem=D.posts.filter(x=>x.totaal&&(x.totaal.reach!=null||x.totaal.views!=null)&&x.score&&Object.keys(x.score).length).length;
     document.getElementById("gewSam").textContent=gem<6?`(wordt interessant vanaf 6 gemeten posts; nu ${gem})`:"";if(gem>=6)document.getElementById("gewDet").open=true}catch(e){}
   bouwNieuwsKeuze();bouwAandacht();bouwVandaag();bouwWeekVgl();bouwAB();bouwMaand();bouwTekstbank();bouwReacties();bouwVolgende();bouwLaatst();bouwVerzoeken();bouwGezondheid();bouwTegels();bouwSnelLeren();bouwGroei();bouwTop();bouwInzichten();bouwExperimenten();bouwVoorraad();
+  {const x=D.experimenten||{};const ex=x.actief?`Test loopt: ${(x.onderdelen||[]).map(o=>(NAMEN[o.dimensie]||o.dimensie).toLowerCase()).join(", ")}`:x.snel?"Snel leren staat aan":"Geen test actief";
+   inklap("experimenten","Waar het systeem mee experimenteert",ex,false,true);
+   inklap("abKaart","Wat werkt beter?","Vergelijkingen per onderdeel",false,true);
+   inklap("maandKaart","Maandrapport","Per maand, ook af te drukken",false,false);
+   const ik=document.getElementById("inzichten");if(ik&&!ik.closest("details")){const c=ik.closest(".kaart");if(c&&!c.dataset.k){c.dataset.k="1";const h2=c.querySelector("h2");if(h2){const w=document.createElement("details");w.className="klap";w.open=("inz" in KLAP)?KLAP.inz:true;w.ontoggle=()=>{KLAP.inz=w.open};const sm=document.createElement("summary");sm.className="klapkop";sm.appendChild(h2);w.appendChild(sm);while(c.firstChild)w.appendChild(c.firstChild);c.appendChild(w)}}}}
 
   // logboek
   document.getElementById("logboek").innerHTML=(D.logboek||[]).slice().reverse().map(l=>`<div class="${l.soort==="fout"&&!l.opgelost?"fout":""}"><span class="t">${l.t.replace("T"," ")}</span>${l.tekst.length>170?l.tekst.slice(0,170)+"…":l.tekst}${l.opgelost?' <span style="color:var(--goed)">(opgelost)</span>':""}</div>`).join("")||'<div class="leeg">Nog niets gelogd.</div>';
@@ -647,7 +646,7 @@ function bouwMaand(){
       <div class="inzicht"><div class="sub">Aanleiding</div>${nieuws} nieuwsposts, ${ps.length-nieuws} tijdloos</div>
       ${ins.map(i=>`<div class="inzicht"><div class="sub">Analyse ${esc(i.datum)}</div>${esc(i.tekst)}</div>`).join("")}</div>`;
   document.getElementById("mndKies").onchange=e=>{MAANDSEL=e.target.value;bouwMaand()};
-  document.getElementById("mndPrint").onclick=()=>{document.body.classList.add("printmaand");const w=()=>{document.body.classList.remove("printmaand");window.removeEventListener("afterprint",w)};window.addEventListener("afterprint",w);window.print()};
+  document.getElementById("mndPrint").onclick=()=>{document.querySelectorAll("#maandKaart details").forEach(d=>d.open=true);document.body.classList.add("printmaand");const w=()=>{document.body.classList.remove("printmaand");window.removeEventListener("afterprint",w)};window.addEventListener("afterprint",w);window.print()};
 }
 const TB={q:"",f:"alle",n:30,edit:null};
 function bouwTekstbank(){
@@ -897,6 +896,14 @@ function bouwLaatst(){
 }
 
 // ---------- Nieuwsvoorstellen: kies wat er gemaakt wordt ----------
+const KLAP={};
+function inklap(id,titel,sam,open,strip){
+  const el=document.getElementById(id);if(!el||el.querySelector(":scope>details.klap"))return;
+  let h=el.innerHTML;if(strip)h=h.replace(/<h2[^>]*>.*?<\/h2>/,"");
+  const o=id in KLAP?KLAP[id]:open;
+  el.innerHTML=`<details class="klap"${o?" open":""}><summary class="klapkop"><h2>${titel}</h2><span class="sub">${sam}</span></summary>${h}</details>`;
+  el.querySelector("details.klap").ontoggle=e=>{KLAP[id]=e.target.open};
+}
 function bouwNieuwsKeuze(){
   const el=document.getElementById("nieuwsKeuze");if(!el)return;
   const open=((D.nieuws||{}).recent||[]).filter(x=>x.status==="voorstel");
@@ -1082,8 +1089,10 @@ function bouwGezondheid(){
     (()=>{const n=D.nood||{klaar:0,doel:6},h=D.herstel||[];return item("Zelfherstel",n.klaar>=3?"groen":n.klaar>0?"oranje":"rood",
       `${h.length} keer zelf opgelost deze week · noodvoorraad ${n.klaar}/${n.doel}`,"Bekende problemen lost het systeem zelf op. De noodvoorraad zijn kant-en-klare posts voor als een dagelijkse run mislukt.")})()+
     item("Meldingen",!g.whatsapp?"grijs":g.whatsapp.laatst_ok===false?"rood":"groen",!g.whatsapp?"nog niet gekoppeld":g.whatsapp.laatst_ok===false?"versturen mislukt":"laatst "+geleden(g.whatsapp.ok),g.whatsapp&&g.whatsapp.detail);
+  {const h=document.getElementById("gzLijst").innerHTML,r=(h.match(/lamp rood/g)||[]).length,o=(h.match(/lamp oranje/g)||[]).length,sm=document.getElementById("gzSam"),dt=document.getElementById("gzDet");
+   if(sm){sm.textContent=r?`${r} ${r===1?"probleem":"problemen"}${o?` en ${o} aandachtspunt${o===1?"":"en"}`:""}`:o?`${o} aandachtspunt${o===1?"":"en"}`:"Alles in orde";sm.style.color=r?"var(--slecht)":o?"var(--let)":"var(--goed)";if((r||o)&&dt&&!dt.dataset.z){dt.open=true}if(dt)dt.dataset.z="1"}}
   const hl=(D.herstel||[]).slice(0,6);
-  document.getElementById("herstelLijst").innerHTML=hl.length?`<div class="sub" style="margin-bottom:4px"><b>Zelf opgelost (laatste 7 dagen)</b></div>`+hl.map(h=>`<div class="sub">${h.ok?"✅":"🛟"} ${new Date(h.t).toLocaleString("nl-NL",{weekday:"short",hour:"2-digit",minute:"2-digit"})}: ${h.probleem} → ${h.actie}</div>`).join(""):"";
+  document.getElementById("herstelLijst").innerHTML=hl.length?`<details><summary class="sub" style="cursor:pointer"><b>Zelf opgelost (laatste 7 dagen): ${hl.length}</b></summary>`+hl.map(h=>`<div class="sub">${h.ok?"✅":"🛟"} ${new Date(h.t).toLocaleString("nl-NL",{weekday:"short",hour:"2-digit",minute:"2-digit"})}: ${h.probleem} → ${h.actie}</div>`).join("")+"</details>":"";
   if(!RUNS&&D.repo){RUNS=[];fetch(`https://api.github.com/repos/${D.repo}/actions/workflows/publiceren.yml/runs?per_page=10`).then(r=>r.json()).then(j=>{RUNS=j.workflow_runs||[];bouwGezondheid()}).catch(()=>{})}
 }
 function delta(nu,oud){if(!oud&&!nu)return "";if(!oud)return `<span class="delta op">↗ nieuw</span>`;const p=Math.round((nu-oud)/oud*100);return `<span class="delta ${p>=0?"op":"af"}">${p>=0?"↗":"↘"} ${p>=0?"+":""}${p}% t.o.v. vorige week</span>`}
@@ -1102,6 +1111,7 @@ function bouwTegels(){
 }
 function bouwSnelLeren(){
   const s=D.snel_leren,el=document.getElementById("snelLeren");
+  if(!el)return;
   if(!s){el.innerHTML="";return}
   const nodig=D.min_posts_voor_leren,gem=D.gemeten_posts,pct=Math.min(100,Math.round(Math.min(s.dag,s.dagen)/s.dagen*100));
   const tot=new Date(s.tot).toLocaleDateString("nl-NL",{day:"numeric",month:"long"});
@@ -1126,7 +1136,7 @@ function bouwGroei(){
   el.innerHTML=svg+`<div class="legenda" style="margin-top:6px"><span style="color:#e86bc3">● Instagram ${fmt(nu.instagram)}</span><span style="color:#3b7cf0">● Facebook ${fmt(nu.facebook)}</span>${gr.length<2?"<span>Vanaf morgen een lijn</span>":""}</div>`;
 }
 function bouwTop(){
-  const el=document.getElementById("topPosts"),pub=D.posts.filter(x=>x.status==="gepubliceerd");
+  const el=document.getElementById("topPosts");if(!el)return;const pub=D.posts.filter(x=>x.status==="gepubliceerd");
   const sc=x=>{const v=Object.values(x.score);return v.length?v.reduce((a,b)=>a+b)/v.length:null};
   const met=pub.filter(x=>sc(x)!=null).sort((a,b)=>sc(b)-sc(a));
   const opBereik=pub.filter(x=>(x.totaal.reach||x.totaal.views)).sort((a,b)=>(b.totaal.reach||b.totaal.views)-(a.totaal.reach||a.totaal.views));
