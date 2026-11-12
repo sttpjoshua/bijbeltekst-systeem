@@ -3563,7 +3563,7 @@
  {
   "id": "2026-11-12-5",
   "datum": "2026-11-12",
-  "status": "klaar_voor_render",
+  "status": "gerenderd",
   "vers_id": "I_John-4-7-7",
   "ref": "1 Johannes 4:7",
   "tekst": "Geliefden! Laat ons elkander liefhebben, want de liefde is uit God; en een iegelijk, die liefheeft, is uit God geboren, en kent God.",
@@ -3620,7 +3620,7 @@
   "uitleg": "Heb elkaar lief, want liefde komt van God.",
   "betekenis": "Johannes zegt dat liefde haar bron in God heeft. Wie liefheeft, laat iets van God zien. Liefde is dus meer dan een gevoel: het is familietrek.",
   "toepassing": "Denk aan iemand die je vandaag over het hoofd zag en laat diegene weten dat je om hem of haar geeft.",
-  "kernwoord": "Ziet",
+  "kernwoord": "liefhebben",
   "media": "docs/media/2026-11/2026-11-12-5-1.jpg",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-5-1.jpg",
   "metricool": {},
@@ -3644,19 +3644,18 @@
   ],
   "story_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-5-story.jpg",
   "goedgekeurd": null,
-  "verhaal_hook": "Het is bijna intocht. Wat is het mooiste cadeau dat je ooit kreeg?",
+  "verhaal_hook": "Liefde begint niet bij jou. Ze heeft een bron.",
   "tekstbron": "tekstbank",
-  "reel_uitleg": "Kijk hoe groot de liefde van de Vader is: we heten kinderen van God.",
-  "reel_vraag": "Weet jij dat je Gods kind bent?",
-  "reel_herkenning": "Voor iedereen die zich vandaag geen kind van God voelt.",
+  "reel_uitleg": "Laten we elkaar liefhebben, want liefde komt van God.",
+  "reel_vraag": "Van wie heb jij liefde geleerd?",
+  "reel_herkenning": "Voor iedereen die vandaag liefde wil geven.",
   "nieuws": {
    "categorie": "sinterklaas",
    "kop": "Aanlegplaats Grave niet diep genoeg voor stoomboot Sinterklaas, Defensie schiet te hulp",
    "bron": "NOS",
    "link": "https://nos.nl/l/2639117",
    "zwaar": false
-  },
-  "nieuws_brug": "Cadeaus zijn mooi, deze gave blijft."
+  }
  },
  {
   "id": "2026-11-13-1",
@@ -4276,7 +4275,25 @@
    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-14-1-3.jpg"
   ],
   "story_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-14-1-story.jpg",
-  "goedgekeurd": null
+  "goedgekeurd": null,
+  "reserve": {
+   "vers_id": "Jeremiah-1-5-5",
+   "ref": "Jeremia 1:5",
+   "tekst": "Eer Ik u in moeders buik formeerde, heb Ik u gekend, en eer gij uit de baarmoeder voortkwaamt, heb Ik u geheiligd; Ik heb u den volken tot een profeet gesteld.",
+   "vertaling": "SV",
+   "thema": "identiteit",
+   "boekgroep": "profeten",
+   "lengte": "middel",
+   "bron": "bekend",
+   "hook": "Weet jij dat God je al kende voor je geboorte?",
+   "caption": "Weet jij dat God je al kende voor je geboorte?\n\n\"Eer Ik u in moeders buik formeerde, heb Ik u gekend, en eer gij uit de baarmoeder voortkwaamt, heb Ik u geheiligd; Ik heb u den volken tot een profeet gesteld.\"\nJeremia 1:5\n\nGod kende je al voordat je geboren werd.",
+   "hashtags": [],
+   "uitleg": "",
+   "betekenis": "God zegt tegen Jeremia: Ik kende je al voordat je bestond. Je leven is geen toeval. God had al een plan met je voordat je ademhaalde.",
+   "toepassing": "Bedenk vandaag: God kende mij al voordat iemand anders mij kende.",
+   "kernwoord": "gekend",
+   "verhaal_hook": "Je bestond al in Gods gedachten voordat je er was."
+  }
  },
  {
   "id": "2026-11-14-2",
@@ -4368,7 +4385,30 @@
   "goedgekeurd": null,
   "reel_herkenning": "",
   "reel_uitleg": "God is bij je, een held die redt. Hij is blij met jou en zingt over je.",
-  "reel_vraag": "Weet jij dat God blij met je is?"
+  "reel_vraag": "Weet jij dat God blij met je is?",
+  "reserve": {
+   "vers_id": "Psalms-131-2-2",
+   "ref": "Psalm 131:2",
+   "tekst": "Zo ik mijn ziel niet heb gezet en stil gehouden, gelijk een gespeend kind bij zijn moeder! Mijn ziel is als een gespeend kind in mij.",
+   "vertaling": "SV",
+   "thema": "vrede_rust",
+   "boekgroep": "psalmen",
+   "lengte": "middel",
+   "bron": "bekend",
+   "hook": "Goedemorgen. Begin je dag hiermee.",
+   "caption": "Goedemorgen. Begin je dag hiermee.\n\n\"Zo ik mijn ziel niet heb gezet en stil gehouden, gelijk een gespeend kind bij zijn moeder! Mijn ziel is als een gespeend kind in mij.\"\nPsalm 131:2\n\nBij God mag je gewoon stil en veilig zijn.",
+   "hashtags": [
+    "#rust",
+    "#psalmen",
+    "#bijbeltekst",
+    "#vrede"
+   ],
+   "uitleg": "Ik heb mijn ziel tot rust gebracht, zoals een kind dat stil bij zijn moeder ligt.",
+   "betekenis": "David vergelijkt zichzelf met een klein kind dat rustig bij zijn moeder ligt. Het kind hoeft niets, wil niets, is gewoon stil en veilig. Zo mag jouw ziel zijn bij God.",
+   "toepassing": "Neem vandaag een paar minuten om alleen maar stil te zijn bij God, zonder iets te vragen.",
+   "kernwoord": "kind",
+   "verhaal_hook": "Je hoeft niets. Gewoon stil zijn, zoals een kind."
+  }
  },
  {
   "id": "2026-11-14-3",
@@ -4456,7 +4496,29 @@
   "story_url": null,
   "goedgekeurd": null,
   "reel_herkenning": "Voor iedereen die merkt dat scrollen niet goed voor hem is.",
-  "reel_uitleg": "Bescherm je hart boven alles, want daaruit komt je hele leven."
+  "reel_uitleg": "Bescherm je hart boven alles, want daaruit komt je hele leven.",
+  "reserve": {
+   "vers_id": "Psalms-18-3-3",
+   "ref": "Psalm 18:3",
+   "tekst": "De HEERE is mijn Steenrots, en mijn Burg, en mijn Uithelper; mijn God, mijn Rots, op Welken ik betrouw; mijn Schild, en de Hoorn mijns heils, mijn Hoog Vertrek.",
+   "vertaling": "SV",
+   "thema": "moed",
+   "boekgroep": "psalmen",
+   "lengte": "middel",
+   "bron": "bekend",
+   "hook": "Voor iedereen die vaste grond zoekt.",
+   "caption": "Voor iedereen die vaste grond zoekt.\n\n\"De HEERE is mijn Steenrots, en mijn Burg, en mijn Uithelper; mijn God, mijn Rots, op Welken ik betrouw; mijn Schild, en de Hoorn mijns heils, mijn Hoog Vertrek.\"\nPsalm 18:3\n\nGod is een rots waar je op kunt bouwen.",
+   "hashtags": [
+    "#bijbelvers",
+    "#moed",
+    "#psalm"
+   ],
+   "uitleg": "",
+   "betekenis": "David stapelt beelden op elkaar: rots, burcht, schild, toevlucht. Alsof één woord niet genoeg is om te zeggen hoe veilig hij zich bij God voelt.",
+   "toepassing": "Welk beeld past vandaag het best bij wat je van God nodig hebt? Bid daarmee.",
+   "kernwoord": "Steenrots",
+   "verhaal_hook": "Eén woord was niet genoeg voor David."
+  }
  },
  {
   "id": "2026-11-14-4",
@@ -4536,7 +4598,25 @@
    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-14-4-4.jpg"
   ],
   "story_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-14-4-story.jpg",
-  "goedgekeurd": null
+  "goedgekeurd": null,
+  "reserve": {
+   "vers_id": "Psalms-112-7-7",
+   "ref": "Psalm 112:7",
+   "tekst": "Hij zal voor geen kwaad gerucht vrezen; zijn hart is vast, betrouwende op den HEERE.",
+   "vertaling": "SV",
+   "thema": "vertrouwen",
+   "boekgroep": "psalmen",
+   "lengte": "kort",
+   "bron": "bekend",
+   "hook": "Voor iedereen die onrustig wordt van het nieuws.",
+   "caption": "Voor iedereen die onrustig wordt van het nieuws.\n\n\"Hij zal voor geen kwaad gerucht vrezen; zijn hart is vast, betrouwende op den HEERE.\"\nPsalm 112:7\n\nEen hart dat op God vertrouwt, blijft vast.",
+   "hashtags": [],
+   "uitleg": "Hij is niet bang voor slecht nieuws. Zijn hart is vast, want hij vertrouwt op God.",
+   "betekenis": "De dichter beschrijft iemand die God vertrouwt. Slecht nieuws kan komen, maar zijn hart blijft vast. Niet omdat hij nergens om geeft, maar omdat hij weet wie hij vertrouwt.",
+   "toepassing": "Merk je vandaag onrust bij het nieuws? Leg het bij God neer en adem even rustig.",
+   "kernwoord": "vast",
+   "verhaal_hook": "Er bestaat een hart dat niet schrikt van slecht nieuws."
+  }
  },
  {
   "id": "2026-11-14-5",
@@ -4619,7 +4699,30 @@
    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-14-5-3.jpg"
   ],
   "story_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-14-5-story.jpg",
-  "goedgekeurd": null
+  "goedgekeurd": null,
+  "reserve": {
+   "vers_id": "Joshua-1-6-6",
+   "ref": "Jozua 1:6",
+   "tekst": "Wees sterk en heb goeden moed! want gij zult dit volk dat land erfelijk doen bezitten, dat Ik hun vaderen heb gezworen hun te geven.",
+   "vertaling": "SV",
+   "thema": "moed",
+   "boekgroep": "wijsheid",
+   "lengte": "middel",
+   "bron": "bekend",
+   "hook": "Voor iedereen die vandaag iets groots moet beginnen.",
+   "caption": "Voor iedereen die vandaag iets groots moet beginnen.\n\n\"Wees sterk en heb goeden moed! want gij zult dit volk dat land erfelijk doen bezitten, dat Ik hun vaderen heb gezworen hun te geven.\"\nJozua 1:6\n\nGod geeft moed bij elke opdracht.\n\nVoor welke opdracht heb jij moed nodig?",
+   "hashtags": [
+    "#moed",
+    "#jozua",
+    "#bijbeltekst",
+    "#kracht"
+   ],
+   "uitleg": "",
+   "betekenis": "God geeft Jozua een grote opdracht en zegt erbij: wees sterk en moedig. Moed is nodig als je iets nieuws en groots moet doen. God belooft dat het zal lukken.",
+   "toepassing": "Welke opdracht ligt er voor jou? Zet vandaag één moedige stap.",
+   "kernwoord": "moed",
+   "verhaal_hook": "Grote opdrachten vragen om moed."
+  }
  },
  {
   "reeks": "Vers van de week",
@@ -5052,84 +5155,5 @@
   "story_url": null,
   "goedgekeurd": null,
   "reel_herkenning": "Voor iedereen die wacht op iets dat nog niet komt."
- },
- {
-  "id": "2026-11-12-n2200",
-  "status": "gerenderd",
-  "vers_id": "Ephesians-2-10-10",
-  "ref": "Efeze 2:10",
-  "tekst": "Want wij zijn Zijn maaksel, geschapen in Christus Jezus tot goede werken, welke God voorbereid heeft, opdat wij in dezelve zouden wandelen.",
-  "vertaling": "SV",
-  "variabelen": {
-   "palet": "bosgroen",
-   "lettertype": "montserrat_zwaar",
-   "layout": "links",
-   "achtergrond": "diagonaal",
-   "huisstijl": "bosgroen",
-   "thema": "identiteit",
-   "hook_stijl": "geen",
-   "formaat": "carrousel",
-   "uitleg_op_beeld": false,
-   "achtergrondbron": "verloop",
-   "boekgroep": "brieven",
-   "lengte": "middel",
-   "bron": "bekend",
-   "vraag_onderaan": true,
-   "opening": "vers",
-   "tijdslot": "22:00",
-   "hook_op_beeld": false,
-   "tijdslot_fb": null
-  },
-  "keuzebron": {
-   "huisstijl": "nood",
-   "thema": "nood",
-   "hook_stijl": "nood",
-   "formaat": "nood",
-   "uitleg_op_beeld": "nood",
-   "achtergrondbron": "nood",
-   "boekgroep": "nood",
-   "lengte": "nood",
-   "bron": "nood",
-   "vraag_onderaan": "nood",
-   "opening": "nood",
-   "tijdslot": "nood"
-  },
-  "hook": "Jij bent geen toeval.",
-  "beeld_hook": "",
-  "caption": "Jij bent geen toeval.\n\n\"Want wij zijn Zijn maaksel, geschapen in Christus Jezus tot goede werken, welke God voorbereid heeft, opdat wij in dezelve zouden wandelen.\"\nEfeze 2:10\n\nJe bent door God gemaakt, met goede dingen die al voor je klaarliggen.\n\nWelk goed ding zou God vandaag voor jou klaar hebben gelegd?",
-  "hashtags": [
-   "#identiteit",
-   "#efeze",
-   "#bijbeltekst",
-   "#god",
-   "#geloof"
-  ],
-  "uitleg": "",
-  "betekenis": "Paulus noemt ons Gods maaksel, zoals een kunstwerk van een maker. God heeft ons niet alleen gemaakt, Hij heeft ook goede dingen voorbereid om te doen.",
-  "toepassing": "Let vandaag op één kans om iemand te helpen of te bemoedigen, en pak die.",
-  "kernwoord": "maaksel",
-  "media": "docs/media/nood/nood-20261108-6-52-1.jpg",
-  "media_extra": [
-   "docs/media/nood/nood-20261108-6-52-2.jpg",
-   "docs/media/nood/nood-20261108-6-52-3.jpg"
-  ],
-  "beeld": null,
-  "muziek": null,
-  "geluid": null,
-  "metricool": {},
-  "stats": {},
-  "handle": "@bibleverse_nl",
-  "thumb": "thumbs/nood-20261108-6-52.jpg",
-  "story": "docs/media/nood/nood-20261108-6-52-story.jpg",
-  "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-6-52-1.jpg",
-  "media_urls": [
-   "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-6-52-1.jpg",
-   "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-6-52-2.jpg",
-   "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-6-52-3.jpg"
-  ],
-  "story_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-6-52-story.jpg",
-  "goedgekeurd": true,
-  "datum": "2026-11-12",
-  "nood": true
  }
 ]

@@ -1082,5 +1082,20 @@
   "t": "2026-11-12T14:31:25",
   "soort": "info",
   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
+ },
+ {
+  "t": "2026-11-12T14:34:40",
+  "soort": "info",
+  "tekst": "Materiaal-repo niet gekloond (add_repo ontbreekt in deze sessie); Actions vult muziek aan"
+ },
+ {
+  "t": "2026-11-12T14:36:59",
+  "soort": "info",
+  "tekst": "Zelf opgelost: post 22:00 van vandaag (1 Johannes 4:7, gekozen reservevers) bleef op 'klaar_voor_render' staan met het kernwoord van het oude vers. Kernwoord, openingszin en reelteksten hersteld en opnieuw gemaakt. Bediening neemt bij 'ander vers' nu ook het kernwoord en de openingszin mee. De noodpost (Efeze 2:10, morgen al gepland) is teruggezet in de noodvoorraad; zelfherstel maakt zo'n post voortaan eerst af en kiest geen noodvers dat al gepland staat."
+ },
+ {
+  "t": "2026-11-12T14:37:41",
+  "soort": "info",
+  "tekst": "Dagelijkse run (zelfstandig): 10 posts voor 13 en 14 november gecontroleerd, reserveverzen voor 14 november ingevuld"
  }
 ]

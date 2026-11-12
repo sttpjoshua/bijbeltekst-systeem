@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T14:31:26",
+ "updated": "2026-11-12T14:37:41",
  "agents": {
   "verskiezer": {
    "t": "2026-11-12T13:05:11",
@@ -7,8 +7,8 @@
    "state": "done"
   },
   "designer": {
-   "t": "2026-11-12T13:05:11",
-   "task": "Ontwierp 1 Johannes 3:1 in stijl zonsopgang",
+   "t": "2026-11-12T14:35:50",
+   "task": "Ontwierp 1 Johannes 4:7 in stijl zonsopgang",
    "state": "done"
   },
   "video": {
@@ -57,6 +57,18 @@
  ],
  "log": [
   {
+   "t": "14:37",
+   "msg": "Dagelijkse run (zelfstandig): 10 posts voor 13 en 14 november gecontroleerd, reserveverzen voor 14 november in"
+  },
+  {
+   "t": "14:36",
+   "msg": "Zelf opgelost: post 22:00 van vandaag (1 Johannes 4:7, gekozen reservevers) bleef op 'klaar_voor_render' staan"
+  },
+  {
+   "t": "14:34",
+   "msg": "Materiaal-repo niet gekloond (add_repo ontbreekt in deze sessie); Actions vult muziek aan"
+  },
+  {
    "t": "14:31",
    "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
   },
@@ -91,18 +103,6 @@
   {
    "t": "13:05",
    "msg": "Bediening: Nieuwsposts aangepast: Psalm 20:8 (17:45), 1 Johannes 3:1 (22:00)"
-  },
-  {
-   "t": "13:05",
-   "msg": "Nieuwspost aangepast: Psalm 92:2 is nu 1 Johannes 3:1 (sinterklaas): Het is bijna intocht. Wat is het mooiste "
-  },
-  {
-   "t": "13:05",
-   "msg": "Nieuwspost aangepast: Psalm 20:8 is nu Psalm 20:8 (politiek): Veel meningen, veel onrust. Even terug naar wat "
-  },
-  {
-   "t": "12:43",
-   "msg": "Bediening: Psalm 20:8 opnieuw gemaakt (stijl meelees-abrikoos, achtergrond kleurverloop, eerste slide vers)"
   }
  ],
  "lampen": [

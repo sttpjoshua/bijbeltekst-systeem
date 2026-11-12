@@ -1472,6 +1472,13 @@ def noodinzet(nu):
         return 0
     posts = laad("data/posts.json", [])
     d = nu.date().isoformat()
+    if any(p["datum"] == d and p["status"] == "klaar_voor_render" for p in posts):
+        # een post die nog gemaakt moet worden (bv. ander vers gekozen) is geen leeg slot: eerst maken
+        try:
+            cmd_render(d)
+        except SystemExit:
+            pass
+        posts = laad("data/posts.json", [])
     vandaag = [p for p in posts if p["datum"] == d]
     actief = [p for p in vandaag if p["status"] in ("gerenderd", "gepubliceerd", "gepland", "fout")]
     tekort = min(cfg["posts_per_dag"], cfg["max_posts_per_dag"]) - len(actief)
@@ -1483,7 +1490,10 @@ def noodinzet(nu):
     voorraad = laad("data/noodvoorraad.json", [])
     gezet = 0
     for slot in vrij[:tekort]:
-        kl = [n for n in voorraad if n["status"] == "gerenderd"]
+        recent = {p.get("vers_id") for p in posts
+                  if p.get("datum", "") >= (nu.date() - dt.timedelta(days=60)).isoformat()}
+        alle_kl = [n for n in voorraad if n["status"] == "gerenderd"]
+        kl = [n for n in alle_kl if n.get("vers_id") not in recent] or alle_kl  # liefst geen vers dat net (of straks) al langskomt
         if not kl:
             cmd_log("Noodvoorraad is op: er staan vandaag te weinig posts klaar.", "fout", code="nood_op")
             break

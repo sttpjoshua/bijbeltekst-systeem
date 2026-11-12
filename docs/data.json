@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-12T14:31",
+ "gegenereerd": "2026-11-12T14:37",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -690,7 +690,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Jozua 1:6",
    "caption": "Voor iedereen bij wie het in zijn hoofd nooit stil is.\n\n\"Doch gij, o mijn ziel! zwijg Gode; want van Hem is mijn verwachting.\"\nPsalm 62:6\n\nStilte bij God geeft rust en hoop.\n\nWanneer was jij voor het laatst echt stil?",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-14-5-1.jpg",
@@ -762,7 +762,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Psalm 112:7",
    "caption": "Voor iedereen die vannacht lag te piekeren.\n\n\"Zijt dan niet bezorgd tegen den morgen; want de morgen zal voor het zijne zorgen; elke dag heeft genoeg aan zijn zelfs kwaad.\"\nMattheüs 6:34\n\nVandaag is genoeg. Morgen zorgt God ook.",
    "uitleg": "Maak je geen zorgen over morgen. Elke dag heeft genoeg aan zijn eigen zorgen.",
    "media": "docs/media/2026-11/2026-11-14-4-1.jpg",
@@ -839,7 +839,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Psalm 18:3",
    "caption": "Voor iedereen die merkt dat scrollen niet goed voor hem is.\n\n\"Behoed uw hart boven al wat te bewaren is, want daaruit zijn de uitgangen des levens.\"\nSpreuken 4:23\n\nWat je hart vult, bepaalt hoe je leeft.",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-14-3.mp4",
@@ -917,7 +917,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Psalm 131:2",
    "caption": "Goedemorgen. Begin je dag hiermee.\n\n\"De HEERE uw God, is in het midden van u, een Held, Die verlossen zal; Hij zal over u vrolijk zijn met blijdschap, Hij zal zwijgen in Zijn liefde, Hij zal Zich over u verheugen met gejuich.\"\nSefanja 3:17\n\nGod is blij met jou.",
    "uitleg": "God is bij je, een held die redt. Hij is blij met jou en zingt over je.",
    "media": "docs/media/2026-11/2026-11-14-2.mp4",
@@ -993,7 +993,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Jeremia 1:5",
    "caption": "Wat zou jij doen met meer wijsheid?\n\n\"De wijsheid is het voornaamste; verkrijg dan wijsheid, en verkrijg verstand met al uw bezitting.\"\nSpreuken 4:7\n\nWijsheid is een investering die altijd iets oplevert.",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-14-1-1.jpg",
@@ -1419,80 +1419,12 @@
    "online": null
   },
   {
-   "id": "2026-11-12-n2200",
-   "datum": "2026-11-12",
-   "ref": "Efeze 2:10",
-   "tekst": "Want wij zijn Zijn maaksel, geschapen in Christus Jezus tot goede werken, welke God voorbereid heeft, opdat wij in dezelve zouden wandelen.",
-   "hook": "Jij bent geen toeval.",
-   "status": "gerenderd",
-   "variabelen": {
-    "palet": "bosgroen",
-    "lettertype": "montserrat_zwaar",
-    "layout": "links",
-    "achtergrond": "diagonaal",
-    "huisstijl": "bosgroen",
-    "thema": "identiteit",
-    "hook_stijl": "geen",
-    "formaat": "carrousel",
-    "uitleg_op_beeld": false,
-    "achtergrondbron": "verloop",
-    "boekgroep": "brieven",
-    "lengte": "middel",
-    "bron": "bekend",
-    "vraag_onderaan": true,
-    "opening": "vers",
-    "tijdslot": "22:00",
-    "hook_op_beeld": false,
-    "tijdslot_fb": null
-   },
-   "vers_id": "Ephesians-2-10-10",
-   "goedgekeurd": true,
-   "reeks": null,
-   "reeks_label": null,
-   "reserve_ref": null,
-   "caption": "Jij bent geen toeval.\n\n\"Want wij zijn Zijn maaksel, geschapen in Christus Jezus tot goede werken, welke God voorbereid heeft, opdat wij in dezelve zouden wandelen.\"\nEfeze 2:10\n\nJe bent door God gemaakt, met goede dingen die al voor je klaarliggen.\n\nWelk goed ding zou God vandaag voor jou klaar hebben gelegd?",
-   "uitleg": "",
-   "media": "docs/media/nood/nood-20261108-6-52-1.jpg",
-   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-6-52-1.jpg",
-   "media_urls": [
-    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-6-52-1.jpg",
-    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-6-52-2.jpg",
-    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261108-6-52-3.jpg"
-   ],
-   "thumb": "thumbs/nood-20261108-6-52.jpg",
-   "platformen": [],
-   "links": {},
-   "totaal": {},
-   "per_platform": {},
-   "score": {},
-   "keuzebron": {
-    "huisstijl": "nood",
-    "thema": "nood",
-    "hook_stijl": "nood",
-    "formaat": "nood",
-    "uitleg_op_beeld": "nood",
-    "achtergrondbron": "nood",
-    "boekgroep": "nood",
-    "lengte": "nood",
-    "bron": "nood",
-    "vraag_onderaan": "nood",
-    "opening": "nood",
-    "tijdslot": "nood"
-   },
-   "momenten": {},
-   "pub": {},
-   "gemist": [],
-   "nood": true,
-   "nieuws": null,
-   "online": null
-  },
-  {
    "id": "2026-11-12-5",
    "datum": "2026-11-12",
    "ref": "1 Johannes 4:7",
    "tekst": "Geliefden! Laat ons elkander liefhebben, want de liefde is uit God; en een iegelijk, die liefheeft, is uit God geboren, en kent God.",
    "hook": "Stuur vanavond nog één lief berichtje.",
-   "status": "klaar_voor_render",
+   "status": "gerenderd",
    "variabelen": {
     "huisstijl": "zonsopgang",
     "thema": "liefde",
@@ -4506,21 +4438,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-11T12:16:10",
-   "soort": "info",
-   "tekst": "2026-11-11-n1215 ook als story geplaatst"
-  },
-  {
-   "t": "2026-11-11T12:16:10",
-   "soort": "info",
-   "tekst": "2026-11-11-n1215 online op instagram: Jeremia 17:7"
-  },
-  {
-   "t": "2026-11-11T12:16:19",
-   "soort": "info",
-   "tekst": "2026-11-11-n1215 online op facebook: Jeremia 17:7"
-  },
-  {
    "t": "2026-11-11T12:51:08",
    "soort": "info",
    "tekst": "Statistieken opgehaald voor 7 posts"
@@ -4807,6 +4724,21 @@
    "t": "2026-11-12T14:31:25",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-12T14:34:40",
+   "soort": "info",
+   "tekst": "Materiaal-repo niet gekloond (add_repo ontbreekt in deze sessie); Actions vult muziek aan"
+  },
+  {
+   "t": "2026-11-12T14:36:59",
+   "soort": "info",
+   "tekst": "Zelf opgelost: post 22:00 van vandaag (1 Johannes 4:7, gekozen reservevers) bleef op 'klaar_voor_render' staan met het kernwoord van het oude vers. Kernwoord, openingszin en reelteksten hersteld en opnieuw gemaakt. Bediening neemt bij 'ander vers' nu ook het kernwoord en de openingszin mee. De noodpost (Efeze 2:10, morgen al gepland) is teruggezet in de noodvoorraad; zelfherstel maakt zo'n post voortaan eerst af en kiest geen noodvers dat al gepland staat."
+  },
+  {
+   "t": "2026-11-12T14:37:41",
+   "soort": "info",
+   "tekst": "Dagelijkse run (zelfstandig): 10 posts voor 13 en 14 november gecontroleerd, reserveverzen voor 14 november ingevuld"
   }
  ],
  "recente_fouten": [],
@@ -4935,12 +4867,12 @@
    "detail": "12 nieuwe metingen"
   },
   "zelftest": {
-   "ok": "2026-11-09T13:03",
+   "ok": "2026-11-12T14:36",
    "laatst_ok": true,
    "detail": "12 onderdelen gemaakt en gecontroleerd"
   },
   "dagelijks": {
-   "ok": "2026-11-11T14:35",
+   "ok": "2026-11-12T14:37",
    "laatst_ok": true,
    "detail": "10 posts voor MORGEN en OVERMORGEN klaargezet"
   },
@@ -5545,7 +5477,7 @@
   }
  ],
  "nood": {
-  "klaar": 5,
+  "klaar": 6,
   "doel": 6
  },
  "tekstbank": {
@@ -5670,7 +5602,7 @@
    "herkenning": "Voor iedereen die zich afvraagt of het ertoe doet wat hij doet.",
    "uit": false,
    "laatst": "2026-11-13",
-   "n": 2
+   "n": 1
   },
   {
    "id": "Ephesians-5-20-20",
@@ -7558,7 +7490,7 @@
      {
       "optie": "bosgroen",
       "online": 1,
-      "gepland": 1,
+      "gepland": 0,
       "n": 0,
       "gem": null,
       "oordeel": "weinig data"
@@ -7651,7 +7583,7 @@
      {
       "optie": "identiteit",
       "online": 1,
-      "gepland": 4,
+      "gepland": 3,
       "n": 0,
       "gem": null,
       "oordeel": "weinig data"

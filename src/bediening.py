@@ -235,9 +235,19 @@ def main(raw):
         later = cfg.setdefault("verzen_later", {})
         later[p["vers_id"]] = (dt.date.today() + dt.timedelta(days=30)).isoformat()
         oud = p["ref"]
-        for k in ("vers_id", "ref", "tekst", "vertaling", "hook", "caption", "hashtags", "uitleg", "betekenis", "toepassing"):
+        for k in ("vers_id", "ref", "tekst", "vertaling", "hook", "caption", "hashtags", "uitleg", "betekenis", "toepassing", "kernwoord"):
             if k in r:
                 p[k] = r[k]
+        # velden die bij het oude vers hoorden niet laten staan (kernwoord, openingszin, reelteksten)
+        import tekstbank
+        e = tekstbank.laad().get(p["vers_id"]) or {}
+        if not r.get("kernwoord") and e.get("kw"):
+            p["kernwoord"] = e["kw"]
+        p["verhaal_hook"] = r.get("verhaal_hook") or e.get("verhaal", "")
+        p["reel_uitleg"] = e.get("uitleg") or r.get("uitleg", "")
+        p["reel_vraag"] = (e.get("hooks") or {}).get("vraag", "")
+        p["reel_herkenning"] = (e.get("hooks") or {}).get("herkenning", "")
+        p.pop("nieuws_brug", None)
         for f in ("thema", "boekgroep", "lengte", "bron"):
             if f in r:
                 p["variabelen"][f] = r[f]
