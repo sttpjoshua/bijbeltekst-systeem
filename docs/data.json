@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-12T20:35",
+ "gegenereerd": "2026-11-12T20:45",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -4553,26 +4553,6 @@
  "leergeschiedenis": [],
  "laatste_rapport": null,
  "logboek": [
-  {
-   "t": "2026-11-11T13:52:50",
-   "soort": "info",
-   "tekst": "Bediening: WhatsApp-testbericht klaargezet"
-  },
-  {
-   "t": "2026-11-11T14:35:31",
-   "soort": "info",
-   "tekst": "Zelf opgelost: open melding over politiek nieuws (Raad van State) was al afgehandeld; Joshua koos de post, die staat als Prediker 3:1 vandaag om 17:45 klaar. Melding gesloten."
-  },
-  {
-   "t": "2026-11-11T14:35:31",
-   "soort": "info",
-   "tekst": "Materiaalrepo niet gekloond in deze run (add_repo ontbreekt); geen gevolgen, posts waren al gemaakt"
-  },
-  {
-   "t": "2026-11-11T14:35:31",
-   "soort": "info",
-   "tekst": "Reserveverzen gekozen en geschreven voor 12 en 13 november; hook van 13-11 12:15 aangepast aan het tijdstip"
-  },
   {
    "t": "2026-11-11T14:35:32",
    "soort": "info",

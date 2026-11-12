@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T20:35:56",
+ "updated": "2026-11-12T20:45:48",
  "agents": {
   "verskiezer": {
    "t": "2026-11-12T13:05:11",
@@ -57,51 +57,15 @@
  ],
  "log": [
   {
-   "t": "14:37",
-   "msg": "Dagelijkse run (zelfstandig): 10 posts voor 13 en 14 november gecontroleerd, reserveverzen voor 14 november in"
-  },
-  {
-   "t": "14:45",
-   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
-   "t": "17:46",
-   "msg": "2026-11-12-5 online op facebook: 1 Johannes 4:7"
-  },
-  {
-   "t": "17:46",
-   "msg": "2026-11-12-3 online op instagram: Psalm 20:8"
-  },
-  {
-   "t": "17:46",
-   "msg": "2026-11-12-3 ook als story geplaatst"
-  },
-  {
-   "t": "18:03",
-   "msg": "Bediening: 1 Johannes 4:7 opnieuw gemaakt (stijl papier_blauw, achtergrond kleurverloop, eerste slide verhaal)"
-  },
-  {
-   "t": "18:06",
-   "msg": "Bediening: 1 Johannes 4:7 opnieuw gemaakt (stijl papier_blauw, achtergrond kleurverloop, eerste slide verhaal)"
-  },
-  {
-   "t": "19:02",
-   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
-   "t": "20:31",
-   "msg": "2026-11-12-3 online op facebook: Psalm 20:8"
-  },
-  {
-   "t": "20:32",
+   "t": "20:35",
    "msg": "2026-11-12-4 online op facebook: Spreuken 15:14"
   },
   {
-   "t": "20:32",
+   "t": "20:35",
    "msg": "2026-11-12-4 online op instagram: Spreuken 15:14"
   },
   {
-   "t": "20:32",
+   "t": "20:35",
    "msg": "2026-11-12-4 ook als story geplaatst"
   },
   {
@@ -109,16 +73,36 @@
    "msg": "2026-11-12-3 online op facebook: Psalm 20:8"
   },
   {
-   "t": "20:35",
+   "t": "20:32",
    "msg": "2026-11-12-4 online op facebook: Spreuken 15:14"
   },
   {
-   "t": "20:35",
+   "t": "20:32",
    "msg": "2026-11-12-4 online op instagram: Spreuken 15:14"
   },
   {
-   "t": "20:35",
+   "t": "20:32",
    "msg": "2026-11-12-4 ook als story geplaatst"
+  },
+  {
+   "t": "20:31",
+   "msg": "2026-11-12-3 online op facebook: Psalm 20:8"
+  },
+  {
+   "t": "19:02",
+   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
+  {
+   "t": "18:06",
+   "msg": "Bediening: 1 Johannes 4:7 opnieuw gemaakt (stijl papier_blauw, achtergrond kleurverloop, eerste slide verhaal)"
+  },
+  {
+   "t": "18:03",
+   "msg": "Bediening: 1 Johannes 4:7 opnieuw gemaakt (stijl papier_blauw, achtergrond kleurverloop, eerste slide verhaal)"
+  },
+  {
+   "t": "17:46",
+   "msg": "2026-11-12-5 online op facebook: 1 Johannes 4:7"
   }
  ],
  "lampen": [
