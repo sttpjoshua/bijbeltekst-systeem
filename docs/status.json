@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T23:01:05",
+ "updated": "2026-11-12T07:01:14",
  "agents": {
   "verskiezer": {
    "t": "2026-11-11T17:01:01",
@@ -32,13 +32,13 @@
    "state": "done"
   },
   "community": {
-   "t": "2026-11-11T23:01:05",
+   "t": "2026-11-12T07:01:14",
    "task": "1 nieuwe reactie gevonden",
    "state": "done"
   }
  },
  "stats": {
-  "posts_today": 5,
+  "posts_today": 0,
   "posts_total": 21,
   "reach_7d": 85,
   "best_time": "nog onbekend",
@@ -163,7 +163,7 @@
   "formaat": "video"
  },
  "snel_leren": {
-  "dag": 5,
+  "dag": 6,
   "dagen": 7,
   "tot": "2026-11-14"
  }

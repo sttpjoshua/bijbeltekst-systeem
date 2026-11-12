@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-11T23:01",
+ "gegenereerd": "2026-11-12T07:01",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -3607,7 +3607,7 @@
    "ok": "2026-11-08T00:36"
   },
   "reacties": {
-   "ok": "2026-11-11T23:01",
+   "ok": "2026-11-12T07:01",
    "laatst_ok": true,
    "detail": "1 nieuwe reacties",
    "fout": "2026-11-08T18:00"
@@ -3900,7 +3900,7 @@
  "snel_leren": {
   "start": "2026-11-07",
   "tot": "2026-11-14",
-  "dag": 5,
+  "dag": 6,
   "dagen": 7,
   "online": 21,
   "gemeten": 1

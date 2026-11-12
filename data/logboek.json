@@ -934,5 +934,17 @@
   "t": "2026-11-11T22:05:26",
   "soort": "info",
   "tekst": "2026-11-11-n2200 online op facebook: Romeinen 15:4"
+ },
+ {
+  "t": "2026-11-12T07:01:20",
+  "soort": "fout",
+  "tekst": "Politiek nieuws (NOS): \"Wekdienst 12/11: Erop of eronder voor kabinet • Hoger beroep tegen Erasmusschutter\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
+  "code": "nieuws_voorstel",
+  "post": "n111207010"
+ },
+ {
+  "t": "2026-11-12T07:01:23",
+  "soort": "info",
+  "tekst": "Nieuwspost: Habakuk 3:18 vervangen door Psalm 9:2 (aanleiding: hitte, NOS)"
  }
 ]

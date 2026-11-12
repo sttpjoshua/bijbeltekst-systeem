@@ -3010,9 +3010,9 @@
   "id": "2026-11-12-2",
   "datum": "2026-11-12",
   "status": "gerenderd",
-  "vers_id": "Habakkuk-3-18-18",
-  "ref": "Habakuk 3:18",
-  "tekst": "Zo zal ik nochtans in den HEERE van vreugde opspringen, ik zal mij verheugen in den God mijns heils.",
+  "vers_id": "Psalms-9-2-2",
+  "ref": "Psalm 9:2",
+  "tekst": "Ik zal den HEERE loven met mijn ganse hart; ik zal al Uw wonderen vertellen.",
   "vertaling": "SV",
   "variabelen": {
    "huisstijl": "paars",
@@ -3020,12 +3020,12 @@
    "hook_stijl": "vraag",
    "formaat": "carrousel",
    "uitleg_op_beeld": false,
-   "achtergrondbron": "beeld",
-   "boekgroep": "profeten",
-   "lengte": "middel",
+   "achtergrondbron": "verloop",
+   "boekgroep": "psalmen",
+   "lengte": "kort",
    "bron": "bekend",
    "vraag_onderaan": false,
-   "opening": "vers",
+   "opening": "verhaal",
    "tijdslot": "12:15",
    "tijdslot_fb": "22:00",
    "palet": "diep_paars",
@@ -3034,7 +3034,8 @@
    "achtergrond": "radiaal",
    "hook_op_beeld": false,
    "video_uitleg": null,
-   "hashtag_stijl": "mix"
+   "hashtag_stijl": "mix",
+   "aanleiding": "nieuws"
   },
   "keuzebron": {
    "huisstijl": "experiment",
@@ -3047,42 +3048,45 @@
    "lengte": "experiment",
    "bron": "experiment",
    "vraag_onderaan": "experiment",
-   "opening": "experiment",
+   "opening": "nieuws",
    "tijdslot": "experiment",
    "video_uitleg": "n.v.t.",
-   "hashtag_stijl": "test"
+   "hashtag_stijl": "test",
+   "aanleiding": "nieuws"
   },
-  "hook": "Kun jij blij zijn als niet alles lukt?",
+  "hook": "Het is heet vandaag. Zoek de schaduw, en even rust.",
   "beeld_hook": "",
-  "caption": "Kun jij blij zijn als niet alles lukt?\n\n\"Zo zal ik nochtans in den HEERE van vreugde opspringen, ik zal mij verheugen in den God mijns heils.\"\nHabakuk 3:18\n\nHabakuk zegt dit terwijl alles tegenzit. Zijn vreugde hangt niet af van de omstandigheden.",
+  "caption": "Het is heet vandaag. Zoek de schaduw, en even rust.\n\n\"Ik zal den HEERE loven met mijn ganse hart; ik zal al Uw wonderen vertellen.\"\nPsalm 9:2\n\nVertel wat God voor je deed.",
   "hashtags": [
-   "#vreugde",
-   "#habakuk",
+   "#dankbaarheid",
+   "#psalmen",
    "#bijbeltekst",
-   "#hoop"
+   "#getuigenis"
   ],
   "uitleg": "",
-  "betekenis": "Habakuk schrijft dit in een moeilijke tijd: de oogst mislukt en er is weinig hoop. Toch kiest hij voor vreugde, omdat God zijn redder blijft.",
-  "toepassing": "Zit er vandaag iets tegen? Zeg dan bewust: toch ben ik blij met God. Kijk wat het met je doet.",
-  "kernwoord": "vreugde",
+  "betekenis": "David kan het niet voor zichzelf houden. Hij dankt God met zijn hele hart en wil iedereen vertellen wat God deed. Dankbaarheid wil gedeeld worden.",
+  "toepassing": "Vertel vandaag iemand over iets goeds dat God in je leven deed.",
+  "kernwoord": "wonderen",
   "media": "docs/media/2026-11/2026-11-12-2-1.jpg",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-2-1.jpg",
   "metricool": {},
   "stats": {},
-  "beeld": "pexels-dima-langemann-154794175-10633172.jpg",
+  "beeld": null,
   "muziek": null,
   "geluid": null,
   "handle": "@bibleverse_nl",
   "media_extra": [
    "docs/media/2026-11/2026-11-12-2-2.jpg",
-   "docs/media/2026-11/2026-11-12-2-3.jpg"
+   "docs/media/2026-11/2026-11-12-2-3.jpg",
+   "docs/media/2026-11/2026-11-12-2-4.jpg"
   ],
   "thumb": "thumbs/2026-11-12-2.jpg",
   "story": "docs/media/2026-11/2026-11-12-2-story.jpg",
   "media_urls": [
    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-2-1.jpg",
    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-2-2.jpg",
-   "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-2-3.jpg"
+   "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-2-3.jpg",
+   "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-2-4.jpg"
   ],
   "story_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-2-story.jpg",
   "goedgekeurd": null,
@@ -3107,6 +3111,18 @@
    "betekenis": "David kiest bewust: ik vertrouw op God. Daardoor verliest de angst voor mensen zijn greep. Vertrouwen is hier een keuze, geen gevoel.",
    "toepassing": "Noem één ding waar je tegenop ziet en zeg erbij: ik vertrouw op God.",
    "kernwoord": "vertrouw"
+  },
+  "verhaal_hook": "Het is heet vandaag. Zoek de schaduw, en even rust.",
+  "tekstbron": "tekstbank",
+  "reel_uitleg": "Ik dank God met heel mijn hart en vertel over al Zijn wonderen.",
+  "reel_vraag": "Welk wonder heb jij meegemaakt?",
+  "reel_herkenning": "Voor iedereen die vandaag iets moois meemaakte.",
+  "nieuws": {
+   "categorie": "hitte",
+   "kop": "Wildlands probeert schadelijke kever uit tropische kas te krijgen: 'Nog best een jungle'",
+   "bron": "NOS",
+   "link": "https://nos.nl/l/2639080",
+   "zwaar": false
   }
  },
  {
