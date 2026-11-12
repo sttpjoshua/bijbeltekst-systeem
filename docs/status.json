@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T13:46:00",
+ "updated": "2026-11-12T14:01:28",
  "agents": {
   "verskiezer": {
    "t": "2026-11-12T13:05:11",
@@ -32,7 +32,7 @@
    "state": "done"
   },
   "community": {
-   "t": "2026-11-12T13:41:41",
+   "t": "2026-11-12T14:01:26",
    "task": "1 nieuwe reactie gevonden",
    "state": "done"
   }
@@ -56,6 +56,10 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "14:01",
+   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
   {
    "t": "13:46",
    "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
@@ -99,10 +103,6 @@
   {
    "t": "12:16",
    "msg": "2026-11-12-1 online op facebook: Kolossenzen 1:12"
-  },
-  {
-   "t": "12:01",
-   "msg": "Nieuwspost: Spreuken 26:14 vervangen door Psalm 92:2 (aanleiding: sinterklaas, NOS)"
   }
  ],
  "lampen": [
