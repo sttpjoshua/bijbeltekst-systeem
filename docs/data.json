@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-12T17:46",
+ "gegenereerd": "2026-11-12T17:51",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -53,7 +53,10 @@
     "perzik": 1.0,
     "papier_rood": 1.0,
     "papier_groen": 1.0,
-    "papier_blauw": 1.0
+    "papier_blauw": 1.0,
+    "schaduw_rood": 1.0,
+    "schaduw_groen": 1.0,
+    "schaduw_blauw": 1.0
    },
    "thema": {
     "troost": 1.0,
@@ -170,7 +173,10 @@
     "perzik": 0,
     "papier_rood": 0,
     "papier_groen": 0,
-    "papier_blauw": 0
+    "papier_blauw": 0,
+    "schaduw_rood": 0,
+    "schaduw_groen": 0,
+    "schaduw_blauw": 0
    },
    "thema": {
     "troost": 0,
@@ -7567,6 +7573,30 @@
      },
      {
       "optie": "papier_blauw",
+      "online": 0,
+      "gepland": 0,
+      "n": 0,
+      "gem": null,
+      "oordeel": "weinig data"
+     },
+     {
+      "optie": "schaduw_rood",
+      "online": 0,
+      "gepland": 0,
+      "n": 0,
+      "gem": null,
+      "oordeel": "weinig data"
+     },
+     {
+      "optie": "schaduw_groen",
+      "online": 0,
+      "gepland": 0,
+      "n": 0,
+      "gem": null,
+      "oordeel": "weinig data"
+     },
+     {
+      "optie": "schaduw_blauw",
       "online": 0,
       "gepland": 0,
       "n": 0,
