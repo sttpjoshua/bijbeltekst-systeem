@@ -3863,7 +3863,7 @@
  {
   "id": "2026-11-13-5",
   "datum": "2026-11-13",
-  "status": "wacht_op_tekst",
+  "status": "gerenderd",
   "vers_id": "Psalms-46-2-2",
   "ref": "Psalm 46:2",
   "tekst": "God is ons een Toevlucht en Sterkte; Hij is krachtelijk bevonden een Hulp in benauwdheden.",
@@ -3913,14 +3913,18 @@
    "reel_scene": "verkenning",
    "hashtag_stijl": "test"
   },
-  "hook": "",
+  "hook": "Goedemorgen. Een vers voor het begin van je dag.",
   "beeld_hook": "",
-  "caption": "",
-  "hashtags": [],
-  "uitleg": "",
-  "betekenis": "",
-  "toepassing": "",
-  "kernwoord": "gejuich",
+  "caption": "Goedemorgen. Een vers voor het begin van je dag.\n\n\"God is ons een Toevlucht en Sterkte; Hij is krachtelijk bevonden een Hulp in benauwdheden.\"\nPsalm 46:2\n\nGod is een schuilplaats in benauwde tijden.",
+  "hashtags": [
+   "#bijbelvers",
+   "#troost",
+   "#psalm"
+  ],
+  "uitleg": "God is onze schuilplaats en kracht, altijd een hulp in nood.",
+  "betekenis": "Deze psalm gaat over rampen en onrust. Toch zegt de dichter: God is een schuilplaats. Als alles wankelt, is Hij er. Hij helpt, juist als het benauwd is.",
+  "toepassing": "Waar voel je je vandaag onveilig of benauwd? Zeg tegen God: U bent mijn schuilplaats.",
+  "kernwoord": "Toevlucht",
   "media": "docs/media/2026-11/2026-11-13-5.mp4",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-13-5.mp4",
   "metricool": {},
@@ -3931,7 +3935,7 @@
   "handle": "@bibleverse_nl",
   "muziek_start": 46.8,
   "cover_ms": 5300,
-  "duur": 22.0,
+  "duur": 19.92,
   "media_extra": [],
   "thumb": "thumbs/2026-11-13-5.jpg",
   "media_urls": [
@@ -3961,10 +3965,10 @@
    "toepassing": "Lees vandaag één belofte uit de Bijbel en houd die vast terwijl je wacht.",
    "kernwoord": "hoop"
   },
-  "verhaal_hook": "Na elke nacht komt er een ochtend.",
+  "verhaal_hook": "Als alles wankelt, is er één plek die blijft staan.",
   "tekstbron": "tekstbank",
-  "reel_uitleg": "Huilen mag de hele nacht duren, maar 's morgens komt er gejuich.",
-  "reel_vraag": "Zit jij nu in een nacht?",
+  "reel_uitleg": "God is onze schuilplaats en kracht, altijd een hulp in nood.",
+  "reel_vraag": "Waar zoek jij veiligheid?",
   "reel_herkenning": "Goedemorgen. Een vers voor het begin van je dag."
  },
  {
@@ -4048,7 +4052,7 @@
  {
   "id": "2026-11-14-2",
   "datum": "2026-11-14",
-  "status": "wacht_op_tekst",
+  "status": "gerenderd",
   "vers_id": "Zephaniah-3-17-17",
   "ref": "Sefanja 3:17",
   "tekst": "De HEERE uw God, is in het midden van u, een Held, Die verlossen zal; Hij zal over u vrolijk zijn met blijdschap, Hij zal zwijgen in Zijn liefde, Hij zal Zich over u verheugen met gejuich.",

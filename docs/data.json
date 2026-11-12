@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-12T08:15",
+ "gegenereerd": "2026-11-12T08:18",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -811,8 +811,8 @@
   {
    "id": "2026-11-13-5",
    "datum": "2026-11-13",
-   "ref": "Psalm 30:6",
-   "tekst": "Want een ogenblik is er in Zijn toorn, maar een leven in Zijn goedgunstigheid; des avonds vernacht het geween, maar des morgens is er gejuich.",
+   "ref": "Psalm 46:2",
+   "tekst": "God is ons een Toevlucht en Sterkte; Hij is krachtelijk bevonden een Hulp in benauwdheden.",
    "hook": "Goedemorgen. Een vers voor het begin van je dag.",
    "status": "gerenderd",
    "variabelen": {
@@ -841,13 +841,13 @@
     "reel_scene": "onderweg",
     "hashtag_stijl": "zoekwoord"
    },
-   "vers_id": "Psalms-30-6-6",
+   "vers_id": "Psalms-46-2-2",
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
    "reserve_ref": "Psalm 130:5",
-   "caption": "Goedemorgen. Een vers voor het begin van je dag.\n\n\"Want een ogenblik is er in Zijn toorn, maar een leven in Zijn goedgunstigheid; des avonds vernacht het geween, maar des morgens is er gejuich.\"\nPsalm 30:6\n\nVerdriet duurt een nacht, Gods goedheid een leven lang.",
-   "uitleg": "Huilen mag de hele nacht duren, maar 's morgens komt er gejuich.",
+   "caption": "Goedemorgen. Een vers voor het begin van je dag.\n\n\"God is ons een Toevlucht en Sterkte; Hij is krachtelijk bevonden een Hulp in benauwdheden.\"\nPsalm 46:2\n\nGod is een schuilplaats in benauwde tijden.",
+   "uitleg": "God is onze schuilplaats en kracht, altijd een hulp in nood.",
    "media": "docs/media/2026-11/2026-11-13-5.mp4",
    "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-13-5.mp4",
    "media_urls": [
@@ -3208,11 +3208,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-10T20:32:03",
-   "soort": "info",
-   "tekst": "2026-11-10-1 online op instagram: Psalm 25:9"
-  },
-  {
    "t": "2026-11-10T21:30:34",
    "soort": "info",
    "tekst": "Te weinig posts voor 2026-11-11: 0 klaar, 5 ingesteld. De noodvoorraad vult de lege tijdsloten automatisch op."
@@ -3521,6 +3516,11 @@
    "t": "2026-11-12T08:14:41",
    "soort": "info",
    "tekst": "Zelfstandig 10 posts klaargezet voor 2026-11-13, 2026-11-14 (teksten uit de tekstbank)."
+  },
+  {
+   "t": "2026-11-12T08:18:48",
+   "soort": "info",
+   "tekst": "Zelfstandig 10 posts klaargezet voor 2026-11-13, 2026-11-14 (teksten uit de tekstbank)."
   }
  ],
  "recente_fouten": [
@@ -3668,7 +3668,7 @@
    "detail": "2 nieuwe aanleidingen"
   },
   "maken": {
-   "ok": "2026-11-12T08:14",
+   "ok": "2026-11-12T08:18",
    "laatst_ok": true,
    "detail": "10 posts klaargezet"
   },
@@ -5678,8 +5678,8 @@
    "kw": "gejuich",
    "herkenning": "Voor iedereen die vannacht gehuild heeft.",
    "uit": false,
-   "laatst": "2026-11-13",
-   "n": 1
+   "laatst": null,
+   "n": 0
   },
   {
    "id": "Psalms-33-22-22",
@@ -5768,8 +5768,8 @@
    "kw": "Toevlucht",
    "herkenning": "Voor iedereen die zich vandaag benauwd voelt.",
    "uit": false,
-   "laatst": null,
-   "n": 0
+   "laatst": "2026-11-13",
+   "n": 1
   },
   {
    "id": "Psalms-47-7-7",
@@ -7155,9 +7155,9 @@
   },
   {
    "datum": "2026-11-19",
-   "ref": "Prediker 4:9-10",
-   "tekst": "Twee zijn beter dan een; want zij hebben een goede beloning van hun arbeid; Want indien zij vallen, de een richt zijn metgezel op; maar wee den ene, die gevallen is, want er is geen tweede om hem op te helpen.",
-   "vers_id": "Ecclesiastes-4-9-10",
+   "ref": "Spreuken 12:25",
+   "tekst": "Bekommernis in het hart des mensen buigt het neder; maar een goed woord verblijdt het.",
+   "vers_id": "Proverbs-12-25-25",
    "variabelen": {
     "huisstijl": "bosgroen",
     "thema": "wijsheid",
@@ -7165,8 +7165,8 @@
     "formaat": "video",
     "uitleg_op_beeld": true,
     "achtergrondbron": "verloop",
-    "boekgroep": "wijsheid",
-    "lengte": "lang",
+    "boekgroep": "spreuken",
+    "lengte": "kort",
     "bron": "bekend",
     "vraag_onderaan": true,
     "reel_stijl": "situatie",
