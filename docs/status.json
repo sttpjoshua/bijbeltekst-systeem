@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T13:41:41",
+ "updated": "2026-11-12T13:46:00",
  "agents": {
   "verskiezer": {
    "t": "2026-11-12T13:05:11",
@@ -57,6 +57,10 @@
  ],
  "log": [
   {
+   "t": "13:46",
+   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
+  {
    "t": "13:41",
    "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
   },
@@ -99,10 +103,6 @@
   {
    "t": "12:01",
    "msg": "Nieuwspost: Spreuken 26:14 vervangen door Psalm 92:2 (aanleiding: sinterklaas, NOS)"
-  },
-  {
-   "t": "09:45",
-   "msg": "Bediening: Psalm 46:2 opnieuw gemaakt (stijl meelees-abrikoos, achtergrond kleurverloop)"
   }
  ],
  "lampen": [
