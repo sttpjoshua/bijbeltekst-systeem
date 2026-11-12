@@ -1,14 +1,14 @@
 {
- "updated": "2026-11-12T09:02:56",
+ "updated": "2026-11-12T09:06:34",
  "agents": {
   "verskiezer": {
-   "t": "2026-11-12T07:01:23",
-   "task": "Nieuwspost gemaakt: Psalm 9:2",
+   "t": "2026-11-12T09:06:20",
+   "task": "Nieuwspost klaargezet: Psalm 20:8 op 2026-11-12 om 17:45",
    "state": "done"
   },
   "designer": {
-   "t": "2026-11-12T09:02:55",
-   "task": "Ontwierp Sefanja 3:17 in stijl roze",
+   "t": "2026-11-12T09:06:20",
+   "task": "Ontwierp Psalm 20:8 in stijl perzik",
    "state": "done"
   },
   "video": {
@@ -22,9 +22,9 @@
    "state": "done"
   },
   "controller": {
-   "t": "2026-11-12T07:01:20",
-   "task": "Politiek nieuws (NOS): \"Wekdienst 12/11: Erop of eronder voor kabinet ",
-   "state": "error"
+   "t": "2026-11-12T09:02:55",
+   "task": "Posts klaargezet uit de tekstbank",
+   "state": "done"
   },
   "analist": {
    "t": "2026-11-11T14:35:23",
@@ -32,7 +32,7 @@
    "state": "done"
   },
   "community": {
-   "t": "2026-11-12T09:01:23",
+   "t": "2026-11-12T09:06:34",
    "task": "1 nieuwe reactie gevonden",
    "state": "done"
   }
@@ -56,6 +56,14 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "09:06",
+   "msg": "Bediening: Nieuwspost klaargezet: Psalm 20:8 op 2026-11-12 om 17:45"
+  },
+  {
+   "t": "09:06",
+   "msg": "Nieuwspost: Psalm 119:99 vervangen door Psalm 20:8 (aanleiding: politiek, NOS)"
+  },
   {
    "t": "09:02",
    "msg": "Zelfstandig 10 posts klaargezet voor 2026-11-13, 2026-11-14 (teksten uit de tekstbank)."
@@ -95,14 +103,6 @@
   {
    "t": "22:05",
    "msg": "2026-11-11-n2200 ook als story geplaatst"
-  },
-  {
-   "t": "21:10",
-   "msg": "Bediening: WhatsApp-testbericht klaargezet"
-  },
-  {
-   "t": "20:40",
-   "msg": "Zelfstandig 10 posts klaargezet voor 2026-11-12, 2026-11-13 (teksten uit de tekstbank)."
   }
  ],
  "lampen": [

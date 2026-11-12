@@ -940,7 +940,8 @@
   "soort": "fout",
   "tekst": "Politiek nieuws (NOS): \"Wekdienst 12/11: Erop of eronder voor kabinet • Hoger beroep tegen Erasmusschutter\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
   "code": "nieuws_voorstel",
-  "post": "n111207010"
+  "post": "n111207010",
+  "opgelost": true
  },
  {
   "t": "2026-11-12T07:01:23",
@@ -971,5 +972,15 @@
   "t": "2026-11-12T09:02:55",
   "soort": "info",
   "tekst": "Zelfstandig 10 posts klaargezet voor 2026-11-13, 2026-11-14 (teksten uit de tekstbank)."
+ },
+ {
+  "t": "2026-11-12T09:06:20",
+  "soort": "info",
+  "tekst": "Nieuwspost: Psalm 119:99 vervangen door Psalm 20:8 (aanleiding: politiek, NOS)"
+ },
+ {
+  "t": "2026-11-12T09:06:20",
+  "soort": "info",
+  "tekst": "Bediening: Nieuwspost klaargezet: Psalm 20:8 op 2026-11-12 om 17:45"
  }
 ]

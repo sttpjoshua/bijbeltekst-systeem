@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-12T09:02",
+ "gegenereerd": "2026-11-12T09:06",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -109,6 +109,13 @@
     "situatie": 1.0,
     "markeren": 1.0
    },
+   "reel_kleur": {
+    "abrikoos": 1.0,
+    "mint": 1.0,
+    "hemel": 1.0,
+    "roze": 1.0,
+    "goud": 1.0
+   },
    "reel_plaatsing": {
     "midden": 1.0,
     "boven": 1.0
@@ -138,13 +145,6 @@
     "17:45": 1.0,
     "20:30": 1.0,
     "22:00": 1.0
-   },
-   "reel_kleur": {
-    "abrikoos": 1.0,
-    "mint": 1.0,
-    "hemel": 1.0,
-    "roze": 1.0,
-    "goud": 1.0
    }
   },
   "metingen": {
@@ -219,6 +219,13 @@
     "situatie": 0,
     "markeren": 0
    },
+   "reel_kleur": {
+    "abrikoos": 0,
+    "mint": 0,
+    "hemel": 0,
+    "roze": 0,
+    "goud": 0
+   },
    "reel_plaatsing": {
     "midden": 0,
     "boven": 0
@@ -248,13 +255,6 @@
     "17:45": 0,
     "20:30": 0,
     "22:00": 0
-   },
-   "reel_kleur": {
-    "abrikoos": 0,
-    "mint": 0,
-    "hemel": 0,
-    "roze": 0,
-    "goud": 0
    }
   },
   "inzichten": []
@@ -1224,22 +1224,22 @@
   {
    "id": "2026-11-12-3",
    "datum": "2026-11-12",
-   "ref": "Psalm 119:99",
-   "tekst": "Ik ben verstandiger dan al mijn leraars, omdat Uw getuigenissen mijn betrachting zijn.",
-   "hook": "",
+   "ref": "Psalm 20:8",
+   "tekst": "Dezen vermelden van wagens, en die van paarden; maar wij zullen vermelden van den Naam des HEEREN, onzes Gods.",
+   "hook": "Veel meningen, veel onrust. Even terug naar wat vaststaat.",
    "status": "gerenderd",
    "variabelen": {
     "huisstijl": "perzik",
-    "thema": "wijsheid",
+    "thema": "vertrouwen",
     "hook_stijl": "geen",
     "formaat": "carrousel",
     "uitleg_op_beeld": true,
     "achtergrondbron": "verloop",
     "boekgroep": "psalmen",
-    "lengte": "kort",
-    "bron": "ontdekking",
+    "lengte": "middel",
+    "bron": "bekend",
     "vraag_onderaan": false,
-    "opening": "vers",
+    "opening": "verhaal",
     "tijdslot": "17:45",
     "tijdslot_fb": "20:30",
     "palet": "perzik",
@@ -1247,21 +1247,23 @@
     "layout": "citaat",
     "achtergrond": "diagonaal",
     "hook_op_beeld": false,
-    "video_uitleg": null
+    "video_uitleg": null,
+    "aanleiding": "nieuws"
    },
-   "vers_id": "Psalms-119-99-99",
+   "vers_id": "Psalms-20-8-8",
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
    "reserve_ref": "Mattheüs 7:3",
-   "caption": "\"Ik ben verstandiger dan al mijn leraars, omdat Uw getuigenissen mijn betrachting zijn.\"\nPsalm 119:99\n\nEchte wijsheid begint niet bij een diploma, maar bij luisteren naar God.",
-   "uitleg": "Wie Gods woorden overdenkt, leert meer dan uit alle boeken.",
+   "caption": "Veel meningen, veel onrust. Even terug naar wat vaststaat.\n\n\"Dezen vermelden van wagens, en die van paarden; maar wij zullen vermelden van den Naam des HEEREN, onzes Gods.\"\nPsalm 20:8\n\nJe kunt op veel dingen vertrouwen. God blijft.",
+   "uitleg": "Sommigen vertrouwen op wagens, anderen op paarden. Wij vertrouwen op de naam van God.",
    "media": "docs/media/2026-11/2026-11-12-3-1.jpg",
    "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-3-1.jpg",
    "media_urls": [
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-3-1.jpg",
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-3-2.jpg",
-    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-3-3.jpg"
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-3-3.jpg",
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-3-4.jpg"
    ],
    "thumb": "thumbs/2026-11-12-3.jpg",
    "platformen": [],
@@ -1272,7 +1274,13 @@
    "pub": {},
    "gemist": [],
    "nood": false,
-   "nieuws": null,
+   "nieuws": {
+    "categorie": "politiek",
+    "kop": "Wekdienst 12/11: Erop of eronder voor kabinet • Hoger beroep tegen Erasmusschutter",
+    "bron": "NOS",
+    "link": "https://nos.nl/l/2639103",
+    "zwaar": false
+   },
    "online": null
   },
   {
@@ -3226,16 +3234,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-10T22:01:31",
-   "soort": "info",
-   "tekst": "2026-11-10-1 online op facebook: Psalm 25:9"
-  },
-  {
-   "t": "2026-11-10T22:03:05",
-   "soort": "info",
-   "tekst": "2026-11-10-2 ook als story geplaatst"
-  },
-  {
    "t": "2026-11-10T22:03:05",
    "soort": "info",
    "tekst": "2026-11-10-2 online op instagram: Openbaring 21:5"
@@ -3508,7 +3506,8 @@
    "soort": "fout",
    "tekst": "Politiek nieuws (NOS): \"Wekdienst 12/11: Erop of eronder voor kabinet • Hoger beroep tegen Erasmusschutter\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
    "code": "nieuws_voorstel",
-   "post": "n111207010"
+   "post": "n111207010",
+   "opgelost": true
   },
   {
    "t": "2026-11-12T07:01:23",
@@ -3539,17 +3538,19 @@
    "t": "2026-11-12T09:02:55",
    "soort": "info",
    "tekst": "Zelfstandig 10 posts klaargezet voor 2026-11-13, 2026-11-14 (teksten uit de tekstbank)."
-  }
- ],
- "recente_fouten": [
+  },
   {
-   "t": "2026-11-12T07:01:20",
-   "soort": "fout",
-   "tekst": "Politiek nieuws (NOS): \"Wekdienst 12/11: Erop of eronder voor kabinet • Hoger beroep tegen Erasmusschutter\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
-   "code": "nieuws_voorstel",
-   "post": "n111207010"
+   "t": "2026-11-12T09:06:20",
+   "soort": "info",
+   "tekst": "Nieuwspost: Psalm 119:99 vervangen door Psalm 20:8 (aanleiding: politiek, NOS)"
+  },
+  {
+   "t": "2026-11-12T09:06:20",
+   "soort": "info",
+   "tekst": "Bediening: Nieuwspost klaargezet: Psalm 20:8 op 2026-11-12 om 17:45"
   }
  ],
+ "recente_fouten": [],
  "versen_totaal": 300,
  "reacties": [],
  "inzichten_extra": {
@@ -3649,7 +3650,7 @@
    "ok": "2026-11-08T00:36"
   },
   "reacties": {
-   "ok": "2026-11-12T09:01",
+   "ok": "2026-11-12T09:06",
    "laatst_ok": true,
    "detail": "1 nieuwe reacties",
    "fout": "2026-11-08T18:00"
@@ -3982,13 +3983,13 @@
    },
    "vertrouwen": {
     "totaal": 58,
-    "beschikbaar": 54,
-    "nooit": 54
+    "beschikbaar": 53,
+    "nooit": 53
    },
    "wijsheid": {
     "totaal": 92,
-    "beschikbaar": 86,
-    "nooit": 86
+    "beschikbaar": 87,
+    "nooit": 87
    },
    "humor_herkenbaar": {
     "totaal": 30,
@@ -4265,7 +4266,7 @@
  },
  "tekstbank": {
   "verzen": 197,
-  "vrij": 168,
+  "vrij": 167,
   "dagen": 33,
   "zelfstandig": true
  },
@@ -5635,8 +5636,8 @@
    "kw": "Naam",
    "herkenning": "Voor iedereen die zekerheid zoekt in de verkeerde dingen.",
    "uit": false,
-   "laatst": null,
-   "n": 0
+   "laatst": "2026-11-12",
+   "n": 1
   },
   {
    "id": "Psalms-23-2-3",
@@ -6071,8 +6072,8 @@
     "link": "https://nos.nl/l/2639103",
     "categorie": "politiek",
     "zwaar": false,
-    "status": "voorstel",
-    "post": null,
+    "status": "gemaakt",
+    "post": "2026-11-12-3",
     "opties": [
      {
       "vers_id": "Psalms-23-2-3",

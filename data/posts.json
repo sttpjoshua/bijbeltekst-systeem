@@ -3136,22 +3136,22 @@
   "id": "2026-11-12-3",
   "datum": "2026-11-12",
   "status": "gerenderd",
-  "vers_id": "Psalms-119-99-99",
-  "ref": "Psalm 119:99",
-  "tekst": "Ik ben verstandiger dan al mijn leraars, omdat Uw getuigenissen mijn betrachting zijn.",
+  "vers_id": "Psalms-20-8-8",
+  "ref": "Psalm 20:8",
+  "tekst": "Dezen vermelden van wagens, en die van paarden; maar wij zullen vermelden van den Naam des HEEREN, onzes Gods.",
   "vertaling": "SV",
   "variabelen": {
    "huisstijl": "perzik",
-   "thema": "wijsheid",
+   "thema": "vertrouwen",
    "hook_stijl": "geen",
    "formaat": "carrousel",
    "uitleg_op_beeld": true,
    "achtergrondbron": "verloop",
    "boekgroep": "psalmen",
-   "lengte": "kort",
-   "bron": "ontdekking",
+   "lengte": "middel",
+   "bron": "bekend",
    "vraag_onderaan": false,
-   "opening": "vers",
+   "opening": "verhaal",
    "tijdslot": "17:45",
    "tijdslot_fb": "20:30",
    "palet": "perzik",
@@ -3159,7 +3159,8 @@
    "layout": "citaat",
    "achtergrond": "diagonaal",
    "hook_op_beeld": false,
-   "video_uitleg": null
+   "video_uitleg": null,
+   "aanleiding": "nieuws"
   },
   "keuzebron": {
    "huisstijl": "experiment",
@@ -3172,23 +3173,24 @@
    "lengte": "experiment",
    "bron": "experiment",
    "vraag_onderaan": "experiment",
-   "opening": "experiment",
+   "opening": "nieuws",
    "tijdslot": "experiment",
-   "video_uitleg": "n.v.t."
+   "video_uitleg": "n.v.t.",
+   "aanleiding": "nieuws"
   },
-  "hook": "",
+  "hook": "Veel meningen, veel onrust. Even terug naar wat vaststaat.",
   "beeld_hook": "",
-  "caption": "\"Ik ben verstandiger dan al mijn leraars, omdat Uw getuigenissen mijn betrachting zijn.\"\nPsalm 119:99\n\nEchte wijsheid begint niet bij een diploma, maar bij luisteren naar God.",
+  "caption": "Veel meningen, veel onrust. Even terug naar wat vaststaat.\n\n\"Dezen vermelden van wagens, en die van paarden; maar wij zullen vermelden van den Naam des HEEREN, onzes Gods.\"\nPsalm 20:8\n\nJe kunt op veel dingen vertrouwen. God blijft.",
   "hashtags": [
-   "#wijsheid",
+   "#vertrouwen",
    "#psalmen",
    "#bijbeltekst",
-   "#geloof"
+   "#zekerheid"
   ],
-  "uitleg": "Wie Gods woorden overdenkt, leert meer dan uit alle boeken.",
-  "betekenis": "De dichter zegt niet dat leraars onbelangrijk zijn. Hij bedoelt dat het nadenken over Gods woorden hem dieper inzicht gaf dan alle lessen samen.",
-  "toepassing": "Neem vandaag vijf minuten om één Bijbeltekst rustig te overdenken, in plaats van snel verder te scrollen.",
-  "kernwoord": "verstandiger",
+  "uitleg": "Sommigen vertrouwen op wagens, anderen op paarden. Wij vertrouwen op de naam van God.",
+  "betekenis": "In die tijd waren wagens en paarden het sterkste leger. De dichter zegt: daar vertrouwen wij niet op. Wij vertrouwen op God. Waar vertrouw jij op?",
+  "toepassing": "Bedenk vandaag waar je echt op vertrouwt: je geld, je werk, of God?",
+  "kernwoord": "Naam",
   "media": "docs/media/2026-11/2026-11-12-3-1.jpg",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-3-1.jpg",
   "metricool": {},
@@ -3199,14 +3201,16 @@
   "handle": "@bibleverse_nl",
   "media_extra": [
    "docs/media/2026-11/2026-11-12-3-2.jpg",
-   "docs/media/2026-11/2026-11-12-3-3.jpg"
+   "docs/media/2026-11/2026-11-12-3-3.jpg",
+   "docs/media/2026-11/2026-11-12-3-4.jpg"
   ],
   "thumb": "thumbs/2026-11-12-3.jpg",
   "story": "docs/media/2026-11/2026-11-12-3-story.jpg",
   "media_urls": [
    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-3-1.jpg",
    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-3-2.jpg",
-   "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-3-3.jpg"
+   "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-3-3.jpg",
+   "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-3-4.jpg"
   ],
   "story_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-3-story.jpg",
   "goedgekeurd": null,
@@ -3231,6 +3235,18 @@
    "betekenis": "Jezus gebruikt een overdreven beeld: een splinter tegenover een balk. Het is makkelijk om fouten bij een ander te zien en die van jezelf te missen.",
    "toepassing": "Merk je vandaag ergernis over iemand, vraag jezelf dan eerst eerlijk af wat er bij jou speelt.",
    "kernwoord": "balk"
+  },
+  "verhaal_hook": "Veel meningen, veel onrust. Even terug naar wat vaststaat.",
+  "tekstbron": "tekstbank",
+  "reel_uitleg": "Sommigen vertrouwen op wagens, anderen op paarden. Wij vertrouwen op de naam van God.",
+  "reel_vraag": "Waar vertrouw jij op?",
+  "reel_herkenning": "Voor iedereen die zekerheid zoekt in de verkeerde dingen.",
+  "nieuws": {
+   "categorie": "politiek",
+   "kop": "Wekdienst 12/11: Erop of eronder voor kabinet • Hoger beroep tegen Erasmusschutter",
+   "bron": "NOS",
+   "link": "https://nos.nl/l/2639103",
+   "zwaar": false
   }
  },
  {

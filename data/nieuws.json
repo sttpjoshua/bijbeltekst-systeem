@@ -39,7 +39,7 @@
   "id": "n111207010",
   "categorie": "politiek",
   "zwaar": false,
-  "status": "voorstel",
+  "status": "gemaakt",
   "opties": [
    {
     "vers_id": "Psalms-23-2-3",
@@ -89,7 +89,8 @@
      "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111207010-3-4.jpg"
     ]
    }
-  ]
+  ],
+  "post": "2026-11-12-3"
  },
  {
   "bron": "NOS",
