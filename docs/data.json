@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-12T11:15",
+ "gegenereerd": "2026-11-12T11:31",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -32,7 +32,9 @@
   "nieuwe_reels": false,
   "reel_tempo": null,
   "reel_formaat": "situatie",
-  "reel_aandeel": 0.6
+  "reel_aandeel": 0.6,
+  "min_metingen_optie": 5,
+  "extra_tijdsloten": null
  },
  "strategie": {
   "versie": 1,
@@ -3817,7 +3819,8 @@
     {
      "optie": "salie",
      "gem": 1.0,
-     "n": 1
+     "n": 1,
+     "oordeel": "weinig data"
     }
    ],
    "metingen": 1
@@ -3828,7 +3831,8 @@
     {
      "optie": "troost",
      "gem": 1.0,
-     "n": 1
+     "n": 1,
+     "oordeel": "weinig data"
     }
    ],
    "metingen": 1
@@ -3839,7 +3843,8 @@
     {
      "optie": "vraag",
      "gem": 1.0,
-     "n": 1
+     "n": 1,
+     "oordeel": "weinig data"
     }
    ],
    "metingen": 1
@@ -3850,7 +3855,8 @@
     {
      "optie": "video",
      "gem": 1.0,
-     "n": 1
+     "n": 1,
+     "oordeel": "weinig data"
     }
    ],
    "metingen": 1
@@ -3861,7 +3867,8 @@
     {
      "optie": false,
      "gem": 1.0,
-     "n": 1
+     "n": 1,
+     "oordeel": "weinig data"
     }
    ],
    "metingen": 1
@@ -3872,142 +3879,71 @@
     {
      "optie": "verloop",
      "gem": 1.0,
-     "n": 1
+     "n": 1,
+     "oordeel": "weinig data"
     }
    ],
    "metingen": 1
   },
   {
    "dimensie": "boekgroep",
-   "opties": [
-    {
-     "optie": null,
-     "gem": 1.0,
-     "n": 1
-    }
-   ],
-   "metingen": 1
+   "opties": [],
+   "metingen": 0
   },
   {
    "dimensie": "lengte",
-   "opties": [
-    {
-     "optie": null,
-     "gem": 1.0,
-     "n": 1
-    }
-   ],
-   "metingen": 1
+   "opties": [],
+   "metingen": 0
   },
   {
    "dimensie": "bron",
-   "opties": [
-    {
-     "optie": null,
-     "gem": 1.0,
-     "n": 1
-    }
-   ],
-   "metingen": 1
+   "opties": [],
+   "metingen": 0
   },
   {
    "dimensie": "vraag_onderaan",
-   "opties": [
-    {
-     "optie": null,
-     "gem": 1.0,
-     "n": 1
-    }
-   ],
-   "metingen": 1
+   "opties": [],
+   "metingen": 0
   },
   {
    "dimensie": "reel_stijl",
-   "opties": [
-    {
-     "optie": null,
-     "gem": 1.0,
-     "n": 1
-    }
-   ],
-   "metingen": 1
+   "opties": [],
+   "metingen": 0
   },
   {
    "dimensie": "carrousel_stijl",
-   "opties": [
-    {
-     "optie": null,
-     "gem": 1.0,
-     "n": 1
-    }
-   ],
-   "metingen": 1
+   "opties": [],
+   "metingen": 0
   },
   {
    "dimensie": "reel_kleur",
-   "opties": [
-    {
-     "optie": null,
-     "gem": 1.0,
-     "n": 1
-    }
-   ],
-   "metingen": 1
+   "opties": [],
+   "metingen": 0
   },
   {
    "dimensie": "reel_plaatsing",
-   "opties": [
-    {
-     "optie": null,
-     "gem": 1.0,
-     "n": 1
-    }
-   ],
-   "metingen": 1
+   "opties": [],
+   "metingen": 0
   },
   {
    "dimensie": "reel_scene",
-   "opties": [
-    {
-     "optie": null,
-     "gem": 1.0,
-     "n": 1
-    }
-   ],
-   "metingen": 1
+   "opties": [],
+   "metingen": 0
   },
   {
    "dimensie": "reel_haak",
-   "opties": [
-    {
-     "optie": null,
-     "gem": 1.0,
-     "n": 1
-    }
-   ],
-   "metingen": 1
+   "opties": [],
+   "metingen": 0
   },
   {
    "dimensie": "opening",
-   "opties": [
-    {
-     "optie": null,
-     "gem": 1.0,
-     "n": 1
-    }
-   ],
-   "metingen": 1
+   "opties": [],
+   "metingen": 0
   },
   {
    "dimensie": "hashtag_stijl",
-   "opties": [
-    {
-     "optie": null,
-     "gem": 1.0,
-     "n": 1
-    }
-   ],
-   "metingen": 1
+   "opties": [],
+   "metingen": 0
   },
   {
    "dimensie": "tijdslot",
@@ -4015,7 +3951,8 @@
     {
      "optie": "20:30",
      "gem": 1.0,
-     "n": 1
+     "n": 1,
+     "oordeel": "weinig data"
     }
    ],
    "metingen": 1
