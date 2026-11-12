@@ -2935,7 +2935,7 @@
  {
   "id": "2026-11-12-1",
   "datum": "2026-11-12",
-  "status": "gerenderd",
+  "status": "gepubliceerd",
   "vers_id": "Colossians-1-12-12",
   "ref": "Kolossenzen 1:12",
   "tekst": "Dankende den Vader, Die ons bekwaam gemaakt heeft, om deel te hebben in de erve der heiligen in het licht.",
@@ -3051,6 +3051,11 @@
     "id": "17991972459116826",
     "url": "https://www.instagram.com/p/DfoawiaF2oJ/",
     "t": "2026-11-12T07:31+01:00"
+   },
+   "facebook": {
+    "id": "1015160368352770_122134394300879910",
+    "url": "https://www.facebook.com/1015160368352770_122134394300879910",
+    "t": "2026-11-12T12:16+01:00"
    }
   }
  },
@@ -3171,6 +3176,13 @@
    "bron": "NOS",
    "link": "https://nos.nl/l/2639080",
    "zwaar": false
+  },
+  "gepubliceerd": {
+   "instagram": {
+    "id": "17976736788190084",
+    "url": "https://www.instagram.com/p/Dfo7a0DF7cw/",
+    "t": "2026-11-12T12:17+01:00"
+   }
   }
  },
  {

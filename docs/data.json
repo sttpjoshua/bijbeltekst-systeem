@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-12T12:01",
+ "gegenereerd": "2026-11-12T12:17",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -321,6 +321,7 @@
    "totaal": {},
    "per_platform": {},
    "score": {},
+   "momenten": {},
    "pub": {},
    "gemist": [],
    "nood": false,
@@ -379,6 +380,7 @@
    "totaal": {},
    "per_platform": {},
    "score": {},
+   "momenten": {},
    "pub": {},
    "gemist": [],
    "nood": false,
@@ -436,6 +438,7 @@
    "totaal": {},
    "per_platform": {},
    "score": {},
+   "momenten": {},
    "pub": {},
    "gemist": [],
    "nood": false,
@@ -494,6 +497,7 @@
    "totaal": {},
    "per_platform": {},
    "score": {},
+   "momenten": {},
    "pub": {},
    "gemist": [],
    "nood": false,
@@ -551,6 +555,7 @@
    "totaal": {},
    "per_platform": {},
    "score": {},
+   "momenten": {},
    "pub": {},
    "gemist": [],
    "nood": false,
@@ -606,6 +611,7 @@
    "totaal": {},
    "per_platform": {},
    "score": {},
+   "momenten": {},
    "pub": {},
    "gemist": [],
    "nood": false,
@@ -662,6 +668,7 @@
    "totaal": {},
    "per_platform": {},
    "score": {},
+   "momenten": {},
    "pub": {},
    "gemist": [],
    "nood": false,
@@ -719,6 +726,7 @@
    "totaal": {},
    "per_platform": {},
    "score": {},
+   "momenten": {},
    "pub": {},
    "gemist": [],
    "nood": false,
@@ -777,6 +785,7 @@
    "totaal": {},
    "per_platform": {},
    "score": {},
+   "momenten": {},
    "pub": {},
    "gemist": [],
    "nood": false,
@@ -834,6 +843,7 @@
    "totaal": {},
    "per_platform": {},
    "score": {},
+   "momenten": {},
    "pub": {},
    "gemist": [],
    "nood": false,
@@ -892,6 +902,7 @@
    "totaal": {},
    "per_platform": {},
    "score": {},
+   "momenten": {},
    "pub": {},
    "gemist": [],
    "nood": false,
@@ -949,6 +960,7 @@
    "totaal": {},
    "per_platform": {},
    "score": {},
+   "momenten": {},
    "pub": {},
    "gemist": [],
    "nood": false,
@@ -1007,6 +1019,7 @@
    "totaal": {},
    "per_platform": {},
    "score": {},
+   "momenten": {},
    "pub": {},
    "gemist": [],
    "nood": false,
@@ -1064,6 +1077,7 @@
    "totaal": {},
    "per_platform": {},
    "score": {},
+   "momenten": {},
    "pub": {},
    "gemist": [],
    "nood": false,
@@ -1120,6 +1134,7 @@
    "totaal": {},
    "per_platform": {},
    "score": {},
+   "momenten": {},
    "pub": {},
    "gemist": [],
    "nood": false,
@@ -1129,22 +1144,22 @@
   {
    "id": "2026-11-12-5",
    "datum": "2026-11-12",
-   "ref": "Spreuken 26:14",
-   "tekst": "Een deur keert om op haar herre, alzo de luiaard op zijn bed.",
-   "hook": "Lees dit voordat je op snooze drukt.",
+   "ref": "Psalm 92:2",
+   "tekst": "Het is goed, dat men den HEERE love, en Uw Naam psalmzinge, o Allerhoogste!",
+   "hook": "Het is de tijd van cadeautjes. Dit is er één die niet ophoudt.",
    "status": "gerenderd",
    "variabelen": {
     "huisstijl": "zonsopgang",
-    "thema": "humor_herkenbaar",
+    "thema": "dankbaarheid",
     "hook_stijl": "uitdaging",
     "formaat": "carrousel",
     "uitleg_op_beeld": true,
-    "achtergrondbron": "beeld",
-    "boekgroep": "spreuken",
+    "achtergrondbron": "verloop",
+    "boekgroep": "psalmen",
     "lengte": "kort",
     "bron": "bekend",
     "vraag_onderaan": false,
-    "opening": "vers",
+    "opening": "verhaal",
     "tijdslot": "22:00",
     "tijdslot_fb": "17:45",
     "palet": "zonsopgang_fris",
@@ -1153,21 +1168,23 @@
     "achtergrond": "diagonaal",
     "hook_op_beeld": false,
     "video_uitleg": null,
-    "hashtag_stijl": "zonder"
+    "hashtag_stijl": "zonder",
+    "aanleiding": "nieuws"
    },
-   "vers_id": "Proverbs-26-14-14",
+   "vers_id": "Psalms-92-2-2",
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
    "reserve_ref": "1 Johannes 4:7",
-   "caption": "Lees dit voordat je op snooze drukt.\n\n\"Een deur keert om op haar herre, alzo de luiaard op zijn bed.\"\nSpreuken 26:14\n\nEen eerlijk en grappig beeld: veel beweging, maar je komt nergens.",
-   "uitleg": "Zoals een deur heen en weer draait, zo draait een luiaard zich om in bed.",
+   "caption": "Het is de tijd van cadeautjes. Dit is er één die niet ophoudt.\n\n\"Het is goed, dat men den HEERE love, en Uw Naam psalmzinge, o Allerhoogste!\"\nPsalm 92:2\n\nLofprijzing maakt je hart lichter.",
+   "uitleg": "Het is goed om God te danken en voor Hem te zingen.",
    "media": "docs/media/2026-11/2026-11-12-5-1.jpg",
    "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-5-1.jpg",
    "media_urls": [
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-5-1.jpg",
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-5-2.jpg",
-    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-5-3.jpg"
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-5-3.jpg",
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-5-4.jpg"
    ],
    "thumb": "thumbs/2026-11-12-5.jpg",
    "platformen": [],
@@ -1175,10 +1192,17 @@
    "totaal": {},
    "per_platform": {},
    "score": {},
+   "momenten": {},
    "pub": {},
    "gemist": [],
    "nood": false,
-   "nieuws": null,
+   "nieuws": {
+    "categorie": "sinterklaas",
+    "kop": "Aanlegplaats Grave niet diep genoeg voor stoomboot Sinterklaas, Defensie schiet te hulp",
+    "bron": "NOS",
+    "link": "https://nos.nl/l/2639117",
+    "zwaar": false
+   },
    "online": null
   },
   {
@@ -1232,6 +1256,7 @@
    "totaal": {},
    "per_platform": {},
    "score": {},
+   "momenten": {},
    "pub": {},
    "gemist": [],
    "nood": false,
@@ -1288,6 +1313,7 @@
    "totaal": {},
    "per_platform": {},
    "score": {},
+   "momenten": {},
    "pub": {},
    "gemist": [],
    "nood": false,
@@ -1346,12 +1372,19 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-2-4.jpg"
    ],
    "thumb": "thumbs/2026-11-12-2.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "instagram"
+   ],
+   "links": {
+    "instagram": "https://www.instagram.com/p/Dfo7a0DF7cw/"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
-   "pub": {},
+   "momenten": {},
+   "pub": {
+    "instagram": "2026-11-12T12:17+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": {
@@ -1361,7 +1394,7 @@
     "link": "https://nos.nl/l/2639080",
     "zwaar": false
    },
-   "online": null
+   "online": "2026-11-12T12:17+01:00"
   },
   {
    "id": "2026-11-12-1",
@@ -1369,7 +1402,7 @@
    "ref": "Kolossenzen 1:12",
    "tekst": "Dankende den Vader, Die ons bekwaam gemaakt heeft, om deel te hebben in de erve der heiligen in het licht.",
    "hook": "",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "paars",
     "thema": "dankbaarheid",
@@ -1407,10 +1440,12 @@
    ],
    "thumb": "thumbs/2026-11-12-1.jpg",
    "platformen": [
-    "instagram"
+    "instagram",
+    "facebook"
    ],
    "links": {
-    "instagram": "https://www.instagram.com/p/DfoawiaF2oJ/"
+    "instagram": "https://www.instagram.com/p/DfoawiaF2oJ/",
+    "facebook": "https://www.facebook.com/1015160368352770_122134394300879910"
    },
    "totaal": {
     "views": 2,
@@ -1433,8 +1468,12 @@
     }
    },
    "score": {},
+   "momenten": {
+    "instagram": {}
+   },
    "pub": {
-    "instagram": "2026-11-12T07:31+01:00"
+    "instagram": "2026-11-12T07:31+01:00",
+    "facebook": "2026-11-12T12:16+01:00"
    },
    "gemist": [],
    "nood": false,
@@ -1522,6 +1561,10 @@
     }
    },
    "score": {},
+   "momenten": {
+    "instagram": {},
+    "facebook": {}
+   },
    "pub": {
     "instagram": "2026-11-11T22:05+01:00",
     "facebook": "2026-11-11T22:05+01:00"
@@ -1614,6 +1657,10 @@
     }
    },
    "score": {},
+   "momenten": {
+    "instagram": {},
+    "facebook": {}
+   },
    "pub": {
     "instagram": "2026-11-11T20:31+01:00",
     "facebook": "2026-11-11T20:31+01:00"
@@ -1712,6 +1759,10 @@
     }
    },
    "score": {},
+   "momenten": {
+    "instagram": {},
+    "facebook": {}
+   },
    "pub": {
     "instagram": "2026-11-11T17:46+01:00",
     "facebook": "2026-11-11T17:46+01:00"
@@ -1808,6 +1859,10 @@
     }
    },
    "score": {},
+   "momenten": {
+    "instagram": {},
+    "facebook": {}
+   },
    "pub": {
     "instagram": "2026-11-11T12:16+01:00",
     "facebook": "2026-11-11T12:16+01:00"
@@ -1898,6 +1953,10 @@
     }
    },
    "score": {},
+   "momenten": {
+    "instagram": {},
+    "facebook": {}
+   },
    "pub": {
     "instagram": "2026-11-11T07:31+01:00",
     "facebook": "2026-11-11T07:31+01:00"
@@ -1988,6 +2047,20 @@
     }
    },
    "score": {},
+   "momenten": {
+    "instagram": {
+     "24u": {
+      "views": 6,
+      "reach": 1,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0
+     }
+    },
+    "facebook": {}
+   },
    "pub": {
     "instagram": "2026-11-10T12:16+01:00",
     "facebook": "2026-11-10T20:30+01:00"
@@ -2079,6 +2152,10 @@
     }
    },
    "score": {},
+   "momenten": {
+    "instagram": {},
+    "facebook": {}
+   },
    "pub": {
     "instagram": "2026-11-10T17:46+01:00",
     "facebook": "2026-11-10T17:46+01:00"
@@ -2169,6 +2246,20 @@
     }
    },
    "score": {},
+   "momenten": {
+    "instagram": {
+     "24u": {
+      "views": 4,
+      "reach": 1,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0
+     }
+    },
+    "facebook": {}
+   },
    "pub": {
     "instagram": "2026-11-10T07:31+01:00",
     "facebook": "2026-11-10T20:30+01:00"
@@ -2258,6 +2349,10 @@
     }
    },
    "score": {},
+   "momenten": {
+    "instagram": {},
+    "facebook": {}
+   },
    "pub": {
     "instagram": "2026-11-10T22:03+01:00",
     "facebook": "2026-11-10T22:03+01:00"
@@ -2348,6 +2443,10 @@
     }
    },
    "score": {},
+   "momenten": {
+    "instagram": {},
+    "facebook": {}
+   },
    "pub": {
     "instagram": "2026-11-10T20:32+01:00",
     "facebook": "2026-11-10T22:01+01:00"
@@ -2439,6 +2538,30 @@
     }
    },
    "score": {},
+   "momenten": {
+    "facebook": {
+     "24u": {
+      "views": null,
+      "reach": null,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": null,
+      "follows": null
+     }
+    },
+    "instagram": {
+     "24u": {
+      "views": 5,
+      "reach": 1,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0
+     }
+    }
+   },
    "pub": {
     "facebook": "2026-11-09T12:17+01:00",
     "instagram": "2026-11-09T17:47+01:00"
@@ -2529,6 +2652,30 @@
     }
    },
    "score": {},
+   "momenten": {
+    "facebook": {
+     "24u": {
+      "views": null,
+      "reach": null,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": null,
+      "follows": null
+     }
+    },
+    "instagram": {
+     "24u": {
+      "views": 5,
+      "reach": 1,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0
+     }
+    }
+   },
    "pub": {
     "facebook": "2026-11-09T07:31+01:00",
     "instagram": "2026-11-09T22:01+01:00"
@@ -2618,6 +2765,30 @@
     }
    },
    "score": {},
+   "momenten": {
+    "facebook": {
+     "24u": {
+      "views": 0,
+      "reach": null,
+      "likes": null,
+      "comments": null,
+      "shares": null,
+      "saves": null,
+      "follows": null
+     }
+    },
+    "instagram": {
+     "24u": {
+      "views": 1,
+      "reach": 1,
+      "likes": 1,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": null
+     }
+    }
+   },
    "pub": {
     "facebook": "2026-11-09T07:31+01:00",
     "instagram": "2026-11-09T12:16+01:00"
@@ -2707,6 +2878,30 @@
     }
    },
    "score": {},
+   "momenten": {
+    "instagram": {
+     "24u": {
+      "views": 7,
+      "reach": 6,
+      "likes": 1,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": null
+     }
+    },
+    "facebook": {
+     "24u": {
+      "views": 0,
+      "reach": null,
+      "likes": null,
+      "comments": null,
+      "shares": null,
+      "saves": null,
+      "follows": null
+     }
+    }
+   },
    "pub": {
     "instagram": "2026-11-09T20:32+01:00",
     "facebook": "2026-11-09T20:32+01:00"
@@ -2798,6 +2993,30 @@
     }
    },
    "score": {},
+   "momenten": {
+    "instagram": {
+     "24u": {
+      "views": 3,
+      "reach": 1,
+      "likes": 2,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0
+     }
+    },
+    "facebook": {
+     "24u": {
+      "views": null,
+      "reach": null,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": null,
+      "follows": null
+     }
+    }
+   },
    "pub": {
     "instagram": "2026-11-09T07:31+01:00",
     "facebook": "2026-11-09T20:30+01:00"
@@ -2882,6 +3101,30 @@
     }
    },
    "score": {},
+   "momenten": {
+    "instagram": {
+     "24u": {
+      "views": 3,
+      "reach": 1,
+      "likes": 2,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0
+     }
+    },
+    "facebook": {
+     "24u": {
+      "views": null,
+      "reach": null,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": null,
+      "follows": null
+     }
+    }
+   },
    "pub": {
     "instagram": "2026-11-08T22:01+01:00",
     "facebook": "2026-11-08T22:02+01:00"
@@ -2966,6 +3209,30 @@
     }
    },
    "score": {},
+   "momenten": {
+    "instagram": {
+     "24u": {
+      "views": 13,
+      "reach": 3,
+      "likes": 2,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0
+     }
+    },
+    "facebook": {
+     "24u": {
+      "views": null,
+      "reach": null,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": null,
+      "follows": null
+     }
+    }
+   },
    "pub": {
     "instagram": "2026-11-08T12:15+01:00",
     "facebook": "2026-11-08T12:15+01:00"
@@ -3051,6 +3318,30 @@
    "score": {
     "instagram": 1.0
    },
+   "momenten": {
+    "instagram": {
+     "24u": {
+      "views": 60,
+      "reach": 53,
+      "likes": 3,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": null
+     }
+    },
+    "facebook": {
+     "24u": {
+      "views": 2,
+      "reach": null,
+      "likes": null,
+      "comments": null,
+      "shares": null,
+      "saves": null,
+      "follows": null
+     }
+    }
+   },
    "pub": {
     "instagram": "2026-11-08T20:31+01:00",
     "facebook": "2026-11-08T20:32+01:00"
@@ -3135,6 +3426,30 @@
     }
    },
    "score": {},
+   "momenten": {
+    "instagram": {
+     "24u": {
+      "views": 6,
+      "reach": 2,
+      "likes": 3,
+      "comments": 3,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0
+     }
+    },
+    "facebook": {
+     "24u": {
+      "views": null,
+      "reach": null,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": null,
+      "follows": null
+     }
+    }
+   },
    "pub": {
     "instagram": "2026-11-08T17:45+01:00",
     "facebook": "2026-11-08T17:45+01:00"
@@ -3219,6 +3534,30 @@
     }
    },
    "score": {},
+   "momenten": {
+    "instagram": {
+     "24u": {
+      "views": 15,
+      "reach": 5,
+      "likes": 3,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0
+     }
+    },
+    "facebook": {
+     "24u": {
+      "views": null,
+      "reach": null,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": null,
+      "follows": null
+     }
+    }
+   },
    "pub": {
     "instagram": "2026-11-08T07:30+01:00",
     "facebook": "2026-11-08T07:31+01:00"
@@ -3284,6 +3623,19 @@
     }
    },
    "score": {},
+   "momenten": {
+    "instagram": {
+     "24u": {
+      "views": 7,
+      "reach": 7,
+      "likes": 1,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": null
+     }
+    }
+   },
    "pub": {
     "instagram": "2026-11-07T12:30+01:00"
    },
@@ -3296,26 +3648,6 @@
  "leergeschiedenis": [],
  "laatste_rapport": null,
  "logboek": [
-  {
-   "t": "2026-11-11T06:00:41",
-   "soort": "info",
-   "tekst": "Zelfherstel: Geen post klaar voor 2026-11-11 17:45 → noodpost Jesaja 41:10 ingezet om 17:45"
-  },
-  {
-   "t": "2026-11-11T06:00:41",
-   "soort": "info",
-   "tekst": "Zelfherstel: Geen post klaar voor 2026-11-11 20:30 → noodpost Kolossenzen 3:17 ingezet om 20:30"
-  },
-  {
-   "t": "2026-11-11T06:00:41",
-   "soort": "info",
-   "tekst": "Zelfherstel: Geen post klaar voor 2026-11-11 22:00 → noodpost Romeinen 15:4 ingezet om 22:00"
-  },
-  {
-   "t": "2026-11-11T07:31:31",
-   "soort": "info",
-   "tekst": "2026-11-11-n0730 ook als story geplaatst"
-  },
   {
    "t": "2026-11-11T07:31:31",
    "soort": "info",
@@ -3611,6 +3943,26 @@
    "t": "2026-11-12T09:45:10",
    "soort": "info",
    "tekst": "Bediening: Psalm 46:2 opnieuw gemaakt (stijl meelees-abrikoos, achtergrond kleurverloop)"
+  },
+  {
+   "t": "2026-11-12T12:01:31",
+   "soort": "info",
+   "tekst": "Nieuwspost: Spreuken 26:14 vervangen door Psalm 92:2 (aanleiding: sinterklaas, NOS)"
+  },
+  {
+   "t": "2026-11-12T12:16:07",
+   "soort": "info",
+   "tekst": "2026-11-12-1 online op facebook: Kolossenzen 1:12"
+  },
+  {
+   "t": "2026-11-12T12:17:12",
+   "soort": "info",
+   "tekst": "2026-11-12-2 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-12T12:17:12",
+   "soort": "info",
+   "tekst": "2026-11-12-2 online op instagram: Psalm 9:2"
   }
  ],
  "recente_fouten": [],
@@ -3685,9 +4037,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-12T07:31",
+   "ok": "2026-11-12T12:17",
    "laatst_ok": true,
-   "detail": "Kolossenzen 1:12 geplaatst"
+   "detail": "Psalm 9:2 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-11T12:51",
@@ -3719,9 +4071,9 @@
    "fout": "2026-11-08T18:00"
   },
   "facebook": {
-   "ok": "2026-11-11T22:05",
+   "ok": "2026-11-12T12:16",
    "laatst_ok": true,
-   "detail": "Romeinen 15:4 geplaatst"
+   "detail": "Kolossenzen 1:12 geplaatst"
   },
   "statistieken": {
    "ok": "2026-11-11T12:51",
@@ -3745,9 +4097,9 @@
    "ok": "2026-11-12T07:31"
   },
   "nieuws": {
-   "ok": "2026-11-12T07:01",
+   "ok": "2026-11-12T12:01",
    "laatst_ok": true,
-   "detail": "2 nieuwe aanleidingen"
+   "detail": "1 nieuwe aanleidingen"
   },
   "maken": {
    "ok": "2026-11-12T09:19",
@@ -3794,10 +4146,10 @@
  ],
  "weken": {
   "deze": {
-   "posts": 21,
-   "reach": 136,
-   "views": 219,
-   "likes": 26,
+   "posts": 22,
+   "reach": 137,
+   "views": 221,
+   "likes": 27,
    "comments": 3,
    "saves": 0,
    "shares": 0
@@ -3965,7 +4317,7 @@
   "tot": "2026-11-14",
   "dag": 6,
   "dagen": 7,
-  "online": 21,
+  "online": 22,
   "gemeten": 1
  },
  "voorraad": {
@@ -4002,13 +4354,13 @@
    },
    "humor_herkenbaar": {
     "totaal": 30,
-    "beschikbaar": 25,
-    "nooit": 25
+    "beschikbaar": 26,
+    "nooit": 26
    },
    "dankbaarheid": {
     "totaal": 92,
-    "beschikbaar": 88,
-    "nooit": 88
+    "beschikbaar": 87,
+    "nooit": 87
    },
    "identiteit": {
     "totaal": 33,
@@ -4167,10 +4519,6 @@
     "keer": 1
    },
    {
-    "naam": "pexels-molnartamasphotography-29202982.jpg",
-    "keer": 1
-   },
-   {
     "naam": "pexels-rebornfilmes-36114793.jpg",
     "keer": 1
    },
@@ -4224,6 +4572,10 @@
    },
    {
     "naam": "pexels-melisa-umul-2164892462-40289434.jpg",
+    "keer": 0
+   },
+   {
+    "naam": "pexels-molnartamasphotography-29202982.jpg",
     "keer": 0
    },
    {
@@ -5312,8 +5664,8 @@
    "kw": "luiaard",
    "herkenning": "",
    "uit": false,
-   "laatst": "2026-11-12",
-   "n": 1
+   "laatst": null,
+   "n": 0
   },
   {
    "id": "Proverbs-26-15-15",
@@ -5915,8 +6267,8 @@
    "kw": "goed",
    "herkenning": "Voor iedereen die vandaag zijn hart lichter wil maken.",
    "uit": false,
-   "laatst": null,
-   "n": 0
+   "laatst": "2026-11-12",
+   "n": 1
   },
   {
    "id": "Psalms-94-19-19",
@@ -6061,6 +6413,18 @@
    "licht_automatisch": true
   },
   "recent": [
+   {
+    "id": "n111212010",
+    "t": "2026-11-12T09:16+01:00",
+    "bron": "NOS",
+    "kop": "Aanlegplaats Grave niet diep genoeg voor stoomboot Sinterklaas, Defensie schiet te hulp",
+    "link": "https://nos.nl/l/2639117",
+    "categorie": "sinterklaas",
+    "zwaar": false,
+    "status": "gemaakt",
+    "post": "2026-11-12-5",
+    "opties": null
+   },
    {
     "id": "n111207011",
     "t": "2026-11-11T22:54+01:00",

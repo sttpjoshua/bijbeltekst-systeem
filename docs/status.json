@@ -1,14 +1,14 @@
 {
- "updated": "2026-11-12T12:01:26",
+ "updated": "2026-11-12T12:17:12",
  "agents": {
   "verskiezer": {
-   "t": "2026-11-12T09:06:20",
-   "task": "Nieuwspost klaargezet: Psalm 20:8 op 2026-11-12 om 17:45",
+   "t": "2026-11-12T12:01:31",
+   "task": "Nieuwspost gemaakt: Psalm 92:2",
    "state": "done"
   },
   "designer": {
-   "t": "2026-11-12T09:45:10",
-   "task": "Psalm 46:2 opnieuw gemaakt (stijl meelees-abrikoos, achtergrond kleurv",
+   "t": "2026-11-12T12:01:31",
+   "task": "Ontwierp Psalm 92:2 in stijl zonsopgang",
    "state": "done"
   },
   "video": {
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-12T07:31:39",
-   "task": "Postte Kolossenzen 1:12 op instagram",
+   "t": "2026-11-12T12:17:12",
+   "task": "Postte Psalm 9:2 op instagram",
    "state": "done"
   },
   "controller": {
@@ -38,11 +38,11 @@
   }
  },
  "stats": {
-  "posts_today": 0,
-  "posts_total": 21,
+  "posts_today": 1,
+  "posts_total": 22,
   "reach_7d": 85,
   "best_time": "nog onbekend",
-  "next_post": "2026-11-12T07:30:00"
+  "next_post": "2026-11-12T12:15:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
@@ -56,6 +56,22 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "12:17",
+   "msg": "2026-11-12-2 online op instagram: Psalm 9:2"
+  },
+  {
+   "t": "12:17",
+   "msg": "2026-11-12-2 ook als story geplaatst"
+  },
+  {
+   "t": "12:16",
+   "msg": "2026-11-12-1 online op facebook: Kolossenzen 1:12"
+  },
+  {
+   "t": "12:01",
+   "msg": "Nieuwspost: Spreuken 26:14 vervangen door Psalm 92:2 (aanleiding: sinterklaas, NOS)"
+  },
   {
    "t": "09:45",
    "msg": "Bediening: Psalm 46:2 opnieuw gemaakt (stijl meelees-abrikoos, achtergrond kleurverloop)"
@@ -87,22 +103,6 @@
   {
    "t": "08:18",
    "msg": "Zelfstandig 10 posts klaargezet voor 2026-11-13, 2026-11-14 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "08:14",
-   "msg": "Zelfstandig 10 posts klaargezet voor 2026-11-13, 2026-11-14 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "07:31",
-   "msg": "2026-11-12-1 online op instagram: Kolossenzen 1:12"
-  },
-  {
-   "t": "07:31",
-   "msg": "2026-11-12-1 ook als story geplaatst"
-  },
-  {
-   "t": "07:01",
-   "msg": "Nieuwspost: Habakuk 3:18 vervangen door Psalm 9:2 (aanleiding: hitte, NOS)"
   }
  ],
  "lampen": [
