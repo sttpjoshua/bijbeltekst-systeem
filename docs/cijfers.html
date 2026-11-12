@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bibleverse · Cijfers</title>
+<script>
+(function(){var k="bibleverse_thema",t;try{t=localStorage.getItem(k)}catch(e){}
+  function pas(n){var d=n==="donker"||(n!=="licht"&&window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.setAttribute("data-thema",d?"donker":"licht")}
+  window.wisselThema=function(){var d=document.documentElement.getAttribute("data-thema")==="donker";try{localStorage.setItem(k,d?"licht":"donker")}catch(e){}pas(d?"licht":"donker")};
+  pas(t||"auto");
+})();
+</script>
+<style>
+:root{--bg:#eef1f4;--kaart:#fff;--ink:#17181c;--ink2:#4b5060;--ink3:#8b90a0;--lijn:#eceef2;--accent:#2563eb;--accent-zacht:#e8efff;--goed:#16a36a;--let:#e8a417;--slecht:#e5484d;--zacht:#f6f7f9;--ig:#d6409f;--fb:#2563eb}
+html[data-thema=donker]{--bg:#0f1115;--kaart:#181b21;--ink:#f2f3f5;--ink2:#b8bdc8;--ink3:#7d8391;--lijn:#262a32;--accent:#6c9dff;--accent-zacht:#1d2740;--zacht:#1f232a;--goed:#4fca8e;--let:#e8b04a;--slecht:#f07070;--ig:#f39ad0;--fb:#8fb2ff;color-scheme:dark}
+*{box-sizing:border-box}body{margin:0;font:15px/1.5 Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink)}
+main{max-width:1240px;margin:0 auto;padding:22px 18px 70px}
+a{color:var(--accent)}
+.kop{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:16px}
+h1{font-size:24px;margin:0}h2{font-size:13px;margin:0 0 12px;color:var(--ink2);font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.sub{color:var(--ink3);font-size:13px}
+.terug{display:inline-flex;align-items:center;gap:6px;padding:8px 13px;border-radius:11px;background:var(--kaart);color:var(--ink);text-decoration:none;font-weight:600;font-size:13px}
+.balk{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:16px}
+.seg{display:flex;background:var(--kaart);border-radius:11px;padding:3px;gap:2px}
+.seg button{font:inherit;font-size:13px;font-weight:600;border:0;background:none;color:var(--ink2);padding:6px 12px;border-radius:9px;cursor:pointer}
+.seg button.aan{background:var(--ink);color:var(--kaart)}
+.kaart{background:var(--kaart);border-radius:16px;padding:16px 18px;margin-bottom:14px}
+.grid{display:grid;gap:14px}.grid>*{min-width:0}.g6{grid-template-columns:repeat(6,1fr)}.g2{grid-template-columns:1fr 1fr}
+@media(max-width:1000px){.g6{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:1fr}}
+@media(max-width:560px){.g6{grid-template-columns:1fr 1fr}main{padding:14px 10px 60px}}
+.tegel{margin:0}.tegel .getal{font-size:27px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.15}.tegel .label{color:var(--ink2);font-size:13px}
+.delta{display:block;font-size:12px;font-weight:600;margin-top:2px}.delta.op{color:var(--goed)}.delta.af{color:var(--slecht)}.delta.gelijk{color:var(--ink3)}
+select,input{font:inherit;font-size:13px;padding:6px 9px;border-radius:9px;border:1px solid var(--lijn);background:var(--kaart);color:var(--ink)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;color:var(--ink3);font-weight:600;padding:8px 6px;border-bottom:1px solid var(--lijn);cursor:pointer;white-space:nowrap;user-select:none}
+th.num,td.num{text-align:right;font-variant-numeric:tabular-nums}
+th.op::after{content:" ▲"}th.af::after{content:" ▼"}
+td{padding:8px 6px;border-bottom:1px solid var(--lijn);vertical-align:middle}
+tr.rij{cursor:pointer}tr.rij:hover td{background:var(--zacht)}
+.tabelwrap{overflow-x:auto}
+.tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:999px;background:var(--zacht);border:1px solid var(--lijn);margin:1px;color:var(--ink2);white-space:nowrap}
+.pl{display:inline-block;font-size:11px;font-weight:700;padding:1px 7px;border-radius:999px}
+.pl.instagram{background:#fbe3f2;color:#b02a80}.pl.facebook{background:#e3ecff;color:#1d4fc4}
+html[data-thema=donker] .pl.instagram{background:#3a1d31;color:#f39ad0}html[data-thema=donker] .pl.facebook{background:#1b2840;color:#8fb2ff}
+.mom{display:inline-block;font-size:10px;font-weight:700;padding:0 5px;border-radius:4px;margin-right:2px;background:var(--zacht);color:var(--ink3)}.mom.is{background:var(--accent-zacht);color:var(--accent)}
+.score{font-weight:700}.score.hoog{color:var(--goed)}.score.laag{color:var(--slecht)}
+.detail td{background:var(--zacht);padding:10px 14px}
+.detail table{font-size:12px}.detail th{cursor:default}
+.dim{margin-bottom:16px}.dim h3{font-size:13px;margin:0 0 6px;color:var(--ink2)}
+.brij{display:grid;grid-template-columns:130px 1fr 210px;gap:8px;align-items:center;min-height:26px;font-size:13px}@media(max-width:560px){.brij{grid-template-columns:90px 1fr 130px}.oordeel{display:block;margin:0}}
+.bsp{position:relative;height:12px;background:var(--zacht);border-radius:6px}
+.bsp .b{position:absolute;top:0;height:12px;border-radius:6px;background:var(--accent)}.bsp .b.laag{background:var(--ink3);opacity:.6}.bsp .ref{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--ink2)}
+.bw{color:var(--ink2);white-space:nowrap;font-variant-numeric:tabular-nums;text-align:right;font-size:12px}
+.oordeel{font-size:11px;font-weight:700;margin-left:6px}.oordeel.beter{color:var(--goed)}.oordeel.slechter{color:var(--slecht)}.oordeel.weinig{color:var(--ink3)}
+.heat{border-collapse:separate;border-spacing:3px}.heat td,.heat th{text-align:center;padding:6px 4px;border:0;cursor:default;font-size:12px;border-radius:8px}
+.heat td{min-width:68px;background:var(--zacht)}.heat td b{display:block;font-size:13px}
+.top{display:grid;grid-template-columns:44px 1fr auto;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid var(--lijn)}.top:last-child{border:0}
+.top .thumb{width:44px;height:55px;object-fit:cover;border-radius:6px;background:var(--lijn);display:grid;place-items:center;color:var(--ink3)}
+.leeg{color:var(--ink3);font-size:13px;padding:6px 0}
+.meter{height:8px;background:var(--zacht);border-radius:4px;overflow:hidden;margin:6px 0}.meter div{height:100%;background:var(--accent)}
+.legenda{display:flex;gap:14px;font-size:12px;color:var(--ink2);margin-top:8px;flex-wrap:wrap}.legenda i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px}
+svg text{fill:var(--ink3);font-size:10px}
+#tip{position:fixed;pointer-events:none;background:var(--ink);color:var(--bg);padding:6px 9px;border-radius:7px;font-size:12px;display:none;z-index:9}
+</style>
+</head>
+<body>
+<main>
+  <div class="kop">
+    <div><h1>Cijfers</h1><div class="sub" id="bijgewerkt">Laden…</div></div>
+    <div style="display:flex;gap:8px"><a class="terug" href="index.html">← Dashboard</a><a class="terug" href="kantoor.html">Pixel-kantoor</a><button class="terug" style="border:0;cursor:pointer;font:inherit" onclick="wisselThema()" title="Licht of donker">🌙</button></div>
+  </div>
+  <div class="balk">
+    <div class="seg" id="fPlat"></div>
+    <div class="seg" id="fPer"></div>
+  </div>
+  <div class="grid g6" id="tegels"></div>
+  <div class="grid g2" style="margin-top:14px">
+    <div class="kaart"><h2>Verloop per dag</h2><div class="balk" style="margin:0 0 8px"><select id="metriek"></select></div><div id="verloop"></div></div>
+    <div class="kaart"><h2>Meetstatus</h2><div id="status"></div></div>
+  </div>
+  <div class="kaart"><h2>Alle posts</h2>
+    <div class="balk"><select id="fFormaat"><option value="">Alle formaten</option></select><select id="fStijl"><option value="">Alle stijlen</option></select><select id="fTijd"><option value="">Alle tijden</option></select>
+      <label class="sub"><input type="checkbox" id="fMeetbaar"> alleen met bereik van 20 of meer</label><input id="fZoek" placeholder="Zoek op vers of tekst" style="min-width:180px"></div>
+    <div class="tabelwrap"><table id="tabel"></table></div><div class="sub" id="telling" style="margin-top:6px"></div>
+  </div>
+  <div class="grid g2">
+    <div class="kaart"><h2>Wat werkt</h2><div class="sub" style="margin:-6px 0 10px">Gemiddelde score per keuze: 1,0 is gemiddeld. Gecorrigeerd voor tijdstip en weekdag. De streep is 1,0.</div><div class="balk" style="margin:0 0 10px"><select id="fDim"></select></div><div id="werkt"></div></div>
+    <div class="kaart"><h2>Dag en tijdstip</h2><div class="sub" style="margin:-6px 0 10px">Gemiddeld bereik per post. Donkerder is meer bereik. Tussen haakjes het aantal posts.</div><div id="heat"></div><div id="tijdtekst" style="margin-top:12px"></div></div>
+  </div>
+  <div class="grid g2">
+    <div class="kaart"><h2>Beste posts</h2><div id="beste"></div></div>
+    <div class="kaart"><h2>Minst presterende posts</h2><div id="slechtste"></div></div>
+  </div>
+</main>
+<div id="tip"></div>
+<script>
+let D=null,plat="alles",per=14,sorteer={k:"datum",r:-1},open_=new Set();
+const NAMEN={huisstijl:"Huisstijl",thema:"Thema",hook_stijl:"Soort hook",formaat:"Formaat",uitleg_op_beeld:"Uitleg op beeld",achtergrondbron:"Achtergrond",boekgroep:"Bijbelboek",lengte:"Lengte vers",bron:"Bekend of ontdekking",vraag_onderaan:"Vraag onderaan",opening:"Eerste slide",tijdslot:"Tijdstip",reel_stijl:"Reelstijl",reel_plaatsing:"Tekst in reel",reel_scene:"Rustbeeld in reel",hashtag_stijl:"Soort hashtags",carrousel_stijl:"Carrouselstijl",reel_kleur:"Kleur meelees-stijl",reel_haak:"Vraag als haak",weekdag:"Weekdag"};
+const OPT={true:"met uitleg op beeld",false:"zonder",markeren:"meelees-stijl",situatie:"herkenbare situatie",standaard:"standaard",verloop:"kleurverloop",beeld:"foto",video:"video",carrousel:"carrousel",geen:"geen",vraag:"vraag",stopper:"stopper",verhaal:"verhaal eerst",vers:"hele vers",mix:"vaste mix",zoekwoord:"zoekwoord",zonder:"zonder",bekend:"bekend",ontdekking:"minder bekend"};
+const on=o=>OPT[String(o)]||String(o).replace(/_/g," ");
+const fmt=n=>n==null?"–":Number(n).toLocaleString("nl-NL");
+const d1=n=>n==null?"–":n.toFixed(1).replace(".",",");
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const WD=["maandag","dinsdag","woensdag","donderdag","vrijdag","zaterdag","zondag"];
+const wd=d=>WD[(new Date(d+"T12:00:00").getDay()+6)%7];
+const vandaag=()=>new Date().toISOString().slice(0,10);
+const dagMin=n=>new Date(Date.now()-n*864e5).toISOString().slice(0,10);
+const MET={reach:"Bereik",views:"Views",likes:"Likes",comments:"Reacties",saves:"Opgeslagen",shares:"Gedeeld",follows:"Nieuwe volgers"};
+
+// cijfers van een post voor het gekozen platform: som over platformen
+function cij(p){const o={reach:0,views:0,likes:0,comments:0,saves:0,shares:0,follows:0};let heeft=false;
+  for(const [pl,x] of Object.entries(p.per_platform||{})){if(plat!=="alles"&&pl!==plat)continue;heeft=true;for(const k in o)o[k]+=x[k]||0}
+  o.heeft=heeft;o.inter=o.likes+o.comments+o.saves+o.shares;return o}
+const scoreVan=p=>{const s=p.score||{};const v=plat==="alles"?Object.values(s):s[plat]!=null?[s[plat]]:[];return v.length?v.reduce((a,b)=>a+b,0)/v.length:null};
+const online=()=>D.posts.filter(p=>(p.platformen||[]).length&&(plat==="alles"||p.platformen.includes(plat)));
+const inPer=(p,van,tot)=>p.datum>=van&&p.datum<=tot;
+
+fetch("data.json?"+Date.now()).then(r=>r.json()).then(d=>{D=d;init();teken()}).catch(()=>{document.getElementById("bijgewerkt").textContent="Nog geen data."});
+
+function seg(el,opts,get,set){el.innerHTML=opts.map(([k,t])=>`<button data-k="${k}" class="${String(get())===String(k)?"aan":""}">${t}</button>`).join("");
+  el.onclick=e=>{const b=e.target.closest("button");if(!b)return;set(b.dataset.k);seg(el,opts,get,set);teken()}}
+function init(){
+  document.getElementById("bijgewerkt").textContent="Bijgewerkt "+(D.gegenereerd||"").replace("T"," om ");
+  seg(fPlat,[["alles","Alles"],["instagram","Instagram"],["facebook","Facebook"]],()=>plat,v=>plat=v);
+  seg(fPer,[[7,"7 dagen"],[14,"14 dagen"],[30,"30 dagen"],[999,"Alles"]],()=>per,v=>per=+v);
+  metriek.innerHTML=Object.entries(MET).map(([k,t])=>`<option value="${k}">${t}</option>`).join("")+'<option value="inter">Interacties</option><option value="volgers">Volgers (totaal)</option>';
+  const ps=D.posts;
+  [...new Set(ps.map(p=>p.variabelen.formaat))].filter(Boolean).forEach(v=>fFormaat.add(new Option(on(v),v)));
+  const st=p=>p.variabelen.formaat==="video"?"reel: "+on(p.variabelen.reel_stijl||"situatie"):"carrousel: "+on(p.variabelen.carrousel_stijl||"standaard");
+  window.stijlVan=st;[...new Set(ps.map(st))].sort().forEach(v=>fStijl.add(new Option(v,v)));
+  [...new Set(ps.map(p=>p.variabelen.tijdslot))].filter(Boolean).sort().forEach(v=>fTijd.add(new Option(v,v)));
+  fDim.innerHTML=(D.inzichten_data||[]).map(d=>`<option value="${d.dimensie}">${NAMEN[d.dimensie]||d.dimensie}</option>`).join("");
+  fDim.value=(D.inzichten_data||[]).some(d=>d.dimensie==="tijdslot")?"tijdslot":(D.inzichten_data||[])[0]?.dimensie;
+  [metriek,fFormaat,fStijl,fTijd,fMeetbaar,fDim].forEach(e=>e.onchange=teken);fZoek.oninput=teken;
+}
+function teken(){tegels();verloop();meetstatus();tabel();werkt();heat();toppers()}
+
+function tegels(){
+  const nu=dagMin(per===999?3650:per-1),oudVan=dagMin(per===999?7300:2*per-1),oudTot=dagMin(per);
+  const som=(van,tot)=>{const o={reach:0,views:0,likes:0,comments:0,saves:0,shares:0,follows:0,posts:0};online().filter(p=>inPer(p,van,tot)).forEach(p=>{const c=cij(p);o.posts++;for(const k in MET)o[k]+=c[k]});return o};
+  const a=som(nu,vandaag()),b=per===999?null:som(oudVan,oudTot);
+  const dl=(x,y)=>{if(b==null)return"";if(!y&&!x)return `<span class="delta gelijk">gelijk</span>`;if(!y)return `<span class="delta op">↗ nieuw</span>`;const q=Math.round((x-y)/y*100);return `<span class="delta ${q>0?"op":q<0?"af":"gelijk"}">${q>0?"↗ +":q<0?"↘ ":""}${q}% t.o.v. vorige periode</span>`};
+  const gr=(D.groei||[]).filter(x=>x.instagram!=null||x.facebook!=null),eind=gr[gr.length-1]||{},start=gr.find(x=>x.datum>=nu)||gr[0]||{};
+  const v=x=>plat==="alles"?(x.instagram||0)+(x.facebook||0):(x[plat]||0);
+  const vol=gr.length?v(eind):null,vd=gr.length>1?v(eind)-v(start):0;
+  const t=[["Volgers",vol==null?"–":fmt(vol),gr.length>1?`<span class="delta ${vd>0?"op":vd<0?"af":"gelijk"}">${vd>0?"+":""}${vd} in deze periode</span>`:""],
+    ["Bereik",fmt(a.reach),dl(a.reach,b&&b.reach)],["Views",fmt(a.views),dl(a.views,b&&b.views)],
+    ["Interacties",fmt(a.likes+a.comments+a.saves+a.shares),dl(a.likes+a.comments+a.saves+a.shares,b&&b.likes+b.comments+b.saves+b.shares)],
+    ["Opgeslagen en gedeeld",fmt(a.saves+a.shares),dl(a.saves+a.shares,b&&b.saves+b.shares)],["Posts online",fmt(a.posts),dl(a.posts,b&&b.posts)]];
+  tegelsEl().innerHTML=t.map(([l,g,d])=>`<div class="kaart tegel"><div class="label">${l}</div><div class="getal">${g}</div>${d}</div>`).join("");
+}
+const tegelsEl=()=>document.getElementById("tegels");
+
+function verloop(){
+  const m=metriek.value,dagen=Math.min(per===999?60:per,60),lijst=[];
+  for(let i=dagen-1;i>=0;i--)lijst.push(dagMin(i));
+  const waarde={};
+  if(m==="volgers"){(D.groei||[]).forEach(x=>{waarde[x.datum]=plat==="alles"?(x.instagram||0)+(x.facebook||0):(x[plat]||0)})}
+  else online().forEach(p=>{const c=cij(p);waarde[p.datum]=(waarde[p.datum]||0)+(m==="inter"?c.inter:c[m]||0)});
+  const vals=lijst.map(d=>waarde[d]??null),max=Math.max(1,...vals.map(x=>x||0));
+  const W=560,H=190,pl=34,pb=22,bw=(W-pl)/lijst.length;
+  let s=`<svg viewBox="0 0 ${W} ${H}" width="100%" role="img">`;
+  for(let g=0;g<=3;g++){const y=8+(H-pb-8)*(1-g/3);s+=`<line x1="${pl}" x2="${W}" y1="${y}" y2="${y}" stroke="var(--lijn)"/><text x="${pl-5}" y="${y+3}" text-anchor="end">${Math.round(max*g/3)}</text>`}
+  if(m==="volgers"){const pts=vals.map((v,i)=>v==null?null:[pl+bw*(i+.5),8+(H-pb-8)*(1-v/max)]).filter(Boolean);
+    s+=`<polyline fill="none" stroke="var(--accent)" stroke-width="2.5" points="${pts.map(p=>p.join(",")).join(" ")}"/>`+pts.map((p,i)=>`<circle cx="${p[0]}" cy="${p[1]}" r="3" fill="var(--accent)"/>`).join("")}
+  else vals.forEach((v,i)=>{if(!v)return;const h=(H-pb-8)*v/max;s+=`<rect x="${pl+bw*i+1.5}" y="${H-pb-h}" width="${Math.max(2,bw-3)}" height="${h}" rx="3" fill="var(--accent)" data-t="${lijst[i]}: ${fmt(v)}"/>`});
+  lijst.forEach((d,i)=>{if(i%Math.ceil(lijst.length/7)===0||i===lijst.length-1)s+=`<text x="${pl+bw*(i+.5)}" y="${H-5}" text-anchor="middle">${d.slice(8)}/${d.slice(5,7)}</text>`});
+  s+="</svg>";
+  verloopEl().innerHTML=s+(m==="volgers"?"":'<div class="sub">Gemeten per plaatsdag van de post.</div>');
+}
+const verloopEl=()=>document.getElementById("verloop");
+document.addEventListener("mousemove",e=>{const t=e.target.closest&&e.target.closest("[data-t]"),tip=document.getElementById("tip");if(!t){tip.style.display="none";return}tip.textContent=t.dataset.t;tip.style.display="block";tip.style.left=Math.min(innerWidth-160,e.clientX+12)+"px";tip.style.top=(e.clientY+14)+"px"});
+
+function meetstatus(){
+  const ps=D.posts.filter(p=>(p.platformen||[]).length),mm={"1u":0,"24u":0,"7d":0};
+  ps.forEach(p=>Object.values(p.momenten||{}).forEach(m=>{for(const k in mm)if(m[k])mm[k]++}));
+  const bruikbaar=new Set(D.posts.filter(p=>Object.keys(p.score||{}).length).map(p=>p.id)).size,nodig=D.min_posts_voor_leren||6;
+  const laag=ps.filter(p=>{const c=Object.values(p.per_platform||{}).map(x=>x.reach||x.views||0);return c.length&&Math.max(...c)<20}).length;
+  document.getElementById("status").innerHTML=`<div><b>${bruikbaar}</b> van ${nodig} posts bruikbaar voor leren</div><div class="meter"><div style="width:${Math.min(100,bruikbaar/nodig*100)}%"></div></div>
+   <div class="sub">Het systeem begint te leren bij ${nodig} posts met een bereik van minstens 20. ${laag?`${laag} van de ${ps.length} online posts hebben een bereik onder 20 en tellen daarom nog niet mee.`:""}</div>
+   <div style="margin-top:10px"><span class="mom is">1 uur</span> ${mm["1u"]} metingen · <span class="mom is">24 uur</span> ${mm["24u"]} · <span class="mom is">7 dagen</span> ${mm["7d"]}</div>
+   <div class="sub" style="margin-top:8px">Experiment: ${D.config.experiment&&D.config.experiment.dims?D.config.experiment.dims.map(d=>(NAMEN[d]||d).toLowerCase()).join(", ")+" (tot "+D.config.experiment.tot+")":"geen"}${D.config.extra_tijdsloten&&D.config.extra_tijdsloten.length?" · extra tijdslot: "+D.config.extra_tijdsloten.join(", "):""}</div>`;
+}
+
+const KOL=[["datum","Datum",0],["ref","Post",0],["pl","Kanaal",0],["stijl","Stijl",0],["reach","Bereik",1],["views","Views",1],["likes","Likes",1],["comments","Reacties",1],["saves","Opgeslagen",1],["shares","Gedeeld",1],["follows","Volgers",1],["score","Score",1],["mom","Metingen",0]];
+function rijen(){
+  const z=fZoek.value.toLowerCase(),van=dagMin(per===999?3650:per-1);
+  return online().filter(p=>p.datum>=van&&(!fFormaat.value||p.variabelen.formaat===fFormaat.value)&&(!fStijl.value||stijlVan(p)===fStijl.value)&&(!fTijd.value||p.variabelen.tijdslot===fTijd.value)&&(!z||(p.ref+" "+p.tekst).toLowerCase().includes(z))&&(!fMeetbaar.checked||cij(p).reach>=20||cij(p).views>=20)).map(p=>{const c=cij(p);return {p,c,score:scoreVan(p),datum:p.datum+" "+(p.variabelen.tijdslot||""),stijl:stijlVan(p)}});
+}
+function tabel(){
+  const r=rijen();const k=sorteer.k;
+  r.sort((a,b)=>{const x=k in a.c?a.c[k]:a[k]??(k==="ref"?a.p.ref:""),y=k in b.c?b.c[k]:b[k]??(k==="ref"?b.p.ref:"");return (typeof x==="number"||typeof y==="number"?(x??-1)-(y??-1):String(x).localeCompare(String(y)))*sorteer.r});
+  const kop=`<tr>${KOL.map(([k,t,n])=>`<th class="${n?"num":""} ${sorteer.k===k?(sorteer.r>0?"op":"af"):""}" data-k="${k}">${t}</th>`).join("")}</tr>`;
+  const mm=p=>["1u","24u","7d"].map(m=>`<span class="mom ${Object.values(p.momenten||{}).some(x=>x[m])?"is":""}">${m}</span>`).join("");
+  const sc=s=>s==null?'<span class="sub">–</span>':`<span class="score ${s>=1.3?"hoog":s<0.8?"laag":""}">${d1(s)}</span>`;
+  let h=kop;
+  r.slice(0,200).forEach(({p,c,score,stijl})=>{
+    h+=`<tr class="rij" data-id="${p.id}"><td>${p.datum.slice(5)} <span class="sub">${p.variabelen.tijdslot||""}</span></td><td><b>${esc(p.ref)}</b><div class="sub">${esc(p.variabelen.thema||"").replace("_"," ")}</div></td>
+    <td>${(p.platformen||[]).map(x=>`<span class="pl ${x}">${x==="instagram"?"IG":"FB"}</span>`).join(" ")}</td><td><span class="tag">${esc(stijl)}</span></td>
+    <td class="num">${c.heeft?fmt(c.reach):"–"}</td><td class="num">${c.heeft?fmt(c.views):"–"}</td><td class="num">${c.likes||0}</td><td class="num">${c.comments||0}</td><td class="num">${c.saves||0}</td><td class="num">${c.shares||0}</td><td class="num">${c.follows||0}</td><td class="num">${sc(score)}</td><td>${mm(p)}</td></tr>`;
+    if(open_.has(p.id)){
+      const rows=Object.entries(p.momenten||{}).flatMap(([pl,ms])=>Object.entries(ms).map(([m,x])=>`<tr><td>${pl==="instagram"?"Instagram":"Facebook"}</td><td>${m}</td><td class="num">${fmt(x.reach)}</td><td class="num">${fmt(x.views)}</td><td class="num">${x.likes||0}</td><td class="num">${x.comments||0}</td><td class="num">${x.saves||0}</td><td class="num">${x.shares||0}</td><td class="num">${x.follows||0}</td></tr>`)).join("");
+      const tags=Object.entries(p.variabelen).filter(([k,v])=>v!=null&&k!=="tijdslot_fb").map(([k,v])=>`<span class="tag">${NAMEN[k]||k}: ${esc(on(v))}</span>`).join("");
+      h+=`<tr class="detail"><td colspan="${KOL.length}"><div style="margin-bottom:8px">${esc((p.tekst||"").slice(0,220))}</div><div style="margin-bottom:8px">${tags}</div>
+       ${rows?`<table><tr><th>Kanaal</th><th>Moment</th><th class="num">Bereik</th><th class="num">Views</th><th class="num">Likes</th><th class="num">Reacties</th><th class="num">Opgeslagen</th><th class="num">Gedeeld</th><th class="num">Volgers</th></tr>${rows}</table>`:'<div class="sub">Nog geen metingen op vaste momenten.</div>'}
+       ${Object.values(p.links||{}).filter(Boolean).map(u=>`<a href="${u}" target="_blank" rel="noopener">Open post</a>`).join(" · ")}</td></tr>`}
+  });
+  document.getElementById("tabel").innerHTML=h;
+  document.getElementById("telling").textContent=r.length>200?`Eerste 200 van ${r.length} posts`:`${r.length} posts`;
+  document.querySelectorAll("#tabel th").forEach(t=>t.onclick=()=>{sorteer={k:t.dataset.k,r:sorteer.k===t.dataset.k?-sorteer.r:-1};tabel()});
+  document.querySelectorAll("#tabel tr.rij").forEach(t=>t.onclick=()=>{const id=t.dataset.id;open_.has(id)?open_.delete(id):open_.add(id);tabel()});
+}
+
+function werkt(){
+  const d=(D.inzichten_data||[]).find(x=>x.dimensie===fDim.value),el=document.getElementById("werkt");
+  const o=d?d.opties.filter(x=>x.optie!=null&&x.n>0):[];
+  if(!o.length){el.innerHTML='<div class="leeg">Nog geen metingen voor dit onderdeel. Zodra posts een bereik van 20 of meer halen, verschijnen ze hier.</div>';return}
+  const mx=Math.max(1.6,...o.map(x=>x.gem));
+  const OZ={"waarschijnlijk beter":["beter","waarschijnlijk beter"],"waarschijnlijk slechter":["slechter","waarschijnlijk slechter"],"geen duidelijk verschil":["weinig","geen duidelijk verschil"],"weinig data":["weinig","weinig data"]};
+  el.innerHTML=o.map(x=>{const z=OZ[x.oordeel]||["weinig",""];return `<div class="brij"><span>${esc(on(x.optie))}</span><div class="bsp"><div class="b ${x.gem<1?"laag":""}" style="left:0;width:${x.gem/mx*100}%"></div><div class="ref" style="left:${1/mx*100}%"></div></div><span class="bw">${d1(x.gem)}x · ${x.n} posts<span class="oordeel ${z[0]}">${z[1]}</span></span></div>`}).join("");
+}
+
+function heat(){
+  const dagen=WD.map(x=>x.slice(0,2)),tijden=[...new Set(online().map(p=>p.variabelen.tijdslot).concat(D.config.extra_tijdsloten||[]))].filter(Boolean).sort();
+  const cel={};let mx=1;
+  online().forEach(p=>{const c=cij(p),k=wd(p.datum)+"|"+p.variabelen.tijdslot;(cel[k]=cel[k]||{s:0,n:0});cel[k].s+=c.reach;cel[k].n++});
+  Object.values(cel).forEach(c=>mx=Math.max(mx,c.s/c.n));
+  let h=`<table class="heat"><tr><th></th>${tijden.map(t=>`<th>${t}</th>`).join("")}</tr>`;
+  WD.forEach((w,i)=>{h+=`<tr><th style="cursor:default">${dagen[i]}</th>`+tijden.map(t=>{const c=cel[w+"|"+t];if(!c)return`<td></td>`;const g=c.s/c.n;return `<td style="background:color-mix(in srgb,var(--accent) ${Math.round(g/mx*70)+8}%,var(--zacht))" data-t="${w} ${t}: gemiddeld ${d1(g)} bereik, ${c.n} posts"><b>${Math.round(g)}</b>(${c.n})</td>`}).join("")+"</tr>"});
+  document.getElementById("heat").innerHTML=h+"</table>";
+  const ie=D.inzichten_extra||{},zin=(l,t)=>{const o=(l||[]).filter(x=>x.n>=2);return o.length<2?"":`<div>${t}: <b>${esc(o[0].optie)}</b> (${d1(o[0].gem)}x, ${o[0].n} posts), het minst ${esc(o[o.length-1].optie)} (${d1(o[o.length-1].gem)}x)</div>`};
+  document.getElementById("tijdtekst").innerHTML=[zin(ie.tijd_ig,"Instagram, beste tijd"),zin(ie.tijd_fb,"Facebook, beste tijd"),zin(ie.weekdag,"Beste dag")].join("")||'<div class="leeg">Nog te weinig metingen voor een beste tijd.</div>';
+}
+
+function toppers(){
+  const r=rijen().map(x=>({...x,w:x.score!=null?x.score:null})),met=r.filter(x=>x.w!=null);
+  const basis=met.length>=2?met:r.filter(x=>x.c.heeft),sleutel=met.length>=2?x=>x.w:x=>x.c.reach;
+  const lijst=[...basis].sort((a,b)=>sleutel(b)-sleutel(a));
+  const rij=x=>{const th=x.p.thumb?`<img class="thumb" src="${esc(x.p.thumb)}" loading="lazy" onerror="this.outerHTML='<div class=thumb>${x.p.variabelen.formaat==="video"?"▶":""}</div>'">`:`<div class="thumb">${x.p.variabelen.formaat==="video"?"▶":""}</div>`;
+    return `<div class="top">${th}<div><b>${esc(x.p.ref)}</b> <span class="sub">${x.p.datum.slice(5)} ${x.p.variabelen.tijdslot||""}</span><div><span class="tag">${esc(x.stijl)}</span><span class="tag">${esc(on(x.p.variabelen.hook_stijl||""))}</span><span class="tag">${esc(String(x.p.variabelen.thema||"").replace("_"," "))}</span></div></div><div style="text-align:right"><b>${met.length>=2?d1(x.w)+"x":fmt(x.c.reach)}</b><div class="sub">${met.length>=2?"score":"bereik"}</div></div></div>`};
+  document.getElementById("beste").innerHTML=lijst.length?lijst.slice(0,5).map(rij).join(""):'<div class="leeg">Nog geen posts met cijfers.</div>';
+  document.getElementById("slechtste").innerHTML=lijst.length>5?lijst.slice(-5).reverse().map(rij).join(""):'<div class="leeg">Nog te weinig posts om te vergelijken.</div>';
+}
+</script>
+</body>
+</html>

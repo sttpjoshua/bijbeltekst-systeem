@@ -1020,6 +1020,7 @@ def cmd_dashboard():
                       "caption": p.get("caption", ""), "uitleg": p.get("uitleg", ""), "media": p.get("media"), "media_url": p.get("media_url"), "media_urls": p.get("media_urls"), "thumb": p.get("thumb"),
                       "platformen": list(p.get("gepubliceerd", {}).keys()),
                       "links": {k: v.get("url") for k, v in p.get("gepubliceerd", {}).items()}, "totaal": tot, "per_platform": per, "score": sc.get(p["id"], {}),
+                      "momenten": {pl: {m: {k: x.get(k) for k in ("views", "reach", "likes", "comments", "shares", "saves", "follows")} for m, x in mom.items() if m in ("1u", "24u", "7d")} for pl, mom in p.get("stats", {}).items()},
                       "pub": {k: v.get("t") for k, v in p.get("gepubliceerd", {}).items()}, "gemist": p.get("gemist", []), "nood": p.get("nood", False), "nieuws": p.get("nieuws"),
                       "online": min((g["t"] for g in p.get("gepubliceerd", {}).values()), default=None)})
     rapporten = sorted(os.listdir(P("rapporten"))) if os.path.isdir(P("rapporten")) else []
