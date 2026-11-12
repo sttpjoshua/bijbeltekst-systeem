@@ -44,8 +44,6 @@ LICHT = {
                   zinnen=["Storm vandaag, met veel wind. Waar houd jij je aan vast als het waait?",
                           "Het stormt buiten. Binnen mag het stil worden.",
                           "De storm trekt over het land. Er is iets wat blijft staan."],
-                  bruggen=["Bij een stormachtige dag past dit vers: houvast als het waait.",
-                           "Als het buiten stormt, kun je hierop rusten."],
                   vers_woorden=["storm", "wind", "golven", "zee", "stilte", "rots", "fundament", "anker"]),
     "winter": dict(woorden=["sneeuw", "gladheid", "ijzel", "vorst", "natuurijs", "winterweer", "code wit"],
                    themas=["vrede_rust", "dankbaarheid", "hoop"],
@@ -55,106 +53,99 @@ LICHT = {
                    zinnen=["Winterweer vandaag. Een goed moment om even stil te staan.",
                            "Het is koud buiten. Tijd voor iets wat je van binnen warm maakt.",
                            "Langzaam aan vandaag. Dat mag."],
-                   bruggen=["Bij een koude winterdag past dit vers: iets wat je van binnen verwarmt.",
-                            "In de winterkou helpt het te weten waar je warmte vindt."],
                    vers_woorden=["sneeuw", "vorst", "koud", "winter", "ijs", "wit"]),
     "hitte": dict(woorden=["hittegolf", "tropische temperaturen", "warmste dag", "tropisch warm"],
                   themas=["vrede_rust", "dankbaarheid"],
                   zinnen=["Hittegolf: het is heet vandaag. Zoek de schaduw, en even rust.",
                           "Zo warm vandaag. Neem het rustig, ook van binnen.",
                           "Het is bloedheet. Waar vind jij verkoeling?"],
-                  bruggen=["Bij hitte past dit vers: schaduw en verkwikking.",
-                           "Als het te warm is, is dit een plek om op adem te komen."],
                   vers_woorden=["schaduw", "dorst", "water", "verkwik", "koel", "zon"]),
     "regen": dict(woorden=["regenachtig", "grijze dag", "veel regen", "regenbuien", "regenval", "natste", "koudste", "nat weer", "somber weer", "herfstweer"],
                   themas=["hoop", "troost", "vrede_rust"],
                   zinnen=["Het regent weer. Grijze lucht vandaag, maar hier is iets van licht.",
                           "Nat en grijs buiten. Even binnen blijven bij God.",
                           "Een natte dag. Water dat valt, brengt ook nieuw leven."],
-                  bruggen=["Op een grijze, natte dag past dit vers: licht in het grijs.",
-                           "Als het buiten somber is, geeft dit vers kleur."],
                   vers_woorden=["regen", "water", "wolk", "licht", "dauw", "bron"]),
     "sintmaarten": dict(woorden=["sint-maarten", "sint maarten", "lampion"],
                         themas=["hoop", "dankbaarheid", "liefde"],
                         zinnen=["Sint-Maarten vandaag: lampionnen en snoep. Het verhaal erachter gaat over delen.",
                                 "Sint-Maarten deelde zijn mantel. Wie kun jij vandaag iets geven?",
                                 "Vanavond lopen er lampionnen door de straat. Klein licht, maar het maakt verschil."],
-                        bruggen=["Bij Sint-Maarten horen delen en licht, daar gaat dit vers over.",
-                                 "Een klein licht doet ertoe, ook in dit vers."],
                         vers_woorden=["licht", "lamp", "kleed", "mantel", "delen", "geven", "arm"]),
     "sinterklaas": dict(woorden=["sinterklaas", "intocht", "pakjesavond", "pepernoten"],
                         themas=["dankbaarheid", "liefde"],
                         subs=[(["intocht", "stoomboot", "aangemeerd", "aankomst", "aanlegplaats"],
-                               ["Sinterklaas is weer in het land. Overal staan kinderen langs de kant.",
-                                "De Sint is aangekomen. Wat is het mooiste cadeau dat je ooit kreeg?"]),
+                               ["Sinterklaas komt weer naar Nederland. Overal kijken kinderen ernaar uit.",
+                                "Het is bijna intocht. Wat is het mooiste cadeau dat je ooit kreeg?"]),
                               (["pakjesavond", "cadeau"], ["Pakjesavond: wat is het mooiste cadeau dat je ooit kreeg?"]),
                               (["pepernoten"], ["De pepernoten liggen weer in de schappen. Het is Sinterklaastijd."])],
                         zinnen=["Sinterklaas is in het land en heel Nederland denkt aan cadeaus. Dit is er één die blijft.",
                                 "Het is Sinterklaastijd. Wat is het mooiste wat jij ooit kreeg?",
                                 "Pakjes en pepernoten. En een gave die je niet hoeft te verdienen."],
-                        bruggen=["In Sinterklaastijd gaat het over geven. Dit vers gaat over wat God geeft.",
-                                 "Cadeaus zijn mooi. Dit vers gaat over een gave die blijft."],
                         vers_woorden=["gave", "gaven", "geven", "geschenk", "vreugd", "kinderen", "blij"]),
     "sport": dict(woorden=["wint goud", "wereldkampioen", "europees kampioen", "olympisch kampioen", "oranje wint", "pakt goud"],
                   themas=["dankbaarheid", "moed"],
                   zinnen=["Er wordt gejuicht om een overwinning vandaag. Ook jij hebt redenen om te juichen.",
                           "Winnen is mooi. Er is iets wat nog meer telt.",
                           "Goud voor de winnaar. En wat krijgt wie volhoudt?"],
-                  bruggen=["Bij een overwinning past dit vers: wat telt voor wie volhoudt.",
-                           "Winnen is mooi, dit vers gaat over wat blijft."],
                   vers_woorden=["loop", "wedloop", "kroon", "overwin", "strijd", "prijs", "volhoud"]),
     "drukte": dict(woorden=["recordfile", "filedrukte", "files", "spitsdrukte", "ns storing", "treinstoring"],
                    themas=["vrede_rust", "wijsheid"],
                    zinnen=["Files en vertragingen vandaag. Dit is voor die minuten in de auto of op het perron.",
                            "Treinen staan stil, wegen zitten vol. Misschien is dat niet eens zo erg.",
                            "Alles loopt vertraagd vandaag. Een kans om rustig te worden."],
-                   bruggen=["Staat alles stil? Dan past dit vers: rust midden in de drukte.",
-                            "Als je moet wachten, is dit iets om bij stil te staan."],
                    vers_woorden=["stil", "rust", "wacht", "geduld", "haast"]),
     "examens": dict(woorden=["eindexamen", "examens", "tentamens"],
                     themas=["moed", "vertrouwen"],
                     zinnen=["Het is examentijd en dat voelt spannend. Dit is voor jou.",
                             "Je hebt geleerd, je hebt je best gedaan. De rest mag je loslaten.",
                             "Examens of niet: wijsheid is meer dan een cijfer."],
-                    bruggen=["Voor wie spannende dagen heeft past dit vers: rust en vertrouwen.",
-                             "Bij de spanning van een examen helpt dit vers om los te laten."],
                     vers_woorden=["wijsheid", "verstand", "leer", "kennis", "inzicht", "vertrouw"]),
     "klok": dict(woorden=["wintertijd", "zomertijd", "klok een uur"],
                  themas=["wijsheid", "vrede_rust"],
                  zinnen=["De klok is verzet, een uur erbij of eraf. Wat doe jij met je tijd?",
                          "Een uur extra of minder. Tijd is een geschenk.",
                          "Winter- of zomertijd: de dag heeft weer een andere vorm."],
-                 bruggen=["Nu de klok verzet is, past dit vers over tijd en wat blijft.",
-                          "Over tijd gesproken: dit vers gaat over wat je uur voor uur kunt vasthouden."],
                  vers_woorden=["tijd", "dagen", "jaren", "getij", "eeuw"]),
     "koopjes": dict(woorden=["black friday", "cyber monday", "koopjesjagers", "uitverkoop"],
                     themas=["dankbaarheid", "wijsheid"],
                     zinnen=["Black Friday: overal aanbiedingen. Wat heb je eigenlijk al?",
                             "Iedereen jaagt op koopjes vandaag. Dit is gratis, en blijft.",
                             "Kortingen alom. En de beste dingen zijn niet te koop."],
-                    bruggen=["Midden in de koopjes past dit vers: wat echt waarde heeft.",
-                             "Wat is genoeg? Dit vers geeft een ander antwoord dan de reclames."],
                     vers_woorden=["schat", "rijk", "geld", "zilver", "goud", "koop", "genoeg"]),
     "maandag": dict(woorden=["blue monday", "somberste dag"],
                     themas=["hoop", "troost"],
                     zinnen=["Blue Monday, de somberste dag van het jaar, zeggen ze. Hier is iets van hoop.",
                             "Voel je je somber vandaag? Je bent niet de enige.",
                             "Een zware maandag? Er is iets wat bij je blijft."],
-                    bruggen=["Op een sombere dag past dit vers: hoop die blijft.",
-                             "Als alles zwaar voelt, is dit een vers om bij te schuilen."],
                     vers_woorden=["hoop", "troost", "vreugd", "blij", "verblijd"]),
 }
 # Politiek: nooit automatisch, altijd eerst akkoord van Joshua. Neutraal: nooit een partij, politicus of standpunt kiezen.
 POLITIEK_ZINNEN = ["Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.",
                    "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.",
                    "Veel meningen, veel onrust. Even terug naar wat vaststaat."]
-POLITIEK_BRUGGEN = ["Bij alle onrust en besluiten past dit vers: wat blijft staan.",
-                    "Voor wie veel hoort en weinig weet, is dit een vast punt."]
 ZWAAR_ZINNEN = ["Er gebeurt veel in de wereld dat zwaar is. Even stil, samen.",
                 "Soms is het nieuws te zwaar voor woorden. Dan is er dit.",
                 "Voor iedereen die vandaag geraakt is door wat er gebeurde."]
-ZWAAR_BRUGGEN = ["Bij zwaar nieuws past dit vers: troost die er is.",
-                 "Als er geen woorden zijn, is dit er voor wie het zwaar heeft."]
+
+# Korte bruggen (maximaal 45 tekens): waarom dit vers bij het moment past. In de caption altijd, in de uitleg op het beeld
+# alleen als het geheel binnen de 110 tekens blijft.
+BRUGGEN = {
+    "storm": ["Bij storm: houvast als het waait.", "Als het stormt, kun je hierop rusten."],
+    "winter": ["In de winterkou: warmte van binnen.", "Bij vorst en sneeuw: rust en warmte."],
+    "hitte": ["Bij hitte: schaduw en verkwikking.", "Te warm? Even op adem komen."],
+    "regen": ["Op een natte dag: licht in het grijs.", "Bij grijs weer: kleur van binnen."],
+    "sintmaarten": ["Sint-Maarten: delen en een klein licht.", "Een klein licht doet ertoe."],
+    "sinterklaas": ["In Sinterklaastijd: wat God geeft.", "Cadeaus zijn mooi, deze gave blijft."],
+    "sport": ["Bij een overwinning: wat blijft.", "Winnen is mooi, volhouden telt."],
+    "drukte": ["Staat alles stil? Dit is rust.", "Moet je wachten? Sta even stil hierbij."],
+    "examens": ["Voor wie spanning voelt: rust.", "Spannend? Dit helpt om los te laten."],
+    "klok": ["Nu de klok verzet is: tijd die blijft.", "Over tijd gesproken: dit blijft."],
+    "koopjes": ["Midden in de koopjes: wat echt telt.", "Wat is genoeg? Dit geeft antwoord."],
+    "maandag": ["Op een sombere dag: hoop die blijft.", "Zwaar? Hier kun je bij schuilen."],
+    "politiek": ["Bij alle onrust: wat blijft staan.", "Een vast punt in veel geluid."],
+    "zwaar": ["Bij zwaar nieuws: troost die er is.", "Als er geen woorden zijn: dit."],
+}
 
 PAD = "data/nieuws.json"
 
@@ -238,7 +229,7 @@ def _zinnen(cat, zwaar, kop=""):
 
 def _brug(cat, zwaar, item, vers_id=""):
     """Eén zin voor de uitleg: waarom dit vers bij dit moment past (vast per nieuwsitem en vers)."""
-    lijst = ZWAAR_BRUGGEN if zwaar else (POLITIEK_BRUGGEN if cat == "politiek" else LICHT[cat]["bruggen"])
+    lijst = BRUGGEN["zwaar" if zwaar else cat]
     return random.Random(item["kop"] + vers_id).choice(lijst)
 
 
@@ -278,7 +269,7 @@ def _vul_nieuws(p, x, zin, item, cat, zwaar, bank, cfg):
     brug = _brug(cat, zwaar, item, x["id"])
     e = bank[x["id"]]
     zin_e = (e.get("zin") or "").strip()
-    if p.get("uitleg"):
+    if p.get("uitleg") and len(brug) + 1 + len(p["uitleg"]) <= 110:  # de uitleg op het beeld mag niet langer dan 110 tekens zijn
         p["uitleg"] = f"{brug} {p['uitleg']}"
     if zin_e and zin_e in p["caption"]:
         p["caption"] = p["caption"].replace(zin_e, f"{brug} {zin_e}", 1)
@@ -360,6 +351,59 @@ def maak_nieuwspost(item, cat, zwaar, cfg, posts, rnd, na=None, vers_id=None, zi
     S.cmd_log(f"Nieuwspost: {oud} vervangen door {p['ref']} (aanleiding: {cat}, {item['bron']})")
     S.activiteit("verskiezer", f"Nieuwspost gemaakt: {p['ref']}")
     return p
+
+
+def herzie_alle():
+    """Past nieuwsposts die nog niet online staan aan op de nieuwste regels (moment bij naam, passend vers, brugzin).
+    Licht nieuws: nieuw vers en nieuwe openingszin. Politiek en zwaar: het vers en de zin die Joshua koos blijven, alleen de brugzin komt erbij."""
+    cfg = S.laad("config.json")
+    posts = S.laad("data/posts.json", [])
+    bank = tekstbank.laad()
+    alle = {x["id"]: x for x in S.alle_verzen()}
+    nu = dt.datetime.now()
+    gedaan, overgeslagen = [], []
+    for p in posts:
+        n = p.get("nieuws")
+        if not n or p["variabelen"].get("aanleiding") != "nieuws" or p.get("gepubliceerd") or p["status"] != "gerenderd":
+            continue
+        try:
+            t = dt.datetime.fromisoformat(f"{p['datum']}T{p['variabelen']['tijdslot']}")
+        except (ValueError, TypeError):
+            continue
+        if t < nu + dt.timedelta(minutes=30):  # staat bijna online: niet meer aanraken
+            overgeslagen.append(p["ref"]); continue
+        cat, zwaar = n["categorie"], n.get("zwaar", False)
+        item = {"kop": n["kop"], "bron": n.get("bron", ""), "link": n.get("link", "")}
+        if cat in LICHT and not zwaar:
+            rest = [q for q in posts if q is not p]
+            vrij = _vrije_verzen(cat, zwaar, cfg, rest, bank)
+            if not vrij:
+                overgeslagen.append(p["ref"]); continue
+            beste = _passend(vrij[0], bank[vrij[0]["id"]], cat, zwaar)
+            x = random.Random(p["id"]).choice([y for y in vrij if _passend(y, bank[y["id"]], cat, zwaar) == beste])
+            zinnen = _zinnen(cat, zwaar, n["kop"])
+            zin = random.Random(p["id"]).choice(zinnen[:2] if len(zinnen) > len(LICHT[cat]["zinnen"]) else zinnen)
+        else:
+            x = alle.get(p["vers_id"])
+            zin = p.get("hook") or random.Random(p["id"]).choice(_zinnen(cat, zwaar, n["kop"]))
+            if not x or p["vers_id"] not in bank:
+                overgeslagen.append(p["ref"]); continue
+        oud = p["ref"]
+        _vul_nieuws(p, x, zin, item, cat, zwaar, bank, cfg)
+        p["status"] = "klaar_voor_render"
+        S.bewaar("data/posts.json", posts)
+        try:
+            S.cmd_render(p["datum"])
+        except SystemExit:
+            pass
+        posts[:] = S.laad("data/posts.json", [])
+        q = next(q for q in posts if q["id"] == p["id"])
+        if q["status"] != "gerenderd":
+            overgeslagen.append(q["ref"]); continue
+        S.cmd_log(f"Nieuwspost aangepast: {oud} is nu {q['ref']} ({cat}): {q['hook'][:70]}")
+        gedaan.append(f"{q['ref']} ({q['variabelen']['tijdslot']})")
+    S.bewaar("data/posts.json", posts)
+    return f"Nieuwsposts aangepast: {', '.join(gedaan) if gedaan else 'geen'}" + (f". Overgeslagen: {', '.join(overgeslagen)}" if overgeslagen else "")
 
 
 def nieuwsposts_op(posts, datum):
