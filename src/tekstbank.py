@@ -21,7 +21,7 @@ HOOKSTIJLEN = ("vraag", "herkenning", "uitdaging", "rustig")
 
 # Ochtendposts (Joshua, 12 nov): het 07:30-slot krijgt altijd een vers voor een goede start van de dag
 OCHTEND_VERZEN = frozenset("""
-Lamentations-3-22-23 Psalms-118-24-24 Psalms-143-8-8 Psalms-30-6-6
+Lamentations-3-22-23 Psalms-118-24-24 Psalms-143-8-8
 Psalms-27-1-1 Psalms-92-2-2 Psalms-100-4-4 Psalms-103-1-1
 Psalms-103-2-2 Psalms-107-1-1 Psalms-136-1-1 Psalms-95-2-2
 Psalms-9-2-2 Psalms-118-14-14 Psalms-28-7-7 Psalms-16-11-11

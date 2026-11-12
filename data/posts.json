@@ -3863,10 +3863,10 @@
  {
   "id": "2026-11-13-5",
   "datum": "2026-11-13",
-  "status": "gerenderd",
-  "vers_id": "Psalms-30-6-6",
-  "ref": "Psalm 30:6",
-  "tekst": "Want een ogenblik is er in Zijn toorn, maar een leven in Zijn goedgunstigheid; des avonds vernacht het geween, maar des morgens is er gejuich.",
+  "status": "wacht_op_tekst",
+  "vers_id": "Psalms-46-2-2",
+  "ref": "Psalm 46:2",
+  "tekst": "God is ons een Toevlucht en Sterkte; Hij is krachtelijk bevonden een Hulp in benauwdheden.",
   "vertaling": "SV",
   "variabelen": {
    "huisstijl": "hemelsblauw",
@@ -3913,17 +3913,13 @@
    "reel_scene": "verkenning",
    "hashtag_stijl": "test"
   },
-  "hook": "Goedemorgen. Een vers voor het begin van je dag.",
+  "hook": "",
   "beeld_hook": "",
-  "caption": "Goedemorgen. Een vers voor het begin van je dag.\n\n\"Want een ogenblik is er in Zijn toorn, maar een leven in Zijn goedgunstigheid; des avonds vernacht het geween, maar des morgens is er gejuich.\"\nPsalm 30:6\n\nVerdriet duurt een nacht, Gods goedheid een leven lang.",
-  "hashtags": [
-   "#bijbelvers",
-   "#troost",
-   "#psalm"
-  ],
-  "uitleg": "Huilen mag de hele nacht duren, maar 's morgens komt er gejuich.",
-  "betekenis": "David weet wat verdriet is. Maar hij weet ook dat verdriet niet blijft. Na de nacht komt de ochtend. Gods goedheid duurt langer dan de moeilijke tijd.",
-  "toepassing": "Heb je verdriet? Houd vast: dit is de nacht, de ochtend komt.",
+  "caption": "",
+  "hashtags": [],
+  "uitleg": "",
+  "betekenis": "",
+  "toepassing": "",
   "kernwoord": "gejuich",
   "media": "docs/media/2026-11/2026-11-13-5.mp4",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-13-5.mp4",
@@ -4052,7 +4048,7 @@
  {
   "id": "2026-11-14-2",
   "datum": "2026-11-14",
-  "status": "gerenderd",
+  "status": "wacht_op_tekst",
   "vers_id": "Zephaniah-3-17-17",
   "ref": "Sefanja 3:17",
   "tekst": "De HEERE uw God, is in het midden van u, een Held, Die verlossen zal; Hij zal over u vrolijk zijn met blijdschap, Hij zal zwijgen in Zijn liefde, Hij zal Zich over u verheugen met gejuich.",
