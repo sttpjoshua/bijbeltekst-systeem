@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T18:45:49",
+ "updated": "2026-11-12T19:02:13",
  "agents": {
   "verskiezer": {
    "t": "2026-11-12T13:05:11",
@@ -32,7 +32,7 @@
    "state": "done"
   },
   "community": {
-   "t": "2026-11-12T18:06:46",
+   "t": "2026-11-12T19:01:14",
    "task": "1 nieuwe reactie gevonden",
    "state": "done"
   }
@@ -56,6 +56,10 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "19:02",
+   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
   {
    "t": "18:06",
    "msg": "Bediening: 1 Johannes 4:7 opnieuw gemaakt (stijl papier_blauw, achtergrond kleurverloop, eerste slide verhaal)"
@@ -99,10 +103,6 @@
   {
    "t": "14:31",
    "msg": "Zelfherstel: Geen post klaar voor 2026-11-12 22:00 → noodpost Efeze 2:10 ingezet om 22:00"
-  },
-  {
-   "t": "14:15",
-   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
   }
  ],
  "lampen": [
