@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T18:01:23",
+ "updated": "2026-11-12T18:04:02",
  "agents": {
   "verskiezer": {
    "t": "2026-11-12T13:05:11",
@@ -7,8 +7,8 @@
    "state": "done"
   },
   "designer": {
-   "t": "2026-11-12T14:45:07",
-   "task": "Ontwierp 1 Johannes 4:7 in stijl zonsopgang",
+   "t": "2026-11-12T18:03:45",
+   "task": "1 Johannes 4:7 opnieuw gemaakt (stijl papier_blauw, achtergrond kleurv",
    "state": "done"
   },
   "video": {
@@ -32,7 +32,7 @@
    "state": "done"
   },
   "community": {
-   "t": "2026-11-12T18:01:22",
+   "t": "2026-11-12T18:04:01",
    "task": "1 nieuwe reactie gevonden",
    "state": "done"
   }
@@ -56,6 +56,10 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "18:03",
+   "msg": "Bediening: 1 Johannes 4:7 opnieuw gemaakt (stijl papier_blauw, achtergrond kleurverloop, eerste slide verhaal)"
+  },
   {
    "t": "17:46",
    "msg": "2026-11-12-5 online op facebook: 1 Johannes 4:7"
@@ -98,10 +102,6 @@
   },
   {
    "t": "14:01",
-   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
-   "t": "13:46",
    "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
   }
  ],
