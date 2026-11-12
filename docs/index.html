@@ -273,7 +273,7 @@ html[data-thema=donker] .kpost .knws{background:#3a2e14;color:#ffd98a}
 .stb{margin-top:14px;padding:12px;border-radius:12px;background:var(--zacht)}
 .stw{display:flex;flex-wrap:wrap;gap:34px 6px}.sw{width:56px;height:40px;border-radius:8px;border:2px solid transparent;cursor:pointer;position:relative;padding:0}
 .sw span{position:absolute;left:-4px;right:-4px;bottom:-28px;font-size:9.5px;line-height:1.15;text-align:center;color:var(--ink3)}.stw{padding-bottom:14px}
-.sw.aan{border-color:var(--ink);box-shadow:0 0 0 2px var(--kaart) inset}
+.sw .aa{position:absolute;left:0;right:0;top:6px;text-align:center;font:600 20px "Cormorant Garamond",Georgia,serif}.sw.aan{border-color:var(--ink);box-shadow:0 0 0 2px var(--kaart) inset}
 </style>
 </head>
 <body>
@@ -841,6 +841,12 @@ function miniaturen(x){
 }
 
 // ---------- Planning ----------
+const STIJLINKT={papier_rood:"#9b2a40",papier_groen:"#2f5a41",papier_blauw:"#24406b",schaduw_rood:"#9b2a40",schaduw_groen:"#2f5a41",schaduw_blauw:"#24406b"};
+function stijlVlak(k){
+  if(k.startsWith("papier_"))return "background:#f5f1e6;border-color:rgba(0,0,0,.12)";
+  if(k.startsWith("schaduw_"))return "background:radial-gradient(circle at 78% 22%,rgba(110,84,56,.38) 0 13%,transparent 28%),radial-gradient(circle at 62% 64%,rgba(110,84,56,.3) 0 11%,transparent 26%),radial-gradient(circle at 90% 70%,rgba(110,84,56,.34) 0 10%,transparent 24%),#f5f1e6;border-color:rgba(0,0,0,.12)";
+  return "background:"+STIJLKLEUR[k];
+}
 const STIJLKLEUR={avond:"#2b2f4a",zand:"#d9c3a0",salie:"#a8b8a0",zonsopgang:"#ff6f61",hemelsblauw:"#5aa6e6",paars:"#6a3fc0",roze:"#f7a1b8",bosgroen:"#3f8a5c",mint:"#8fdcc7",perzik:"#ffc28b",papier_rood:"#9b2a40",papier_groen:"#2f5a41",papier_blauw:"#24406b",schaduw_rood:"#c98a96",schaduw_groen:"#8fae9a",schaduw_blauw:"#8d9fc0"};
 const FORMAAT={afbeelding:"🖼 Afbeelding",video:"▶ Video",carrousel:"▤ Carrousel"};
 
@@ -977,7 +983,7 @@ function stijlBlok(x){
     <div class="vk vk-m" style="display:${huidig==="markeren"?"block":"none"}"><div class="sub" style="margin:10px 0 4px">Kleur en lettertype</div>
     <div class="stw">${Object.keys(MEELEES).map(k=>`<button class="sw sm${k===STK.meelees?" aan":""}" data-k="${k}" title="${MEELNAAM[k]}" style="background:${MEELEES[k]}" onclick="kiesMeelees('${k}',this)"><span>${MEELNAAM[k]}</span></button>`).join("")}</div></div>
     <div class="vk vk-h" style="display:${huidig==="markeren"?"none":"block"}"><div class="sub" style="margin:10px 0 4px">Kleurstijl</div>
-    <div class="stw">${st.map(k=>`<button class="sw${k===v.huisstijl?" aan":""}" data-k="${k}" title="${k}" style="background:${STIJLKLEUR[k]}" onclick="kiesStijl('huisstijl','${k}',this)"><span>${k.replace("_","<br>")}</span></button>`).join("")}</div>
+    <div class="stw">${st.map(k=>`<button class="sw${k===v.huisstijl?" aan":""}" data-k="${k}" title="${k}" style="${stijlVlak(k)}" onclick="kiesStijl('huisstijl','${k}',this)">${/^(papier|schaduw)_/.test(k)?`<b class="aa" style="color:${STIJLINKT[k]}">Aa</b>`:""}<span>${k.replace("_","<br>")}</span></button>`).join("")}</div>
     <div class="seg" style="margin-top:8px"><span class="sub" style="align-self:center;margin-right:4px">Achtergrond:</span>
       ${[["verloop","Kleurverloop"],["beeld","Foto"]].map(([k,n])=>`<button class="btn sto-a${STK.achtergrondbron===k?" prim":""}" onclick="kiesStijl('achtergrondbron','${k}',this)">${n}</button>`).join("")}</div>
     ${v.formaat==="carrousel"?`<div class="seg" style="margin-top:6px"><span class="sub" style="align-self:center;margin-right:4px">Eerste slide:</span>
