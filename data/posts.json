@@ -3563,7 +3563,7 @@
  {
   "id": "2026-11-13-2",
   "datum": "2026-11-13",
-  "status": "gerenderd",
+  "status": "opnieuw_maken",
   "vers_id": "Matthew-10-30-31",
   "ref": "Mattheüs 10:30-31",
   "tekst": "En ook uw haren des hoofds zijn alle geteld. Vreest dan niet; gij gaat vele musjes te boven.",
@@ -3579,7 +3579,7 @@
    "lengte": "middel",
    "bron": "bekend",
    "vraag_onderaan": true,
-   "opening": "stopper",
+   "opening": "vers",
    "tijdslot": "22:00",
    "tijdslot_fb": "20:30",
    "palet": "zonsopgang_fris",
@@ -3588,7 +3588,9 @@
    "achtergrond": "diagonaal",
    "hook_op_beeld": false,
    "video_uitleg": null,
-   "hashtag_stijl": "zoekwoord"
+   "hashtag_stijl": "zoekwoord",
+   "carrousel_stijl": "markeren",
+   "reel_kleur": "mint"
   },
   "keuzebron": {
    "huisstijl": "experiment",
@@ -3604,7 +3606,9 @@
    "opening": "experiment",
    "tijdslot": "experiment",
    "video_uitleg": "n.v.t.",
-   "hashtag_stijl": "test"
+   "hashtag_stijl": "test",
+   "carrousel_stijl": "ingepland",
+   "reel_kleur": "ingepland"
   },
   "hook": "Tel even mee: hoeveel haren heb jij?",
   "beeld_hook": "",
