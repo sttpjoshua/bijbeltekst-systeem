@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-12T18:06",
+ "gegenereerd": "2026-11-12T18:15",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -4481,11 +4481,6 @@
  "leergeschiedenis": [],
  "laatste_rapport": null,
  "logboek": [
-  {
-   "t": "2026-11-11T13:32:13",
-   "soort": "info",
-   "tekst": "Bediening: Voorstel niet gevonden of al afgehandeld"
-  },
   {
    "t": "2026-11-11T13:38:39",
    "soort": "info",
