@@ -265,6 +265,60 @@ def _regel(d, x, y, r, f, kleur, accent, staat, links):
     d.text((x0, y), r, font=f, fill=kleur, anchor="la")
     return w
 
+_NUANS = {"maar", "niet", "geen", "echt", "juist", "zelfs", "ook", "nooit", "altijd", "alleen"}
+_CURSIEF_STOP = _STOP | {"vandaag", "gewoon", "iemand", "iets", "jezelf", "samen", "weer", "meer", "elke", "elkaar"}
+
+def _cursief_woorden(body, kern):
+    """Indices van de woorden die in de papierstijl cursief komen: een korte uitdrukking met nuance
+    (na maar/niet/echt enzovoort, anders het langste woord), net als bij een tekstschrijver die iets benadrukt.
+    Hoogstens twee uitdrukkingen van 1 tot 3 woorden per tekst."""
+    ws = body.split()
+    kaal = [_kaal(w) for w in ws]
+    uit = set()
+    for i, k in enumerate(kaal):
+        if k in _NUANS and i + 1 < len(ws) and not uit:
+            j = i + 1
+            while j < len(ws) and j < i + 4 and kaal[j] != kern and not ws[j - 1][-1:] in ",;:.!?":
+                uit.add(j); j += 1
+            if len(uit) >= 1 and j - i > 1:
+                break
+            uit.clear()
+    if not uit:
+        kand = [i for i, k in enumerate(kaal) if k != kern and k not in _CURSIEF_STOP and len(k) >= 6]
+        if kand:
+            uit.add(max(kand, key=lambda i: len(kaal[i])))
+    return uit
+
+def _regel_papier(d, x, y, r, f, fi, kleur, accent, staat, links, cursief, start):
+    """Eén regel in de papierstijl: gewone letter, cursief voor nuance en vet in accentkleur voor het kernwoord.
+    start = index van het eerste woord van deze regel in de hele tekst."""
+    ws = r.split(" ")
+    spatie = d.textlength(" ", font=f)
+    delen = []
+    for n, t in enumerate(ws):
+        k = _kaal(t)
+        if staat.get("kern") and k == staat["kern"] and not staat.get("klaar"):
+            fv, rand = _vet(f)
+            m = re.match(r"^(\W*)(.*?)(\W*)$", t)
+            staat["klaar"] = True
+            delen.append((t, fv, staat.get("kleur", accent), rand, m))
+        elif start + n in cursief:
+            delen.append((t, fi, kleur, 0, None))
+        else:
+            delen.append((t, f, kleur, 0, None))
+    breedte = sum(d.textlength(t, font=fo) + 2 * rand for t, fo, _, rand, _ in delen) + spatie * (len(delen) - 1)
+    cx = x if links else x - breedte / 2
+    for t, fo, kz, rand, m in delen:
+        if m:
+            vw = d.textlength(m.group(1), font=f)
+            d.text((cx, y), m.group(1), font=f, fill=kleur, anchor="la")
+            d.text((cx + vw + rand, y), m.group(2), font=fo, fill=kz, anchor="la", stroke_width=rand, stroke_fill=kz)
+            d.text((cx + vw + 2 * rand + d.textlength(m.group(2), font=fo), y), m.group(3), font=f, fill=kleur, anchor="la")
+        else:
+            d.text((cx, y), t, font=fo, fill=kz if fo is f else kleur, anchor="la")
+        cx += d.textlength(t, font=fo) + 2 * rand + spatie
+    return breedte
+
 def stopper_fragment(tekst, kern, max_w=10):
     """Het stukje van het vers rond het kernwoord (tussen leestekens), voor een korte, grote eerste slide."""
     woorden = tekst.split()
@@ -680,8 +734,16 @@ def _tekstslide(post, titel, body, pad, nummer, bg=None, groot=False):
     y0 = int(h * (0.18 if groot else 0.27)) + (int(h * ruimte) - lh * len(regels)) // 2
     links = v["layout"] == "links"
     staat = _kernstaat(post, kleur, accent)
-    for i, r in enumerate(regels):
-        _regel(d, marge if links else b // 2, y0 + i * lh, r, f, kleur + (255,), accent + (255,), staat, links)
+    if v.get("achtergrond") == "papier":  # papierstijl: cursief voor nuance
+        cur = _cursief_woorden(body, staat.get("kern"))
+        fi = _font("cormorant_cursief", grootte)
+        n0 = 0
+        for i, rg in enumerate(regels):
+            _regel_papier(d, marge if links else b // 2, y0 + i * lh, rg, f, fi, kleur + (255,), accent + (255,), staat, links, cur, n0)
+            n0 += len(rg.split(" "))
+    else:
+        for i, rg in enumerate(regels):
+            _regel(d, marge if links else b // 2, y0 + i * lh, rg, f, kleur + (255,), accent + (255,), staat, links)
     if groot:  # geen referentie (die komt op de volgende slides), wel een veeg-teken
         d.text((b // 2, int(h * 0.86)), "swipe  \u2192", font=_klein_font(int(b * 0.03), b"SemiBold"), fill=accent + (230,), anchor="ma")
     rf = _klein_font(int(b * 0.026), b"SemiBold")
