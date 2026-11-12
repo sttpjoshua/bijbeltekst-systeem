@@ -477,4 +477,12 @@ def main(raw):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1] if len(sys.argv) > 1 else os.environ.get("OPDRACHT", "{}"))
+    try:
+        main(sys.argv[1] if len(sys.argv) > 1 else os.environ.get("OPDRACHT", "{}"))
+    except SystemExit as e:
+        if isinstance(e.code, str):  # de reden komt in het logboek, zodat het dashboard hem kan tonen
+            S.cmd_log("Bediening mislukt: " + e.code[:200])
+        raise
+    except Exception as e:
+        S.cmd_log(f"Bediening mislukt: onverwachte fout ({type(e).__name__}: {str(e)[:120]})")
+        raise
