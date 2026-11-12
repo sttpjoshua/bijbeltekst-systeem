@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T09:01:23",
+ "updated": "2026-11-12T09:02:56",
  "agents": {
   "verskiezer": {
    "t": "2026-11-12T07:01:23",
@@ -7,12 +7,12 @@
    "state": "done"
   },
   "designer": {
-   "t": "2026-11-12T08:18:48",
+   "t": "2026-11-12T09:02:55",
    "task": "Ontwierp Sefanja 3:17 in stijl roze",
    "state": "done"
   },
   "video": {
-   "t": "2026-11-12T08:18:48",
+   "t": "2026-11-12T09:02:55",
    "task": "Monteerde video Sefanja 3:17 met muziek",
    "state": "done"
   },
@@ -57,6 +57,10 @@
  ],
  "log": [
   {
+   "t": "09:02",
+   "msg": "Zelfstandig 10 posts klaargezet voor 2026-11-13, 2026-11-14 (teksten uit de tekstbank)."
+  },
+  {
    "t": "08:18",
    "msg": "Zelfstandig 10 posts klaargezet voor 2026-11-13, 2026-11-14 (teksten uit de tekstbank)."
   },
@@ -99,10 +103,6 @@
   {
    "t": "20:40",
    "msg": "Zelfstandig 10 posts klaargezet voor 2026-11-12, 2026-11-13 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "20:31",
-   "msg": "2026-11-11-n2030 online op facebook: Spreuken 23:18"
   }
  ],
  "lampen": [

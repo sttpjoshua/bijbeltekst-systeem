@@ -3863,7 +3863,7 @@
  {
   "id": "2026-11-13-5",
   "datum": "2026-11-13",
-  "status": "wacht_op_tekst",
+  "status": "gerenderd",
   "vers_id": "Psalms-46-2-2",
   "ref": "Psalm 46:2",
   "tekst": "God is ons een Toevlucht en Sterkte; Hij is krachtelijk bevonden een Hulp in benauwdheden.",
@@ -3936,8 +3936,8 @@
   "geluid": null,
   "handle": "@bibleverse_nl",
   "muziek_start": 46.8,
-  "cover_ms": 5300,
-  "duur": 19.92,
+  "cover_ms": 7004,
+  "duur": 19.57,
   "media_extra": [],
   "thumb": "thumbs/2026-11-13-5.jpg",
   "media_urls": [
@@ -4054,7 +4054,7 @@
  {
   "id": "2026-11-14-2",
   "datum": "2026-11-14",
-  "status": "wacht_op_tekst",
+  "status": "gerenderd",
   "vers_id": "Zephaniah-3-17-17",
   "ref": "Sefanja 3:17",
   "tekst": "De HEERE uw God, is in het midden van u, een Held, Die verlossen zal; Hij zal over u vrolijk zijn met blijdschap, Hij zal zwijgen in Zijn liefde, Hij zal Zich over u verheugen met gejuich.",
@@ -4130,8 +4130,8 @@
   "tekstbron": "tekstbank",
   "handle": "@bibleverse_nl",
   "muziek_start": 10.4,
-  "cover_ms": 5300,
-  "duur": 22.0,
+  "cover_ms": 14873,
+  "duur": 32.69,
   "media_extra": [],
   "thumb": "thumbs/2026-11-14-2.jpg",
   "media_urls": [
