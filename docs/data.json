@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-12T14:01",
+ "gegenereerd": "2026-11-12T14:15",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -4440,14 +4440,6 @@
   {
    "t": "2026-11-11T12:01:02",
    "soort": "fout",
-   "tekst": "Politiek nieuws (NOS): \"Raad van State: minister van Asiel moet veiligheid Syrië opnieuw beoordelen\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
-   "code": "nieuws_voorstel",
-   "post": "n111112010",
-   "opgelost": true
-  },
-  {
-   "t": "2026-11-11T12:01:02",
-   "soort": "fout",
    "tekst": "Zwaar nieuws (NOS): \"Vijf jaar The Kyiv Independent: hoe bedrijf je journalistiek in een land in oorlog?\". Wil je er een troostende post over? Die gaat dan pas 6 uur na het nieuws online.",
    "code": "nieuws_voorstel",
    "post": "n111112011",
@@ -4746,6 +4738,11 @@
   },
   {
    "t": "2026-11-12T14:01:28",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-12T14:15:58",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
   }

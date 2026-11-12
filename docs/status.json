@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T14:01:28",
+ "updated": "2026-11-12T14:15:59",
  "agents": {
   "verskiezer": {
    "t": "2026-11-12T13:05:11",
@@ -57,6 +57,10 @@
  ],
  "log": [
   {
+   "t": "14:15",
+   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
+  {
    "t": "14:01",
    "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
   },
@@ -99,10 +103,6 @@
   {
    "t": "12:17",
    "msg": "2026-11-12-2 ook als story geplaatst"
-  },
-  {
-   "t": "12:16",
-   "msg": "2026-11-12-1 online op facebook: Kolossenzen 1:12"
   }
  ],
  "lampen": [
