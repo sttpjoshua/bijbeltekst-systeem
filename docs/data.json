@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-12T18:04",
+ "gegenereerd": "2026-11-12T18:06",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -4783,6 +4783,11 @@
    "t": "2026-11-12T18:03:45",
    "soort": "info",
    "tekst": "Bediening: 1 Johannes 4:7 opnieuw gemaakt (stijl papier_blauw, achtergrond kleurverloop, eerste slide verhaal)"
+  },
+  {
+   "t": "2026-11-12T18:06:31",
+   "soort": "info",
+   "tekst": "Bediening: 1 Johannes 4:7 opnieuw gemaakt (stijl papier_blauw, achtergrond kleurverloop, eerste slide verhaal)"
   }
  ],
  "recente_fouten": [],
@@ -4895,7 +4900,7 @@
    "ok": "2026-11-12T09:45"
   },
   "reacties": {
-   "ok": "2026-11-12T18:04",
+   "ok": "2026-11-12T18:06",
    "laatst_ok": true,
    "detail": "1 nieuwe reacties",
    "fout": "2026-11-08T18:00"

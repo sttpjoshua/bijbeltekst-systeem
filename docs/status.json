@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T18:04:02",
+ "updated": "2026-11-12T18:06:48",
  "agents": {
   "verskiezer": {
    "t": "2026-11-12T13:05:11",
@@ -7,7 +7,7 @@
    "state": "done"
   },
   "designer": {
-   "t": "2026-11-12T18:03:45",
+   "t": "2026-11-12T18:06:31",
    "task": "1 Johannes 4:7 opnieuw gemaakt (stijl papier_blauw, achtergrond kleurv",
    "state": "done"
   },
@@ -32,7 +32,7 @@
    "state": "done"
   },
   "community": {
-   "t": "2026-11-12T18:04:01",
+   "t": "2026-11-12T18:06:46",
    "task": "1 nieuwe reactie gevonden",
    "state": "done"
   }
@@ -57,8 +57,36 @@
  ],
  "log": [
   {
-   "t": "18:03",
-   "msg": "Bediening: 1 Johannes 4:7 opnieuw gemaakt (stijl papier_blauw, achtergrond kleurverloop, eerste slide verhaal)"
+   "t": "14:01",
+   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
+  {
+   "t": "14:15",
+   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
+  {
+   "t": "14:31",
+   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
+  {
+   "t": "14:31",
+   "msg": "Zelfherstel: Geen post klaar voor 2026-11-12 22:00 → noodpost Efeze 2:10 ingezet om 22:00"
+  },
+  {
+   "t": "14:34",
+   "msg": "Materiaal-repo niet gekloond (add_repo ontbreekt in deze sessie); Actions vult muziek aan"
+  },
+  {
+   "t": "14:36",
+   "msg": "Zelf opgelost: post 22:00 van vandaag (1 Johannes 4:7, gekozen reservevers) bleef op 'klaar_voor_render' staan"
+  },
+  {
+   "t": "14:37",
+   "msg": "Dagelijkse run (zelfstandig): 10 posts voor 13 en 14 november gecontroleerd, reserveverzen voor 14 november in"
+  },
+  {
+   "t": "14:45",
+   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
   },
   {
    "t": "17:46",
@@ -73,36 +101,12 @@
    "msg": "2026-11-12-3 ook als story geplaatst"
   },
   {
-   "t": "14:45",
-   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
+   "t": "18:03",
+   "msg": "Bediening: 1 Johannes 4:7 opnieuw gemaakt (stijl papier_blauw, achtergrond kleurverloop, eerste slide verhaal)"
   },
   {
-   "t": "14:37",
-   "msg": "Dagelijkse run (zelfstandig): 10 posts voor 13 en 14 november gecontroleerd, reserveverzen voor 14 november in"
-  },
-  {
-   "t": "14:36",
-   "msg": "Zelf opgelost: post 22:00 van vandaag (1 Johannes 4:7, gekozen reservevers) bleef op 'klaar_voor_render' staan"
-  },
-  {
-   "t": "14:34",
-   "msg": "Materiaal-repo niet gekloond (add_repo ontbreekt in deze sessie); Actions vult muziek aan"
-  },
-  {
-   "t": "14:31",
-   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
-   "t": "14:31",
-   "msg": "Zelfherstel: Geen post klaar voor 2026-11-12 22:00 → noodpost Efeze 2:10 ingezet om 22:00"
-  },
-  {
-   "t": "14:15",
-   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
-   "t": "14:01",
-   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
+   "t": "18:06",
+   "msg": "Bediening: 1 Johannes 4:7 opnieuw gemaakt (stijl papier_blauw, achtergrond kleurverloop, eerste slide verhaal)"
   }
  ],
  "lampen": [
