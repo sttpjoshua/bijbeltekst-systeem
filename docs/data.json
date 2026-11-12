@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-12T12:52",
+ "gegenereerd": "2026-11-12T13:02",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -321,6 +321,25 @@
    "totaal": {},
    "per_platform": {},
    "score": {},
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "opening": "n.v.t.",
+    "tijdslot": "experiment",
+    "video_uitleg": "vaste regel",
+    "reel_stijl": "vaste regel",
+    "reel_plaatsing": "strategie",
+    "reel_scene": "verkenning",
+    "hashtag_stijl": "test"
+   },
    "momenten": {},
    "pub": {},
    "gemist": [],
@@ -380,6 +399,26 @@
    "totaal": {},
    "per_platform": {},
    "score": {},
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "opening": "n.v.t.",
+    "tijdslot": "experiment",
+    "video_uitleg": "vaste regel",
+    "reel_stijl": "ingepland",
+    "reel_plaatsing": "strategie",
+    "reel_scene": "strategie",
+    "hashtag_stijl": "test",
+    "reel_kleur": "ingepland"
+   },
    "momenten": {},
    "pub": {},
    "gemist": [],
@@ -438,6 +477,25 @@
    "totaal": {},
    "per_platform": {},
    "score": {},
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "opening": "n.v.t.",
+    "tijdslot": "experiment",
+    "video_uitleg": "vaste regel",
+    "reel_stijl": "vaste regel",
+    "reel_plaatsing": "verkenning",
+    "reel_scene": "strategie",
+    "hashtag_stijl": "test"
+   },
    "momenten": {},
    "pub": {},
    "gemist": [],
@@ -497,6 +555,24 @@
    "totaal": {},
    "per_platform": {},
    "score": {},
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "opening": "experiment",
+    "tijdslot": "experiment",
+    "video_uitleg": "n.v.t.",
+    "hashtag_stijl": "test",
+    "carrousel_stijl": "ingepland",
+    "reel_kleur": "ingepland"
+   },
    "momenten": {},
    "pub": {},
    "gemist": [],
@@ -555,6 +631,25 @@
    "totaal": {},
    "per_platform": {},
    "score": {},
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "reeks",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "opening": "n.v.t.",
+    "tijdslot": "reeks",
+    "video_uitleg": "vaste regel",
+    "reel_stijl": "vaste regel",
+    "reel_plaatsing": "verkenning",
+    "reel_scene": "strategie",
+    "hashtag_stijl": "test"
+   },
    "momenten": {},
    "pub": {},
    "gemist": [],
@@ -611,6 +706,22 @@
    "totaal": {},
    "per_platform": {},
    "score": {},
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "opening": "experiment",
+    "tijdslot": "experiment",
+    "video_uitleg": "n.v.t.",
+    "hashtag_stijl": "test"
+   },
    "momenten": {},
    "pub": {},
    "gemist": [],
@@ -668,6 +779,22 @@
    "totaal": {},
    "per_platform": {},
    "score": {},
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "opening": "experiment",
+    "tijdslot": "experiment",
+    "video_uitleg": "n.v.t.",
+    "hashtag_stijl": "test"
+   },
    "momenten": {},
    "pub": {},
    "gemist": [],
@@ -726,6 +853,25 @@
    "totaal": {},
    "per_platform": {},
    "score": {},
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "opening": "n.v.t.",
+    "tijdslot": "experiment",
+    "video_uitleg": "vaste regel",
+    "reel_stijl": "vaste regel",
+    "reel_plaatsing": "strategie",
+    "reel_scene": "verkenning",
+    "hashtag_stijl": "test"
+   },
    "momenten": {},
    "pub": {},
    "gemist": [],
@@ -785,6 +931,26 @@
    "totaal": {},
    "per_platform": {},
    "score": {},
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "opening": "n.v.t.",
+    "tijdslot": "experiment",
+    "video_uitleg": "vaste regel",
+    "reel_stijl": "ingepland",
+    "reel_plaatsing": "strategie",
+    "reel_scene": "strategie",
+    "hashtag_stijl": "test",
+    "reel_kleur": "ingepland"
+   },
    "momenten": {},
    "pub": {},
    "gemist": [],
@@ -843,6 +1009,24 @@
    "totaal": {},
    "per_platform": {},
    "score": {},
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "opening": "experiment",
+    "tijdslot": "experiment",
+    "video_uitleg": "n.v.t.",
+    "hashtag_stijl": "test",
+    "carrousel_stijl": "ingepland",
+    "reel_kleur": "ingepland"
+   },
    "momenten": {},
    "pub": {},
    "gemist": [],
@@ -902,6 +1086,26 @@
    "totaal": {},
    "per_platform": {},
    "score": {},
+   "keuzebron": {
+    "huisstijl": "joshua",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "joshua",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "opening": "n.v.t.",
+    "tijdslot": "experiment",
+    "video_uitleg": "vaste regel",
+    "reel_stijl": "joshua",
+    "reel_plaatsing": "verkenning",
+    "reel_scene": "verkenning",
+    "hashtag_stijl": "test",
+    "reel_kleur": "joshua"
+   },
    "momenten": {},
    "pub": {},
    "gemist": [],
@@ -960,6 +1164,25 @@
    "totaal": {},
    "per_platform": {},
    "score": {},
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "opening": "n.v.t.",
+    "tijdslot": "experiment",
+    "video_uitleg": "vaste regel",
+    "reel_stijl": "vaste regel",
+    "reel_plaatsing": "verkenning",
+    "reel_scene": "verkenning",
+    "hashtag_stijl": "test"
+   },
    "momenten": {},
    "pub": {},
    "gemist": [],
@@ -1019,6 +1242,26 @@
    "totaal": {},
    "per_platform": {},
    "score": {},
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "opening": "n.v.t.",
+    "tijdslot": "experiment",
+    "video_uitleg": "vaste regel",
+    "reel_stijl": "ingepland",
+    "reel_plaatsing": "strategie",
+    "reel_scene": "verkenning",
+    "hashtag_stijl": "test",
+    "reel_kleur": "ingepland"
+   },
    "momenten": {},
    "pub": {},
    "gemist": [],
@@ -1077,6 +1320,24 @@
    "totaal": {},
    "per_platform": {},
    "score": {},
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "opening": "experiment",
+    "tijdslot": "experiment",
+    "video_uitleg": "n.v.t.",
+    "hashtag_stijl": "test",
+    "carrousel_stijl": "ingepland",
+    "reel_kleur": "ingepland"
+   },
    "momenten": {},
    "pub": {},
    "gemist": [],
@@ -1134,6 +1395,22 @@
    "totaal": {},
    "per_platform": {},
    "score": {},
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "opening": "experiment",
+    "tijdslot": "experiment",
+    "video_uitleg": "n.v.t.",
+    "hashtag_stijl": "test"
+   },
    "momenten": {},
    "pub": {},
    "gemist": [],
@@ -1192,6 +1469,23 @@
    "totaal": {},
    "per_platform": {},
    "score": {},
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "opening": "nieuws",
+    "tijdslot": "experiment",
+    "video_uitleg": "n.v.t.",
+    "hashtag_stijl": "test",
+    "aanleiding": "nieuws"
+   },
    "momenten": {},
    "pub": {},
    "gemist": [],
@@ -1256,6 +1550,25 @@
    "totaal": {},
    "per_platform": {},
    "score": {},
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "opening": "n.v.t.",
+    "tijdslot": "experiment",
+    "video_uitleg": "vaste regel",
+    "reel_stijl": "vaste regel",
+    "reel_plaatsing": "verkenning",
+    "reel_scene": "verkenning",
+    "hashtag_stijl": "test"
+   },
    "momenten": {},
    "pub": {},
    "gemist": [],
@@ -1314,6 +1627,24 @@
    "totaal": {},
    "per_platform": {},
    "score": {},
+   "keuzebron": {
+    "huisstijl": "joshua",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "joshua",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "opening": "joshua",
+    "tijdslot": "experiment",
+    "video_uitleg": "n.v.t.",
+    "aanleiding": "nieuws",
+    "carrousel_stijl": "joshua",
+    "reel_kleur": "joshua"
+   },
    "momenten": {},
    "pub": {},
    "gemist": [],
@@ -1379,10 +1710,47 @@
    "links": {
     "instagram": "https://www.instagram.com/p/Dfo7a0DF7cw/"
    },
-   "totaal": {},
-   "per_platform": {},
+   "totaal": {
+    "views": 4,
+    "reach": 1,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0
+   },
+   "per_platform": {
+    "instagram": {
+     "views": 4,
+     "reach": 1,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": 0,
+     "t": "2026-11-12T13:01+01:00"
+    }
+   },
    "score": {},
-   "momenten": {},
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "opening": "nieuws",
+    "tijdslot": "experiment",
+    "video_uitleg": "n.v.t.",
+    "hashtag_stijl": "test",
+    "aanleiding": "nieuws"
+   },
+   "momenten": {
+    "instagram": {}
+   },
    "pub": {
     "instagram": "2026-11-12T12:17+01:00"
    },
@@ -1465,12 +1833,38 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-12T10:01+01:00"
+     "t": "2026-11-12T13:01+01:00"
+    },
+    "facebook": {
+     "views": null,
+     "reach": null,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": null,
+     "follows": null,
+     "t": "2026-11-12T13:01+01:00"
     }
    },
    "score": {},
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "opening": "experiment",
+    "tijdslot": "experiment",
+    "video_uitleg": "n.v.t."
+   },
    "momenten": {
-    "instagram": {}
+    "instagram": {},
+    "facebook": {}
    },
    "pub": {
     "instagram": "2026-11-12T07:31+01:00",
@@ -1548,7 +1942,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-12T10:01+01:00"
+     "t": "2026-11-12T13:01+01:00"
     },
     "facebook": {
      "views": null,
@@ -1558,10 +1952,24 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-12T10:01+01:00"
+     "t": "2026-11-12T13:01+01:00"
     }
    },
    "score": {},
+   "keuzebron": {
+    "huisstijl": "nood",
+    "thema": "nood",
+    "hook_stijl": "nood",
+    "formaat": "nood",
+    "uitleg_op_beeld": "nood",
+    "achtergrondbron": "nood",
+    "boekgroep": "nood",
+    "lengte": "nood",
+    "bron": "nood",
+    "vraag_onderaan": "nood",
+    "opening": "nood",
+    "tijdslot": "nood"
+   },
    "momenten": {
     "instagram": {},
     "facebook": {}
@@ -1644,7 +2052,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-12T10:01+01:00"
+     "t": "2026-11-12T13:01+01:00"
     },
     "facebook": {
      "views": null,
@@ -1654,10 +2062,25 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-12T10:01+01:00"
+     "t": "2026-11-12T13:01+01:00"
     }
    },
    "score": {},
+   "keuzebron": {
+    "huisstijl": "nood",
+    "thema": "nood",
+    "hook_stijl": "nood",
+    "formaat": "nood",
+    "uitleg_op_beeld": "nood",
+    "achtergrondbron": "nood",
+    "boekgroep": "nood",
+    "lengte": "nood",
+    "bron": "nood",
+    "vraag_onderaan": "nood",
+    "opening": "nieuws",
+    "tijdslot": "nood",
+    "aanleiding": "nieuws"
+   },
    "momenten": {
     "instagram": {},
     "facebook": {}
@@ -1746,7 +2169,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-12T10:01+01:00"
+     "t": "2026-11-12T13:01+01:00"
     },
     "facebook": {
      "views": null,
@@ -1756,10 +2179,25 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-12T10:01+01:00"
+     "t": "2026-11-12T13:01+01:00"
     }
    },
    "score": {},
+   "keuzebron": {
+    "huisstijl": "nood",
+    "thema": "nood",
+    "hook_stijl": "nood",
+    "formaat": "nood",
+    "uitleg_op_beeld": "nood",
+    "achtergrondbron": "nood",
+    "boekgroep": "nood",
+    "lengte": "nood",
+    "bron": "nood",
+    "vraag_onderaan": "nood",
+    "opening": "nieuws",
+    "tijdslot": "nood",
+    "aanleiding": "nieuws"
+   },
    "momenten": {
     "instagram": {},
     "facebook": {}
@@ -1846,7 +2284,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-12T10:01+01:00"
+     "t": "2026-11-12T13:01+01:00"
     },
     "facebook": {
      "views": null,
@@ -1856,10 +2294,24 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-12T10:01+01:00"
+     "t": "2026-11-12T13:01+01:00"
     }
    },
    "score": {},
+   "keuzebron": {
+    "huisstijl": "nood",
+    "thema": "nood",
+    "hook_stijl": "nood",
+    "formaat": "nood",
+    "uitleg_op_beeld": "nood",
+    "achtergrondbron": "nood",
+    "boekgroep": "nood",
+    "lengte": "nood",
+    "bron": "nood",
+    "vraag_onderaan": "nood",
+    "opening": "nood",
+    "tijdslot": "nood"
+   },
    "momenten": {
     "instagram": {},
     "facebook": {}
@@ -1940,7 +2392,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-12T10:01+01:00"
+     "t": "2026-11-12T13:01+01:00"
     },
     "facebook": {
      "views": null,
@@ -1950,10 +2402,24 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-12T10:01+01:00"
+     "t": "2026-11-12T13:01+01:00"
     }
    },
    "score": {},
+   "keuzebron": {
+    "huisstijl": "nood",
+    "thema": "nood",
+    "hook_stijl": "nood",
+    "formaat": "nood",
+    "uitleg_op_beeld": "nood",
+    "achtergrondbron": "nood",
+    "boekgroep": "nood",
+    "lengte": "nood",
+    "bron": "nood",
+    "vraag_onderaan": "nood",
+    "opening": "nood",
+    "tijdslot": "nood"
+   },
    "momenten": {
     "instagram": {},
     "facebook": {}
@@ -2034,7 +2500,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-12T10:01+01:00"
+     "t": "2026-11-12T13:01+01:00"
     },
     "facebook": {
      "views": null,
@@ -2044,10 +2510,24 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-12T10:01+01:00"
+     "t": "2026-11-12T13:01+01:00"
     }
    },
    "score": {},
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "opening": "experiment",
+    "tijdslot": "experiment"
+   },
    "momenten": {
     "instagram": {
      "24u": {
@@ -2139,7 +2619,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-12T10:01+01:00"
+     "t": "2026-11-12T13:01+01:00"
     },
     "facebook": {
      "views": null,
@@ -2149,10 +2629,24 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-12T10:01+01:00"
+     "t": "2026-11-12T13:01+01:00"
     }
    },
    "score": {},
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "opening": "experiment",
+    "tijdslot": "experiment"
+   },
    "momenten": {
     "instagram": {},
     "facebook": {}
@@ -2233,7 +2727,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-12T10:01+01:00"
+     "t": "2026-11-12T13:01+01:00"
     },
     "facebook": {
      "views": null,
@@ -2243,10 +2737,24 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-12T10:01+01:00"
+     "t": "2026-11-12T13:01+01:00"
     }
    },
    "score": {},
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "opening": "kort vers",
+    "tijdslot": "experiment"
+   },
    "momenten": {
     "instagram": {
      "24u": {
@@ -2336,7 +2844,7 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-12T10:01+01:00"
+     "t": "2026-11-12T13:01+01:00"
     },
     "facebook": {
      "views": 2,
@@ -2346,10 +2854,25 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-12T10:01+01:00"
+     "t": "2026-11-12T13:01+01:00"
     }
    },
    "score": {},
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "limiet",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "opening": "n.v.t.",
+    "tijdslot": "experiment",
+    "video_uitleg": "vaste regel"
+   },
    "momenten": {
     "instagram": {},
     "facebook": {}
@@ -2430,7 +2953,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-12T10:01+01:00"
+     "t": "2026-11-12T13:01+01:00"
     },
     "facebook": {
      "views": null,
@@ -2440,10 +2963,24 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-12T10:01+01:00"
+     "t": "2026-11-12T13:01+01:00"
     }
    },
    "score": {},
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "opening": "experiment",
+    "tijdslot": "experiment"
+   },
    "momenten": {
     "instagram": {},
     "facebook": {}
@@ -2525,7 +3062,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-12T10:01+01:00"
+     "t": "2026-11-12T13:01+01:00"
     },
     "instagram": {
      "views": 5,
@@ -2535,10 +3072,24 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-12T10:01+01:00"
+     "t": "2026-11-12T13:01+01:00"
     }
    },
    "score": {},
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "limiet",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "opening": "experiment",
+    "tijdslot": "experiment"
+   },
    "momenten": {
     "facebook": {
      "24u": {
@@ -2639,7 +3190,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-12T10:01+01:00"
+     "t": "2026-11-12T13:01+01:00"
     },
     "instagram": {
      "views": 5,
@@ -2649,10 +3200,24 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-12T10:01+01:00"
+     "t": "2026-11-12T13:01+01:00"
     }
    },
    "score": {},
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "opening": "experiment",
+    "tijdslot": "experiment"
+   },
    "momenten": {
     "facebook": {
      "24u": {
@@ -2752,7 +3317,7 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-12T10:01+01:00"
+     "t": "2026-11-12T13:01+01:00"
     },
     "instagram": {
      "views": 1,
@@ -2762,10 +3327,25 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-12T10:01+01:00"
+     "t": "2026-11-12T13:01+01:00"
     }
    },
    "score": {},
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "limiet",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "opening": "n.v.t.",
+    "tijdslot": "experiment",
+    "video_uitleg": "vaste regel"
+   },
    "momenten": {
     "facebook": {
      "24u": {
@@ -2865,7 +3445,7 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-12T10:01+01:00"
+     "t": "2026-11-12T13:01+01:00"
     },
     "facebook": {
      "views": 0,
@@ -2875,10 +3455,25 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-12T10:01+01:00"
+     "t": "2026-11-12T13:01+01:00"
     }
    },
    "score": {},
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "opening": "n.v.t.",
+    "tijdslot": "experiment",
+    "video_uitleg": "vaste regel"
+   },
    "momenten": {
     "instagram": {
      "24u": {
@@ -2980,7 +3575,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-12T10:01+01:00"
+     "t": "2026-11-12T13:01+01:00"
     },
     "facebook": {
      "views": null,
@@ -2990,10 +3585,24 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-12T10:01+01:00"
+     "t": "2026-11-12T13:01+01:00"
     }
    },
    "score": {},
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "reeks",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "opening": "experiment",
+    "tijdslot": "reeks"
+   },
    "momenten": {
     "instagram": {
      "24u": {
@@ -3088,7 +3697,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-12T10:01+01:00"
+     "t": "2026-11-12T13:01+01:00"
     },
     "facebook": {
      "views": null,
@@ -3098,10 +3707,19 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-12T10:01+01:00"
+     "t": "2026-11-12T13:01+01:00"
     }
    },
    "score": {},
+   "keuzebron": {
+    "huisstijl": "joshua",
+    "thema": "verkenning",
+    "hook_stijl": "strategie",
+    "formaat": "verkenning",
+    "uitleg_op_beeld": "verkenning",
+    "achtergrondbron": "strategie",
+    "tijdslot": "strategie"
+   },
    "momenten": {
     "instagram": {
      "24u": {
@@ -3196,7 +3814,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-12T10:01+01:00"
+     "t": "2026-11-12T13:01+01:00"
     },
     "facebook": {
      "views": null,
@@ -3206,10 +3824,19 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-12T10:01+01:00"
+     "t": "2026-11-12T13:01+01:00"
     }
    },
    "score": {},
+   "keuzebron": {
+    "huisstijl": "joshua",
+    "thema": "strategie",
+    "hook_stijl": "verkenning",
+    "formaat": "strategie",
+    "uitleg_op_beeld": "strategie",
+    "achtergrondbron": "verkenning",
+    "tijdslot": "strategie"
+   },
    "momenten": {
     "instagram": {
      "24u": {
@@ -3303,7 +3930,7 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-12T10:01+01:00"
+     "t": "2026-11-12T13:01+01:00"
     },
     "facebook": {
      "views": 2,
@@ -3313,11 +3940,21 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-12T10:01+01:00"
+     "t": "2026-11-12T13:01+01:00"
     }
    },
    "score": {
     "instagram": 1.0
+   },
+   "keuzebron": {
+    "huisstijl": "joshua",
+    "thema": "strategie",
+    "hook_stijl": "strategie",
+    "formaat": "verkenning",
+    "uitleg_op_beeld": "verkenning",
+    "achtergrondbron": "strategie",
+    "tijdslot": "strategie",
+    "video_uitleg": "vaste regel"
    },
    "momenten": {
     "instagram": {
@@ -3413,7 +4050,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-12T10:01+01:00"
+     "t": "2026-11-12T13:01+01:00"
     },
     "facebook": {
      "views": null,
@@ -3423,10 +4060,19 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-12T10:01+01:00"
+     "t": "2026-11-12T13:01+01:00"
     }
    },
    "score": {},
+   "keuzebron": {
+    "huisstijl": "joshua",
+    "thema": "strategie",
+    "hook_stijl": "strategie",
+    "formaat": "strategie",
+    "uitleg_op_beeld": "verkenning",
+    "achtergrondbron": "verkenning",
+    "tijdslot": "verkenning"
+   },
    "momenten": {
     "instagram": {
      "24u": {
@@ -3521,7 +4167,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-12T10:01+01:00"
+     "t": "2026-11-12T13:01+01:00"
     },
     "facebook": {
      "views": null,
@@ -3531,10 +4177,19 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-12T10:01+01:00"
+     "t": "2026-11-12T13:01+01:00"
     }
    },
    "score": {},
+   "keuzebron": {
+    "huisstijl": "joshua",
+    "thema": "strategie",
+    "hook_stijl": "strategie",
+    "formaat": "strategie",
+    "uitleg_op_beeld": "verkenning",
+    "achtergrondbron": "strategie",
+    "tijdslot": "verkenning"
+   },
    "momenten": {
     "instagram": {
      "24u": {
@@ -3620,10 +4275,21 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-12T10:01+01:00"
+     "t": "2026-11-12T13:01+01:00"
     }
    },
    "score": {},
+   "keuzebron": {
+    "palet": "verkenning",
+    "lettertype": "verkenning",
+    "layout": "strategie",
+    "achtergrond": "strategie",
+    "thema": "strategie",
+    "hook_stijl": "strategie",
+    "hook_op_beeld": "strategie",
+    "formaat": "strategie",
+    "tijdslot": "strategie"
+   },
    "momenten": {
     "instagram": {
      "24u": {
@@ -4066,7 +4732,7 @@
    "ok": "2026-11-12T09:45"
   },
   "reacties": {
-   "ok": "2026-11-12T12:01",
+   "ok": "2026-11-12T13:01",
    "laatst_ok": true,
    "detail": "1 nieuwe reacties",
    "fout": "2026-11-08T18:00"
@@ -6565,6 +7231,430 @@
   "dagelijks": true,
   "wekelijks": true,
   "uitschieter": true
+ },
+ "experimenten": {
+  "actief": true,
+  "van": "2026-11-08",
+  "tot": "2026-11-14",
+  "strikt": true,
+  "snel": true,
+  "snel_tot": "2026-11-14",
+  "onderdelen": [
+   {
+    "dimensie": "huisstijl",
+    "opties": [
+     {
+      "optie": "avond",
+      "online": 0,
+      "gepland": 1,
+      "n": 0,
+      "gem": null,
+      "oordeel": "weinig data"
+     },
+     {
+      "optie": "zand",
+      "online": 2,
+      "gepland": 2,
+      "n": 0,
+      "gem": null,
+      "oordeel": "weinig data"
+     },
+     {
+      "optie": "salie",
+      "online": 3,
+      "gepland": 1,
+      "n": 1,
+      "gem": 1.0,
+      "oordeel": "weinig data"
+     },
+     {
+      "optie": "zonsopgang",
+      "online": 2,
+      "gepland": 3,
+      "n": 0,
+      "gem": null,
+      "oordeel": "weinig data"
+     },
+     {
+      "optie": "hemelsblauw",
+      "online": 3,
+      "gepland": 2,
+      "n": 0,
+      "gem": null,
+      "oordeel": "weinig data"
+     },
+     {
+      "optie": "paars",
+      "online": 2,
+      "gepland": 1,
+      "n": 0,
+      "gem": null,
+      "oordeel": "weinig data"
+     },
+     {
+      "optie": "roze",
+      "online": 3,
+      "gepland": 2,
+      "n": 0,
+      "gem": null,
+      "oordeel": "weinig data"
+     },
+     {
+      "optie": "bosgroen",
+      "online": 1,
+      "gepland": 0,
+      "n": 0,
+      "gem": null,
+      "oordeel": "weinig data"
+     },
+     {
+      "optie": "mint",
+      "online": 3,
+      "gepland": 5,
+      "n": 0,
+      "gem": null,
+      "oordeel": "weinig data"
+     },
+     {
+      "optie": "perzik",
+      "online": 2,
+      "gepland": 2,
+      "n": 0,
+      "gem": null,
+      "oordeel": "weinig data"
+     }
+    ]
+   },
+   {
+    "dimensie": "thema",
+    "opties": [
+     {
+      "optie": "troost",
+      "online": 3,
+      "gepland": 1,
+      "n": 1,
+      "gem": 1.0,
+      "oordeel": "weinig data"
+     },
+     {
+      "optie": "moed",
+      "online": 3,
+      "gepland": 2,
+      "n": 0,
+      "gem": null,
+      "oordeel": "weinig data"
+     },
+     {
+      "optie": "liefde",
+      "online": 0,
+      "gepland": 1,
+      "n": 0,
+      "gem": null,
+      "oordeel": "weinig data"
+     },
+     {
+      "optie": "hoop",
+      "online": 4,
+      "gepland": 1,
+      "n": 0,
+      "gem": null,
+      "oordeel": "weinig data"
+     },
+     {
+      "optie": "vertrouwen",
+      "online": 3,
+      "gepland": 2,
+      "n": 0,
+      "gem": null,
+      "oordeel": "weinig data"
+     },
+     {
+      "optie": "wijsheid",
+      "online": 3,
+      "gepland": 2,
+      "n": 0,
+      "gem": null,
+      "oordeel": "weinig data"
+     },
+     {
+      "optie": "humor_herkenbaar",
+      "online": 2,
+      "gepland": 2,
+      "n": 0,
+      "gem": null,
+      "oordeel": "weinig data"
+     },
+     {
+      "optie": "dankbaarheid",
+      "online": 1,
+      "gepland": 3,
+      "n": 0,
+      "gem": null,
+      "oordeel": "weinig data"
+     },
+     {
+      "optie": "identiteit",
+      "online": 1,
+      "gepland": 3,
+      "n": 0,
+      "gem": null,
+      "oordeel": "weinig data"
+     },
+     {
+      "optie": "vrede_rust",
+      "online": 1,
+      "gepland": 2,
+      "n": 0,
+      "gem": null,
+      "oordeel": "weinig data"
+     }
+    ]
+   }
+  ],
+  "vast": [],
+  "tests": [
+   {
+    "naam": "meelees-stijl",
+    "tekst": "25% van de reels en een deel van de carrousels"
+   },
+   {
+    "naam": "verkennen",
+    "tekst": "40% van de keuzes is bewust iets nieuws"
+   }
+  ],
+  "komend": [
+   {
+    "id": "2026-11-12-3",
+    "ref": "Psalm 20:8",
+    "datum": "2026-11-12",
+    "tijdslot": "17:45",
+    "tests": [
+     {
+      "dimensie": "thema",
+      "optie": "vertrouwen",
+      "bron": "experiment"
+     }
+    ]
+   },
+   {
+    "id": "2026-11-12-4",
+    "ref": "Spreuken 15:14",
+    "datum": "2026-11-12",
+    "tijdslot": "20:30",
+    "tests": [
+     {
+      "dimensie": "huisstijl",
+      "optie": "mint",
+      "bron": "experiment"
+     },
+     {
+      "dimensie": "thema",
+      "optie": "humor_herkenbaar",
+      "bron": "experiment"
+     },
+     {
+      "dimensie": "reel_plaatsing",
+      "optie": "midden",
+      "bron": "verkenning"
+     },
+     {
+      "dimensie": "reel_scene",
+      "optie": "dichtbij",
+      "bron": "verkenning"
+     }
+    ]
+   },
+   {
+    "id": "2026-11-12-5",
+    "ref": "Psalm 92:2",
+    "datum": "2026-11-12",
+    "tijdslot": "22:00",
+    "tests": [
+     {
+      "dimensie": "huisstijl",
+      "optie": "zonsopgang",
+      "bron": "experiment"
+     },
+     {
+      "dimensie": "thema",
+      "optie": "dankbaarheid",
+      "bron": "experiment"
+     }
+    ]
+   },
+   {
+    "id": "2026-11-13-5",
+    "ref": "Psalm 46:2",
+    "datum": "2026-11-13",
+    "tijdslot": "07:30",
+    "tests": [
+     {
+      "dimensie": "thema",
+      "optie": "troost",
+      "bron": "experiment"
+     }
+    ]
+   },
+   {
+    "id": "2026-11-13-1",
+    "ref": "Handelingen 1:8",
+    "datum": "2026-11-13",
+    "tijdslot": "12:15",
+    "tests": [
+     {
+      "dimensie": "huisstijl",
+      "optie": "mint",
+      "bron": "experiment"
+     },
+     {
+      "dimensie": "thema",
+      "optie": "moed",
+      "bron": "experiment"
+     }
+    ]
+   },
+   {
+    "id": "2026-11-13-4",
+    "ref": "Efeze 2:10",
+    "datum": "2026-11-13",
+    "tijdslot": "17:45",
+    "tests": [
+     {
+      "dimensie": "huisstijl",
+      "optie": "zonsopgang",
+      "bron": "experiment"
+     },
+     {
+      "dimensie": "thema",
+      "optie": "identiteit",
+      "bron": "experiment"
+     },
+     {
+      "dimensie": "reel_plaatsing",
+      "optie": "midden",
+      "bron": "verkenning"
+     },
+     {
+      "dimensie": "reel_scene",
+      "optie": "dichtbij",
+      "bron": "verkenning"
+     }
+    ]
+   },
+   {
+    "id": "2026-11-13-3",
+    "ref": "Spreuken 17:28",
+    "datum": "2026-11-13",
+    "tijdslot": "20:30",
+    "tests": [
+     {
+      "dimensie": "huisstijl",
+      "optie": "perzik",
+      "bron": "experiment"
+     },
+     {
+      "dimensie": "thema",
+      "optie": "humor_herkenbaar",
+      "bron": "experiment"
+     }
+    ]
+   },
+   {
+    "id": "2026-11-13-2",
+    "ref": "Mattheüs 10:30-31",
+    "datum": "2026-11-13",
+    "tijdslot": "22:00",
+    "tests": [
+     {
+      "dimensie": "huisstijl",
+      "optie": "zonsopgang",
+      "bron": "experiment"
+     },
+     {
+      "dimensie": "thema",
+      "optie": "identiteit",
+      "bron": "experiment"
+     }
+    ]
+   },
+   {
+    "id": "2026-11-14-2",
+    "ref": "Sefanja 3:17",
+    "datum": "2026-11-14",
+    "tijdslot": "07:30",
+    "tests": [
+     {
+      "dimensie": "huisstijl",
+      "optie": "roze",
+      "bron": "experiment"
+     },
+     {
+      "dimensie": "thema",
+      "optie": "liefde",
+      "bron": "experiment"
+     }
+    ]
+   },
+   {
+    "id": "2026-11-14-1",
+    "ref": "Spreuken 4:7",
+    "datum": "2026-11-14",
+    "tijdslot": "12:15",
+    "tests": [
+     {
+      "dimensie": "huisstijl",
+      "optie": "avond",
+      "bron": "experiment"
+     },
+     {
+      "dimensie": "thema",
+      "optie": "wijsheid",
+      "bron": "experiment"
+     }
+    ]
+   },
+   {
+    "id": "2026-11-14-3",
+    "ref": "Spreuken 4:23",
+    "datum": "2026-11-14",
+    "tijdslot": "17:45",
+    "tests": [
+     {
+      "dimensie": "huisstijl",
+      "optie": "zand",
+      "bron": "experiment"
+     },
+     {
+      "dimensie": "thema",
+      "optie": "wijsheid",
+      "bron": "experiment"
+     },
+     {
+      "dimensie": "reel_scene",
+      "optie": "onderweg",
+      "bron": "verkenning"
+     }
+    ]
+   },
+   {
+    "id": "2026-11-14-4",
+    "ref": "Mattheüs 6:34",
+    "datum": "2026-11-14",
+    "tijdslot": "20:30",
+    "tests": [
+     {
+      "dimensie": "huisstijl",
+      "optie": "mint",
+      "bron": "experiment"
+     },
+     {
+      "dimensie": "thema",
+      "optie": "vertrouwen",
+      "bron": "experiment"
+     }
+    ]
+   }
+  ]
  },
  "planning": [
   {
