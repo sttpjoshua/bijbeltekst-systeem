@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-12T17:30",
+ "gegenereerd": "2026-11-12T17:46",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -50,7 +50,10 @@
     "roze": 1.0,
     "bosgroen": 1.0,
     "mint": 1.0,
-    "perzik": 1.0
+    "perzik": 1.0,
+    "papier_rood": 1.0,
+    "papier_groen": 1.0,
+    "papier_blauw": 1.0
    },
    "thema": {
     "troost": 1.0,
@@ -164,7 +167,10 @@
     "roze": 0,
     "bosgroen": 0,
     "mint": 0,
-    "perzik": 0
+    "perzik": 0,
+    "papier_rood": 0,
+    "papier_groen": 0,
+    "papier_blauw": 0
    },
    "thema": {
     "troost": 0,
@@ -1464,8 +1470,12 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-5-4.jpg"
    ],
    "thumb": "thumbs/2026-11-12-5.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "facebook"
+   ],
+   "links": {
+    "facebook": "https://www.facebook.com/1015160368352770_122134415024879910"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -1487,7 +1497,9 @@
     "aanleiding": "nieuws"
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "facebook": "2026-11-12T17:46+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": {
@@ -1497,7 +1509,7 @@
     "link": "https://nos.nl/l/2639117",
     "zwaar": false
    },
-   "online": null
+   "online": "2026-11-12T17:46+01:00"
   },
   {
    "id": "2026-11-12-4",
@@ -1622,8 +1634,12 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-3-3.jpg"
    ],
    "thumb": "thumbs/2026-11-12-3.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "instagram"
+   ],
+   "links": {
+    "instagram": "https://www.instagram.com/p/DfphIwVjQBO/"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -1646,7 +1662,9 @@
     "reel_kleur": "joshua"
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "instagram": "2026-11-12T17:46+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": {
@@ -1656,7 +1674,7 @@
     "link": "https://nos.nl/l/2639103",
     "zwaar": false
    },
-   "online": null
+   "online": "2026-11-12T17:46+01:00"
   },
   {
    "id": "2026-11-12-2",
@@ -4458,21 +4476,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-11T12:51:54",
-   "soort": "info",
-   "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
-  },
-  {
-   "t": "2026-11-11T13:28:35",
-   "soort": "info",
-   "tekst": "Bediening: Nieuws: maximaal per dag 3"
-  },
-  {
-   "t": "2026-11-11T13:30:13",
-   "soort": "info",
-   "tekst": "Nieuwspost: Jesaja 41:10 vervangen door Prediker 3:1 (aanleiding: politiek, NOS)"
-  },
-  {
    "t": "2026-11-11T13:30:13",
    "soort": "info",
    "tekst": "Bediening: Nieuwspost klaargezet: Prediker 3:1 op 2026-11-11 om 17:45"
@@ -4759,6 +4762,21 @@
    "t": "2026-11-12T14:45:43",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-12T17:46:48",
+   "soort": "info",
+   "tekst": "2026-11-12-3 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-12T17:46:48",
+   "soort": "info",
+   "tekst": "2026-11-12-3 online op instagram: Psalm 20:8"
+  },
+  {
+   "t": "2026-11-12T17:46:58",
+   "soort": "info",
+   "tekst": "2026-11-12-5 online op facebook: 1 Johannes 4:7"
   }
  ],
  "recente_fouten": [],
@@ -4843,9 +4861,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-12T12:17",
+   "ok": "2026-11-12T17:46",
    "laatst_ok": true,
-   "detail": "Psalm 9:2 geplaatst"
+   "detail": "Psalm 20:8 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-12T13:41",
@@ -4877,9 +4895,9 @@
    "fout": "2026-11-08T18:00"
   },
   "facebook": {
-   "ok": "2026-11-12T12:16",
+   "ok": "2026-11-12T17:46",
    "laatst_ok": true,
-   "detail": "Kolossenzen 1:12 geplaatst"
+   "detail": "1 Johannes 4:7 geplaatst"
   },
   "statistieken": {
    "ok": "2026-11-12T13:41",
@@ -7530,6 +7548,30 @@
       "n": 0,
       "gem": null,
       "oordeel": "weinig data"
+     },
+     {
+      "optie": "papier_rood",
+      "online": 0,
+      "gepland": 0,
+      "n": 0,
+      "gem": null,
+      "oordeel": "weinig data"
+     },
+     {
+      "optie": "papier_groen",
+      "online": 0,
+      "gepland": 0,
+      "n": 0,
+      "gem": null,
+      "oordeel": "weinig data"
+     },
+     {
+      "optie": "papier_blauw",
+      "online": 0,
+      "gepland": 0,
+      "n": 0,
+      "gem": null,
+      "oordeel": "weinig data"
      }
     ]
    },
@@ -7632,19 +7674,6 @@
   ],
   "komend": [
    {
-    "id": "2026-11-12-3",
-    "ref": "Psalm 20:8",
-    "datum": "2026-11-12",
-    "tijdslot": "17:45",
-    "tests": [
-     {
-      "dimensie": "thema",
-      "optie": "vertrouwen",
-      "bron": "experiment"
-     }
-    ]
-   },
-   {
     "id": "2026-11-12-4",
     "ref": "Spreuken 15:14",
     "datum": "2026-11-12",
@@ -7669,24 +7698,6 @@
       "dimensie": "reel_scene",
       "optie": "dichtbij",
       "bron": "verkenning"
-     }
-    ]
-   },
-   {
-    "id": "2026-11-12-5",
-    "ref": "1 Johannes 4:7",
-    "datum": "2026-11-12",
-    "tijdslot": "22:00",
-    "tests": [
-     {
-      "dimensie": "huisstijl",
-      "optie": "zonsopgang",
-      "bron": "experiment"
-     },
-     {
-      "dimensie": "thema",
-      "optie": "liefde",
-      "bron": "experiment"
      }
     ]
    },
@@ -7858,6 +7869,42 @@
      {
       "dimensie": "thema",
       "optie": "vertrouwen",
+      "bron": "experiment"
+     }
+    ]
+   },
+   {
+    "id": "2026-11-14-5",
+    "ref": "Psalm 62:6",
+    "datum": "2026-11-14",
+    "tijdslot": "22:00",
+    "tests": [
+     {
+      "dimensie": "huisstijl",
+      "optie": "mint",
+      "bron": "experiment"
+     },
+     {
+      "dimensie": "thema",
+      "optie": "vrede_rust",
+      "bron": "experiment"
+     }
+    ]
+   },
+   {
+    "id": "2026-11-15-2",
+    "ref": "Psalm 16:11",
+    "datum": "2026-11-15",
+    "tijdslot": "07:30",
+    "tests": [
+     {
+      "dimensie": "huisstijl",
+      "optie": "mint",
+      "bron": "experiment"
+     },
+     {
+      "dimensie": "thema",
+      "optie": "dankbaarheid",
       "bron": "experiment"
      }
     ]

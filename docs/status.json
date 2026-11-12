@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T17:30:54",
+ "updated": "2026-11-12T17:46:58",
  "agents": {
   "verskiezer": {
    "t": "2026-11-12T13:05:11",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-12T12:17:12",
-   "task": "Postte Psalm 9:2 op instagram",
+   "t": "2026-11-12T17:46:58",
+   "task": "Postte 1 Johannes 4:7 op facebook",
    "state": "done"
   },
   "controller": {
@@ -57,6 +57,18 @@
  ],
  "log": [
   {
+   "t": "17:46",
+   "msg": "2026-11-12-5 online op facebook: 1 Johannes 4:7"
+  },
+  {
+   "t": "17:46",
+   "msg": "2026-11-12-3 online op instagram: Psalm 20:8"
+  },
+  {
+   "t": "17:46",
+   "msg": "2026-11-12-3 ook als story geplaatst"
+  },
+  {
    "t": "14:45",
    "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
   },
@@ -90,18 +102,6 @@
   },
   {
    "t": "13:46",
-   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
-   "t": "13:41",
-   "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
-  },
-  {
-   "t": "13:40",
-   "msg": "Statistieken opgehaald voor 12 posts"
-  },
-  {
-   "t": "13:31",
    "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
   }
  ],
