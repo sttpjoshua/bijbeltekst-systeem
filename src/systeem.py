@@ -61,6 +61,7 @@ DIMENSIES = {
     "bron": ["bekend", "ontdekking"],
     "vraag_onderaan": [True, False],
     "reel_stijl": ["klassiek", "kinetisch", "beeld", "situatie", "markeren"],  # alleen video; 'situatie' is sinds 11 nov de standaard (config reel_formaat)
+    "carrousel_stijl": ["standaard", "markeren"],  # alleen carrousel; 'markeren' = meelees-stijl met markeerstreep (Joshua, 12 nov)
     "reel_kleur": ["abrikoos", "mint", "hemel", "roze", "goud"],  # meelees-reel: kleur en lettertype (Joshua, 12 nov: varianten)
     "reel_plaatsing": ["midden", "boven"],  # situatie-reel: waar de tekst staat (Joshua, 11 nov: deze twee testen)
     "reel_scene": ["natuur", "dichtbij", "onderweg"],  # situatie-reel: soort rustig beeld onder het vers
@@ -360,9 +361,14 @@ def kies_posts(datum, cfg, strat, posts, verzen, mat, n_start, n, gebruikte_slot
         if v["formaat"] != "video" or v.get("reel_stijl") != "situatie":
             for d in ("reel_plaatsing", "reel_scene"):
                 v[d], bron[d] = None, "n.v.t."
+        if v["formaat"] != "carrousel":
+            v["carrousel_stijl"], bron["carrousel_stijl"] = None, "n.v.t."
         if v["formaat"] != "video":
             v["reel_stijl"], bron["reel_stijl"], v["reel_haak"], bron["reel_haak"] = None, "n.v.t.", None, "n.v.t."
-            v["reel_kleur"], bron["reel_kleur"] = None, "n.v.t."
+            if v["formaat"] == "carrousel" and v.get("carrousel_stijl") == "markeren":
+                v["opening"], bron["opening"] = "vers", "stijl markeren"  # meteen het vers, zonder stopper
+            else:
+                v["reel_kleur"], bron["reel_kleur"] = None, "n.v.t."
         elif cfg.get("reel_formaat") == "situatie":  # Joshua, 11 nov: 'herkenbare situatie' met echte video is de standaard
             v["reel_stijl"], bron["reel_stijl"], v["reel_haak"], bron["reel_haak"] = "situatie", "vaste regel", "geen", "n.v.t."
             # Joshua, 12 nov: 'markeren' (markeerstreep over het vers) als test naast de situatie-reel
@@ -471,7 +477,11 @@ def render_een(p, cfg, map_rel):
     rel = f"docs/media/{map_rel}/{p['id']}.{ext}"
     os.makedirs(os.path.dirname(P(rel)), exist_ok=True)
     if fmt == "carrousel":
-        paden = maak_carrousel(p, P(rel))
+        if p["variabelen"].get("carrousel_stijl") == "markeren":
+            import reels
+            paden = reels.maak_carrousel_markeren(p, P(rel))
+        else:
+            paden = maak_carrousel(p, P(rel))
         rels = [os.path.relpath(x, ROOT) for x in paden]
         p["media"], p["media_extra"] = rels[0], rels[1:]
     else:
@@ -1567,9 +1577,15 @@ def cmd_markeren_inplannen(*ids_kleuren):
     for x in ids_kleuren:
         pid, kleur = x.split(":")
         p = next((q for q in posts if q["id"] == pid), None)
-        if not p or p.get("gepubliceerd") or p["variabelen"].get("formaat") != "video":
+        if not p or p.get("gepubliceerd") or p["variabelen"].get("formaat") not in ("video", "carrousel"):
             print("overgeslagen", pid); continue
         v = p["variabelen"]; kb = p.setdefault("keuzebron", {})
+        if v.get("formaat") == "carrousel":
+            v["carrousel_stijl"], v["reel_kleur"], v["opening"] = "markeren", kleur, "vers"
+            kb["carrousel_stijl"] = kb["reel_kleur"] = "ingepland"
+            if p["status"] != "wacht_op_tekst":
+                p["status"] = "opnieuw_maken"
+            print(pid, p["ref"], "carrousel markeren", kleur); continue
         if kleur == "situatie":
             rr = random.Random(pid + "situatie")
             v["reel_stijl"], v["reel_haak"], v["reel_kleur"] = "situatie", "geen", None

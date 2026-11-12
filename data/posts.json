@@ -3994,7 +3994,7 @@
  {
   "id": "2026-11-14-1",
   "datum": "2026-11-14",
-  "status": "gerenderd",
+  "status": "opnieuw_maken",
   "vers_id": "Proverbs-4-7-7",
   "ref": "Spreuken 4:7",
   "tekst": "De wijsheid is het voornaamste; verkrijg dan wijsheid, en verkrijg verstand met al uw bezitting.",
@@ -4019,7 +4019,9 @@
    "achtergrond": "licht",
    "hook_op_beeld": false,
    "video_uitleg": null,
-   "hashtag_stijl": "zonder"
+   "hashtag_stijl": "zonder",
+   "carrousel_stijl": "markeren",
+   "reel_kleur": "abrikoos"
   },
   "keuzebron": {
    "huisstijl": "experiment",
@@ -4035,7 +4037,9 @@
    "opening": "experiment",
    "tijdslot": "experiment",
    "video_uitleg": "n.v.t.",
-   "hashtag_stijl": "test"
+   "hashtag_stijl": "test",
+   "carrousel_stijl": "ingepland",
+   "reel_kleur": "ingepland"
   },
   "hook": "Wat zou jij doen met meer wijsheid?",
   "beeld_hook": "",
@@ -4521,7 +4525,7 @@
    "lengte": "middel",
    "bron": "bekend",
    "vraag_onderaan": false,
-   "opening": "stopper",
+   "opening": "vers",
    "tijdslot": "07:30",
    "tijdslot_fb": "12:15",
    "palet": "mint",
@@ -4530,7 +4534,9 @@
    "achtergrond": "diagonaal",
    "hook_op_beeld": false,
    "video_uitleg": null,
-   "hashtag_stijl": "zonder"
+   "hashtag_stijl": "zonder",
+   "carrousel_stijl": "markeren",
+   "reel_kleur": "goud"
   },
   "keuzebron": {
    "huisstijl": "experiment",
@@ -4546,7 +4552,9 @@
    "opening": "experiment",
    "tijdslot": "experiment",
    "video_uitleg": "n.v.t.",
-   "hashtag_stijl": "test"
+   "hashtag_stijl": "test",
+   "carrousel_stijl": "ingepland",
+   "reel_kleur": "ingepland"
   },
   "hook": "",
   "beeld_hook": "",

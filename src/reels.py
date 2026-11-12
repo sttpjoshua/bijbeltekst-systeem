@@ -558,3 +558,65 @@ def maak_markeren(post, pad):
     post["cover_ms"] = int((t1 + lees * 0.6) * 1000)
     post["duur"] = duur
     return pad
+
+
+def maak_carrousel_markeren(post, basis):
+    """Carrousel in de meelees-stijl: één doorlopende lichte achtergrond, het vers met een beige markeerstreep onder elke regel,
+    kernwoord vet in kleur (geen vakje), dan 'Wat betekent dit?' en 'Vandaag'. Geeft de paden terug."""
+    import numpy as np
+    b, h = 1080, 1350
+    v = post["variabelen"]
+    bgb, bgo, ik, ac, strook, serif = LOOKS.get(v.get("reel_kleur") or "abrikoos", LOOKS["abrikoos"])
+    inkt, accent = ik + (255,), ac + (255,)
+    n = 3
+    # doorlopende achtergrond over alle slides
+    y, x = np.mgrid[0:h, 0:b * n]
+    s = (y / h)[:, :, None]
+    a = np.array(bgb, float) * (1 - s) + np.array(bgo, float) * s
+    gloed = np.exp(-(((x - b * n * 0.35) / (b * 1.1)) ** 2 + ((y - h * 0.3) / (h * 0.5)) ** 2))[:, :, None]
+    a = a + gloed * np.array([4, 3, 0], float)
+    pano = Image.fromarray(np.clip(a, 0, 255).astype("uint8"), "RGB").convert("RGBA")
+    meet = ImageDraw.Draw(Image.new("RGBA", (b, 10)))
+    paden = [basis.replace(".jpg", f"-{i}.jpg") for i in range(1, n + 1)]
+    fv_klein = R._klein_font
+    # slide 1: vers
+    g = 76
+    while True:
+        f = R._font(serif, g); rg = R._wrap(post["tekst"], f, int(b * 0.80), meet)
+        if len(rg) * g * 1.5 <= h * 0.55 or g <= 44:
+            break
+        g -= 4
+    lh = int(g * 1.5)
+    y0 = int(h * 0.46 - len(rg) * lh / 2)
+    tekst = Image.new("RGBA", (b, h), (0, 0, 0, 0)); dt_ = ImageDraw.Draw(tekst)
+    staat = R._kernstaat(post, ik, ac)
+    lijnen = []
+    for i, r in enumerate(rg):
+        w = R._regel(dt_, b // 2, y0 + i * lh, r, f, inkt, accent, staat, False)
+        lijnen.append((b / 2 - w / 2, b / 2 + w / 2, y0 + i * lh + g * 0.6))
+    st = Image.new("RGBA", (b, h), (0, 0, 0, 0)); ds = ImageDraw.Draw(st)
+    for i, (xa, xb, yc) in enumerate(lijnen):
+        _streep(ds, xa, xb, yc, g * 1.02, strook, 100 + i)
+    sl = pano.crop((0, 0, b, h)); sl.alpha_composite(st); sl.alpha_composite(tekst)
+    d = ImageDraw.Draw(sl)
+    d.text((b // 2, y0 + len(rg) * lh + 40), post["ref"].upper(), font=fv_klein(34, b"SemiBold"), fill=accent, anchor="ma")
+    d.text((b - 70, h - 70), "→", font=fv_klein(44, b"Medium"), fill=ac + (220,), anchor="mm")
+    sl.convert("RGB").save(paden[0], quality=93)
+    # slide 2 en 3: uitleg
+    for i, (label, tx) in enumerate([("WAT BETEKENT DIT?", post["betekenis"]), ("VANDAAG", post["toepassing"])], start=1):
+        sl = pano.crop((i * b, 0, (i + 1) * b, h)); d = ImageDraw.Draw(sl)
+        g2 = 58
+        while True:
+            f2 = R._font(serif, g2); rg2 = R._wrap(tx, f2, int(b * 0.78), meet)
+            if len(rg2) * g2 * 1.45 <= h * 0.58 or g2 <= 38:
+                break
+            g2 -= 3
+        hh = len(rg2) * int(g2 * 1.45)
+        yy = int(h * 0.5 - hh / 2)
+        d.text((b // 2, yy - 90), label, font=fv_klein(34, b"SemiBold"), fill=accent, anchor="ma")
+        for j, r in enumerate(rg2):
+            d.text((b // 2, yy + j * int(g2 * 1.45)), r, font=f2, fill=inkt, anchor="ma")
+        if i == 2:
+            d.text((b // 2, h - 90), "BIBLEVERSE  ·  @bibleverse_nl", font=fv_klein(26, b"Medium"), fill=ik + (150,), anchor="ma")
+        sl.convert("RGB").save(paden[i], quality=93)
+    return paden
