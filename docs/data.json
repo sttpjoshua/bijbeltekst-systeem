@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-12T09:15",
+ "gegenereerd": "2026-11-12T09:19",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1029,7 +1029,7 @@
     "lengte": "middel",
     "bron": "bekend",
     "vraag_onderaan": true,
-    "opening": "stopper",
+    "opening": "vers",
     "tijdslot": "22:00",
     "tijdslot_fb": "20:30",
     "palet": "zonsopgang_fris",
@@ -1038,7 +1038,9 @@
     "achtergrond": "diagonaal",
     "hook_op_beeld": false,
     "video_uitleg": null,
-    "hashtag_stijl": "zoekwoord"
+    "hashtag_stijl": "zoekwoord",
+    "carrousel_stijl": "markeren",
+    "reel_kleur": "mint"
    },
    "vers_id": "Matthew-10-30-31",
    "goedgekeurd": null,
@@ -1052,8 +1054,7 @@
    "media_urls": [
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-13-2-1.jpg",
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-13-2-2.jpg",
-    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-13-2-3.jpg",
-    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-13-2-4.jpg"
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-13-2-3.jpg"
    ],
    "thumb": "thumbs/2026-11-13-2.jpg",
    "platformen": [],
@@ -3250,11 +3251,6 @@
   {
    "t": "2026-11-11T06:00:41",
    "soort": "info",
-   "tekst": "Zelfherstel: Geen post klaar voor 2026-11-11 07:30 → noodpost Jesaja 32:17 ingezet om 07:30"
-  },
-  {
-   "t": "2026-11-11T06:00:41",
-   "soort": "info",
    "tekst": "Zelfherstel: Geen post klaar voor 2026-11-11 12:15 → noodpost Jeremia 17:7 ingezet om 12:15"
   },
   {
@@ -3562,6 +3558,11 @@
    "t": "2026-11-12T09:14:55",
    "soort": "info",
    "tekst": "Zelfstandig 5 posts klaargezet voor 2026-11-14 (teksten uit de tekstbank)."
+  },
+  {
+   "t": "2026-11-12T09:19:30",
+   "soort": "info",
+   "tekst": "Zelfstandig 5 posts klaargezet voor 2026-11-13 (teksten uit de tekstbank)."
   }
  ],
  "recente_fouten": [],
@@ -3701,7 +3702,7 @@
    "detail": "2 nieuwe aanleidingen"
   },
   "maken": {
-   "ok": "2026-11-12T09:14",
+   "ok": "2026-11-12T09:19",
    "laatst_ok": true,
    "detail": "5 posts klaargezet"
   },

@@ -3563,7 +3563,7 @@
  {
   "id": "2026-11-13-2",
   "datum": "2026-11-13",
-  "status": "opnieuw_maken",
+  "status": "gerenderd",
   "vers_id": "Matthew-10-30-31",
   "ref": "Mattheüs 10:30-31",
   "tekst": "En ook uw haren des hoofds zijn alle geteld. Vreest dan niet; gij gaat vele musjes te boven.",
@@ -3632,16 +3632,14 @@
   "handle": "@bibleverse_nl",
   "media_extra": [
    "docs/media/2026-11/2026-11-13-2-2.jpg",
-   "docs/media/2026-11/2026-11-13-2-3.jpg",
-   "docs/media/2026-11/2026-11-13-2-4.jpg"
+   "docs/media/2026-11/2026-11-13-2-3.jpg"
   ],
   "thumb": "thumbs/2026-11-13-2.jpg",
   "story": "docs/media/2026-11/2026-11-13-2-story.jpg",
   "media_urls": [
    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-13-2-1.jpg",
    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-13-2-2.jpg",
-   "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-13-2-3.jpg",
-   "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-13-2-4.jpg"
+   "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-13-2-3.jpg"
   ],
   "story_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-13-2-story.jpg",
   "goedgekeurd": null,
