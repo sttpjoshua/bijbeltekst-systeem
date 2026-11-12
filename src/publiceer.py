@@ -279,7 +279,9 @@ def cmd_posten():
         except Exception as e:
             print("Tussentijdse cijfers mislukt:", e)
     try:
+        S.bewaar("data/posts.json", posts)  # eerst opslaan: vroege_cijfers leest en schrijft het bestand zelf
         vroege_cijfers(nu)
+        posts[:] = S.laad("data/posts.json", [])  # anders overschrijft deze oude lijst de nieuwe metingen weer
     except Exception as e:
         print("Eerste-uurcijfers mislukt:", str(e)[:160])
     klaar = [p for p in posts if p["status"] == "gerenderd"
