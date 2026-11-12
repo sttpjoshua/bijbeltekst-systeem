@@ -188,3 +188,6 @@ Carrousel in de meelees-stijl (12 nov): dimensie `carrousel_stijl` (standaard | 
 - Overzicht: Experimenten en Gezondheid standaard ingeklapt (Gezondheid opent zelf bij problemen), Experimenten onder Volgende posts.
 - Resultaten: tabel Laatst geplaatst, Beste posts en Snel leren weg (staan op Alle cijfers en in de Experimenten-kaart); Wat werkt beter, Maandrapport en Geleerd ingeklapt.
 - Verse-wissel op een nieuwspost behoudt openingszin en brug (nieuws.behoud_nieuws).
+
+## Papierstijl (12 nov)
+- Nieuwe huisstijlen papier_rood, papier_groen, papier_blauw: crème papier met korrel, Cormorant Garamond, links, diepe inkt. Staan in LICHTE_STIJLEN; het systeem test ze als gewone optie van huisstijl.

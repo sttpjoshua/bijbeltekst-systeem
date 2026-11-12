@@ -44,9 +44,13 @@ HUISSTIJLEN = {
     "bosgroen":    {"palet": "bosgroen",        "lettertype": "montserrat_zwaar",  "layout": "links",    "achtergrond": "diagonaal"},
     "mint":        {"palet": "mint",            "lettertype": "dmserif",           "layout": "centraal", "achtergrond": "diagonaal"},
     "perzik":      {"palet": "perzik",          "lettertype": "playfair",          "layout": "citaat",   "achtergrond": "diagonaal"},
+    # Papierstijl: crème papier, klassieke serif, links, diepe inkt (wisselt per post van kleur)
+    "papier_rood":   {"palet": "papier_rood",   "lettertype": "cormorant", "layout": "links", "achtergrond": "papier"},
+    "papier_groen":  {"palet": "papier_groen",  "lettertype": "cormorant", "layout": "links", "achtergrond": "papier"},
+    "papier_blauw":  {"palet": "papier_blauw",  "lettertype": "cormorant", "layout": "links", "achtergrond": "papier"},
 }
 
-LICHTE_STIJLEN = ("zonsopgang", "hemelsblauw", "mint", "perzik", "roze", "zand")
+LICHTE_STIJLEN = ("zonsopgang", "hemelsblauw", "mint", "perzik", "roze", "zand", "papier_rood", "papier_groen", "papier_blauw")
 
 DIMENSIES = {
     "huisstijl": list(HUISSTIJLEN),

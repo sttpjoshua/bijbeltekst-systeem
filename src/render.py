@@ -25,6 +25,10 @@ PALETTEN = {
     "bosgroen":        ("#58a874", "#1f5a3d", "#f1fff4", "#d8f5c8"),
     "mint":            ("#e3fcf4", "#8fdcc7", "#0f4a3c", "#1f7a63"),
     "perzik":          ("#fff6cc", "#ffc28b", "#5a3008", "#b8571a"),
+    # Papierstijl: crème papier met diepe inkt (naar een voorbeeld dat Joshua liet zien)
+    "papier_rood":     ("#f5f1e6", "#f1ece0", "#9b2a40", "#7d1d33"),
+    "papier_groen":    ("#f4f1e4", "#eeeadb", "#2f5a41", "#1f4630"),
+    "papier_blauw":    ("#f3f1e8", "#ece9de", "#24406b", "#162c52"),
 }
 
 # Verlopen met meer kleuren en een hoek (graden, CSS-stijl: 180 = van boven naar beneden)
@@ -91,6 +95,16 @@ def achtergrond(b, h, palet, stijl, seed):
     img = Image.new("RGB", (b, h), boven)
     if stijl == "effen":
         return img
+    if stijl == "papier":  # crème papier: zachte vlekken en fijne vezelkorrel, nooit een verloop
+        w = Image.effect_noise((b, h), 40).convert("RGB")
+        img = Image.blend(img, w, 0.035)
+        vlek = Image.new("L", (b, h), 0)
+        dv = ImageDraw.Draw(vlek)
+        for _ in range(14):
+            rr = rnd.randint(b // 10, b // 3); cx, cy = rnd.randint(0, b), rnd.randint(0, h)
+            dv.ellipse([cx - rr, cy - rr, cx + rr, cy + rr], fill=rnd.randint(6, 16))
+        vlek = vlek.filter(ImageFilter.GaussianBlur(b // 8))
+        return Image.composite(Image.new("RGB", (b, h), onder), img, vlek.point(lambda x: min(255, x * 5)))
     if stijl in ("diagonaal", "radiaal"):
         return _verloop_plus(b, h, palet, stijl)
     # verticaal verloop
