@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-12T13:06",
+ "gegenereerd": "2026-11-12T13:15",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -7345,91 +7345,6 @@
      {
       "optie": "liefde",
       "online": 0,
-      "gepland": 1,
-      "n": 0,
-      "gem": null,
-      "oordeel": "weinig data"
-     },
-     {
-      "optie": "hoop",
-      "online": 4,
-      "gepland": 1,
-      "n": 0,
-      "gem": null,
-      "oordeel": "weinig data"
-     },
-     {
-      "optie": "vertrouwen",
-      "online": 3,
-      "gepland": 2,
-      "n": 0,
-      "gem": null,
-      "oordeel": "weinig data"
-     },
-     {
-      "optie": "wijsheid",
-      "online": 3,
-      "gepland": 2,
-      "n": 0,
-      "gem": null,
-      "oordeel": "weinig data"
-     },
-     {
-      "optie": "humor_herkenbaar",
-      "online": 2,
-      "gepland": 2,
-      "n": 0,
-      "gem": null,
-      "oordeel": "weinig data"
-     },
-     {
-      "optie": "dankbaarheid",
-      "online": 1,
-      "gepland": 3,
-      "n": 0,
-      "gem": null,
-      "oordeel": "weinig data"
-     },
-     {
-      "optie": "identiteit",
-      "online": 1,
-      "gepland": 3,
-      "n": 0,
-      "gem": null,
-      "oordeel": "weinig data"
-     },
-     {
-      "optie": "vrede_rust",
-      "online": 1,
-      "gepland": 2,
-      "n": 0,
-      "gem": null,
-      "oordeel": "weinig data"
-     }
-    ]
-   },
-   {
-    "dimensie": "thema",
-    "opties": [
-     {
-      "optie": "troost",
-      "online": 3,
-      "gepland": 1,
-      "n": 1,
-      "gem": 1.0,
-      "oordeel": "weinig data"
-     },
-     {
-      "optie": "moed",
-      "online": 3,
-      "gepland": 2,
-      "n": 0,
-      "gem": null,
-      "oordeel": "weinig data"
-     },
-     {
-      "optie": "liefde",
-      "online": 0,
       "gepland": 2,
       "n": 0,
       "gem": null,
@@ -7556,11 +7471,6 @@
      {
       "dimensie": "huisstijl",
       "optie": "zonsopgang",
-      "bron": "experiment"
-     },
-     {
-      "dimensie": "thema",
-      "optie": "dankbaarheid",
       "bron": "experiment"
      },
      {
