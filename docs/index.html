@@ -407,7 +407,7 @@ html[data-thema=donker] .kpost .knws{background:#3a2e14;color:#ffd98a}
 <div id="lade" onclick="if(event.target===this)sluitLade()"><div class="ladebinnen" id="ladeBinnen"></div></div>
 <div id="galerij" onclick="if(event.target===this)this.style.display='none'"><button class="sluit" onclick="galerij.style.display='none'">✕</button><div class="galrij"></div><div class="tel"></div></div>
 <script>
-const NAMEN={huisstijl:"Huisstijl",thema:"Thema",hook_stijl:"Hook-stijl",formaat:"Formaat",uitleg_op_beeld:"Uitleg op beeld",achtergrondbron:"Achtergrond",boekgroep:"Bijbelboek",lengte:"Lengte vers",bron:"Bekend of ontdekking",vraag_onderaan:"Vraag onderaan",opening:"Eerste slide",tijdslot:"Tijdstip",reel_stijl:"Reelstijl",reel_plaatsing:"Tekst in reel",reel_scene:"Rustbeeld in reel",hashtag_stijl:"Soort hashtags"};
+const NAMEN={huisstijl:"Huisstijl",thema:"Thema",hook_stijl:"Hook-stijl",formaat:"Formaat",uitleg_op_beeld:"Uitleg op beeld",achtergrondbron:"Achtergrond",boekgroep:"Bijbelboek",lengte:"Lengte vers",bron:"Bekend of ontdekking",vraag_onderaan:"Vraag onderaan",opening:"Eerste slide",tijdslot:"Tijdstip",reel_stijl:"Reelstijl",reel_plaatsing:"Tekst in reel",reel_scene:"Rustbeeld in reel",hashtag_stijl:"Soort hashtags",carrousel_stijl:"Carrouselstijl",reel_kleur:"Kleur meelees-stijl"};
 const STATUS={wacht_op_tekst:"Wacht op tekst",gerenderd:"Klaar, gaat online",afgekeurd:"Overgeslagen door jou",overgeslagen:"Overgeslagen",gepubliceerd:"Gepubliceerd",fout:"Fout"};
 const fmt=n=>n==null?"–":Number(n).toLocaleString("nl-NL");
 const tip=document.getElementById("tip");
@@ -921,11 +921,19 @@ function bouwPlanning(){
 
 // ---------- Stijl aanpassen in het zijpaneel ----------
 let STK={};
+const MEELEES={abrikoos:"#F7D9B5",mint:"#BFE6D3",hemel:"#BDD7F4",roze:"#F4C4D0",goud:"#F6DC8A"};
+const MEELNAAM={abrikoos:"abrikoos",mint:"mint",hemel:"hemelsblauw",roze:"roze",goud:"goud"};
 function stijlBlok(x){
-  const v=x.variabelen;STK={post:x.id,huisstijl:v.huisstijl,achtergrondbron:v.achtergrondbron==="beeld"?"beeld":"verloop",opening:v.opening||"vers"};
+  const v=x.variabelen,vid=v.formaat==="video",isM=(vid?v.reel_stijl:v.carrousel_stijl)==="markeren";
+  STK={post:x.id,huisstijl:v.huisstijl,achtergrondbron:v.achtergrondbron==="beeld"?"beeld":"verloop",opening:v.opening||"vers",meelees:isM?(v.reel_kleur||"abrikoos"):"",reel_stijl:vid?(v.reel_stijl||"klassiek"):""};
   const st=Object.keys(STIJLKLEUR);
   return `<div class="stb"><div class="sub" style="font-weight:600;margin-bottom:6px">Stijl aanpassen</div>
-    <div class="stw">${st.map(k=>`<button class="sw${k===v.huisstijl?" aan":""}" data-k="${k}" title="${k}" style="background:${STIJLKLEUR[k]}" onclick="kiesStijl('huisstijl','${k}',this)"><span>${k}</span></button>`).join("")}</div>
+    ${vid?`<div class="seg" style="margin-bottom:8px"><span class="sub" style="align-self:center;margin-right:4px">Reelstijl:</span>
+      ${[["situatie","Herkenbare situatie"],["klassiek","Klassiek"],["kinetisch","Kinetisch"],["beeld","Foto's"]].map(([k,n])=>`<button class="btn sto-r${!isM&&STK.reel_stijl===k?" prim":""}" onclick="kiesReel('${k}',this)">${n}</button>`).join("")}</div>`:""}
+    <div class="sub" style="margin:2px 0 4px">Meelees-stijl (markeerstreep)</div>
+    <div class="stw">${Object.keys(MEELEES).map(k=>`<button class="sw sm${k===STK.meelees?" aan":""}" data-k="${k}" title="${MEELNAAM[k]}" style="background:${MEELEES[k]}" onclick="kiesMeelees('${k}',this)"><span>${MEELNAAM[k]}</span></button>`).join("")}</div>
+    <div class="sub" style="margin:10px 0 4px">Andere stijlen</div>
+    <div class="stw">${st.map(k=>`<button class="sw${!STK.meelees&&k===v.huisstijl?" aan":""}" data-k="${k}" title="${k}" style="background:${STIJLKLEUR[k]}" onclick="kiesStijl('huisstijl','${k}',this)"><span>${k}</span></button>`).join("")}</div>
     <div class="seg" style="margin-top:8px"><span class="sub" style="align-self:center;margin-right:4px">Achtergrond:</span>
       ${[["verloop","Kleurverloop"],["beeld","Foto"]].map(([k,n])=>`<button class="btn sto-a${STK.achtergrondbron===k?" prim":""}" onclick="kiesStijl('achtergrondbron','${k}',this)">${n}</button>`).join("")}</div>
     ${v.formaat==="carrousel"?`<div class="seg" style="margin-top:6px"><span class="sub" style="align-self:center;margin-right:4px">Eerste slide:</span>
@@ -935,9 +943,24 @@ function stijlBlok(x){
 }
 function kiesStijl(k,w,el){
   STK[k]=w;
-  const groep=k==="huisstijl"?".sw":k==="achtergrondbron"?".sto-a":".sto-o";
+  if(k==="huisstijl"){STK.meelees="";el.closest(".stb").querySelectorAll(".sm").forEach(b=>b.classList.remove("aan"))}
+  const groep=k==="huisstijl"?".sw:not(.sm)":k==="achtergrondbron"?".sto-a":".sto-o";
   el.parentElement.querySelectorAll(groep).forEach(b=>b.classList.remove(k==="huisstijl"?"aan":"prim"));
   el.classList.add(k==="huisstijl"?"aan":"prim");
+}
+function kiesMeelees(k,el){
+  STK.meelees=k;
+  const stb=el.closest(".stb");
+  stb.querySelectorAll(".sw").forEach(b=>b.classList.remove("aan"));
+  stb.querySelectorAll(".sto-r").forEach(b=>b.classList.remove("prim"));
+  el.classList.add("aan");
+}
+function kiesReel(k,el){
+  STK.reel_stijl=k;STK.meelees="";
+  const stb=el.closest(".stb");
+  stb.querySelectorAll(".sm").forEach(b=>b.classList.remove("aan"));
+  el.parentElement.querySelectorAll(".sto-r").forEach(b=>b.classList.remove("prim"));
+  el.classList.add("prim");
 }
 function sluitLade(){document.getElementById("lade").style.display="none"}
 document.addEventListener("keydown",e=>{if(e.key==="Escape"){sluitLade();galerij.style.display="none"}});
@@ -967,7 +990,7 @@ function openLade(id){
     ${x.caption?`<details open><summary class="sub" style="cursor:pointer">Caption</summary><div class="lcap">${esc(x.caption)}</div></details>`:""}
     ${!plan&&st!=="online"&&x.status==="gerenderd"&&kan?stijlBlok(x):""}
     ${act?(kan?act:`<div class="sub" style="margin-top:10px"><a href="#" onclick="sluitLade();naarSleutel();return false">Koppel eerst je sleutel</a> om deze post aan te passen.</div>`):""}
-    <details style="margin-top:12px"><summary class="sub" style="cursor:pointer">Details</summary><div style="margin-top:6px">${["huisstijl","hook_stijl","opening","achtergrondbron","reel_stijl"].filter(k=>v[k]).map(k=>`<span class="tag">${NAMEN[k]||k}: ${esc(v[k])}</span>`).join("")}</div></details>`;
+    <details style="margin-top:12px"><summary class="sub" style="cursor:pointer">Details</summary><div style="margin-top:6px">${["huisstijl","hook_stijl","opening","achtergrondbron","reel_stijl","carrousel_stijl","reel_kleur"].filter(k=>v[k]).map(k=>`<span class="tag">${NAMEN[k]||k}: ${esc(v[k])}</span>`).join("")}</div></details>`;
   document.getElementById("lade").style.display="flex";
 }
 function toonPlan(id){

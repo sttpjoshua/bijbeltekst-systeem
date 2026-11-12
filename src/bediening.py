@@ -180,6 +180,33 @@ def main(raw):
                 p["verhaal_hook"] = e["verhaal"]
             v["opening"] = o["opening"]
             p.setdefault("keuzebron", {})["opening"] = "joshua"
+        # meelees-stijl (markeerstreep) en reelstijl, 12 nov
+        kleuren = S.DIMENSIES["reel_kleur"]
+        kb = p.setdefault("keuzebron", {})
+        meel = o.get("meelees")
+        if v.get("formaat") == "carrousel":
+            if meel in kleuren:
+                v["carrousel_stijl"], v["reel_kleur"], v["opening"] = "markeren", meel, "vers"
+                kb["carrousel_stijl"] = kb["reel_kleur"] = "joshua"
+                nieuw = f"meelees-{meel}"
+            elif meel == "" and v.get("carrousel_stijl") == "markeren":
+                v["carrousel_stijl"], v["reel_kleur"] = "standaard", None
+                kb["carrousel_stijl"] = "joshua"
+        elif v.get("formaat") == "video":
+            if meel in kleuren:
+                v["reel_stijl"], v["reel_haak"], v["reel_kleur"] = "markeren", "geen", meel
+                v["reel_plaatsing"] = v["reel_scene"] = None
+                kb["reel_stijl"] = kb["reel_kleur"] = "joshua"
+                nieuw = f"meelees-{meel}"
+            elif o.get("reel_stijl") in ("situatie", "klassiek", "kinetisch", "beeld") and meel in ("", None):
+                v["reel_stijl"], v["reel_kleur"] = o["reel_stijl"], None
+                v["reel_haak"] = "geen"
+                if o["reel_stijl"] == "situatie":
+                    v["reel_plaatsing"] = v.get("reel_plaatsing") or random.choice(S.DIMENSIES["reel_plaatsing"])
+                    v["reel_scene"] = v.get("reel_scene") or random.choice(S.DIMENSIES["reel_scene"])
+                else:
+                    v["reel_plaatsing"] = v["reel_scene"] = None
+                kb["reel_stijl"] = "joshua"
         p["goedgekeurd"] = None
         if p["status"] == "gerenderd":
             beeldpost = p["variabelen"]["formaat"] != "video" and p["variabelen"].get("achtergrondbron") != "beeld"
