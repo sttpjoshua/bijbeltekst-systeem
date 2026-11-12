@@ -286,6 +286,19 @@ def _vul_nieuws(p, x, zin, item, cat, zwaar, bank, cfg):
     p["nieuws"] = {"categorie": cat, "kop": item["kop"], "bron": item["bron"], "link": item["link"], "zwaar": zwaar}
 
 
+def behoud_nieuws(p, n, zin, cfg=None):
+    """Na een verse-wissel: de post blijft een nieuwspost (openingszin en brugzin voor het nieuwe vers)."""
+    cfg = cfg or S.laad("config.json")
+    bank = tekstbank.laad()
+    x = next((y for y in S.alle_verzen() if y["id"] == p["vers_id"]), None)
+    if not x or p["vers_id"] not in bank:
+        p.pop("nieuws", None)
+        return False
+    item = {"kop": n["kop"], "bron": n.get("bron", ""), "link": n.get("link", "")}
+    _vul_nieuws(p, x, zin, item, n["categorie"], n.get("zwaar", False), bank, cfg)
+    return True
+
+
 def maak_opties(item, cat, zwaar, cfg, posts, n=3):
     """Drie voorstellen (ander vers en andere openingszin) met voorvertoning, om uit te kiezen in het dashboard."""
     import copy

@@ -232,6 +232,7 @@ def main(raw):
     elif a == "post_ander_vers" and vind(posts, o["post"]).get("reserve", {}).get("caption"):
         p = vind(posts, o["post"])
         r = p.pop("reserve")
+        nw, nzin = p.get("nieuws"), (p.get("verhaal_hook") or p.get("hook"))
         later = cfg.setdefault("verzen_later", {})
         later[p["vers_id"]] = (dt.date.today() + dt.timedelta(days=30)).isoformat()
         oud = p["ref"]
@@ -251,6 +252,9 @@ def main(raw):
         for f in ("thema", "boekgroep", "lengte", "bron"):
             if f in r:
                 p["variabelen"][f] = r[f]
+        if nw:
+            import nieuws
+            nieuws.behoud_nieuws(p, nw, nzin, cfg)
         p["goedgekeurd"] = None
         if p["variabelen"]["formaat"] != "video" and p["variabelen"].get("achtergrondbron") != "beeld" or materiaal_er():
             p["status"] = "klaar_voor_render"
@@ -263,6 +267,7 @@ def main(raw):
             melding = f"Ander vers: {oud} vervangen door {p['ref']}; het beeld wordt bij de volgende run gemaakt"
     elif a == "post_ander_vers":
         p = vind(posts, o["post"])
+        nw, nzin = p.get("nieuws"), (p.get("verhaal_hook") or p.get("hook"))
         S.bewaar("data/posts.json", posts)
         S.cmd_vervang(p["id"], "gekozen door Joshua")
         posts, cfg = S.laad("data/posts.json", []), S.laad("config.json")
@@ -271,6 +276,9 @@ def main(raw):
         e = tekstbank.laad().get(p["vers_id"]) if cfg.get("zelfstandig") else None
         if e:  # zelfstandig: teksten uit de bank en meteen opnieuw maken
             tekstbank.vul_post(p, e, cfg)
+            if nw:
+                import nieuws
+                nieuws.behoud_nieuws(p, nw, nzin, cfg)
             p["status"] = "klaar_voor_render" if (p["variabelen"]["formaat"] != "video" and p["variabelen"].get("achtergrondbron") != "beeld") or materiaal_er() else "opnieuw_maken"
             S.bewaar("data/posts.json", posts)
             if p["status"] == "klaar_voor_render":
