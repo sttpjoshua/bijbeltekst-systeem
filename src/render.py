@@ -166,7 +166,7 @@ def _schaduw_papier(b, h, palet, rnd):
     lagen = []
     eenheid = min(w, hh * 0.8)  # takgrootte volgt de hoogte, zodat een brede panorama niet reuzenbladeren krijgt
     aantal = max(3, int(round(w / (hh * 0.75))) * 2)  # meer takken naarmate het beeld breder is
-    for blur, sterkte in ((4.5, 0.6), (9.0, 0.4)):  # zacht en nog zachter, voor diepte
+    for blur, sterkte in ((5.5, 0.6), (10.0, 0.4)):  # zacht en nog zachter, voor diepte
         m = Image.new("L", (w, hh), 0); dm = ImageDraw.Draw(m)
         for i in range(aantal):
             kant = rnd.choice(("boven", "boven", "onder", "zij"))
@@ -188,7 +188,7 @@ def _schaduw_papier(b, h, palet, rnd):
     warm = Image.new("RGB", (b, h), (255, 244, 220))
     img = Image.composite(warm, basis, licht.point(lambda x: int(x * 0.35)))  # lichtbundel: iets warmer en lichter
     for m, sterkte in lagen:
-        img = Image.composite(donker, img, m.point(lambda x, st=sterkte: int(x * st * 0.34)))
+        img = Image.composite(donker, img, m.point(lambda x, st=sterkte: int(x * st * 0.19)))
     return img
 
 def _verloop_plus(b, h, palet, stijl):
