@@ -998,6 +998,54 @@ def cmd_leer():
         top = sorted(r.items(), key=lambda x: -x[1]["nieuw"])[:2]
         print(f"{dim:14s} beste: " + ", ".join(f"{k} ({v['nieuw']}, n={v['n']})" for k, v in top))
 
+def experimenten(cfg, strat, posts):
+    """Waar het systeem nu mee experimenteert, voor het dashboard: weekexperiment per optie, vastgezette onderdelen,
+    brede tests en de komende posts met bewuste testkeuzes."""
+    vandaag = dt.date.today().isoformat()
+    e = cfg.get("experiment") or {}
+    dims = e.get("dims") or []
+    actief = bool(dims) and e.get("tot", "") >= vandaag
+    stats = optie_stats(posts)
+    zek = strat.get("zekerheid") or {}
+    uit = {"actief": actief, "van": e.get("van"), "tot": e.get("tot"), "strikt": cfg.get("strikt_experiment", True),
+           "snel": bool(cfg.get("leermodus")), "snel_tot": cfg.get("leermodus_tot"), "onderdelen": [], "vast": [], "tests": [], "komend": []}
+    for dim in dims if actief else []:
+        tel = {}
+        for p in posts:
+            if p["datum"] >= (e.get("van") or "") and p["status"] != "afgekeurd" and p["variabelen"].get(dim) is not None:
+                t = tel.setdefault(str(p["variabelen"][dim]), {"online": 0, "gepland": 0})
+                t["online" if p["status"] == "gepubliceerd" else "gepland"] += 1
+        opties = []
+        for o in DIMENSIES[dim]:
+            z = (zek.get(dim) or {}).get(str(o)) or {}
+            vals = stats.get(dim, {}).get(str(o), [])
+            t = tel.get(str(o), {"online": 0, "gepland": 0})
+            opties.append({"optie": o, "online": t["online"], "gepland": t["gepland"], "n": len(vals),
+                           "gem": round(sum(vals) / len(vals), 2) if vals else None, "oordeel": z.get("oordeel") or oordeel(vals)})
+        uit["onderdelen"].append({"dimensie": dim, "opties": opties})
+    if uit["strikt"] and actief and not uit["snel"]:
+        for dim in sorted(PRESENTATIE_VAST):
+            if dim in dims:
+                continue
+            gem = {str(o): posterior(stats.get(dim, {}).get(str(o), []))[0] for o in DIMENSIES[dim]}
+            beste = max(gem, key=gem.get)
+            n = len(stats.get(dim, {}).get(beste, []))
+            uit["vast"].append({"dimensie": dim, "optie": _terug(dim, beste), "n": n, "voorkeur": n >= cfg.get("min_metingen_optie", 5)})
+    uit["tests"].append({"naam": "meelees-stijl", "tekst": f"{round(cfg.get('markeer_aandeel', 0.25) * 100)}% van de reels en een deel van de carrousels"})
+    if cfg.get("extra_tijdsloten"):
+        uit["tests"].append({"naam": "extra tijdslot", "tekst": ", ".join(cfg["extra_tijdsloten"]) + " (bijgezet door het systeem)"})
+    uit["tests"].append({"naam": "verkennen", "tekst": f"{round(cfg.get('verkenning', 0.2) * 100)}% van de keuzes is bewust iets nieuws"})
+    for p in sorted(posts, key=lambda x: (x["datum"], x["variabelen"].get("tijdslot", ""))):
+        if p["datum"] < vandaag or p["status"] in ("gepubliceerd", "afgekeurd", "overgeslagen") or p.get("gepubliceerd"):
+            continue
+        kb = p.get("keuzebron") or {}
+        t = [{"dimensie": d, "optie": p["variabelen"].get(d), "bron": b} for d, b in kb.items()
+             if p["variabelen"].get(d) is not None and (b in ("verkenning", "test markeren") or (b == "experiment" and d in dims))]
+        if t:
+            uit["komend"].append({"id": p["id"], "ref": p["ref"], "datum": p["datum"], "tijdslot": p["variabelen"].get("tijdslot"), "tests": t})
+    uit["komend"] = uit["komend"][:12]
+    return uit
+
 # ---------- Dashboard-data ----------
 def cmd_dashboard():
     cfg, strat = laad("config.json"), laad("strategie.json") or nieuwe_strategie()
@@ -1020,7 +1068,7 @@ def cmd_dashboard():
                       "caption": p.get("caption", ""), "uitleg": p.get("uitleg", ""), "media": p.get("media"), "media_url": p.get("media_url"), "media_urls": p.get("media_urls"), "thumb": p.get("thumb"),
                       "platformen": list(p.get("gepubliceerd", {}).keys()),
                       "links": {k: v.get("url") for k, v in p.get("gepubliceerd", {}).items()}, "totaal": tot, "per_platform": per, "score": sc.get(p["id"], {}),
-                      "momenten": {pl: {m: {k: x.get(k) for k in ("views", "reach", "likes", "comments", "shares", "saves", "follows")} for m, x in mom.items() if m in ("1u", "24u", "7d")} for pl, mom in p.get("stats", {}).items()},
+                      "keuzebron": p.get("keuzebron"), "momenten": {pl: {m: {k: x.get(k) for k in ("views", "reach", "likes", "comments", "shares", "saves", "follows")} for m, x in mom.items() if m in ("1u", "24u", "7d")} for pl, mom in p.get("stats", {}).items()},
                       "pub": {k: v.get("t") for k, v in p.get("gepubliceerd", {}).items()}, "gemist": p.get("gemist", []), "nood": p.get("nood", False), "nieuws": p.get("nieuws"),
                       "online": min((g["t"] for g in p.get("gepubliceerd", {}).values()), default=None)})
     rapporten = sorted(os.listdir(P("rapporten"))) if os.path.isdir(P("rapporten")) else []
@@ -1034,7 +1082,7 @@ def cmd_dashboard():
             "recente_fouten": [l for l in laad("data/logboek.json", [])
                                if l.get("soort") == "fout" and not l.get("opgelost") and l["t"] >= (dt.datetime.now() - dt.timedelta(hours=48)).isoformat(timespec="minutes")],
             "versen_totaal": len(laad("data/verzen.json", [])),
-            **extra,
+            **extra, "experimenten": experimenten(cfg, strat, posts),
             "planning": [{k: x.get(k) for k in ("datum", "ref", "tekst", "vers_id", "variabelen", "keuzebron", "reeks", "reeks_label")}
                          for x in laad("data/planning.json", {}).get("posts", [])]}
     bewaar("docs/data.json", data)

@@ -302,6 +302,7 @@ html[data-thema=donker] .kpost .knws{background:#3a2e14;color:#ffd98a}
     <section class="kaart" id="nieuwsKeuze" style="display:none"></section>
     <section class="kaart" id="aandacht"></section>
     <div class="grid g4" id="tegels" style="margin-top:14px"></div>
+    <section class="kaart" id="experimenten"></section>
     <section class="grid g2">
       <div class="kaart"><h2>Volgende posts</h2><div id="volgende"></div><a href="#planning" class="sub" onclick="tab('planning');return false">Hele planning bekijken →</a></div>
       <div class="kaart" id="claudeVak"><div class="ai-kop"><span class="ai-pil">✦ Claude</span></div><h3 class="ai-titel">Vraag me iets</h3>
@@ -442,7 +443,7 @@ function bouw(){
   const p=D.posts;
   try{const gem=D.posts.filter(x=>x.totaal&&(x.totaal.reach!=null||x.totaal.views!=null)&&x.score&&Object.keys(x.score).length).length;
     document.getElementById("gewSam").textContent=gem<6?`(wordt interessant vanaf 6 gemeten posts; nu ${gem})`:"";if(gem>=6)document.getElementById("gewDet").open=true}catch(e){}
-  bouwNieuwsKeuze();bouwAandacht();bouwVandaag();bouwWeekVgl();bouwAB();bouwMaand();bouwTekstbank();bouwReacties();bouwVolgende();bouwLaatst();bouwVerzoeken();bouwGezondheid();bouwTegels();bouwSnelLeren();bouwGroei();bouwTop();bouwInzichten();bouwVoorraad();
+  bouwNieuwsKeuze();bouwAandacht();bouwVandaag();bouwWeekVgl();bouwAB();bouwMaand();bouwTekstbank();bouwReacties();bouwVolgende();bouwLaatst();bouwVerzoeken();bouwGezondheid();bouwTegels();bouwSnelLeren();bouwGroei();bouwTop();bouwInzichten();bouwExperimenten();bouwVoorraad();
 
   // logboek
   document.getElementById("logboek").innerHTML=(D.logboek||[]).slice().reverse().map(l=>`<div class="${l.soort==="fout"&&!l.opgelost?"fout":""}"><span class="t">${l.t.replace("T"," ")}</span>${l.tekst.length>170?l.tekst.slice(0,170)+"…":l.tekst}${l.opgelost?' <span style="color:var(--goed)">(opgelost)</span>':""}</div>`).join("")||'<div class="leeg">Nog niets gelogd.</div>';
@@ -1138,6 +1139,25 @@ function bouwTop(){
 const OPTNAAM={afbeelding:"afbeeldingen",video:"video's",carrousel:"carrousels",verloop:"kleurverloop",beeld:"foto-achtergrond",true:"met uitleg op het beeld",false:"zonder uitleg",geen:"geen hook",vraag:"een vraag als hook",herkenning:"een herkenbare hook",uitdaging:"een uitdaging als hook",rustig:"een rustige hook",avond:"stijl avond",zand:"stijl zand",salie:"stijl salie",psalmen:"verzen uit de Psalmen",spreuken:"verzen uit Spreuken",wijsheid:"verzen uit Job, Prediker en Hooglied",profeten:"verzen uit de profeten",evangelien:"verzen uit de evangeliën",brieven:"verzen uit de brieven",kort:"korte verzen",middel:"middellange verzen",lang:"lange verzen",bekend:"bekende verzen",ontdekking:"minder bekende verzen"};
 Object.assign(OPTNAAM,{mix:"vaste mix hashtags",zoekwoord:"zoekwoord-hashtags",zonder:"zonder hashtags",situatie:"herkenbare situatie",markeren:"meelees-stijl",standaard:"standaard carrousel",abrikoos:"abrikoos",mint:"mint",hemel:"hemelsblauw",roze:"roze",goud:"goud",klassiek:"klassieke reel",midden:"tekst in het midden",boven:"tekst boven",natuur:"natuurbeeld",dichtbij:"close-up beeld",onderweg:"beeld onderweg"});
 const on=o=>OPTNAAM[o]||String(o).replace("_"," ");
+function bouwExperimenten(){
+  const el=document.getElementById("experimenten"),x=D.experimenten;if(!el||!x){return}
+  const nm=d=>(NAMEN[d]||d).toLowerCase(),on=o=>(OPTNAAM[String(o)]||String(o).replace(/_/g," "));
+  const OZ={"waarschijnlijk beter":["goed","waarschijnlijk beter"],"waarschijnlijk slechter":["slecht","waarschijnlijk slechter"],"geen duidelijk verschil":["","nog geen verschil"],"weinig data":["","te weinig data"]};
+  const dagen=x.actief?Math.max(0,Math.round((new Date(x.tot+"T23:59:00")-Date.now())/864e5)):0;
+  let h=`<h2>Waar het systeem nu mee experimenteert</h2>`;
+  if(x.snel)h+=`<div class="inzicht"><b>⚡ Snel leren tot ${x.snel_tot?new Date(x.snel_tot+"T12:00:00").toLocaleDateString("nl-NL",{day:"numeric",month:"long"}):"later"}</b><div class="sub">Alle onderdelen worden nu breed gevarieerd en dagelijks geëvalueerd. Daarna test het systeem per week één onderdeel en zet de rest vast op wat werkt.</div></div>`;
+  if(x.actief){
+    for(const o of x.onderdelen){
+      const mx=Math.max(1,...o.opties.map(q=>q.online+q.gepland));
+      h+=`<div class="inzicht"><b>🧪 Weekexperiment: ${nm(o.dimensie)}</b> <span class="sub">tot en met ${new Date(x.tot+"T12:00:00").toLocaleDateString("nl-NL",{day:"numeric",month:"long"})}${dagen?` · nog ${dagen} dag${dagen>1?"en":""}`:" · laatste dag"}</span>
+      <div class="sub" style="margin:2px 0 8px">Elke optie krijgt posts, zodat het systeem kan zien welke het best werkt. Per optie: posts in dit experiment, de gemiddelde score en hoe zeker het systeem is.</div>`+
+      o.opties.map(q=>{const t=q.online+q.gepland,z=OZ[q.oordeel]||["",""];return `<div style="display:grid;grid-template-columns:170px 1fr 230px;gap:8px;align-items:center;font-size:13px;min-height:24px"><span>${on(q.optie)}</span><div style="height:8px;background:var(--lijn);border-radius:4px;overflow:hidden"><div style="height:100%;width:${t/mx*100}%;background:var(--accent)"></div></div><span class="sub" style="text-align:right">${q.online} online, ${q.gepland} gepland · ${q.gem==null?"nog geen score":String(q.gem.toFixed(1)).replace(".",",")+"x ("+q.n+" gemeten)"} <b class="${z[0]}" style="${z[0]==="goed"?"color:var(--goed)":z[0]==="slecht"?"color:var(--slecht)":""}">${z[1]}</b></span></div>`}).join("")+`</div>`}
+  }else if(!x.snel)h+=`<div class="inzicht"><b>Geen weekexperiment actief</b><div class="sub">Het systeem kiest het volgende experiment bij het klaarzetten van de volgende dag.</div></div>`;
+  if(x.vast&&x.vast.length)h+=`<div class="inzicht"><b>📌 Bewust vastgezet tijdens het experiment</b><div class="sub" style="margin:2px 0 6px">Deze onderdelen blijven bijna altijd op de beste keuze tot nu toe, zodat het experiment zuiver blijft.</div>`+x.vast.map(v=>`<span class="tag">${nm(v.dimensie)}: ${on(v.optie)}${v.voorkeur?"":" (nog geen voorkeur)"}</span>`).join("")+`</div>`;
+  h+=`<div class="inzicht"><b>🔀 Blijvende tests</b>`+x.tests.map(t=>`<div class="sub"><b>${t.naam}:</b> ${t.tekst}</div>`).join("")+`</div>`;
+  if(x.komend&&x.komend.length)h+=`<div class="inzicht"><b>Komende posts met een testkeuze</b><div class="sub" style="margin:2px 0 6px">Deze keuzes zijn bewust gekozen om iets te leren.</div>`+x.komend.map(k=>`<div style="font-size:13px;padding:3px 0"><b>${k.ref}</b> <span class="sub">${k.datum.slice(5)} ${k.tijdslot||""}</span> `+k.tests.map(t=>`<span class="tag">${nm(t.dimensie)}: ${on(t.optie)}${t.bron==="verkenning"?" (verkennen)":t.bron==="test markeren"?" (test)":""}</span>`).join("")+`</div>`).join("")+`</div>`;
+  el.innerHTML=h;
+}
 function bouwInzichten(){
   const el=document.getElementById("inzichten"),nodig=D.min_posts_voor_leren,gem=D.gemeten_posts||0;
   let h="";
