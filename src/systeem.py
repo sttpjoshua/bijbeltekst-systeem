@@ -61,6 +61,7 @@ DIMENSIES = {
     "bron": ["bekend", "ontdekking"],
     "vraag_onderaan": [True, False],
     "reel_stijl": ["klassiek", "kinetisch", "beeld", "situatie", "markeren"],  # alleen video; 'situatie' is sinds 11 nov de standaard (config reel_formaat)
+    "reel_kleur": ["abrikoos", "mint", "hemel", "roze", "goud"],  # meelees-reel: kleur en lettertype (Joshua, 12 nov: varianten)
     "reel_plaatsing": ["midden", "boven"],  # situatie-reel: waar de tekst staat (Joshua, 11 nov: deze twee testen)
     "reel_scene": ["natuur", "dichtbij", "onderweg"],  # situatie-reel: soort rustig beeld onder het vers
     "reel_haak": ["geen", "vraag"],  # alleen video: eerst 1,4 s een grote vraag in beeld
@@ -361,13 +362,19 @@ def kies_posts(datum, cfg, strat, posts, verzen, mat, n_start, n, gebruikte_slot
                 v[d], bron[d] = None, "n.v.t."
         if v["formaat"] != "video":
             v["reel_stijl"], bron["reel_stijl"], v["reel_haak"], bron["reel_haak"] = None, "n.v.t.", None, "n.v.t."
+            v["reel_kleur"], bron["reel_kleur"] = None, "n.v.t."
         elif cfg.get("reel_formaat") == "situatie":  # Joshua, 11 nov: 'herkenbare situatie' met echte video is de standaard
             v["reel_stijl"], bron["reel_stijl"], v["reel_haak"], bron["reel_haak"] = "situatie", "vaste regel", "geen", "n.v.t."
             # Joshua, 12 nov: 'markeren' (markeerstreep over het vers) als test naast de situatie-reel
-            if rnd.random() < cfg.get("markeer_aandeel", 0.25):
+            if v["tijdslot"] < "10:00":  # ochtend: meteen het vers, de groet staat in de caption
+                v["reel_stijl"], bron["reel_stijl"] = "markeren", "ochtend"
+            elif rnd.random() < cfg.get("markeer_aandeel", 0.25):
                 v["reel_stijl"], bron["reel_stijl"] = "markeren", "test markeren"
+            if v["reel_stijl"] == "markeren":
                 for d in ("reel_plaatsing", "reel_scene"):
                     v[d], bron[d] = None, "n.v.t."
+            if v["reel_stijl"] != "markeren":
+                v["reel_kleur"], bron["reel_kleur"] = None, "n.v.t."
             for d in ("reel_plaatsing", "reel_scene"):
                 if v["reel_stijl"] == "situatie" and not v.get(d):
                     v[d], bron[d] = kies_optie(d, strat, cfg["verkenning"], rnd, (), ctx)
@@ -1546,6 +1553,14 @@ def cmd_ochtend_vernieuwen():
             v["huisstijl"] = random.Random(p["id"] + "licht").choice(LICHTE_STIJLEN)
             v.update(HUISSTIJLEN[v["huisstijl"]])
             p.setdefault("keuzebron", {})["huisstijl"] = "ochtend"
+        if v.get("formaat") == "video":  # ochtendreel: meteen het vers (markeren), in een wisselende kleur en lettertype
+            rr = random.Random(p["id"] + "kleur")
+            v["reel_stijl"], v["reel_haak"] = "markeren", "geen"
+            for d in ("reel_plaatsing", "reel_scene"):
+                v[d] = None
+            v["reel_kleur"], kb = kies_optie("reel_kleur", strat, cfg["verkenning"], rr)
+            p.setdefault("keuzebron", {}).update({"reel_stijl": "ochtend", "reel_kleur": kb})
+            p["reel_herkenning"] = ""
         v["tijdslot"] = "07:30"
         p["status"] = "wacht_op_tekst"; n += 1
         print(p["datum"], p["ref"], v.get("formaat"))

@@ -3863,7 +3863,7 @@
  {
   "id": "2026-11-13-5",
   "datum": "2026-11-13",
-  "status": "gerenderd",
+  "status": "wacht_op_tekst",
   "vers_id": "Psalms-46-2-2",
   "ref": "Psalm 46:2",
   "tekst": "God is ons een Toevlucht en Sterkte; Hij is krachtelijk bevonden een Hulp in benauwdheden.",
@@ -3888,11 +3888,12 @@
    "achtergrond": "diagonaal",
    "hook_op_beeld": false,
    "video_uitleg": true,
-   "reel_stijl": "situatie",
+   "reel_stijl": "markeren",
    "reel_haak": "geen",
-   "reel_plaatsing": "midden",
-   "reel_scene": "onderweg",
-   "hashtag_stijl": "zoekwoord"
+   "reel_plaatsing": null,
+   "reel_scene": null,
+   "hashtag_stijl": "zoekwoord",
+   "reel_kleur": "goud"
   },
   "keuzebron": {
    "huisstijl": "experiment",
@@ -3908,10 +3909,11 @@
    "opening": "n.v.t.",
    "tijdslot": "experiment",
    "video_uitleg": "vaste regel",
-   "reel_stijl": "vaste regel",
+   "reel_stijl": "ochtend",
    "reel_plaatsing": "verkenning",
    "reel_scene": "verkenning",
-   "hashtag_stijl": "test"
+   "hashtag_stijl": "test",
+   "reel_kleur": "strategie"
   },
   "hook": "Goedemorgen. Een vers voor het begin van je dag.",
   "beeld_hook": "",
@@ -3969,7 +3971,7 @@
   "tekstbron": "tekstbank",
   "reel_uitleg": "God is onze schuilplaats en kracht, altijd een hulp in nood.",
   "reel_vraag": "Waar zoek jij veiligheid?",
-  "reel_herkenning": "Goedemorgen. Een vers voor het begin van je dag."
+  "reel_herkenning": ""
  },
  {
   "id": "2026-11-14-1",
@@ -4052,7 +4054,7 @@
  {
   "id": "2026-11-14-2",
   "datum": "2026-11-14",
-  "status": "gerenderd",
+  "status": "wacht_op_tekst",
   "vers_id": "Zephaniah-3-17-17",
   "ref": "Sefanja 3:17",
   "tekst": "De HEERE uw God, is in het midden van u, een Held, Die verlossen zal; Hij zal over u vrolijk zijn met blijdschap, Hij zal zwijgen in Zijn liefde, Hij zal Zich over u verheugen met gejuich.",
@@ -4077,11 +4079,12 @@
    "achtergrond": "diagonaal",
    "hook_op_beeld": false,
    "video_uitleg": true,
-   "reel_stijl": "situatie",
+   "reel_stijl": "markeren",
    "reel_haak": "geen",
-   "reel_plaatsing": "boven",
-   "reel_scene": "onderweg",
-   "hashtag_stijl": "mix"
+   "reel_plaatsing": null,
+   "reel_scene": null,
+   "hashtag_stijl": "mix",
+   "reel_kleur": "mint"
   },
   "keuzebron": {
    "huisstijl": "experiment",
@@ -4097,10 +4100,11 @@
    "opening": "n.v.t.",
    "tijdslot": "experiment",
    "video_uitleg": "vaste regel",
-   "reel_stijl": "vaste regel",
+   "reel_stijl": "ochtend",
    "reel_plaatsing": "strategie",
    "reel_scene": "strategie",
-   "hashtag_stijl": "test"
+   "hashtag_stijl": "test",
+   "reel_kleur": "strategie"
   },
   "hook": "Goedemorgen. Begin je dag hiermee.",
   "beeld_hook": "",
@@ -4135,7 +4139,7 @@
   ],
   "story_url": null,
   "goedgekeurd": null,
-  "reel_herkenning": "Goedemorgen. Begin je dag hiermee.",
+  "reel_herkenning": "",
   "reel_uitleg": "God is bij je, een held die redt. Hij is blij met jou en zingt over je.",
   "reel_vraag": "Weet jij dat God blij met je is?"
  },

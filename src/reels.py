@@ -409,12 +409,21 @@ def _streep(d, x0, x1, yc, h, kleur, seed):
                (x1 + 10 + j(), yc + h / 2 + j()), (x0 - 10 + j(), yc + h / 2 - 3 + j())], fill=kleur)
 
 
-def _achtergrond():
-    """Lichte ochtendkleur: crème bovenin naar zacht abrikoos onderin, met een zachte gloed."""
+LOOKS = {  # variant: (achtergrond boven, onder, tekst, accent, markeerstreep, lettertype)
+    "abrikoos": ((253, 248, 238), (250, 228, 205), (44, 36, 32), (178, 88, 48), (240, 205, 150, 175), "lora"),
+    "mint":     ((246, 252, 247), (212, 236, 223), (28, 46, 40), (28, 118, 88), (178, 226, 200, 170), "dmserif"),
+    "hemel":    ((246, 250, 255), (210, 228, 248), (28, 40, 60), (38, 98, 170), (184, 212, 246, 170), "playfair"),
+    "roze":     ((255, 248, 248), (250, 220, 226), (62, 36, 44), (170, 66, 98), (246, 196, 208, 170), "cormorant_cursief"),
+    "goud":     ((255, 252, 238), (250, 234, 186), (54, 42, 22), (156, 96, 18), (250, 220, 120, 175), "montserrat"),
+}
+
+
+def _achtergrond(boven=(253, 248, 238), onder=(250, 228, 205)):
+    """Lichte kleur: boven naar onder verloop, met een zachte gloed."""
     import numpy as np
     y, x = np.mgrid[0:H, 0:B]
     s = (y / H)[:, :, None]
-    boven, onder = np.array([253, 248, 238], float), np.array([250, 228, 205], float)
+    boven, onder = np.array(boven, float), np.array(onder, float)
     a = boven * (1 - s) + onder * s
     gloed = np.exp(-(((x - B * 0.5) / (B * 0.7)) ** 2 + ((y - H * 0.3) / (H * 0.35)) ** 2))[:, :, None]
     a = a + gloed * np.array([4, 3, 0], float)
@@ -426,12 +435,11 @@ def maak_markeren(post, pad):
     die onder het woord meeschuift. Rustig tempo (ongeveer 2 woorden per seconde), kernwoord vet en in kleur."""
     import numpy as np
     v = post["variabelen"]
-    serif = v.get("lettertype", "playfair")
-    inkt, dim, accent = (44, 36, 32, 255), (44, 36, 32, 70), (178, 88, 48, 255)
-    strook = (240, 205, 150, 175)
-    hook = (post.get("reel_herkenning") or "").strip()
+    bgb, bgo, ik, ac, strook, serif = LOOKS.get(v.get("reel_kleur") or "abrikoos", LOOKS["abrikoos"])
+    inkt, dim, accent = ik + (255,), ik + (70,), ac + (255,)
+    hook = ""  # de reel begint meteen met het vers (Joshua, 12 nov); een groet staat in de caption
     uitleg = (post.get("uitleg") or post.get("reel_uitleg") or "").strip()
-    bg = _achtergrond()
+    bg = _achtergrond(bgb, bgo)
     meet = ImageDraw.Draw(Image.new("RGBA", (B, 10)))
     g = 80
     while True:

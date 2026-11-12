@@ -165,3 +165,4 @@ Het 07:30-slot is de ochtendpost (Joshua): altijd een vers voor een goede start 
 
 ## Meelees-reel (12 nov, stijl "markeren")
 Reelstijl `markeren` (reels.maak_markeren): lichte ochtendkleur, vers donker op de pagina, beige markeerstreep per regel die op leestempo meeloopt (ongeveer 2 woorden per seconde), kernwoord in kleur, uitleg, eindbeeld; geen echte video nodig. Bewust eigen stijl, niet de papier-met-stift-look van het voorbeeld. Test naast de situatie-reel: `markeer_aandeel` in config.json (standaard 0.25). Het systeem leert via de dimensie reel_stijl.
+Ochtendreels (12 nov): begint meteen met het vers, geen groet in beeld (die staat in de caption); ochtendreels is altijd de meelees-reel. Varianten via dimensie `reel_kleur` (abrikoos, mint, hemel, roze, goud; `reels.LOOKS`, elk met eigen lettertype); het systeem leert welke het best werkt.
