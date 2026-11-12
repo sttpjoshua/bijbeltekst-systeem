@@ -3863,7 +3863,7 @@
  {
   "id": "2026-11-13-5",
   "datum": "2026-11-13",
-  "status": "wacht_op_tekst",
+  "status": "gerenderd",
   "vers_id": "Psalms-30-6-6",
   "ref": "Psalm 30:6",
   "tekst": "Want een ogenblik is er in Zijn toorn, maar een leven in Zijn goedgunstigheid; des avonds vernacht het geween, maar des morgens is er gejuich.",
@@ -3913,14 +3913,18 @@
    "reel_scene": "verkenning",
    "hashtag_stijl": "test"
   },
-  "hook": "",
+  "hook": "Goedemorgen. Een vers voor het begin van je dag.",
   "beeld_hook": "",
-  "caption": "",
-  "hashtags": [],
-  "uitleg": "",
-  "betekenis": "",
-  "toepassing": "",
-  "kernwoord": "vrede",
+  "caption": "Goedemorgen. Een vers voor het begin van je dag.\n\n\"Want een ogenblik is er in Zijn toorn, maar een leven in Zijn goedgunstigheid; des avonds vernacht het geween, maar des morgens is er gejuich.\"\nPsalm 30:6\n\nVerdriet duurt een nacht, Gods goedheid een leven lang.",
+  "hashtags": [
+   "#bijbelvers",
+   "#troost",
+   "#psalm"
+  ],
+  "uitleg": "Huilen mag de hele nacht duren, maar 's morgens komt er gejuich.",
+  "betekenis": "David weet wat verdriet is. Maar hij weet ook dat verdriet niet blijft. Na de nacht komt de ochtend. Gods goedheid duurt langer dan de moeilijke tijd.",
+  "toepassing": "Heb je verdriet? Houd vast: dit is de nacht, de ochtend komt.",
+  "kernwoord": "gejuich",
   "media": "docs/media/2026-11/2026-11-13-5.mp4",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-13-5.mp4",
   "metricool": {},
@@ -3960,7 +3964,12 @@
    "betekenis": "De dichter wacht op God met zijn hele ziel. Zijn hoop rust niet op omstandigheden, maar op wat God zelf beloofd heeft.",
    "toepassing": "Lees vandaag één belofte uit de Bijbel en houd die vast terwijl je wacht.",
    "kernwoord": "hoop"
-  }
+  },
+  "verhaal_hook": "Na elke nacht komt er een ochtend.",
+  "tekstbron": "tekstbank",
+  "reel_uitleg": "Huilen mag de hele nacht duren, maar 's morgens komt er gejuich.",
+  "reel_vraag": "Zit jij nu in een nacht?",
+  "reel_herkenning": "Goedemorgen. Een vers voor het begin van je dag."
  },
  {
   "id": "2026-11-14-1",
@@ -4043,7 +4052,7 @@
  {
   "id": "2026-11-14-2",
   "datum": "2026-11-14",
-  "status": "wacht_op_tekst",
+  "status": "gerenderd",
   "vers_id": "Zephaniah-3-17-17",
   "ref": "Sefanja 3:17",
   "tekst": "De HEERE uw God, is in het midden van u, een Held, Die verlossen zal; Hij zal over u vrolijk zijn met blijdschap, Hij zal zwijgen in Zijn liefde, Hij zal Zich over u verheugen met gejuich.",
@@ -4093,14 +4102,19 @@
    "reel_scene": "strategie",
    "hashtag_stijl": "test"
   },
-  "hook": "",
+  "hook": "Goedemorgen. Begin je dag hiermee.",
   "beeld_hook": "",
-  "caption": "",
-  "hashtags": [],
-  "uitleg": "",
-  "betekenis": "",
-  "toepassing": "",
-  "kernwoord": "strijden",
+  "caption": "Goedemorgen. Begin je dag hiermee.\n\n\"De HEERE uw God, is in het midden van u, een Held, Die verlossen zal; Hij zal over u vrolijk zijn met blijdschap, Hij zal zwijgen in Zijn liefde, Hij zal Zich over u verheugen met gejuich.\"\nSefanja 3:17\n\nGod is blij met jou.",
+  "hashtags": [
+   "#liefde",
+   "#sefanja",
+   "#bijbeltekst",
+   "#blijdschap"
+  ],
+  "uitleg": "God is bij je, een held die redt. Hij is blij met jou en zingt over je.",
+  "betekenis": "Sefanja beschrijft God die zo blij is met Zijn volk dat Hij over hen juicht en zingt. Niet een strenge God die op afstand blijft, maar een God die van je geniet.",
+  "toepassing": "Bedenk vandaag: God is blij met mij. Probeer jezelf ook eens zo te zien.",
+  "kernwoord": "verheugen",
   "media": "docs/media/2026-11/2026-11-14-2.mp4",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-14-2.mp4",
   "metricool": {},
@@ -4108,12 +4122,12 @@
   "beeld": "pexels-kyli-katja-2154618559-33529747.jpg",
   "muziek": "ES_Rain on Lotus Leaves - Aks & Lakshmi.mp3",
   "geluid": "ES_Ambience, Swamp, Wetland After Rain, Water Dripping, Humid, Distant Fowl - Epidemic Sound.mp3",
-  "verhaal_hook": "Soms is stil zijn het moeilijkste wat er is.",
+  "verhaal_hook": "Wist je dat God over jou zingt?",
   "tekstbron": "tekstbank",
   "handle": "@bibleverse_nl",
   "muziek_start": 10.4,
   "cover_ms": 5300,
-  "duur": 17.46,
+  "duur": 22.0,
   "media_extra": [],
   "thumb": "thumbs/2026-11-14-2.jpg",
   "media_urls": [
@@ -4121,7 +4135,9 @@
   ],
   "story_url": null,
   "goedgekeurd": null,
-  "reel_herkenning": "Voor iedereen die klem zit en geen uitweg ziet."
+  "reel_herkenning": "Goedemorgen. Begin je dag hiermee.",
+  "reel_uitleg": "God is bij je, een held die redt. Hij is blij met jou en zingt over je.",
+  "reel_vraag": "Weet jij dat God blij met je is?"
  },
  {
   "id": "2026-11-14-3",

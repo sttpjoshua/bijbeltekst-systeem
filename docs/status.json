@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T08:01:05",
+ "updated": "2026-11-12T08:14:41",
  "agents": {
   "verskiezer": {
    "t": "2026-11-12T07:01:23",
@@ -7,13 +7,13 @@
    "state": "done"
   },
   "designer": {
-   "t": "2026-11-12T07:01:23",
-   "task": "Ontwierp Psalm 9:2 in stijl paars",
+   "t": "2026-11-12T08:14:41",
+   "task": "Ontwierp Sefanja 3:17 in stijl roze",
    "state": "done"
   },
   "video": {
-   "t": "2026-11-11T20:40:48",
-   "task": "Monteerde video Hebreeën 11:1 met muziek",
+   "t": "2026-11-12T08:14:41",
+   "task": "Monteerde video Sefanja 3:17 met muziek",
    "state": "done"
   },
   "dispatcher": {
@@ -57,6 +57,10 @@
  ],
  "log": [
   {
+   "t": "08:14",
+   "msg": "Zelfstandig 10 posts klaargezet voor 2026-11-13, 2026-11-14 (teksten uit de tekstbank)."
+  },
+  {
    "t": "07:31",
    "msg": "2026-11-12-1 online op instagram: Kolossenzen 1:12"
   },
@@ -99,10 +103,6 @@
   {
    "t": "20:31",
    "msg": "2026-11-11-n2030 online op instagram: Spreuken 23:18"
-  },
-  {
-   "t": "20:31",
-   "msg": "2026-11-11-n2030 ook als story geplaatst"
   }
  ],
  "lampen": [
