@@ -1,14 +1,14 @@
 {
- "updated": "2026-11-12T07:01:14",
+ "updated": "2026-11-12T07:31:39",
  "agents": {
   "verskiezer": {
-   "t": "2026-11-11T17:01:01",
-   "task": "Nieuwspost gemaakt: Spreuken 23:18",
+   "t": "2026-11-12T07:01:23",
+   "task": "Nieuwspost gemaakt: Psalm 9:2",
    "state": "done"
   },
   "designer": {
-   "t": "2026-11-11T20:40:48",
-   "task": "Ontwierp Hebreeën 11:1 in stijl hemelsblauw",
+   "t": "2026-11-12T07:01:23",
+   "task": "Ontwierp Psalm 9:2 in stijl paars",
    "state": "done"
   },
   "video": {
@@ -17,14 +17,14 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-11T22:05:26",
-   "task": "Postte Romeinen 15:4 op facebook",
+   "t": "2026-11-12T07:31:39",
+   "task": "Postte Kolossenzen 1:12 op instagram",
    "state": "done"
   },
   "controller": {
-   "t": "2026-11-11T21:10:30",
-   "task": "WhatsApp-testbericht klaargezet",
-   "state": "done"
+   "t": "2026-11-12T07:01:20",
+   "task": "Politiek nieuws (NOS): \"Wekdienst 12/11: Erop of eronder voor kabinet ",
+   "state": "error"
   },
   "analist": {
    "t": "2026-11-11T14:35:23",
@@ -57,6 +57,22 @@
  ],
  "log": [
   {
+   "t": "07:31",
+   "msg": "2026-11-12-1 online op instagram: Kolossenzen 1:12"
+  },
+  {
+   "t": "07:31",
+   "msg": "2026-11-12-1 ook als story geplaatst"
+  },
+  {
+   "t": "07:01",
+   "msg": "Nieuwspost: Habakuk 3:18 vervangen door Psalm 9:2 (aanleiding: hitte, NOS)"
+  },
+  {
+   "t": "07:01",
+   "msg": "Politiek nieuws (NOS): \"Wekdienst 12/11: Erop of eronder voor kabinet • Hoger beroep tegen Erasmusschutter\". N"
+  },
+  {
    "t": "22:05",
    "msg": "2026-11-11-n2200 online op facebook: Romeinen 15:4"
   },
@@ -87,22 +103,6 @@
   {
    "t": "20:31",
    "msg": "2026-11-11-n2030 ook als story geplaatst"
-  },
-  {
-   "t": "17:46",
-   "msg": "2026-11-11-n1745 online op facebook: Prediker 3:1"
-  },
-  {
-   "t": "17:46",
-   "msg": "2026-11-11-n1745 online op instagram: Prediker 3:1"
-  },
-  {
-   "t": "17:46",
-   "msg": "2026-11-11-n1745 ook als story geplaatst"
-  },
-  {
-   "t": "17:01",
-   "msg": "Nieuwspost: Kolossenzen 3:17 vervangen door Spreuken 23:18 (aanleiding: sintmaarten, NOS)"
   }
  ],
  "lampen": [
