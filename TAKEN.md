@@ -163,5 +163,5 @@ Na het schrijven en renderen van de posts (dagelijkse run, en avondcontrole als 
 ## Ochtendposts (12 nov)
 Het 07:30-slot is de ochtendpost (Joshua): altijd een vers voor een goede start van de dag (`OCHTEND_VERZEN` in src/tekstbank.py), caption opent met een wisselende Goedemorgen-regel (`OCHTEND_OPENERS`, ook als herkenningsregel in de reel), reels openen met ochtendbeeld (eerste regel in `clips.KOPPEL`), carrousels krijgen een lichte stijl (`LICHTE_STIJLEN`). Andere tijdsloten sparen de ochtendverzen. `python3 src/systeem.py ochtend_vernieuwen` maakt geplande ochtendposts vanaf morgen opnieuw.
 
-## Markeer-reel (12 nov)
-Nieuwe reelstijl `markeren` (reels.maak_markeren): papieren pagina, markeerstreep loopt per regel over het vers, kernwoord in kleur, uitleg, eindbeeld; geen echte video nodig. Test naast de situatie-reel: `markeer_aandeel` in config.json (standaard 0.25). Het systeem leert via de dimensie reel_stijl.
+## Meelees-reel (12 nov, stijl "markeren")
+Reelstijl `markeren` (reels.maak_markeren): lichte ochtendkleur, vers in lichtgrijs dat woord voor woord donker wordt met een kleurvlek die meeschuift (ongeveer 2 woorden per seconde), kernwoord in kleur, uitleg, eindbeeld; geen echte video nodig. Bewust eigen stijl, niet de papier-met-stift-look van het voorbeeld. Test naast de situatie-reel: `markeer_aandeel` in config.json (standaard 0.25). Het systeem leert via de dimensie reel_stijl.

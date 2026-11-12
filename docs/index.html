@@ -1079,7 +1079,7 @@ function bouwTop(){
   el.innerHTML=h+(met.length?"":'<div class="sub" style="margin-top:6px">Gesorteerd op bereik; de score komt zodra een post 20 of meer mensen heeft bereikt.</div>');
 }
 const OPTNAAM={afbeelding:"afbeeldingen",video:"video's",carrousel:"carrousels",verloop:"kleurverloop",beeld:"foto-achtergrond",true:"met uitleg op het beeld",false:"zonder uitleg",geen:"geen hook",vraag:"een vraag als hook",herkenning:"een herkenbare hook",uitdaging:"een uitdaging als hook",rustig:"een rustige hook",avond:"stijl avond",zand:"stijl zand",salie:"stijl salie",psalmen:"verzen uit de Psalmen",spreuken:"verzen uit Spreuken",wijsheid:"verzen uit Job, Prediker en Hooglied",profeten:"verzen uit de profeten",evangelien:"verzen uit de evangeliën",brieven:"verzen uit de brieven",kort:"korte verzen",middel:"middellange verzen",lang:"lange verzen",bekend:"bekende verzen",ontdekking:"minder bekende verzen"};
-Object.assign(OPTNAAM,{mix:"vaste mix hashtags",zoekwoord:"zoekwoord-hashtags",zonder:"zonder hashtags",situatie:"herkenbare situatie",markeren:"markeer-reel",klassiek:"klassieke reel",midden:"tekst in het midden",boven:"tekst boven",natuur:"natuurbeeld",dichtbij:"close-up beeld",onderweg:"beeld onderweg"});
+Object.assign(OPTNAAM,{mix:"vaste mix hashtags",zoekwoord:"zoekwoord-hashtags",zonder:"zonder hashtags",situatie:"herkenbare situatie",markeren:"meelees-reel",klassiek:"klassieke reel",midden:"tekst in het midden",boven:"tekst boven",natuur:"natuurbeeld",dichtbij:"close-up beeld",onderweg:"beeld onderweg"});
 const on=o=>OPTNAAM[o]||String(o).replace("_"," ");
 function bouwInzichten(){
   const el=document.getElementById("inzichten"),nodig=D.min_posts_voor_leren,gem=D.gemeten_posts||0;

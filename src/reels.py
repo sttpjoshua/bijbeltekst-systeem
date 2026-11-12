@@ -400,74 +400,73 @@ def maak_situatie(post, pad, clips, plaatsing="onder"):
     return pad
 
 
-def _papier():
-    """Warme, lichte papierachtergrond met zachte lichtval en fijn korrel."""
+
+def _achtergrond():
+    """Lichte ochtendkleur: crème bovenin naar zacht abrikoos onderin, met een zachte gloed."""
     import numpy as np
-    rnd = np.random.RandomState(7)
     y, x = np.mgrid[0:H, 0:B]
-    licht = 1.0 - 0.07 * (((x - B * 0.42) / B) ** 2 + ((y - H * 0.38) / H) ** 2) * 4
-    basis = np.array([247, 243, 234], dtype=float)
-    a = basis[None, None, :] * licht[:, :, None] + rnd.normal(0, 1.6, (H, B, 1))
+    s = (y / H)[:, :, None]
+    boven, onder = np.array([253, 248, 238], float), np.array([250, 228, 205], float)
+    a = boven * (1 - s) + onder * s
+    gloed = np.exp(-(((x - B * 0.5) / (B * 0.7)) ** 2 + ((y - H * 0.3) / (H * 0.35)) ** 2))[:, :, None]
+    a = a + gloed * np.array([4, 3, 0], float)
     return Image.fromarray(np.clip(a, 0, 255).astype("uint8"), "RGB").convert("RGBA")
 
 
-def _streep(d, x0, x1, yc, h, kleur, seed):
-    """Markeerstreep met licht scheve, ruwe uiteinden, tot x1."""
-    rnd = random.Random(seed)
-    j = lambda: rnd.uniform(-5, 5)
-    pts = [(x0 - 6 + j(), yc - h / 2 + j()), (x1 + 4 + j(), yc - h / 2 + 3 + j()),
-           (x1 + 10 + j(), yc + h / 2 + j()), (x0 - 10 + j(), yc + h / 2 - 3 + j())]
-    d.polygon(pts, fill=kleur)
-
-
-def _sier(d, cy, kleur):
-    """Eenvoudig getekend sierlijntje met hartje (eigen ontwerp)."""
-    cx = B // 2
-    d.line([(cx - 330, cy + 8), (cx - 60, cy + 8)], fill=kleur, width=5)
-    d.line([(cx + 60, cy + 8), (cx + 330, cy + 8)], fill=kleur, width=5)
-    for s in (-1, 1):
-        d.ellipse([cx + s * 340 - 6, cy + 2, cx + s * 340 + 6, cy + 14], fill=kleur)
-    pts = []
-    for i in range(61):
-        a = i / 60 * 2 * math.pi
-        hx = 16 * math.sin(a) ** 3
-        hy = 13 * math.cos(a) - 5 * math.cos(2 * a) - 2 * math.cos(3 * a) - math.cos(4 * a)
-        pts.append((cx + hx * 2.3, cy - 6 - hy * 2.3))
-    d.line(pts + [pts[0]], fill=kleur, width=5, joint="curve")
-
-
 def maak_markeren(post, pad):
-    """Reel 'markeren': een papieren pagina waarop het vers regel voor regel met een markeerstreep wordt gemarkeerd.
-    Kernwoord vet en in kleur, nooit in een vak. Rustig, met uitleg."""
+    """Reel 'meelezen': het vers verschijnt in lichtgrijs en wordt woord voor woord donker, met een zachte kleurvlek
+    die onder het woord meeschuift. Rustig tempo (ongeveer 2 woorden per seconde), kernwoord vet en in kleur."""
     import numpy as np
     v = post["variabelen"]
     serif = v.get("lettertype", "playfair")
-    inkt, accent, strook = (46, 38, 32, 255), (178, 88, 48, 255), (240, 205, 150, 175)
+    inkt, dim, accent = (44, 36, 32, 255), (44, 36, 32, 70), (178, 88, 48, 255)
+    vlek = (255, 190, 120, 150)
     hook = (post.get("reel_herkenning") or "").strip()
     uitleg = (post.get("uitleg") or post.get("reel_uitleg") or "").strip()
-    papier = _papier()
+    bg = _achtergrond()
     meet = ImageDraw.Draw(Image.new("RGBA", (B, 10)))
     g = 80
     while True:
         f = R._font(serif, g); rg = R._wrap(post["tekst"], f, int(B * 0.80), meet)
-        if len(rg) * g * 1.5 <= H * 0.44 or g <= 44:
+        if len(rg) * g * 1.5 <= H * 0.46 or g <= 44:
             break
         g -= 4
     lh = int(g * 1.5)
-    y0 = int(H * 0.42 - len(rg) * lh / 2)
-    # vaste lagen: sierlijn boven en onder, tekst
-    tekst = Image.new("RGBA", (B, H), (0, 0, 0, 0)); dt_ = ImageDraw.Draw(tekst)
-    _sier(dt_, y0 - 150, (60, 52, 46, 255))
-    staat = R._kernstaat(post, inkt[:3], accent[:3])
-    lijnen = []
+    y0 = int(H * 0.40 - len(rg) * lh / 2)
+    fv, rand = R._vet(f)
+    kern = R._kernstaat(post, inkt[:3], accent[:3]).get("kern")
+    kern_klaar = False
+    woorden = []  # (tekst, x0, x1, y, is_kern)
     for i, r in enumerate(rg):
-        yy = y0 + i * lh
-        w = R._regel(dt_, B // 2, yy, r, f, inkt, accent, staat, False)
-        lijnen.append((B / 2 - w / 2, B / 2 + w / 2, yy + g * 0.55))
-    yb = y0 + len(rg) * lh + 40
-    _sier(dt_, yb + 110, (60, 52, 46, 255))
+        ws = r.split(" ")
+        breed, is_k = [], []
+        for w in ws:
+            k = bool(kern) and not kern_klaar and R._kaal(w) == kern
+            if k:
+                kern_klaar = True
+            is_k.append(k)
+            breed.append(meet.textlength(w, font=fv if k else f) + (2 * rand if k else 0))
+        spatie = meet.textlength(" ", font=f)
+        tot = sum(breed) + spatie * (len(ws) - 1)
+        x = B / 2 - tot / 2
+        for w, bw, k in zip(ws, breed, is_k):
+            woorden.append((w, x, x + bw, y0 + i * lh, k)); x += bw + spatie
+    def laag(kleur, kernkleur):
+        im = Image.new("RGBA", (B, H), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
+        for w, xa, xb, yy, k in woorden:
+            if k:
+                m = re_m.match(w); 
+                d.text((xa + rand, yy), w, font=fv, fill=kernkleur, anchor="la", stroke_width=rand, stroke_fill=kernkleur)
+            else:
+                d.text((xa, yy), w, font=f, fill=kleur, anchor="la")
+        return im
+    import re as _re
+    re_m = _re.compile(r"^(\W*)(.*?)(\W*)$")
+    dim_l = laag(dim, accent[:3] + (90,))
+    ink_l = laag(inkt, accent)
     ref = Image.new("RGBA", (B, H), (0, 0, 0, 0)); dr = ImageDraw.Draw(ref)
-    dr.text((B // 2, yb + 220), post["ref"].upper(), font=R._klein_font(36, b"SemiBold"), fill=accent, anchor="ma")
+    yb = y0 + len(rg) * lh + 50
+    dr.text((B // 2, yb), post["ref"].upper(), font=R._klein_font(36, b"SemiBold"), fill=accent, anchor="ma")
     uit = Image.new("RGBA", (B, H), (0, 0, 0, 0)); du = ImageDraw.Draw(uit)
     if uitleg:
         fu = R._font(serif, 56); ru = R._wrap(uitleg, fu, int(B * 0.80), du)
@@ -476,18 +475,22 @@ def maak_markeren(post, pad):
         for i, r in enumerate(ru):
             du.text((B // 2, yu + i * 76), r, font=fu, fill=inkt, anchor="ma")
     eind = Image.new("RGBA", (B, H), (0, 0, 0, 0)); de = ImageDraw.Draw(eind)
-    _sier(de, int(H * 0.40), (60, 52, 46, 255))
-    de.text((B // 2, int(H * 0.40) + 120), post["ref"].upper(), font=R._klein_font(40, b"SemiBold"), fill=accent, anchor="ma")
-    de.text((B // 2, int(H * 0.40) + 200), "BIBLEVERSE  ·  @bibleverse_nl", font=R._klein_font(28, b"Medium"), fill=(90, 80, 72, 255), anchor="ma")
+    de.text((B // 2, int(H * 0.40)), post["ref"].upper(), font=R._klein_font(44, b"SemiBold"), fill=accent, anchor="ma")
+    de.text((B // 2, int(H * 0.40) + 90), "BIBLEVERSE  ·  @bibleverse_nl", font=R._klein_font(28, b"Medium"), fill=(100, 88, 80, 255), anchor="ma")
     hk = Image.new("RGBA", (B, H), (0, 0, 0, 0)); dh = ImageDraw.Draw(hk)
     if hook:
         fh = R._font(serif, 70); rh = R._wrap(hook, fh, int(B * 0.80), dh)
         for i, r in enumerate(rh):
             dh.text((B // 2, int(H * 0.40) - len(rh) * 46 + i * 92), r, font=fh, fill=inkt, anchor="ma")
+    # tempo: ruim 2 woorden per seconde, extra rust bij leestekens
+    tempo = 0.52
+    starts, tt = [], 0.9
+    for w, *_ in woorden:
+        starts.append(tt)
+        tt += tempo + (0.35 if w.rstrip()[-1:] in ",;:" else 0.55 if w.rstrip()[-1:] in ".!?" else 0) + 0.025 * max(0, len(w) - 6)
+    lees = tt + 1.6
     t1 = 3.4 if hook else 0.0
-    per = 1.25
-    lees = 0.8 + per * len(rg) + max(2.5, len(post["tekst"]) / 22)
-    t_uit = 4.8 if uitleg else 0.0
+    t_uit = max(5.5, len(uitleg) / 14) if uitleg else 0.0
     t_eind = 2.4
     duur = round(t1 + lees + t_uit + t_eind, 2)
     cmd = ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{B}x{H}", "-r", str(FPS), "-i", "-"]
@@ -496,32 +499,55 @@ def maak_markeren(post, pad):
                 "-af", f"volume=0.85,afade=t=in:st=0:d=0.3,afade=t=out:st={duur - 1.2}:d=1.2", "-c:a", "aac"]
     cmd += ["-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p", "-movflags", "+faststart", "-t", str(duur), pad]
     pr = subprocess.Popen(cmd, stdin=subprocess.PIPE)
-    def mix(basis, laag, a):
+    def mix(basis, l, a):
         if a <= 0:
             return basis
         if a < 1:
-            laag = laag.copy(); laag.putalpha(laag.split()[3].point(lambda x: int(x * a)))
-        basis = basis.copy(); basis.alpha_composite(laag); return basis
+            l = l.copy(); l.putalpha(l.split()[3].point(lambda x: int(x * a)))
+        basis = basis.copy(); basis.alpha_composite(l); return basis
+    def doos(i):
+        w, xa, xb, yy, k = woorden[i]
+        return (xa - 16, yy + g * 0.12, xb + 16, yy + g * 1.18)
+    bevestigd = Image.new("RGBA", (B, H), (0, 0, 0, 0)); klaar = 0
     n = int(duur * FPS)
-    cache_vers = None
     for k in range(n):
         t = k / FPS
-        fr = papier
+        fr = bg
         if t < t1:
             fr = mix(fr, hk, min(1, t / 0.4, (t1 - t) / 0.4 + 0.0001))
         elif t < t1 + lees + 0.3:
             tv = t - t1
-            a_in = min(1, tv / 0.5)
-            a_uit = 1.0 if t < t1 + lees else max(0, 1 - (t - t1 - lees) / 0.3)
-            st = Image.new("RGBA", (B, H), (0, 0, 0, 0)); ds = ImageDraw.Draw(st)
-            for i, (xa, xb, yc) in enumerate(lijnen):
-                s0 = 0.8 + i * per
-                p = _ease((tv - s0) / (per * 0.9))
-                if p > 0:
-                    _streep(ds, xa, xa + (xb - xa) * p, yc + 6, g * 1.02, strook, 100 + i)
-            fr = mix(fr, st, a_in * a_uit)
-            fr = mix(fr, tekst, a_in * a_uit)
-            fr = mix(fr, ref, a_in * a_uit)
+            a = min(1, tv / 0.6) * (1.0 if t < t1 + lees else max(0, 1 - (t - t1 - lees) / 0.3))
+            actief = max([i for i, s in enumerate(starts) if tv >= s], default=-1)
+            while klaar < actief:  # eerdere woorden definitief donker
+                bx = tuple(int(c) for c in doos(klaar)); bx = (bx[0], bx[1] - 8, bx[2], bx[3] + 8)
+                bevestigd.alpha_composite(ink_l.crop(bx), dest=(bx[0], bx[1]))
+                klaar += 1
+            laag_nu = Image.new("RGBA", (B, H), (0, 0, 0, 0))
+            laag_nu.alpha_composite(dim_l)
+            if actief >= 0:
+                dl = ImageDraw.Draw(laag_nu)
+                b1 = doos(actief); b0 = doos(actief - 1) if actief > 0 else b1
+                s = _ease((tv - starts[actief]) / 0.22)
+                bb = tuple(b0[j] + (b1[j] - b0[j]) * s for j in range(4))
+                vl = Image.new("RGBA", (B, H), (0, 0, 0, 0))
+                ImageDraw.Draw(vl).rounded_rectangle(bb, radius=26, fill=vlek)
+                laag_nu = Image.alpha_composite(vl, laag_nu)
+                # het huidige woord loopt van links naar rechts donker
+                wd = tempo + 0.2
+                p = min(1, (tv - starts[actief]) / wd)
+                bx = [int(c) for c in doos(actief)]; bx[1] -= 8; bx[3] += 8
+                brede = int((bx[2] - bx[0]) * p)
+                if brede > 0:
+                    deel = ink_l.crop((bx[0], bx[1], bx[0] + brede, bx[3]))
+                    laag_nu.alpha_composite(bevestigd)
+                    laag_nu.alpha_composite(deel, dest=(bx[0], bx[1]))
+                else:
+                    laag_nu.alpha_composite(bevestigd)
+            else:
+                laag_nu.alpha_composite(bevestigd)
+            laag_nu.alpha_composite(ref)
+            fr = mix(fr, laag_nu, a)
         elif t < t1 + lees + t_uit:
             tu = t - t1 - lees
             fr = mix(fr, uit, min(1, tu / 0.4, (t_uit - tu) / 0.3 + 0.0001))
@@ -531,6 +557,6 @@ def maak_markeren(post, pad):
     pr.stdin.close()
     if pr.wait() != 0:
         raise RuntimeError("ffmpeg mislukt")
-    post["cover_ms"] = int((t1 + 3.5) * 1000)
+    post["cover_ms"] = int((t1 + lees * 0.6) * 1000)
     post["duur"] = duur
     return pad
