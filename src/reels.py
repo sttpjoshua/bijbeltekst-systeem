@@ -401,6 +401,14 @@ def maak_situatie(post, pad, clips, plaatsing="onder"):
 
 
 
+def _streep(d, x0, x1, yc, h, kleur, seed):
+    """Markeerstreep met licht scheve, ruwe uiteinden, tot x1."""
+    rnd = random.Random(seed)
+    j = lambda: rnd.uniform(-5, 5)
+    d.polygon([(x0 - 6 + j(), yc - h / 2 + j()), (x1 + 4 + j(), yc - h / 2 + 3 + j()),
+               (x1 + 10 + j(), yc + h / 2 + j()), (x0 - 10 + j(), yc + h / 2 - 3 + j())], fill=kleur)
+
+
 def _achtergrond():
     """Lichte ochtendkleur: crème bovenin naar zacht abrikoos onderin, met een zachte gloed."""
     import numpy as np
@@ -420,7 +428,7 @@ def maak_markeren(post, pad):
     v = post["variabelen"]
     serif = v.get("lettertype", "playfair")
     inkt, dim, accent = (44, 36, 32, 255), (44, 36, 32, 70), (178, 88, 48, 255)
-    vlek = (255, 190, 120, 150)
+    strook = (240, 205, 150, 175)
     hook = (post.get("reel_herkenning") or "").strip()
     uitleg = (post.get("uitleg") or post.get("reel_uitleg") or "").strip()
     bg = _achtergrond()
@@ -462,7 +470,6 @@ def maak_markeren(post, pad):
         return im
     import re as _re
     re_m = _re.compile(r"^(\W*)(.*?)(\W*)$")
-    dim_l = laag(dim, accent[:3] + (90,))
     ink_l = laag(inkt, accent)
     ref = Image.new("RGBA", (B, H), (0, 0, 0, 0)); dr = ImageDraw.Draw(ref)
     yb = y0 + len(rg) * lh + 50
@@ -489,6 +496,12 @@ def maak_markeren(post, pad):
         starts.append(tt)
         tt += tempo + (0.35 if w.rstrip()[-1:] in ",;:" else 0.55 if w.rstrip()[-1:] in ".!?" else 0) + 0.025 * max(0, len(w) - 6)
     lees = tt + 1.6
+    # per regel: begin, eind en breedte van de streep (tijd volgt het leestempo)
+    lijnen, wi = [], 0
+    for i, r in enumerate(rg):
+        n_w = len(r.split(" ")); ws_ = woorden[wi:wi + n_w]
+        s0 = starts[wi]; s1 = starts[wi + n_w - 1] + tempo
+        lijnen.append((ws_[0][1], ws_[-1][2], ws_[0][3] + g * 0.6, s0, s1)); wi += n_w
     t1 = 3.4 if hook else 0.0
     t_uit = max(5.5, len(uitleg) / 14) if uitleg else 0.0
     t_eind = 2.4
@@ -508,7 +521,6 @@ def maak_markeren(post, pad):
     def doos(i):
         w, xa, xb, yy, k = woorden[i]
         return (xa - 16, yy + g * 0.12, xb + 16, yy + g * 1.18)
-    bevestigd = Image.new("RGBA", (B, H), (0, 0, 0, 0)); klaar = 0
     n = int(duur * FPS)
     for k in range(n):
         t = k / FPS
@@ -518,34 +530,12 @@ def maak_markeren(post, pad):
         elif t < t1 + lees + 0.3:
             tv = t - t1
             a = min(1, tv / 0.6) * (1.0 if t < t1 + lees else max(0, 1 - (t - t1 - lees) / 0.3))
-            actief = max([i for i, s in enumerate(starts) if tv >= s], default=-1)
-            while klaar < actief:  # eerdere woorden definitief donker
-                bx = tuple(int(c) for c in doos(klaar)); bx = (bx[0], bx[1] - 8, bx[2], bx[3] + 8)
-                bevestigd.alpha_composite(ink_l.crop(bx), dest=(bx[0], bx[1]))
-                klaar += 1
-            laag_nu = Image.new("RGBA", (B, H), (0, 0, 0, 0))
-            laag_nu.alpha_composite(dim_l)
-            if actief >= 0:
-                dl = ImageDraw.Draw(laag_nu)
-                b1 = doos(actief); b0 = doos(actief - 1) if actief > 0 else b1
-                s = _ease((tv - starts[actief]) / 0.22)
-                bb = tuple(b0[j] + (b1[j] - b0[j]) * s for j in range(4))
-                vl = Image.new("RGBA", (B, H), (0, 0, 0, 0))
-                ImageDraw.Draw(vl).rounded_rectangle(bb, radius=26, fill=vlek)
-                laag_nu = Image.alpha_composite(vl, laag_nu)
-                # het huidige woord loopt van links naar rechts donker
-                wd = tempo + 0.2
-                p = min(1, (tv - starts[actief]) / wd)
-                bx = [int(c) for c in doos(actief)]; bx[1] -= 8; bx[3] += 8
-                brede = int((bx[2] - bx[0]) * p)
-                if brede > 0:
-                    deel = ink_l.crop((bx[0], bx[1], bx[0] + brede, bx[3]))
-                    laag_nu.alpha_composite(bevestigd)
-                    laag_nu.alpha_composite(deel, dest=(bx[0], bx[1]))
-                else:
-                    laag_nu.alpha_composite(bevestigd)
-            else:
-                laag_nu.alpha_composite(bevestigd)
+            st = Image.new("RGBA", (B, H), (0, 0, 0, 0)); ds = ImageDraw.Draw(st)
+            for i, (xa, xb, yc, s0, s1) in enumerate(lijnen):
+                p = max(0.0, min(1.0, (tv - s0) / max(0.3, s1 - s0)))  # gelijkmatig, op leestempo
+                if p > 0:
+                    _streep(ds, xa, xa + (xb - xa) * p, yc, g * 1.02, strook, 100 + i)
+            laag_nu = Image.alpha_composite(st, ink_l)
             laag_nu.alpha_composite(ref)
             fr = mix(fr, laag_nu, a)
         elif t < t1 + lees + t_uit:
