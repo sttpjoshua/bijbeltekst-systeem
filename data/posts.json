@@ -3667,7 +3667,7 @@
  {
   "id": "2026-11-13-3",
   "datum": "2026-11-13",
-  "status": "opnieuw_maken",
+  "status": "gerenderd",
   "vers_id": "Proverbs-17-28-28",
   "ref": "Spreuken 17:28",
   "tekst": "Een dwaas zelfs, die zwijgt, zal wijs geacht worden, en die zijn lippen toesluit, verstandig.",
@@ -3736,8 +3736,8 @@
   "geluid": null,
   "handle": "@bibleverse_nl",
   "muziek_start": 33.0,
-  "cover_ms": 5300,
-  "duur": 20.15,
+  "cover_ms": 7499,
+  "duur": 20.4,
   "media_extra": [],
   "thumb": "thumbs/2026-11-13-3.jpg",
   "media_urls": [
@@ -3881,7 +3881,7 @@
  {
   "id": "2026-11-13-5",
   "datum": "2026-11-13",
-  "status": "opnieuw_maken",
+  "status": "gerenderd",
   "vers_id": "Psalms-46-2-2",
   "ref": "Psalm 46:2",
   "tekst": "God is ons een Toevlucht en Sterkte; Hij is krachtelijk bevonden een Hulp in benauwdheden.",
@@ -3954,8 +3954,8 @@
   "geluid": null,
   "handle": "@bibleverse_nl",
   "muziek_start": 46.8,
-  "cover_ms": 7004,
-  "duur": 19.57,
+  "cover_ms": 5300,
+  "duur": 19.92,
   "media_extra": [],
   "thumb": "thumbs/2026-11-13-5.jpg",
   "media_urls": [
@@ -4072,7 +4072,7 @@
  {
   "id": "2026-11-14-2",
   "datum": "2026-11-14",
-  "status": "opnieuw_maken",
+  "status": "gerenderd",
   "vers_id": "Zephaniah-3-17-17",
   "ref": "Sefanja 3:17",
   "tekst": "De HEERE uw God, is in het midden van u, een Held, Die verlossen zal; Hij zal over u vrolijk zijn met blijdschap, Hij zal zwijgen in Zijn liefde, Hij zal Zich over u verheugen met gejuich.",
@@ -4674,7 +4674,7 @@
  {
   "id": "2026-11-15-4",
   "datum": "2026-11-15",
-  "status": "opnieuw_maken",
+  "status": "gerenderd",
   "vers_id": "Philippians-4-13-13",
   "ref": "Filippenzen 4:13",
   "tekst": "Ik vermag alle dingen door Christus, Die mij kracht geeft.",
@@ -4749,8 +4749,8 @@
   "tekstbron": "tekstbank",
   "handle": "@bibleverse_nl",
   "muziek_start": 34.6,
-  "cover_ms": 5300,
-  "duur": 17.46,
+  "cover_ms": 5204,
+  "duur": 16.57,
   "media_extra": [],
   "thumb": "thumbs/2026-11-15-4.jpg",
   "media_urls": [
