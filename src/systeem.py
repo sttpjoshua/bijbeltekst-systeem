@@ -366,9 +366,7 @@ def kies_posts(datum, cfg, strat, posts, verzen, mat, n_start, n, gebruikte_slot
         elif cfg.get("reel_formaat") == "situatie":  # Joshua, 11 nov: 'herkenbare situatie' met echte video is de standaard
             v["reel_stijl"], bron["reel_stijl"], v["reel_haak"], bron["reel_haak"] = "situatie", "vaste regel", "geen", "n.v.t."
             # Joshua, 12 nov: 'markeren' (markeerstreep over het vers) als test naast de situatie-reel
-            if v["tijdslot"] < "10:00":  # ochtend: meteen het vers, de groet staat in de caption
-                v["reel_stijl"], bron["reel_stijl"] = "markeren", "ochtend"
-            elif rnd.random() < cfg.get("markeer_aandeel", 0.25):
+            if rnd.random() < cfg.get("markeer_aandeel", 0.25):
                 v["reel_stijl"], bron["reel_stijl"] = "markeren", "test markeren"
             if v["reel_stijl"] == "markeren":
                 for d in ("reel_plaatsing", "reel_scene"):
@@ -1553,19 +1551,40 @@ def cmd_ochtend_vernieuwen():
             v["huisstijl"] = random.Random(p["id"] + "licht").choice(LICHTE_STIJLEN)
             v.update(HUISSTIJLEN[v["huisstijl"]])
             p.setdefault("keuzebron", {})["huisstijl"] = "ochtend"
-        if v.get("formaat") == "video":  # ochtendreel: meteen het vers (markeren), in een wisselende kleur en lettertype
-            rr = random.Random(p["id"] + "kleur")
-            v["reel_stijl"], v["reel_haak"] = "markeren", "geen"
-            for d in ("reel_plaatsing", "reel_scene"):
-                v[d] = None
-            v["reel_kleur"], kb = kies_optie("reel_kleur", strat, cfg["verkenning"], rr)
-            p.setdefault("keuzebron", {}).update({"reel_stijl": "ochtend", "reel_kleur": kb})
-            p["reel_herkenning"] = ""
         v["tijdslot"] = "07:30"
         p["status"] = "wacht_op_tekst"; n += 1
         print(p["datum"], p["ref"], v.get("formaat"))
     bewaar("data/posts.json", posts)
     print(f"{n} ochtendposts gaan opnieuw gemaakt worden")
+
+def cmd_markeren_inplannen(*ids_kleuren):
+    """Zet geplande reels (nog niet geplaatst) om naar de meelees-reel. Argumenten: id:kleur, bijv. 2026-11-14-2:mint.
+    Een id met kleur 'situatie' gaat juist terug naar de herkenbare situatie-reel."""
+    cfg, strat = laad("config.json"), vul_strategie_aan(laad("strategie.json") or nieuwe_strategie())
+    posts = laad("data/posts.json", [])
+    import tekstbank
+    bank = tekstbank.laad(); bank = bank.get("verzen", bank)
+    for x in ids_kleuren:
+        pid, kleur = x.split(":")
+        p = next((q for q in posts if q["id"] == pid), None)
+        if not p or p.get("gepubliceerd") or p["variabelen"].get("formaat") != "video":
+            print("overgeslagen", pid); continue
+        v = p["variabelen"]; kb = p.setdefault("keuzebron", {})
+        if kleur == "situatie":
+            rr = random.Random(pid + "situatie")
+            v["reel_stijl"], v["reel_haak"], v["reel_kleur"] = "situatie", "geen", None
+            for d in ("reel_plaatsing", "reel_scene"):
+                v[d], kb[d] = kies_optie(d, strat, cfg["verkenning"], rr)
+            kb["reel_stijl"], kb["reel_kleur"] = "vaste regel", "n.v.t."
+            p["reel_herkenning"] = (bank.get(p["vers_id"], {}).get("hooks") or {}).get("herkenning", "")
+        else:
+            v["reel_stijl"], v["reel_haak"], v["reel_kleur"] = "markeren", "geen", kleur
+            for d in ("reel_plaatsing", "reel_scene"):
+                v[d] = None
+            kb["reel_stijl"], kb["reel_kleur"] = "ingepland", "ingepland"
+        p["status"] = "opnieuw_maken"
+        print(pid, p["ref"], v["reel_stijl"], v.get("reel_kleur"))
+    bewaar("data/posts.json", posts)
 
 def cmd_automaak(modus=""):
     """Zelfstandig posts maken, zonder Claude: kiezen, teksten uit de tekstbank, renderen.
@@ -1679,6 +1698,7 @@ if __name__ == "__main__":
      "automaak": lambda: cmd_automaak(*(x.args[:1] or [""])),
      "reels_vernieuwen": lambda: cmd_reels_vernieuwen(),
      "ochtend_vernieuwen": lambda: cmd_ochtend_vernieuwen(),
+     "markeren_inplannen": lambda: cmd_markeren_inplannen(*x.args),
      "hashtags_testen": lambda: cmd_hashtags_testen(),
      "tekstbank": lambda: cmd_tekstbank(*(x.args[:1] or ["status"])),
      "aanvullen": lambda: cmd_aanvullen(bool(x.args and x.args[0] == "check"))}[x.cmd]()

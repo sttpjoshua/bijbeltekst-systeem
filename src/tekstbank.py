@@ -160,7 +160,7 @@ def vul_post(p, e, cfg, vermijd=()):
         "kernwoord": e["kw"], "verhaal_hook": e.get("verhaal", ""),
         "tekstbron": "tekstbank",
         "reel_uitleg": e.get("uitleg", ""), "reel_vraag": (e.get("hooks") or {}).get("vraag", ""),
-        "reel_herkenning": "" if is_ochtend(p) else (e.get("hooks") or {}).get("herkenning", ""),
+        "reel_herkenning": (e.get("hooks") or {}).get("herkenning", ""),
     })
     return True
 

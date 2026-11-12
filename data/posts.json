@@ -3667,7 +3667,7 @@
  {
   "id": "2026-11-13-3",
   "datum": "2026-11-13",
-  "status": "gerenderd",
+  "status": "opnieuw_maken",
   "vers_id": "Proverbs-17-28-28",
   "ref": "Spreuken 17:28",
   "tekst": "Een dwaas zelfs, die zwijgt, zal wijs geacht worden, en die zijn lippen toesluit, verstandig.",
@@ -3692,11 +3692,12 @@
    "achtergrond": "diagonaal",
    "hook_op_beeld": false,
    "video_uitleg": true,
-   "reel_stijl": "situatie",
+   "reel_stijl": "markeren",
    "reel_haak": "geen",
-   "reel_plaatsing": "midden",
-   "reel_scene": "onderweg",
-   "hashtag_stijl": "zonder"
+   "reel_plaatsing": null,
+   "reel_scene": null,
+   "hashtag_stijl": "zonder",
+   "reel_kleur": "roze"
   },
   "keuzebron": {
    "huisstijl": "experiment",
@@ -3712,10 +3713,11 @@
    "opening": "n.v.t.",
    "tijdslot": "experiment",
    "video_uitleg": "vaste regel",
-   "reel_stijl": "vaste regel",
+   "reel_stijl": "ingepland",
    "reel_plaatsing": "strategie",
    "reel_scene": "verkenning",
-   "hashtag_stijl": "test"
+   "hashtag_stijl": "test",
+   "reel_kleur": "ingepland"
   },
   "hook": "Voor iedereen die in een vergadering net iets te veel zei.",
   "beeld_hook": "",
@@ -3879,7 +3881,7 @@
  {
   "id": "2026-11-13-5",
   "datum": "2026-11-13",
-  "status": "gerenderd",
+  "status": "opnieuw_maken",
   "vers_id": "Psalms-46-2-2",
   "ref": "Psalm 46:2",
   "tekst": "God is ons een Toevlucht en Sterkte; Hij is krachtelijk bevonden een Hulp in benauwdheden.",
@@ -3904,12 +3906,12 @@
    "achtergrond": "diagonaal",
    "hook_op_beeld": false,
    "video_uitleg": true,
-   "reel_stijl": "markeren",
+   "reel_stijl": "situatie",
    "reel_haak": "geen",
-   "reel_plaatsing": null,
-   "reel_scene": null,
+   "reel_plaatsing": "midden",
+   "reel_scene": "onderweg",
    "hashtag_stijl": "zoekwoord",
-   "reel_kleur": "goud"
+   "reel_kleur": null
   },
   "keuzebron": {
    "huisstijl": "experiment",
@@ -3925,11 +3927,11 @@
    "opening": "n.v.t.",
    "tijdslot": "experiment",
    "video_uitleg": "vaste regel",
-   "reel_stijl": "ochtend",
+   "reel_stijl": "vaste regel",
    "reel_plaatsing": "verkenning",
    "reel_scene": "verkenning",
    "hashtag_stijl": "test",
-   "reel_kleur": "strategie"
+   "reel_kleur": "n.v.t."
   },
   "hook": "Goedemorgen. Een vers voor het begin van je dag.",
   "beeld_hook": "",
@@ -3987,7 +3989,7 @@
   "tekstbron": "tekstbank",
   "reel_uitleg": "God is onze schuilplaats en kracht, altijd een hulp in nood.",
   "reel_vraag": "Waar zoek jij veiligheid?",
-  "reel_herkenning": ""
+  "reel_herkenning": "Voor iedereen die zich vandaag benauwd voelt."
  },
  {
   "id": "2026-11-14-1",
@@ -4070,7 +4072,7 @@
  {
   "id": "2026-11-14-2",
   "datum": "2026-11-14",
-  "status": "gerenderd",
+  "status": "opnieuw_maken",
   "vers_id": "Zephaniah-3-17-17",
   "ref": "Sefanja 3:17",
   "tekst": "De HEERE uw God, is in het midden van u, een Held, Die verlossen zal; Hij zal over u vrolijk zijn met blijdschap, Hij zal zwijgen in Zijn liefde, Hij zal Zich over u verheugen met gejuich.",
@@ -4116,11 +4118,11 @@
    "opening": "n.v.t.",
    "tijdslot": "experiment",
    "video_uitleg": "vaste regel",
-   "reel_stijl": "ochtend",
+   "reel_stijl": "ingepland",
    "reel_plaatsing": "strategie",
    "reel_scene": "strategie",
    "hashtag_stijl": "test",
-   "reel_kleur": "strategie"
+   "reel_kleur": "ingepland"
   },
   "hook": "Goedemorgen. Begin je dag hiermee.",
   "beeld_hook": "",
@@ -4672,7 +4674,7 @@
  {
   "id": "2026-11-15-4",
   "datum": "2026-11-15",
-  "status": "gerenderd",
+  "status": "opnieuw_maken",
   "vers_id": "Philippians-4-13-13",
   "ref": "Filippenzen 4:13",
   "tekst": "Ik vermag alle dingen door Christus, Die mij kracht geeft.",
@@ -4697,11 +4699,12 @@
    "achtergrond": "verloop",
    "hook_op_beeld": false,
    "video_uitleg": true,
-   "reel_stijl": "situatie",
+   "reel_stijl": "markeren",
    "reel_haak": "geen",
-   "reel_plaatsing": "boven",
-   "reel_scene": "onderweg",
-   "hashtag_stijl": "zoekwoord"
+   "reel_plaatsing": null,
+   "reel_scene": null,
+   "hashtag_stijl": "zoekwoord",
+   "reel_kleur": "hemel"
   },
   "keuzebron": {
    "huisstijl": "experiment",
@@ -4717,10 +4720,11 @@
    "opening": "n.v.t.",
    "tijdslot": "experiment",
    "video_uitleg": "vaste regel",
-   "reel_stijl": "vaste regel",
+   "reel_stijl": "ingepland",
    "reel_plaatsing": "strategie",
    "reel_scene": "strategie",
-   "hashtag_stijl": "test"
+   "hashtag_stijl": "test",
+   "reel_kleur": "ingepland"
   },
   "hook": "Voor iedereen die het gevoel heeft dat het te veel wordt.",
   "beeld_hook": "",
