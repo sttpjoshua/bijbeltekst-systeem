@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T14:15:59",
+ "updated": "2026-11-12T14:31:26",
  "agents": {
   "verskiezer": {
    "t": "2026-11-12T13:05:11",
@@ -22,8 +22,8 @@
    "state": "done"
   },
   "controller": {
-   "t": "2026-11-12T09:19:30",
-   "task": "Posts klaargezet uit de tekstbank",
+   "t": "2026-11-12T14:31:18",
+   "task": "Zelf opgelost: noodpost Efeze 2:10 ingezet om 22:00",
    "state": "done"
   },
   "analist": {
@@ -56,6 +56,14 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "14:31",
+   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
+  {
+   "t": "14:31",
+   "msg": "Zelfherstel: Geen post klaar voor 2026-11-12 22:00 → noodpost Efeze 2:10 ingezet om 22:00"
+  },
   {
    "t": "14:15",
    "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
@@ -95,14 +103,6 @@
   {
    "t": "12:43",
    "msg": "Bediening: Psalm 20:8 opnieuw gemaakt (stijl meelees-abrikoos, achtergrond kleurverloop, eerste slide vers)"
-  },
-  {
-   "t": "12:17",
-   "msg": "2026-11-12-2 online op instagram: Psalm 9:2"
-  },
-  {
-   "t": "12:17",
-   "msg": "2026-11-12-2 ook als story geplaatst"
   }
  ],
  "lampen": [
