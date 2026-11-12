@@ -1556,7 +1556,8 @@ def cmd_ochtend_vernieuwen():
             p.update({k: nieuw[k] for k in ("vers_id", "ref", "tekst", "vertaling")})
             for f in ("thema", "boekgroep", "lengte", "bron"):
                 v[f] = nieuw["variabelen"][f]
-            p.update({"hook": "", "caption": "", "hashtags": [], "uitleg": "", "betekenis": "", "toepassing": ""})
+            p.update({"hook": "", "caption": "", "hashtags": [], "uitleg": "", "betekenis": "", "toepassing": "",
+                      "media": None, "media_extra": [], "thumb": None})
         if v.get("formaat") == "carrousel" and v.get("huisstijl") not in LICHTE_STIJLEN:
             v["huisstijl"] = random.Random(p["id"] + "licht").choice(LICHTE_STIJLEN)
             v.update(HUISSTIJLEN[v["huisstijl"]])

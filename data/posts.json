@@ -4567,7 +4567,7 @@
   "toepassing": "",
   "kernwoord": "dwaasheid",
   "verhaal_hook": "Dit is misschien het vieste vers van de Bijbel. En het klopt.",
-  "media": "docs/media/2026-11/2026-11-15-2-1.jpg",
+  "media": null,
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-2-1.jpg",
   "metricool": {},
   "stats": {},
@@ -4576,12 +4576,8 @@
   "geluid": null,
   "tekstbron": "tekstbank",
   "handle": "@bibleverse_nl",
-  "media_extra": [
-   "docs/media/2026-11/2026-11-15-2-2.jpg",
-   "docs/media/2026-11/2026-11-15-2-3.jpg",
-   "docs/media/2026-11/2026-11-15-2-4.jpg"
-  ],
-  "thumb": "thumbs/2026-11-15-2.jpg",
+  "media_extra": [],
+  "thumb": null,
   "story": "docs/media/2026-11/2026-11-15-2-story.jpg",
   "media_urls": [
    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-2-1.jpg",

@@ -943,7 +943,7 @@ function stijlBlok(x){
     ${v.formaat==="carrousel"?`<div class="seg" style="margin-top:6px"><span class="sub" style="align-self:center;margin-right:4px">Eerste slide:</span>
       ${[["vers","Vers"],["stopper","Stopper"],["verhaal","Verhaal eerst"]].map(([k,n])=>`<button class="btn sto-o${STK.opening===k?" prim":""}" onclick="kiesStijl('opening','${k}',this)">${n}</button>`).join("")}</div>`:""}</div>
     <button class="btn prim" style="margin-top:10px" onclick="stuur({actie:'andere_stijl',...STK},this)">Opnieuw maken in deze stijl</button>
-    <div class="sub" style="margin-top:4px">Na 1 tot 3 minuten staat de nieuwe versie in de planning.</div></div>`;
+    <div class="sub" style="margin-top:4px">${x.status==="gerenderd"?"Na 1 tot 3 minuten staat de nieuwe versie in de planning.":"Deze post is nog niet gemaakt: de gekozen stijl wordt gebruikt zodra hij gemaakt wordt."}</div></div>`;
 }
 function kiesStijl(k,w,el){
   STK[k]=w;
@@ -992,7 +992,7 @@ function openLade(id){
     ${m.length?`<div class="lslides">${m.map(u=>u.endsWith(".mp4")?`<video src="${u}" controls playsinline preload="metadata"></video>`:`<img src="${u}" loading="lazy" onclick="toonGalerij('${x.id}')" style="cursor:zoom-in">`).join("")}</div>`
       :`<p style="font-size:15px;line-height:1.5;margin:12px 0">${esc(x.tekst||"")}</p><div class="sub">${plan?"Teksten en beeld worden een dag van tevoren gemaakt. Het plan kan nog veranderen als het systeem iets leert.":"Het beeld wordt nog gemaakt."}</div>`}
     ${x.caption?`<details open><summary class="sub" style="cursor:pointer">Caption</summary><div class="lcap">${esc(x.caption)}</div></details>`:""}
-    ${!plan&&st!=="online"&&x.status==="gerenderd"&&kan?stijlBlok(x):""}
+    ${!plan&&st!=="online"&&(x.status==="gerenderd"||x.status==="wacht_op_tekst")&&kan?stijlBlok(x):""}
     ${act?(kan?act:`<div class="sub" style="margin-top:10px"><a href="#" onclick="sluitLade();naarSleutel();return false">Koppel eerst je sleutel</a> om deze post aan te passen.</div>`):""}
     <details style="margin-top:12px"><summary class="sub" style="cursor:pointer">Details</summary><div style="margin-top:6px">${["huisstijl","hook_stijl","opening","achtergrondbron","reel_stijl","carrousel_stijl","reel_kleur"].filter(k=>v[k]).map(k=>`<span class="tag">${NAMEN[k]||k}: ${esc(v[k])}</span>`).join("")}</div></details>`;
   document.getElementById("lade").style.display="flex";
