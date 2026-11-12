@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-12T14:37",
+ "gegenereerd": "2026-11-12T14:45",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1749,7 +1749,17 @@
     "aanleiding": "nieuws"
    },
    "momenten": {
-    "instagram": {}
+    "instagram": {
+     "1u": {
+      "views": 4,
+      "reach": 1,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0
+     }
+    }
    },
    "pub": {
     "instagram": "2026-11-12T12:17+01:00"
@@ -1864,7 +1874,17 @@
    },
    "momenten": {
     "instagram": {},
-    "facebook": {}
+    "facebook": {
+     "1u": {
+      "views": null,
+      "reach": null,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": null,
+      "follows": null
+     }
+    }
    },
    "pub": {
     "instagram": "2026-11-12T07:31+01:00",
@@ -4438,11 +4458,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-11T12:51:08",
-   "soort": "info",
-   "tekst": "Statistieken opgehaald voor 7 posts"
-  },
-  {
    "t": "2026-11-11T12:51:54",
    "soort": "info",
    "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
@@ -4739,6 +4754,11 @@
    "t": "2026-11-12T14:37:41",
    "soort": "info",
    "tekst": "Dagelijkse run (zelfstandig): 10 posts voor 13 en 14 november gecontroleerd, reserveverzen voor 14 november ingevuld"
+  },
+  {
+   "t": "2026-11-12T14:45:43",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
   }
  ],
  "recente_fouten": [],

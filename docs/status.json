@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T14:37:41",
+ "updated": "2026-11-12T14:45:43",
  "agents": {
   "verskiezer": {
    "t": "2026-11-12T13:05:11",
@@ -57,6 +57,10 @@
  ],
  "log": [
   {
+   "t": "14:45",
+   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
+  {
    "t": "14:37",
    "msg": "Dagelijkse run (zelfstandig): 10 posts voor 13 en 14 november gecontroleerd, reserveverzen voor 14 november in"
   },
@@ -99,10 +103,6 @@
   {
    "t": "13:31",
    "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
-   "t": "13:05",
-   "msg": "Bediening: Nieuwsposts aangepast: Psalm 20:8 (17:45), 1 Johannes 3:1 (22:00)"
   }
  ],
  "lampen": [
