@@ -2,7 +2,7 @@
 Alle ontwerpkeuzes komen binnen als variabelen, zodat het leersysteem ze kan vergelijken.
 """
 import os, re, random, subprocess, tempfile, math
-from PIL import Image, ImageDraw, ImageFont, ImageFilter
+from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageChops
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FONTS = os.path.join(ROOT, "fonts")
@@ -97,14 +97,28 @@ def achtergrond(b, h, palet, stijl, seed):
         return img
     if stijl == "papier_schaduw":  # papier met zacht gefilterd zonlicht en bladschaduw
         return _schaduw_papier(b, h, palet, rnd)
-    if stijl == "papier":  # crème papier: zachte vlekken en fijne vezelkorrel, nooit een verloop
-        w = Image.effect_noise((b, h), 40).convert("RGB")
-        img = Image.blend(img, w, 0.035)
+    if stijl == "papier":  # crème papier met zichtbare korrel, vezels en zachte wolken
+        w = Image.effect_noise((b, h), 64).convert("RGB")
+        img = ImageChops.add(img, w.point(lambda x: 128 + int((x - 128) * 0.15)), 1, -128)  # fijne korrel
+        # grovere korrel: ruis op kleiner formaat, vergroot
+        grof = Image.effect_noise((max(2, b // 3), max(2, h // 3)), 50).convert("RGB").resize((b, h), Image.BICUBIC)
+        img = ImageChops.add(img, grof.point(lambda x: 128 + int((x - 128) * 0.20)), 1, -128)
+        # papiervezels: korte, haardunne, iets donkere en lichte streepjes
+        vez = Image.new("L", (b, h), 128)
+        dv = ImageDraw.Draw(vez)
+        for _ in range(int(b * h / 2500)):
+            x0, y0 = rnd.randint(0, b), rnd.randint(0, h)
+            l = rnd.randint(6, 26); a2 = rnd.uniform(0, math.pi)
+            dv.line([x0, y0, x0 + math.cos(a2) * l, y0 + math.sin(a2) * l], fill=rnd.choice((96, 104, 156, 164)), width=1)
+        vez = vez.filter(ImageFilter.GaussianBlur(0.6))
+        vz = Image.merge("RGB", (vez, vez, vez)).point(lambda x: 128 + int((x - 128) * 0.55))
+        img = ImageChops.add(img, vz, 1, -128)
+        # zachte wolken in de papierkleur
         vlek = Image.new("L", (b, h), 0)
-        dv = ImageDraw.Draw(vlek)
-        for _ in range(14):
+        dvl = ImageDraw.Draw(vlek)
+        for _ in range(18):
             rr = rnd.randint(b // 10, b // 3); cx, cy = rnd.randint(0, b), rnd.randint(0, h)
-            dv.ellipse([cx - rr, cy - rr, cx + rr, cy + rr], fill=rnd.randint(6, 16))
+            dvl.ellipse([cx - rr, cy - rr, cx + rr, cy + rr], fill=rnd.randint(8, 20))
         vlek = vlek.filter(ImageFilter.GaussianBlur(b // 8))
         return Image.composite(Image.new("RGB", (b, h), onder), img, vlek.point(lambda x: min(255, x * 5)))
     if stijl in ("diagonaal", "radiaal"):
