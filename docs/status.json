@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T21:30:55",
+ "updated": "2026-11-12T21:45:54",
  "agents": {
   "verskiezer": {
    "t": "2026-11-12T13:05:11",
@@ -57,6 +57,10 @@
  ],
  "log": [
   {
+   "t": "21:45",
+   "msg": "Eerste-uurcijfers van 3 posts vastgelegd"
+  },
+  {
    "t": "20:35",
    "msg": "2026-11-12-4 online op facebook: Spreuken 15:14"
   },
@@ -99,10 +103,6 @@
   {
    "t": "18:03",
    "msg": "Bediening: 1 Johannes 4:7 opnieuw gemaakt (stijl papier_blauw, achtergrond kleurverloop, eerste slide verhaal)"
-  },
-  {
-   "t": "17:46",
-   "msg": "2026-11-12-5 online op facebook: 1 Johannes 4:7"
   }
  ],
  "lampen": [
