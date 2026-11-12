@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-12T14:45",
+ "gegenereerd": "2026-11-12T15:01",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1423,7 +1423,7 @@
    "datum": "2026-11-12",
    "ref": "1 Johannes 4:7",
    "tekst": "Geliefden! Laat ons elkander liefhebben, want de liefde is uit God; en een iegelijk, die liefheeft, is uit God geboren, en kent God.",
-   "hook": "Stuur vanavond nog één lief berichtje.",
+   "hook": "Sinterklaas komt weer naar Nederland. Overal kijken kinderen ernaar uit.",
    "status": "gerenderd",
    "variabelen": {
     "huisstijl": "zonsopgang",
@@ -1453,8 +1453,8 @@
    "reeks": null,
    "reeks_label": null,
    "reserve_ref": null,
-   "caption": "Stuur vanavond nog één lief berichtje.\n\n\"Geliefden! Laat ons elkander liefhebben, want de liefde is uit God; en een iegelijk, die liefheeft, is uit God geboren, en kent God.\"\n1 Johannes 4:7\n\nLiefde begint niet bij jou, maar bij God. Jij mag het doorgeven.",
-   "uitleg": "Heb elkaar lief, want liefde komt van God.",
+   "caption": "Sinterklaas komt weer naar Nederland. Overal kijken kinderen ernaar uit.\n\n\"Geliefden! Laat ons elkander liefhebben, want de liefde is uit God; en een iegelijk, die liefheeft, is uit God geboren, en kent God.\"\n1 Johannes 4:7\n\nCadeaus zijn mooi, deze gave blijft. Liefde komt van God.",
+   "uitleg": "Cadeaus zijn mooi, deze gave blijft. Laten we elkaar liefhebben, want liefde komt van God.",
    "media": "docs/media/2026-11/2026-11-12-5-1.jpg",
    "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-5-1.jpg",
    "media_urls": [
@@ -4871,7 +4871,7 @@
    "ok": "2026-11-12T09:45"
   },
   "reacties": {
-   "ok": "2026-11-12T14:01",
+   "ok": "2026-11-12T15:01",
    "laatst_ok": true,
    "detail": "1 nieuwe reacties",
    "fout": "2026-11-08T18:00"
