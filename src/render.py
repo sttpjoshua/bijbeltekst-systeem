@@ -95,6 +95,8 @@ def achtergrond(b, h, palet, stijl, seed):
     img = Image.new("RGB", (b, h), boven)
     if stijl == "effen":
         return img
+    if stijl == "papier_schaduw":  # papier met zacht gefilterd zonlicht en bladschaduw
+        return _schaduw_papier(b, h, palet, rnd)
     if stijl == "papier":  # crème papier: zachte vlekken en fijne vezelkorrel, nooit een verloop
         w = Image.effect_noise((b, h), 40).convert("RGB")
         img = Image.blend(img, w, 0.035)
@@ -127,6 +129,56 @@ def achtergrond(b, h, palet, stijl, seed):
     img = Image.blend(img, Image.composite(laag, img, laag.convert("L")), 0.35)
     ruis = Image.effect_noise((b, h), 18).convert("RGB")
     img = Image.blend(img, ruis, 0.04)
+    return img
+
+def _schaduw_papier(b, h, palet, rnd):
+    """Crème papier met de schaduw van takken en bladeren en een zachte lichtbundel, als zon door een raam.
+    Wordt op kwart formaat getekend en daarna vergroot en vervaagd, zodat de randen zacht zijn."""
+    basis = achtergrond(b, h, palet, "papier", rnd.random())
+    s = 4; w, hh = max(1, b // s), max(1, h // s)
+    def blad_vorm(maskd, x, y, ba, l, br):
+        """Een echt bladvorm: een lens met een zacht gebogen rand, punt aan de buitenkant."""
+        nx, ny = -math.sin(ba), math.cos(ba)
+        pts = []
+        for k in range(0, 13):
+            t = k / 12
+            wbr = math.sin(math.pi * t) ** 0.8 * br
+            pts.append((x + math.cos(ba) * l * t + nx * wbr, y + math.sin(ba) * l * t + ny * wbr))
+        for k in range(12, -1, -1):
+            t = k / 12
+            wbr = math.sin(math.pi * t) ** 0.8 * br
+            pts.append((x + math.cos(ba) * l * t - nx * wbr, y + math.sin(ba) * l * t - ny * wbr))
+        maskd.polygon(pts, fill=255)
+    def tak(maskd, start, hoek, lengte, blad, dikte):
+        x, y = start; a = hoek
+        for i in range(int(lengte)):
+            a += rnd.uniform(-0.03, 0.03)
+            x += math.cos(a) * 3; y += math.sin(a) * 3
+            maskd.ellipse([x - dikte, y - dikte, x + dikte, y + dikte], fill=255)
+            if i % 11 == 5:
+                for kant in (-1, 1):
+                    if rnd.random() < 0.8:
+                        ba = a + kant * rnd.uniform(0.55, 1.0)
+                        l = blad * rnd.uniform(0.75, 1.1) * (1 - 0.3 * i / lengte)
+                        blad_vorm(maskd, x, y, ba, l, l * 0.3)
+        # een eindblad
+        blad_vorm(maskd, x, y, a, blad * 0.9, blad * 0.27)
+    lagen = []
+    for blur, sterkte, n in ((3.0, 0.5, 2), (7.0, 0.28, 2)):  # scherpere en vager schaduw voor diepte
+        m = Image.new("L", (w, hh), 0); dm = ImageDraw.Draw(m)
+        for _ in range(n):
+            start = (rnd.uniform(w * 0.7, w * 1.1), rnd.uniform(-hh * 0.05, hh * 0.45))
+            tak(dm, start, rnd.uniform(1.95, 2.45), rnd.randint(int(hh * 0.2), int(hh * 0.32)), rnd.uniform(w * 0.05, w * 0.075), 1.0)
+        lagen.append((m.filter(ImageFilter.GaussianBlur(blur)).resize((b, h), Image.BICUBIC), sterkte))
+    skyg = Image.new("L", (b, h), 0)
+    sd = ImageDraw.Draw(skyg)
+    sd.polygon([(b * 0.25, 0), (b * 0.95, 0), (b * 0.55, h), (-b * 0.2, h)], fill=255)
+    licht = skyg.filter(ImageFilter.GaussianBlur(b // 5))
+    donker = Image.new("RGB", (b, h), (96, 70, 48))
+    warm = Image.new("RGB", (b, h), (255, 244, 220))
+    img = Image.composite(warm, basis, licht.point(lambda x: int(x * 0.35)))  # lichtbundel: iets warmer en lichter
+    for m, sterkte in lagen:
+        img = Image.composite(donker, img, m.point(lambda x, st=sterkte: int(x * st * 0.5)))
     return img
 
 def _verloop_plus(b, h, palet, stijl):
@@ -734,7 +786,7 @@ def _tekstslide(post, titel, body, pad, nummer, bg=None, groot=False):
     y0 = int(h * (0.18 if groot else 0.27)) + (int(h * ruimte) - lh * len(regels)) // 2
     links = v["layout"] == "links"
     staat = _kernstaat(post, kleur, accent)
-    if v.get("achtergrond") == "papier":  # papierstijl: cursief voor nuance
+    if str(v.get("achtergrond", "")).startswith("papier"):  # papierstijl: cursief voor nuance
         cur = _cursief_woorden(body, staat.get("kern"))
         fi = _font("cormorant_cursief", grootte)
         n0 = 0

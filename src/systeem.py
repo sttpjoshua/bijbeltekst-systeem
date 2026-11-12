@@ -48,6 +48,10 @@ HUISSTIJLEN = {
     "papier_rood":   {"palet": "papier_rood",   "lettertype": "cormorant", "layout": "links", "achtergrond": "papier"},
     "papier_groen":  {"palet": "papier_groen",  "lettertype": "cormorant", "layout": "links", "achtergrond": "papier"},
     "papier_blauw":  {"palet": "papier_blauw",  "lettertype": "cormorant", "layout": "links", "achtergrond": "papier"},
+    # Zelfde, met zonlicht en bladschaduw over het papier
+    "schaduw_rood":  {"palet": "papier_rood",   "lettertype": "cormorant", "layout": "links", "achtergrond": "papier_schaduw"},
+    "schaduw_groen": {"palet": "papier_groen",  "lettertype": "cormorant", "layout": "links", "achtergrond": "papier_schaduw"},
+    "schaduw_blauw": {"palet": "papier_blauw",  "lettertype": "cormorant", "layout": "links", "achtergrond": "papier_schaduw"},
 }
 
 LICHTE_STIJLEN = ("zonsopgang", "hemelsblauw", "mint", "perzik", "roze", "zand", "papier_rood", "papier_groen", "papier_blauw")

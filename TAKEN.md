@@ -192,3 +192,4 @@ Carrousel in de meelees-stijl (12 nov): dimensie `carrousel_stijl` (standaard | 
 ## Papierstijl (12 nov)
 - Nieuwe huisstijlen papier_rood, papier_groen, papier_blauw: crème papier met korrel, Cormorant Garamond, links, diepe inkt. Staan in LICHTE_STIJLEN; het systeem test ze als gewone optie van huisstijl.
 - Papierstijl: uitlegslides krijgen cursief voor nuance (na maar/niet/echt enzovoort, anders het langste woord), kernwoord blijft vet (render._cursief_woorden, _regel_papier).
+- Schaduwstijl (schaduw_rood/groen/blauw): papier met zacht zonlicht en bladschaduw, doorlopend over de slides (render._schaduw_papier).
