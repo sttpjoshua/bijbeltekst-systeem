@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-12T13:02",
+ "gegenereerd": "2026-11-12T13:06",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1421,19 +1421,19 @@
   {
    "id": "2026-11-12-5",
    "datum": "2026-11-12",
-   "ref": "Psalm 92:2",
-   "tekst": "Het is goed, dat men den HEERE love, en Uw Naam psalmzinge, o Allerhoogste!",
-   "hook": "Het is de tijd van cadeautjes. Dit is er één die niet ophoudt.",
+   "ref": "1 Johannes 3:1",
+   "tekst": "Ziet, hoe grote liefde ons de Vader gegeven heeft, namelijk dat wij kinderen Gods genaamd zouden worden. Daarom kent ons de wereld niet, omdat zij Hem niet kent.",
+   "hook": "Het is bijna intocht. Wat is het mooiste cadeau dat je ooit kreeg?",
    "status": "gerenderd",
    "variabelen": {
     "huisstijl": "zonsopgang",
-    "thema": "dankbaarheid",
+    "thema": "liefde",
     "hook_stijl": "uitdaging",
     "formaat": "carrousel",
     "uitleg_op_beeld": true,
     "achtergrondbron": "verloop",
-    "boekgroep": "psalmen",
-    "lengte": "kort",
+    "boekgroep": "brieven",
+    "lengte": "middel",
     "bron": "bekend",
     "vraag_onderaan": false,
     "opening": "verhaal",
@@ -1448,13 +1448,13 @@
     "hashtag_stijl": "zonder",
     "aanleiding": "nieuws"
    },
-   "vers_id": "Psalms-92-2-2",
+   "vers_id": "I_John-3-1-1",
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
    "reserve_ref": "1 Johannes 4:7",
-   "caption": "Het is de tijd van cadeautjes. Dit is er één die niet ophoudt.\n\n\"Het is goed, dat men den HEERE love, en Uw Naam psalmzinge, o Allerhoogste!\"\nPsalm 92:2\n\nLofprijzing maakt je hart lichter.",
-   "uitleg": "Het is goed om God te danken en voor Hem te zingen.",
+   "caption": "Het is bijna intocht. Wat is het mooiste cadeau dat je ooit kreeg?\n\n\"Ziet, hoe grote liefde ons de Vader gegeven heeft, namelijk dat wij kinderen Gods genaamd zouden worden. Daarom kent ons de wereld niet, omdat zij Hem niet kent.\"\n1 Johannes 3:1\n\nCadeaus zijn mooi, deze gave blijft. Je mag je kind van God noemen.",
+   "uitleg": "Cadeaus zijn mooi, deze gave blijft. Kijk hoe groot de liefde van de Vader is: we heten kinderen van God.",
    "media": "docs/media/2026-11/2026-11-12-5-1.jpg",
    "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-5-1.jpg",
    "media_urls": [
@@ -1594,7 +1594,7 @@
     "lengte": "middel",
     "bron": "bekend",
     "vraag_onderaan": false,
-    "opening": "vers",
+    "opening": "verhaal",
     "tijdslot": "17:45",
     "tijdslot_fb": "20:30",
     "palet": "perzik",
@@ -1612,7 +1612,7 @@
    "reeks": null,
    "reeks_label": null,
    "reserve_ref": "Mattheüs 7:3",
-   "caption": "Veel meningen, veel onrust. Even terug naar wat vaststaat.\n\n\"Dezen vermelden van wagens, en die van paarden; maar wij zullen vermelden van den Naam des HEEREN, onzes Gods.\"\nPsalm 20:8\n\nJe kunt op veel dingen vertrouwen. God blijft.",
+   "caption": "Veel meningen, veel onrust. Even terug naar wat vaststaat.\n\n\"Dezen vermelden van wagens, en die van paarden; maar wij zullen vermelden van den Naam des HEEREN, onzes Gods.\"\nPsalm 20:8\n\nBij alle onrust: wat blijft staan. Je kunt op veel dingen vertrouwen. God blijft.",
    "uitleg": "Sommigen vertrouwen op wagens, anderen op paarden. Wij vertrouwen op de naam van God.",
    "media": "docs/media/2026-11/2026-11-12-3-1.jpg",
    "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-3-1.jpg",
@@ -1638,7 +1638,7 @@
     "lengte": "experiment",
     "bron": "experiment",
     "vraag_onderaan": "experiment",
-    "opening": "joshua",
+    "opening": "nieuws",
     "tijdslot": "experiment",
     "video_uitleg": "n.v.t.",
     "aanleiding": "nieuws",
@@ -1727,7 +1727,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     }
    },
    "score": {},
@@ -1833,7 +1833,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     },
     "facebook": {
      "views": null,
@@ -1843,7 +1843,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     }
    },
    "score": {},
@@ -1942,7 +1942,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     },
     "facebook": {
      "views": null,
@@ -1952,7 +1952,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     }
    },
    "score": {},
@@ -2052,7 +2052,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     },
     "facebook": {
      "views": null,
@@ -2062,7 +2062,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     }
    },
    "score": {},
@@ -2169,7 +2169,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     },
     "facebook": {
      "views": null,
@@ -2179,7 +2179,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     }
    },
    "score": {},
@@ -2284,7 +2284,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     },
     "facebook": {
      "views": null,
@@ -2294,7 +2294,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     }
    },
    "score": {},
@@ -2392,7 +2392,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     },
     "facebook": {
      "views": null,
@@ -2402,7 +2402,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     }
    },
    "score": {},
@@ -2500,7 +2500,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     },
     "facebook": {
      "views": null,
@@ -2510,7 +2510,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     }
    },
    "score": {},
@@ -2619,7 +2619,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     },
     "facebook": {
      "views": null,
@@ -2629,7 +2629,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     }
    },
    "score": {},
@@ -2727,7 +2727,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     },
     "facebook": {
      "views": null,
@@ -2737,7 +2737,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     }
    },
    "score": {},
@@ -2844,7 +2844,7 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     },
     "facebook": {
      "views": 2,
@@ -2854,7 +2854,7 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     }
    },
    "score": {},
@@ -2953,7 +2953,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     },
     "facebook": {
      "views": null,
@@ -2963,7 +2963,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     }
    },
    "score": {},
@@ -3062,7 +3062,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     },
     "instagram": {
      "views": 5,
@@ -3072,7 +3072,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     }
    },
    "score": {},
@@ -3190,7 +3190,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     },
     "instagram": {
      "views": 5,
@@ -3200,7 +3200,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     }
    },
    "score": {},
@@ -3317,7 +3317,7 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     },
     "instagram": {
      "views": 1,
@@ -3327,7 +3327,7 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     }
    },
    "score": {},
@@ -3445,7 +3445,7 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     },
     "facebook": {
      "views": 0,
@@ -3455,7 +3455,7 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     }
    },
    "score": {},
@@ -3575,7 +3575,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     },
     "facebook": {
      "views": null,
@@ -3585,7 +3585,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     }
    },
    "score": {},
@@ -3697,7 +3697,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     },
     "facebook": {
      "views": null,
@@ -3707,7 +3707,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     }
    },
    "score": {},
@@ -3814,7 +3814,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     },
     "facebook": {
      "views": null,
@@ -3824,7 +3824,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     }
    },
    "score": {},
@@ -3930,7 +3930,7 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     },
     "facebook": {
      "views": 2,
@@ -3940,7 +3940,7 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     }
    },
    "score": {
@@ -4050,7 +4050,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     },
     "facebook": {
      "views": null,
@@ -4060,7 +4060,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     }
    },
    "score": {},
@@ -4167,7 +4167,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     },
     "facebook": {
      "views": null,
@@ -4177,7 +4177,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     }
    },
    "score": {},
@@ -4275,7 +4275,7 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-12T13:01+01:00"
+     "t": "2026-11-12T13:05+01:00"
     }
    },
    "score": {},
@@ -4315,23 +4315,6 @@
  "leergeschiedenis": [],
  "laatste_rapport": null,
  "logboek": [
-  {
-   "t": "2026-11-11T07:31:40",
-   "soort": "info",
-   "tekst": "2026-11-11-n0730 online op facebook: Jesaja 32:17"
-  },
-  {
-   "t": "2026-11-11T10:08:31",
-   "soort": "info",
-   "tekst": "Zelfstandig 5 posts klaargezet voor 2026-11-14 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "2026-11-11T10:08:31",
-   "soort": "fout",
-   "tekst": "Tekstbank bijna op: nog genoeg nieuwe verzen voor ongeveer 5 dagen (25 van 47). Daarna herhaalt het systeem de oudste verzen.",
-   "code": "tekstbank",
-   "opgelost": true
-  },
   {
    "t": "2026-11-11T10:24:12",
    "soort": "info",
@@ -4630,6 +4613,21 @@
    "t": "2026-11-12T12:43:45",
    "soort": "info",
    "tekst": "Bediening: Psalm 20:8 opnieuw gemaakt (stijl meelees-abrikoos, achtergrond kleurverloop, eerste slide vers)"
+  },
+  {
+   "t": "2026-11-12T13:05:10",
+   "soort": "info",
+   "tekst": "Nieuwspost aangepast: Psalm 20:8 is nu Psalm 20:8 (politiek): Veel meningen, veel onrust. Even terug naar wat vaststaat."
+  },
+  {
+   "t": "2026-11-12T13:05:11",
+   "soort": "info",
+   "tekst": "Nieuwspost aangepast: Psalm 92:2 is nu 1 Johannes 3:1 (sinterklaas): Het is bijna intocht. Wat is het mooiste cadeau dat je ooit kreeg?"
+  },
+  {
+   "t": "2026-11-12T13:05:11",
+   "soort": "info",
+   "tekst": "Bediening: Nieuwsposts aangepast: Psalm 20:8 (17:45), 1 Johannes 3:1 (22:00)"
   }
  ],
  "recente_fouten": [],
@@ -4732,7 +4730,7 @@
    "ok": "2026-11-12T09:45"
   },
   "reacties": {
-   "ok": "2026-11-12T13:01",
+   "ok": "2026-11-12T13:05",
    "laatst_ok": true,
    "detail": "1 nieuwe reacties",
    "fout": "2026-11-08T18:00"
@@ -5001,8 +4999,8 @@
    },
    "liefde": {
     "totaal": 67,
-    "beschikbaar": 66,
-    "nooit": 66
+    "beschikbaar": 65,
+    "nooit": 65
    },
    "hoop": {
     "totaal": 44,
@@ -5026,8 +5024,8 @@
    },
    "dankbaarheid": {
     "totaal": 92,
-    "beschikbaar": 87,
-    "nooit": 87
+    "beschikbaar": 88,
+    "nooit": 88
    },
    "identiteit": {
     "totaal": 33,
@@ -5566,8 +5564,8 @@
    "kw": "Ziet",
    "herkenning": "Voor iedereen die zich vandaag geen kind van God voelt.",
    "uit": false,
-   "laatst": null,
-   "n": 0
+   "laatst": "2026-11-12",
+   "n": 1
   },
   {
    "id": "I_John-3-18-18",
@@ -6934,8 +6932,8 @@
    "kw": "goed",
    "herkenning": "Voor iedereen die vandaag zijn hart lichter wil maken.",
    "uit": false,
-   "laatst": "2026-11-12",
-   "n": 1
+   "laatst": null,
+   "n": 0
   },
   {
    "id": "Psalms-94-19-19",
@@ -7409,6 +7407,91 @@
       "oordeel": "weinig data"
      }
     ]
+   },
+   {
+    "dimensie": "thema",
+    "opties": [
+     {
+      "optie": "troost",
+      "online": 3,
+      "gepland": 1,
+      "n": 1,
+      "gem": 1.0,
+      "oordeel": "weinig data"
+     },
+     {
+      "optie": "moed",
+      "online": 3,
+      "gepland": 2,
+      "n": 0,
+      "gem": null,
+      "oordeel": "weinig data"
+     },
+     {
+      "optie": "liefde",
+      "online": 0,
+      "gepland": 2,
+      "n": 0,
+      "gem": null,
+      "oordeel": "weinig data"
+     },
+     {
+      "optie": "hoop",
+      "online": 4,
+      "gepland": 1,
+      "n": 0,
+      "gem": null,
+      "oordeel": "weinig data"
+     },
+     {
+      "optie": "vertrouwen",
+      "online": 3,
+      "gepland": 2,
+      "n": 0,
+      "gem": null,
+      "oordeel": "weinig data"
+     },
+     {
+      "optie": "wijsheid",
+      "online": 3,
+      "gepland": 2,
+      "n": 0,
+      "gem": null,
+      "oordeel": "weinig data"
+     },
+     {
+      "optie": "humor_herkenbaar",
+      "online": 2,
+      "gepland": 2,
+      "n": 0,
+      "gem": null,
+      "oordeel": "weinig data"
+     },
+     {
+      "optie": "dankbaarheid",
+      "online": 1,
+      "gepland": 2,
+      "n": 0,
+      "gem": null,
+      "oordeel": "weinig data"
+     },
+     {
+      "optie": "identiteit",
+      "online": 1,
+      "gepland": 3,
+      "n": 0,
+      "gem": null,
+      "oordeel": "weinig data"
+     },
+     {
+      "optie": "vrede_rust",
+      "online": 1,
+      "gepland": 2,
+      "n": 0,
+      "gem": null,
+      "oordeel": "weinig data"
+     }
+    ]
    }
   ],
   "vast": [],
@@ -7466,7 +7549,7 @@
    },
    {
     "id": "2026-11-12-5",
-    "ref": "Psalm 92:2",
+    "ref": "1 Johannes 3:1",
     "datum": "2026-11-12",
     "tijdslot": "22:00",
     "tests": [
@@ -7478,6 +7561,11 @@
      {
       "dimensie": "thema",
       "optie": "dankbaarheid",
+      "bron": "experiment"
+     },
+     {
+      "dimensie": "thema",
+      "optie": "liefde",
       "bron": "experiment"
      }
     ]
