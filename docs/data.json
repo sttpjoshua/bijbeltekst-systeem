@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-12T09:31",
+ "gegenereerd": "2026-11-12T09:45",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -478,7 +478,7 @@
    "reserve_ref": null,
    "caption": "",
    "uitleg": "",
-   "media": "docs/media/2026-11/2026-11-15-2-1.jpg",
+   "media": null,
    "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-2-1.jpg",
    "media_urls": [
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-2-1.jpg",
@@ -486,7 +486,7 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-2-3.jpg",
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-2-4.jpg"
    ],
-   "thumb": "thumbs/2026-11-15-2.jpg",
+   "thumb": null,
    "platformen": [],
    "links": {},
    "totaal": {},
@@ -865,12 +865,12 @@
     "achtergrond": "diagonaal",
     "hook_op_beeld": false,
     "video_uitleg": true,
-    "reel_stijl": "situatie",
+    "reel_stijl": "markeren",
     "reel_haak": "geen",
-    "reel_plaatsing": "midden",
-    "reel_scene": "onderweg",
+    "reel_plaatsing": null,
+    "reel_scene": null,
     "hashtag_stijl": "zoekwoord",
-    "reel_kleur": null
+    "reel_kleur": "abrikoos"
    },
    "vers_id": "Psalms-46-2-2",
    "goedgekeurd": null,
@@ -3251,11 +3251,6 @@
   {
    "t": "2026-11-11T06:00:41",
    "soort": "info",
-   "tekst": "Zelfherstel: Geen post klaar voor 2026-11-11 12:15 → noodpost Jeremia 17:7 ingezet om 12:15"
-  },
-  {
-   "t": "2026-11-11T06:00:41",
-   "soort": "info",
    "tekst": "Zelfherstel: Geen post klaar voor 2026-11-11 17:45 → noodpost Jesaja 41:10 ingezet om 17:45"
   },
   {
@@ -3563,6 +3558,11 @@
    "t": "2026-11-12T09:19:30",
    "soort": "info",
    "tekst": "Zelfstandig 5 posts klaargezet voor 2026-11-13 (teksten uit de tekstbank)."
+  },
+  {
+   "t": "2026-11-12T09:45:10",
+   "soort": "info",
+   "tekst": "Bediening: Psalm 46:2 opnieuw gemaakt (stijl meelees-abrikoos, achtergrond kleurverloop)"
   }
  ],
  "recente_fouten": [],
@@ -3662,7 +3662,7 @@
    "fout": "2026-11-08T00:28",
    "laatst_ok": true,
    "detail": "muziek en foto's beschikbaar",
-   "ok": "2026-11-08T00:36"
+   "ok": "2026-11-12T09:45"
   },
   "reacties": {
    "ok": "2026-11-12T09:06",

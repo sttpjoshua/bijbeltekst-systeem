@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T09:31:04",
+ "updated": "2026-11-12T09:45:11",
  "agents": {
   "verskiezer": {
    "t": "2026-11-12T09:06:20",
@@ -7,13 +7,13 @@
    "state": "done"
   },
   "designer": {
-   "t": "2026-11-12T09:19:30",
-   "task": "Ontwierp Mattheüs 10:30-31 in stijl zonsopgang",
+   "t": "2026-11-12T09:45:10",
+   "task": "Psalm 46:2 opnieuw gemaakt (stijl meelees-abrikoos, achtergrond kleurv",
    "state": "done"
   },
   "video": {
-   "t": "2026-11-12T09:10:52",
-   "task": "Monteerde video Filippenzen 4:13 met muziek",
+   "t": "2026-11-12T09:45:10",
+   "task": "Monteerde video Psalm 46:2 met muziek",
    "state": "done"
   },
   "dispatcher": {
@@ -57,6 +57,10 @@
  ],
  "log": [
   {
+   "t": "09:45",
+   "msg": "Bediening: Psalm 46:2 opnieuw gemaakt (stijl meelees-abrikoos, achtergrond kleurverloop)"
+  },
+  {
    "t": "09:19",
    "msg": "Zelfstandig 5 posts klaargezet voor 2026-11-13 (teksten uit de tekstbank)."
   },
@@ -99,10 +103,6 @@
   {
    "t": "07:01",
    "msg": "Nieuwspost: Habakuk 3:18 vervangen door Psalm 9:2 (aanleiding: hitte, NOS)"
-  },
-  {
-   "t": "07:01",
-   "msg": "Politiek nieuws (NOS): \"Wekdienst 12/11: Erop of eronder voor kabinet • Hoger beroep tegen Erasmusschutter\". N"
   }
  ],
  "lampen": [
