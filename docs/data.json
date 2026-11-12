@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-12T20:15",
+ "gegenereerd": "2026-11-12T20:32",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1553,7 +1553,7 @@
    "ref": "Spreuken 15:14",
    "tekst": "Een verstandig hart zal de wetenschap opzoeken; maar de mond der zotten zal met dwaasheid gevoed worden.",
    "hook": "Voor iedereen die vanavond toch weer drie filmpjes over niks heeft gekeken.",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "mint",
     "thema": "humor_herkenbaar",
@@ -1593,8 +1593,14 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-12-4.mp4"
    ],
    "thumb": "thumbs/2026-11-12-4.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "instagram",
+    "facebook"
+   ],
+   "links": {
+    "instagram": "https://www.instagram.com/reel/Dfp0DcShY6i/",
+    "facebook": "https://www.facebook.com/1533085548880750"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -1618,11 +1624,14 @@
     "hashtag_stijl": "test"
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "instagram": "2026-11-12T20:32+01:00",
+    "facebook": "2026-11-12T20:32+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": null,
-   "online": null
+   "online": "2026-11-12T20:32+01:00"
   },
   {
    "id": "2026-11-12-3",
@@ -1630,7 +1639,7 @@
    "ref": "Psalm 20:8",
    "tekst": "Dezen vermelden van wagens, en die van paarden; maar wij zullen vermelden van den Naam des HEEREN, onzes Gods.",
    "hook": "Veel meningen, veel onrust. Even terug naar wat vaststaat.",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "perzik",
     "thema": "vertrouwen",
@@ -1671,10 +1680,12 @@
    ],
    "thumb": "thumbs/2026-11-12-3.jpg",
    "platformen": [
-    "instagram"
+    "instagram",
+    "facebook"
    ],
    "links": {
-    "instagram": "https://www.instagram.com/p/DfphIwVjQBO/"
+    "instagram": "https://www.instagram.com/p/DfphIwVjQBO/",
+    "facebook": "https://www.facebook.com/1015160368352770_122134423388879910"
    },
    "totaal": {
     "views": 0,
@@ -1729,7 +1740,8 @@
     }
    },
    "pub": {
-    "instagram": "2026-11-12T17:46+01:00"
+    "instagram": "2026-11-12T17:46+01:00",
+    "facebook": "2026-11-12T20:31+01:00"
    },
    "gemist": [],
    "nood": false,
@@ -4542,26 +4554,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-11T13:40:29",
-   "soort": "info",
-   "tekst": "Bediening: WhatsApp-testbericht klaargezet"
-  },
-  {
-   "t": "2026-11-11T13:43:13",
-   "soort": "info",
-   "tekst": "Bediening: WhatsApp-testbericht klaargezet"
-  },
-  {
-   "t": "2026-11-11T13:45:30",
-   "soort": "info",
-   "tekst": "Bediening: WhatsApp-testbericht klaargezet"
-  },
-  {
-   "t": "2026-11-11T13:49:33",
-   "soort": "info",
-   "tekst": "Bediening: Voorstel niet gevonden of al afgehandeld"
-  },
-  {
    "t": "2026-11-11T13:52:50",
    "soort": "info",
    "tekst": "Bediening: WhatsApp-testbericht klaargezet"
@@ -4843,6 +4835,26 @@
    "t": "2026-11-12T19:02:12",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-12T20:31:16",
+   "soort": "info",
+   "tekst": "2026-11-12-3 online op facebook: Psalm 20:8"
+  },
+  {
+   "t": "2026-11-12T20:32:46",
+   "soort": "info",
+   "tekst": "2026-11-12-4 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-12T20:32:46",
+   "soort": "info",
+   "tekst": "2026-11-12-4 online op instagram: Spreuken 15:14"
+  },
+  {
+   "t": "2026-11-12T20:32:57",
+   "soort": "info",
+   "tekst": "2026-11-12-4 online op facebook: Spreuken 15:14"
   }
  ],
  "recente_fouten": [],
@@ -4927,9 +4939,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-12T17:46",
+   "ok": "2026-11-12T20:32",
    "laatst_ok": true,
-   "detail": "Psalm 20:8 geplaatst"
+   "detail": "Spreuken 15:14 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-12T13:41",
@@ -4961,9 +4973,9 @@
    "fout": "2026-11-08T18:00"
   },
   "facebook": {
-   "ok": "2026-11-12T17:46",
+   "ok": "2026-11-12T20:32",
    "laatst_ok": true,
-   "detail": "1 Johannes 4:7 geplaatst"
+   "detail": "Spreuken 15:14 geplaatst"
   },
   "statistieken": {
    "ok": "2026-11-12T13:41",
@@ -5047,10 +5059,10 @@
  ],
  "weken": {
   "deze": {
-   "posts": 22,
+   "posts": 24,
    "reach": 138,
    "views": 222,
-   "likes": 27,
+   "likes": 28,
    "comments": 3,
    "saves": 0,
    "shares": 0
@@ -5270,7 +5282,7 @@
   "tot": "2026-11-14",
   "dag": 6,
   "dagen": 7,
-  "online": 22,
+  "online": 24,
   "gemeten": 2
  },
  "voorraad": {
@@ -7601,16 +7613,16 @@
      },
      {
       "optie": "mint",
-      "online": 3,
-      "gepland": 5,
+      "online": 4,
+      "gepland": 4,
       "n": 0,
       "gem": null,
       "oordeel": "weinig data"
      },
      {
       "optie": "perzik",
-      "online": 2,
-      "gepland": 2,
+      "online": 3,
+      "gepland": 1,
       "n": 0,
       "gem": null,
       "oordeel": "weinig data"
@@ -7702,8 +7714,8 @@
      },
      {
       "optie": "vertrouwen",
-      "online": 3,
-      "gepland": 2,
+      "online": 4,
+      "gepland": 1,
       "n": 0,
       "gem": null,
       "oordeel": "weinig data"
@@ -7718,8 +7730,8 @@
      },
      {
       "optie": "humor_herkenbaar",
-      "online": 2,
-      "gepland": 2,
+      "online": 3,
+      "gepland": 1,
       "n": 0,
       "gem": null,
       "oordeel": "weinig data"
@@ -7763,34 +7775,6 @@
    }
   ],
   "komend": [
-   {
-    "id": "2026-11-12-4",
-    "ref": "Spreuken 15:14",
-    "datum": "2026-11-12",
-    "tijdslot": "20:30",
-    "tests": [
-     {
-      "dimensie": "huisstijl",
-      "optie": "mint",
-      "bron": "experiment"
-     },
-     {
-      "dimensie": "thema",
-      "optie": "humor_herkenbaar",
-      "bron": "experiment"
-     },
-     {
-      "dimensie": "reel_plaatsing",
-      "optie": "midden",
-      "bron": "verkenning"
-     },
-     {
-      "dimensie": "reel_scene",
-      "optie": "dichtbij",
-      "bron": "verkenning"
-     }
-    ]
-   },
    {
     "id": "2026-11-13-5",
     "ref": "Psalm 46:2",
@@ -7996,6 +7980,24 @@
       "dimensie": "thema",
       "optie": "dankbaarheid",
       "bron": "experiment"
+     }
+    ]
+   },
+   {
+    "id": "2026-11-15-1",
+    "ref": "Mattheüs 11:29-30",
+    "datum": "2026-11-15",
+    "tijdslot": "12:15",
+    "tests": [
+     {
+      "dimensie": "huisstijl",
+      "optie": "salie",
+      "bron": "experiment"
+     },
+     {
+      "dimensie": "reel_plaatsing",
+      "optie": "midden",
+      "bron": "verkenning"
      }
     ]
    }

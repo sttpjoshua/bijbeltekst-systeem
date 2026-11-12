@@ -3355,7 +3355,7 @@
  {
   "id": "2026-11-12-3",
   "datum": "2026-11-12",
-  "status": "gerenderd",
+  "status": "gepubliceerd",
   "vers_id": "Psalms-20-8-8",
   "ref": "Psalm 20:8",
   "tekst": "Dezen vermelden van wagens, en die van paarden; maar wij zullen vermelden van den Naam des HEEREN, onzes Gods.",
@@ -3500,13 +3500,18 @@
     "id": "18075647255784983",
     "url": "https://www.instagram.com/p/DfphIwVjQBO/",
     "t": "2026-11-12T17:46+01:00"
+   },
+   "facebook": {
+    "id": "1015160368352770_122134423388879910",
+    "url": "https://www.facebook.com/1015160368352770_122134423388879910",
+    "t": "2026-11-12T20:31+01:00"
    }
   }
  },
  {
   "id": "2026-11-12-4",
   "datum": "2026-11-12",
-  "status": "gerenderd",
+  "status": "gepubliceerd",
   "vers_id": "Proverbs-15-14-14",
   "ref": "Spreuken 15:14",
   "tekst": "Een verstandig hart zal de wetenschap opzoeken; maar de mond der zotten zal met dwaasheid gevoed worden.",
@@ -3609,7 +3614,19 @@
    "kernwoord": "berg"
   },
   "reel_herkenning": "Voor iedereen die vanavond toch weer drie filmpjes over niks heeft gekeken.",
-  "reel_uitleg": "Wat je hart voedt, bepaalt wie je wordt. Kies vanavond eens bewust."
+  "reel_uitleg": "Wat je hart voedt, bepaalt wie je wordt. Kies vanavond eens bewust.",
+  "gepubliceerd": {
+   "instagram": {
+    "id": "18568675465072629",
+    "url": "https://www.instagram.com/reel/Dfp0DcShY6i/",
+    "t": "2026-11-12T20:32+01:00"
+   },
+   "facebook": {
+    "id": "1533085548880750",
+    "url": "https://www.facebook.com/1533085548880750",
+    "t": "2026-11-12T20:32+01:00"
+   }
+  }
  },
  {
   "id": "2026-11-12-5",

@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T20:15:44",
+ "updated": "2026-11-12T20:32:57",
  "agents": {
   "verskiezer": {
    "t": "2026-11-12T13:05:11",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-12T17:46:58",
-   "task": "Postte 1 Johannes 4:7 op facebook",
+   "t": "2026-11-12T20:32:57",
+   "task": "Postte Spreuken 15:14 op facebook",
    "state": "done"
   },
   "controller": {
@@ -38,8 +38,8 @@
   }
  },
  "stats": {
-  "posts_today": 1,
-  "posts_total": 22,
+  "posts_today": 3,
+  "posts_total": 24,
   "reach_7d": 137,
   "best_time": "nog onbekend",
   "next_post": "2026-11-12T12:15:00"
@@ -56,6 +56,22 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "20:32",
+   "msg": "2026-11-12-4 online op facebook: Spreuken 15:14"
+  },
+  {
+   "t": "20:32",
+   "msg": "2026-11-12-4 online op instagram: Spreuken 15:14"
+  },
+  {
+   "t": "20:32",
+   "msg": "2026-11-12-4 ook als story geplaatst"
+  },
+  {
+   "t": "20:31",
+   "msg": "2026-11-12-3 online op facebook: Psalm 20:8"
+  },
   {
    "t": "19:02",
    "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
@@ -87,22 +103,6 @@
   {
    "t": "14:37",
    "msg": "Dagelijkse run (zelfstandig): 10 posts voor 13 en 14 november gecontroleerd, reserveverzen voor 14 november in"
-  },
-  {
-   "t": "14:36",
-   "msg": "Zelf opgelost: post 22:00 van vandaag (1 Johannes 4:7, gekozen reservevers) bleef op 'klaar_voor_render' staan"
-  },
-  {
-   "t": "14:34",
-   "msg": "Materiaal-repo niet gekloond (add_repo ontbreekt in deze sessie); Actions vult muziek aan"
-  },
-  {
-   "t": "14:31",
-   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
-   "t": "14:31",
-   "msg": "Zelfherstel: Geen post klaar voor 2026-11-12 22:00 → noodpost Efeze 2:10 ingezet om 22:00"
   }
  ],
  "lampen": [
