@@ -71,6 +71,21 @@ DIMENSIES = {
     "tijdslot": ["07:30", "12:15", "17:45", "20:30", "22:00"],
 }
 
+try:  # extra tijdsloten die het systeem zelf heeft voorgesteld (zie cmd_tijd_voorstel)
+    for _t in json.load(open(os.path.join(ROOT, "config.json"), encoding="utf-8")).get("extra_tijdsloten") or []:
+        if _t not in DIMENSIES["tijdslot"]:
+            DIMENSIES["tijdslot"].append(_t)
+    DIMENSIES["tijdslot"].sort()
+except Exception:
+    pass
+
+# Onderdelen die bij strikt experimenteren (bijna) vastgezet worden op wat al werkt; stijl en kleur blijven afwisselen
+PRESENTATIE_VAST = {"hook_stijl", "uitleg_op_beeld", "achtergrondbron", "vraag_onderaan", "reel_haak", "opening", "hashtag_stijl"}
+# Welke onderdelen sturen vooral op bereik, en welke vooral op interactie (opslaan, delen, reacties)
+DOEL_BEREIK = {"tijdslot", "weekdag", "hook_stijl", "formaat", "reel_stijl", "reel_haak", "hashtag_stijl", "reel_scene",
+               "reel_plaatsing", "huisstijl", "carrousel_stijl", "reel_kleur", "opening", "achtergrondbron"}
+DOEL_INTERACTIE = {"thema", "boekgroep", "bron", "lengte", "vraag_onderaan", "uitleg_op_beeld"}
+
 # Startgewichten die afwijken van 1,0 (Joshua: vooral kleurverloop, foto's als aanvulling)
 START_GEWICHT = {("achtergrondbron", "beeld"): 0.6,
                  ("huisstijl", "avond"): 0.35}  # Joshua wil een frisse uitstraling: donker minder vaak
@@ -105,6 +120,8 @@ def kies_optie(dim, strat, verkenning, rnd, uitsluiten=(), ctx=None):
         factor = verkenning / 0.2  # schuif 'experimenteren' op het dashboard bepaalt hoe breed er gezocht wordt
         if ctx.get("leermodus") or dim in ctx["experiment"]:
             return thompson(dim, opties, ctx["stats"], rnd, factor), "experiment"
+        if ctx.get("strikt") and ctx["experiment"] and dim in PRESENTATIE_VAST:
+            return thompson(dim, opties, ctx["stats"], rnd, factor * 0.1), "strategie"  # vast op wat werkt, zodat het experiment zuiver blijft
         return thompson(dim, opties, ctx["stats"], rnd, factor * 0.35), "strategie"
     if rnd.random() < verkenning:
         return rnd.choice(opties), "verkenning"
@@ -288,7 +305,7 @@ def kies_posts(datum, cfg, strat, posts, verzen, mat, n_start, n, gebruikte_slot
     rk = reeks_voor(datum, posts) if reeks else None
     if rk and (any(p.get("reeks") and p["datum"] == datum for p in posts) or rk["tijdslot"] in gebruikte_slots):
         rk = None  # de reekspost van vandaag bestaat al
-    ctx = {"stats": optie_stats(posts), "experiment": experiment(cfg, datum), "leermodus": cfg.get("leermodus")}
+    ctx = {"stats": optie_stats(posts), "experiment": experiment(cfg, datum), "leermodus": cfg.get("leermodus"), "strikt": cfg.get("strikt_experiment", True)}
     stats_fb = optie_stats(posts, "facebook")
     nieuw = []
     for i in range(n):
@@ -706,15 +723,23 @@ def interactie(s):
     g = lambda k: s.get(k) or 0
     return g("likes") + 3 * g("comments") + 4 * g("shares") + 4 * g("saves") + 8 * g("follows")
 
-def post_scores(posts):
-    """Relatieve score per post per platform: (interactie/bereik) gedeeld door de mediaan van dat platform.
-    1.0 = gemiddeld, 2.0 = twee keer zo goed. Zo zijn platformen met veel en weinig bereik vergelijkbaar."""
-    per_platform = {}
+MOMENTEN = ("7d", "24u", "1u")
+
+def _demp(x):
+    """Uitschieters dempen: boven 1,5 telt de rest maar half mee, en maximaal 3."""
+    return min(3.0, 1.5 + (x - 1.5) * 0.5 if x > 1.5 else x)
+
+def _score_detail(posts):
+    """Per post per platform: totaalscore s, relatief bereik b en relatieve interactie r (1.0 = mediaan van dat platform).
+    Het cijfer van 7 dagen, anders 24 uur, anders het eerste uur. Het eerste uur wordt apart vergeleken (met andere
+    eerste-uurcijfers) en telt voor de helft mee, zodat het systeem sneller leert zonder te overdrijven."""
+    per = {}
     for p in posts:
         for plat, mom in p.get("stats", {}).items():
-            s = mom.get("7d") or mom.get("24u")
-            if not s:
+            m = next((k for k in MOMENTEN if mom.get(k)), None)
+            if not m:
                 continue
+            s = mom[m]
             bereik = s.get("reach") or s.get("views") or 0
             if bereik < 20:
                 continue
@@ -723,49 +748,94 @@ def post_scores(posts):
             kijk = None
             if p["variabelen"].get("formaat") == "video" and s.get("avg_watch_ms"):
                 kijk = min(1.5, s["avg_watch_ms"] / 1000 / max(5, p.get("duur", 9)))
-            per_platform.setdefault(plat, []).append((p, ratio, bereik, kijk))
+            per.setdefault((plat, m == "1u"), []).append((p, ratio, bereik, kijk, m))
     uit = []
-    for plat, rijen in per_platform.items():
-        bereiken = [b for _, _, b, _ in rijen]
-        med_r = statistics.median([r for _, r, _, _ in rijen]) or 1e-6
-        med_b = statistics.median(bereiken) or 1
-        kijks = [k for _, _, _, k in rijen if k]
+    for (plat, vroeg), rijen in per.items():
+        med_r = statistics.median([r for _, r, _, _, _ in rijen]) or 1e-6
+        med_b = statistics.median([b for _, _, b, _, _ in rijen]) or 1
+        kijks = [k for _, _, _, k, _ in rijen if k]
         med_k = statistics.median(kijks) if kijks else None
-        for p, r, b, k in rijen:
-            # Mix: 70% interactie-kwaliteit, 30% bereik (algoritme vond het goed);
-            # bij video met kijkduur: 50% interactie, 20% bereik, 30% kijkduur
+        for p, r, b, k, m in rijen:
+            rr, bb = r / med_r, b / med_b
+            # Mix: 70% interactie-kwaliteit, 30% bereik; bij video met kijkduur: 50% interactie, 20% bereik, 30% kijkduur
             if k and med_k:
-                score = 0.5 * (r / med_r) + 0.2 * (b / med_b) + 0.3 * (k / med_k)
+                score = 0.5 * rr + 0.2 * bb + 0.3 * (k / med_k)
             else:
-                score = 0.7 * (r / med_r) + 0.3 * (b / med_b)
-            # Uitschieters dempen: boven 1,5 telt de rest maar half mee, en maximaal 3
-            if score > 1.5:
-                score = 1.5 + (score - 1.5) * 0.5
-            uit.append((p, plat, min(score, 3.0)))
+                score = 0.7 * rr + 0.3 * bb
+            sc, bd, rd = _demp(score), _demp(bb), _demp(rr)
+            if vroeg:
+                sc, bd, rd = (1 + 0.5 * (x - 1) for x in (sc, bd, rd))
+            uit.append({"p": p, "plat": plat, "s": sc, "b": bd, "r": rd, "m": m})
     return uit
+
+def post_scores(posts):
+    """Relatieve score per post per platform: (interactie/bereik) gedeeld door de mediaan van dat platform.
+    1.0 = gemiddeld, 2.0 = twee keer zo goed. Zo zijn platformen met veel en weinig bereik vergelijkbaar."""
+    return [(d["p"], d["plat"], d["s"]) for d in _score_detail(posts)]
 
 # ---------- Slimmer kiezen: Thompson sampling, weekexperiment, per platform ----------
 WEEKDAGEN = ["maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag", "zondag"]
 
-def optie_stats(posts, platform=None):
-    """{dimensie: {optie: [scores]}}; per post het gemiddelde over platformen (of één platform)."""
+def _doelscore(d, dim):
+    """Score voor één onderdeel: bereik-onderdelen leren vooral van bereik, inhoud vooral van interactie."""
+    if dim in DOEL_BEREIK:
+        v = 0.75 * d["b"] + 0.25 * d["r"]
+    elif dim in DOEL_INTERACTIE:
+        v = 0.2 * d["b"] + 0.8 * d["r"]
+    else:
+        return d["s"]
+    return 1 + 0.5 * (v - 1) if d["m"] == "1u" else v
+
+def _factoren(items, sleutel, k0=3.0):
+    """Hoeveel beter of slechter posts gemiddeld scoren in een groep (bijv. een tijdslot of weekdag), gedempt."""
+    groep = {}
+    for v, dets in items:
+        groep.setdefault(v.get(sleutel), []).append(sum(d["s"] for d in dets) / len(dets))
+    alle = [x for g in groep.values() for x in g]
+    tot = (sum(alle) / len(alle)) if alle else 1.0
+    tot = tot or 1.0
+    return {k: max(0.7, min(1.4, (sum(g) + k0 * tot) / (len(g) + k0) / tot)) for k, g in groep.items()}
+
+def optie_stats(posts, platform=None, corrigeer=True):
+    """{dimensie: {optie: [scores]}}; per post het gemiddelde over platformen (of één platform).
+    De score wordt per onderdeel op het juiste doel gemeten (bereik of interactie) en gecorrigeerd voor tijdslot en
+    weekdag, zodat een stijl niet wordt beloond omdat hij toevallig op een goed moment viel."""
     per_post = {}
-    for p, plat, sc in post_scores(posts):
-        if platform and plat != platform:
+    for d in _score_detail(posts):
+        if platform and d["plat"] != platform:
             continue
-        per_post.setdefault(p["id"], (p, []))[1].append(sc)
-    uit = {}
-    for p, scs in per_post.values():
-        gem = sum(scs) / len(scs)
+        per_post.setdefault(d["p"]["id"], (d["p"], []))[1].append(d)
+    items = []
+    for p, dets in per_post.values():
         v = dict(p["variabelen"])
         v["weekdag"] = WEEKDAGEN[dt.date.fromisoformat(p["datum"]).weekday()]
         if platform == "facebook" and v.get("tijdslot_fb"):
             v["tijdslot"] = v["tijdslot_fb"]
+        items.append((v, dets))
+    ft, fd = _factoren(items, "tijdslot"), _factoren(items, "weekdag")
+    uit = {}
+    for v, dets in items:
         for dim, o in v.items():
             if o is None:  # niet van toepassing (bijv. opening bij een video)
                 continue
-            uit.setdefault(dim, {}).setdefault(str(o), []).append(gem)
+            val = sum(_doelscore(d, dim) for d in dets) / len(dets)
+            if corrigeer:
+                f = fd.get(v["weekdag"], 1.0) if dim == "tijdslot" else ft.get(v.get("tijdslot"), 1.0) if dim == "weekdag" \
+                    else ft.get(v.get("tijdslot"), 1.0) * fd.get(v["weekdag"], 1.0)
+                val /= f
+            uit.setdefault(dim, {}).setdefault(str(o), []).append(val)
     return uit
+
+def oordeel(vals, min_n=None):
+    """Hoe zeker is het systeem over een optie? Vergelijkt met 1,0 (= gemiddeld)."""
+    min_n = min_n or 5
+    n = len(vals)
+    if n < min_n:
+        return "weinig data"
+    gem = sum(vals) / n
+    se = max(0.15, statistics.pstdev(vals)) / math.sqrt(n)
+    z = (gem - 1.0) / se
+    return "waarschijnlijk beter" if z >= 1.5 else "waarschijnlijk slechter" if z <= -1.5 else "geen duidelijk verschil"
 
 def posterior(vals, k0=2.0):
     """Gemiddelde en onzekerheid van een optie (begint bij 1,0 = gemiddeld)."""
@@ -796,12 +866,12 @@ def cmd_experiment(stil=False):
     """Kiest het experiment voor de komende week: de 2 onderdelen waar het systeem het minst zeker over is."""
     cfg = laad("config.json")
     stats = optie_stats(laad("data/posts.json", []))
-    kandidaten = [d for d in DIMENSIES if d not in ("tijdslot",)]
+    kandidaten = list(DIMENSIES)
     def onzeker(d):
         sds = [posterior(stats.get(d, {}).get(str(o), []))[1] for o in DIMENSIES[d]]
         return sum(sds) / len(sds) * math.log(1 + len(DIMENSIES[d]))
     vorige = set((cfg.get("experiment") or {}).get("dims", []))
-    keuze = sorted(kandidaten, key=lambda d: (d in vorige, -onzeker(d)))[:2]
+    keuze = sorted(kandidaten, key=lambda d: (d in vorige, -onzeker(d)))[:max(1, int(cfg.get("experiment_aantal", 1)))]
     van = dt.date.today()
     cfg["experiment"] = {"dims": keuze, "van": van.isoformat(), "tot": (van + dt.timedelta(days=6)).isoformat()}
     bewaar("config.json", cfg)
@@ -812,7 +882,54 @@ def cmd_experiment(stil=False):
     cmd_log(tekst)
     if not stil:
         print(tekst)
+    try:
+        cmd_tijd_voorstel()
+    except Exception as e:
+        cmd_log(f"Tijdslot voorstellen mislukt: {str(e)[:120]}", "fout")
     return keuze
+
+def _min(t):
+    return int(t[:2]) * 60 + int(t[3:])
+
+def cmd_tijd_voorstel():
+    """Om de twee weken: scoren twee naastliggende tijdsloten allebei boven gemiddeld, dan wordt de tijd daartussen
+    bijgezet om te testen (maximaal een extra slot tegelijk). Een extra slot dat na 6 metingen slecht scoort verdwijnt weer."""
+    cfg = laad("config.json")
+    vandaag = dt.date.today()
+    if (cfg.get("tijd_voorstel_laatst") or "") > (vandaag - dt.timedelta(days=14)).isoformat():
+        return
+    st = optie_stats(laad("data/posts.json", [])).get("tijdslot", {})
+    extra = list(cfg.get("extra_tijdsloten") or [])
+    for t in list(extra):
+        v = st.get(t, [])
+        if len(v) >= 6 and sum(v) / len(v) < 0.9:
+            extra.remove(t)
+            if t in DIMENSIES["tijdslot"]:
+                DIMENSIES["tijdslot"].remove(t)
+            cmd_log(f"Extra tijdslot {t} verwijderd: scoort onder gemiddeld na {len(v)} metingen")
+    meetbaar = {t: sum(v) / len(v) for t, v in st.items() if len(v) >= 4 and t >= "10:00" and t in DIMENSIES["tijdslot"]}
+    cfg["extra_tijdsloten"] = extra
+    nieuw = None
+    if not extra and meetbaar:
+        slots = sorted(t for t in DIMENSIES["tijdslot"] if t >= "10:00")
+        best = max(meetbaar, key=meetbaar.get)
+        i = slots.index(best)
+        buren = [slots[j] for j in (i - 1, i + 1) if 0 <= j < len(slots) and meetbaar.get(slots[j], 0) > 1.0]
+        if meetbaar[best] > 1.0 and buren:
+            buur = max(buren, key=lambda t: meetbaar[t])
+            a, b = sorted((_min(best), _min(buur)))
+            if b - a >= 90:
+                mid = round((a + b) / 2 / 15) * 15
+                tijd = f"{mid // 60:02d}:{mid % 60:02d}"
+                if tijd not in DIMENSIES["tijdslot"]:
+                    nieuw = (tijd, best, buur)
+    if nieuw:
+        extra.append(nieuw[0])
+        cfg["extra_tijdsloten"] = extra
+        DIMENSIES["tijdslot"].append(nieuw[0]); DIMENSIES["tijdslot"].sort()
+        cmd_log(f"Nieuw tijdslot om te testen: {nieuw[0]} (tussen {min(nieuw[1], nieuw[2])} en {max(nieuw[1], nieuw[2])}, die allebei boven gemiddeld scoren)")
+    cfg["tijd_voorstel_laatst"] = vandaag.isoformat()
+    bewaar("config.json", cfg)
 
 # ---------- Leren ----------
 def leermodus_uit(cfg):
@@ -849,19 +966,24 @@ def cmd_leer():
     # Bij snel leren wordt elke dag geleerd, met kleinere stappen (ongeveer 0,4 per week in totaal)
     max_stap = 0.06 if cfg.get("leermodus") else cfg["max_gewicht_verschuiving_per_week"]
     rapport = {"datum": vandaag, "aantal_metingen": len(scores), "dimensies": {}}
+    stats = optie_stats(posts)  # gecorrigeerd voor tijd en weekdag, per onderdeel op bereik of interactie
+    min_n = cfg.get("min_metingen_optie", 5)
+    strat["zekerheid"] = {}
     for dim in DIMENSIES:
-        per = {}
-        for p, plat, s in scores:
-            per.setdefault(str(p["variabelen"].get(dim)), []).append(s)
+        per = stats.get(dim, {})
         regel = {}
+        strat["zekerheid"][dim] = {}
         for o in DIMENSIES[dim]:
             vals = per.get(str(o), [])
             doel = (sum(vals) + K * 1.0) / (len(vals) + K)
             oud = strat["gewichten"][dim].get(str(o), 1.0)
+            strat["zekerheid"][dim][str(o)] = {"n": len(vals), "gem": round(sum(vals) / len(vals), 2) if vals else None, "oordeel": oordeel(vals, min_n)}
+            if len(vals) < min_n:  # te weinig metingen: het gewicht blijft staan
+                doel = oud
             nieuw = oud + max(-max_stap, min(max_stap, doel - oud))
             strat["gewichten"][dim][str(o)] = round(max(0.3, min(2.5, nieuw)), 3)
             strat["metingen"][dim][str(o)] = len(vals)
-            regel[str(o)] = {"n": len(vals), "gem": round(statistics.mean(vals), 2) if vals else None,
+            regel[str(o)] = {"n": len(vals), "gem": round(statistics.mean(vals), 2) if vals else None, "oordeel": oordeel(vals, min_n),
                              "oud": oud, "nieuw": strat["gewichten"][dim][str(o)]}
         rapport["dimensies"][dim] = regel
     strat["bijgewerkt"] = vandaag
@@ -903,7 +1025,7 @@ def cmd_dashboard():
     rapporten = sorted(os.listdir(P("rapporten"))) if os.path.isdir(P("rapporten")) else []
     extra = dashboard_extra(cfg, posts)
     data = {"gegenereerd": dt.datetime.now().isoformat(timespec="minutes"), "repo": cfg.get("github_repo", ""),
-            "config": {k: cfg.get(k) for k in ("pauze", "kanaalnaam", "posts_per_dag", "max_posts_per_dag", "verkenning", "platformen_actief", "max_aandeel_beeld", "verzen_uitsluiten", "leermodus", "leermodus_tot", "goedkeuren", "experiment", "stories", "zelfstandig", "nieuwe_reels", "reel_tempo", "reel_formaat", "reel_aandeel")},
+            "config": {k: cfg.get(k) for k in ("pauze", "kanaalnaam", "posts_per_dag", "max_posts_per_dag", "verkenning", "platformen_actief", "max_aandeel_beeld", "verzen_uitsluiten", "leermodus", "leermodus_tot", "goedkeuren", "experiment", "stories", "zelfstandig", "nieuwe_reels", "reel_tempo", "reel_formaat", "reel_aandeel", "min_metingen_optie", "extra_tijdsloten")},
             "strategie": strat, "posts": lijst,
             "leergeschiedenis": laad("data/leergeschiedenis.json", []),
             "laatste_rapport": laad(f"rapporten/{rapporten[-1]}") if rapporten else None,
@@ -920,7 +1042,7 @@ def cmd_dashboard():
 
 def beste_meting(mom):
     """Meest actuele cijfers: 7 dagen als die er is, anders de tussentijdse, anders 24 uur."""
-    return mom.get("7d") or mom.get("laatst") or mom.get("24u") or {}
+    return mom.get("7d") or mom.get("laatst") or mom.get("24u") or mom.get("1u") or {}
 
 NAMEN_OPTIES = {"afbeelding": "afbeeldingen", "video": "video's", "carrousel": "carrousels", "verloop": "kleurverloop",
                 "beeld": "foto-achtergrond", True: "met uitleg", False: "zonder uitleg"}
@@ -948,13 +1070,10 @@ def dashboard_extra(cfg, posts):
     for p, plat, sc in post_scores(posts):
         per_post.setdefault(p["id"], (p, []))[1].append(sc)
     inzichten = []
+    st_corr = optie_stats(posts)  # gecorrigeerd voor tijd en weekdag, per onderdeel op bereik of interactie
     for dim in DIMENSIES:
-        groepen = {}
-        for p, scores in per_post.values():
-            o = p["variabelen"].get(dim)
-            groepen.setdefault(json.dumps(o), []).append(sum(scores) / len(scores))
-        opties = sorted(({"optie": json.loads(k), "gem": round(sum(v) / len(v), 2), "n": len(v)} for k, v in groepen.items()),
-                        key=lambda x: -x["gem"])
+        opties = sorted(({"optie": _terug(dim, k), "gem": round(sum(v) / len(v), 2), "n": len(v), "oordeel": oordeel(v, cfg.get("min_metingen_optie", 5))}
+                         for k, v in st_corr.get(dim, {}).items()), key=lambda x: -x["gem"])
         inzichten.append({"dimensie": dim, "opties": opties, "metingen": sum(x["n"] for x in opties)})
     # Snel leren
     gemeten = sum(1 for p in per_post.values())

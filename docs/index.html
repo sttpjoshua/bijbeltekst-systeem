@@ -1151,13 +1151,18 @@ function bouwInzichten(){
     if(d.dimensie==="vraag_onderaan"){const o=d.opties.filter(x=>x.n>=1);if(o.length===2){const ja=o.find(x=>String(x.optie)==="true"),nee=o.find(x=>String(x.optie)==="false");if(ja&&nee)h+=`<div class="inzicht"><div class="sub">Vraag onderaan</div>Met een vraag onderaan: ${ja.gem.toFixed(1).replace(".",",")}x, zonder: ${nee.gem.toFixed(1).replace(".",",")}x.<div class="sub">Gemeten op ${ja.n} en ${nee.n} posts.</div></div>`}continue}
     const o=d.opties.filter(x=>x.n>=1&&x.optie!=null);if(o.length<2)continue;
     const best=o[0],slecht=o[o.length-1],n=Math.min(best.n,slecht.n);
-    const z=n<3?"te weinig metingen":n<8?"eerste aanwijzing":"redelijk zeker";
+    const OZ={"weinig data":"te weinig metingen","waarschijnlijk beter":"redelijk zeker","waarschijnlijk slechter":"redelijk zeker","geen duidelijk verschil":"nog geen duidelijk verschil"};
+    const zo=n<3?"te weinig metingen":(OZ[best.oordeel]!=="te weinig metingen"?OZ[best.oordeel]:OZ[slecht.oordeel])||"eerste aanwijzing";
+    const z=n<3?"te weinig metingen":best.oordeel==="weinig data"&&slecht.oordeel==="weinig data"?"eerste aanwijzing":zo;
     const naam=NAMEN[d.dimensie]||d.dimensie;
     const tekst=d.dimensie==="tijdslot"?`Om <b>${best.optie}</b> scoren posts ${best.gem.toFixed(1).replace(".",",")}x gemiddeld, om ${slecht.optie} ${slecht.gem.toFixed(1).replace(".",",")}x.`
       :d.dimensie==="thema"?`Het thema <b>${on(best.optie)}</b> scoort het best (${best.gem.toFixed(1).replace(".",",")}x), ${on(slecht.optie)} het minst (${slecht.gem.toFixed(1).replace(".",",")}x).`
       :`Posts met <b>${on(best.optie)}</b> scoren ${best.gem.toFixed(1).replace(".",",")}x gemiddeld, ${on(slecht.optie)} ${slecht.gem.toFixed(1).replace(".",",")}x.`;
     h+=`<div class="inzicht"><div class="sub">${naam}<span class="zeker">${z}</span></div>${tekst}<div class="sub">Gemeten op ${best.n} en ${slecht.n} posts.</div></div>`;
   }
+  const zk=D.strategie.zekerheid;
+  if(zk){let be=[],sl=[],tot=0;for(const [d,os] of Object.entries(zk))for(const [o,x] of Object.entries(os)){tot++;if(x.oordeel==="waarschijnlijk beter")be.push(`${(NAMEN[d]||d).toLowerCase()}: ${OPTNAAM[o]||o}`);if(x.oordeel==="waarschijnlijk slechter")sl.push(`${(NAMEN[d]||d).toLowerCase()}: ${OPTNAAM[o]||o}`)}
+    h+=`<div class="inzicht"><div class="sub">Hoe zeker is het systeem?</div><div>Een uitkomst telt pas mee bij minstens ${D.config.min_metingen_optie||5} metingen en wordt gecorrigeerd voor tijdstip en weekdag. Nu ${be.length+sl.length} van ${tot} opties met een duidelijk oordeel.</div>${be.length?`<div class="sub">Waarschijnlijk beter: ${be.slice(0,6).join(", ")}</div>`:""}${sl.length?`<div class="sub">Waarschijnlijk slechter: ${sl.slice(0,6).join(", ")}</div>`:""}</div>`}
   const s=(D.strategie.inzichten||[]).slice(-3).reverse();
   h+=s.map(i=>`<div class="inzicht"><div class="sub">Analyse ${i.datum}</div>${i.tekst}</div>`).join("");
   el.innerHTML=h||'<div class="leeg">Nog geen conclusies.</div>';

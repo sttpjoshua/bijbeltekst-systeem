@@ -278,6 +278,10 @@ def cmd_posten():
             S.cmd_dashboard()
         except Exception as e:
             print("Tussentijdse cijfers mislukt:", e)
+    try:
+        vroege_cijfers(nu)
+    except Exception as e:
+        print("Eerste-uurcijfers mislukt:", str(e)[:160])
     klaar = [p for p in posts if p["status"] == "gerenderd"
              and any(tijdstip(p, pl) <= nu for pl in cfg["platformen_actief"])]
     if not klaar:
@@ -512,6 +516,36 @@ def reactie_liken(r):
     else:
         pid, ptok = page_token(tok)
         http("POST", f"{API_FB}/{r['id']}/likes", {"access_token": ptok})
+
+def vroege_cijfers(nu):
+    """Meting van het eerste uur (60 tot 180 minuten na plaatsing): een vroeg signaal, zodat het systeem sneller leert."""
+    posts = S.laad("data/posts.json", [])
+    todo = []
+    for p in posts:
+        for plat, ig in p.get("gepubliceerd", {}).items():
+            leeftijd = nu - dt.datetime.fromisoformat(ig["t"])
+            if "1u" not in p.get("stats", {}).get(plat, {}) and dt.timedelta(minutes=60) <= leeftijd < dt.timedelta(minutes=180):
+                todo.append((p, plat, ig))
+    if not todo:
+        return
+    uid, tok = env()
+    rij = []
+    for p, plat, ig in todo:
+        try:
+            m = insights(ig["id"], tok) if plat == "instagram" else stats_facebook(p, ig, tok) if plat == "facebook" else None
+        except Exception as e:
+            print("Eerste uur", p["id"], plat, str(e)[:100]); continue
+        if not m:
+            continue
+        rij.append({"post_id": p["id"], "platform": plat, "moment": "1u",
+                    "views": m.get("views"), "reach": m.get("reach"), "likes": m.get("likes"),
+                    "comments": m.get("comments"), "shares": m.get("shares"), "saves": m.get("saved"),
+                    "follows": m.get("follows"), "avg_watch_ms": m.get("ig_reels_avg_watch_time")})
+    if rij:
+        json.dump(rij, open(S.P("stats_tmp.json"), "w"))
+        S.cmd_stats(S.P("stats_tmp.json"))
+        os.remove(S.P("stats_tmp.json"))
+        S.cmd_log(f"Eerste-uurcijfers van {len(rij)} posts vastgelegd")
 
 def cmd_statistieken():
     uid, tok = env()
