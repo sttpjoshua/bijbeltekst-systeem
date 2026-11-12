@@ -129,6 +129,11 @@ h3.sec{font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:var(--
 .st{font-size:11px;padding:1px 6px;border-radius:4px;background:#352a56;margin-left:6px}.st.ok{background:#1f5a3d;color:#c9f5d6}.st.wacht{background:#5a4a1f;color:#ffe9a8}
 .kmsg{font-size:12px;margin-top:6px;min-height:16px}
 #toast{position:absolute;left:50%;top:8px;transform:translateX(-50%);background:#fff8e6;color:#3a2412;border:3px solid #3a2412;border-radius:6px;padding:8px 10px;display:none;gap:10px;align-items:center;z-index:5;box-shadow:0 4px 0 rgba(0,0,0,.3);max-width:92%}
+#kbar{position:fixed;left:50%;transform:translateX(-50%);bottom:14px;width:min(94vw,520px);background:#2a2150;color:#fff;border:2px solid #5a4a8c;border-radius:10px;padding:10px 12px;z-index:90;display:none;font-size:13px;line-height:1.4;box-shadow:0 6px 24px rgba(0,0,0,.4)}
+#kbar .ah{display:flex;justify-content:space-between;gap:10px;font-weight:700;opacity:.85;margin-bottom:3px}#kbar .ah button{background:transparent;border:0;color:inherit;font-size:16px;cursor:pointer}
+#kbar .as{display:flex;gap:6px;margin-top:7px}#kbar .as i{flex:1;height:4px;border-radius:2px;background:rgba(255,255,255,.25)}
+#kbar .as i.aan{background:#fff}#kbar .as i.bezig{background:#fff;animation:kpuls 1.1s ease-in-out infinite}@keyframes kpuls{50%{opacity:.35}}
+#kbar.err{background:#7a1f2b;border-color:#c0475a}#kbar.ok{background:#1f5a3c;border-color:#3f9c6c}#kbar a{color:#fff;text-decoration:underline}
 #toast img{width:46px;height:58px;object-fit:cover;border-radius:3px}#toast a{color:#a8326b;font-weight:700}
 .vo{display:flex;gap:8px;align-items:center;padding:5px 0;border-bottom:1px solid #43376a;font-size:12px}
 #brief a{color:var(--ink);text-decoration:none;font-weight:600;background:var(--panel2);padding:3px 8px;border-radius:8px}.vo:last-child{border:0}.vo img{width:34px;height:42px;object-fit:cover;border-radius:3px}
@@ -244,6 +249,7 @@ html[data-thema=donker] #alarm{background:#3a1d22;color:#ffd6d6}html[data-thema=
     <div class="gallery" id="gallery"></div>
   </div>
 </main>
+<div id="kbar"></div>
 <div id="kpaneel"><div class="doos"><button class="x" aria-label="Sluiten">&times;</button><div id="kInhoud"></div></div></div>
 <script>
 (()=>{
@@ -682,11 +688,11 @@ const gtok=()=>{try{return localStorage.getItem(KEY)}catch(e){return null}};
 const AGBY=id=>AG.find(a=>a.id===id);
 const cap1=x=>x[0].toUpperCase()+x.slice(1);
 const ROLE={
- verskiezer:{wat:'Kiest elke dag de verzen en de stijl voor de posts van morgen. Kijkt eerst naar wat goed scoorde en probeert af en toe iets nieuws.',wanneer:'Dagelijks, bij het klaarzetten van morgen'},
- designer:{wat:'Maakt de beelden en carrousels: kleuren, lettertype en layout. Kijkt elk beeld na en keurt af wat niet klopt.',wanneer:'Dagelijks, samen met de Verskiezer'},
- video:{wat:'Monteert de video\'s met muziek en de tekst van het vers.',wanneer:'Dagelijks, voor posts in videoformaat'},
+ verskiezer:{wat:'Kiest elke dag de verzen en de stijl voor de posts van morgen. Kijkt eerst naar wat goed scoorde en probeert af en toe iets nieuws. De post van 07:30 is altijd een vers voor een goede start van de dag, met een Goedemorgen-regel in de caption.',wanneer:'Dagelijks, bij het klaarzetten van morgen'},
+ designer:{wat:'Maakt de carrousels in twee soorten: de standaardstijl (kleurstijl, achtergrond, eerste slide) en de meelees-stijl met een markeerstreep onder het vers, in vijf kleuren met eigen lettertype. Kijkt elk beeld na en keurt af wat niet klopt.',wanneer:'Dagelijks, samen met de Verskiezer'},
+ video:{wat:'Maakt de reels in vijf soorten: herkenbare situatie met echte videobeelden (de standaard), meelees-reel met markeerstreep in vijf kleuren, en klassiek, kinetisch en foto-reels. Altijd met uitleg en muziek.',wanneer:'Dagelijks, voor posts in videoformaat'},
  dispatcher:{wat:'Zet elk kwartier de posts online die klaarstaan, op Instagram en Facebook. Een post die meer dan 3 uur te laat is, slaat hij over.',wanneer:'Elk kwartier'},
- analist:{wat:'Haalt elke ochtend de cijfers op (24 uur en 7 dagen na een post) en leert welke stijlen, thema\'s en tijden het best werken.',wanneer:'Elke ochtend'},
+ analist:{wat:'Haalt elke ochtend de cijfers op (24 uur en 7 dagen na een post) en leert welke stijlen, kleuren, thema\'s, hashtags en tijden het best werken.',wanneer:'Elke ochtend'},
  community:{wat:'Leest de reacties op je posts en zet per reactie drie antwoordopties klaar. Jij kiest en plaatst ze in het dashboard, onder Reacties.',wanneer:'Reacties elk uur ophalen, antwoorden om 14:32 en 20:47'},
  controller:{wat:'Bewaakt de verbindingen, lost bekende problemen zelf op (met de gereedschapskist), beheert de noodvoorraad in de kast en haalt jouw vragen uit de brievenbus.',wanneer:'Bij elke run, token elke maandag'}
 };
@@ -706,8 +712,8 @@ function inst(id){
   const np=LIVEJ&&LIVEJ.stats&&LIVEJ.stats.next_post;
   switch(id){
     case 'verskiezer':return `${c.posts_per_dag} post${c.posts_per_dag>1?'s':''} per dag · ${Math.round((c.verkenning??.2)*100)}% experimenteren`+((c.verzen_uitsluiten||[]).length?` · ${c.verzen_uitsluiten.length} vers uitgesloten`:'');
-    case 'designer':return `Foto-achtergronden: maximaal ${Math.round((c.max_aandeel_beeld??.33)*100)}%`;
-    case 'video':return `${klaar.filter(p=>p.variabelen.formaat==='video').length} video klaar om te posten`;
+    case 'designer':{const k=(DJ.posts||[]).filter(p=>p.variabelen.formaat==='carrousel'&&!p.gepubliceerd&&p.status!=='afgekeurd');const m=k.filter(p=>p.variabelen.carrousel_stijl==='markeren').length;return `${m} van ${k.length} geplande carrousels in meelees-stijl · foto-achtergronden max. ${Math.round((c.max_aandeel_beeld??.33)*100)}%`}
+    case 'video':{const r=(DJ.posts||[]).filter(p=>p.variabelen.formaat==='video'&&!p.gepubliceerd&&p.status!=='afgekeurd');const m=r.filter(p=>p.variabelen.reel_stijl==='markeren').length;return `${klaar.filter(p=>p.variabelen.formaat==='video').length} video klaar om te posten · ${m} van ${r.length} geplande reels in meelees-stijl`}
     case 'dispatcher':return `Platformen: ${(c.platformen_actief||[]).map(cap1).join(' en ')||'geen'}`+(np?` · volgende post ${np.slice(8,10)}-${np.slice(5,7)} om ${np.slice(11,16)}`:'');
     case 'analist':return c.leermodus?`Snel leren aan tot ${dagMaand(c.leermodus_tot)}`:'Leert wekelijks';
     case 'controller':return c.pauze?'Systeem gepauzeerd':((DJ.recente_fouten||[]).length?`${DJ.recente_fouten.length} open fout${DJ.recente_fouten.length>1?'en':''}`:'Alles werkt');
@@ -772,12 +778,25 @@ const acHead=card.querySelector('#acHead'),acBody=card.querySelector('#acBody');
 let curA=null,cardMode=null,lastXY={x:40,y:40};
 const SMALL=()=>matchMedia('(max-width:700px)').matches;
 document.getElementById('chips').addEventListener('click',e=>{const c=e.target.closest('[data-ag]');if(!c)return;const a=AG.find(x=>x.id===c.dataset.ag);if(a){lastXY={x:e.clientX-320,y:e.clientY-40};showCard(a,'pin',e);e.stopPropagation()}});
+const STIJLNAAM={situatie:'herkenbare situatie',markeren:'meelees-stijl',klassiek:'klassiek',kinetisch:'kinetisch',beeld:"foto's",standaard:'standaard'};
+function variantenHTML(id){
+  if(!DJ||(id!=='designer'&&id!=='video'))return '';
+  const vid=id==='video',sleutel=vid?'reel_stijl':'carrousel_stijl';
+  const ps=(DJ.posts||[]).filter(p=>p.variabelen.formaat===(vid?'video':'carrousel')&&p.status!=='afgekeurd');
+  const g={};
+  ps.forEach(p=>{const k=p.variabelen[sleutel]||'standaard';(g[k]=g[k]||{n:0,s:[],kl:{}});g[k].n++;if(typeof p.score==='number')g[k].s.push(p.score);const kl=p.variabelen.reel_kleur;if(kl&&k==='markeren')g[k].kl[kl]=(g[k].kl[kl]||0)+1});
+  const rijen=Object.entries(g).sort((x,y)=>y[1].n-x[1].n).map(([k,v])=>{
+    const sc=v.s.length?` · gem. score ${(v.s.reduce((x,y)=>x+y,0)/v.s.length).toFixed(1).replace('.',',')} (${v.s.length} gemeten)`:' · nog geen cijfers';
+    const kl=Object.keys(v.kl).length?`<div class="hint">kleuren: ${Object.entries(v.kl).map(([a,b])=>a+' '+b).join(', ')}</div>`:'';
+    return `<div><b>${esc(STIJLNAAM[k]||k)}</b>: ${v.n} post${v.n>1?'s':''}${sc}${kl}</div>`}).join('');
+  return rijen?`<div class="k">Varianten die nu lopen</div>${rijen}<div class="hint" style="margin-top:3px">Het systeem leert zelf welke het best werkt.</div>`:'';
+}
 function headHTML(a){
   const st={working:'Bezig',done:'Klaar',error:'Probleem',idle:'Pauze'}[a.state],R=ROLE[a.id],i=inst(a.id);
   return `<h4><i class="sw" style="background:${a.shirt}"></i>${esc(a.name)}<span class="st ${a.state}">${st}</span></h4>
     <div class="k">Nu</div><div class="nu">${esc(nuText(a))}</div>
     <div class="k">Wat ik doe</div><div>${esc(R.wat)}</div><div class="hint" style="margin-top:3px">${esc(R.wanneer)}</div>
-    ${i?`<div class="k">Instelling nu</div><div>${esc(i)}</div>`:''}`;
+    ${i?`<div class="k">Instelling nu</div><div>${esc(i)}</div>`:''}${variantenHTML(a.id)}`;
 }
 function hoverBody(a){
   return `<div class="k">Hier kun je mij op sturen</div><div class="acts">${acts(a.id).map(x=>`<span class="chip">${esc(x.t)}</span>`).join('')}</div>
@@ -832,18 +851,30 @@ function showForm(a,i){
     verstuur(a,x,vals,go);
   };
 }
+let K_LOGVOOR=new Set(),kbarTimer;
+function kLogSnap(){K_LOGVOOR=new Set(((DJ&&DJ.logboek)||[]).map(l=>l.t+l.tekst))}
+function kResultaat(){const n=((DJ&&DJ.logboek)||[]).filter(l=>!K_LOGVOOR.has(l.t+l.tekst)&&/^Bediening/.test(l.tekst));const l=n[n.length-1];return l?{tekst:l.tekst.replace(/^Bediening( mislukt)?:\s*/,''),mislukt:/mislukt/i.test(l.tekst)}:null}
+// duidelijke, blijvende terugkoppeling onderaan het scherm (de kaart kan inmiddels dicht zijn)
+function kbar(label,tx,c){
+  const b=$('kbar');const fout=c==='var(--err)',goed=/^(Klaar|Gelukt)/.test(tx);
+  const fase=/versturen/i.test(tx)?0:/Uitgevoerd|bijgewerkt/i.test(tx)?2:1;
+  const stap=fout?'':`<div class="as">${[0,1,2].map(i=>`<i class="${goed||i<fase?'aan':i===fase?'bezig':''}"></i>`).join('')}</div>`;
+  b.className=fout?'err':goed?'ok':'';b.style.display='block';
+  b.innerHTML=`<div class="ah"><span>${esc(label||'Opdracht')}</span><button onclick="document.getElementById('kbar').style.display='none'" title="Sluiten">✕</button></div><div>${tx}</div>${stap}`;
+  clearTimeout(kbarTimer);if(goed)kbarTimer=setTimeout(()=>{b.style.display='none'},12000);
+}
 async function verstuur(a,x,vals,btn){
   const msg=acBody.querySelector('#acMsg');
-  const set=(t,c,html)=>{if(!msg.isConnected)return;if(html)msg.innerHTML=t;else msg.textContent=t;msg.style.color=c||'var(--muted)'};
+  const set=(t,c,html)=>{kbar(x.t,html?t:esc(t),c);if(!msg.isConnected)return;if(html)msg.innerHTML=t;else msg.textContent=t;msg.style.color=c||'var(--muted)'};
   const repo=(DJ&&DJ.repo)||'sttpjoshua/bijbeltekst-systeem';
   let inputs;
   try{inputs=x.taak?{taak:x.taak}:{taak:'bediening',opdracht:JSON.stringify(x.run(vals))}}catch(e){set('Kies eerst iets.','var(--err)');return}
-  btn.disabled=true;set('Opdracht versturen...');const start=Date.now();
+  kLogSnap();btn.disabled=true;set('Opdracht versturen...');const start=Date.now();
   try{
     const r=await fetch(`https://api.github.com/repos/${repo}/actions/workflows/publiceren.yml/dispatches`,{method:'POST',
       headers:{'Authorization':'Bearer '+gtok(),'Accept':'application/vnd.github+json','Content-Type':'application/json'},
       body:JSON.stringify({ref:'main',inputs})});
-    if(r.status===204){a.ov={task:'Opdracht: '+x.t,until:Date.now()+150000};log('Opdracht aan '+a.name+': '+x.t);set('Opdracht ontvangen. Bezig met uitvoeren...','var(--ok)');volg(a,start,set,btn,repo)}
+    if(r.status===204){a.ov={task:'Opdracht: '+x.t,until:Date.now()+150000};log('Opdracht aan '+a.name+': '+x.t);set('Verstuurd. Het systeem pakt het zo op.','var(--ok)');volg(a,start,set,btn,repo)}
     else if(r.status===401||r.status===403||r.status===404){set('De sleutel werkt niet (verlopen of zonder Actions-rechten). Ga terug en verwijder hem onderaan.','var(--err)');btn.disabled=false}
     else{set('GitHub gaf fout '+r.status+'.','var(--err)');btn.disabled=false}
   }catch(e){set('Geen verbinding met GitHub.','var(--err)');btn.disabled=false}
@@ -858,11 +889,11 @@ async function volg(a,start,set,btn,repo){
       if(run&&new Date(run.created_at).getTime()>start-60000){
         if(run.status==='completed'){
           a.ov=null;
-          if(run.conclusion==='success'){set('Uitgevoerd. Het kantoor wordt bijgewerkt...','var(--ok)');await new Promise(z=>setTimeout(z,6000));await loadReal();await poll();set('Klaar en bijgewerkt.','var(--ok)')}
-          else set(`Uitvoeren mislukt. <a href="${esc(run.html_url)}" target="_blank" rel="noopener">Bekijk details</a>`,'var(--err)',true);
+          if(run.conclusion==='success'){set('Uitgevoerd. Het kantoor wordt bijgewerkt...','var(--ok)');await new Promise(z=>setTimeout(z,6000));await loadReal();await poll();{const rs=kResultaat();if(rs&&rs.mislukt)set('Niet gelukt: '+rs.tekst,'var(--err)');else set('Gelukt: '+(rs?rs.tekst:'het kantoor is bijgewerkt.'),'var(--ok)')}}
+          else set(`Het uitvoeren is niet gelukt. <a href="${esc(run.html_url)}" target="_blank" rel="noopener">Bekijk details</a>`,'var(--err)',true);
           btn.disabled=false;return;
         }
-        set('Bezig met uitvoeren... ('+(run.status==='queued'?'in de wachtrij':'loopt')+')','var(--ok)');
+        set(run.status==='queued'?'In de wachtrij bij GitHub, het systeem is nog niet begonnen.':'Het systeem is bezig ('+Math.round((Date.now()-start)/1000)+'s).','var(--ok)');
       }
     }catch(e){}
   }
@@ -943,7 +974,8 @@ const tijdVan=p=>new Date(p.datum+'T'+p.variabelen.tijdslot+':00');
 
 /* ---- opdracht sturen (zelfde route als de Bediening) ---- */
 async function stuurK(o,btn,msgEl){
-  const set=(tx,c)=>{if(msgEl){msgEl.innerHTML=tx;msgEl.style.color=c||'var(--muted)'}};
+  const set=(tx,c)=>{kbar(o.actie==='andere_stijl'?'Andere stijl':String(o.actie||'Opdracht').replace(/_/g,' '),tx,c);if(msgEl){msgEl.innerHTML=tx;msgEl.style.color=c||'var(--muted)'}};
+  kLogSnap();
   if(!gtok()){set('Vul eerst je GitHub-sleutel in: klik op een medewerker en volg de stappen, of gebruik de Bediening op het dashboard.','var(--err)');return}
   const repo=(DJ&&DJ.repo)||'sttpjoshua/bijbeltekst-systeem';
   if(btn)btn.disabled=true;set('Opdracht versturen...');const start=nu();
@@ -952,7 +984,7 @@ async function stuurK(o,btn,msgEl){
       headers:{'Authorization':'Bearer '+gtok(),'Accept':'application/vnd.github+json','Content-Type':'application/json'},
       body:JSON.stringify({ref:'main',inputs:{taak:'bediening',opdracht:JSON.stringify(o)}})});
     if(r.status!==204){set(r.status===401||r.status===403?'De sleutel werkt niet (verlopen of zonder Actions-rechten).':'GitHub gaf fout '+r.status,'var(--err)');if(btn)btn.disabled=false;return}
-    set('Ontvangen. Bezig met uitvoeren...','var(--ok)');
+    set('Verstuurd. Het systeem pakt het zo op.','var(--ok)');
     const h={'Authorization':'Bearer '+gtok(),'Accept':'application/vnd.github+json'};
     for(let i=0;i<40;i++){
       await new Promise(z=>setTimeout(z,8000));
@@ -960,9 +992,9 @@ async function stuurK(o,btn,msgEl){
         const run=(await (await fetch(`https://api.github.com/repos/${repo}/actions/workflows/publiceren.yml/runs?event=workflow_dispatch&per_page=1`,{headers:h})).json()).workflow_runs?.[0];
         if(run&&new Date(run.created_at).getTime()>start-60000&&run.status==='completed'){
           if(run.conclusion!=='success'){set(`Mislukt. <a href="${esc(run.html_url)}" target="_blank" rel="noopener">Details</a>`,'var(--err)');if(btn)btn.disabled=false;return}
-          set('Uitgevoerd. Even geduld, het kantoor wordt bijgewerkt...','var(--ok)');
+          set('Uitgevoerd. Het kantoor wordt bijgewerkt...','var(--ok)');
           await new Promise(z=>setTimeout(z,25000));await loadReal();await poll();
-          set('Klaar.','var(--ok)');if(btn)btn.disabled=false;if(paneelOpen==='goed')toonGoedkeuren();return;
+          {const rs=kResultaat();if(rs&&rs.mislukt)set('Niet gelukt: '+esc(rs.tekst),'var(--err)');else set('Gelukt: '+(rs?esc(rs.tekst):'het kantoor is bijgewerkt.'),'var(--ok)')}if(btn)btn.disabled=false;if(paneelOpen==='goed')toonGoedkeuren();return;
         }
       }catch(e){}
     }
