@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T12:01:32",
+ "updated": "2026-11-13T12:16:57",
  "agents": {
   "verskiezer": {
    "t": "2026-11-13T08:01:57",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-13T07:33:24",
-   "task": "Postte Efeze 2:10 op facebook",
+   "t": "2026-11-13T12:16:57",
+   "task": "Postte Psalm 29:11 op instagram",
    "state": "done"
   },
   "controller": {
@@ -56,6 +56,14 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "12:16",
+   "msg": "2026-11-13-1 online op instagram: Psalm 29:11"
+  },
+  {
+   "t": "12:16",
+   "msg": "2026-11-13-1 ook als story geplaatst"
+  },
   {
    "t": "09:02",
    "msg": "Zelfstandig 5 posts klaargezet voor 2026-11-15 (teksten uit de tekstbank)."
@@ -95,14 +103,6 @@
   {
    "t": "22:03",
    "msg": "2026-11-12-5 online op instagram: 1 Johannes 4:7"
-  },
-  {
-   "t": "22:03",
-   "msg": "2026-11-12-5 ook als story geplaatst"
-  },
-  {
-   "t": "22:02",
-   "msg": "2026-11-12-2 online op facebook: Psalm 9:2"
   }
  ],
  "lampen": [

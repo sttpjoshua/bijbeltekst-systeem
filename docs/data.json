@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-13T12:01",
+ "gegenereerd": "2026-11-13T12:16",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1474,8 +1474,12 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-13-1-4.jpg"
    ],
    "thumb": "thumbs/2026-11-13-1.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "instagram"
+   ],
+   "links": {
+    "instagram": "https://www.instagram.com/p/DfrgLzrFzIj/"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -1497,7 +1501,9 @@
     "aanleiding": "nieuws"
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "instagram": "2026-11-13T12:16+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": {
@@ -1507,7 +1513,7 @@
     "link": "https://nos.nl/l/2639247",
     "zwaar": false
    },
-   "online": null
+   "online": "2026-11-13T12:16+01:00"
   },
   {
    "id": "2026-11-12-5",
@@ -4753,19 +4759,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-12T07:01:20",
-   "soort": "fout",
-   "tekst": "Politiek nieuws (NOS): \"Wekdienst 12/11: Erop of eronder voor kabinet • Hoger beroep tegen Erasmusschutter\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
-   "code": "nieuws_voorstel",
-   "post": "n111207010",
-   "opgelost": true
-  },
-  {
-   "t": "2026-11-12T07:01:23",
-   "soort": "info",
-   "tekst": "Nieuwspost: Habakuk 3:18 vervangen door Psalm 9:2 (aanleiding: hitte, NOS)"
-  },
-  {
    "t": "2026-11-12T07:31:39",
    "soort": "info",
    "tekst": "2026-11-12-1 ook als story geplaatst"
@@ -5057,6 +5050,16 @@
    "t": "2026-11-13T09:02:35",
    "soort": "info",
    "tekst": "Zelfstandig 5 posts klaargezet voor 2026-11-15 (teksten uit de tekstbank)."
+  },
+  {
+   "t": "2026-11-13T12:16:57",
+   "soort": "info",
+   "tekst": "2026-11-13-1 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-13T12:16:57",
+   "soort": "info",
+   "tekst": "2026-11-13-1 online op instagram: Psalm 29:11"
   }
  ],
  "recente_fouten": [],
@@ -5141,9 +5144,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-13T07:33",
+   "ok": "2026-11-13T12:16",
    "laatst_ok": true,
-   "detail": "Psalm 46:2 geplaatst"
+   "detail": "Psalm 29:11 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-12T13:41",
@@ -5201,9 +5204,9 @@
    "ok": "2026-11-13T07:33"
   },
   "nieuws": {
-   "ok": "2026-11-13T07:01",
+   "ok": "2026-11-13T12:01",
    "laatst_ok": true,
-   "detail": "1 nieuwe aanleidingen"
+   "detail": "0 nieuwe aanleidingen"
   },
   "maken": {
    "ok": "2026-11-13T09:02",
@@ -8042,24 +8045,6 @@
   ],
   "komend": [
    {
-    "id": "2026-11-13-1",
-    "ref": "Psalm 29:11",
-    "datum": "2026-11-13",
-    "tijdslot": "12:15",
-    "tests": [
-     {
-      "dimensie": "huisstijl",
-      "optie": "mint",
-      "bron": "experiment"
-     },
-     {
-      "dimensie": "thema",
-      "optie": "vrede_rust",
-      "bron": "experiment"
-     }
-    ]
-   },
-   {
     "id": "2026-11-13-3",
     "ref": "Spreuken 17:28",
     "datum": "2026-11-13",
@@ -8263,6 +8248,29 @@
      {
       "dimensie": "reel_plaatsing",
       "optie": "midden",
+      "bron": "verkenning"
+     }
+    ]
+   },
+   {
+    "id": "2026-11-15-5",
+    "ref": "Hebreeën 11:1",
+    "datum": "2026-11-15",
+    "tijdslot": "22:00",
+    "tests": [
+     {
+      "dimensie": "huisstijl",
+      "optie": "hemelsblauw",
+      "bron": "experiment"
+     },
+     {
+      "dimensie": "thema",
+      "optie": "hoop",
+      "bron": "experiment"
+     },
+     {
+      "dimensie": "reel_scene",
+      "optie": "onderweg",
       "bron": "verkenning"
      }
     ]
