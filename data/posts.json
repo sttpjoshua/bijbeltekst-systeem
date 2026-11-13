@@ -4256,7 +4256,20 @@
   "media": "docs/media/2026-11/2026-11-13-4.mp4",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-13-4.mp4",
   "metricool": {},
-  "stats": {},
+  "stats": {
+   "facebook": {
+    "1u": {
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "avg_watch_ms": null
+    }
+   }
+  },
   "beeld": "pexels-hoangmanh-39726915.jpg",
   "muziek": "ES_Silent Memories - Calm Shores.mp3",
   "geluid": "ES_Ambience, Lakeside, Spring Day, Italy, Lake, Calm, Birds, Wood, Creaks 01 - Epidemic Sound.mp3",
@@ -4373,7 +4386,20 @@
   "media": "docs/media/2026-11/2026-11-13-5.mp4",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-13-5.mp4",
   "metricool": {},
-  "stats": {},
+  "stats": {
+   "instagram": {
+    "1u": {
+     "views": 0,
+     "reach": 0,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "avg_watch_ms": 27779
+    }
+   }
+  },
   "beeld": null,
   "muziek": "ES_Surroundings - Helmut Schenker.mp3",
   "geluid": null,

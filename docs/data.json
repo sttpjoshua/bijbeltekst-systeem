@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-13T08:30",
+ "gegenereerd": "2026-11-13T08:45",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1099,8 +1099,26 @@
    "links": {
     "instagram": "https://www.instagram.com/reel/Dfq_kg5hWSN/"
    },
-   "totaal": {},
-   "per_platform": {},
+   "totaal": {
+    "views": 0,
+    "reach": 0,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0
+   },
+   "per_platform": {
+    "instagram": {
+     "views": 0,
+     "reach": 0,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "t": null
+    }
+   },
    "score": {},
    "keuzebron": {
     "huisstijl": "joshua",
@@ -1122,7 +1140,19 @@
     "hashtag_stijl": "test",
     "reel_kleur": "joshua"
    },
-   "momenten": {},
+   "momenten": {
+    "instagram": {
+     "1u": {
+      "views": 0,
+      "reach": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": null
+     }
+    }
+   },
    "pub": {
     "instagram": "2026-11-13T07:33+01:00"
    },
@@ -1183,8 +1213,26 @@
    "links": {
     "facebook": "https://www.facebook.com/1110570308448653"
    },
-   "totaal": {},
-   "per_platform": {},
+   "totaal": {
+    "views": 0,
+    "reach": 0,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0
+   },
+   "per_platform": {
+    "facebook": {
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "t": null
+    }
+   },
    "score": {},
    "keuzebron": {
     "huisstijl": "experiment",
@@ -1205,7 +1253,19 @@
     "reel_scene": "verkenning",
     "hashtag_stijl": "test"
    },
-   "momenten": {},
+   "momenten": {
+    "facebook": {
+     "1u": {
+      "views": 0,
+      "reach": null,
+      "likes": null,
+      "comments": null,
+      "shares": null,
+      "saves": null,
+      "follows": null
+     }
+    }
+   },
    "pub": {
     "facebook": "2026-11-13T07:33+01:00"
    },
@@ -4694,11 +4754,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-11T22:05:18",
-   "soort": "info",
-   "tekst": "2026-11-11-n2200 online op instagram: Romeinen 15:4"
-  },
-  {
    "t": "2026-11-11T22:05:26",
    "soort": "info",
    "tekst": "2026-11-11-n2200 online op facebook: Romeinen 15:4"
@@ -4998,6 +5053,11 @@
    "t": "2026-11-13T08:01:57",
    "soort": "info",
    "tekst": "Bediening: Nieuwspost klaargezet: Psalm 29:11 op 2026-11-13 om 12:15"
+  },
+  {
+   "t": "2026-11-13T08:45:47",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
   }
  ],
  "recente_fouten": [],
