@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T17:30:52",
+ "updated": "2026-11-13T17:47:17",
  "agents": {
   "verskiezer": {
    "t": "2026-11-13T08:01:57",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-13T12:16:57",
-   "task": "Postte Psalm 29:11 op instagram",
+   "t": "2026-11-13T17:47:17",
+   "task": "Postte Efeze 2:10 op instagram",
    "state": "done"
   },
   "controller": {
@@ -38,11 +38,11 @@
   }
  },
  "stats": {
-  "posts_today": 0,
-  "posts_total": 26,
+  "posts_today": 2,
+  "posts_total": 28,
   "reach_7d": 142,
   "best_time": "nog onbekend",
-  "next_post": "2026-11-13T07:30:00"
+  "next_post": "2026-11-13T12:15:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
@@ -56,6 +56,18 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "17:47",
+   "msg": "2026-11-13-4 online op instagram: Efeze 2:10"
+  },
+  {
+   "t": "17:47",
+   "msg": "2026-11-13-4 ook als story geplaatst"
+  },
+  {
+   "t": "17:45",
+   "msg": "2026-11-13-5 online op facebook: Psalm 46:2"
+  },
   {
    "t": "16:06",
    "msg": "Dagelijkse run (zelfstandig): 10 posts voor 14 en 15 november gecontroleerd, reserveverzen voor 15 november in"
@@ -91,18 +103,6 @@
   {
    "t": "13:09",
    "msg": "Statistieken opgehaald voor 9 posts"
-  },
-  {
-   "t": "12:16",
-   "msg": "2026-11-13-1 online op instagram: Psalm 29:11"
-  },
-  {
-   "t": "12:16",
-   "msg": "2026-11-13-1 ook als story geplaatst"
-  },
-  {
-   "t": "09:02",
-   "msg": "Zelfstandig 5 posts klaargezet voor 2026-11-15 (teksten uit de tekstbank)."
   }
  ],
  "lampen": [

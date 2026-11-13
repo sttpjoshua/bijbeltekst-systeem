@@ -4333,7 +4333,7 @@
  {
   "id": "2026-11-13-4",
   "datum": "2026-11-13",
-  "status": "gerenderd",
+  "status": "gepubliceerd",
   "vers_id": "Ephesians-2-10-10",
   "ref": "Efeze 2:10",
   "tekst": "Want wij zijn Zijn maaksel, geschapen in Christus Jezus tot goede werken, welke God voorbereid heeft, opdat wij in dezelve zouden wandelen.",
@@ -4467,13 +4467,18 @@
     "id": "1110570308448653",
     "url": "https://www.facebook.com/1110570308448653",
     "t": "2026-11-13T07:33+01:00"
+   },
+   "instagram": {
+    "id": "18157138351532769",
+    "url": "https://www.instagram.com/reel/DfsF6B7iY3B/",
+    "t": "2026-11-13T17:47+01:00"
    }
   }
  },
  {
   "id": "2026-11-13-5",
   "datum": "2026-11-13",
-  "status": "gerenderd",
+  "status": "gepubliceerd",
   "vers_id": "Psalms-46-2-2",
   "ref": "Psalm 46:2",
   "tekst": "God is ons een Toevlucht en Sterkte; Hij is krachtelijk bevonden een Hulp in benauwdheden.",
@@ -4611,6 +4616,11 @@
     "id": "18141017443713945",
     "url": "https://www.instagram.com/reel/Dfq_kg5hWSN/",
     "t": "2026-11-13T07:33+01:00"
+   },
+   "facebook": {
+    "id": "1455602323304421",
+    "url": "https://www.facebook.com/1455602323304421",
+    "t": "2026-11-13T17:45+01:00"
    }
   }
  },

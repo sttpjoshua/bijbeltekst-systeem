@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-13T17:30",
+ "gegenereerd": "2026-11-13T17:47",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1051,7 +1051,7 @@
    "ref": "Psalm 46:2",
    "tekst": "God is ons een Toevlucht en Sterkte; Hij is krachtelijk bevonden een Hulp in benauwdheden.",
    "hook": "Goedemorgen. Een vers voor het begin van je dag.",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "hemelsblauw",
     "thema": "troost",
@@ -1093,10 +1093,12 @@
    ],
    "thumb": "thumbs/2026-11-13-5.jpg",
    "platformen": [
-    "instagram"
+    "instagram",
+    "facebook"
    ],
    "links": {
-    "instagram": "https://www.instagram.com/reel/Dfq_kg5hWSN/"
+    "instagram": "https://www.instagram.com/reel/Dfq_kg5hWSN/",
+    "facebook": "https://www.facebook.com/1455602323304421"
    },
    "totaal": {
     "views": 15,
@@ -1153,7 +1155,8 @@
     }
    },
    "pub": {
-    "instagram": "2026-11-13T07:33+01:00"
+    "instagram": "2026-11-13T07:33+01:00",
+    "facebook": "2026-11-13T17:45+01:00"
    },
    "gemist": [],
    "nood": false,
@@ -1166,7 +1169,7 @@
    "ref": "Efeze 2:10",
    "tekst": "Want wij zijn Zijn maaksel, geschapen in Christus Jezus tot goede werken, welke God voorbereid heeft, opdat wij in dezelve zouden wandelen.",
    "hook": "Voor iedereen die zich afvraagt of het ertoe doet wat hij doet.",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "zonsopgang",
     "thema": "identiteit",
@@ -1207,10 +1210,12 @@
    ],
    "thumb": "thumbs/2026-11-13-4.jpg",
    "platformen": [
-    "facebook"
+    "facebook",
+    "instagram"
    ],
    "links": {
-    "facebook": "https://www.facebook.com/1110570308448653"
+    "facebook": "https://www.facebook.com/1110570308448653",
+    "instagram": "https://www.instagram.com/reel/DfsF6B7iY3B/"
    },
    "totaal": {
     "views": 0,
@@ -1266,7 +1271,8 @@
     }
    },
    "pub": {
-    "facebook": "2026-11-13T07:33+01:00"
+    "facebook": "2026-11-13T07:33+01:00",
+    "instagram": "2026-11-13T17:47+01:00"
    },
    "gemist": [],
    "nood": false,
@@ -4877,21 +4883,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-12T09:19:30",
-   "soort": "info",
-   "tekst": "Zelfstandig 5 posts klaargezet voor 2026-11-13 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "2026-11-12T09:45:10",
-   "soort": "info",
-   "tekst": "Bediening: Psalm 46:2 opnieuw gemaakt (stijl meelees-abrikoos, achtergrond kleurverloop)"
-  },
-  {
-   "t": "2026-11-12T12:01:31",
-   "soort": "info",
-   "tekst": "Nieuwspost: Spreuken 26:14 vervangen door Psalm 92:2 (aanleiding: sinterklaas, NOS)"
-  },
-  {
    "t": "2026-11-12T12:16:07",
    "soort": "info",
    "tekst": "2026-11-12-1 online op facebook: Kolossenzen 1:12"
@@ -5178,6 +5169,21 @@
    "t": "2026-11-13T16:06:09",
    "soort": "info",
    "tekst": "Dagelijkse run (zelfstandig): 10 posts voor 14 en 15 november gecontroleerd, reserveverzen voor 15 november ingevuld"
+  },
+  {
+   "t": "2026-11-13T17:45:54",
+   "soort": "info",
+   "tekst": "2026-11-13-5 online op facebook: Psalm 46:2"
+  },
+  {
+   "t": "2026-11-13T17:47:17",
+   "soort": "info",
+   "tekst": "2026-11-13-4 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-13T17:47:17",
+   "soort": "info",
+   "tekst": "2026-11-13-4 online op instagram: Efeze 2:10"
   }
  ],
  "recente_fouten": [
@@ -5268,9 +5274,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-13T12:16",
+   "ok": "2026-11-13T17:47",
    "laatst_ok": true,
-   "detail": "Psalm 29:11 geplaatst"
+   "detail": "Efeze 2:10 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-13T13:10",
@@ -5302,9 +5308,9 @@
    "fout": "2026-11-08T18:00"
   },
   "facebook": {
-   "ok": "2026-11-13T07:33",
+   "ok": "2026-11-13T17:45",
    "laatst_ok": true,
-   "detail": "Efeze 2:10 geplaatst"
+   "detail": "Psalm 46:2 geplaatst"
   },
   "statistieken": {
    "ok": "2026-11-13T13:10",
@@ -5394,9 +5400,9 @@
  ],
  "weken": {
   "deze": {
-   "posts": 26,
-   "reach": 141,
-   "views": 227,
+   "posts": 28,
+   "reach": 156,
+   "views": 242,
    "likes": 28,
    "comments": 3,
    "saves": 0,
@@ -5617,7 +5623,7 @@
   "tot": "2026-11-14",
   "dag": 7,
   "dagen": 7,
-  "online": 26,
+  "online": 28,
   "gemeten": 2
  },
  "voorraad": {
@@ -7984,16 +7990,16 @@
      },
      {
       "optie": "zonsopgang",
-      "online": 2,
-      "gepland": 2,
+      "online": 3,
+      "gepland": 1,
       "n": 0,
       "gem": null,
       "oordeel": "weinig data"
      },
      {
       "optie": "hemelsblauw",
-      "online": 3,
-      "gepland": 2,
+      "online": 4,
+      "gepland": 1,
       "n": 1,
       "gem": 0.89,
       "oordeel": "weinig data"
@@ -8093,8 +8099,8 @@
     "opties": [
      {
       "optie": "troost",
-      "online": 3,
-      "gepland": 1,
+      "online": 4,
+      "gepland": 0,
       "n": 1,
       "gem": 1.11,
       "oordeel": "weinig data"
@@ -8157,8 +8163,8 @@
      },
      {
       "optie": "identiteit",
-      "online": 1,
-      "gepland": 3,
+      "online": 2,
+      "gepland": 2,
       "n": 0,
       "gem": null,
       "oordeel": "weinig data"
