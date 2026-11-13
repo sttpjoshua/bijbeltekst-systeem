@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-13T07:01",
+ "gegenereerd": "2026-11-13T07:33",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1093,8 +1093,12 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-13-5.mp4"
    ],
    "thumb": "thumbs/2026-11-13-5.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "instagram"
+   ],
+   "links": {
+    "instagram": "https://www.instagram.com/reel/Dfq_kg5hWSN/"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -1119,11 +1123,13 @@
     "reel_kleur": "joshua"
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "instagram": "2026-11-13T07:33+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": null,
-   "online": null
+   "online": "2026-11-13T07:33+01:00"
   },
   {
    "id": "2026-11-13-4",
@@ -1171,8 +1177,12 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-13-4.mp4"
    ],
    "thumb": "thumbs/2026-11-13-4.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "facebook"
+   ],
+   "links": {
+    "facebook": "https://www.facebook.com/1110570308448653"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -1196,11 +1206,13 @@
     "hashtag_stijl": "test"
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "facebook": "2026-11-13T07:33+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": null,
-   "online": null
+   "online": "2026-11-13T07:33+01:00"
   },
   {
    "id": "2026-11-13-3",
@@ -4674,26 +4686,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-11T20:31:47",
-   "soort": "info",
-   "tekst": "2026-11-11-n2030 ook als story geplaatst"
-  },
-  {
-   "t": "2026-11-11T20:31:47",
-   "soort": "info",
-   "tekst": "2026-11-11-n2030 online op instagram: Spreuken 23:18"
-  },
-  {
-   "t": "2026-11-11T20:31:59",
-   "soort": "info",
-   "tekst": "2026-11-11-n2030 online op facebook: Spreuken 23:18"
-  },
-  {
-   "t": "2026-11-11T20:40:48",
-   "soort": "info",
-   "tekst": "Zelfstandig 10 posts klaargezet voor 2026-11-12, 2026-11-13 (teksten uit de tekstbank)."
-  },
-  {
    "t": "2026-11-11T21:10:30",
    "soort": "info",
    "tekst": "Bediening: WhatsApp-testbericht klaargezet"
@@ -4975,9 +4967,39 @@
    "t": "2026-11-12T23:15:45",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-13T07:01:26",
+   "soort": "fout",
+   "tekst": "Politiek nieuws (NOS): \"Crisisoverleg Jetten over toekomst coalitie, wachten op duidelijkheid VVD\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
+   "code": "nieuws_voorstel",
+   "post": "n111307010"
+  },
+  {
+   "t": "2026-11-13T07:33:16",
+   "soort": "info",
+   "tekst": "2026-11-13-5 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-13T07:33:16",
+   "soort": "info",
+   "tekst": "2026-11-13-5 online op instagram: Psalm 46:2"
+  },
+  {
+   "t": "2026-11-13T07:33:24",
+   "soort": "info",
+   "tekst": "2026-11-13-4 online op facebook: Efeze 2:10"
   }
  ],
- "recente_fouten": [],
+ "recente_fouten": [
+  {
+   "t": "2026-11-13T07:01:26",
+   "soort": "fout",
+   "tekst": "Politiek nieuws (NOS): \"Crisisoverleg Jetten over toekomst coalitie, wachten op duidelijkheid VVD\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
+   "code": "nieuws_voorstel",
+   "post": "n111307010"
+  }
+ ],
  "versen_totaal": 300,
  "reacties": [],
  "inzichten_extra": {
@@ -5059,9 +5081,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-12T22:03",
+   "ok": "2026-11-13T07:33",
    "laatst_ok": true,
-   "detail": "1 Johannes 4:7 geplaatst"
+   "detail": "Psalm 46:2 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-12T13:41",
@@ -5093,9 +5115,9 @@
    "fout": "2026-11-08T18:00"
   },
   "facebook": {
-   "ok": "2026-11-12T22:02",
+   "ok": "2026-11-13T07:33",
    "laatst_ok": true,
-   "detail": "Psalm 9:2 geplaatst"
+   "detail": "Efeze 2:10 geplaatst"
   },
   "statistieken": {
    "ok": "2026-11-12T13:41",
@@ -5119,9 +5141,9 @@
    "ok": "2026-11-12T21:30"
   },
   "nieuws": {
-   "ok": "2026-11-12T17:01",
+   "ok": "2026-11-13T07:01",
    "laatst_ok": true,
-   "detail": "0 nieuwe aanleidingen"
+   "detail": "1 nieuwe aanleidingen"
   },
   "maken": {
    "ok": "2026-11-12T09:19",
@@ -7505,6 +7527,70 @@
   },
   "recent": [
    {
+    "id": "n111307010",
+    "t": "2026-11-13T06:38+01:00",
+    "bron": "NOS",
+    "kop": "Crisisoverleg Jetten over toekomst coalitie, wachten op duidelijkheid VVD",
+    "link": "https://nos.nl/l/2639247",
+    "categorie": "politiek",
+    "zwaar": false,
+    "status": "voorstel",
+    "post": null,
+    "opties": [
+     {
+      "vers_id": "Psalms-29-11-11",
+      "ref": "Psalm 29:11",
+      "tekst": "De HEERE zal Zijn volk sterkte geven; de HEERE zal Zijn volk zegenen met vrede.",
+      "zin": "Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.",
+      "kernwoord": "vrede",
+      "betekenis": "Deze psalm beschrijft een enorme storm. Donder, bliksem, bomen die breken. En dan eindigt hij met dit vers: God geeft kracht en vrede. Midden in de storm.",
+      "toepassing": "Zit je in een storm? Vraag God vandaag om kracht en vrede.",
+      "brug": "Een vast punt in veel geluid.",
+      "caption": "Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.\n\n\"De HEERE zal Zijn volk sterkte geven; de HEERE zal Zijn volk zegenen met vrede.\"\nPsalm 29:11\n\nEen vast punt in veel geluid. Midden in de storm geeft God vrede.\n\nWaar heb jij vrede voor nodig?",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111307010-1-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111307010-1-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111307010-1-3.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111307010-1-4.jpg"
+      ]
+     },
+     {
+      "vers_id": "Proverbs-30-5-5",
+      "ref": "Spreuken 30:5",
+      "tekst": "Alle rede Gods is doorlouterd; Hij is een Schild dengenen, die op Hem betrouwen.",
+      "zin": "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.",
+      "kernwoord": "Schild",
+      "betekenis": "Spreuken zegt dat Gods woorden betrouwbaar zijn, gezuiverd zoals goud in vuur. En God zelf beschermt wie op Hem vertrouwt.",
+      "toepassing": "Kies vandaag een woord van God om op te vertrouwen en houd het de hele dag vast.",
+      "brug": "Een vast punt in veel geluid.",
+      "caption": "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.\n\n\"Alle rede Gods is doorlouterd; Hij is een Schild dengenen, die op Hem betrouwen.\"\nSpreuken 30:5\n\nEen vast punt in veel geluid. Gods woorden zijn betrouwbaar.\n\nWelk woord van God vertrouw jij?",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111307010-2-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111307010-2-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111307010-2-3.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111307010-2-4.jpg"
+      ]
+     },
+     {
+      "vers_id": "Psalms-112-7-7",
+      "ref": "Psalm 112:7",
+      "tekst": "Hij zal voor geen kwaad gerucht vrezen; zijn hart is vast, betrouwende op den HEERE.",
+      "zin": "Veel meningen, veel onrust. Even terug naar wat vaststaat.",
+      "kernwoord": "vast",
+      "betekenis": "De dichter beschrijft iemand die God vertrouwt. Slecht nieuws kan komen, maar zijn hart blijft vast. Niet omdat hij nergens om geeft, maar omdat hij weet wie hij vertrouwt.",
+      "toepassing": "Merk je vandaag onrust bij het nieuws? Leg het bij God neer en adem even rustig.",
+      "brug": "Een vast punt in veel geluid.",
+      "caption": "Veel meningen, veel onrust. Even terug naar wat vaststaat.\n\n\"Hij zal voor geen kwaad gerucht vrezen; zijn hart is vast, betrouwende op den HEERE.\"\nPsalm 112:7\n\nEen vast punt in veel geluid. Een hart dat op God vertrouwt, blijft vast.\n\nHoe ga jij om met slecht nieuws?",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111307010-3-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111307010-3-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111307010-3-3.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111307010-3-4.jpg"
+      ]
+     }
+    ]
+   },
+   {
     "id": "n111212010",
     "t": "2026-11-12T09:16+01:00",
     "bron": "NOS",
@@ -7896,19 +7982,6 @@
   ],
   "komend": [
    {
-    "id": "2026-11-13-5",
-    "ref": "Psalm 46:2",
-    "datum": "2026-11-13",
-    "tijdslot": "07:30",
-    "tests": [
-     {
-      "dimensie": "thema",
-      "optie": "troost",
-      "bron": "experiment"
-     }
-    ]
-   },
-   {
     "id": "2026-11-13-1",
     "ref": "Handelingen 1:8",
     "datum": "2026-11-13",
@@ -7923,34 +7996,6 @@
       "dimensie": "thema",
       "optie": "moed",
       "bron": "experiment"
-     }
-    ]
-   },
-   {
-    "id": "2026-11-13-4",
-    "ref": "Efeze 2:10",
-    "datum": "2026-11-13",
-    "tijdslot": "17:45",
-    "tests": [
-     {
-      "dimensie": "huisstijl",
-      "optie": "zonsopgang",
-      "bron": "experiment"
-     },
-     {
-      "dimensie": "thema",
-      "optie": "identiteit",
-      "bron": "experiment"
-     },
-     {
-      "dimensie": "reel_plaatsing",
-      "optie": "midden",
-      "bron": "verkenning"
-     },
-     {
-      "dimensie": "reel_scene",
-      "optie": "dichtbij",
-      "bron": "verkenning"
      }
     ]
    },
@@ -8112,6 +8157,47 @@
      {
       "dimensie": "huisstijl",
       "optie": "salie",
+      "bron": "experiment"
+     },
+     {
+      "dimensie": "reel_plaatsing",
+      "optie": "midden",
+      "bron": "verkenning"
+     }
+    ]
+   },
+   {
+    "id": "2026-11-15-4",
+    "ref": "Filippenzen 4:13",
+    "datum": "2026-11-15",
+    "tijdslot": "17:45",
+    "tests": [
+     {
+      "dimensie": "huisstijl",
+      "optie": "zand",
+      "bron": "experiment"
+     },
+     {
+      "dimensie": "thema",
+      "optie": "moed",
+      "bron": "experiment"
+     }
+    ]
+   },
+   {
+    "id": "2026-11-15-3",
+    "ref": "2 Korinthe 5:17",
+    "datum": "2026-11-15",
+    "tijdslot": "20:30",
+    "tests": [
+     {
+      "dimensie": "huisstijl",
+      "optie": "roze",
+      "bron": "experiment"
+     },
+     {
+      "dimensie": "thema",
+      "optie": "identiteit",
       "bron": "experiment"
      },
      {
