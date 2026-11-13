@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T23:01:10",
+ "updated": "2026-11-13T07:01:20",
  "agents": {
   "verskiezer": {
    "t": "2026-11-12T13:05:11",
@@ -32,13 +32,13 @@
    "state": "done"
   },
   "community": {
-   "t": "2026-11-12T23:01:10",
+   "t": "2026-11-13T07:01:20",
    "task": "1 nieuwe reactie gevonden",
    "state": "done"
   }
  },
  "stats": {
-  "posts_today": 5,
+  "posts_today": 0,
   "posts_total": 26,
   "reach_7d": 137,
   "best_time": "nog onbekend",
@@ -56,6 +56,10 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "23:15",
+   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
   {
    "t": "22:03",
    "msg": "2026-11-12-5 online op instagram: 1 Johannes 4:7"
@@ -99,10 +103,6 @@
   {
    "t": "20:32",
    "msg": "2026-11-12-4 ook als story geplaatst"
-  },
-  {
-   "t": "20:31",
-   "msg": "2026-11-12-3 online op facebook: Psalm 20:8"
   }
  ],
  "lampen": [
@@ -164,7 +164,7 @@
   "formaat": "video"
  },
  "snel_leren": {
-  "dag": 6,
+  "dag": 7,
   "dagen": 7,
   "tot": "2026-11-14"
  }
