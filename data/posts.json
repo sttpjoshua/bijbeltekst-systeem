@@ -5071,7 +5071,7 @@
  {
   "id": "2026-11-15-2",
   "datum": "2026-11-15",
-  "status": "wacht_op_tekst",
+  "status": "gerenderd",
   "vers_id": "Psalms-16-11-11",
   "ref": "Psalm 16:11",
   "tekst": "Gij zult mij het pad des levens bekend maken; verzadiging der vreugde is bij Uw aangezicht; liefelijkheden zijn in Uw rechterhand, eeuwiglijk.",
@@ -5118,16 +5118,16 @@
    "carrousel_stijl": "ingepland",
    "reel_kleur": "ingepland"
   },
-  "hook": "",
+  "hook": "Een nieuwe dag. Neem dit vers mee.",
   "beeld_hook": "",
-  "caption": "",
+  "caption": "Een nieuwe dag. Neem dit vers mee.\n\n\"Gij zult mij het pad des levens bekend maken; verzadiging der vreugde is bij Uw aangezicht; liefelijkheden zijn in Uw rechterhand, eeuwiglijk.\"\nPsalm 16:11\n\nEchte vreugde vind je bij God.",
   "hashtags": [],
-  "uitleg": "",
-  "betekenis": "",
-  "toepassing": "",
-  "kernwoord": "dwaasheid",
-  "verhaal_hook": "Dit is misschien het vieste vers van de Bijbel. En het klopt.",
-  "media": null,
+  "uitleg": "U wijst me de weg van het leven. Bij U is volle vreugde.",
+  "betekenis": "David zegt dat echte vreugde te vinden is bij God. Niet in dingen of succes, maar in Zijn nabijheid. God wijst ook de weg die daarheen leidt.",
+  "toepassing": "Zoek vandaag een rustig moment om alleen bij God te zijn, en merk wat het doet.",
+  "kernwoord": "vreugde",
+  "verhaal_hook": "Waar vind je echte vreugde?",
+  "media": "docs/media/2026-11/2026-11-15-2-1.jpg",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-2-1.jpg",
   "metricool": {},
   "stats": {},
@@ -5136,17 +5136,22 @@
   "geluid": null,
   "tekstbron": "tekstbank",
   "handle": "@bibleverse_nl",
-  "media_extra": [],
-  "thumb": null,
+  "media_extra": [
+   "docs/media/2026-11/2026-11-15-2-2.jpg",
+   "docs/media/2026-11/2026-11-15-2-3.jpg"
+  ],
+  "thumb": "thumbs/2026-11-15-2.jpg",
   "story": "docs/media/2026-11/2026-11-15-2-story.jpg",
   "media_urls": [
    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-2-1.jpg",
    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-2-2.jpg",
-   "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-2-3.jpg",
-   "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-2-4.jpg"
+   "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-2-3.jpg"
   ],
   "story_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-2-story.jpg",
-  "goedgekeurd": null
+  "goedgekeurd": null,
+  "reel_uitleg": "U wijst me de weg van het leven. Bij U is volle vreugde.",
+  "reel_vraag": "Waar zoek jij je vreugde?",
+  "reel_herkenning": "Voor iedereen die zoekt naar echte vreugde."
  },
  {
   "id": "2026-11-15-3",

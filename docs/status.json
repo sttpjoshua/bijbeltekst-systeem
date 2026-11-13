@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T09:01:08",
+ "updated": "2026-11-13T09:02:35",
  "agents": {
   "verskiezer": {
    "t": "2026-11-13T08:01:57",
@@ -7,8 +7,8 @@
    "state": "done"
   },
   "designer": {
-   "t": "2026-11-13T08:01:57",
-   "task": "Ontwierp Psalm 29:11 in stijl mint",
+   "t": "2026-11-13T09:02:35",
+   "task": "Ontwierp Psalm 16:11 in stijl mint",
    "state": "done"
   },
   "video": {
@@ -22,8 +22,8 @@
    "state": "done"
   },
   "controller": {
-   "t": "2026-11-12T14:31:18",
-   "task": "Zelf opgelost: noodpost Efeze 2:10 ingezet om 22:00",
+   "t": "2026-11-13T09:02:35",
+   "task": "Posts klaargezet uit de tekstbank",
    "state": "done"
   },
   "analist": {
@@ -56,6 +56,10 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "09:02",
+   "msg": "Zelfstandig 5 posts klaargezet voor 2026-11-15 (teksten uit de tekstbank)."
+  },
   {
    "t": "08:45",
    "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
@@ -99,10 +103,6 @@
   {
    "t": "22:02",
    "msg": "2026-11-12-2 online op facebook: Psalm 9:2"
-  },
-  {
-   "t": "21:45",
-   "msg": "Eerste-uurcijfers van 3 posts vastgelegd"
   }
  ],
  "lampen": [

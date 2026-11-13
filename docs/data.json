@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-13T09:01",
+ "gegenereerd": "2026-11-13T09:02",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -520,8 +520,8 @@
    "datum": "2026-11-15",
    "ref": "Psalm 16:11",
    "tekst": "Gij zult mij het pad des levens bekend maken; verzadiging der vreugde is bij Uw aangezicht; liefelijkheden zijn in Uw rechterhand, eeuwiglijk.",
-   "hook": "",
-   "status": "wacht_op_tekst",
+   "hook": "Een nieuwe dag. Neem dit vers mee.",
+   "status": "gerenderd",
    "variabelen": {
     "huisstijl": "mint",
     "thema": "dankbaarheid",
@@ -551,17 +551,16 @@
    "reeks": null,
    "reeks_label": null,
    "reserve_ref": null,
-   "caption": "",
-   "uitleg": "",
-   "media": null,
+   "caption": "Een nieuwe dag. Neem dit vers mee.\n\n\"Gij zult mij het pad des levens bekend maken; verzadiging der vreugde is bij Uw aangezicht; liefelijkheden zijn in Uw rechterhand, eeuwiglijk.\"\nPsalm 16:11\n\nEchte vreugde vind je bij God.",
+   "uitleg": "U wijst me de weg van het leven. Bij U is volle vreugde.",
+   "media": "docs/media/2026-11/2026-11-15-2-1.jpg",
    "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-2-1.jpg",
    "media_urls": [
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-2-1.jpg",
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-2-2.jpg",
-    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-2-3.jpg",
-    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-2-4.jpg"
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-2-3.jpg"
    ],
-   "thumb": null,
+   "thumb": "thumbs/2026-11-15-2.jpg",
    "platformen": [],
    "links": {},
    "totaal": {},
@@ -4754,11 +4753,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-11T22:05:26",
-   "soort": "info",
-   "tekst": "2026-11-11-n2200 online op facebook: Romeinen 15:4"
-  },
-  {
    "t": "2026-11-12T07:01:20",
    "soort": "fout",
    "tekst": "Politiek nieuws (NOS): \"Wekdienst 12/11: Erop of eronder voor kabinet • Hoger beroep tegen Erasmusschutter\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
@@ -5058,6 +5052,11 @@
    "t": "2026-11-13T08:45:47",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-13T09:02:35",
+   "soort": "info",
+   "tekst": "Zelfstandig 5 posts klaargezet voor 2026-11-15 (teksten uit de tekstbank)."
   }
  ],
  "recente_fouten": [],
@@ -5207,7 +5206,7 @@
    "detail": "1 nieuwe aanleidingen"
   },
   "maken": {
-   "ok": "2026-11-12T09:19",
+   "ok": "2026-11-13T09:02",
    "laatst_ok": true,
    "detail": "5 posts klaargezet"
   },
