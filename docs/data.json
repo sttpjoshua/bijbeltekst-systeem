@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-13T21:30",
+ "gegenereerd": "2026-11-13T21:45",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1374,8 +1374,26 @@
    "links": {
     "instagram": "https://www.instagram.com/reel/DfsYytdBw5p/"
    },
-   "totaal": {},
-   "per_platform": {},
+   "totaal": {
+    "views": 0,
+    "reach": 0,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0
+   },
+   "per_platform": {
+    "instagram": {
+     "views": 0,
+     "reach": 0,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "t": null
+    }
+   },
    "score": {},
    "keuzebron": {
     "huisstijl": "experiment",
@@ -1397,7 +1415,19 @@
     "hashtag_stijl": "test",
     "reel_kleur": "ingepland"
    },
-   "momenten": {},
+   "momenten": {
+    "instagram": {
+     "1u": {
+      "views": 0,
+      "reach": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": null
+     }
+    }
+   },
    "pub": {
     "instagram": "2026-11-13T20:32+01:00"
    },
@@ -1458,8 +1488,26 @@
    "links": {
     "facebook": "https://www.facebook.com/1015160368352770_122134519892879910"
    },
-   "totaal": {},
-   "per_platform": {},
+   "totaal": {
+    "views": 0,
+    "reach": 0,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0
+   },
+   "per_platform": {
+    "facebook": {
+     "views": null,
+     "reach": null,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": null,
+     "follows": null,
+     "t": null
+    }
+   },
    "score": {},
    "keuzebron": {
     "huisstijl": "joshua",
@@ -1479,7 +1527,19 @@
     "carrousel_stijl": "joshua",
     "reel_kleur": "joshua"
    },
-   "momenten": {},
+   "momenten": {
+    "facebook": {
+     "1u": {
+      "views": null,
+      "reach": null,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": null,
+      "follows": null
+     }
+    }
+   },
    "pub": {
     "facebook": "2026-11-13T20:32+01:00"
    },
@@ -1560,6 +1620,16 @@
      "saves": 0,
      "follows": 0,
      "t": "2026-11-13T19:01+01:00"
+    },
+    "facebook": {
+     "views": null,
+     "reach": null,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": null,
+     "follows": null,
+     "t": null
     }
    },
    "score": {},
@@ -1590,6 +1660,17 @@
       "shares": 0,
       "saves": 0,
       "follows": 0
+     }
+    },
+    "facebook": {
+     "1u": {
+      "views": null,
+      "reach": null,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": null,
+      "follows": null
      }
     }
    },
@@ -4940,11 +5021,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-12T13:05:11",
-   "soort": "info",
-   "tekst": "Bediening: Nieuwsposts aangepast: Psalm 20:8 (17:45), 1 Johannes 3:1 (22:00)"
-  },
-  {
    "t": "2026-11-12T13:31:07",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
@@ -5241,6 +5317,11 @@
    "t": "2026-11-13T20:32:22",
    "soort": "info",
    "tekst": "2026-11-13-2 online op facebook: Mattheüs 10:30-31"
+  },
+  {
+   "t": "2026-11-13T21:45:44",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 3 posts vastgelegd"
   }
  ],
  "recente_fouten": [
@@ -5388,7 +5469,7 @@
    "fout": "2026-11-11T13:49",
    "laatst_ok": true,
    "detail": "1 bericht(en) verstuurd",
-   "ok": "2026-11-13T16:15"
+   "ok": "2026-11-13T21:30"
   },
   "nieuws": {
    "ok": "2026-11-13T17:01",

@@ -4055,6 +4055,18 @@
      "follows": 0,
      "avg_watch_ms": null
     }
+   },
+   "facebook": {
+    "1u": {
+     "views": null,
+     "reach": null,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": null,
+     "follows": null,
+     "avg_watch_ms": null
+    }
    }
   },
   "beeld": null,
@@ -4189,7 +4201,20 @@
   "media": "docs/media/2026-11/2026-11-13-2-1.jpg",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-13-2-1.jpg",
   "metricool": {},
-  "stats": {},
+  "stats": {
+   "facebook": {
+    "1u": {
+     "views": null,
+     "reach": null,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": null,
+     "follows": null,
+     "avg_watch_ms": null
+    }
+   }
+  },
   "beeld": null,
   "muziek": null,
   "geluid": null,
@@ -4303,7 +4328,20 @@
   "media": "docs/media/2026-11/2026-11-13-3.mp4",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-13-3.mp4",
   "metricool": {},
-  "stats": {},
+  "stats": {
+   "instagram": {
+    "1u": {
+     "views": 0,
+     "reach": 0,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "avg_watch_ms": 0
+    }
+   }
+  },
   "beeld": null,
   "muziek": "ES_A Higher Calling - Mandala Dreams.mp3",
   "geluid": null,
