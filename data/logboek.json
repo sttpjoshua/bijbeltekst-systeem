@@ -1195,7 +1195,8 @@
   "soort": "fout",
   "tekst": "Politiek nieuws (NOS): \"Crisisoverleg Jetten over toekomst coalitie, wachten op duidelijkheid VVD\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
   "code": "nieuws_voorstel",
-  "post": "n111307010"
+  "post": "n111307010",
+  "opgelost": true
  },
  {
   "t": "2026-11-13T07:33:16",
@@ -1211,5 +1212,15 @@
   "t": "2026-11-13T07:33:24",
   "soort": "info",
   "tekst": "2026-11-13-4 online op facebook: Efeze 2:10"
+ },
+ {
+  "t": "2026-11-13T08:01:57",
+  "soort": "info",
+  "tekst": "Nieuwspost: Handelingen 1:8 vervangen door Psalm 29:11 (aanleiding: politiek, NOS)"
+ },
+ {
+  "t": "2026-11-13T08:01:57",
+  "soort": "info",
+  "tekst": "Bediening: Nieuwspost klaargezet: Psalm 29:11 op 2026-11-13 om 12:15"
  }
 ]

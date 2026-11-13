@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-13T07:45",
+ "gegenereerd": "2026-11-13T08:02",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1372,22 +1372,22 @@
   {
    "id": "2026-11-13-1",
    "datum": "2026-11-13",
-   "ref": "Handelingen 1:8",
-   "tekst": "Maar gij zult ontvangen de kracht des Heiligen Geestes, Die over u komen zal; en gij zult Mijn getuigen zijn, zo te Jeruzalem, als in geheel Judea en Samaria, en tot aan het uiterste der aarde.",
-   "hook": "Even dit, voor je verder gaat.",
+   "ref": "Psalm 29:11",
+   "tekst": "De HEERE zal Zijn volk sterkte geven; de HEERE zal Zijn volk zegenen met vrede.",
+   "hook": "Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.",
    "status": "gerenderd",
    "variabelen": {
     "huisstijl": "mint",
-    "thema": "moed",
+    "thema": "vrede_rust",
     "hook_stijl": "rustig",
     "formaat": "carrousel",
     "uitleg_op_beeld": false,
     "achtergrondbron": "verloop",
-    "boekgroep": "brieven",
-    "lengte": "lang",
+    "boekgroep": "psalmen",
+    "lengte": "kort",
     "bron": "bekend",
     "vraag_onderaan": true,
-    "opening": "stopper",
+    "opening": "verhaal",
     "tijdslot": "12:15",
     "tijdslot_fb": "20:30",
     "palet": "mint",
@@ -1396,14 +1396,15 @@
     "achtergrond": "diagonaal",
     "hook_op_beeld": false,
     "video_uitleg": null,
-    "hashtag_stijl": "mix"
+    "hashtag_stijl": "mix",
+    "aanleiding": "nieuws"
    },
-   "vers_id": "Acts-1-8-8",
+   "vers_id": "Psalms-29-11-11",
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
    "reserve_ref": "Micha 6:8",
-   "caption": "Even dit, voor je verder gaat.\n\n\"Maar gij zult ontvangen de kracht des Heiligen Geestes, Die over u komen zal; en gij zult Mijn getuigen zijn, zo te Jeruzalem, als in geheel Judea en Samaria, en tot aan het uiterste der aarde.\"\nHandelingen 1:8\n\nJe hoeft niet op eigen kracht te getuigen. God geeft de kracht die je nodig hebt.\n\nWaar heb jij vandaag Gods kracht voor nodig?",
+   "caption": "Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.\n\n\"De HEERE zal Zijn volk sterkte geven; de HEERE zal Zijn volk zegenen met vrede.\"\nPsalm 29:11\n\nEen vast punt in veel geluid. Midden in de storm geeft God vrede.\n\nWaar heb jij vrede voor nodig?",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-13-1-1.jpg",
    "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-13-1-1.jpg",
@@ -1430,16 +1431,23 @@
     "lengte": "experiment",
     "bron": "experiment",
     "vraag_onderaan": "experiment",
-    "opening": "experiment",
+    "opening": "nieuws",
     "tijdslot": "experiment",
     "video_uitleg": "n.v.t.",
-    "hashtag_stijl": "test"
+    "hashtag_stijl": "test",
+    "aanleiding": "nieuws"
    },
    "momenten": {},
    "pub": {},
    "gemist": [],
    "nood": false,
-   "nieuws": null,
+   "nieuws": {
+    "categorie": "politiek",
+    "kop": "Crisisoverleg Jetten over toekomst coalitie, wachten op duidelijkheid VVD",
+    "bron": "NOS",
+    "link": "https://nos.nl/l/2639247",
+    "zwaar": false
+   },
    "online": null
   },
   {
@@ -4686,16 +4694,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-11T21:10:30",
-   "soort": "info",
-   "tekst": "Bediening: WhatsApp-testbericht klaargezet"
-  },
-  {
-   "t": "2026-11-11T22:05:18",
-   "soort": "info",
-   "tekst": "2026-11-11-n2200 ook als story geplaatst"
-  },
-  {
    "t": "2026-11-11T22:05:18",
    "soort": "info",
    "tekst": "2026-11-11-n2200 online op instagram: Romeinen 15:4"
@@ -4973,7 +4971,8 @@
    "soort": "fout",
    "tekst": "Politiek nieuws (NOS): \"Crisisoverleg Jetten over toekomst coalitie, wachten op duidelijkheid VVD\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
    "code": "nieuws_voorstel",
-   "post": "n111307010"
+   "post": "n111307010",
+   "opgelost": true
   },
   {
    "t": "2026-11-13T07:33:16",
@@ -4989,17 +4988,19 @@
    "t": "2026-11-13T07:33:24",
    "soort": "info",
    "tekst": "2026-11-13-4 online op facebook: Efeze 2:10"
-  }
- ],
- "recente_fouten": [
+  },
   {
-   "t": "2026-11-13T07:01:26",
-   "soort": "fout",
-   "tekst": "Politiek nieuws (NOS): \"Crisisoverleg Jetten over toekomst coalitie, wachten op duidelijkheid VVD\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
-   "code": "nieuws_voorstel",
-   "post": "n111307010"
+   "t": "2026-11-13T08:01:57",
+   "soort": "info",
+   "tekst": "Nieuwspost: Handelingen 1:8 vervangen door Psalm 29:11 (aanleiding: politiek, NOS)"
+  },
+  {
+   "t": "2026-11-13T08:01:57",
+   "soort": "info",
+   "tekst": "Bediening: Nieuwspost klaargezet: Psalm 29:11 op 2026-11-13 om 12:15"
   }
  ],
+ "recente_fouten": [],
  "versen_totaal": 300,
  "reacties": [],
  "inzichten_extra": {
@@ -5109,7 +5110,7 @@
    "ok": "2026-11-12T09:45"
   },
   "reacties": {
-   "ok": "2026-11-13T07:01",
+   "ok": "2026-11-13T08:02",
    "laatst_ok": true,
    "detail": "1 nieuwe reacties",
    "fout": "2026-11-08T18:00"
@@ -5436,8 +5437,8 @@
    },
    "moed": {
     "totaal": 44,
-    "beschikbaar": 37,
-    "nooit": 39
+    "beschikbaar": 38,
+    "nooit": 40
    },
    "liefde": {
     "totaal": 67,
@@ -5476,8 +5477,8 @@
    },
    "vrede_rust": {
     "totaal": 42,
-    "beschikbaar": 39,
-    "nooit": 39
+    "beschikbaar": 38,
+    "nooit": 38
    }
   },
   "verzen_totaal": 558,
@@ -5751,8 +5752,8 @@
    "kw": "kracht",
    "herkenning": "",
    "uit": false,
-   "laatst": "2026-11-13",
-   "n": 1
+   "laatst": null,
+   "n": 0
   },
   {
    "id": "Colossians-2-7-7",
@@ -7164,8 +7165,8 @@
    "kw": "vrede",
    "herkenning": "Voor iedereen die midden in een storm zit.",
    "uit": false,
-   "laatst": null,
-   "n": 0
+   "laatst": "2026-11-13",
+   "n": 1
   },
   {
    "id": "Psalms-30-3-3",
@@ -7534,8 +7535,8 @@
     "link": "https://nos.nl/l/2639247",
     "categorie": "politiek",
     "zwaar": false,
-    "status": "voorstel",
-    "post": null,
+    "status": "gemaakt",
+    "post": "2026-11-13-1",
     "opties": [
      {
       "vers_id": "Psalms-29-11-11",
@@ -7897,7 +7898,7 @@
      {
       "optie": "moed",
       "online": 3,
-      "gepland": 2,
+      "gepland": 1,
       "n": 0,
       "gem": null,
       "oordeel": "weinig data"
@@ -7961,7 +7962,7 @@
      {
       "optie": "vrede_rust",
       "online": 1,
-      "gepland": 2,
+      "gepland": 3,
       "n": 0,
       "gem": null,
       "oordeel": "weinig data"
@@ -7983,7 +7984,7 @@
   "komend": [
    {
     "id": "2026-11-13-1",
-    "ref": "Handelingen 1:8",
+    "ref": "Psalm 29:11",
     "datum": "2026-11-13",
     "tijdslot": "12:15",
     "tests": [
@@ -7994,7 +7995,7 @@
      },
      {
       "dimensie": "thema",
-      "optie": "moed",
+      "optie": "vrede_rust",
       "bron": "experiment"
      }
     ]
@@ -8507,9 +8508,9 @@
   },
   {
    "datum": "2026-11-17",
-   "ref": "Psalm 18:3",
-   "tekst": "De HEERE is mijn Steenrots, en mijn Burg, en mijn Uithelper; mijn God, mijn Rots, op Welken ik betrouw; mijn Schild, en de Hoorn mijns heils, mijn Hoog Vertrek.",
-   "vers_id": "Psalms-18-3-3",
+   "ref": "Psalm 27:14",
+   "tekst": "Wacht op den HEERE, zijt sterk, en Hij zal uw hart versterken, ja, wacht op den HEERE.",
+   "vers_id": "Psalms-27-14-14",
    "variabelen": {
     "huisstijl": "papier_groen",
     "thema": "moed",
@@ -8518,7 +8519,7 @@
     "uitleg_op_beeld": true,
     "achtergrondbron": "verloop",
     "boekgroep": "psalmen",
-    "lengte": "middel",
+    "lengte": "kort",
     "bron": "bekend",
     "vraag_onderaan": false,
     "reel_stijl": "markeren",
@@ -9215,9 +9216,9 @@
   },
   {
    "datum": "2026-11-19",
-   "ref": "Micha 7:7",
-   "tekst": "Maar ik zal uitzien naar den HEERE, ik zal wachten op de God mijns heils; mijn God zal mij horen.",
-   "vers_id": "Micah-7-7-7",
+   "ref": "Psalm 130:5",
+   "tekst": "Ik verwacht den HEERE; mijn ziel verwacht, en ik hoop op Zijn Woord.",
+   "vers_id": "Psalms-130-5-5",
    "variabelen": {
     "huisstijl": "roze",
     "thema": "hoop",
@@ -9225,8 +9226,8 @@
     "formaat": "video",
     "uitleg_op_beeld": false,
     "achtergrondbron": "verloop",
-    "boekgroep": "profeten",
-    "lengte": "middel",
+    "boekgroep": "psalmen",
+    "lengte": "kort",
     "bron": "bekend",
     "vraag_onderaan": false,
     "reel_stijl": "situatie",
@@ -9381,6 +9382,301 @@
     "reel_kleur": "n.v.t.",
     "reel_plaatsing": "experiment",
     "reel_scene": "experiment",
+    "reel_haak": "n.v.t.",
+    "opening": "n.v.t.",
+    "hashtag_stijl": "experiment",
+    "tijdslot": "experiment",
+    "video_uitleg": "vaste regel"
+   },
+   "reeks": null,
+   "reeks_label": null
+  },
+  {
+   "datum": "2026-11-20",
+   "ref": "Jesaja 55:12",
+   "tekst": "Want in blijdschap zult gijlieden uittrekken, en met vrede voortgeleid worden; de bergen en heuvelen zullen geschal maken met vrolijk gezang voor uw aangezicht, en alle bomen des velds zullen de handen samenklappen.",
+   "vers_id": "Isaiah-55-12-12",
+   "variabelen": {
+    "huisstijl": "papier_groen",
+    "thema": "vrede_rust",
+    "hook_stijl": "rustig",
+    "formaat": "video",
+    "uitleg_op_beeld": true,
+    "achtergrondbron": "beeld",
+    "boekgroep": "profeten",
+    "lengte": "lang",
+    "bron": "bekend",
+    "vraag_onderaan": false,
+    "reel_stijl": "situatie",
+    "carrousel_stijl": null,
+    "reel_kleur": null,
+    "reel_plaatsing": "midden",
+    "reel_scene": "onderweg",
+    "reel_haak": "geen",
+    "opening": null,
+    "hashtag_stijl": "mix",
+    "tijdslot": "07:30",
+    "tijdslot_fb": "17:45",
+    "palet": "papier_groen",
+    "lettertype": "cormorant",
+    "layout": "links",
+    "achtergrond": "papier",
+    "hook_op_beeld": false,
+    "aanleiding": "tijdloos",
+    "video_uitleg": true
+   },
+   "keuzebron": {
+    "huisstijl": "ochtend",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "reel_stijl": "vaste regel",
+    "carrousel_stijl": "n.v.t.",
+    "reel_kleur": "n.v.t.",
+    "reel_plaatsing": "experiment",
+    "reel_scene": "experiment",
+    "reel_haak": "n.v.t.",
+    "opening": "n.v.t.",
+    "hashtag_stijl": "experiment",
+    "tijdslot": "experiment",
+    "video_uitleg": "vaste regel"
+   },
+   "reeks": null,
+   "reeks_label": null
+  },
+  {
+   "datum": "2026-11-20",
+   "ref": "Hooglied 8:7",
+   "tekst": "Vele wateren zouden deze liefde niet kunnen uitblussen; ja, de rivieren zouden ze niet verdrinken; al gaf iemand al het goed van zijn huis voor deze liefde, men zou hem te enenmale verachten.",
+   "vers_id": "Song_of_Solomon-8-7-7",
+   "variabelen": {
+    "huisstijl": "zand",
+    "thema": "liefde",
+    "hook_stijl": "geen",
+    "formaat": "carrousel",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "verloop",
+    "boekgroep": "wijsheid",
+    "lengte": "lang",
+    "bron": "bekend",
+    "vraag_onderaan": false,
+    "reel_stijl": null,
+    "carrousel_stijl": "markeren",
+    "reel_kleur": "roze",
+    "reel_plaatsing": null,
+    "reel_scene": null,
+    "reel_haak": null,
+    "opening": "vers",
+    "hashtag_stijl": "zoekwoord",
+    "tijdslot": "20:30",
+    "tijdslot_fb": "17:45",
+    "palet": "zand",
+    "lettertype": "dmserif",
+    "layout": "centraal",
+    "achtergrond": "verloop",
+    "hook_op_beeld": false,
+    "aanleiding": "tijdloos",
+    "video_uitleg": null
+   },
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "reel_stijl": "n.v.t.",
+    "carrousel_stijl": "experiment",
+    "reel_kleur": "experiment",
+    "reel_plaatsing": "n.v.t.",
+    "reel_scene": "n.v.t.",
+    "reel_haak": "n.v.t.",
+    "opening": "stijl markeren",
+    "hashtag_stijl": "experiment",
+    "tijdslot": "experiment",
+    "video_uitleg": "n.v.t."
+   },
+   "reeks": null,
+   "reeks_label": null
+  },
+  {
+   "datum": "2026-11-20",
+   "ref": "1 Johannes 3:18",
+   "tekst": "Mijn kinderkens, laat ons niet liefhebben met den woorde, noch met de tong, maar met de daad en waarheid.",
+   "vers_id": "I_John-3-18-18",
+   "variabelen": {
+    "huisstijl": "avond",
+    "thema": "liefde",
+    "hook_stijl": "herkenning",
+    "formaat": "video",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "verloop",
+    "boekgroep": "brieven",
+    "lengte": "middel",
+    "bron": "bekend",
+    "vraag_onderaan": true,
+    "reel_stijl": "situatie",
+    "carrousel_stijl": null,
+    "reel_kleur": null,
+    "reel_plaatsing": "midden",
+    "reel_scene": "dichtbij",
+    "reel_haak": "geen",
+    "opening": null,
+    "hashtag_stijl": "zoekwoord",
+    "tijdslot": "17:45",
+    "tijdslot_fb": "20:30",
+    "palet": "nacht",
+    "lettertype": "playfair",
+    "layout": "citaat",
+    "achtergrond": "licht",
+    "hook_op_beeld": false,
+    "aanleiding": "tijdloos",
+    "video_uitleg": true
+   },
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "reel_stijl": "vaste regel",
+    "carrousel_stijl": "n.v.t.",
+    "reel_kleur": "n.v.t.",
+    "reel_plaatsing": "experiment",
+    "reel_scene": "experiment",
+    "reel_haak": "n.v.t.",
+    "opening": "n.v.t.",
+    "hashtag_stijl": "experiment",
+    "tijdslot": "experiment",
+    "video_uitleg": "vaste regel"
+   },
+   "reeks": null,
+   "reeks_label": null
+  },
+  {
+   "datum": "2026-11-20",
+   "ref": "Johannes 1:12",
+   "tekst": "Maar zovelen Hem aangenomen hebben, dien heeft Hij macht gegeven kinderen Gods te worden, namelijk die in Zijn Naam geloven.",
+   "vers_id": "John-1-12-12",
+   "variabelen": {
+    "huisstijl": "papier_rood",
+    "thema": "identiteit",
+    "hook_stijl": "geen",
+    "formaat": "video",
+    "uitleg_op_beeld": true,
+    "achtergrondbron": "verloop",
+    "boekgroep": "evangelien",
+    "lengte": "middel",
+    "bron": "bekend",
+    "vraag_onderaan": false,
+    "reel_stijl": "situatie",
+    "carrousel_stijl": null,
+    "reel_kleur": null,
+    "reel_plaatsing": "midden",
+    "reel_scene": "onderweg",
+    "reel_haak": "geen",
+    "opening": null,
+    "hashtag_stijl": "mix",
+    "tijdslot": "12:15",
+    "tijdslot_fb": "12:15",
+    "palet": "papier_rood",
+    "lettertype": "cormorant",
+    "layout": "links",
+    "achtergrond": "papier",
+    "hook_op_beeld": false,
+    "aanleiding": "tijdloos",
+    "video_uitleg": true
+   },
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "reel_stijl": "vaste regel",
+    "carrousel_stijl": "n.v.t.",
+    "reel_kleur": "n.v.t.",
+    "reel_plaatsing": "experiment",
+    "reel_scene": "experiment",
+    "reel_haak": "n.v.t.",
+    "opening": "n.v.t.",
+    "hashtag_stijl": "experiment",
+    "tijdslot": "experiment",
+    "video_uitleg": "vaste regel"
+   },
+   "reeks": null,
+   "reeks_label": null
+  },
+  {
+   "datum": "2026-11-20",
+   "ref": "Handelingen 1:8",
+   "tekst": "Maar gij zult ontvangen de kracht des Heiligen Geestes, Die over u komen zal; en gij zult Mijn getuigen zijn, zo te Jeruzalem, als in geheel Judea en Samaria, en tot aan het uiterste der aarde.",
+   "vers_id": "Acts-1-8-8",
+   "variabelen": {
+    "huisstijl": "schaduw_rood",
+    "thema": "moed",
+    "hook_stijl": "rustig",
+    "formaat": "video",
+    "uitleg_op_beeld": true,
+    "achtergrondbron": "verloop",
+    "boekgroep": "brieven",
+    "lengte": "lang",
+    "bron": "bekend",
+    "vraag_onderaan": false,
+    "reel_stijl": "markeren",
+    "carrousel_stijl": null,
+    "reel_kleur": "mint",
+    "reel_plaatsing": null,
+    "reel_scene": null,
+    "reel_haak": "geen",
+    "opening": null,
+    "hashtag_stijl": "zoekwoord",
+    "tijdslot": "22:00",
+    "tijdslot_fb": "20:30",
+    "palet": "papier_rood",
+    "lettertype": "cormorant",
+    "layout": "links",
+    "achtergrond": "papier_schaduw",
+    "hook_op_beeld": false,
+    "aanleiding": "tijdloos",
+    "video_uitleg": true
+   },
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "reel_stijl": "test markeren",
+    "carrousel_stijl": "n.v.t.",
+    "reel_kleur": "experiment",
+    "reel_plaatsing": "n.v.t.",
+    "reel_scene": "n.v.t.",
     "reel_haak": "n.v.t.",
     "opening": "n.v.t.",
     "hashtag_stijl": "experiment",

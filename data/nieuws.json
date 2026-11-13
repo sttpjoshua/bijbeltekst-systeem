@@ -122,7 +122,7 @@
   "id": "n111307010",
   "categorie": "politiek",
   "zwaar": false,
-  "status": "voorstel",
+  "status": "gemaakt",
   "opties": [
    {
     "vers_id": "Psalms-29-11-11",
@@ -175,6 +175,7 @@
      "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111307010-3-4.jpg"
     ]
    }
-  ]
+  ],
+  "post": "2026-11-13-1"
  }
 ]
