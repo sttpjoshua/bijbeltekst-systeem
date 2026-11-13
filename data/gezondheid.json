@@ -5,20 +5,20 @@
   "detail": "Psalm 29:11 geplaatst"
  },
  "instagram_lezen": {
-  "ok": "2026-11-12T13:41",
+  "ok": "2026-11-13T13:10",
   "laatst_ok": true,
   "detail": "3 volgers"
  },
  "sleutel_instagram": {
   "verloopt": "nooit",
   "geldig": true,
-  "ok": "2026-11-12T13:41",
+  "ok": "2026-11-13T13:10",
   "laatst_ok": true
  },
  "sleutel_facebook": {
   "verloopt": "nooit",
   "geldig": true,
-  "ok": "2026-11-12T13:41",
+  "ok": "2026-11-13T13:10",
   "laatst_ok": true
  },
  "materiaal_actions": {
@@ -28,7 +28,7 @@
   "ok": "2026-11-12T09:45"
  },
  "reacties": {
-  "ok": "2026-11-13T13:01",
+  "ok": "2026-11-13T13:10",
   "laatst_ok": true,
   "detail": "1 nieuwe reacties",
   "fout": "2026-11-08T18:00"
@@ -39,9 +39,9 @@
   "detail": "Efeze 2:10 geplaatst"
  },
  "statistieken": {
-  "ok": "2026-11-12T13:41",
+  "ok": "2026-11-13T13:10",
   "laatst_ok": true,
-  "detail": "12 nieuwe metingen"
+  "detail": "9 nieuwe metingen"
  },
  "zelftest": {
   "ok": "2026-11-12T14:36",
@@ -75,7 +75,7 @@
   "detail": "alles klopte"
  },
  "leren": {
-  "ok": "2026-11-12T13:41",
+  "ok": "2026-11-13T13:10",
   "laatst_ok": true,
   "detail": "dagelijks (snel leren)"
  }
