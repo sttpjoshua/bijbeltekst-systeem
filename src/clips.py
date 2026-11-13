@@ -10,7 +10,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import systeem as S
 
 API = "https://api.coverr.co"
-MAP = os.environ.get("CLIPS_MAP", os.path.join(os.path.dirname(S.P(".")), "bibleverse-clips"))
+MAP = os.environ.get("CLIPS_MAP", os.path.join(os.path.dirname(os.path.abspath(S.ROOT)), "bibleverse-clips"))  # naast de repo, nooit erin
 
 # Scènesoorten: per soort zoektermen (Engels, zo zoekt Coverr). 'situatie' = herkenbaar moment (opening),
 # de andere soorten zijn rustige beelden onder het vers.

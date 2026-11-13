@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T16:03:03",
+ "updated": "2026-11-13T16:06:10",
  "agents": {
   "verskiezer": {
    "t": "2026-11-13T08:01:57",
@@ -22,9 +22,9 @@
    "state": "done"
   },
   "controller": {
-   "t": "2026-11-13T09:02:35",
-   "task": "Posts klaargezet uit de tekstbank",
-   "state": "done"
+   "t": "2026-11-13T16:06:09",
+   "task": "ACTIE VOOR JOU: verwijder de dubbele posts van 12 nov 20:30. Instagram",
+   "state": "error"
   },
   "analist": {
    "t": "2026-11-13T13:09:28",
@@ -57,6 +57,26 @@
  ],
  "log": [
   {
+   "t": "16:06",
+   "msg": "Dagelijkse run (zelfstandig): 10 posts voor 14 en 15 november gecontroleerd, reserveverzen voor 15 november in"
+  },
+  {
+   "t": "16:06",
+   "msg": "ACTIE VOOR JOU: verwijder de dubbele posts van 12 nov 20:30. Instagram: de eerste reel van Spreuken 15:14 (ins"
+  },
+  {
+   "t": "16:06",
+   "msg": "Zelf opgelost: Coverr-clips werden in de repo-map opgeslagen en daardoor meegecommit (map bibleverse-clips, 30"
+  },
+  {
+   "t": "16:06",
+   "msg": "Zelf opgelost: op 12 nov om 20:30 zijn Spreuken 15:14 (Instagram en Facebook) en Psalm 20:8 (Facebook) twee ke"
+  },
+  {
+   "t": "16:06",
+   "msg": "Materiaal-repo niet gekloond (add_repo ontbreekt in deze sessie); Actions vult muziek aan"
+  },
+  {
    "t": "13:30",
    "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
   },
@@ -83,26 +103,6 @@
   {
    "t": "08:45",
    "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
-   "t": "08:01",
-   "msg": "Bediening: Nieuwspost klaargezet: Psalm 29:11 op 2026-11-13 om 12:15"
-  },
-  {
-   "t": "08:01",
-   "msg": "Nieuwspost: Handelingen 1:8 vervangen door Psalm 29:11 (aanleiding: politiek, NOS)"
-  },
-  {
-   "t": "07:33",
-   "msg": "2026-11-13-4 online op facebook: Efeze 2:10"
-  },
-  {
-   "t": "07:33",
-   "msg": "2026-11-13-5 online op instagram: Psalm 46:2"
-  },
-  {
-   "t": "07:33",
-   "msg": "2026-11-13-5 ook als story geplaatst"
   }
  ],
  "lampen": [

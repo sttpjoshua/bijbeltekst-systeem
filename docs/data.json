@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-13T16:03",
+ "gegenereerd": "2026-11-13T16:06",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -319,7 +319,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Jeremia 31:3",
    "caption": "Een vaste grond, ook als je niets ziet.\n\n\"Het geloof nu is een vaste grond der dingen, die men hoopt, en een bewijs der zaken, die men niet ziet.\"\nHebreeën 11:1\n\nGeloof is vertrouwen op wat je nog niet ziet.\n\nWaar hoop jij op dat je nog niet ziet?",
    "uitleg": "Geloof is zeker zijn van wat je hoopt, ook als je het nog niet ziet.",
    "media": "docs/media/2026-11/2026-11-15-5.mp4",
@@ -397,7 +397,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Spreuken 1:7",
    "caption": "Voor iedereen die het gevoel heeft dat het te veel wordt.\n\n\"Ik vermag alle dingen door Christus, Die mij kracht geeft.\"\nFilippenzen 4:13\n\nDe kracht komt niet uit jou, maar uit Hem.\n\nWaar heb jij vandaag extra kracht voor nodig?",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-15-4.mp4",
@@ -475,7 +475,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Spreuken 30:5",
    "caption": "Voor iedereen die vastzit in wie hij vroeger was.\n\n\"Zo dan, indien iemand in Christus is, die is een nieuw schepsel; het oude is voorbijgegaan, ziet, het is alles nieuw geworden.\"\n2 Korinthe 5:17\n\nBij God mag je opnieuw beginnen.\n\nWaar wil jij opnieuw mee beginnen?",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-15-3.mp4",
@@ -550,7 +550,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Romeinen 8:16",
    "caption": "Een nieuwe dag. Neem dit vers mee.\n\n\"Gij zult mij het pad des levens bekend maken; verzadiging der vreugde is bij Uw aangezicht; liefelijkheden zijn in Uw rechterhand, eeuwiglijk.\"\nPsalm 16:11\n\nEchte vreugde vind je bij God.",
    "uitleg": "U wijst me de weg van het leven. Bij U is volle vreugde.",
    "media": "docs/media/2026-11/2026-11-15-2-1.jpg",
@@ -628,7 +628,7 @@
    "goedgekeurd": null,
    "reeks": "Vers van de week",
    "reeks_label": "VERS VAN DE WEEK",
-   "reserve_ref": null,
+   "reserve_ref": "Filippenzen 4:6-7",
    "caption": "Vers van de week: Ben jij moe van alles wat moet?\n\n\"Neemt Mijn juk op u, en leert van Mij, dat Ik zachtmoedig ben en nederig van hart; en gij zult rust vinden voor uw zielen. Want Mijn juk is zacht, en Mijn last is licht.\"\nMattheüs 11:29-30\n\nBij Jezus mag je uitrusten.\n\nWelke last zou jij willen neerleggen?",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-15-1.mp4",
@@ -4877,31 +4877,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-12T08:18:48",
-   "soort": "info",
-   "tekst": "Zelfstandig 10 posts klaargezet voor 2026-11-13, 2026-11-14 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "2026-11-12T09:02:55",
-   "soort": "info",
-   "tekst": "Zelfstandig 10 posts klaargezet voor 2026-11-13, 2026-11-14 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "2026-11-12T09:06:20",
-   "soort": "info",
-   "tekst": "Nieuwspost: Psalm 119:99 vervangen door Psalm 20:8 (aanleiding: politiek, NOS)"
-  },
-  {
-   "t": "2026-11-12T09:06:20",
-   "soort": "info",
-   "tekst": "Bediening: Nieuwspost klaargezet: Psalm 20:8 op 2026-11-12 om 17:45"
-  },
-  {
-   "t": "2026-11-12T09:10:52",
-   "soort": "info",
-   "tekst": "Zelfstandig 10 posts klaargezet voor 2026-11-13, 2026-11-14 (teksten uit de tekstbank)."
-  },
-  {
    "t": "2026-11-12T09:14:55",
    "soort": "info",
    "tekst": "Zelfstandig 5 posts klaargezet voor 2026-11-14 (teksten uit de tekstbank)."
@@ -5178,9 +5153,40 @@
    "t": "2026-11-13T13:30:55",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-13T16:06:09",
+   "soort": "info",
+   "tekst": "Materiaal-repo niet gekloond (add_repo ontbreekt in deze sessie); Actions vult muziek aan"
+  },
+  {
+   "t": "2026-11-13T16:06:09",
+   "soort": "info",
+   "tekst": "Zelf opgelost: op 12 nov om 20:30 zijn Spreuken 15:14 (Instagram en Facebook) en Psalm 20:8 (Facebook) twee keer geplaatst. Oorzaak: een run die in de wachtrij stond werkte met een oude stand van de repo en zag niet dat de vorige run al had gepost. Alle workflows halen nu altijd de nieuwste stand van main op (checkout ref: main)."
+  },
+  {
+   "t": "2026-11-13T16:06:09",
+   "soort": "info",
+   "tekst": "Zelf opgelost: Coverr-clips werden in de repo-map opgeslagen en daardoor meegecommit (map bibleverse-clips, 30 video's). clips.py bewaart ze nu naast de repo, de map staat in .gitignore en is uit de repo gehaald. Ze staan nog wel in de geschiedenis van commit 0ce9249."
+  },
+  {
+   "t": "2026-11-13T16:06:09",
+   "soort": "fout",
+   "tekst": "ACTIE VOOR JOU: verwijder de dubbele posts van 12 nov 20:30. Instagram: de eerste reel van Spreuken 15:14 (instagram.com/reel/Dfp0DcShY6i). Facebook: de eerste Spreuken 15:14 (facebook.com/1533085548880750) en de eerste Psalm 20:8 (facebook.com/1015160368352770_122134423388879910). De tweede versies houden we, daarvan worden de cijfers gemeten."
+  },
+  {
+   "t": "2026-11-13T16:06:09",
+   "soort": "info",
+   "tekst": "Dagelijkse run (zelfstandig): 10 posts voor 14 en 15 november gecontroleerd, reserveverzen voor 15 november ingevuld"
   }
  ],
- "recente_fouten": [],
+ "recente_fouten": [
+  {
+   "t": "2026-11-13T16:06:09",
+   "soort": "fout",
+   "tekst": "ACTIE VOOR JOU: verwijder de dubbele posts van 12 nov 20:30. Instagram: de eerste reel van Spreuken 15:14 (instagram.com/reel/Dfp0DcShY6i). Facebook: de eerste Spreuken 15:14 (facebook.com/1533085548880750) en de eerste Psalm 20:8 (facebook.com/1015160368352770_122134423388879910). De tweede versies houden we, daarvan worden de cijfers gemeten."
+  }
+ ],
  "versen_totaal": 300,
  "reacties": [],
  "inzichten_extra": {
@@ -5311,9 +5317,9 @@
    "detail": "12 onderdelen gemaakt en gecontroleerd"
   },
   "dagelijks": {
-   "ok": "2026-11-12T14:37",
+   "ok": "2026-11-13T16:06",
    "laatst_ok": true,
-   "detail": "10 posts voor MORGEN en OVERMORGEN klaargezet"
+   "detail": "10 posts voor 14 en 15 november klaargezet"
   },
   "whatsapp": {
    "fout": "2026-11-11T13:49",
