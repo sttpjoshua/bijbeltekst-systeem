@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-13T20:15",
+ "gegenereerd": "2026-11-13T20:32",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1368,8 +1368,12 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-13-3.mp4"
    ],
    "thumb": "thumbs/2026-11-13-3.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "instagram"
+   ],
+   "links": {
+    "instagram": "https://www.instagram.com/reel/DfsYytdBw5p/"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -1394,11 +1398,13 @@
     "reel_kleur": "ingepland"
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "instagram": "2026-11-13T20:32+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": null,
-   "online": null
+   "online": "2026-11-13T20:32+01:00"
   },
   {
    "id": "2026-11-13-2",
@@ -1446,8 +1452,12 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-13-2-3.jpg"
    ],
    "thumb": "thumbs/2026-11-13-2.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "facebook"
+   ],
+   "links": {
+    "facebook": "https://www.facebook.com/1015160368352770_122134519892879910"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -1470,11 +1480,13 @@
     "reel_kleur": "joshua"
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "facebook": "2026-11-13T20:32+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": null,
-   "online": null
+   "online": "2026-11-13T20:32+01:00"
   },
   {
    "id": "2026-11-13-1",
@@ -1482,7 +1494,7 @@
    "ref": "Psalm 29:11",
    "tekst": "De HEERE zal Zijn volk sterkte geven; de HEERE zal Zijn volk zegenen met vrede.",
    "hook": "Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "mint",
     "thema": "vrede_rust",
@@ -1523,10 +1535,12 @@
    ],
    "thumb": "thumbs/2026-11-13-1.jpg",
    "platformen": [
-    "instagram"
+    "instagram",
+    "facebook"
    ],
    "links": {
-    "instagram": "https://www.instagram.com/p/DfrgLzrFzIj/"
+    "instagram": "https://www.instagram.com/p/DfrgLzrFzIj/",
+    "facebook": "https://www.facebook.com/1015160368352770_122134519160879910"
    },
    "totaal": {
     "views": 1,
@@ -1580,7 +1594,8 @@
     }
    },
    "pub": {
-    "instagram": "2026-11-13T12:16+01:00"
+    "instagram": "2026-11-13T12:16+01:00",
+    "facebook": "2026-11-13T20:31+01:00"
    },
    "gemist": [],
    "nood": false,
@@ -4925,26 +4940,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-12T12:17:12",
-   "soort": "info",
-   "tekst": "2026-11-12-2 online op instagram: Psalm 9:2"
-  },
-  {
-   "t": "2026-11-12T12:43:45",
-   "soort": "info",
-   "tekst": "Bediening: Psalm 20:8 opnieuw gemaakt (stijl meelees-abrikoos, achtergrond kleurverloop, eerste slide vers)"
-  },
-  {
-   "t": "2026-11-12T13:05:10",
-   "soort": "info",
-   "tekst": "Nieuwspost aangepast: Psalm 20:8 is nu Psalm 20:8 (politiek): Veel meningen, veel onrust. Even terug naar wat vaststaat."
-  },
-  {
-   "t": "2026-11-12T13:05:11",
-   "soort": "info",
-   "tekst": "Nieuwspost aangepast: Psalm 92:2 is nu 1 Johannes 3:1 (sinterklaas): Het is bijna intocht. Wat is het mooiste cadeau dat je ooit kreeg?"
-  },
-  {
    "t": "2026-11-12T13:05:11",
    "soort": "info",
    "tekst": "Bediening: Nieuwsposts aangepast: Psalm 20:8 (17:45), 1 Johannes 3:1 (22:00)"
@@ -5226,6 +5221,26 @@
    "t": "2026-11-13T19:02:29",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-13T20:31:05",
+   "soort": "info",
+   "tekst": "2026-11-13-1 online op facebook: Psalm 29:11"
+  },
+  {
+   "t": "2026-11-13T20:32:14",
+   "soort": "info",
+   "tekst": "2026-11-13-3 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-13T20:32:14",
+   "soort": "info",
+   "tekst": "2026-11-13-3 online op instagram: Spreuken 17:28"
+  },
+  {
+   "t": "2026-11-13T20:32:22",
+   "soort": "info",
+   "tekst": "2026-11-13-2 online op facebook: Mattheüs 10:30-31"
   }
  ],
  "recente_fouten": [
@@ -5316,9 +5331,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-13T17:47",
+   "ok": "2026-11-13T20:32",
    "laatst_ok": true,
-   "detail": "Efeze 2:10 geplaatst"
+   "detail": "Spreuken 17:28 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-13T13:10",
@@ -5350,9 +5365,9 @@
    "fout": "2026-11-08T18:00"
   },
   "facebook": {
-   "ok": "2026-11-13T17:45",
+   "ok": "2026-11-13T20:32",
    "laatst_ok": true,
-   "detail": "Psalm 46:2 geplaatst"
+   "detail": "Mattheüs 10:30-31 geplaatst"
   },
   "statistieken": {
    "ok": "2026-11-13T13:10",
@@ -5442,9 +5457,9 @@
  ],
  "weken": {
   "deze": {
-   "posts": 28,
-   "reach": 156,
-   "views": 242,
+   "posts": 29,
+   "reach": 157,
+   "views": 243,
    "likes": 28,
    "comments": 3,
    "saves": 0,
@@ -5665,7 +5680,7 @@
   "tot": "2026-11-14",
   "dag": 7,
   "dagen": 7,
-  "online": 28,
+  "online": 29,
   "gemeten": 2
  },
  "voorraad": {
@@ -8072,8 +8087,8 @@
      },
      {
       "optie": "mint",
-      "online": 4,
-      "gepland": 4,
+      "online": 5,
+      "gepland": 3,
       "n": 0,
       "gem": null,
       "oordeel": "weinig data"
@@ -8213,8 +8228,8 @@
      },
      {
       "optie": "vrede_rust",
-      "online": 1,
-      "gepland": 3,
+      "online": 2,
+      "gepland": 2,
       "n": 0,
       "gem": null,
       "oordeel": "weinig data"
@@ -8234,37 +8249,6 @@
    }
   ],
   "komend": [
-   {
-    "id": "2026-11-13-3",
-    "ref": "Spreuken 17:28",
-    "datum": "2026-11-13",
-    "tijdslot": "20:30",
-    "tests": [
-     {
-      "dimensie": "huisstijl",
-      "optie": "perzik",
-      "bron": "experiment"
-     },
-     {
-      "dimensie": "thema",
-      "optie": "humor_herkenbaar",
-      "bron": "experiment"
-     }
-    ]
-   },
-   {
-    "id": "2026-11-13-2",
-    "ref": "Mattheüs 10:30-31",
-    "datum": "2026-11-13",
-    "tijdslot": "22:00",
-    "tests": [
-     {
-      "dimensie": "thema",
-      "optie": "identiteit",
-      "bron": "experiment"
-     }
-    ]
-   },
    {
     "id": "2026-11-14-2",
     "ref": "Sefanja 3:17",
