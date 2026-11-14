@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-14T17:01",
+ "gegenereerd": "2026-11-14T17:15",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -6132,9 +6132,9 @@
    "ok": "2026-11-14T07:32"
   },
   "nieuws": {
-   "ok": "2026-11-14T12:01",
+   "ok": "2026-11-14T17:01",
    "laatst_ok": true,
-   "detail": "0 nieuwe aanleidingen"
+   "detail": "1 nieuwe aanleidingen"
   },
   "maken": {
    "ok": "2026-11-14T09:04",
@@ -8529,6 +8529,18 @@
    "licht_automatisch": true
   },
   "recent": [
+   {
+    "id": "n111417010",
+    "t": "2026-11-14T12:25+01:00",
+    "bron": "NOS",
+    "kop": "Sinterklaasmysterie na weken onthuld, Gijs Naber volgt Stefan de Walle op",
+    "link": "https://nos.nl/l/2639457",
+    "categorie": "sinterklaas",
+    "zwaar": false,
+    "status": "overgeslagen",
+    "post": null,
+    "opties": null
+   },
    {
     "id": "n111407011",
     "t": "2026-11-14T06:30+01:00",
