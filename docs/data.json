@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-14T21:30",
+ "gegenereerd": "2026-11-14T21:45",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1228,6 +1228,16 @@
      "saves": null,
      "follows": null,
      "t": "2026-11-14T19:01+01:00"
+    },
+    "instagram": {
+     "views": 0,
+     "reach": 0,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": 0,
+     "t": null
     }
    },
    "score": {},
@@ -1257,6 +1267,17 @@
       "shares": 0,
       "saves": null,
       "follows": null
+     }
+    },
+    "instagram": {
+     "1u": {
+      "views": 0,
+      "reach": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0
      }
     }
    },
@@ -5771,11 +5792,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-12T21:45:53",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 3 posts vastgelegd"
-  },
-  {
    "t": "2026-11-12T22:02:17",
    "soort": "info",
    "tekst": "2026-11-12-2 online op facebook: Psalm 9:2"
@@ -6074,6 +6090,11 @@
    "t": "2026-11-14T21:30:48",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-14T21:45:28",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
   }
  ],
  "recente_fouten": [
@@ -6228,7 +6249,7 @@
    "fout": "2026-11-11T13:49",
    "laatst_ok": true,
    "detail": "1 bericht(en) verstuurd",
-   "ok": "2026-11-14T07:32"
+   "ok": "2026-11-14T21:30"
   },
   "nieuws": {
    "ok": "2026-11-14T17:01",
