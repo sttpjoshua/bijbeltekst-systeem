@@ -76,7 +76,7 @@ DIMENSIES = {
     "reel_haak": ["geen", "vraag"],  # alleen video: eerst 1,4 s een grote vraag in beeld
     "opening": ["vers", "stopper", "verhaal"],  # carrousel: slide 1 het hele vers, een korte grote 'stopper', of eerst de uitleg als haak ('verhaal eerst')
     "hashtag_stijl": ["mix", "zoekwoord", "zonder"],  # mix = vaste tags uit de tekstbank; zoekwoord = kernwoord, boek en #bijbelvers
-    "tijdslot": ["07:30", "12:15", "17:45", "20:30", "22:00"],
+    "tijdslot": ["04:00", "12:15", "17:45", "20:30", "22:00"],  # eerste post van de dag standaard 04:00 (Joshua, 14 nov; was 07:30)
 }
 
 try:  # extra tijdsloten die het systeem zelf heeft voorgesteld (zie cmd_tijd_voorstel)
@@ -1717,7 +1717,7 @@ def cmd_reels_vernieuwen():
     print(f"{n} reels gaan opnieuw gemaakt worden")
 
 def cmd_ochtend_vernieuwen():
-    """Geplande 07:30-posts (vanaf morgen, nog niet geplaatst) krijgen een ochtendvers en ochtendstijl."""
+    """Geplande ochtendposts (04:00) (vanaf morgen, nog niet geplaatst) krijgen een ochtendvers en ochtendstijl."""
     cfg, strat = laad("config.json"), vul_strategie_aan(laad("strategie.json") or nieuwe_strategie())
     posts = laad("data/posts.json", [])
     morgen = (dt.date.today() + dt.timedelta(days=1)).isoformat()
@@ -1748,7 +1748,7 @@ def cmd_ochtend_vernieuwen():
             v["huisstijl"] = random.Random(p["id"] + "licht").choice(LICHTE_STIJLEN)
             v.update(HUISSTIJLEN[v["huisstijl"]])
             p.setdefault("keuzebron", {})["huisstijl"] = "ochtend"
-        v["tijdslot"] = "07:30"
+        v["tijdslot"] = "04:00"
         p["status"] = "wacht_op_tekst"; n += 1
         print(p["datum"], p["ref"], v.get("formaat"))
     bewaar("data/posts.json", posts)

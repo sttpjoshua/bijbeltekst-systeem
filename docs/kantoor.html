@@ -500,7 +500,7 @@ requestAnimationFrame(frame);
 /* ---------- state, panel ---------- */
 const S={posts:0,reach:0,best:'-',learn:'Wacht op de eerste data.',
   plat:[{n:'Instagram',k:'instagram',v:0},{n:'Facebook',k:'facebook',v:0},{n:'YouTube Shorts',k:'youtube',v:0},{n:'TikTok',k:'tiktok',v:0}],
-  actief:['instagram'],slots:['07:30','12:15','17:45','20:30','22:00'],nextIso:null};
+  actief:['instagram'],slots:['04:00','12:15','17:45','20:30','22:00'],nextIso:null};
 let LOG=[];let live=false;
 const hhmm=()=>new Date().toLocaleTimeString('nl-NL',{hour:'2-digit',minute:'2-digit'});
 function log(msg){LOG.unshift({t:hhmm(),msg});if(LOG.length>40)LOG.pop();renderLog()}
@@ -605,7 +605,7 @@ const pick=a=>a[Math.floor(Math.random()*a.length)];
 const A=id=>AG.find(a=>a.id===id);
 const VERZEN=['Johannes 3:16','Psalm 23:1','Filippenzen 4:13','Jozua 1:9','Jesaja 41:10','Spreuken 3:5','Romeinen 8:28','Matteüs 11:28','Psalm 46:2','1 Korintiërs 13:4'];
 const KLEUREN=['zonsopgang goud','hemelsblauw','diep paars','zachtroze','bosgroen'];
-const LEER=['Posts rond 07:30 krijgen 38% meer bereik','Hemelsblauw scoort beter dan goud','Korte verzen worden vaker bewaard','Video\'s van 9 seconden houden kijkers langer vast','Psalmen doen het beter op zondagavond'];
+const LEER=['Posts rond 04:00 krijgen 38% meer bereik','Hemelsblauw scoort beter dan goud','Korte verzen worden vaker bewaard','Video\'s van 9 seconden houden kijkers langer vast','Psalmen doen het beter op zondagavond'];
 function setS(id,state,task){const a=A(id);a.state=state;a.task=task||''}
 function finish(id,msg){setS(id,'done','Klaar');if(msg)log(msg);setTimeout(()=>{if(A(id).state==='done')setS(id,'idle','')},1800)}
 async function work(id,task,ms,msg){if(live)return;setS(id,'working',task);await sleep(ms);finish(id,msg)}
@@ -688,7 +688,7 @@ const gtok=()=>{try{return localStorage.getItem(KEY)}catch(e){return null}};
 const AGBY=id=>AG.find(a=>a.id===id);
 const cap1=x=>x[0].toUpperCase()+x.slice(1);
 const ROLE={
- verskiezer:{wat:'Kiest elke dag de verzen en de stijl voor de posts van morgen. Kijkt eerst naar wat goed scoorde en probeert af en toe iets nieuws. De post van 07:30 is altijd een vers voor een goede start van de dag, met een Goedemorgen-regel in de caption.',wanneer:'Dagelijks, bij het klaarzetten van morgen'},
+ verskiezer:{wat:'Kiest elke dag de verzen en de stijl voor de posts van morgen. Kijkt eerst naar wat goed scoorde en probeert af en toe iets nieuws. De post van 04:00 is altijd een vers voor een goede start van de dag, met een Goedemorgen-regel in de caption.',wanneer:'Dagelijks, bij het klaarzetten van morgen'},
  designer:{wat:'Maakt de carrousels in twee soorten: de standaardstijl (kleurstijl, achtergrond, eerste slide) en de meelees-stijl met een markeerstreep onder het vers, in vijf kleuren met eigen lettertype. Kijkt elk beeld na en keurt af wat niet klopt.',wanneer:'Dagelijks, samen met de Verskiezer'},
  video:{wat:'Maakt de reels in vijf soorten: herkenbare situatie met echte videobeelden (de standaard), meelees-reel met markeerstreep in vijf kleuren, en klassiek, kinetisch en foto-reels. Altijd met uitleg en muziek.',wanneer:'Dagelijks, voor posts in videoformaat'},
  dispatcher:{wat:'Zet elk kwartier de posts online die klaarstaan, op Instagram en Facebook. Een post die meer dan 3 uur te laat is, slaat hij over.',wanneer:'Elk kwartier'},

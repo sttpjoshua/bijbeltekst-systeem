@@ -19,7 +19,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PAD = os.path.join(ROOT, "data", "tekstbank.json")
 HOOKSTIJLEN = ("vraag", "herkenning", "uitdaging", "rustig")
 
-# Ochtendposts (Joshua, 12 nov): het 07:30-slot krijgt altijd een vers voor een goede start van de dag
+# Ochtendposts (Joshua, 12 nov): het ochtendslot (04:00, eerder 07:30) krijgt altijd een vers voor een goede start van de dag
 OCHTEND_VERZEN = frozenset("""
 Lamentations-3-22-23 Psalms-118-24-24 Psalms-143-8-8
 Psalms-27-1-1 Psalms-92-2-2 Psalms-100-4-4 Psalms-103-1-1
