@@ -5169,6 +5169,18 @@
      "follows": null,
      "avg_watch_ms": 1630
     }
+   },
+   "facebook": {
+    "1u": {
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "avg_watch_ms": null
+    }
    }
   },
   "beeld": "pexels-kyli-katja-2154618559-33529747.jpg",
@@ -5614,7 +5626,32 @@
   "media": "docs/media/2026-11/2026-11-14-5-1.jpg",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-14-5-1.jpg",
   "metricool": {},
-  "stats": {},
+  "stats": {
+   "instagram": {
+    "1u": {
+     "views": 3,
+     "reach": 1,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": 0,
+     "avg_watch_ms": null
+    }
+   },
+   "facebook": {
+    "1u": {
+     "views": null,
+     "reach": null,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": null,
+     "follows": null,
+     "avg_watch_ms": null
+    }
+   }
+  },
   "beeld": "pexels-cacito-10020710.jpg",
   "muziek": null,
   "geluid": null,
