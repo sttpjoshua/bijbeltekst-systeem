@@ -196,3 +196,4 @@ Carrousel in de meelees-stijl (12 nov): dimensie `carrousel_stijl` (standaard | 
 
 ## Eerste post om 04:00 (14 nov)
 - Het ochtendslot is van 07:30 naar 04:00 gegaan (DIMENSIES, reeksen.json, kantoor). Geplande posts vanaf 15 nov zijn verplaatst; de post van vandaag blijft 07:30. Oude 07:30-metingen blijven in de cijfers staan.
+- Het systeem schuift het ochtendslot zelf naar 06:30 en daarna 07:30 als 04:00 na 8 metingen waarschijnlijk slechter scoort (systeem._ochtend_check, hoogstens een keer per week, config ochtend_slot; geplande posts schuiven mee, logboekmelding).

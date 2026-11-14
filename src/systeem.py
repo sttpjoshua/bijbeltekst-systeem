@@ -79,6 +79,13 @@ DIMENSIES = {
     "tijdslot": ["04:00", "12:15", "17:45", "20:30", "22:00"],  # eerste post van de dag standaard 04:00 (Joshua, 14 nov; was 07:30)
 }
 
+OCHTEND_SLOTS = ["04:00", "06:30", "07:30"]  # kandidaten voor de eerste post van de dag; begint op 04:00 (Joshua), terug naar later als het slecht scoort
+try:  # het systeem mag het ochtendslot verplaatsen (zie _ochtend_check)
+    _o = json.load(open(os.path.join(ROOT, "config.json"), encoding="utf-8")).get("ochtend_slot")
+    if _o and _o in OCHTEND_SLOTS and _o != "04:00":
+        DIMENSIES["tijdslot"][DIMENSIES["tijdslot"].index("04:00")] = _o
+except Exception:
+    pass
 try:  # extra tijdsloten die het systeem zelf heeft voorgesteld (zie cmd_tijd_voorstel)
     for _t in json.load(open(os.path.join(ROOT, "config.json"), encoding="utf-8")).get("extra_tijdsloten") or []:
         if _t not in DIMENSIES["tijdslot"]:
@@ -899,11 +906,45 @@ def cmd_experiment(stil=False):
 def _min(t):
     return int(t[:2]) * 60 + int(t[3:])
 
+def _ochtend_check(cfg):
+    """Het ochtendslot (eerste post van de dag) staat op 04:00. Scoort het na 8 metingen waarschijnlijk slechter dan
+    gemiddeld, dan schuift het systeem het zelf naar het volgende tijdstip (06:30, daarna 07:30) en meldt dat in het logboek.
+    Hoogstens een keer per week; geplande posts (niet geplaatst, vanaf morgen) schuiven mee."""
+    huidig = cfg.get("ochtend_slot") or "04:00"
+    if huidig not in OCHTEND_SLOTS or huidig == OCHTEND_SLOTS[-1]:
+        return False
+    if (cfg.get("ochtend_check_laatst") or "") > (dt.date.today() - dt.timedelta(days=7)).isoformat():
+        return False
+    vals = optie_stats(laad("data/posts.json", [])).get("tijdslot", {}).get(huidig, [])
+    if len(vals) < 8 or oordeel(vals, 8) != "waarschijnlijk slechter":
+        return False
+    nieuw = OCHTEND_SLOTS[OCHTEND_SLOTS.index(huidig) + 1]
+    morgen = (dt.date.today() + dt.timedelta(days=1)).isoformat()
+    posts = laad("data/posts.json", [])
+    n = 0
+    for p in posts:
+        if p["datum"] >= morgen and not p.get("gepubliceerd"):
+            for k in ("tijdslot", "tijdslot_fb"):
+                if p["variabelen"].get(k) == huidig:
+                    p["variabelen"][k] = nieuw; n += 1
+    bewaar("data/posts.json", posts)
+    rk = laad("data/reeksen.json", None)
+    if rk:
+        bewaar("data/reeksen.json", json.loads(json.dumps(rk).replace(f'"tijdslot": "{huidig}"', f'"tijdslot": "{nieuw}"')))
+    if huidig in DIMENSIES["tijdslot"]:
+        DIMENSIES["tijdslot"][DIMENSIES["tijdslot"].index(huidig)] = nieuw
+    cfg["ochtend_slot"] = nieuw
+    cfg["ochtend_check_laatst"] = dt.date.today().isoformat()
+    cmd_log(f"Ochtendslot verplaatst van {huidig} naar {nieuw}: {huidig} scoorde na {len(vals)} metingen waarschijnlijk slechter dan gemiddeld ({n} geplande posts verschoven)")
+    return True
+
 def cmd_tijd_voorstel():
     """Om de twee weken: scoren twee naastliggende tijdsloten allebei boven gemiddeld, dan wordt de tijd daartussen
     bijgezet om te testen (maximaal een extra slot tegelijk). Een extra slot dat na 6 metingen slecht scoort verdwijnt weer."""
     cfg = laad("config.json")
     vandaag = dt.date.today()
+    if _ochtend_check(cfg):
+        bewaar("config.json", cfg)
     if (cfg.get("tijd_voorstel_laatst") or "") > (vandaag - dt.timedelta(days=14)).isoformat():
         return
     st = optie_stats(laad("data/posts.json", [])).get("tijdslot", {})
