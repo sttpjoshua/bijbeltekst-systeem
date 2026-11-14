@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T17:30:51",
+ "updated": "2026-11-14T17:47:26",
  "agents": {
   "verskiezer": {
    "t": "2026-11-14T09:02:39",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-14T12:16:08",
-   "task": "Postte Spreuken 4:7 op instagram",
+   "t": "2026-11-14T17:47:26",
+   "task": "Postte Mattheüs 6:34 op facebook",
    "state": "done"
   },
   "controller": {
@@ -57,6 +57,18 @@
  ],
  "log": [
   {
+   "t": "17:47",
+   "msg": "2026-11-14-4 online op facebook: Mattheüs 6:34"
+  },
+  {
+   "t": "17:47",
+   "msg": "2026-11-14-3 online op instagram: Spreuken 4:23"
+  },
+  {
+   "t": "17:47",
+   "msg": "2026-11-14-3 ook als story geplaatst"
+  },
+  {
    "t": "14:35",
    "msg": "Dagelijkse run (zelfstandig): 10 posts voor 15 en 16 november gecontroleerd, reserveverzen voor 16 november in"
   },
@@ -91,18 +103,6 @@
   {
    "t": "09:04",
    "msg": "Zelfstandig 5 posts klaargezet voor 2026-11-16 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "08:45",
-   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
-   "t": "07:32",
-   "msg": "2026-11-14-1 online op facebook: Spreuken 4:7"
-  },
-  {
-   "t": "07:32",
-   "msg": "2026-11-14-2 online op instagram: Sefanja 3:17"
   }
  ],
  "lampen": [

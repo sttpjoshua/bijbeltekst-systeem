@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-14T17:30",
+ "gegenereerd": "2026-11-14T17:47",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1202,8 +1202,12 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-14-4-4.jpg"
    ],
    "thumb": "thumbs/2026-11-14-4.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "facebook"
+   ],
+   "links": {
+    "facebook": "https://www.facebook.com/1015160368352770_122134599368879910"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -1224,11 +1228,13 @@
     "hashtag_stijl": "test"
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "facebook": "2026-11-14T17:47+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": null,
-   "online": null
+   "online": "2026-11-14T17:47+01:00"
   },
   {
    "id": "2026-11-14-3",
@@ -1276,8 +1282,12 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-14-3.mp4"
    ],
    "thumb": "thumbs/2026-11-14-3.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "instagram"
+   ],
+   "links": {
+    "instagram": "https://www.instagram.com/reel/DfuqqdGM971/"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -1301,11 +1311,13 @@
     "hashtag_stijl": "test"
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "instagram": "2026-11-14T17:47+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": null,
-   "online": null
+   "online": "2026-11-14T17:47+01:00"
   },
   {
    "id": "2026-11-14-2",
@@ -5672,21 +5684,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-12T20:31:16",
-   "soort": "info",
-   "tekst": "2026-11-12-3 online op facebook: Psalm 20:8"
-  },
-  {
-   "t": "2026-11-12T20:32:46",
-   "soort": "info",
-   "tekst": "2026-11-12-4 ook als story geplaatst"
-  },
-  {
-   "t": "2026-11-12T20:32:46",
-   "soort": "info",
-   "tekst": "2026-11-12-4 online op instagram: Spreuken 15:14"
-  },
-  {
    "t": "2026-11-12T20:32:57",
    "soort": "info",
    "tekst": "2026-11-12-4 online op facebook: Spreuken 15:14"
@@ -5975,6 +5972,21 @@
    "t": "2026-11-14T14:35:57",
    "soort": "info",
    "tekst": "Dagelijkse run (zelfstandig): 10 posts voor 15 en 16 november gecontroleerd, reserveverzen voor 16 november ingevuld (Psalm 85:9, Jesaja 30:15 en Prediker 12:12 als reserve overgeslagen: los van de context niet geschikt)"
+  },
+  {
+   "t": "2026-11-14T17:47:12",
+   "soort": "info",
+   "tekst": "2026-11-14-3 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-14T17:47:12",
+   "soort": "info",
+   "tekst": "2026-11-14-3 online op instagram: Spreuken 4:23"
+  },
+  {
+   "t": "2026-11-14T17:47:26",
+   "soort": "info",
+   "tekst": "2026-11-14-4 online op facebook: Mattheüs 6:34"
   }
  ],
  "recente_fouten": [
@@ -6072,9 +6084,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-14T12:16",
+   "ok": "2026-11-14T17:47",
    "laatst_ok": true,
-   "detail": "Spreuken 4:7 geplaatst"
+   "detail": "Spreuken 4:23 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-14T12:27",
@@ -6106,9 +6118,9 @@
    "fout": "2026-11-08T18:00"
   },
   "facebook": {
-   "ok": "2026-11-14T07:32",
+   "ok": "2026-11-14T17:47",
    "laatst_ok": true,
-   "detail": "Spreuken 4:7 geplaatst"
+   "detail": "Mattheüs 6:34 geplaatst"
   },
   "statistieken": {
    "ok": "2026-11-14T12:27",
@@ -9084,47 +9096,6 @@
   ],
   "komend": [
    {
-    "id": "2026-11-14-3",
-    "ref": "Spreuken 4:23",
-    "datum": "2026-11-14",
-    "tijdslot": "17:45",
-    "tests": [
-     {
-      "dimensie": "huisstijl",
-      "optie": "zand",
-      "bron": "experiment"
-     },
-     {
-      "dimensie": "thema",
-      "optie": "wijsheid",
-      "bron": "experiment"
-     },
-     {
-      "dimensie": "reel_scene",
-      "optie": "onderweg",
-      "bron": "verkenning"
-     }
-    ]
-   },
-   {
-    "id": "2026-11-14-4",
-    "ref": "Mattheüs 6:34",
-    "datum": "2026-11-14",
-    "tijdslot": "20:30",
-    "tests": [
-     {
-      "dimensie": "huisstijl",
-      "optie": "mint",
-      "bron": "experiment"
-     },
-     {
-      "dimensie": "thema",
-      "optie": "vertrouwen",
-      "bron": "experiment"
-     }
-    ]
-   },
-   {
     "id": "2026-11-14-5",
     "ref": "Psalm 62:6",
     "datum": "2026-11-14",
@@ -9300,6 +9271,24 @@
      {
       "dimensie": "huisstijl",
       "optie": "schaduw_blauw",
+      "bron": "experiment"
+     },
+     {
+      "dimensie": "thema",
+      "optie": "dankbaarheid",
+      "bron": "experiment"
+     }
+    ]
+   },
+   {
+    "id": "2026-11-16-4",
+    "ref": "Psalm 47:7",
+    "datum": "2026-11-16",
+    "tijdslot": "22:00",
+    "tests": [
+     {
+      "dimensie": "huisstijl",
+      "optie": "perzik",
       "bron": "experiment"
      },
      {
