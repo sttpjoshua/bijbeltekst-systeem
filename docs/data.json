@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-14T21:15",
+ "gegenereerd": "2026-11-14T21:30",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1341,6 +1341,16 @@
      "saves": 0,
      "follows": null,
      "t": "2026-11-14T19:01+01:00"
+    },
+    "facebook": {
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "t": null
     }
    },
    "score": {},
@@ -1372,6 +1382,17 @@
       "comments": 0,
       "shares": 0,
       "saves": 0,
+      "follows": null
+     }
+    },
+    "facebook": {
+     "1u": {
+      "views": 0,
+      "reach": null,
+      "likes": null,
+      "comments": null,
+      "shares": null,
+      "saves": null,
       "follows": null
      }
     }
@@ -5750,11 +5771,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-12T20:35:55",
-   "soort": "info",
-   "tekst": "2026-11-12-4 online op facebook: Spreuken 15:14"
-  },
-  {
    "t": "2026-11-12T21:45:53",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 3 posts vastgelegd"
@@ -6053,6 +6069,11 @@
    "t": "2026-11-14T20:31:44",
    "soort": "info",
    "tekst": "2026-11-14-4 online op instagram: Mattheüs 6:34"
+  },
+  {
+   "t": "2026-11-14T21:30:48",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
   }
  ],
  "recente_fouten": [
