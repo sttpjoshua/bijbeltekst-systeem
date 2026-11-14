@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-14T08:30",
+ "gegenereerd": "2026-11-14T08:45",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -943,8 +943,26 @@
    "links": {
     "instagram": "https://www.instagram.com/reel/DftkTGygT9o/"
    },
-   "totaal": {},
-   "per_platform": {},
+   "totaal": {
+    "views": 4,
+    "reach": 1,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0
+   },
+   "per_platform": {
+    "instagram": {
+     "views": 4,
+     "reach": 1,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "t": null
+    }
+   },
    "score": {},
    "keuzebron": {
     "huisstijl": "experiment",
@@ -966,7 +984,19 @@
     "hashtag_stijl": "test",
     "reel_kleur": "ingepland"
    },
-   "momenten": {},
+   "momenten": {
+    "instagram": {
+     "1u": {
+      "views": 4,
+      "reach": 1,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": null
+     }
+    }
+   },
    "pub": {
     "instagram": "2026-11-14T07:32+01:00"
    },
@@ -1027,8 +1057,26 @@
    "links": {
     "facebook": "https://www.facebook.com/1015160368352770_122134560956879910"
    },
-   "totaal": {},
-   "per_platform": {},
+   "totaal": {
+    "views": 0,
+    "reach": 0,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0
+   },
+   "per_platform": {
+    "facebook": {
+     "views": null,
+     "reach": null,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": null,
+     "follows": null,
+     "t": null
+    }
+   },
    "score": {},
    "keuzebron": {
     "huisstijl": "experiment",
@@ -1048,7 +1096,19 @@
     "carrousel_stijl": "ingepland",
     "reel_kleur": "ingepland"
    },
-   "momenten": {},
+   "momenten": {
+    "facebook": {
+     "1u": {
+      "views": null,
+      "reach": null,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": null,
+      "follows": null
+     }
+    }
+   },
    "pub": {
     "facebook": "2026-11-14T07:32+01:00"
    },
@@ -5081,11 +5141,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-12T14:34:40",
-   "soort": "info",
-   "tekst": "Materiaal-repo niet gekloond (add_repo ontbreekt in deze sessie); Actions vult muziek aan"
-  },
-  {
    "t": "2026-11-12T14:36:59",
    "soort": "info",
    "tekst": "Zelf opgelost: post 22:00 van vandaag (1 Johannes 4:7, gekozen reservevers) bleef op 'klaar_voor_render' staan met het kernwoord van het oude vers. Kernwoord, openingszin en reelteksten hersteld en opnieuw gemaakt. Bediening neemt bij 'ander vers' nu ook het kernwoord en de openingszin mee. De noodpost (Efeze 2:10, morgen al gepland) is teruggezet in de noodvoorraad; zelfherstel maakt zo'n post voortaan eerst af en kiest geen noodvers dat al gepland staat."
@@ -5384,6 +5439,11 @@
    "t": "2026-11-14T07:32:22",
    "soort": "info",
    "tekst": "2026-11-14-1 online op facebook: Spreuken 4:7"
+  },
+  {
+   "t": "2026-11-14T08:45:39",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
   }
  ],
  "recente_fouten": [

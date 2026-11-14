@@ -4855,7 +4855,20 @@
   "media": "docs/media/2026-11/2026-11-14-1-1.jpg",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-14-1-1.jpg",
   "metricool": {},
-  "stats": {},
+  "stats": {
+   "facebook": {
+    "1u": {
+     "views": null,
+     "reach": null,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": null,
+     "follows": null,
+     "avg_watch_ms": null
+    }
+   }
+  },
   "beeld": "pexels-thalittlemarc-28864326.jpg",
   "muziek": null,
   "geluid": null,
@@ -4972,7 +4985,20 @@
   "media": "docs/media/2026-11/2026-11-14-2.mp4",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-14-2.mp4",
   "metricool": {},
-  "stats": {},
+  "stats": {
+   "instagram": {
+    "1u": {
+     "views": 4,
+     "reach": 1,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "avg_watch_ms": 1169
+    }
+   }
+  },
   "beeld": "pexels-kyli-katja-2154618559-33529747.jpg",
   "muziek": "ES_Rain on Lotus Leaves - Aks & Lakshmi.mp3",
   "geluid": "ES_Ambience, Swamp, Wetland After Rain, Water Dripping, Humid, Distant Fowl - Epidemic Sound.mp3",
