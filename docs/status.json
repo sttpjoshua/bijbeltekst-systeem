@@ -1,19 +1,19 @@
 {
- "updated": "2026-11-14T09:01:12",
+ "updated": "2026-11-14T09:04:16",
  "agents": {
   "verskiezer": {
-   "t": "2026-11-13T08:01:57",
-   "task": "Nieuwspost klaargezet: Psalm 29:11 op 2026-11-13 om 12:15",
+   "t": "2026-11-14T09:02:39",
+   "task": "Koos Jesaja 40:31, 2 Korinthe 1:4, Exodus 14:14, Psalm 47:7, Psalm 136:26",
    "state": "done"
   },
   "designer": {
-   "t": "2026-11-13T16:05:10",
-   "task": "Mattheüs 10:30-31 opnieuw gemaakt (stijl meelees-roze, achtergrond kle",
+   "t": "2026-11-14T09:04:16",
+   "task": "Ontwierp Psalm 136:26 in stijl schaduw_blauw",
    "state": "done"
   },
   "video": {
-   "t": "2026-11-12T09:45:10",
-   "task": "Monteerde video Psalm 46:2 met muziek",
+   "t": "2026-11-14T09:04:16",
+   "task": "Monteerde video Psalm 136:26 met muziek",
    "state": "done"
   },
   "dispatcher": {
@@ -57,6 +57,10 @@
  ],
  "log": [
   {
+   "t": "09:04",
+   "msg": "Zelfstandig 5 posts klaargezet voor 2026-11-16 (teksten uit de tekstbank)."
+  },
+  {
    "t": "08:45",
    "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
   },
@@ -99,10 +103,6 @@
   {
    "t": "20:32",
    "msg": "2026-11-13-2 online op facebook: Mattheüs 10:30-31"
-  },
-  {
-   "t": "20:32",
-   "msg": "2026-11-13-3 online op instagram: Spreuken 17:28"
   }
  ],
  "lampen": [
