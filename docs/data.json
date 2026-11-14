@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-14T07:01",
+ "gegenereerd": "2026-11-14T07:32",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -937,8 +937,12 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-14-2.mp4"
    ],
    "thumb": "thumbs/2026-11-14-2.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "instagram"
+   ],
+   "links": {
+    "instagram": "https://www.instagram.com/reel/DftkTGygT9o/"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -963,11 +967,13 @@
     "reel_kleur": "ingepland"
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "instagram": "2026-11-14T07:32+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": null,
-   "online": null
+   "online": "2026-11-14T07:32+01:00"
   },
   {
    "id": "2026-11-14-1",
@@ -1015,8 +1021,12 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-14-1-3.jpg"
    ],
    "thumb": "thumbs/2026-11-14-1.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "facebook"
+   ],
+   "links": {
+    "facebook": "https://www.facebook.com/1015160368352770_122134560956879910"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -1039,11 +1049,13 @@
     "reel_kleur": "ingepland"
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "facebook": "2026-11-14T07:32+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": null,
-   "online": null
+   "online": "2026-11-14T07:32+01:00"
   },
   {
    "id": "2026-11-13-5",
@@ -5069,26 +5081,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-12T14:01:28",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
-   "t": "2026-11-12T14:15:58",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
-   "t": "2026-11-12T14:31:18",
-   "soort": "info",
-   "tekst": "Zelfherstel: Geen post klaar voor 2026-11-12 22:00 → noodpost Efeze 2:10 ingezet om 22:00"
-  },
-  {
-   "t": "2026-11-12T14:31:25",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
    "t": "2026-11-12T14:34:40",
    "soort": "info",
    "tekst": "Materiaal-repo niet gekloond (add_repo ontbreekt in deze sessie); Actions vult muziek aan"
@@ -5370,6 +5362,28 @@
    "t": "2026-11-13T23:15:54",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-14T07:01:23",
+   "soort": "fout",
+   "tekst": "Politiek nieuws (NOS): \"Italiaanse minister: scholen niet meteen dicht na een bommelding\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
+   "code": "nieuws_voorstel",
+   "post": "n111407010"
+  },
+  {
+   "t": "2026-11-14T07:32:13",
+   "soort": "info",
+   "tekst": "2026-11-14-2 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-14T07:32:13",
+   "soort": "info",
+   "tekst": "2026-11-14-2 online op instagram: Sefanja 3:17"
+  },
+  {
+   "t": "2026-11-14T07:32:22",
+   "soort": "info",
+   "tekst": "2026-11-14-1 online op facebook: Spreuken 4:7"
   }
  ],
  "recente_fouten": [
@@ -5377,6 +5391,13 @@
    "t": "2026-11-13T16:06:09",
    "soort": "fout",
    "tekst": "ACTIE VOOR JOU: verwijder de dubbele posts van 12 nov 20:30. Instagram: de eerste reel van Spreuken 15:14 (instagram.com/reel/Dfp0DcShY6i). Facebook: de eerste Spreuken 15:14 (facebook.com/1533085548880750) en de eerste Psalm 20:8 (facebook.com/1015160368352770_122134423388879910). De tweede versies houden we, daarvan worden de cijfers gemeten."
+  },
+  {
+   "t": "2026-11-14T07:01:23",
+   "soort": "fout",
+   "tekst": "Politiek nieuws (NOS): \"Italiaanse minister: scholen niet meteen dicht na een bommelding\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
+   "code": "nieuws_voorstel",
+   "post": "n111407010"
   }
  ],
  "versen_totaal": 300,
@@ -5460,9 +5481,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-13T22:03",
+   "ok": "2026-11-14T07:32",
    "laatst_ok": true,
-   "detail": "Mattheüs 10:30-31 geplaatst"
+   "detail": "Sefanja 3:17 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-13T13:10",
@@ -5494,9 +5515,9 @@
    "fout": "2026-11-08T18:00"
   },
   "facebook": {
-   "ok": "2026-11-13T22:02",
+   "ok": "2026-11-14T07:32",
    "laatst_ok": true,
-   "detail": "Spreuken 17:28 geplaatst"
+   "detail": "Spreuken 4:7 geplaatst"
   },
   "statistieken": {
    "ok": "2026-11-13T13:10",
@@ -5520,9 +5541,9 @@
    "ok": "2026-11-13T21:30"
   },
   "nieuws": {
-   "ok": "2026-11-13T17:01",
+   "ok": "2026-11-14T07:01",
    "laatst_ok": true,
-   "detail": "1 nieuwe aanleidingen"
+   "detail": "2 nieuwe aanleidingen"
   },
   "maken": {
    "ok": "2026-11-13T09:02",
@@ -7912,6 +7933,81 @@
   },
   "recent": [
    {
+    "id": "n111407011",
+    "t": "2026-11-14T06:30+01:00",
+    "bron": "NU.nl",
+    "kop": "Steeds meer glutenvrije pieten bij intocht: 'Lullig als jij wordt overgeslagen'",
+    "link": "https://www.nu.nl/binnenland/6416351/steeds-meer-glutenvrije-pieten-bij-intocht-lullig-als-jij-wordt-overgeslagen.html",
+    "categorie": "sinterklaas",
+    "zwaar": false,
+    "status": "overgeslagen",
+    "post": null,
+    "opties": null
+   },
+   {
+    "id": "n111407010",
+    "t": "2026-11-14T06:16+01:00",
+    "bron": "NOS",
+    "kop": "Italiaanse minister: scholen niet meteen dicht na een bommelding",
+    "link": "https://nos.nl/l/2639426",
+    "categorie": "politiek",
+    "zwaar": false,
+    "status": "voorstel",
+    "post": null,
+    "opties": [
+     {
+      "vers_id": "Psalms-28-7-7",
+      "ref": "Psalm 28:7",
+      "tekst": "De HEERE is mijn Sterkte en mijn Schild; op Hem heeft mijn hart vertrouwd, en ik ben geholpen; dies springt mijn hart van vreugde, en ik zal Hem met mijn gezang loven.",
+      "zin": "Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.",
+      "kernwoord": "Schild",
+      "betekenis": "David vertelt wat hij heeft meegemaakt: hij vertrouwde op God en werd geholpen. Zijn hart springt van vreugde. Vertrouwen wordt vaak achteraf bevestigd.",
+      "toepassing": "Denk terug aan een keer dat je God vertrouwde. Zing of zeg vandaag een dank.",
+      "brug": "Een vast punt in veel geluid.",
+      "caption": "Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.\n\n\"De HEERE is mijn Sterkte en mijn Schild; op Hem heeft mijn hart vertrouwd, en ik ben geholpen; dies springt mijn hart van vreugde, en ik zal Hem met mijn gezang loven.\"\nPsalm 28:7\n\nEen vast punt in veel geluid. Wie God vertrouwt, ervaart Zijn hulp.",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111407010-1-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111407010-1-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111407010-1-3.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111407010-1-4.jpg"
+      ]
+     },
+     {
+      "vers_id": "Proverbs-2-6-6",
+      "ref": "Spreuken 2:6",
+      "tekst": "Want de HEERE geeft wijsheid; uit Zijn mond komt kennis en verstand.",
+      "zin": "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.",
+      "kernwoord": "wijsheid",
+      "betekenis": "Spreuken zegt dat wijsheid een geschenk van God is. Je hoeft het niet alleen uit te zoeken. Wie God vraagt, krijgt inzicht.",
+      "toepassing": "Vraag God vandaag om inzicht in iets wat je niet snapt.",
+      "brug": "Een vast punt in veel geluid.",
+      "caption": "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.\n\n\"Want de HEERE geeft wijsheid; uit Zijn mond komt kennis en verstand.\"\nSpreuken 2:6\n\nEen vast punt in veel geluid. Wijsheid is een geschenk van God.",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111407010-2-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111407010-2-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111407010-2-3.jpg"
+      ]
+     },
+     {
+      "vers_id": "Ecclesiastes-9-10-10",
+      "ref": "Prediker 9:10",
+      "tekst": "Alles, wat uw hand vindt om te doen, doe dat met uw macht; want er is geen werk, noch verzinning, noch wetenschap, noch wijsheid in het graf, daar gij heengaat.",
+      "zin": "Veel meningen, veel onrust. Even terug naar wat vaststaat.",
+      "kernwoord": "macht",
+      "betekenis": "Prediker zegt: het leven is kort, dus doe wat je doet met volle inzet. Niet half, maar helemaal. Zolang je hier bent, is er werk te doen.",
+      "toepassing": "Kies vandaag één taak en doe die met al je aandacht.",
+      "brug": "Een vast punt in veel geluid.",
+      "caption": "Veel meningen, veel onrust. Even terug naar wat vaststaat.\n\n\"Alles, wat uw hand vindt om te doen, doe dat met uw macht; want er is geen werk, noch verzinning, noch wetenschap, noch wijsheid in het graf, daar gij heengaat.\"\nPrediker 9:10\n\nEen vast punt in veel geluid. Doe wat je doet met heel je hart.",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111407010-3-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111407010-3-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111407010-3-3.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111407010-3-4.jpg"
+      ]
+     }
+    ]
+   },
+   {
     "id": "n111317010",
     "t": "2026-11-13T16:35+01:00",
     "bron": "NU.nl",
@@ -8378,42 +8474,6 @@
    }
   ],
   "komend": [
-   {
-    "id": "2026-11-14-2",
-    "ref": "Sefanja 3:17",
-    "datum": "2026-11-14",
-    "tijdslot": "07:30",
-    "tests": [
-     {
-      "dimensie": "huisstijl",
-      "optie": "roze",
-      "bron": "experiment"
-     },
-     {
-      "dimensie": "thema",
-      "optie": "liefde",
-      "bron": "experiment"
-     }
-    ]
-   },
-   {
-    "id": "2026-11-14-1",
-    "ref": "Spreuken 4:7",
-    "datum": "2026-11-14",
-    "tijdslot": "12:15",
-    "tests": [
-     {
-      "dimensie": "huisstijl",
-      "optie": "avond",
-      "bron": "experiment"
-     },
-     {
-      "dimensie": "thema",
-      "optie": "wijsheid",
-      "bron": "experiment"
-     }
-    ]
-   },
    {
     "id": "2026-11-14-3",
     "ref": "Spreuken 4:23",
