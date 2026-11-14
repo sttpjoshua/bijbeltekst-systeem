@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T20:15:35",
+ "updated": "2026-11-14T20:31:44",
  "agents": {
   "verskiezer": {
    "t": "2026-11-14T09:02:39",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-14T17:47:26",
-   "task": "Postte Mattheüs 6:34 op facebook",
+   "t": "2026-11-14T20:31:44",
+   "task": "Postte Mattheüs 6:34 op instagram",
    "state": "done"
   },
   "controller": {
@@ -38,8 +38,8 @@
   }
  },
  "stats": {
-  "posts_today": 1,
-  "posts_total": 32,
+  "posts_today": 3,
+  "posts_total": 34,
   "reach_7d": 161,
   "best_time": "nog onbekend",
   "next_post": "2026-11-14T07:30:00"
@@ -56,6 +56,18 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "20:31",
+   "msg": "2026-11-14-4 online op instagram: Mattheüs 6:34"
+  },
+  {
+   "t": "20:31",
+   "msg": "2026-11-14-4 ook als story geplaatst"
+  },
+  {
+   "t": "20:30",
+   "msg": "2026-11-14-3 online op facebook: Spreuken 4:23"
+  },
   {
    "t": "19:02",
    "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
@@ -91,18 +103,6 @@
   {
    "t": "12:27",
    "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
-  },
-  {
-   "t": "12:26",
-   "msg": "Statistieken opgehaald voor 10 posts"
-  },
-  {
-   "t": "12:16",
-   "msg": "2026-11-14-1 online op instagram: Spreuken 4:7"
-  },
-  {
-   "t": "12:16",
-   "msg": "2026-11-14-1 ook als story geplaatst"
   }
  ],
  "lampen": [

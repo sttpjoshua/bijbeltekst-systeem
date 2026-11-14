@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-14T20:15",
+ "gegenereerd": "2026-11-14T20:31",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1163,7 +1163,7 @@
    "ref": "Mattheüs 6:34",
    "tekst": "Zijt dan niet bezorgd tegen den morgen; want de morgen zal voor het zijne zorgen; elke dag heeft genoeg aan zijn zelfs kwaad.",
    "hook": "Voor iedereen die vannacht lag te piekeren.",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "mint",
     "thema": "vertrouwen",
@@ -1203,10 +1203,12 @@
    ],
    "thumb": "thumbs/2026-11-14-4.jpg",
    "platformen": [
-    "facebook"
+    "facebook",
+    "instagram"
    ],
    "links": {
-    "facebook": "https://www.facebook.com/1015160368352770_122134599368879910"
+    "facebook": "https://www.facebook.com/1015160368352770_122134599368879910",
+    "instagram": "https://www.instagram.com/p/Dfu9nPtF7MG/"
    },
    "totaal": {
     "views": 0,
@@ -1259,7 +1261,8 @@
     }
    },
    "pub": {
-    "facebook": "2026-11-14T17:47+01:00"
+    "facebook": "2026-11-14T17:47+01:00",
+    "instagram": "2026-11-14T20:31+01:00"
    },
    "gemist": [],
    "nood": false,
@@ -1272,7 +1275,7 @@
    "ref": "Spreuken 4:23",
    "tekst": "Behoed uw hart boven al wat te bewaren is, want daaruit zijn de uitgangen des levens.",
    "hook": "Voor iedereen die merkt dat scrollen niet goed voor hem is.",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "zand",
     "thema": "wijsheid",
@@ -1313,10 +1316,12 @@
    ],
    "thumb": "thumbs/2026-11-14-3.jpg",
    "platformen": [
-    "instagram"
+    "instagram",
+    "facebook"
    ],
    "links": {
-    "instagram": "https://www.instagram.com/reel/DfuqqdGM971/"
+    "instagram": "https://www.instagram.com/reel/DfuqqdGM971/",
+    "facebook": "https://www.facebook.com/4257810651176152"
    },
    "totaal": {
     "views": 23,
@@ -1372,7 +1377,8 @@
     }
    },
    "pub": {
-    "instagram": "2026-11-14T17:47+01:00"
+    "instagram": "2026-11-14T17:47+01:00",
+    "facebook": "2026-11-14T20:30+01:00"
    },
    "gemist": [],
    "nood": false,
@@ -5744,21 +5750,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-12T20:34:12",
-   "soort": "info",
-   "tekst": "2026-11-12-3 online op facebook: Psalm 20:8"
-  },
-  {
-   "t": "2026-11-12T20:35:47",
-   "soort": "info",
-   "tekst": "2026-11-12-4 ook als story geplaatst"
-  },
-  {
-   "t": "2026-11-12T20:35:47",
-   "soort": "info",
-   "tekst": "2026-11-12-4 online op instagram: Spreuken 15:14"
-  },
-  {
    "t": "2026-11-12T20:35:55",
    "soort": "info",
    "tekst": "2026-11-12-4 online op facebook: Spreuken 15:14"
@@ -6047,6 +6038,21 @@
    "t": "2026-11-14T19:02:44",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-14T20:30:45",
+   "soort": "info",
+   "tekst": "2026-11-14-3 online op facebook: Spreuken 4:23"
+  },
+  {
+   "t": "2026-11-14T20:31:44",
+   "soort": "info",
+   "tekst": "2026-11-14-4 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-14T20:31:44",
+   "soort": "info",
+   "tekst": "2026-11-14-4 online op instagram: Mattheüs 6:34"
   }
  ],
  "recente_fouten": [
@@ -6144,9 +6150,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-14T17:47",
+   "ok": "2026-11-14T20:31",
    "laatst_ok": true,
-   "detail": "Spreuken 4:23 geplaatst"
+   "detail": "Mattheüs 6:34 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-14T12:27",
@@ -6178,9 +6184,9 @@
    "fout": "2026-11-08T18:00"
   },
   "facebook": {
-   "ok": "2026-11-14T17:47",
+   "ok": "2026-11-14T20:30",
    "laatst_ok": true,
-   "detail": "Mattheüs 6:34 geplaatst"
+   "detail": "Spreuken 4:23 geplaatst"
   },
   "statistieken": {
    "ok": "2026-11-14T12:27",
@@ -6276,9 +6282,9 @@
  ],
  "weken": {
   "deze": {
-   "posts": 31,
-   "reach": 202,
-   "views": 287,
+   "posts": 33,
+   "reach": 212,
+   "views": 310,
    "likes": 25,
    "comments": 3,
    "saves": 0,
@@ -6499,7 +6505,7 @@
   "tot": "2026-11-14",
   "dag": 8,
   "dagen": 7,
-  "online": 32,
+  "online": 34,
   "gemeten": 2
  },
  "voorraad": {
@@ -8937,8 +8943,8 @@
      },
      {
       "optie": "zand",
-      "online": 2,
-      "gepland": 3,
+      "online": 3,
+      "gepland": 2,
       "n": 0,
       "gem": null,
       "oordeel": "weinig data"
@@ -8993,8 +8999,8 @@
      },
      {
       "optie": "mint",
-      "online": 5,
-      "gepland": 3,
+      "online": 6,
+      "gepland": 2,
       "n": 0,
       "gem": null,
       "oordeel": "weinig data"
@@ -9094,16 +9100,16 @@
      },
      {
       "optie": "vertrouwen",
-      "online": 4,
-      "gepland": 1,
+      "online": 5,
+      "gepland": 0,
       "n": 0,
       "gem": null,
       "oordeel": "weinig data"
      },
      {
       "optie": "wijsheid",
-      "online": 4,
-      "gepland": 1,
+      "online": 5,
+      "gepland": 0,
       "n": 0,
       "gem": null,
       "oordeel": "weinig data"
