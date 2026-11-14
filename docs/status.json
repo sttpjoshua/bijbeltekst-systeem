@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T23:01:13",
+ "updated": "2026-11-14T07:01:15",
  "agents": {
   "verskiezer": {
    "t": "2026-11-13T08:01:57",
@@ -32,13 +32,13 @@
    "state": "done"
   },
   "community": {
-   "t": "2026-11-13T23:01:12",
+   "t": "2026-11-14T07:01:15",
    "task": "1 nieuwe reactie gevonden",
    "state": "done"
   }
  },
  "stats": {
-  "posts_today": 5,
+  "posts_today": 0,
   "posts_total": 31,
   "reach_7d": 142,
   "best_time": "nog onbekend",
@@ -56,6 +56,10 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "23:15",
+   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
   {
    "t": "22:03",
    "msg": "2026-11-13-2 online op instagram: Mattheüs 10:30-31"
@@ -99,10 +103,6 @@
   {
    "t": "17:47",
    "msg": "2026-11-13-4 online op instagram: Efeze 2:10"
-  },
-  {
-   "t": "17:47",
-   "msg": "2026-11-13-4 ook als story geplaatst"
   }
  ],
  "lampen": [
