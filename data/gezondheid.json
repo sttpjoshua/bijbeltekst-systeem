@@ -44,14 +44,14 @@
   "detail": "10 nieuwe metingen"
  },
  "zelftest": {
-  "ok": "2026-11-12T14:36",
+  "ok": "2026-11-14T14:36",
   "laatst_ok": true,
-  "detail": "12 onderdelen gemaakt en gecontroleerd"
+  "detail": "18 onderdelen gemaakt en gecontroleerd"
  },
  "dagelijks": {
-  "ok": "2026-11-13T16:06",
+  "ok": "2026-11-14T14:35",
   "laatst_ok": true,
-  "detail": "10 posts voor 14 en 15 november klaargezet"
+  "detail": "10 posts voor 15 en 16 november klaargezet"
  },
  "whatsapp": {
   "fout": "2026-11-11T13:49",

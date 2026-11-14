@@ -461,6 +461,13 @@ def cmd_kies(datum):
         if len(nieuw) >= n or x["vers_id"] in uitgesloten or x["variabelen"]["tijdslot"] in slots:
             continue
         x = json.loads(json.dumps(x)); x["id"] = f"{datum}-{len(al_vandaag) + len(nieuw) + 1}"
+        # Een oude planning kan nog een verouderd ochtendslot bevatten (bijv. 07:30 na de wissel naar 04:00): volg het huidige
+        ochtend = next((t for t in DIMENSIES["tijdslot"] if t in OCHTEND_SLOTS), None)
+        for k in ("tijdslot", "tijdslot_fb"):
+            if ochtend and x["variabelen"].get(k) in OCHTEND_SLOTS and x["variabelen"][k] != ochtend:
+                x["variabelen"][k] = ochtend
+        if x["variabelen"]["tijdslot"] in slots:
+            continue
         if x["variabelen"].get("formaat") == "afbeelding":
             x["variabelen"]["formaat"] = "carrousel"
         slots.add(x["variabelen"]["tijdslot"]); nieuw.append(x)

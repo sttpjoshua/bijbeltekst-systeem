@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T14:30:52",
+ "updated": "2026-11-14T14:35:57",
  "agents": {
   "verskiezer": {
    "t": "2026-11-14T09:02:39",
@@ -57,6 +57,18 @@
  ],
  "log": [
   {
+   "t": "14:35",
+   "msg": "Dagelijkse run (zelfstandig): 10 posts voor 15 en 16 november gecontroleerd, reserveverzen voor 16 november in"
+  },
+  {
+   "t": "14:35",
+   "msg": "Zelf opgelost: de Moed voor de week-post van 16 nov stond nog op 07:30 omdat de oude planning (van voor de wis"
+  },
+  {
+   "t": "14:33",
+   "msg": "Materiaal-repo niet gekoppeld (add_repo ontbreekt in deze sessie); muziek wordt door GitHub Actions aangevuld"
+  },
+  {
    "t": "13:31",
    "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
   },
@@ -91,18 +103,6 @@
   {
    "t": "07:32",
    "msg": "2026-11-14-2 online op instagram: Sefanja 3:17"
-  },
-  {
-   "t": "07:32",
-   "msg": "2026-11-14-2 ook als story geplaatst"
-  },
-  {
-   "t": "07:01",
-   "msg": "Politiek nieuws (NOS): \"Italiaanse minister: scholen niet meteen dicht na een bommelding\". Neutrale post erove"
-  },
-  {
-   "t": "23:15",
-   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
   }
  ],
  "lampen": [

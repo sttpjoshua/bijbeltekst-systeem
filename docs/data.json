@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-14T14:30",
+ "gegenereerd": "2026-11-14T14:35",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -322,7 +322,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Johannes 1:12",
    "caption": "Schrijf vijf eigen redenen om God te danken.\n\n\"Looft den God des hemels; want Zijn goedertierenheid is in der eeuwigheid.\"\nPsalm 136:26\n\nNa alles wat gebeurt, blijft Gods liefde.",
    "uitleg": "Dank de God van de hemel, want Zijn liefde blijft eeuwig.",
    "media": "docs/media/2026-11/2026-11-16-5.mp4",
@@ -405,7 +405,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Psalm 119:165",
    "caption": "\"Psalmzingt Gode, psalmzingt! Psalmzingt onzen Koning, psalmzingt!\"\nPsalm 47:7\n\nZingen is een manier om God te eren, ook als je stem niet perfect is.\n\nWelk lied zing jij als je God wilt eren?",
    "uitleg": "Zing voor God, blijf zingen. Hij is jouw Koning.",
    "media": "docs/media/2026-11/2026-11-16-4.mp4",
@@ -488,7 +488,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Jesaja 26:12",
    "caption": "Voor iedereen die klem zit en geen uitweg ziet.\n\n\"De HEERE zal voor ulieden strijden, en gij zult stil zijn.\"\nExodus 14:14\n\nJe hoeft niet elk gevecht zelf te winnen.\n\nWelk gevecht geef jij vandaag aan God?",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-16-3.mp4",
@@ -571,7 +571,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Spreuken 24:33-34",
    "caption": "Wie kan jij vandaag troosten?\n\n\"Die ons vertroost in al onze verdrukking, opdat wij zouden kunnen vertroosten degenen, die in allerlei verdrukking zijn, door de vertroosting, met welke wij zelven van God vertroost worden.\"\n2 Korinthe 1:4\n\nDe troost die jij kreeg, mag je doorgeven.",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-16-2.mp4",
@@ -640,7 +640,7 @@
     "reel_haak": null,
     "opening": "vers",
     "hashtag_stijl": "mix",
-    "tijdslot": "07:30",
+    "tijdslot": "04:00",
     "tijdslot_fb": "20:30",
     "palet": "zand",
     "lettertype": "dmserif",
@@ -654,7 +654,7 @@
    "goedgekeurd": null,
    "reeks": "Moed voor de week",
    "reeks_label": "MOED VOOR DE WEEK",
-   "reserve_ref": null,
+   "reserve_ref": "Spreuken 19:21",
    "caption": "Moed voor de week. Goedemorgen. Dit is voor jou, vandaag.\n\n\"Maar dien den HEERE verwachten, zullen de kracht vernieuwen; zij zullen opvaren met vleugelen, gelijk de arenden; zij zullen lopen, en niet moede worden; zij zullen wandelen, en niet mat worden.\"\nJesaja 40:31\n\nNieuwe kracht komt van God, telkens weer.",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-16-1-1.jpg",
@@ -5672,21 +5672,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-12T18:03:45",
-   "soort": "info",
-   "tekst": "Bediening: 1 Johannes 4:7 opnieuw gemaakt (stijl papier_blauw, achtergrond kleurverloop, eerste slide verhaal)"
-  },
-  {
-   "t": "2026-11-12T18:06:31",
-   "soort": "info",
-   "tekst": "Bediening: 1 Johannes 4:7 opnieuw gemaakt (stijl papier_blauw, achtergrond kleurverloop, eerste slide verhaal)"
-  },
-  {
-   "t": "2026-11-12T19:02:12",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
    "t": "2026-11-12T20:31:16",
    "soort": "info",
    "tekst": "2026-11-12-3 online op facebook: Psalm 20:8"
@@ -5975,6 +5960,21 @@
    "t": "2026-11-14T13:31:07",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-14T14:33:27",
+   "soort": "info",
+   "tekst": "Materiaal-repo niet gekoppeld (add_repo ontbreekt in deze sessie); muziek wordt door GitHub Actions aangevuld"
+  },
+  {
+   "t": "2026-11-14T14:35:57",
+   "soort": "info",
+   "tekst": "Zelf opgelost: de Moed voor de week-post van 16 nov stond nog op 07:30 omdat de oude planning (van voor de wissel naar 04:00) werd gevolgd. Verplaatst naar 04:00, en kies zet een verouderd ochtendslot uit een oude planning voortaan zelf om naar het huidige."
+  },
+  {
+   "t": "2026-11-14T14:35:57",
+   "soort": "info",
+   "tekst": "Dagelijkse run (zelfstandig): 10 posts voor 15 en 16 november gecontroleerd, reserveverzen voor 16 november ingevuld (Psalm 85:9, Jesaja 30:15 en Prediker 12:12 als reserve overgeslagen: los van de context niet geschikt)"
   }
  ],
  "recente_fouten": [
@@ -6116,14 +6116,14 @@
    "detail": "10 nieuwe metingen"
   },
   "zelftest": {
-   "ok": "2026-11-12T14:36",
+   "ok": "2026-11-14T14:34",
    "laatst_ok": true,
-   "detail": "12 onderdelen gemaakt en gecontroleerd"
+   "detail": "18 onderdelen gemaakt en gecontroleerd"
   },
   "dagelijks": {
-   "ok": "2026-11-13T16:06",
+   "ok": "2026-11-14T14:35",
    "laatst_ok": true,
-   "detail": "10 posts voor 14 en 15 november klaargezet"
+   "detail": "10 posts voor 15 en 16 november klaargezet"
   },
   "whatsapp": {
    "fout": "2026-11-11T13:49",
@@ -9234,7 +9234,7 @@
     "id": "2026-11-16-1",
     "ref": "Jesaja 40:31",
     "datum": "2026-11-16",
-    "tijdslot": "07:30",
+    "tijdslot": "04:00",
     "tests": [
      {
       "dimensie": "huisstijl",

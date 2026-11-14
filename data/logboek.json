@@ -1414,5 +1414,20 @@
   "t": "2026-11-14T13:31:07",
   "soort": "info",
   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
+ },
+ {
+  "t": "2026-11-14T14:33:27",
+  "soort": "info",
+  "tekst": "Materiaal-repo niet gekoppeld (add_repo ontbreekt in deze sessie); muziek wordt door GitHub Actions aangevuld"
+ },
+ {
+  "t": "2026-11-14T14:35:57",
+  "soort": "info",
+  "tekst": "Zelf opgelost: de Moed voor de week-post van 16 nov stond nog op 07:30 omdat de oude planning (van voor de wissel naar 04:00) werd gevolgd. Verplaatst naar 04:00, en kies zet een verouderd ochtendslot uit een oude planning voortaan zelf om naar het huidige."
+ },
+ {
+  "t": "2026-11-14T14:35:57",
+  "soort": "info",
+  "tekst": "Dagelijkse run (zelfstandig): 10 posts voor 15 en 16 november gecontroleerd, reserveverzen voor 16 november ingevuld (Psalm 85:9, Jesaja 30:15 en Prediker 12:12 als reserve overgeslagen: los van de context niet geschikt)"
  }
 ]
