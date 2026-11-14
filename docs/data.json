@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-14T12:01",
+ "gegenereerd": "2026-11-14T12:16",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1428,7 +1428,7 @@
    "ref": "Spreuken 4:7",
    "tekst": "De wijsheid is het voornaamste; verkrijg dan wijsheid, en verkrijg verstand met al uw bezitting.",
    "hook": "Wat zou jij doen met meer wijsheid?",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "avond",
     "thema": "wijsheid",
@@ -1469,10 +1469,12 @@
    ],
    "thumb": "thumbs/2026-11-14-1.jpg",
    "platformen": [
-    "facebook"
+    "facebook",
+    "instagram"
    ],
    "links": {
-    "facebook": "https://www.facebook.com/1015160368352770_122134560956879910"
+    "facebook": "https://www.facebook.com/1015160368352770_122134560956879910",
+    "instagram": "https://www.instagram.com/p/DfuE6SQgCWE/"
    },
    "totaal": {
     "views": 0,
@@ -1527,7 +1529,8 @@
     }
    },
    "pub": {
-    "facebook": "2026-11-14T07:32+01:00"
+    "facebook": "2026-11-14T07:32+01:00",
+    "instagram": "2026-11-14T12:16+01:00"
    },
    "gemist": [],
    "nood": false,
@@ -5558,16 +5561,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-12T14:37:41",
-   "soort": "info",
-   "tekst": "Dagelijkse run (zelfstandig): 10 posts voor 13 en 14 november gecontroleerd, reserveverzen voor 14 november ingevuld"
-  },
-  {
-   "t": "2026-11-12T14:45:43",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
    "t": "2026-11-12T17:46:48",
    "soort": "info",
    "tekst": "2026-11-12-3 ook als story geplaatst"
@@ -5861,6 +5854,16 @@
    "t": "2026-11-14T09:04:16",
    "soort": "info",
    "tekst": "Zelfstandig 5 posts klaargezet voor 2026-11-16 (teksten uit de tekstbank)."
+  },
+  {
+   "t": "2026-11-14T12:16:08",
+   "soort": "info",
+   "tekst": "2026-11-14-1 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-14T12:16:08",
+   "soort": "info",
+   "tekst": "2026-11-14-1 online op instagram: Spreuken 4:7"
   }
  ],
  "recente_fouten": [
@@ -5958,9 +5961,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-14T07:32",
+   "ok": "2026-11-14T12:16",
    "laatst_ok": true,
-   "detail": "Sefanja 3:17 geplaatst"
+   "detail": "Spreuken 4:7 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-13T13:10",
@@ -6018,9 +6021,9 @@
    "ok": "2026-11-14T07:32"
   },
   "nieuws": {
-   "ok": "2026-11-14T07:01",
+   "ok": "2026-11-14T12:01",
    "laatst_ok": true,
-   "detail": "2 nieuwe aanleidingen"
+   "detail": "0 nieuwe aanleidingen"
   },
   "maken": {
    "ok": "2026-11-14T09:04",
@@ -6084,7 +6087,7 @@
  ],
  "weken": {
   "deze": {
-   "posts": 30,
+   "posts": 31,
    "reach": 200,
    "views": 285,
    "likes": 25,
@@ -6307,7 +6310,7 @@
   "tot": "2026-11-14",
   "dag": 8,
   "dagen": 7,
-  "online": 31,
+  "online": 32,
   "gemeten": 2
  },
  "voorraad": {
@@ -8725,8 +8728,8 @@
     "opties": [
      {
       "optie": "avond",
-      "online": 0,
-      "gepland": 1,
+      "online": 1,
+      "gepland": 0,
       "n": 0,
       "gem": null,
       "oordeel": "weinig data"
@@ -8898,8 +8901,8 @@
      },
      {
       "optie": "wijsheid",
-      "online": 3,
-      "gepland": 2,
+      "online": 4,
+      "gepland": 1,
       "n": 0,
       "gem": null,
       "oordeel": "weinig data"

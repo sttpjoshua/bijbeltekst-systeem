@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T12:01:21",
+ "updated": "2026-11-14T12:16:08",
  "agents": {
   "verskiezer": {
    "t": "2026-11-14T09:02:39",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-14T07:32:22",
-   "task": "Postte Spreuken 4:7 op facebook",
+   "t": "2026-11-14T12:16:08",
+   "task": "Postte Spreuken 4:7 op instagram",
    "state": "done"
   },
   "controller": {
@@ -38,8 +38,8 @@
   }
  },
  "stats": {
-  "posts_today": 0,
-  "posts_total": 31,
+  "posts_today": 1,
+  "posts_total": 32,
   "reach_7d": 142,
   "best_time": "nog onbekend",
   "next_post": "2026-11-14T07:30:00"
@@ -56,6 +56,14 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "12:16",
+   "msg": "2026-11-14-1 online op instagram: Spreuken 4:7"
+  },
+  {
+   "t": "12:16",
+   "msg": "2026-11-14-1 ook als story geplaatst"
+  },
   {
    "t": "09:04",
    "msg": "Zelfstandig 5 posts klaargezet voor 2026-11-16 (teksten uit de tekstbank)."
@@ -95,14 +103,6 @@
   {
    "t": "22:02",
    "msg": "2026-11-13-3 online op facebook: Spreuken 17:28"
-  },
-  {
-   "t": "21:45",
-   "msg": "Eerste-uurcijfers van 3 posts vastgelegd"
-  },
-  {
-   "t": "20:32",
-   "msg": "2026-11-13-2 online op facebook: Mattheüs 10:30-31"
   }
  ],
  "lampen": [
