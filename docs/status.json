@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T13:15:56",
+ "updated": "2026-11-14T13:31:08",
  "agents": {
   "verskiezer": {
    "t": "2026-11-14T09:02:39",
@@ -57,6 +57,10 @@
  ],
  "log": [
   {
+   "t": "13:31",
+   "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
+  },
+  {
    "t": "12:27",
    "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
   },
@@ -99,10 +103,6 @@
   {
    "t": "23:15",
    "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
-   "t": "22:03",
-   "msg": "2026-11-13-2 online op instagram: Mattheüs 10:30-31"
   }
  ],
  "lampen": [

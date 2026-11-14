@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-14T13:15",
+ "gegenereerd": "2026-11-14T13:31",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1537,7 +1537,17 @@
       "follows": null
      }
     },
-    "instagram": {}
+    "instagram": {
+     "1u": {
+      "views": 0,
+      "reach": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0
+     }
+    }
    },
    "pub": {
     "facebook": "2026-11-14T07:32+01:00",
@@ -5662,11 +5672,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-12T17:46:58",
-   "soort": "info",
-   "tekst": "2026-11-12-5 online op facebook: 1 Johannes 4:7"
-  },
-  {
    "t": "2026-11-12T18:03:45",
    "soort": "info",
    "tekst": "Bediening: 1 Johannes 4:7 opnieuw gemaakt (stijl papier_blauw, achtergrond kleurverloop, eerste slide verhaal)"
@@ -5965,6 +5970,11 @@
    "t": "2026-11-14T12:27:45",
    "soort": "info",
    "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
+  },
+  {
+   "t": "2026-11-14T13:31:07",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
   }
  ],
  "recente_fouten": [
