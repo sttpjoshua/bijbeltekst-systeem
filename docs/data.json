@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-15T18:01",
+ "gegenereerd": "2026-11-15T18:15",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -6590,11 +6590,6 @@
   {
    "t": "2026-11-13T22:03:28",
    "soort": "info",
-   "tekst": "2026-11-13-2 ook als story geplaatst"
-  },
-  {
-   "t": "2026-11-13T22:03:28",
-   "soort": "info",
    "tekst": "2026-11-13-2 online op instagram: Mattheüs 10:30-31"
   },
   {
@@ -6893,6 +6888,11 @@
   },
   {
    "t": "2026-11-15T18:01:04",
+   "soort": "info",
+   "tekst": "2026-11-15-5 overgeslagen: daglimiet bereikt"
+  },
+  {
+   "t": "2026-11-15T18:15:32",
    "soort": "info",
    "tekst": "2026-11-15-5 overgeslagen: daglimiet bereikt"
   }

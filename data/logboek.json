@@ -1651,5 +1651,10 @@
   "t": "2026-11-15T18:01:04",
   "soort": "info",
   "tekst": "2026-11-15-5 overgeslagen: daglimiet bereikt"
+ },
+ {
+  "t": "2026-11-15T18:15:32",
+  "soort": "info",
+  "tekst": "2026-11-15-5 overgeslagen: daglimiet bereikt"
  }
 ]
