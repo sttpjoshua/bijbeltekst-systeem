@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-15T20:15",
+ "gegenereerd": "2026-11-15T20:30",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -6611,16 +6611,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-14T12:26:24",
-   "soort": "info",
-   "tekst": "Statistieken opgehaald voor 10 posts"
-  },
-  {
-   "t": "2026-11-14T12:27:45",
-   "soort": "info",
-   "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
-  },
-  {
    "t": "2026-11-14T13:31:07",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
@@ -6914,6 +6904,16 @@
   },
   {
    "t": "2026-11-15T20:15:32",
+   "soort": "info",
+   "tekst": "2026-11-15-5 overgeslagen: daglimiet bereikt"
+  },
+  {
+   "t": "2026-11-15T20:30:47",
+   "soort": "info",
+   "tekst": "2026-11-15-3 overgeslagen: daglimiet bereikt"
+  },
+  {
+   "t": "2026-11-15T20:30:47",
    "soort": "info",
    "tekst": "2026-11-15-5 overgeslagen: daglimiet bereikt"
   }
