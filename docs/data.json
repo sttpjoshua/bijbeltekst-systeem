@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-15T22:02",
+ "gegenereerd": "2026-11-15T22:15",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -6611,16 +6611,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-14T21:45:28",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
-  },
-  {
-   "t": "2026-11-14T22:02:19",
-   "soort": "info",
-   "tekst": "2026-11-14-2 online op facebook: Sefanja 3:17"
-  },
-  {
    "t": "2026-11-14T22:03:13",
    "soort": "info",
    "tekst": "2026-11-14-5 ook als story geplaatst"
@@ -6914,6 +6904,16 @@
   },
   {
    "t": "2026-11-15T22:02:13",
+   "soort": "info",
+   "tekst": "2026-11-15-5 overgeslagen: daglimiet bereikt"
+  },
+  {
+   "t": "2026-11-15T22:15:41",
+   "soort": "info",
+   "tekst": "2026-11-15-3 overgeslagen: daglimiet bereikt"
+  },
+  {
+   "t": "2026-11-15T22:15:41",
    "soort": "info",
    "tekst": "2026-11-15-5 overgeslagen: daglimiet bereikt"
   }
