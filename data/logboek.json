@@ -1529,5 +1529,12 @@
   "t": "2026-11-15T05:30:36",
   "soort": "info",
   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
+ },
+ {
+  "t": "2026-11-15T07:01:09",
+  "soort": "fout",
+  "tekst": "Politiek nieuws (NOS): \"Wekdienst 15/11: Crisisgesprekken kabinet gaan verder • Wereldbeker schaatsen Peking\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
+  "code": "nieuws_voorstel",
+  "post": "n111507010"
  }
 ]
