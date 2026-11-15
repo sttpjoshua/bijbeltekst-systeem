@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-15T17:46",
+ "gegenereerd": "2026-11-15T18:01",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -6588,11 +6588,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-13T22:02:46",
-   "soort": "info",
-   "tekst": "2026-11-13-3 online op facebook: Spreuken 17:28"
-  },
-  {
    "t": "2026-11-13T22:03:28",
    "soort": "info",
    "tekst": "2026-11-13-2 ook als story geplaatst"
@@ -6895,6 +6890,11 @@
    "t": "2026-11-15T17:46:51",
    "soort": "info",
    "tekst": "2026-11-15-5 overgeslagen: daglimiet bereikt"
+  },
+  {
+   "t": "2026-11-15T18:01:04",
+   "soort": "info",
+   "tekst": "2026-11-15-5 overgeslagen: daglimiet bereikt"
   }
  ],
  "recente_fouten": [
@@ -7049,7 +7049,7 @@
    "ok": "2026-11-12T09:45"
   },
   "reacties": {
-   "ok": "2026-11-15T17:01",
+   "ok": "2026-11-15T18:01",
    "laatst_ok": true,
    "detail": "1 nieuwe reacties",
    "fout": "2026-11-08T18:00"

@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T17:46:51",
+ "updated": "2026-11-15T18:01:04",
  "agents": {
   "verskiezer": {
    "t": "2026-11-15T11:57:02",
@@ -32,7 +32,7 @@
    "state": "done"
   },
   "community": {
-   "t": "2026-11-15T17:01:27",
+   "t": "2026-11-15T18:01:04",
    "task": "1 nieuwe reactie gevonden",
    "state": "done"
   }
@@ -56,6 +56,10 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "18:01",
+   "msg": "2026-11-15-5 overgeslagen: daglimiet bereikt"
+  },
   {
    "t": "17:46",
    "msg": "2026-11-15-5 overgeslagen: daglimiet bereikt"
@@ -99,10 +103,6 @@
   {
    "t": "12:56",
    "msg": "Statistieken opgehaald voor 15 posts"
-  },
-  {
-   "t": "12:16",
-   "msg": "2026-11-15-4 online op facebook: Filippenzen 4:13"
   }
  ],
  "lampen": [
