@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-15T10:15",
+ "gegenereerd": "2026-11-15T10:30",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -6362,11 +6362,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-13T13:09:28",
-   "soort": "info",
-   "tekst": "Statistieken opgehaald voor 9 posts"
-  },
-  {
    "t": "2026-11-13T13:10:36",
    "soort": "info",
    "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
@@ -6664,6 +6659,11 @@
    "t": "2026-11-15T09:04:00",
    "soort": "info",
    "tekst": "Zelfstandig 5 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
+  },
+  {
+   "t": "2026-11-15T10:30:58",
+   "soort": "info",
+   "tekst": "Zelfherstel: 2026-11-15-1: beeld staat nog niet online → wacht een kwartier en probeert het dan opnieuw"
   }
  ],
  "recente_fouten": [
@@ -7396,6 +7396,12 @@
   "materiaal_bijgewerkt": "2026-11-07"
  },
  "herstel": [
+  {
+   "t": "2026-11-15T10:30",
+   "probleem": "2026-11-15-1: beeld staat nog niet online",
+   "actie": "wacht een kwartier en probeert het dan opnieuw",
+   "ok": true
+  },
   {
    "t": "2026-11-15T04:01",
    "probleem": "2026-11-15-2 op instagram mislukt (400: {\"error\":{\"message\":\"Only photo or video can be accepted as media type.\",\"code\":9004,\"type\":\"OA)",

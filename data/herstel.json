@@ -40,5 +40,11 @@
   "probleem": "2026-11-15-2 op instagram mislukt (400: {\"error\":{\"message\":\"Only photo or video can be accepted as media type.\",\"code\":9004,\"type\":\"OA)",
   "actie": "poging 1 van 3; probeert het over een kwartier opnieuw",
   "ok": true
+ },
+ {
+  "t": "2026-11-15T10:30",
+  "probleem": "2026-11-15-1: beeld staat nog niet online",
+  "actie": "wacht een kwartier en probeert het dan opnieuw",
+  "ok": true
  }
 ]

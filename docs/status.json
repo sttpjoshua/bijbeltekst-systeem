@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T10:15:40",
+ "updated": "2026-11-15T10:30:58",
  "agents": {
   "verskiezer": {
    "t": "2026-11-15T09:02:23",
@@ -57,6 +57,10 @@
  ],
  "log": [
   {
+   "t": "10:30",
+   "msg": "Zelfherstel: 2026-11-15-1: beeld staat nog niet online → wacht een kwartier en probeert het dan opnieuw"
+  },
+  {
    "t": "09:04",
    "msg": "Zelfstandig 5 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
   },
@@ -99,10 +103,6 @@
   {
    "t": "22:03",
    "msg": "2026-11-14-5 online op facebook: Psalm 62:6"
-  },
-  {
-   "t": "22:03",
-   "msg": "2026-11-14-5 online op instagram: Psalm 62:6"
   }
  ],
  "lampen": [
