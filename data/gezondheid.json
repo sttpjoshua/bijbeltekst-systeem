@@ -28,7 +28,7 @@
   "ok": "2026-11-12T09:45"
  },
  "reacties": {
-  "ok": "2026-11-15T11:01",
+  "ok": "2026-11-15T12:01",
   "laatst_ok": true,
   "detail": "1 nieuwe reacties",
   "fout": "2026-11-08T18:00"
@@ -56,13 +56,13 @@
  "whatsapp": {
   "fout": "2026-11-11T13:49",
   "laatst_ok": true,
-  "detail": "2 bericht(en) verstuurd",
-  "ok": "2026-11-15T10:02"
+  "detail": "1 bericht(en) verstuurd",
+  "ok": "2026-11-15T12:01"
  },
  "nieuws": {
-  "ok": "2026-11-15T07:01",
+  "ok": "2026-11-15T12:01",
   "laatst_ok": true,
-  "detail": "1 nieuwe aanleidingen"
+  "detail": "3 nieuwe aanleidingen"
  },
  "maken": {
   "ok": "2026-11-15T09:04",

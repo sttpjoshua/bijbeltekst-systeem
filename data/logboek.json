@@ -1557,5 +1557,19 @@
   "t": "2026-11-15T11:57:02",
   "soort": "info",
   "tekst": "Bediening: Voorstel genegeerd"
+ },
+ {
+  "t": "2026-11-15T12:01:08",
+  "soort": "fout",
+  "tekst": "Zwaar nieuws (NOS): \"Doodstraf voor plegers fatale aanslag op kerk Jordanië\". Wil je er een troostende post over? Die gaat dan pas 6 uur na het nieuws online.",
+  "code": "nieuws_voorstel",
+  "post": "n111512010"
+ },
+ {
+  "t": "2026-11-15T12:01:08",
+  "soort": "fout",
+  "tekst": "Politiek nieuws (NOS): \"Crisisoverleg D66, VVD en CDA vanochtend verder in Hilversum\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
+  "code": "nieuws_voorstel",
+  "post": "n111512011"
  }
 ]
