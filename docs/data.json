@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-15T13:15",
+ "gegenereerd": "2026-11-15T13:29",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1285,7 +1285,17 @@
     "reel_kleur": "ingepland"
    },
    "momenten": {
-    "facebook": {}
+    "facebook": {
+     "1u": {
+      "views": 0,
+      "reach": null,
+      "likes": null,
+      "comments": null,
+      "shares": null,
+      "saves": null,
+      "follows": null
+     }
+    }
    },
    "pub": {
     "facebook": "2026-11-15T12:16+01:00"
@@ -1624,7 +1634,17 @@
       "follows": null
      }
     },
-    "instagram": {}
+    "instagram": {
+     "1u": {
+      "views": 3,
+      "reach": 2,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": null
+     }
+    }
    },
    "pub": {
     "facebook": "2026-11-15T04:01+01:00",
@@ -6565,11 +6585,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-13T17:47:17",
-   "soort": "info",
-   "tekst": "2026-11-13-4 online op instagram: Efeze 2:10"
-  },
-  {
    "t": "2026-11-13T18:45:56",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
@@ -6872,6 +6887,11 @@
    "t": "2026-11-15T13:15:34",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-15T13:29:59",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
   }
  ],
  "recente_fouten": [
