@@ -331,7 +331,7 @@ def _tekstvlak(post, regels_spec, plaatsing):
     return _schaduw(laag)
 
 
-def maak_situatie(post, pad, clips, plaatsing="onder"):
+def maak_situatie(post, pad, clips, plaatsing="onder", openingszin=False):
     """Reel 'herkenbare situatie': clip 1 met een herkenbare zin, dan een rustige clip met het hele vers,
     de uitleg en een eindbeeld. clips: 1 of 2 lokale mp4's. Geeft het pad terug."""
     import tempfile
@@ -339,10 +339,13 @@ def maak_situatie(post, pad, clips, plaatsing="onder"):
     if not clips:
         raise RuntimeError("geen clips")
     a, b = clips[0], clips[-1]
-    hook = (post.get("reel_herkenning") or post.get("verhaal_hook") or post.get("hook") or "").strip()
+    # Joshua (15 nov): geen 'Voor iedereen die...' meer vooraf; het vers staat vanaf de eerste seconde op het
+    # herkenbare beeld en gaat halverwege over in het rustige beeld. Oude aanpak alleen met openingszin=True.
+    hook = (post.get("reel_herkenning") or post.get("verhaal_hook") or post.get("hook") or "").strip() if openingszin else ""
     uitleg = (post.get("uitleg") or post.get("reel_uitleg") or "").strip()
     t1 = 3.8 if hook else 0.0
     lees = max(5.5, min(11.0, len(post["tekst"]) / 13 + 2.0))
+    wissel = t1 if hook else (round(lees * 0.45, 2) if a != b else 0.0)
     t_uit = 4.8 if uitleg else 0.0
     t_eind = 2.4
     duur = round(t1 + lees + t_uit + t_eind, 2)
@@ -365,15 +368,15 @@ def maak_situatie(post, pad, clips, plaatsing="onder"):
 
     vul = "scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,setsar=1,fps=30,eq=saturation=0.92:brightness=-0.03"
     cmd = ["ffmpeg", "-y", "-loglevel", "error",
-           "-stream_loop", "-1", "-t", str(max(t1, 0.5) + 0.5), "-i", a,
-           "-stream_loop", "-1", "-t", str(duur - t1 + 0.6), "-i", b]
+           "-stream_loop", "-1", "-t", str(max(wissel, 0.5) + 0.5), "-i", a,
+           "-stream_loop", "-1", "-t", str(duur - wissel + 0.6), "-i", b]
     for p, s, dd in segs:
         cmd += ["-loop", "1", "-t", str(dd), "-i", p]
-    f = [f"[0:v]{vul},trim=0:{max(t1, 0.5)},setpts=PTS-STARTPTS[a]", f"[1:v]{vul},trim=0:{duur - t1 + 0.4},setpts=PTS-STARTPTS[b]"]
-    if hook:
-        f.append(f"[a][b]xfade=transition=fade:duration=0.45:offset={t1 - 0.45}[bg0]")
+    f = [f"[0:v]{vul},trim=0:{max(wissel, 0.5)},setpts=PTS-STARTPTS[a]", f"[1:v]{vul},trim=0:{duur - wissel + 0.4},setpts=PTS-STARTPTS[b]"]
+    if wissel > 0:
+        f.append(f"[a][b]xfade=transition=fade:duration=0.45:offset={wissel - 0.45}[bg0]")
     else:
-        f.append("[b]null[bg0]")
+        f = f[1:] + ["[b]null[bg0]"]
     vorig = "bg0"
     for i, (p, s, dd) in enumerate(segs):
         k = i + 2
@@ -395,7 +398,7 @@ def maak_situatie(post, pad, clips, plaatsing="onder"):
         i_f = cmd.index("-filter_complex")
         cmd[i_f:i_f] = muz
     subprocess.run(cmd, check=True)
-    post["cover_ms"] = int((t1 + 1.5) * 1000)
+    post["cover_ms"] = int((t1 + (1.5 if hook else 2.5)) * 1000)
     post["duur"] = duur
     return pad
 
@@ -430,18 +433,79 @@ def _achtergrond(boven=(253, 248, 238), onder=(250, 228, 205)):
     return Image.fromarray(np.clip(a, 0, 255).astype("uint8"), "RGB").convert("RGBA")
 
 
+PAPIER_BIJ = {"abrikoos": "papier_rood", "roze": "papier_rood", "mint": "papier_groen", "goud": "papier_groen", "hemel": "papier_blauw"}
+
+
+def _foto_licht(pad, tint):
+    """Zacht vervaagde, lichte foto: de sfeer blijft, de donkere tekst blijft goed leesbaar."""
+    im = ImageOps.exif_transpose(Image.open(pad)).convert("RGB")
+    im.thumbnail((B * 2, H * 2))
+    im = ImageOps.fit(im, (B, H), centering=(0.5, 0.45)).filter(ImageFilter.GaussianBlur(22))
+    from PIL import ImageEnhance
+    im = ImageEnhance.Brightness(im).enhance(1.12)
+    im = Image.blend(im, Image.new("RGB", (B, H), tint), 0.5)
+    return im.convert("RGBA")
+
+
+def _sterk_beeld(d, frag, kern, serif, inkt, accent, strook):
+    """Opening 'sterk': het stukje van het vers rond het kernwoord groot in beeld (letterlijk uit het vers)."""
+    meet = d
+    g = 120
+    while True:
+        f = R._font(serif, g); rg = R._wrap(frag, f, int(B * 0.84), meet)
+        if len(rg) * g * 1.25 <= H * 0.42 or g <= 64:
+            break
+        g -= 6
+    fv, rand = R._vet(f)
+    lh = int(g * 1.25)
+    y0 = int(H * 0.40 - len(rg) * lh / 2)
+    klaar = False
+    for i, r in enumerate(rg):
+        ws = r.split(" "); is_k = []
+        for w in ws:
+            k = not klaar and R._kaal(w) == kern
+            klaar = klaar or k; is_k.append(k)
+        br = [meet.textlength(w, font=fv if k else f) + (2 * rand if k else 0) for w, k in zip(ws, is_k)]
+        sp = meet.textlength(" ", font=f)
+        x = B / 2 - (sum(br) + sp * (len(ws) - 1)) / 2
+        for w, bw, k in zip(ws, br, is_k):
+            if k:
+                _streep(d, x, x + bw, y0 + i * lh + g * 0.6, g * 0.95, strook, 7)
+                d.text((x + rand, y0 + i * lh), w, font=fv, fill=accent, anchor="la", stroke_width=rand, stroke_fill=accent)
+            else:
+                d.text((x, y0 + i * lh), w, font=f, fill=inkt, anchor="la")
+            x += bw + sp
+
+
 def maak_markeren(post, pad):
     """Reel 'meelezen': het vers verschijnt in lichtgrijs en wordt woord voor woord donker, met een zachte kleurvlek
     die onder het woord meeschuift. Rustig tempo (ongeveer 2 woorden per seconde), kernwoord vet en in kleur."""
     import numpy as np
     v = post["variabelen"]
-    bgb, bgo, ik, ac, strook, serif = LOOKS.get(v.get("reel_kleur") or "abrikoos", LOOKS["abrikoos"])
+    kleurnaam = v.get("reel_kleur") or "abrikoos"
+    bgb, bgo, ik, ac, strook, serif = LOOKS.get(kleurnaam, LOOKS["abrikoos"])
+    # varianten (Joshua, 15 nov): achtergrond kleur | papier | schaduw | foto, streep per regel of per woord,
+    # opening meteen het vers of eerst kort het sterkste stukje groot
+    ag = v.get("markeer_achtergrond") or "kleur"
+    per_woord = (v.get("markeer_streep") or "regel") == "woord"
+    sterk = (v.get("markeer_opening") or "vers") == "sterk"
+    if ag in ("papier", "schaduw"):
+        hs = v.get("huisstijl") or ""
+        palet = hs.replace("schaduw_", "papier_") if hs.startswith(("papier_", "schaduw_")) else PAPIER_BIJ.get(kleurnaam, "papier_rood")
+        pal = R.PALETTEN[palet]
+        ik, ac = (42, 36, 32), R._hex(pal[2])
+        strook = ac + (52,)
+        serif = "cormorant"
+        bg = R.achtergrond(B, H, palet, "papier" if ag == "papier" else "papier_schaduw", post["id"]).convert("RGBA")
+    elif ag == "foto" and post.get("beeld_pad"):
+        bg = _foto_licht(post["beeld_pad"], bgb)
+    else:
+        bg = _achtergrond(bgb, bgo)
     inkt, dim, accent = ik + (255,), ik + (70,), ac + (255,)
     hook = ""  # de reel begint meteen met het vers (Joshua, 12 nov); een groet staat in de caption
     uitleg = (post.get("uitleg") or post.get("reel_uitleg") or "").strip()
-    bg = _achtergrond(bgb, bgo)
     meet = ImageDraw.Draw(Image.new("RGBA", (B, 10)))
-    g = 80
+    g = 92 if serif.startswith("cormorant") else 80  # Cormorant valt kleiner uit
     while True:
         f = R._font(serif, g); rg = R._wrap(post["tekst"], f, int(B * 0.80), meet)
         if len(rg) * g * 1.5 <= H * 0.46 or g <= 44:
@@ -493,7 +557,12 @@ def maak_markeren(post, pad):
     de.text((B // 2, int(H * 0.40)), post["ref"].upper(), font=R._klein_font(44, b"SemiBold"), fill=accent, anchor="ma")
     de.text((B // 2, int(H * 0.40) + 90), "BIBLEVERSE  ·  @bibleverse_nl", font=R._klein_font(28, b"Medium"), fill=(100, 88, 80, 255), anchor="ma")
     hk = Image.new("RGBA", (B, H), (0, 0, 0, 0)); dh = ImageDraw.Draw(hk)
-    if hook:
+    if sterk and kern:
+        frag = R.stopper_fragment(post["tekst"], kern)
+        if frag.strip() != post["tekst"].strip():
+            _sterk_beeld(dh, frag, kern, serif, inkt, accent, strook)
+            hook = frag
+    elif hook:
         fh = R._font(serif, 70); rh = R._wrap(hook, fh, int(B * 0.80), dh)
         for i, r in enumerate(rh):
             dh.text((B // 2, int(H * 0.40) - len(rh) * 46 + i * 92), r, font=fh, fill=inkt, anchor="ma")
@@ -510,7 +579,7 @@ def maak_markeren(post, pad):
         n_w = len(r.split(" ")); ws_ = woorden[wi:wi + n_w]
         s0 = starts[wi]; s1 = starts[wi + n_w - 1] + tempo
         lijnen.append((ws_[0][1], ws_[-1][2], ws_[0][3] + g * 0.6, s0, s1)); wi += n_w
-    t1 = 3.4 if hook else 0.0
+    t1 = (1.7 if sterk else 3.4) if hook else 0.0
     t_uit = max(5.5, len(uitleg) / 14) if uitleg else 0.0
     t_eind = 2.4
     duur = round(t1 + lees + t_uit + t_eind, 2)
@@ -534,15 +603,21 @@ def maak_markeren(post, pad):
         t = k / FPS
         fr = bg
         if t < t1:
-            fr = mix(fr, hk, min(1, t / 0.4, (t1 - t) / 0.4 + 0.0001))
+            fr = mix(fr, hk, min(1, t / (0.12 if sterk else 0.4), (t1 - t) / 0.3 + 0.0001))
         elif t < t1 + lees + 0.3:
             tv = t - t1
             a = min(1, tv / 0.6) * (1.0 if t < t1 + lees else max(0, 1 - (t - t1 - lees) / 0.3))
             st = Image.new("RGBA", (B, H), (0, 0, 0, 0)); ds = ImageDraw.Draw(st)
-            for i, (xa, xb, yc, s0, s1) in enumerate(lijnen):
-                p = max(0.0, min(1.0, (tv - s0) / max(0.3, s1 - s0)))  # gelijkmatig, op leestempo
-                if p > 0:
-                    _streep(ds, xa, xa + (xb - xa) * p, yc, g * 1.02, strook, 100 + i)
+            if per_woord:  # elk woord krijgt zijn eigen streepje op het moment dat het gelezen wordt
+                for i, (w, xa, xb, yy, kk) in enumerate(woorden):
+                    p = _ease((tv - starts[i]) / tempo)
+                    if p > 0:
+                        _streep(ds, xa + 4, xa + 4 + (xb - xa - 8) * p, yy + g * 0.6, g * 0.92, strook, 300 + i)
+            else:
+                for i, (xa, xb, yc, s0, s1) in enumerate(lijnen):
+                    p = max(0.0, min(1.0, (tv - s0) / max(0.3, s1 - s0)))  # gelijkmatig, op leestempo
+                    if p > 0:
+                        _streep(ds, xa, xa + (xb - xa) * p, yc, g * 1.02, strook, 100 + i)
             laag_nu = Image.alpha_composite(st, ink_l)
             laag_nu.alpha_composite(ref)
             fr = mix(fr, laag_nu, a)
