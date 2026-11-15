@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-15T23:30",
+ "gegenereerd": "2026-11-15T23:45",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -6639,16 +6639,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-15T09:04:00",
-   "soort": "info",
-   "tekst": "Zelfstandig 5 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "2026-11-15T10:30:58",
-   "soort": "info",
-   "tekst": "Zelfherstel: 2026-11-15-1: beeld staat nog niet online → wacht een kwartier en probeert het dan opnieuw"
-  },
-  {
    "t": "2026-11-15T11:57:02",
    "soort": "info",
    "tekst": "Bediening: Voorstel genegeerd"
@@ -6939,6 +6929,16 @@
   },
   {
    "t": "2026-11-15T23:30:43",
+   "soort": "info",
+   "tekst": "2026-11-15-5 overgeslagen: daglimiet bereikt"
+  },
+  {
+   "t": "2026-11-15T23:45:34",
+   "soort": "info",
+   "tekst": "2026-11-15-3 overgeslagen: daglimiet bereikt"
+  },
+  {
+   "t": "2026-11-15T23:45:34",
    "soort": "info",
    "tekst": "2026-11-15-5 overgeslagen: daglimiet bereikt"
   }
