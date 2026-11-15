@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-15T23:24",
+ "gegenereerd": "2026-11-15T23:30",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -6639,19 +6639,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-15T07:01:09",
-   "soort": "fout",
-   "tekst": "Politiek nieuws (NOS): \"Wekdienst 15/11: Crisisgesprekken kabinet gaan verder • Wereldbeker schaatsen Peking\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
-   "code": "nieuws_voorstel",
-   "post": "n111507010",
-   "opgelost": true
-  },
-  {
-   "t": "2026-11-15T09:02:23",
-   "soort": "info",
-   "tekst": "Experiment deze week: Bijbelboek"
-  },
-  {
    "t": "2026-11-15T09:04:00",
    "soort": "info",
    "tekst": "Zelfstandig 5 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
@@ -6944,6 +6931,16 @@
    "t": "2026-11-15T23:24:23",
    "soort": "info",
    "tekst": "Zelfstandig 4 posts klaargezet voor 2026-11-16, 2026-11-17 (teksten uit de tekstbank)."
+  },
+  {
+   "t": "2026-11-15T23:30:43",
+   "soort": "info",
+   "tekst": "2026-11-15-3 overgeslagen: daglimiet bereikt"
+  },
+  {
+   "t": "2026-11-15T23:30:43",
+   "soort": "info",
+   "tekst": "2026-11-15-5 overgeslagen: daglimiet bereikt"
   }
  ],
  "recente_fouten": [
