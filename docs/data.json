@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-15T19:15",
+ "gegenereerd": "2026-11-15T19:30",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -6611,11 +6611,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-14T07:32:22",
-   "soort": "info",
-   "tekst": "2026-11-14-1 online op facebook: Spreuken 4:7"
-  },
-  {
    "t": "2026-11-14T08:45:39",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
@@ -6914,6 +6909,11 @@
   },
   {
    "t": "2026-11-15T19:15:47",
+   "soort": "info",
+   "tekst": "2026-11-15-5 overgeslagen: daglimiet bereikt"
+  },
+  {
+   "t": "2026-11-15T19:30:45",
    "soort": "info",
    "tekst": "2026-11-15-5 overgeslagen: daglimiet bereikt"
   }
