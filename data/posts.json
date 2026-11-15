@@ -5778,7 +5778,20 @@
   "media": "docs/media/2026-11/2026-11-15-1.mp4",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-1.mp4",
   "metricool": {},
-  "stats": {},
+  "stats": {
+   "facebook": {
+    "1u": {
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "avg_watch_ms": null
+    }
+   }
+  },
   "beeld": "pexels-alessandro-kelvin-1248577-2376272.jpg",
   "muziek": "ES_Angelica - David Edward.mp3",
   "geluid": "ES_Water, Splash, Gentle Lake, Detailed, Calm - Epidemic Sound.mp3",
