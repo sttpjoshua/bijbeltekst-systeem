@@ -5901,7 +5901,20 @@
   "media": "docs/media/2026-11/2026-11-15-2-1.jpg",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-2-1.jpg",
   "metricool": {},
-  "stats": {},
+  "stats": {
+   "instagram": {
+    "1u": {
+     "views": 0,
+     "reach": 0,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": 0,
+     "avg_watch_ms": null
+    }
+   }
+  },
   "beeld": "pexels-gyozo-morocz-517633466-16411308.jpg",
   "muziek": null,
   "geluid": null,

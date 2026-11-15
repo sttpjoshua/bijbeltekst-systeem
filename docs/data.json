@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-15T05:15",
+ "gegenereerd": "2026-11-15T05:30",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -984,8 +984,26 @@
    "links": {
     "instagram": "https://www.instagram.com/p/DfvyxHXIVAY/"
    },
-   "totaal": {},
-   "per_platform": {},
+   "totaal": {
+    "views": 0,
+    "reach": 0,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0
+   },
+   "per_platform": {
+    "instagram": {
+     "views": 0,
+     "reach": 0,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": 0,
+     "t": null
+    }
+   },
    "score": {},
    "keuzebron": {
     "huisstijl": "experiment",
@@ -1005,7 +1023,19 @@
     "carrousel_stijl": "ingepland",
     "reel_kleur": "ingepland"
    },
-   "momenten": {},
+   "momenten": {
+    "instagram": {
+     "1u": {
+      "views": 0,
+      "reach": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0
+     }
+    }
+   },
    "pub": {
     "instagram": "2026-11-15T04:16+01:00"
    },
@@ -5918,11 +5948,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-13T08:45:47",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
    "t": "2026-11-13T09:02:35",
    "soort": "info",
    "tekst": "Zelfstandig 5 posts klaargezet voor 2026-11-15 (teksten uit de tekstbank)."
@@ -6216,6 +6241,11 @@
   },
   {
    "t": "2026-11-15T05:15:28",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-15T05:30:36",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
   }
