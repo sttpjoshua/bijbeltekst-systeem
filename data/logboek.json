@@ -1666,5 +1666,15 @@
   "t": "2026-11-15T18:45:37",
   "soort": "info",
   "tekst": "2026-11-15-5 overgeslagen: daglimiet bereikt"
+ },
+ {
+  "t": "2026-11-15T19:02:36",
+  "soort": "info",
+  "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
+ },
+ {
+  "t": "2026-11-15T19:02:36",
+  "soort": "info",
+  "tekst": "2026-11-15-5 overgeslagen: daglimiet bereikt"
  }
 ]
