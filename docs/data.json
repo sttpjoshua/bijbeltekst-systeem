@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-15T23:45",
+ "gegenereerd": "2026-11-16T00:04",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1147,7 +1147,7 @@
    "ref": "Hebreeën 11:1",
    "tekst": "Het geloof nu is een vaste grond der dingen, die men hoopt, en een bewijs der zaken, die men niet ziet.",
    "hook": "Een vaste grond, ook als je niets ziet.",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "hemelsblauw",
     "thema": "hoop",
@@ -1187,8 +1187,14 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-5.mp4"
    ],
    "thumb": "thumbs/2026-11-15-5.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "instagram",
+    "facebook"
+   ],
+   "links": {
+    "instagram": "https://www.instagram.com/reel/Dfx6mvMMZYl/",
+    "facebook": "https://www.facebook.com/2126715447983667"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -1212,11 +1218,14 @@
     "hashtag_stijl": "test"
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "instagram": "2026-11-16T00:04+01:00",
+    "facebook": "2026-11-16T00:04+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": null,
-   "online": null
+   "online": "2026-11-16T00:04+01:00"
   },
   {
    "id": "2026-11-15-4",
@@ -1365,7 +1374,7 @@
    "ref": "2 Korinthe 5:17",
    "tekst": "Zo dan, indien iemand in Christus is, die is een nieuw schepsel; het oude is voorbijgegaan, ziet, het is alles nieuw geworden.",
    "hook": "Voor iedereen die vastzit in wie hij vroeger was.",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "roze",
     "thema": "identiteit",
@@ -1405,8 +1414,14 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-3.mp4"
    ],
    "thumb": "thumbs/2026-11-15-3.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "instagram",
+    "facebook"
+   ],
+   "links": {
+    "instagram": "https://www.instagram.com/reel/Dfx6ZWdqdcw/",
+    "facebook": "https://www.facebook.com/1855067655692892"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -1430,11 +1445,14 @@
     "hashtag_stijl": "test"
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "instagram": "2026-11-16T00:02+01:00",
+    "facebook": "2026-11-16T00:02+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": null,
-   "online": null
+   "online": "2026-11-16T00:02+01:00"
   },
   {
    "id": "2026-11-15-2",
@@ -6639,40 +6657,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-15T11:57:02",
-   "soort": "info",
-   "tekst": "Bediening: Voorstel genegeerd"
-  },
-  {
-   "t": "2026-11-15T12:01:08",
-   "soort": "fout",
-   "tekst": "Zwaar nieuws (NOS): \"Doodstraf voor plegers fatale aanslag op kerk Jordanië\". Wil je er een troostende post over? Die gaat dan pas 6 uur na het nieuws online.",
-   "code": "nieuws_voorstel",
-   "post": "n111512010"
-  },
-  {
-   "t": "2026-11-15T12:01:08",
-   "soort": "fout",
-   "tekst": "Politiek nieuws (NOS): \"Crisisoverleg D66, VVD en CDA vanochtend verder in Hilversum\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
-   "code": "nieuws_voorstel",
-   "post": "n111512011"
-  },
-  {
-   "t": "2026-11-15T12:15:47",
-   "soort": "info",
-   "tekst": "2026-11-15-2 online op facebook: Psalm 16:11"
-  },
-  {
-   "t": "2026-11-15T12:16:46",
-   "soort": "info",
-   "tekst": "2026-11-15-1 ook als story geplaatst"
-  },
-  {
-   "t": "2026-11-15T12:16:46",
-   "soort": "info",
-   "tekst": "2026-11-15-1 online op instagram: Mattheüs 11:29-30"
-  },
-  {
    "t": "2026-11-15T12:16:54",
    "soort": "info",
    "tekst": "2026-11-15-4 online op facebook: Filippenzen 4:13"
@@ -6941,6 +6925,36 @@
    "t": "2026-11-15T23:45:34",
    "soort": "info",
    "tekst": "2026-11-15-5 overgeslagen: daglimiet bereikt"
+  },
+  {
+   "t": "2026-11-16T00:02:08",
+   "soort": "info",
+   "tekst": "2026-11-15-3 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-16T00:02:08",
+   "soort": "info",
+   "tekst": "2026-11-15-3 online op instagram: 2 Korinthe 5:17"
+  },
+  {
+   "t": "2026-11-16T00:02:18",
+   "soort": "info",
+   "tekst": "2026-11-15-3 online op facebook: 2 Korinthe 5:17"
+  },
+  {
+   "t": "2026-11-16T00:04:21",
+   "soort": "info",
+   "tekst": "2026-11-15-5 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-16T00:04:21",
+   "soort": "info",
+   "tekst": "2026-11-15-5 online op instagram: Hebreeën 11:1"
+  },
+  {
+   "t": "2026-11-16T00:04:29",
+   "soort": "info",
+   "tekst": "2026-11-15-5 online op facebook: Hebreeën 11:1"
   }
  ],
  "recente_fouten": [
@@ -7067,9 +7081,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-15T17:46",
+   "ok": "2026-11-16T00:04",
    "laatst_ok": true,
-   "detail": "Filippenzen 4:13 geplaatst"
+   "detail": "Hebreeën 11:1 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-15T12:58",
@@ -7101,9 +7115,9 @@
    "fout": "2026-11-08T18:00"
   },
   "facebook": {
-   "ok": "2026-11-15T12:16",
+   "ok": "2026-11-16T00:04",
    "laatst_ok": true,
-   "detail": "Filippenzen 4:13 geplaatst"
+   "detail": "Hebreeën 11:1 geplaatst"
   },
   "statistieken": {
    "ok": "2026-11-15T12:58",
@@ -7205,19 +7219,19 @@
  ],
  "weken": {
   "deze": {
-   "posts": 33,
-   "reach": 345,
-   "views": 413,
-   "likes": 18,
+   "posts": 30,
+   "reach": 335,
+   "views": 392,
+   "likes": 14,
    "comments": 0,
    "saves": 1,
    "shares": 0
   },
   "vorige": {
-   "posts": 6,
-   "reach": 72,
-   "views": 111,
-   "likes": 16,
+   "posts": 11,
+   "reach": 82,
+   "views": 132,
+   "likes": 20,
    "comments": 3,
    "saves": 0,
    "shares": 0
@@ -10283,8 +10297,8 @@
      },
      {
       "optie": "brieven",
-      "online": 1,
-      "gepland": 2,
+      "online": 3,
+      "gepland": 0,
       "n": 3,
       "gem": 0.74,
       "oordeel": "weinig data"
@@ -10347,42 +10361,6 @@
    }
   ],
   "komend": [
-   {
-    "id": "2026-11-15-3",
-    "ref": "2 Korinthe 5:17",
-    "datum": "2026-11-15",
-    "tijdslot": "20:30",
-    "tests": [
-     {
-      "dimensie": "boekgroep",
-      "optie": "brieven",
-      "bron": "experiment"
-     },
-     {
-      "dimensie": "reel_plaatsing",
-      "optie": "midden",
-      "bron": "verkenning"
-     }
-    ]
-   },
-   {
-    "id": "2026-11-15-5",
-    "ref": "Hebreeën 11:1",
-    "datum": "2026-11-15",
-    "tijdslot": "22:00",
-    "tests": [
-     {
-      "dimensie": "boekgroep",
-      "optie": "brieven",
-      "bron": "experiment"
-     },
-     {
-      "dimensie": "reel_scene",
-      "optie": "onderweg",
-      "bron": "verkenning"
-     }
-    ]
-   },
    {
     "id": "2026-11-16-1",
     "ref": "Jesaja 40:31",

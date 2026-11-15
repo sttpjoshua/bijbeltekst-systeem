@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T23:45:34",
+ "updated": "2026-11-16T00:04:29",
  "agents": {
   "verskiezer": {
    "t": "2026-11-15T11:57:02",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-15T17:46:51",
-   "task": "Postte Filippenzen 4:13 op instagram",
+   "t": "2026-11-16T00:04:29",
+   "task": "Postte Hebreeën 11:1 op facebook",
    "state": "done"
   },
   "controller": {
@@ -38,11 +38,11 @@
   }
  },
  "stats": {
-  "posts_today": 3,
-  "posts_total": 39,
-  "reach_7d": 258,
+  "posts_today": 0,
+  "posts_total": 41,
+  "reach_7d": 192,
   "best_time": "nog onbekend",
-  "next_post": "2026-11-15T20:30:00"
+  "next_post": "2026-11-16T04:00:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
@@ -56,6 +56,30 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "00:04",
+   "msg": "2026-11-15-5 online op facebook: Hebreeën 11:1"
+  },
+  {
+   "t": "00:04",
+   "msg": "2026-11-15-5 online op instagram: Hebreeën 11:1"
+  },
+  {
+   "t": "00:04",
+   "msg": "2026-11-15-5 ook als story geplaatst"
+  },
+  {
+   "t": "00:02",
+   "msg": "2026-11-15-3 online op facebook: 2 Korinthe 5:17"
+  },
+  {
+   "t": "00:02",
+   "msg": "2026-11-15-3 online op instagram: 2 Korinthe 5:17"
+  },
+  {
+   "t": "00:02",
+   "msg": "2026-11-15-3 ook als story geplaatst"
+  },
   {
    "t": "23:45",
    "msg": "2026-11-15-5 overgeslagen: daglimiet bereikt"
@@ -79,30 +103,6 @@
   {
    "t": "23:22",
    "msg": "Reels aangepast (Joshua akkoord): situatie-reel begint direct met het vers, meelees-reel nu de helft van de re"
-  },
-  {
-   "t": "23:15",
-   "msg": "2026-11-15-5 overgeslagen: daglimiet bereikt"
-  },
-  {
-   "t": "23:15",
-   "msg": "2026-11-15-3 overgeslagen: daglimiet bereikt"
-  },
-  {
-   "t": "23:01",
-   "msg": "2026-11-15-5 overgeslagen: daglimiet bereikt"
-  },
-  {
-   "t": "23:01",
-   "msg": "2026-11-15-3 overgeslagen: daglimiet bereikt"
-  },
-  {
-   "t": "22:45",
-   "msg": "2026-11-15-5 overgeslagen: daglimiet bereikt"
-  },
-  {
-   "t": "22:45",
-   "msg": "2026-11-15-3 overgeslagen: daglimiet bereikt"
   }
  ],
  "lampen": [
