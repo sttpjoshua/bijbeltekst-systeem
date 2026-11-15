@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-15T20:48",
+ "gegenereerd": "2026-11-15T21:01",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -6611,16 +6611,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-14T14:35:57",
-   "soort": "info",
-   "tekst": "Zelf opgelost: de Moed voor de week-post van 16 nov stond nog op 07:30 omdat de oude planning (van voor de wissel naar 04:00) werd gevolgd. Verplaatst naar 04:00, en kies zet een verouderd ochtendslot uit een oude planning voortaan zelf om naar het huidige."
-  },
-  {
-   "t": "2026-11-14T14:35:57",
-   "soort": "info",
-   "tekst": "Dagelijkse run (zelfstandig): 10 posts voor 15 en 16 november gecontroleerd, reserveverzen voor 16 november ingevuld (Psalm 85:9, Jesaja 30:15 en Prediker 12:12 als reserve overgeslagen: los van de context niet geschikt)"
-  },
-  {
    "t": "2026-11-14T17:47:12",
    "soort": "info",
    "tekst": "2026-11-14-3 ook als story geplaatst"
@@ -6916,6 +6906,16 @@
    "t": "2026-11-15T20:45:35",
    "soort": "info",
    "tekst": "2026-11-15-5 overgeslagen: daglimiet bereikt"
+  },
+  {
+   "t": "2026-11-15T21:01:07",
+   "soort": "info",
+   "tekst": "2026-11-15-3 overgeslagen: daglimiet bereikt"
+  },
+  {
+   "t": "2026-11-15T21:01:07",
+   "soort": "info",
+   "tekst": "2026-11-15-5 overgeslagen: daglimiet bereikt"
   }
  ],
  "recente_fouten": [
@@ -7070,7 +7070,7 @@
    "ok": "2026-11-12T09:45"
   },
   "reacties": {
-   "ok": "2026-11-15T20:04",
+   "ok": "2026-11-15T21:01",
    "laatst_ok": true,
    "detail": "1 nieuwe reacties",
    "fout": "2026-11-08T18:00"
