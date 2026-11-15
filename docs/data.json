@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-15T19:02",
+ "gegenereerd": "2026-11-15T19:15",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -6611,11 +6611,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-14T07:32:13",
-   "soort": "info",
-   "tekst": "2026-11-14-2 online op instagram: Sefanja 3:17"
-  },
-  {
    "t": "2026-11-14T07:32:22",
    "soort": "info",
    "tekst": "2026-11-14-1 online op facebook: Spreuken 4:7"
@@ -6916,6 +6911,11 @@
    "t": "2026-11-15T19:02:36",
    "soort": "info",
    "tekst": "2026-11-15-5 overgeslagen: daglimiet bereikt"
+  },
+  {
+   "t": "2026-11-15T19:15:47",
+   "soort": "info",
+   "tekst": "2026-11-15-5 overgeslagen: daglimiet bereikt"
   }
  ],
  "recente_fouten": [
@@ -7099,7 +7099,7 @@
    "fout": "2026-11-11T13:49",
    "laatst_ok": true,
    "detail": "1 bericht(en) verstuurd",
-   "ok": "2026-11-15T12:01"
+   "ok": "2026-11-15T19:02"
   },
   "nieuws": {
    "ok": "2026-11-15T17:01",
