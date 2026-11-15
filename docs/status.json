@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T12:01:02",
+ "updated": "2026-11-15T12:16:54",
  "agents": {
   "verskiezer": {
    "t": "2026-11-15T11:57:02",
@@ -17,13 +17,13 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-15T04:16:16",
-   "task": "Postte Psalm 16:11 op instagram",
+   "t": "2026-11-15T12:16:54",
+   "task": "Postte Filippenzen 4:13 op facebook",
    "state": "done"
   },
   "controller": {
-   "t": "2026-11-14T07:01:23",
-   "task": "Politiek nieuws (NOS): \"Italiaanse minister: scholen niet meteen dicht",
+   "t": "2026-11-15T12:01:08",
+   "task": "Politiek nieuws (NOS): \"Crisisoverleg D66, VVD en CDA vanochtend verde",
    "state": "error"
   },
   "analist": {
@@ -38,11 +38,11 @@
   }
  },
  "stats": {
-  "posts_today": 0,
-  "posts_total": 36,
+  "posts_today": 2,
+  "posts_total": 38,
   "reach_7d": 154,
   "best_time": "nog onbekend",
-  "next_post": "2026-11-15T04:00:00"
+  "next_post": "2026-11-15T17:45:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
@@ -56,6 +56,30 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "12:16",
+   "msg": "2026-11-15-4 online op facebook: Filippenzen 4:13"
+  },
+  {
+   "t": "12:16",
+   "msg": "2026-11-15-1 online op instagram: Mattheüs 11:29-30"
+  },
+  {
+   "t": "12:16",
+   "msg": "2026-11-15-1 ook als story geplaatst"
+  },
+  {
+   "t": "12:15",
+   "msg": "2026-11-15-2 online op facebook: Psalm 16:11"
+  },
+  {
+   "t": "12:01",
+   "msg": "Politiek nieuws (NOS): \"Crisisoverleg D66, VVD en CDA vanochtend verder in Hilversum\". Neutrale post erover ma"
+  },
+  {
+   "t": "12:01",
+   "msg": "Zwaar nieuws (NOS): \"Doodstraf voor plegers fatale aanslag op kerk Jordanië\". Wil je er een troostende post ov"
+  },
   {
    "t": "11:57",
    "msg": "Bediening: Voorstel genegeerd"
@@ -79,30 +103,6 @@
   {
    "t": "05:30",
    "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
-  },
-  {
-   "t": "05:15",
-   "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
-  },
-  {
-   "t": "04:16",
-   "msg": "2026-11-15-2 online op instagram: Psalm 16:11"
-  },
-  {
-   "t": "04:16",
-   "msg": "2026-11-15-2 ook als story geplaatst"
-  },
-  {
-   "t": "04:01",
-   "msg": "2026-11-15-1 online op facebook: Mattheüs 11:29-30"
-  },
-  {
-   "t": "04:01",
-   "msg": "Zelfherstel: 2026-11-15-2 op instagram mislukt (400: {\"error\":{\"message\":\"Only photo or video can be accepted "
-  },
-  {
-   "t": "23:15",
-   "msg": "Eerste-uurcijfers van 3 posts vastgelegd"
   }
  ],
  "lampen": [

@@ -5745,7 +5745,7 @@
   "reeks_label": "VERS VAN DE WEEK",
   "id": "2026-11-15-1",
   "datum": "2026-11-15",
-  "status": "gerenderd",
+  "status": "gepubliceerd",
   "vers_id": "Matthew-11-29-30",
   "ref": "Mattheüs 11:29-30",
   "tekst": "Neemt Mijn juk op u, en leert van Mij, dat Ik zachtmoedig ben en nederig van hart; en gij zult rust vinden voor uw zielen. Want Mijn juk is zacht, en Mijn last is licht.",
@@ -5880,6 +5880,11 @@
     "id": "1595684898973961",
     "url": "https://www.facebook.com/1595684898973961",
     "t": "2026-11-15T04:01+01:00"
+   },
+   "instagram": {
+    "id": "17971141638195827",
+    "url": "https://www.instagram.com/reel/DfwptAvBUW8/",
+    "t": "2026-11-15T12:16+01:00"
    }
   },
   "wacht_media": true
@@ -5887,7 +5892,7 @@
  {
   "id": "2026-11-15-2",
   "datum": "2026-11-15",
-  "status": "gerenderd",
+  "status": "gepubliceerd",
   "vers_id": "Psalms-16-11-11",
   "ref": "Psalm 16:11",
   "tekst": "Gij zult mij het pad des levens bekend maken; verzadiging der vreugde is bij Uw aangezicht; liefelijkheden zijn in Uw rechterhand, eeuwiglijk.",
@@ -6016,6 +6021,11 @@
     "id": "18071018138784117",
     "url": "https://www.instagram.com/p/DfvyxHXIVAY/",
     "t": "2026-11-15T04:16+01:00"
+   },
+   "facebook": {
+    "id": "1015160368352770_122134668086879910",
+    "url": "https://www.facebook.com/1015160368352770_122134668086879910",
+    "t": "2026-11-15T12:15+01:00"
    }
   }
  },
@@ -6241,6 +6251,13 @@
    "toepassing": "Vraag God vandaag om wijsheid bij één keuze waar je mee zit, voordat je verder zoekt.",
    "kernwoord": "beginsel",
    "verhaal_hook": "Je kunt alles weten en toch het begin missen."
+  },
+  "gepubliceerd": {
+   "facebook": {
+    "id": "1610918333580476",
+    "url": "https://www.facebook.com/1610918333580476",
+    "t": "2026-11-15T12:16+01:00"
+   }
   }
  },
  {
