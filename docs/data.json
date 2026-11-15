@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-15T22:30",
+ "gegenereerd": "2026-11-15T22:45",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -6611,16 +6611,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-14T22:03:20",
-   "soort": "info",
-   "tekst": "2026-11-14-5 online op facebook: Psalm 62:6"
-  },
-  {
-   "t": "2026-11-14T23:15:29",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 3 posts vastgelegd"
-  },
-  {
    "t": "2026-11-15T04:01:10",
    "soort": "info",
    "tekst": "Zelfherstel: 2026-11-15-2 op instagram mislukt (400: {\"error\":{\"message\":\"Only photo or video can be accepted as media type.\",\"code\":9004,\"type\":\"OA) → poging 1 van 3; probeert het over een kwartier opnieuw"
@@ -6914,6 +6904,16 @@
   },
   {
    "t": "2026-11-15T22:30:43",
+   "soort": "info",
+   "tekst": "2026-11-15-5 overgeslagen: daglimiet bereikt"
+  },
+  {
+   "t": "2026-11-15T22:45:34",
+   "soort": "info",
+   "tekst": "2026-11-15-3 overgeslagen: daglimiet bereikt"
+  },
+  {
+   "t": "2026-11-15T22:45:34",
    "soort": "info",
    "tekst": "2026-11-15-5 overgeslagen: daglimiet bereikt"
   }
