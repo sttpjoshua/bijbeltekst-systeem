@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-15T19:45",
+ "gegenereerd": "2026-11-15T20:01",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -6611,11 +6611,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-14T09:04:16",
-   "soort": "info",
-   "tekst": "Zelfstandig 5 posts klaargezet voor 2026-11-16 (teksten uit de tekstbank)."
-  },
-  {
    "t": "2026-11-14T12:16:08",
    "soort": "info",
    "tekst": "2026-11-14-1 ook als story geplaatst"
@@ -6916,6 +6911,11 @@
    "t": "2026-11-15T19:45:33",
    "soort": "info",
    "tekst": "2026-11-15-5 overgeslagen: daglimiet bereikt"
+  },
+  {
+   "t": "2026-11-15T20:01:13",
+   "soort": "info",
+   "tekst": "2026-11-15-5 overgeslagen: daglimiet bereikt"
   }
  ],
  "recente_fouten": [
@@ -7070,7 +7070,7 @@
    "ok": "2026-11-12T09:45"
   },
   "reacties": {
-   "ok": "2026-11-15T19:01",
+   "ok": "2026-11-15T20:01",
    "laatst_ok": true,
    "detail": "1 nieuwe reacties",
    "fout": "2026-11-08T18:00"
