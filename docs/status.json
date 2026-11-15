@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T23:01:09",
+ "updated": "2026-11-15T04:01:25",
  "agents": {
   "verskiezer": {
    "t": "2026-11-14T09:02:39",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-14T22:03:20",
-   "task": "Postte Psalm 62:6 op facebook",
+   "t": "2026-11-15T04:01:25",
+   "task": "Postte Mattheüs 11:29-30 op facebook",
    "state": "done"
   },
   "controller": {
@@ -38,9 +38,9 @@
   }
  },
  "stats": {
-  "posts_today": 5,
+  "posts_today": 0,
   "posts_total": 36,
-  "reach_7d": 161,
+  "reach_7d": 154,
   "best_time": "nog onbekend",
   "next_post": "2026-11-15T04:00:00"
  },
@@ -56,6 +56,18 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "04:01",
+   "msg": "2026-11-15-1 online op facebook: Mattheüs 11:29-30"
+  },
+  {
+   "t": "04:01",
+   "msg": "Zelfherstel: 2026-11-15-2 op instagram mislukt (400: {\"error\":{\"message\":\"Only photo or video can be accepted "
+  },
+  {
+   "t": "23:15",
+   "msg": "Eerste-uurcijfers van 3 posts vastgelegd"
+  },
   {
    "t": "22:03",
    "msg": "2026-11-14-5 online op facebook: Psalm 62:6"
@@ -91,18 +103,6 @@
   {
    "t": "20:30",
    "msg": "2026-11-14-3 online op facebook: Spreuken 4:23"
-  },
-  {
-   "t": "19:02",
-   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
-   "t": "17:47",
-   "msg": "2026-11-14-4 online op facebook: Mattheüs 6:34"
-  },
-  {
-   "t": "17:47",
-   "msg": "2026-11-14-3 online op instagram: Spreuken 4:23"
   }
  ],
  "lampen": [
@@ -146,7 +146,7 @@
   "ig": 3,
   "fb": 0,
   "totaal": 3,
-  "week": 3,
+  "week": 2,
   "reeks": [
    0,
    1,

@@ -34,5 +34,11 @@
   "probleem": "Geen post klaar voor 2026-11-12 22:00",
   "actie": "noodpost Efeze 2:10 ingezet om 22:00",
   "ok": true
+ },
+ {
+  "t": "2026-11-15T04:01",
+  "probleem": "2026-11-15-2 op instagram mislukt (400: {\"error\":{\"message\":\"Only photo or video can be accepted as media type.\",\"code\":9004,\"type\":\"OA)",
+  "actie": "poging 1 van 3; probeert het over een kwartier opnieuw",
+  "ok": true
  }
 ]

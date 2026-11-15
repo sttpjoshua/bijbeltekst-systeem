@@ -5817,6 +5817,13 @@
    "toepassing": "Schrijf vandaag één zorg op en bid erover. Noem er ook één ding bij waar je dankbaar voor bent.",
    "kernwoord": "vrede",
    "verhaal_hook": "Je hoeft je zorgen niet alleen te dragen. Er is een plek om ze neer te leggen."
+  },
+  "gepubliceerd": {
+   "facebook": {
+    "id": "1595684898973961",
+    "url": "https://www.facebook.com/1595684898973961",
+    "t": "2026-11-15T04:01+01:00"
+   }
   }
  },
  {
@@ -5920,7 +5927,8 @@
    "toepassing": "Zeg vandaag een keer zachtjes tegen jezelf: ik ben een kind van God. Kijk hoe dat je dag verandert.",
    "kernwoord": "kinderen",
    "verhaal_hook": "Wat anderen ook van je vinden, er is één stem die zegt wie je echt bent."
-  }
+  },
+  "fouten": 1
  },
  {
   "id": "2026-11-15-3",

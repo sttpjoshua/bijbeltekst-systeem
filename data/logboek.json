@@ -1499,5 +1499,15 @@
   "t": "2026-11-14T23:15:29",
   "soort": "info",
   "tekst": "Eerste-uurcijfers van 3 posts vastgelegd"
+ },
+ {
+  "t": "2026-11-15T04:01:10",
+  "soort": "info",
+  "tekst": "Zelfherstel: 2026-11-15-2 op instagram mislukt (400: {\"error\":{\"message\":\"Only photo or video can be accepted as media type.\",\"code\":9004,\"type\":\"OA) → poging 1 van 3; probeert het over een kwartier opnieuw"
+ },
+ {
+  "t": "2026-11-15T04:01:25",
+  "soort": "info",
+  "tekst": "2026-11-15-1 online op facebook: Mattheüs 11:29-30"
  }
 ]

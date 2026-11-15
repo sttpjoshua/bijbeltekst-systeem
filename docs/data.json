@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-14T23:01",
+ "gegenereerd": "2026-11-15T04:01",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1054,8 +1054,12 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-1.mp4"
    ],
    "thumb": "thumbs/2026-11-15-1.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "facebook"
+   ],
+   "links": {
+    "facebook": "https://www.facebook.com/1595684898973961"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -1079,11 +1083,13 @@
     "hashtag_stijl": "test"
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "facebook": "2026-11-15T04:01+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": null,
-   "online": null
+   "online": "2026-11-15T04:01+01:00"
   },
   {
    "id": "2026-11-14-5",
@@ -1137,8 +1143,36 @@
     "instagram": "https://www.instagram.com/p/DfvIFGmGuir/",
     "facebook": "https://www.facebook.com/1015160368352770_122134617716879910"
    },
-   "totaal": {},
-   "per_platform": {},
+   "totaal": {
+    "views": 3,
+    "reach": 1,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0
+   },
+   "per_platform": {
+    "instagram": {
+     "views": 3,
+     "reach": 1,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": 0,
+     "t": null
+    },
+    "facebook": {
+     "views": null,
+     "reach": null,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": null,
+     "follows": null,
+     "t": null
+    }
+   },
    "score": {},
    "keuzebron": {
     "huisstijl": "experiment",
@@ -1156,7 +1190,30 @@
     "video_uitleg": "n.v.t.",
     "hashtag_stijl": "test"
    },
-   "momenten": {},
+   "momenten": {
+    "instagram": {
+     "1u": {
+      "views": 3,
+      "reach": 1,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0
+     }
+    },
+    "facebook": {
+     "1u": {
+      "views": null,
+      "reach": null,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": null,
+      "follows": null
+     }
+    }
+   },
    "pub": {
     "instagram": "2026-11-14T22:03+01:00",
     "facebook": "2026-11-14T22:03+01:00"
@@ -1509,6 +1566,16 @@
      "saves": 0,
      "follows": null,
      "t": "2026-11-14T22:00+01:00"
+    },
+    "facebook": {
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "t": null
     }
    },
    "score": {},
@@ -1541,6 +1608,17 @@
       "comments": 0,
       "shares": 0,
       "saves": 0,
+      "follows": null
+     }
+    },
+    "facebook": {
+     "1u": {
+      "views": 0,
+      "reach": null,
+      "likes": null,
+      "comments": null,
+      "shares": null,
+      "saves": null,
       "follows": null
      }
     }
@@ -5804,24 +5882,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-13T07:01:26",
-   "soort": "fout",
-   "tekst": "Politiek nieuws (NOS): \"Crisisoverleg Jetten over toekomst coalitie, wachten op duidelijkheid VVD\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
-   "code": "nieuws_voorstel",
-   "post": "n111307010",
-   "opgelost": true
-  },
-  {
-   "t": "2026-11-13T07:33:16",
-   "soort": "info",
-   "tekst": "2026-11-13-5 ook als story geplaatst"
-  },
-  {
-   "t": "2026-11-13T07:33:16",
-   "soort": "info",
-   "tekst": "2026-11-13-5 online op instagram: Psalm 46:2"
-  },
-  {
    "t": "2026-11-13T07:33:24",
    "soort": "info",
    "tekst": "2026-11-13-4 online op facebook: Efeze 2:10"
@@ -6107,6 +6167,21 @@
    "t": "2026-11-14T22:03:20",
    "soort": "info",
    "tekst": "2026-11-14-5 online op facebook: Psalm 62:6"
+  },
+  {
+   "t": "2026-11-14T23:15:29",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 3 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-15T04:01:10",
+   "soort": "info",
+   "tekst": "Zelfherstel: 2026-11-15-2 op instagram mislukt (400: {\"error\":{\"message\":\"Only photo or video can be accepted as media type.\",\"code\":9004,\"type\":\"OA) → poging 1 van 3; probeert het over een kwartier opnieuw"
+  },
+  {
+   "t": "2026-11-15T04:01:25",
+   "soort": "info",
+   "tekst": "2026-11-15-1 online op facebook: Mattheüs 11:29-30"
   }
  ],
  "recente_fouten": [
@@ -6238,9 +6313,9 @@
    "fout": "2026-11-08T18:00"
   },
   "facebook": {
-   "ok": "2026-11-14T22:03",
+   "ok": "2026-11-15T04:01",
    "laatst_ok": true,
-   "detail": "Psalm 62:6 geplaatst"
+   "detail": "Mattheüs 11:29-30 geplaatst"
   },
   "statistieken": {
    "ok": "2026-11-14T12:27",
@@ -6336,20 +6411,20 @@
  ],
  "weken": {
   "deze": {
-   "posts": 35,
-   "reach": 263,
-   "views": 356,
-   "likes": 26,
-   "comments": 3,
+   "posts": 30,
+   "reach": 200,
+   "views": 260,
+   "likes": 13,
+   "comments": 0,
    "saves": 0,
    "shares": 0
   },
   "vorige": {
-   "posts": 1,
-   "reach": 8,
-   "views": 12,
-   "likes": 3,
-   "comments": 0,
+   "posts": 6,
+   "reach": 72,
+   "views": 111,
+   "likes": 16,
+   "comments": 3,
    "saves": 0,
    "shares": 0
   }
@@ -6557,7 +6632,7 @@
  "snel_leren": {
   "start": "2026-11-07",
   "tot": "2026-11-14",
-  "dag": 8,
+  "dag": 9,
   "dagen": 7,
   "online": 36,
   "gemeten": 2
@@ -6832,6 +6907,12 @@
   "materiaal_bijgewerkt": "2026-11-07"
  },
  "herstel": [
+  {
+   "t": "2026-11-15T04:01",
+   "probleem": "2026-11-15-2 op instagram mislukt (400: {\"error\":{\"message\":\"Only photo or video can be accepted as media type.\",\"code\":9004,\"type\":\"OA)",
+   "actie": "poging 1 van 3; probeert het over een kwartier opnieuw",
+   "ok": true
+  },
   {
    "t": "2026-11-12T14:31",
    "probleem": "Geen post klaar voor 2026-11-12 22:00",
@@ -8977,232 +9058,13 @@
   "uitschieter": true
  },
  "experimenten": {
-  "actief": true,
+  "actief": false,
   "van": "2026-11-08",
   "tot": "2026-11-14",
   "strikt": true,
   "snel": true,
   "snel_tot": "2026-11-14",
-  "onderdelen": [
-   {
-    "dimensie": "huisstijl",
-    "opties": [
-     {
-      "optie": "avond",
-      "online": 1,
-      "gepland": 0,
-      "n": 0,
-      "gem": null,
-      "oordeel": "weinig data"
-     },
-     {
-      "optie": "zand",
-      "online": 3,
-      "gepland": 2,
-      "n": 0,
-      "gem": null,
-      "oordeel": "weinig data"
-     },
-     {
-      "optie": "salie",
-      "online": 3,
-      "gepland": 1,
-      "n": 1,
-      "gem": 1.12,
-      "oordeel": "weinig data"
-     },
-     {
-      "optie": "zonsopgang",
-      "online": 4,
-      "gepland": 0,
-      "n": 0,
-      "gem": null,
-      "oordeel": "weinig data"
-     },
-     {
-      "optie": "hemelsblauw",
-      "online": 4,
-      "gepland": 1,
-      "n": 1,
-      "gem": 0.89,
-      "oordeel": "weinig data"
-     },
-     {
-      "optie": "paars",
-      "online": 3,
-      "gepland": 0,
-      "n": 0,
-      "gem": null,
-      "oordeel": "weinig data"
-     },
-     {
-      "optie": "roze",
-      "online": 4,
-      "gepland": 1,
-      "n": 0,
-      "gem": null,
-      "oordeel": "weinig data"
-     },
-     {
-      "optie": "bosgroen",
-      "online": 1,
-      "gepland": 0,
-      "n": 0,
-      "gem": null,
-      "oordeel": "weinig data"
-     },
-     {
-      "optie": "mint",
-      "online": 7,
-      "gepland": 1,
-      "n": 0,
-      "gem": null,
-      "oordeel": "weinig data"
-     },
-     {
-      "optie": "perzik",
-      "online": 4,
-      "gepland": 1,
-      "n": 0,
-      "gem": null,
-      "oordeel": "weinig data"
-     },
-     {
-      "optie": "papier_rood",
-      "online": 0,
-      "gepland": 0,
-      "n": 0,
-      "gem": null,
-      "oordeel": "weinig data"
-     },
-     {
-      "optie": "papier_groen",
-      "online": 0,
-      "gepland": 0,
-      "n": 0,
-      "gem": null,
-      "oordeel": "weinig data"
-     },
-     {
-      "optie": "papier_blauw",
-      "online": 1,
-      "gepland": 1,
-      "n": 0,
-      "gem": null,
-      "oordeel": "weinig data"
-     },
-     {
-      "optie": "schaduw_rood",
-      "online": 0,
-      "gepland": 0,
-      "n": 0,
-      "gem": null,
-      "oordeel": "weinig data"
-     },
-     {
-      "optie": "schaduw_groen",
-      "online": 0,
-      "gepland": 0,
-      "n": 0,
-      "gem": null,
-      "oordeel": "weinig data"
-     },
-     {
-      "optie": "schaduw_blauw",
-      "online": 0,
-      "gepland": 2,
-      "n": 0,
-      "gem": null,
-      "oordeel": "weinig data"
-     }
-    ]
-   },
-   {
-    "dimensie": "thema",
-    "opties": [
-     {
-      "optie": "troost",
-      "online": 4,
-      "gepland": 1,
-      "n": 1,
-      "gem": 1.11,
-      "oordeel": "weinig data"
-     },
-     {
-      "optie": "moed",
-      "online": 3,
-      "gepland": 2,
-      "n": 0,
-      "gem": null,
-      "oordeel": "weinig data"
-     },
-     {
-      "optie": "liefde",
-      "online": 2,
-      "gepland": 0,
-      "n": 0,
-      "gem": null,
-      "oordeel": "weinig data"
-     },
-     {
-      "optie": "hoop",
-      "online": 4,
-      "gepland": 1,
-      "n": 1,
-      "gem": 0.89,
-      "oordeel": "weinig data"
-     },
-     {
-      "optie": "vertrouwen",
-      "online": 5,
-      "gepland": 0,
-      "n": 0,
-      "gem": null,
-      "oordeel": "weinig data"
-     },
-     {
-      "optie": "wijsheid",
-      "online": 5,
-      "gepland": 0,
-      "n": 0,
-      "gem": null,
-      "oordeel": "weinig data"
-     },
-     {
-      "optie": "humor_herkenbaar",
-      "online": 4,
-      "gepland": 0,
-      "n": 0,
-      "gem": null,
-      "oordeel": "weinig data"
-     },
-     {
-      "optie": "dankbaarheid",
-      "online": 2,
-      "gepland": 3,
-      "n": 0,
-      "gem": null,
-      "oordeel": "weinig data"
-     },
-     {
-      "optie": "identiteit",
-      "online": 3,
-      "gepland": 1,
-      "n": 0,
-      "gem": null,
-      "oordeel": "weinig data"
-     },
-     {
-      "optie": "vrede_rust",
-      "online": 3,
-      "gepland": 2,
-      "n": 0,
-      "gem": null,
-      "oordeel": "weinig data"
-     }
-    ]
-   }
-  ],
+  "onderdelen": [],
   "vast": [],
   "tests": [
    {
@@ -9230,24 +9092,6 @@
       "dimensie": "thema",
       "optie": "dankbaarheid",
       "bron": "experiment"
-     }
-    ]
-   },
-   {
-    "id": "2026-11-15-1",
-    "ref": "Mattheüs 11:29-30",
-    "datum": "2026-11-15",
-    "tijdslot": "12:15",
-    "tests": [
-     {
-      "dimensie": "huisstijl",
-      "optie": "salie",
-      "bron": "experiment"
-     },
-     {
-      "dimensie": "reel_plaatsing",
-      "optie": "midden",
-      "bron": "verkenning"
      }
     ]
    },
