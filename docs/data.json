@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-15T22:45",
+ "gegenereerd": "2026-11-15T23:01",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -6611,16 +6611,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-15T04:01:10",
-   "soort": "info",
-   "tekst": "Zelfherstel: 2026-11-15-2 op instagram mislukt (400: {\"error\":{\"message\":\"Only photo or video can be accepted as media type.\",\"code\":9004,\"type\":\"OA) → poging 1 van 3; probeert het over een kwartier opnieuw"
-  },
-  {
-   "t": "2026-11-15T04:01:25",
-   "soort": "info",
-   "tekst": "2026-11-15-1 online op facebook: Mattheüs 11:29-30"
-  },
-  {
    "t": "2026-11-15T04:16:16",
    "soort": "info",
    "tekst": "2026-11-15-2 ook als story geplaatst"
@@ -6916,6 +6906,16 @@
    "t": "2026-11-15T22:45:34",
    "soort": "info",
    "tekst": "2026-11-15-5 overgeslagen: daglimiet bereikt"
+  },
+  {
+   "t": "2026-11-15T23:01:10",
+   "soort": "info",
+   "tekst": "2026-11-15-3 overgeslagen: daglimiet bereikt"
+  },
+  {
+   "t": "2026-11-15T23:01:10",
+   "soort": "info",
+   "tekst": "2026-11-15-5 overgeslagen: daglimiet bereikt"
   }
  ],
  "recente_fouten": [
@@ -7070,7 +7070,7 @@
    "ok": "2026-11-12T09:45"
   },
   "reacties": {
-   "ok": "2026-11-15T22:01",
+   "ok": "2026-11-15T23:01",
    "laatst_ok": true,
    "detail": "1 nieuwe reacties",
    "fout": "2026-11-08T18:00"
