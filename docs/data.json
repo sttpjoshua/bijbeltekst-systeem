@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-15T18:30",
+ "gegenereerd": "2026-11-15T18:45",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -6588,11 +6588,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-13T23:15:54",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
    "t": "2026-11-14T07:01:23",
    "soort": "fout",
    "tekst": "Politiek nieuws (NOS): \"Italiaanse minister: scholen niet meteen dicht na een bommelding\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
@@ -6893,6 +6888,11 @@
   },
   {
    "t": "2026-11-15T18:30:41",
+   "soort": "info",
+   "tekst": "2026-11-15-5 overgeslagen: daglimiet bereikt"
+  },
+  {
+   "t": "2026-11-15T18:45:37",
    "soort": "info",
    "tekst": "2026-11-15-5 overgeslagen: daglimiet bereikt"
   }
