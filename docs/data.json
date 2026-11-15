@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-15T11:45",
+ "gegenereerd": "2026-11-15T11:57",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -6362,11 +6362,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-13T13:10:36",
-   "soort": "info",
-   "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
-  },
-  {
    "t": "2026-11-13T13:30:55",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
@@ -6648,7 +6643,8 @@
    "soort": "fout",
    "tekst": "Politiek nieuws (NOS): \"Wekdienst 15/11: Crisisgesprekken kabinet gaan verder • Wereldbeker schaatsen Peking\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
    "code": "nieuws_voorstel",
-   "post": "n111507010"
+   "post": "n111507010",
+   "opgelost": true
   },
   {
    "t": "2026-11-15T09:02:23",
@@ -6664,6 +6660,11 @@
    "t": "2026-11-15T10:30:58",
    "soort": "info",
    "tekst": "Zelfherstel: 2026-11-15-1: beeld staat nog niet online → wacht een kwartier en probeert het dan opnieuw"
+  },
+  {
+   "t": "2026-11-15T11:57:02",
+   "soort": "info",
+   "tekst": "Bediening: Voorstel genegeerd"
   }
  ],
  "recente_fouten": [
@@ -6678,13 +6679,6 @@
    "tekst": "Politiek nieuws (NOS): \"Italiaanse minister: scholen niet meteen dicht na een bommelding\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
    "code": "nieuws_voorstel",
    "post": "n111407010"
-  },
-  {
-   "t": "2026-11-15T07:01:09",
-   "soort": "fout",
-   "tekst": "Politiek nieuws (NOS): \"Wekdienst 15/11: Crisisgesprekken kabinet gaan verder • Wereldbeker schaatsen Peking\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
-   "code": "nieuws_voorstel",
-   "post": "n111507010"
   }
  ],
  "versen_totaal": 300,
@@ -9245,7 +9239,7 @@
     "link": "https://nos.nl/l/2639533",
     "categorie": "politiek",
     "zwaar": false,
-    "status": "voorstel",
+    "status": "genegeerd",
     "post": null,
     "opties": [
      {

@@ -1,9 +1,9 @@
 {
- "updated": "2026-11-15T11:45:37",
+ "updated": "2026-11-15T11:57:03",
  "agents": {
   "verskiezer": {
-   "t": "2026-11-15T09:02:23",
-   "task": "Koos Psalm 27:14, Prediker 10:18, 1 Petrus 4:8, Psalm 56:4, Jakobus 3:13",
+   "t": "2026-11-15T11:57:02",
+   "task": "Voorstel genegeerd",
    "state": "done"
   },
   "designer": {
@@ -22,8 +22,8 @@
    "state": "done"
   },
   "controller": {
-   "t": "2026-11-15T07:01:09",
-   "task": "Politiek nieuws (NOS): \"Wekdienst 15/11: Crisisgesprekken kabinet gaan",
+   "t": "2026-11-14T07:01:23",
+   "task": "Politiek nieuws (NOS): \"Italiaanse minister: scholen niet meteen dicht",
    "state": "error"
   },
   "analist": {
@@ -56,6 +56,10 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "11:57",
+   "msg": "Bediening: Voorstel genegeerd"
+  },
   {
    "t": "10:30",
    "msg": "Zelfherstel: 2026-11-15-1: beeld staat nog niet online → wacht een kwartier en probeert het dan opnieuw"
@@ -99,10 +103,6 @@
   {
    "t": "23:15",
    "msg": "Eerste-uurcijfers van 3 posts vastgelegd"
-  },
-  {
-   "t": "22:03",
-   "msg": "2026-11-14-5 online op facebook: Psalm 62:6"
   }
  ],
  "lampen": [
