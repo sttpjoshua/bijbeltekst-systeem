@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T04:01:25",
+ "updated": "2026-11-15T04:16:17",
  "agents": {
   "verskiezer": {
    "t": "2026-11-14T09:02:39",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-15T04:01:25",
-   "task": "Postte Mattheüs 11:29-30 op facebook",
+   "t": "2026-11-15T04:16:16",
+   "task": "Postte Psalm 16:11 op instagram",
    "state": "done"
   },
   "controller": {
@@ -56,6 +56,14 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "04:16",
+   "msg": "2026-11-15-2 online op instagram: Psalm 16:11"
+  },
+  {
+   "t": "04:16",
+   "msg": "2026-11-15-2 ook als story geplaatst"
+  },
   {
    "t": "04:01",
    "msg": "2026-11-15-1 online op facebook: Mattheüs 11:29-30"
@@ -95,14 +103,6 @@
   {
    "t": "20:31",
    "msg": "2026-11-14-4 online op instagram: Mattheüs 6:34"
-  },
-  {
-   "t": "20:31",
-   "msg": "2026-11-14-4 ook als story geplaatst"
-  },
-  {
-   "t": "20:30",
-   "msg": "2026-11-14-3 online op facebook: Spreuken 4:23"
   }
  ],
  "lampen": [
