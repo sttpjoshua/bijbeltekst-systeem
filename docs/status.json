@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T12:45:34",
+ "updated": "2026-11-15T12:58:43",
  "agents": {
   "verskiezer": {
    "t": "2026-11-15T11:57:02",
@@ -27,12 +27,12 @@
    "state": "error"
   },
   "analist": {
-   "t": "2026-11-14T12:26:24",
-   "task": "Las cijfers van 10 posts",
+   "t": "2026-11-15T12:56:10",
+   "task": "Las cijfers van 15 posts",
    "state": "done"
   },
   "community": {
-   "t": "2026-11-15T12:01:02",
+   "t": "2026-11-15T12:58:43",
    "task": "1 nieuwe reactie gevonden",
    "state": "done"
   }
@@ -40,13 +40,13 @@
  "stats": {
   "posts_today": 2,
   "posts_total": 38,
-  "reach_7d": 154,
+  "reach_7d": 258,
   "best_time": "nog onbekend",
   "next_post": "2026-11-15T17:45:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
-  "instagram": 157,
+  "instagram": 262,
   "facebook": 4,
   "youtube": 0,
   "tiktok": 0
@@ -56,6 +56,14 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "12:58",
+   "msg": "Snel leren afgelopen: terug naar de normale instellingen"
+  },
+  {
+   "t": "12:56",
+   "msg": "Statistieken opgehaald voor 15 posts"
+  },
   {
    "t": "12:16",
    "msg": "2026-11-15-4 online op facebook: Filippenzen 4:13"
@@ -95,14 +103,6 @@
   {
    "t": "09:02",
    "msg": "Experiment deze week: Bijbelboek"
-  },
-  {
-   "t": "07:01",
-   "msg": "Politiek nieuws (NOS): \"Wekdienst 15/11: Crisisgesprekken kabinet gaan verder • Wereldbeker schaatsen Peking\"."
-  },
-  {
-   "t": "05:30",
-   "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
   }
  ],
  "lampen": [
@@ -155,19 +155,16 @@
    3,
    3,
    3,
+   3,
    3
   ]
  },
  "top_post": {
-  "ref": "Openbaring 21:5",
-  "thumb": "thumbs/2026-11-10-2.jpg",
-  "bereik": 45,
-  "score": 1.03,
+  "ref": "Sefanja 3:17",
+  "thumb": "thumbs/2026-11-14-2.jpg",
+  "bereik": 52,
+  "score": 1.58,
   "formaat": "video"
  },
- "snel_leren": {
-  "dag": 7,
-  "dagen": 7,
-  "tot": "2026-11-14"
- }
+ "snel_leren": null
 }

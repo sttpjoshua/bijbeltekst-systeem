@@ -4,9 +4,9 @@
  "handle": "@bibleverse_nl",
  "tijdzone": "Europe/Amsterdam",
  "github_repo": "sttpjoshua/bijbeltekst-systeem",
- "posts_per_dag": 5,
- "max_posts_per_dag": 5,
- "verkenning": 0.4,
+ "posts_per_dag": 2,
+ "max_posts_per_dag": 3,
+ "verkenning": 0.2,
  "platformen_actief": [
   "instagram",
   "facebook"
@@ -28,14 +28,7 @@
   "pexels-strannik-sk-35101279.jpg",
   "pexels-vialyn-chen-1091642248-20653781.jpg"
  ],
- "leermodus_vorige": {
-  "posts_per_dag": 2,
-  "max_posts_per_dag": 3,
-  "verkenning": 0.2
- },
- "leermodus": true,
- "leermodus_tot": "2026-11-14",
- "leermodus_start": "2026-11-07",
+ "leermodus": false,
  "stories": true,
  "experiment": {
   "dims": [

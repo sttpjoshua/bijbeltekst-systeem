@@ -62,6 +62,16 @@
      "saves": 0,
      "follows": null,
      "avg_watch_ms": 4017
+    },
+    "7d": {
+     "views": 12,
+     "reach": 8,
+     "likes": 3,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "avg_watch_ms": 3771
     }
    }
   },
@@ -145,6 +155,16 @@
      "saves": 0,
      "follows": 0,
      "avg_watch_ms": null
+    },
+    "7d": {
+     "views": 15,
+     "reach": 5,
+     "likes": 3,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": 0,
+     "avg_watch_ms": null
     }
    },
    "facebook": {
@@ -160,6 +180,16 @@
      "avg_watch_ms": null
     },
     "24u": {
+     "views": null,
+     "reach": null,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": null,
+     "follows": null,
+     "avg_watch_ms": null
+    },
+    "7d": {
      "views": null,
      "reach": null,
      "likes": 0,
@@ -271,7 +301,7 @@
   "stats": {
    "instagram": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": 6,
      "reach": 2,
      "likes": 3,
@@ -294,7 +324,7 @@
    },
    "facebook": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": null,
      "reach": null,
      "likes": 0,
@@ -418,7 +448,7 @@
   "stats": {
    "instagram": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": 60,
      "reach": 53,
      "likes": 3,
@@ -441,7 +471,7 @@
    },
    "facebook": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": 2,
      "reach": null,
      "likes": null,
@@ -579,6 +609,16 @@
      "saves": 0,
      "follows": 0,
      "avg_watch_ms": null
+    },
+    "7d": {
+     "views": 13,
+     "reach": 3,
+     "likes": 2,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": 0,
+     "avg_watch_ms": null
     }
    },
    "facebook": {
@@ -594,6 +634,16 @@
      "avg_watch_ms": null
     },
     "24u": {
+     "views": null,
+     "reach": null,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": null,
+     "follows": null,
+     "avg_watch_ms": null
+    },
+    "7d": {
      "views": null,
      "reach": null,
      "likes": 0,
@@ -706,7 +756,7 @@
   "stats": {
    "instagram": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": 3,
      "reach": 1,
      "likes": 2,
@@ -729,7 +779,7 @@
    },
    "facebook": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": null,
      "reach": null,
      "likes": 0,
@@ -866,7 +916,7 @@
   "stats": {
    "instagram": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": 3,
      "reach": 1,
      "likes": 2,
@@ -889,7 +939,7 @@
    },
    "facebook": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": null,
      "reach": null,
      "likes": 0,
@@ -1028,7 +1078,7 @@
   "stats": {
    "instagram": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": 7,
      "reach": 6,
      "likes": 1,
@@ -1051,7 +1101,7 @@
    },
    "facebook": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": 0,
      "reach": null,
      "likes": null,
@@ -1186,7 +1236,7 @@
   "stats": {
    "facebook": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": 0,
      "reach": null,
      "likes": null,
@@ -1209,7 +1259,7 @@
    },
    "instagram": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": 1,
      "reach": 1,
      "likes": 1,
@@ -1341,7 +1391,7 @@
   "stats": {
    "facebook": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": null,
      "reach": null,
      "likes": 0,
@@ -1364,7 +1414,7 @@
    },
    "instagram": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": 5,
      "reach": 1,
      "likes": 0,
@@ -1500,7 +1550,7 @@
   "stats": {
    "facebook": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": null,
      "reach": null,
      "likes": 0,
@@ -1523,7 +1573,7 @@
    },
    "instagram": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": 5,
      "reach": 1,
      "likes": 0,
@@ -1662,7 +1712,7 @@
   "stats": {
    "instagram": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": 2,
      "reach": 1,
      "likes": 1,
@@ -1685,7 +1735,7 @@
    },
    "facebook": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": null,
      "reach": null,
      "likes": 0,
@@ -1822,7 +1872,7 @@
   "stats": {
    "instagram": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": 50,
      "reach": 43,
      "likes": 2,
@@ -1845,7 +1895,7 @@
    },
    "facebook": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": 2,
      "reach": null,
      "likes": null,
@@ -1977,7 +2027,7 @@
   "stats": {
    "instagram": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": 4,
      "reach": 1,
      "likes": 0,
@@ -2000,7 +2050,7 @@
    },
    "facebook": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": null,
      "reach": null,
      "likes": 0,
@@ -2135,7 +2185,7 @@
   "stats": {
    "instagram": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": 8,
      "reach": 2,
      "likes": 0,
@@ -2158,7 +2208,7 @@
    },
    "facebook": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": null,
      "reach": null,
      "likes": 0,
@@ -2296,7 +2346,7 @@
   "stats": {
    "instagram": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": 6,
      "reach": 1,
      "likes": 0,
@@ -2319,7 +2369,7 @@
    },
    "facebook": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": null,
      "reach": null,
      "likes": 0,
@@ -2460,7 +2510,7 @@
   "stats": {
    "instagram": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": 4,
      "reach": 2,
      "likes": 1,
@@ -2483,7 +2533,7 @@
    },
    "facebook": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": null,
      "reach": null,
      "likes": 0,
@@ -2598,7 +2648,7 @@
   "stats": {
    "instagram": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": 3,
      "reach": 2,
      "likes": 1,
@@ -2621,7 +2671,7 @@
    },
    "facebook": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": null,
      "reach": null,
      "likes": 0,
@@ -2738,7 +2788,7 @@
   "stats": {
    "instagram": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": 4,
      "reach": 1,
      "likes": 0,
@@ -2761,7 +2811,7 @@
    },
    "facebook": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": null,
      "reach": null,
      "likes": 0,
@@ -2890,7 +2940,7 @@
   "stats": {
    "instagram": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": 5,
      "reach": 2,
      "likes": 1,
@@ -2913,7 +2963,7 @@
    },
    "facebook": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": null,
      "reach": null,
      "likes": 0,
@@ -3041,7 +3091,7 @@
   "stats": {
    "instagram": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": 0,
      "reach": 0,
      "likes": 0,
@@ -3064,7 +3114,7 @@
    },
    "facebook": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": null,
      "reach": null,
      "likes": 0,
@@ -3175,7 +3225,7 @@
   "stats": {
    "instagram": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": 2,
      "reach": 1,
      "likes": 1,
@@ -3198,7 +3248,7 @@
    },
    "facebook": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": null,
      "reach": null,
      "likes": 0,
@@ -3349,7 +3399,7 @@
   "stats": {
    "instagram": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": 4,
      "reach": 1,
      "likes": 0,
@@ -3392,7 +3442,7 @@
      "avg_watch_ms": null
     },
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": null,
      "reach": null,
      "likes": 0,
@@ -3549,7 +3599,7 @@
   "stats": {
    "instagram": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": 0,
      "reach": 0,
      "likes": 1,
@@ -3592,7 +3642,7 @@
      "avg_watch_ms": null
     },
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": null,
      "reach": null,
      "likes": 0,
@@ -3760,7 +3810,7 @@
      "avg_watch_ms": 0
     },
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": 0,
      "reach": 1,
      "likes": 0,
@@ -3793,7 +3843,7 @@
      "avg_watch_ms": null
     },
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": 0,
      "reach": null,
      "likes": null,
@@ -3928,7 +3978,7 @@
   "stats": {
    "facebook": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": null,
      "reach": null,
      "likes": 0,
@@ -3971,7 +4021,7 @@
      "avg_watch_ms": null
     },
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": 1,
      "reach": 1,
      "likes": 0,
@@ -4105,7 +4155,7 @@
   "stats": {
    "instagram": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": 1,
      "reach": 1,
      "likes": 0,
@@ -4148,7 +4198,17 @@
      "avg_watch_ms": null
     },
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
+     "views": null,
+     "reach": null,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": null,
+     "follows": null,
+     "avg_watch_ms": null
+    },
+    "24u": {
      "views": null,
      "reach": null,
      "likes": 0,
@@ -4305,7 +4365,17 @@
      "avg_watch_ms": null
     },
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
+     "views": null,
+     "reach": null,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": null,
+     "follows": null,
+     "avg_watch_ms": null
+    },
+    "24u": {
      "views": null,
      "reach": null,
      "likes": 0,
@@ -4328,7 +4398,17 @@
      "avg_watch_ms": null
     },
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
+     "views": 1,
+     "reach": 1,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": 0,
+     "avg_watch_ms": null
+    },
+    "24u": {
      "views": 1,
      "reach": 1,
      "likes": 0,
@@ -4471,7 +4551,17 @@
      "avg_watch_ms": 0
     },
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
+     "views": 18,
+     "reach": 18,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "avg_watch_ms": 2716
+    },
+    "24u": {
      "views": 18,
      "reach": 18,
      "likes": 0,
@@ -4494,7 +4584,17 @@
      "avg_watch_ms": null
     },
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "avg_watch_ms": null
+    },
+    "24u": {
      "views": 0,
      "reach": null,
      "likes": null,
@@ -4638,7 +4738,7 @@
      "avg_watch_ms": null
     },
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": 0,
      "reach": null,
      "likes": null,
@@ -4661,7 +4761,7 @@
    },
    "instagram": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": 36,
      "reach": 33,
      "likes": 0,
@@ -4680,6 +4780,16 @@
      "saves": 0,
      "follows": null,
      "avg_watch_ms": 0
+    },
+    "24u": {
+     "views": 36,
+     "reach": 33,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "avg_watch_ms": 1985
     }
    }
   },
@@ -4817,7 +4927,7 @@
      "avg_watch_ms": 27779
     },
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": 16,
      "reach": 16,
      "likes": 0,
@@ -4850,7 +4960,17 @@
      "avg_watch_ms": null
     },
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "avg_watch_ms": null
+    },
+    "24u": {
      "views": 0,
      "reach": null,
      "likes": null,
@@ -4990,7 +5110,17 @@
      "avg_watch_ms": null
     },
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
+     "views": null,
+     "reach": null,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": null,
+     "follows": null,
+     "avg_watch_ms": null
+    },
+    "24u": {
      "views": null,
      "reach": null,
      "likes": 0,
@@ -5003,7 +5133,7 @@
    },
    "instagram": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": 0,
      "reach": 0,
      "likes": 0,
@@ -5014,6 +5144,16 @@
      "avg_watch_ms": null
     },
     "1u": {
+     "views": 0,
+     "reach": 0,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": 0,
+     "avg_watch_ms": null
+    },
+    "24u": {
      "views": 0,
      "reach": 0,
      "likes": 0,
@@ -5159,7 +5299,7 @@
      "avg_watch_ms": 1169
     },
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": 60,
      "reach": 52,
      "likes": 2,
@@ -5167,7 +5307,17 @@
      "shares": 0,
      "saves": 1,
      "follows": null,
-     "avg_watch_ms": 2848
+     "avg_watch_ms": 3032
+    },
+    "24u": {
+     "views": 60,
+     "reach": 52,
+     "likes": 2,
+     "comments": 0,
+     "shares": 0,
+     "saves": 1,
+     "follows": null,
+     "avg_watch_ms": 3032
     }
    },
    "facebook": {
@@ -5182,7 +5332,7 @@
      "avg_watch_ms": null
     },
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": 0,
      "reach": null,
      "likes": null,
@@ -5320,15 +5470,15 @@
   "stats": {
    "instagram": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
-     "views": 47,
-     "reach": 43,
+     "t": "2026-11-15T12:56+01:00",
+     "views": 49,
+     "reach": 46,
      "likes": 0,
      "comments": 0,
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "avg_watch_ms": 1591
+     "avg_watch_ms": 1548
     },
     "1u": {
      "views": 23,
@@ -5353,7 +5503,7 @@
      "avg_watch_ms": null
     },
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": 0,
      "reach": null,
      "likes": null,
@@ -5478,7 +5628,7 @@
   "stats": {
    "facebook": {
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": null,
      "reach": null,
      "likes": 0,
@@ -5511,7 +5661,7 @@
      "avg_watch_ms": null
     },
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": 0,
      "reach": 0,
      "likes": 0,
@@ -5650,7 +5800,7 @@
      "avg_watch_ms": null
     },
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": 3,
      "reach": 1,
      "likes": 0,
@@ -5673,7 +5823,7 @@
      "avg_watch_ms": null
     },
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": null,
      "reach": null,
      "likes": 0,
@@ -5824,7 +5974,7 @@
      "avg_watch_ms": null
     },
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": 0,
      "reach": null,
      "likes": null,
@@ -5833,6 +5983,19 @@
      "saves": null,
      "follows": null,
      "avg_watch_ms": null
+    }
+   },
+   "instagram": {
+    "laatst": {
+     "t": "2026-11-15T12:56+01:00",
+     "views": 1,
+     "reach": 0,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "avg_watch_ms": 0
     }
    }
   },
@@ -5964,7 +6127,7 @@
      "avg_watch_ms": null
     },
     "laatst": {
-     "t": "2026-11-15T10:01+01:00",
+     "t": "2026-11-15T12:56+01:00",
      "views": 0,
      "reach": 0,
      "likes": 0,
@@ -5972,6 +6135,19 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
+     "avg_watch_ms": null
+    }
+   },
+   "facebook": {
+    "laatst": {
+     "t": "2026-11-15T12:56+01:00",
+     "views": null,
+     "reach": null,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": null,
+     "follows": null,
      "avg_watch_ms": null
     }
    }
@@ -6212,7 +6388,21 @@
   "media": "docs/media/2026-11/2026-11-15-4.mp4",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-4.mp4",
   "metricool": {},
-  "stats": {},
+  "stats": {
+   "facebook": {
+    "laatst": {
+     "t": "2026-11-15T12:56+01:00",
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "avg_watch_ms": null
+    }
+   }
+  },
   "beeld": "pexels-yusuf-kaya-288172498-17409279.jpg",
   "muziek": "ES_Mind Flow - Aashray Harishankar.mp3",
   "geluid": "ES_Water, Splash, Gentle Lake, Detailed, Calm - Epidemic Sound.mp3",
