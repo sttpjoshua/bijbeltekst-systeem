@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-15T17:01",
+ "gegenereerd": "2026-11-15T17:15",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -7078,9 +7078,9 @@
    "ok": "2026-11-15T12:01"
   },
   "nieuws": {
-   "ok": "2026-11-15T12:01",
+   "ok": "2026-11-15T17:01",
    "laatst_ok": true,
-   "detail": "3 nieuwe aanleidingen"
+   "detail": "1 nieuwe aanleidingen"
   },
   "maken": {
    "ok": "2026-11-15T09:04",
@@ -9606,6 +9606,18 @@
    "licht_automatisch": true
   },
   "recent": [
+   {
+    "id": "n111517010",
+    "t": "2026-11-15T15:45+01:00",
+    "bron": "NOS",
+    "kop": "Pech bij Sint-intocht Amsterdam: stoomboot kan niet verder door kapotte brug",
+    "link": "https://nos.nl/l/2639593",
+    "categorie": "sinterklaas",
+    "zwaar": false,
+    "status": "overgeslagen",
+    "post": null,
+    "opties": null
+   },
    {
     "id": "n111512012",
     "t": "2026-11-15T10:06+01:00",
