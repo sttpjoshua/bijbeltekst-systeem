@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-15T23:15",
+ "gegenereerd": "2026-11-15T23:22",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -127,6 +127,20 @@
     "roze": 1.0,
     "goud": 1.0
    },
+   "markeer_achtergrond": {
+    "kleur": 1.0,
+    "papier": 1.0,
+    "schaduw": 1.0,
+    "foto": 1.0
+   },
+   "markeer_streep": {
+    "regel": 1.0,
+    "woord": 1.0
+   },
+   "markeer_opening": {
+    "vers": 1.0,
+    "sterk": 1.0
+   },
    "reel_plaatsing": {
     "midden": 1.0,
     "boven": 1.0
@@ -246,6 +260,20 @@
     "hemel": 0,
     "roze": 0,
     "goud": 0
+   },
+   "markeer_achtergrond": {
+    "kleur": 0,
+    "papier": 0,
+    "schaduw": 0,
+    "foto": 0
+   },
+   "markeer_streep": {
+    "regel": 0,
+    "woord": 0
+   },
+   "markeer_opening": {
+    "vers": 0,
+    "sterk": 0
    },
    "reel_plaatsing": {
     "midden": 0,
@@ -370,7 +398,7 @@
    "ref": "Psalm 56:4",
    "tekst": "Ten dage, als ik zal vrezen, zal ik op U vertrouwen.",
    "hook": "Een goede start begint hier.",
-   "status": "gerenderd",
+   "status": "opnieuw_maken",
    "variabelen": {
     "huisstijl": "hemelsblauw",
     "thema": "vertrouwen",
@@ -702,7 +730,7 @@
    "ref": "Psalm 136:26",
    "tekst": "Looft den God des hemels; want Zijn goedertierenheid is in der eeuwigheid.",
    "hook": "Schrijf vijf eigen redenen om God te danken.",
-   "status": "gerenderd",
+   "status": "opnieuw_maken",
    "variabelen": {
     "huisstijl": "schaduw_blauw",
     "thema": "dankbaarheid",
@@ -6611,11 +6639,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-15T05:15:28",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
-  },
-  {
    "t": "2026-11-15T05:30:36",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
@@ -6916,6 +6939,11 @@
    "t": "2026-11-15T23:15:32",
    "soort": "info",
    "tekst": "2026-11-15-5 overgeslagen: daglimiet bereikt"
+  },
+  {
+   "t": "2026-11-15T23:22:04",
+   "soort": "info",
+   "tekst": "Reels aangepast (Joshua akkoord): situatie-reel begint direct met het vers, meelees-reel nu de helft van de reels met nieuwe varianten. Psalm 136:26 (16 nov) en Psalm 56:4 (17 nov) worden opnieuw gemaakt."
   }
  ],
  "recente_fouten": [
@@ -7455,6 +7483,21 @@
     }
    ],
    "metingen": 2
+  },
+  {
+   "dimensie": "markeer_achtergrond",
+   "opties": [],
+   "metingen": 0
+  },
+  {
+   "dimensie": "markeer_streep",
+   "opties": [],
+   "metingen": 0
+  },
+  {
+   "dimensie": "markeer_opening",
+   "opties": [],
+   "metingen": 0
   },
   {
    "dimensie": "reel_plaatsing",
@@ -10299,7 +10342,7 @@
   "tests": [
    {
     "naam": "meelees-stijl",
-    "tekst": "25% van de reels en een deel van de carrousels"
+    "tekst": "50% van de reels en een deel van de carrousels"
    },
    {
     "naam": "verkennen",

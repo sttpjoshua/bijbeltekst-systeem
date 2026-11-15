@@ -414,7 +414,7 @@ html[data-thema=donker] .kpost .knws{background:#3a2e14;color:#ffd98a}
 <div id="lade" onclick="if(event.target===this)sluitLade()"><div class="ladebinnen" id="ladeBinnen"></div></div>
 <div id="galerij" onclick="if(event.target===this)this.style.display='none'"><button class="sluit" onclick="galerij.style.display='none'">✕</button><div class="galrij"></div><div class="tel"></div></div>
 <script>
-const NAMEN={huisstijl:"Huisstijl",thema:"Thema",hook_stijl:"Hook-stijl",formaat:"Formaat",uitleg_op_beeld:"Uitleg op beeld",achtergrondbron:"Achtergrond",boekgroep:"Bijbelboek",lengte:"Lengte vers",bron:"Bekend of ontdekking",vraag_onderaan:"Vraag onderaan",opening:"Eerste slide",tijdslot:"Tijdstip",reel_stijl:"Reelstijl",reel_plaatsing:"Tekst in reel",reel_scene:"Rustbeeld in reel",hashtag_stijl:"Soort hashtags",carrousel_stijl:"Carrouselstijl",reel_kleur:"Kleur meelees-stijl"};
+const NAMEN={huisstijl:"Huisstijl",thema:"Thema",hook_stijl:"Hook-stijl",formaat:"Formaat",uitleg_op_beeld:"Uitleg op beeld",achtergrondbron:"Achtergrond",boekgroep:"Bijbelboek",lengte:"Lengte vers",bron:"Bekend of ontdekking",vraag_onderaan:"Vraag onderaan",opening:"Eerste slide",tijdslot:"Tijdstip",reel_stijl:"Reelstijl",reel_plaatsing:"Tekst in reel",reel_scene:"Rustbeeld in reel",hashtag_stijl:"Soort hashtags",carrousel_stijl:"Carrouselstijl",reel_kleur:"Kleur meelees-stijl",markeer_achtergrond:"Achtergrond meelees-reel",markeer_streep:"Markeerstreep",markeer_opening:"Begin meelees-reel"};
 const STATUS={wacht_op_tekst:"Wacht op tekst",gerenderd:"Klaar, gaat online",afgekeurd:"Overgeslagen door jou",overgeslagen:"Overgeslagen",gepubliceerd:"Gepubliceerd",fout:"Fout"};
 const fmt=n=>n==null?"–":Number(n).toLocaleString("nl-NL");
 const tip=document.getElementById("tip");
@@ -1040,7 +1040,7 @@ function openLade(id){
     ${x.caption?`<details open><summary class="sub" style="cursor:pointer">Caption</summary><div class="lcap">${esc(x.caption)}</div></details>`:""}
     ${!plan&&st!=="online"&&(x.status==="gerenderd"||x.status==="wacht_op_tekst")&&kan?stijlBlok(x):""}
     ${act?(kan?act:`<div class="sub" style="margin-top:10px"><a href="#" onclick="sluitLade();naarSleutel();return false">Koppel eerst je sleutel</a> om deze post aan te passen.</div>`):""}
-    <details style="margin-top:12px"><summary class="sub" style="cursor:pointer">Details</summary><div style="margin-top:6px">${["huisstijl","hook_stijl","opening","achtergrondbron","reel_stijl","carrousel_stijl","reel_kleur"].filter(k=>v[k]).map(k=>`<span class="tag">${NAMEN[k]||k}: ${esc(v[k])}</span>`).join("")}</div></details>`;
+    <details style="margin-top:12px"><summary class="sub" style="cursor:pointer">Details</summary><div style="margin-top:6px">${["huisstijl","hook_stijl","opening","achtergrondbron","reel_stijl","carrousel_stijl","reel_kleur","markeer_achtergrond","markeer_streep","markeer_opening"].filter(k=>v[k]).map(k=>`<span class="tag">${NAMEN[k]||k}: ${esc(v[k])}</span>`).join("")}</div></details>`;
   document.getElementById("lade").style.display="flex";
 }
 function toonPlan(id){
