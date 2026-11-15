@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T19:30:45",
+ "updated": "2026-11-15T19:45:33",
  "agents": {
   "verskiezer": {
    "t": "2026-11-15T11:57:02",
@@ -57,6 +57,10 @@
  ],
  "log": [
   {
+   "t": "19:45",
+   "msg": "2026-11-15-5 overgeslagen: daglimiet bereikt"
+  },
+  {
    "t": "19:30",
    "msg": "2026-11-15-5 overgeslagen: daglimiet bereikt"
   },
@@ -99,10 +103,6 @@
   {
    "t": "17:46",
    "msg": "2026-11-15-4 ook als story geplaatst"
-  },
-  {
-   "t": "14:37",
-   "msg": "Dagelijkse run (zelfstandig): 4 posts voor 16 en 17 november gecontroleerd (carrousel en reel bekeken, leesbaa"
   }
  ],
  "lampen": [
