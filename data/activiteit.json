@@ -1,17 +1,17 @@
 {
  "verskiezer": {
-  "t": "2026-11-14T09:02:39",
-  "task": "Koos Jesaja 40:31, 2 Korinthe 1:4, Exodus 14:14, Psalm 47:7, Psalm 136:26",
+  "t": "2026-11-15T09:02:23",
+  "task": "Koos Psalm 27:14, Prediker 10:18, 1 Petrus 4:8, Psalm 56:4, Jakobus 3:13",
   "state": "done"
  },
  "designer": {
-  "t": "2026-11-14T09:04:16",
-  "task": "Ontwierp Psalm 136:26 in stijl schaduw_blauw",
+  "t": "2026-11-15T09:04:00",
+  "task": "Ontwierp Jakobus 3:13 in stijl paars",
   "state": "done"
  },
  "video": {
-  "t": "2026-11-14T09:04:16",
-  "task": "Monteerde video Psalm 136:26 met muziek",
+  "t": "2026-11-15T09:04:00",
+  "task": "Monteerde video Jakobus 3:13 met muziek",
   "state": "done"
  },
  "dispatcher": {
@@ -20,8 +20,8 @@
   "state": "done"
  },
  "controller": {
-  "t": "2026-11-15T04:01:10",
-  "task": "Zelf opgelost: poging 1 van 3; probeert het over een kwartier opnieuw",
+  "t": "2026-11-15T09:04:00",
+  "task": "Posts klaargezet uit de tekstbank",
   "state": "done"
  },
  "analist": {

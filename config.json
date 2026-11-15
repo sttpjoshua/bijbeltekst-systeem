@@ -39,11 +39,10 @@
  "stories": true,
  "experiment": {
   "dims": [
-   "huisstijl",
-   "thema"
+   "boekgroep"
   ],
-  "van": "2026-11-08",
-  "tot": "2026-11-14"
+  "van": "2026-11-15",
+  "tot": "2026-11-21"
  },
  "verzen_uitsluiten": [
   "II_Corinthians-5-6-6",
@@ -59,5 +58,7 @@
  "markeer_aandeel": 0.25,
  "verzen_later": {
   "I_John-3-1-1": "2026-12-12"
- }
+ },
+ "extra_tijdsloten": [],
+ "tijd_voorstel_laatst": "2026-11-15"
 }
