@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T07:01:04",
+ "updated": "2026-11-15T07:15:27",
  "agents": {
   "verskiezer": {
    "t": "2026-11-14T09:02:39",
@@ -22,8 +22,8 @@
    "state": "done"
   },
   "controller": {
-   "t": "2026-11-14T07:01:23",
-   "task": "Politiek nieuws (NOS): \"Italiaanse minister: scholen niet meteen dicht",
+   "t": "2026-11-15T07:01:09",
+   "task": "Politiek nieuws (NOS): \"Wekdienst 15/11: Crisisgesprekken kabinet gaan",
    "state": "error"
   },
   "analist": {
@@ -56,6 +56,10 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "07:01",
+   "msg": "Politiek nieuws (NOS): \"Wekdienst 15/11: Crisisgesprekken kabinet gaan verder • Wereldbeker schaatsen Peking\"."
+  },
   {
    "t": "05:30",
    "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
@@ -99,10 +103,6 @@
   {
    "t": "22:02",
    "msg": "2026-11-14-2 online op facebook: Sefanja 3:17"
-  },
-  {
-   "t": "21:45",
-   "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
   }
  ],
  "lampen": [

@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-15T07:01",
+ "gegenereerd": "2026-11-15T07:15",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -5948,11 +5948,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-13T09:02:35",
-   "soort": "info",
-   "tekst": "Zelfstandig 5 posts klaargezet voor 2026-11-15 (teksten uit de tekstbank)."
-  },
-  {
    "t": "2026-11-13T12:16:57",
    "soort": "info",
    "tekst": "2026-11-13-1 ook als story geplaatst"
@@ -6248,6 +6243,13 @@
    "t": "2026-11-15T05:30:36",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-15T07:01:09",
+   "soort": "fout",
+   "tekst": "Politiek nieuws (NOS): \"Wekdienst 15/11: Crisisgesprekken kabinet gaan verder • Wereldbeker schaatsen Peking\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
+   "code": "nieuws_voorstel",
+   "post": "n111507010"
   }
  ],
  "recente_fouten": [
@@ -6262,6 +6264,13 @@
    "tekst": "Politiek nieuws (NOS): \"Italiaanse minister: scholen niet meteen dicht na een bommelding\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
    "code": "nieuws_voorstel",
    "post": "n111407010"
+  },
+  {
+   "t": "2026-11-15T07:01:09",
+   "soort": "fout",
+   "tekst": "Politiek nieuws (NOS): \"Wekdienst 15/11: Crisisgesprekken kabinet gaan verder • Wereldbeker schaatsen Peking\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
+   "code": "nieuws_voorstel",
+   "post": "n111507010"
   }
  ],
  "versen_totaal": 300,
@@ -6405,7 +6414,7 @@
    "ok": "2026-11-14T21:30"
   },
   "nieuws": {
-   "ok": "2026-11-14T17:01",
+   "ok": "2026-11-15T07:01",
    "laatst_ok": true,
    "detail": "1 nieuwe aanleidingen"
   },
@@ -8808,6 +8817,70 @@
    "licht_automatisch": true
   },
   "recent": [
+   {
+    "id": "n111507010",
+    "t": "2026-11-15T06:23+01:00",
+    "bron": "NOS",
+    "kop": "Wekdienst 15/11: Crisisgesprekken kabinet gaan verder • Wereldbeker schaatsen Peking",
+    "link": "https://nos.nl/l/2639533",
+    "categorie": "politiek",
+    "zwaar": false,
+    "status": "voorstel",
+    "post": null,
+    "opties": [
+     {
+      "vers_id": "Proverbs-19-21-21",
+      "ref": "Spreuken 19:21",
+      "tekst": "In het hart des mans zijn veel gedachten; maar de raad des HEEREN, die zal bestaan.",
+      "zin": "Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.",
+      "kernwoord": "raad",
+      "betekenis": "Spreuken zegt: je hebt duizend ideeën en plannen. Prima. Maar uiteindelijk gebeurt wat God wil. Dat is geen bedreiging, maar een geruststelling.",
+      "toepassing": "Schrijf je grootste plan op en bid erbij: Uw wil gebeure.",
+      "brug": "Bij alle onrust: wat blijft staan.",
+      "caption": "Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.\n\n\"In het hart des mans zijn veel gedachten; maar de raad des HEEREN, die zal bestaan.\"\nSpreuken 19:21\n\nBij alle onrust: wat blijft staan. Gods plan gaat door. Dat geeft rust.",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111507010-1-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111507010-1-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111507010-1-3.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111507010-1-4.jpg"
+      ]
+     },
+     {
+      "vers_id": "Psalms-125-1-1",
+      "ref": "Psalm 125:1",
+      "tekst": "Die op den HEERE vertrouwen, zijn als de berg Sion, die niet wankelt, maar blijft in eeuwigheid.",
+      "zin": "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.",
+      "kernwoord": "wankelt",
+      "betekenis": "De dichter kijkt naar de berg Sion. Die staat er al eeuwen en beweegt niet. Zo stevig sta je als je op God vertrouwt. Niet omdat je zelf zo sterk bent.",
+      "toepassing": "Wat brengt je aan het wankelen? Zeg vandaag: ik sta vast door God.",
+      "brug": "Een vast punt in veel geluid.",
+      "caption": "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.\n\n\"Die op den HEERE vertrouwen, zijn als de berg Sion, die niet wankelt, maar blijft in eeuwigheid.\"\nPsalm 125:1\n\nEen vast punt in veel geluid. Vertrouwen op God geeft je vaste grond.",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111507010-2-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111507010-2-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111507010-2-3.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111507010-2-4.jpg"
+      ]
+     },
+     {
+      "vers_id": "Psalms-46-11-11",
+      "ref": "Psalm 46:11",
+      "tekst": "Laat af, en weet, dat Ik God ben; Ik zal verhoogd worden onder de heidenen, Ik zal verhoogd worden op de aarde. De HEERE der heirscharen is met ons; de God van Jakob is ons een Hoog Vertrek. Sela.",
+      "zin": "Veel meningen, veel onrust. Even terug naar wat vaststaat.",
+      "kernwoord": "Laat",
+      "betekenis": "God spreekt midden in onrust en oorlog. Laat af, stop met vechten, word stil. Weet dat Ik God ben. Niet jij hoeft alles te regelen. Hij is God.",
+      "toepassing": "Stop vandaag even met alles. Zeg langzaam: U bent God, ik niet.",
+      "brug": "Bij alle onrust: wat blijft staan.",
+      "caption": "Veel meningen, veel onrust. Even terug naar wat vaststaat.\n\n\"Laat af, en weet, dat Ik God ben; Ik zal verhoogd worden onder de heidenen, Ik zal verhoogd worden op de aarde. De HEERE der heirscharen is met ons; de God van Jakob is ons een Hoog Vertrek. Sela.\"\nPsalm 46:11\n\nBij alle onrust: wat blijft staan. Je hoeft niet alles zelf te regelen. Hij is God.",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111507010-3-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111507010-3-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111507010-3-3.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111507010-3-4.jpg"
+      ]
+     }
+    ]
+   },
    {
     "id": "n111417010",
     "t": "2026-11-14T12:25+01:00",
