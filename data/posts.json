@@ -6340,7 +6340,7 @@
  {
   "id": "2026-11-15-4",
   "datum": "2026-11-15",
-  "status": "gerenderd",
+  "status": "gepubliceerd",
   "vers_id": "Philippians-4-13-13",
   "ref": "Filippenzen 4:13",
   "tekst": "Ik vermag alle dingen door Christus, Die mij kracht geeft.",
@@ -6477,6 +6477,11 @@
     "id": "1610918333580476",
     "url": "https://www.facebook.com/1610918333580476",
     "t": "2026-11-15T12:16+01:00"
+   },
+   "instagram": {
+    "id": "18118445759028106",
+    "url": "https://www.instagram.com/reel/DfxPdhXOwtO/",
+    "t": "2026-11-15T17:46+01:00"
    }
   }
  },

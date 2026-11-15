@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-15T17:30",
+ "gegenereerd": "2026-11-15T17:46",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1196,7 +1196,7 @@
    "ref": "Filippenzen 4:13",
    "tekst": "Ik vermag alle dingen door Christus, Die mij kracht geeft.",
    "hook": "Voor iedereen die het gevoel heeft dat het te veel wordt.",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "zand",
     "thema": "moed",
@@ -1238,10 +1238,12 @@
    ],
    "thumb": "thumbs/2026-11-15-4.jpg",
    "platformen": [
-    "facebook"
+    "facebook",
+    "instagram"
    ],
    "links": {
-    "facebook": "https://www.facebook.com/1610918333580476"
+    "facebook": "https://www.facebook.com/1610918333580476",
+    "instagram": "https://www.instagram.com/reel/DfxPdhXOwtO/"
    },
    "totaal": {
     "views": 0,
@@ -1298,7 +1300,8 @@
     }
    },
    "pub": {
-    "facebook": "2026-11-15T12:16+01:00"
+    "facebook": "2026-11-15T12:16+01:00",
+    "instagram": "2026-11-15T17:46+01:00"
    },
    "gemist": [],
    "nood": false,
@@ -6585,21 +6588,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-13T20:32:14",
-   "soort": "info",
-   "tekst": "2026-11-13-3 online op instagram: Spreuken 17:28"
-  },
-  {
-   "t": "2026-11-13T20:32:22",
-   "soort": "info",
-   "tekst": "2026-11-13-2 online op facebook: Mattheüs 10:30-31"
-  },
-  {
-   "t": "2026-11-13T21:45:44",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 3 posts vastgelegd"
-  },
-  {
    "t": "2026-11-13T22:02:46",
    "soort": "info",
    "tekst": "2026-11-13-3 online op facebook: Spreuken 17:28"
@@ -6892,6 +6880,21 @@
    "t": "2026-11-15T14:37:32",
    "soort": "info",
    "tekst": "Dagelijkse run (zelfstandig): 4 posts voor 16 en 17 november gecontroleerd (carrousel en reel bekeken, leesbaar), reserveverzen voor 17 november ingevuld (Prediker 4:9-10 en Kolossenzen 3:2), tekstbank 78 dagen, noodvoorraad 6/6"
+  },
+  {
+   "t": "2026-11-15T17:46:51",
+   "soort": "info",
+   "tekst": "2026-11-15-4 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-15T17:46:51",
+   "soort": "info",
+   "tekst": "2026-11-15-4 online op instagram: Filippenzen 4:13"
+  },
+  {
+   "t": "2026-11-15T17:46:51",
+   "soort": "info",
+   "tekst": "2026-11-15-5 overgeslagen: daglimiet bereikt"
   }
  ],
  "recente_fouten": [
@@ -7018,9 +7021,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-15T12:16",
+   "ok": "2026-11-15T17:46",
    "laatst_ok": true,
-   "detail": "Mattheüs 11:29-30 geplaatst"
+   "detail": "Filippenzen 4:13 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-15T12:58",
@@ -7156,7 +7159,7 @@
  ],
  "weken": {
   "deze": {
-   "posts": 32,
+   "posts": 33,
    "reach": 255,
    "views": 320,
    "likes": 14,
@@ -10189,8 +10192,8 @@
      },
      {
       "optie": "brieven",
-      "online": 0,
-      "gepland": 3,
+      "online": 1,
+      "gepland": 2,
       "n": 2,
       "gem": 0.55,
       "oordeel": "weinig data"

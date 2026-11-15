@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T17:30:42",
+ "updated": "2026-11-15T17:46:51",
  "agents": {
   "verskiezer": {
    "t": "2026-11-15T11:57:02",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-15T12:16:54",
-   "task": "Postte Filippenzen 4:13 op facebook",
+   "t": "2026-11-15T17:46:51",
+   "task": "Postte Filippenzen 4:13 op instagram",
    "state": "done"
   },
   "controller": {
@@ -38,11 +38,11 @@
   }
  },
  "stats": {
-  "posts_today": 2,
-  "posts_total": 38,
+  "posts_today": 3,
+  "posts_total": 39,
   "reach_7d": 258,
   "best_time": "nog onbekend",
-  "next_post": "2026-11-15T17:45:00"
+  "next_post": "2026-11-15T20:30:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
@@ -56,6 +56,18 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "17:46",
+   "msg": "2026-11-15-5 overgeslagen: daglimiet bereikt"
+  },
+  {
+   "t": "17:46",
+   "msg": "2026-11-15-4 online op instagram: Filippenzen 4:13"
+  },
+  {
+   "t": "17:46",
+   "msg": "2026-11-15-4 ook als story geplaatst"
+  },
   {
    "t": "14:37",
    "msg": "Dagelijkse run (zelfstandig): 4 posts voor 16 en 17 november gecontroleerd (carrousel en reel bekeken, leesbaa"
@@ -91,18 +103,6 @@
   {
    "t": "12:16",
    "msg": "2026-11-15-4 online op facebook: Filippenzen 4:13"
-  },
-  {
-   "t": "12:16",
-   "msg": "2026-11-15-1 online op instagram: Mattheüs 11:29-30"
-  },
-  {
-   "t": "12:16",
-   "msg": "2026-11-15-1 ook als story geplaatst"
-  },
-  {
-   "t": "12:15",
-   "msg": "2026-11-15-2 online op facebook: Psalm 16:11"
   }
  ],
  "lampen": [
