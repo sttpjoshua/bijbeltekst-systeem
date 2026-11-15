@@ -70,7 +70,10 @@ DIMENSIES = {
     "vraag_onderaan": [True, False],
     "reel_stijl": ["klassiek", "kinetisch", "beeld", "situatie", "markeren"],  # alleen video; 'situatie' is sinds 11 nov de standaard (config reel_formaat)
     "carrousel_stijl": ["standaard", "markeren"],  # alleen carrousel; 'markeren' = meelees-stijl met markeerstreep (Joshua, 12 nov)
-    "reel_kleur": ["abrikoos", "mint", "hemel", "roze", "goud"],  # meelees-reel: kleur en lettertype (Joshua, 12 nov: varianten)
+    "reel_kleur": ["abrikoos", "mint", "hemel", "roze", "goud"],
+    "markeer_achtergrond": ["kleur", "papier", "schaduw", "foto"],  # meelees-reel (Joshua, 15 nov: meer variaties)
+    "markeer_streep": ["regel", "woord"],  # meelees-reel: streep loopt per regel of per woord mee
+    "markeer_opening": ["vers", "sterk"],  # meelees-reel: meteen het vers, of eerst 1,7 s het sterkste stukje groot  # meelees-reel: kleur en lettertype (Joshua, 12 nov: varianten)
     "reel_plaatsing": ["midden", "boven"],  # situatie-reel: waar de tekst staat (Joshua, 11 nov: deze twee testen)
     "reel_scene": ["natuur", "dichtbij", "onderweg"],  # situatie-reel: soort rustig beeld onder het vers
     "reel_haak": ["geen", "vraag"],  # alleen video: eerst 1,4 s een grote vraag in beeld
@@ -98,7 +101,8 @@ except Exception:
 PRESENTATIE_VAST = {"hook_stijl", "uitleg_op_beeld", "achtergrondbron", "vraag_onderaan", "reel_haak", "opening", "hashtag_stijl"}
 # Welke onderdelen sturen vooral op bereik, en welke vooral op interactie (opslaan, delen, reacties)
 DOEL_BEREIK = {"tijdslot", "weekdag", "hook_stijl", "formaat", "reel_stijl", "reel_haak", "hashtag_stijl", "reel_scene",
-               "reel_plaatsing", "huisstijl", "carrousel_stijl", "reel_kleur", "opening", "achtergrondbron"}
+               "reel_plaatsing", "huisstijl", "carrousel_stijl", "reel_kleur", "opening", "achtergrondbron",
+               "markeer_achtergrond", "markeer_streep", "markeer_opening"}
 DOEL_INTERACTIE = {"thema", "boekgroep", "bron", "lengte", "vraag_onderaan", "uitleg_op_beeld"}
 
 # Startgewichten die afwijken van 1,0 (Joshua: vooral kleurverloop, foto's als aanvulling)
@@ -411,6 +415,12 @@ def kies_posts(datum, cfg, strat, posts, verzen, mat, n_start, n, gebruikte_slot
                     v[d], bron[d] = None, "n.v.t."
             if v["reel_stijl"] != "markeren":
                 v["reel_kleur"], bron["reel_kleur"] = None, "n.v.t."
+            for d in ("markeer_achtergrond", "markeer_streep", "markeer_opening"):
+                if v["reel_stijl"] != "markeren":
+                    v[d], bron[d] = None, "n.v.t."
+                elif not v.get(d):
+                    zonder = ("foto",) if d == "markeer_achtergrond" and (mat is not None and not mat["beelden"]) else ()
+                    v[d], bron[d] = kies_optie(d, strat, cfg["verkenning"], rnd, zonder, ctx)
             for d in ("reel_plaatsing", "reel_scene"):
                 if v["reel_stijl"] == "situatie" and not v.get(d):
                     v[d], bron[d] = kies_optie(d, strat, cfg["verkenning"], rnd, (), ctx)
@@ -436,7 +446,7 @@ def kies_bestanden(nieuw, posts, mat, rnd):
         v = p["variabelen"]
         if v["achtergrondbron"] == "beeld" and not mat["beelden"]:
             v["achtergrondbron"], p["keuzebron"]["achtergrondbron"] = "verloop", "limiet"
-        p["beeld"] = minst_gebruikt(mat["beelden"], posts + nieuw, "beeld", rnd) if v["achtergrondbron"] == "beeld" else None
+        p["beeld"] = minst_gebruikt(mat["beelden"], posts + nieuw, "beeld", rnd) if (v["achtergrondbron"] == "beeld" or v.get("markeer_achtergrond") == "foto") else None
         p["muziek"] = minst_gebruikt(mat["muziek"], posts + nieuw, "muziek", rnd) if v["formaat"] == "video" else None
         p["geluid"] = rnd.choice(mat["geluid"]) if mat["geluid"] and v["formaat"] == "video" and v["achtergrondbron"] == "beeld" else None
 
@@ -535,7 +545,8 @@ def render_een(p, cfg, map_rel):
                 if not gevonden:
                     raise RuntimeError("geen passende clips gevonden")
                 p["variabelen"]["reel_scene"] = rust
-                reels.maak_situatie(p, P(rel), gevonden, p["variabelen"].get("reel_plaatsing") or "midden")
+                reels.maak_situatie(p, P(rel), gevonden, p["variabelen"].get("reel_plaatsing") or "midden",
+                                    cfg.get("situatie_openingszin", False))
             except Exception as e:  # nooit een gat in de planning: dan een gewone reel
                 print("Situatie-reel lukte niet, gewone reel:", e)
                 p["variabelen"]["reel_stijl"] = "klassiek"
