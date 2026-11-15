@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-15T22:15",
+ "gegenereerd": "2026-11-15T22:30",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -6611,16 +6611,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-14T22:03:13",
-   "soort": "info",
-   "tekst": "2026-11-14-5 ook als story geplaatst"
-  },
-  {
-   "t": "2026-11-14T22:03:13",
-   "soort": "info",
-   "tekst": "2026-11-14-5 online op instagram: Psalm 62:6"
-  },
-  {
    "t": "2026-11-14T22:03:20",
    "soort": "info",
    "tekst": "2026-11-14-5 online op facebook: Psalm 62:6"
@@ -6914,6 +6904,16 @@
   },
   {
    "t": "2026-11-15T22:15:41",
+   "soort": "info",
+   "tekst": "2026-11-15-5 overgeslagen: daglimiet bereikt"
+  },
+  {
+   "t": "2026-11-15T22:30:43",
+   "soort": "info",
+   "tekst": "2026-11-15-3 overgeslagen: daglimiet bereikt"
+  },
+  {
+   "t": "2026-11-15T22:30:43",
    "soort": "info",
    "tekst": "2026-11-15-5 overgeslagen: daglimiet bereikt"
   }
