@@ -998,6 +998,39 @@ def leermodus_uit(cfg):
     cfg["posts_per_dag"] = min(vorige.get("posts_per_dag") or 1, cfg["max_posts_per_dag"])
     cfg["verkenning"] = vorige.get("verkenning") or 0.2
 
+def cmd_inkorten(stil=False):
+    """Na snel leren (of als posts_per_dag lager is gezet) kunnen er voor de komende dagen nog meer posts
+    klaarstaan dan posts_per_dag. Vanaf morgen houden we per dag de beste: eerst een reekspost, dan door Joshua
+    goedgekeurde posts, dan het tijdslot dat tot nu toe het best scoort (bij gelijke stand het ochtendslot).
+    De rest krijgt status 'afgekeurd' (zoals Overslaan in het dashboard)."""
+    cfg = laad("config.json")
+    posts = laad("data/posts.json", [])
+    per_dag = max(1, min(cfg["posts_per_dag"], cfg["max_posts_per_dag"]))
+    morgen = (dt.date.today() + dt.timedelta(days=1)).isoformat()
+    try:
+        slot_score = {k: statistics.mean(v) for k, v in optie_stats(posts).get("tijdslot", {}).items() if v}
+    except Exception:
+        slot_score = {}
+    ochtend = cfg.get("ochtend_slot") or "04:00"
+    weg = []
+    for datum in sorted({p["datum"] for p in posts if p["datum"] >= morgen}):
+        actief = [p for p in posts if p["datum"] == datum and p["status"] in ("gerenderd", "wacht_op_tekst", "opnieuw_maken")]
+        if len(actief) <= per_dag:
+            continue
+        def prio(p):
+            slot = p["variabelen"].get("tijdslot")
+            return (bool(p.get("reeks")), p.get("goedgekeurd") is True, slot_score.get(slot, 1.0), slot == ochtend)
+        for p in sorted(actief, key=prio, reverse=True)[per_dag:]:
+            p["status"] = "afgekeurd"
+            p["reden"] = f"meer dan {per_dag} posts per dag"
+            weg.append(f"{p['id']} ({p['ref']})")
+    if weg:
+        bewaar("data/posts.json", posts)
+        cmd_log(f"Teruggebracht naar {per_dag} posts per dag: {', '.join(weg)} overgeslagen")
+    elif not stil:
+        print("Niets in te korten")
+    return weg
+
 def check_leermodus():
     """Na de einddatum gaat snel leren vanzelf uit. Geeft True als de modus (nog) aan staat."""
     cfg = laad("config.json")
@@ -1007,6 +1040,7 @@ def check_leermodus():
         leermodus_uit(cfg)
         bewaar("config.json", cfg)
         cmd_log("Snel leren afgelopen: terug naar de normale instellingen")
+        cmd_inkorten(stil=True)  # al gemaakte posts voor de komende dagen terug naar posts_per_dag
         return False
     return True
 
@@ -1939,6 +1973,7 @@ if __name__ == "__main__":
         "kandidaten": lambda: cmd_kandidaten(*(x.args[:1] or [60])),
         "reserve": lambda: cmd_reserve(x.datum),
         "experiment": lambda: cmd_experiment(),
+        "inkorten": lambda: cmd_inkorten(),
         "keur": lambda: cmd_keur(x.args[0], x.args[1:]),
      "registreer": lambda: cmd_registreer(*x.args), "stats": lambda: cmd_stats(x.args[0]),
      "leer": cmd_leer, "dashboard": cmd_dashboard, "check": cmd_check,

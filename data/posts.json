@@ -6707,7 +6707,7 @@
  {
   "id": "2026-11-16-2",
   "datum": "2026-11-16",
-  "status": "gerenderd",
+  "status": "afgekeurd",
   "vers_id": "II_Corinthians-1-4-4",
   "ref": "2 Korinthe 1:4",
   "tekst": "Die ons vertroost in al onze verdrukking, opdat wij zouden kunnen vertroosten degenen, die in allerlei verdrukking zijn, door de vertroosting, met welke wij zelven van God vertroost worden.",
@@ -6820,12 +6820,13 @@
    "betekenis": "Spreuken beschrijft met humor hoe uitstellen werkt. Nog even, nog even. Het lijkt onschuldig, maar kleine keuzes tellen op. Voor je het weet ben je achter.",
    "toepassing": "Kies vandaag één ding dat je steeds uitstelt en doe het meteen.",
    "kernwoord": "sluimerens"
-  }
+  },
+  "reden": "meer dan 2 posts per dag"
  },
  {
   "id": "2026-11-16-3",
   "datum": "2026-11-16",
-  "status": "gerenderd",
+  "status": "afgekeurd",
   "vers_id": "Exodus-14-14-14",
   "ref": "Exodus 14:14",
   "tekst": "De HEERE zal voor ulieden strijden, en gij zult stil zijn.",
@@ -6928,12 +6929,13 @@
    "betekenis": "Jesaja kijkt terug en ziet: alles wat goed ging, was Gods werk. Daarom vertrouwt hij ook dat God vrede zal geven. Niet door eigen prestatie, maar door Hem.",
    "toepassing": "Kijk terug op iets wat je lukte. Zie je daarin Gods hand?",
    "kernwoord": "vrede"
-  }
+  },
+  "reden": "meer dan 2 posts per dag"
  },
  {
   "id": "2026-11-16-4",
   "datum": "2026-11-16",
-  "status": "gerenderd",
+  "status": "afgekeurd",
   "vers_id": "Psalms-47-7-7",
   "ref": "Psalm 47:7",
   "tekst": "Psalmzingt Gode, psalmzingt! Psalmzingt onzen Koning, psalmzingt!",
@@ -7036,7 +7038,8 @@
    "betekenis": "De dichter zegt dat Gods woorden vrede geven. Niet een beetje, maar grote vrede. Wie Gods woorden leest en liefheeft, struikelt minder snel.",
    "toepassing": "Lees vandaag één hoofdstuk uit de Bijbel, langzaam en rustig.",
    "kernwoord": "vrede"
-  }
+  },
+  "reden": "meer dan 2 posts per dag"
  },
  {
   "id": "2026-11-16-5",
@@ -7247,12 +7250,33 @@
    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-17-1.mp4"
   ],
   "story_url": null,
-  "goedgekeurd": null
+  "goedgekeurd": null,
+  "reserve": {
+   "vers_id": "Ecclesiastes-4-9-10",
+   "ref": "Prediker 4:9-10",
+   "tekst": "Twee zijn beter dan een; want zij hebben een goede beloning van hun arbeid; Want indien zij vallen, de een richt zijn metgezel op; maar wee den ene, die gevallen is, want er is geen tweede om hem op te helpen.",
+   "vertaling": "SV",
+   "thema": "wijsheid",
+   "boekgroep": "wijsheid",
+   "lengte": "lang",
+   "bron": "bekend",
+   "hook": "Even dit, voor je verder gaat.",
+   "caption": "Even dit, voor je verder gaat.\n\n\"Twee zijn beter dan een; want zij hebben een goede beloning van hun arbeid; Want indien zij vallen, de een richt zijn metgezel op; maar wee den ene, die gevallen is, want er is geen tweede om hem op te helpen.\"\nPrediker 4:9-10\n\nJe hoeft het niet alleen te doen.",
+   "hashtags": [
+    "#bijbelvers",
+    "#wijsheid",
+    "#prediker"
+   ],
+   "uitleg": "Samen sta je sterker: als de een valt, helpt de ander op.",
+   "betekenis": "Prediker ziet het nuchter: alleen red je het niet altijd. Als je valt, heb je iemand nodig die je overeind helpt. Zo heeft God ons ook voor elkaar bedoeld.",
+   "toepassing": "Denk aan iemand die er voor jou is. Stuur diegene vandaag een kort bericht om te bedanken.",
+   "kernwoord": "Twee"
+  }
  },
  {
   "id": "2026-11-17-2",
   "datum": "2026-11-17",
-  "status": "gerenderd",
+  "status": "afgekeurd",
   "vers_id": "Ecclesiastes-10-18-18",
   "ref": "Prediker 10:18",
   "tekst": "Door grote luiheid verzwakt het gebint, en door slapheid der handen wordt het huis doorlekkende.",
@@ -7343,12 +7367,13 @@
    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-17-2.mp4"
   ],
   "story_url": null,
-  "goedgekeurd": null
+  "goedgekeurd": null,
+  "reden": "meer dan 2 posts per dag"
  },
  {
   "id": "2026-11-17-3",
   "datum": "2026-11-17",
-  "status": "gerenderd",
+  "status": "afgekeurd",
   "vers_id": "I_Peter-4-8-8",
   "ref": "1 Petrus 4:8",
   "tekst": "Maar vooral hebt vurige liefde tot elkander; want de liefde zal menigte van zonden bedekken.",
@@ -7438,7 +7463,8 @@
    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-17-3.mp4"
   ],
   "story_url": null,
-  "goedgekeurd": null
+  "goedgekeurd": null,
+  "reden": "meer dan 2 posts per dag"
  },
  {
   "id": "2026-11-17-4",
@@ -7529,12 +7555,29 @@
    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-17-4.mp4"
   ],
   "story_url": null,
-  "goedgekeurd": null
+  "goedgekeurd": null,
+  "reserve": {
+   "vers_id": "Colossians-3-2-2",
+   "ref": "Kolossenzen 3:2",
+   "tekst": "Bedenkt de dingen, die boven zijn, niet die op de aarde zijn.",
+   "vertaling": "SV",
+   "thema": "vrede_rust",
+   "boekgroep": "brieven",
+   "lengte": "kort",
+   "bron": "bekend",
+   "hook": "Goedemorgen. Kijk eerst even omhoog.",
+   "caption": "Goedemorgen. Kijk eerst even omhoog.\n\n\"Bedenkt de dingen, die boven zijn, niet die op de aarde zijn.\"\nKolossenzen 3:2\n\nWaar je aan denkt, bepaalt je dag.\n\nWaar gaan jouw gedachten vanmorgen als eerste heen?",
+   "hashtags": [],
+   "uitleg": "Richt je gedachten op God, niet alleen op wat hier speelt.",
+   "betekenis": "Paulus vraagt om je aandacht te richten op wat bij God hoort. Niet weglopen van het gewone leven, maar het bekijken vanuit Gods kant. Dat geeft rust.",
+   "toepassing": "Kies vanmorgen één zorg en leg die bewust bij God neer voor je begint.",
+   "kernwoord": "boven"
+  }
  },
  {
   "id": "2026-11-17-5",
   "datum": "2026-11-17",
-  "status": "gerenderd",
+  "status": "afgekeurd",
   "vers_id": "James-3-13-13",
   "ref": "Jakobus 3:13",
   "tekst": "Wie is wijs en verstandig onder u? die bewijze uit zijn goeden wandel zijn werken in zachtmoedige wijsheid.",
@@ -7624,6 +7667,7 @@
    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-17-5.mp4"
   ],
   "story_url": null,
-  "goedgekeurd": null
+  "goedgekeurd": null,
+  "reden": "meer dan 2 posts per dag"
  }
 ]

@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-15T14:30",
+ "gegenereerd": "2026-11-15T14:37",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -287,7 +287,7 @@
    "ref": "Jakobus 3:13",
    "tekst": "Wie is wijs en verstandig onder u? die bewijze uit zijn goeden wandel zijn werken in zachtmoedige wijsheid.",
    "hook": "Wat laat jouw leven zien?",
-   "status": "gerenderd",
+   "status": "afgekeurd",
    "variabelen": {
     "huisstijl": "paars",
     "thema": "wijsheid",
@@ -404,7 +404,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Kolossenzen 3:2",
    "caption": "Een goede start begint hier.\n\n\"Ten dage, als ik zal vrezen, zal ik op U vertrouwen.\"\nPsalm 56:4\n\nBang zijn en God vertrouwen kan tegelijk.\n\nWat doe jij als je bang bent?",
    "uitleg": "Op de dag dat ik bang ben, vertrouw ik op U.",
    "media": "docs/media/2026-11/2026-11-17-4.mp4",
@@ -453,7 +453,7 @@
    "ref": "1 Petrus 4:8",
    "tekst": "Maar vooral hebt vurige liefde tot elkander; want de liefde zal menigte van zonden bedekken.",
    "hook": "Laat vandaag één ergernis los.",
-   "status": "gerenderd",
+   "status": "afgekeurd",
    "variabelen": {
     "huisstijl": "papier_rood",
     "thema": "liefde",
@@ -536,7 +536,7 @@
    "ref": "Prediker 10:18",
    "tekst": "Door grote luiheid verzwakt het gebint, en door slapheid der handen wordt het huis doorlekkende.",
    "hook": "Welk klusje laat jij liggen?",
-   "status": "gerenderd",
+   "status": "afgekeurd",
    "variabelen": {
     "huisstijl": "schaduw_rood",
     "thema": "humor_herkenbaar",
@@ -653,7 +653,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Prediker 4:9-10",
    "caption": "Wacht. Wees sterk. Wacht.\n\n\"Wacht op den HEERE, zijt sterk, en Hij zal uw hart versterken, ja, wacht op den HEERE.\"\nPsalm 27:14\n\nWachten op God maakt je hart sterk.",
    "uitleg": "Wacht op God. Wees sterk en moedig. Ja, wacht op God.",
    "media": "docs/media/2026-11/2026-11-17-1.mp4",
@@ -785,7 +785,7 @@
    "ref": "Psalm 47:7",
    "tekst": "Psalmzingt Gode, psalmzingt! Psalmzingt onzen Koning, psalmzingt!",
    "hook": "",
-   "status": "gerenderd",
+   "status": "afgekeurd",
    "variabelen": {
     "huisstijl": "perzik",
     "thema": "dankbaarheid",
@@ -868,7 +868,7 @@
    "ref": "Exodus 14:14",
    "tekst": "De HEERE zal voor ulieden strijden, en gij zult stil zijn.",
    "hook": "Voor iedereen die klem zit en geen uitweg ziet.",
-   "status": "gerenderd",
+   "status": "afgekeurd",
    "variabelen": {
     "huisstijl": "schaduw_blauw",
     "thema": "vrede_rust",
@@ -951,7 +951,7 @@
    "ref": "2 Korinthe 1:4",
    "tekst": "Die ons vertroost in al onze verdrukking, opdat wij zouden kunnen vertroosten degenen, die in allerlei verdrukking zijn, door de vertroosting, met welke wij zelven van God vertroost worden.",
    "hook": "Wie kan jij vandaag troosten?",
-   "status": "gerenderd",
+   "status": "afgekeurd",
    "variabelen": {
     "huisstijl": "papier_blauw",
     "thema": "troost",
@@ -6585,26 +6585,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-13T18:45:56",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
-  },
-  {
-   "t": "2026-11-13T19:02:29",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
-  },
-  {
-   "t": "2026-11-13T20:31:05",
-   "soort": "info",
-   "tekst": "2026-11-13-1 online op facebook: Psalm 29:11"
-  },
-  {
-   "t": "2026-11-13T20:32:14",
-   "soort": "info",
-   "tekst": "2026-11-13-3 ook als story geplaatst"
-  },
-  {
    "t": "2026-11-13T20:32:14",
    "soort": "info",
    "tekst": "2026-11-13-3 online op instagram: Spreuken 17:28"
@@ -6892,6 +6872,26 @@
    "t": "2026-11-15T13:29:59",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-15T14:33:40",
+   "soort": "info",
+   "tekst": "Materiaal-repo niet gekoppeld (add_repo ontbreekt in deze sessie); GitHub Actions vult muziek aan"
+  },
+  {
+   "t": "2026-11-15T14:36:11",
+   "soort": "info",
+   "tekst": "Teruggebracht naar 2 posts per dag: 2026-11-16-2 (2 Korinthe 1:4), 2026-11-16-4 (Psalm 47:7), 2026-11-16-3 (Exodus 14:14), 2026-11-17-5 (Jakobus 3:13), 2026-11-17-3 (1 Petrus 4:8), 2026-11-17-2 (Prediker 10:18) overgeslagen"
+  },
+  {
+   "t": "2026-11-15T14:37:32",
+   "soort": "info",
+   "tekst": "Zelf opgelost: na het einde van snel leren stonden er voor 16 en 17 november nog 5 posts per dag klaar, terwijl het maximum 3 is en het doel 2. Teruggebracht naar 2 per dag (Moed voor de week en de 20:30-post op 16 nov, de 04:00- en 20:30-post op 17 nov). Het systeem doet dit voortaan zelf zodra snel leren afloopt (nieuw commando: systeem.py inkorten)."
+  },
+  {
+   "t": "2026-11-15T14:37:32",
+   "soort": "info",
+   "tekst": "Dagelijkse run (zelfstandig): 4 posts voor 16 en 17 november gecontroleerd (carrousel en reel bekeken, leesbaar), reserveverzen voor 17 november ingevuld (Prediker 4:9-10 en Kolossenzen 3:2), tekstbank 78 dagen, noodvoorraad 6/6"
   }
  ],
  "recente_fouten": [
@@ -7067,14 +7067,14 @@
    "detail": "15 nieuwe metingen"
   },
   "zelftest": {
-   "ok": "2026-11-14T14:36",
+   "ok": "2026-11-15T14:36",
    "laatst_ok": true,
    "detail": "18 onderdelen gemaakt en gecontroleerd"
   },
   "dagelijks": {
-   "ok": "2026-11-14T14:35",
+   "ok": "2026-11-15T14:37",
    "laatst_ok": true,
-   "detail": "10 posts voor 15 en 16 november klaargezet"
+   "detail": "4 posts voor MORGEN en OVERMORGEN klaargezet"
   },
   "whatsapp": {
    "fout": "2026-11-11T13:49",
@@ -7505,7 +7505,7 @@
    "troost": {
     "totaal": 56,
     "beschikbaar": 51,
-    "nooit": 51
+    "nooit": 52
    },
    "moed": {
     "totaal": 44,
@@ -7515,7 +7515,7 @@
    "liefde": {
     "totaal": 67,
     "beschikbaar": 64,
-    "nooit": 64
+    "nooit": 65
    },
    "hoop": {
     "totaal": 44,
@@ -7530,17 +7530,17 @@
    "wijsheid": {
     "totaal": 92,
     "beschikbaar": 86,
-    "nooit": 86
+    "nooit": 87
    },
    "humor_herkenbaar": {
     "totaal": 30,
     "beschikbaar": 25,
-    "nooit": 25
+    "nooit": 26
    },
    "dankbaarheid": {
     "totaal": 92,
     "beschikbaar": 86,
-    "nooit": 86
+    "nooit": 87
    },
    "identiteit": {
     "totaal": 33,
@@ -7550,7 +7550,7 @@
    "vrede_rust": {
     "totaal": 42,
     "beschikbaar": 37,
-    "nooit": 37
+    "nooit": 38
    }
   },
   "verzen_totaal": 558,
@@ -10143,7 +10143,7 @@
      {
       "optie": "psalmen",
       "online": 1,
-      "gepland": 4,
+      "gepland": 3,
       "n": 0,
       "gem": null,
       "oordeel": "weinig data"
@@ -10159,7 +10159,7 @@
      {
       "optie": "wijsheid",
       "online": 0,
-      "gepland": 2,
+      "gepland": 0,
       "n": 0,
       "gem": null,
       "oordeel": "weinig data"
@@ -10183,7 +10183,7 @@
      {
       "optie": "brieven",
       "online": 0,
-      "gepland": 6,
+      "gepland": 3,
       "n": 2,
       "gem": 0.55,
       "oordeel": "weinig data"
@@ -10296,49 +10296,10 @@
     ]
    },
    {
-    "id": "2026-11-16-2",
-    "ref": "2 Korinthe 1:4",
-    "datum": "2026-11-16",
-    "tijdslot": "12:15",
-    "tests": [
-     {
-      "dimensie": "boekgroep",
-      "optie": "brieven",
-      "bron": "experiment"
-     }
-    ]
-   },
-   {
-    "id": "2026-11-16-3",
-    "ref": "Exodus 14:14",
-    "datum": "2026-11-16",
-    "tijdslot": "17:45",
-    "tests": [
-     {
-      "dimensie": "boekgroep",
-      "optie": "wijsheid",
-      "bron": "experiment"
-     }
-    ]
-   },
-   {
     "id": "2026-11-16-5",
     "ref": "Psalm 136:26",
     "datum": "2026-11-16",
     "tijdslot": "20:30",
-    "tests": [
-     {
-      "dimensie": "boekgroep",
-      "optie": "psalmen",
-      "bron": "experiment"
-     }
-    ]
-   },
-   {
-    "id": "2026-11-16-4",
-    "ref": "Psalm 47:7",
-    "datum": "2026-11-16",
-    "tijdslot": "22:00",
     "tests": [
      {
       "dimensie": "boekgroep",
@@ -10361,32 +10322,6 @@
     ]
    },
    {
-    "id": "2026-11-17-5",
-    "ref": "Jakobus 3:13",
-    "datum": "2026-11-17",
-    "tijdslot": "12:15",
-    "tests": [
-     {
-      "dimensie": "boekgroep",
-      "optie": "brieven",
-      "bron": "experiment"
-     }
-    ]
-   },
-   {
-    "id": "2026-11-17-2",
-    "ref": "Prediker 10:18",
-    "datum": "2026-11-17",
-    "tijdslot": "17:45",
-    "tests": [
-     {
-      "dimensie": "boekgroep",
-      "optie": "wijsheid",
-      "bron": "experiment"
-     }
-    ]
-   },
-   {
     "id": "2026-11-17-1",
     "ref": "Psalm 27:14",
     "datum": "2026-11-17",
@@ -10395,24 +10330,6 @@
      {
       "dimensie": "boekgroep",
       "optie": "psalmen",
-      "bron": "experiment"
-     },
-     {
-      "dimensie": "reel_stijl",
-      "optie": "markeren",
-      "bron": "test markeren"
-     }
-    ]
-   },
-   {
-    "id": "2026-11-17-3",
-    "ref": "1 Petrus 4:8",
-    "datum": "2026-11-17",
-    "tijdslot": "22:00",
-    "tests": [
-     {
-      "dimensie": "boekgroep",
-      "optie": "brieven",
       "bron": "experiment"
      },
      {

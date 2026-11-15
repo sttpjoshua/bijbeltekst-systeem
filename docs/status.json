@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T14:30:48",
+ "updated": "2026-11-15T14:37:32",
  "agents": {
   "verskiezer": {
    "t": "2026-11-15T11:57:02",
@@ -57,6 +57,22 @@
  ],
  "log": [
   {
+   "t": "14:37",
+   "msg": "Dagelijkse run (zelfstandig): 4 posts voor 16 en 17 november gecontroleerd (carrousel en reel bekeken, leesbaa"
+  },
+  {
+   "t": "14:37",
+   "msg": "Zelf opgelost: na het einde van snel leren stonden er voor 16 en 17 november nog 5 posts per dag klaar, terwij"
+  },
+  {
+   "t": "14:36",
+   "msg": "Teruggebracht naar 2 posts per dag: 2026-11-16-2 (2 Korinthe 1:4), 2026-11-16-4 (Psalm 47:7), 2026-11-16-3 (Ex"
+  },
+  {
+   "t": "14:33",
+   "msg": "Materiaal-repo niet gekoppeld (add_repo ontbreekt in deze sessie); GitHub Actions vult muziek aan"
+  },
+  {
    "t": "13:29",
    "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
   },
@@ -87,22 +103,6 @@
   {
    "t": "12:15",
    "msg": "2026-11-15-2 online op facebook: Psalm 16:11"
-  },
-  {
-   "t": "12:01",
-   "msg": "Politiek nieuws (NOS): \"Crisisoverleg D66, VVD en CDA vanochtend verder in Hilversum\". Neutrale post erover ma"
-  },
-  {
-   "t": "12:01",
-   "msg": "Zwaar nieuws (NOS): \"Doodstraf voor plegers fatale aanslag op kerk Jordanië\". Wil je er een troostende post ov"
-  },
-  {
-   "t": "11:57",
-   "msg": "Bediening: Voorstel genegeerd"
-  },
-  {
-   "t": "10:30",
-   "msg": "Zelfherstel: 2026-11-15-1: beeld staat nog niet online → wacht een kwartier en probeert het dan opnieuw"
   }
  ],
  "lampen": [

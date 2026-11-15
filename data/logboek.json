@@ -1611,5 +1611,25 @@
   "t": "2026-11-15T13:29:59",
   "soort": "info",
   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
+ },
+ {
+  "t": "2026-11-15T14:33:40",
+  "soort": "info",
+  "tekst": "Materiaal-repo niet gekoppeld (add_repo ontbreekt in deze sessie); GitHub Actions vult muziek aan"
+ },
+ {
+  "t": "2026-11-15T14:36:11",
+  "soort": "info",
+  "tekst": "Teruggebracht naar 2 posts per dag: 2026-11-16-2 (2 Korinthe 1:4), 2026-11-16-4 (Psalm 47:7), 2026-11-16-3 (Exodus 14:14), 2026-11-17-5 (Jakobus 3:13), 2026-11-17-3 (1 Petrus 4:8), 2026-11-17-2 (Prediker 10:18) overgeslagen"
+ },
+ {
+  "t": "2026-11-15T14:37:32",
+  "soort": "info",
+  "tekst": "Zelf opgelost: na het einde van snel leren stonden er voor 16 en 17 november nog 5 posts per dag klaar, terwijl het maximum 3 is en het doel 2. Teruggebracht naar 2 per dag (Moed voor de week en de 20:30-post op 16 nov, de 04:00- en 20:30-post op 17 nov). Het systeem doet dit voortaan zelf zodra snel leren afloopt (nieuw commando: systeem.py inkorten)."
+ },
+ {
+  "t": "2026-11-15T14:37:32",
+  "soort": "info",
+  "tekst": "Dagelijkse run (zelfstandig): 4 posts voor 16 en 17 november gecontroleerd (carrousel en reel bekeken, leesbaar), reserveverzen voor 17 november ingevuld (Prediker 4:9-10 en Kolossenzen 3:2), tekstbank 78 dagen, noodvoorraad 6/6"
  }
 ]
