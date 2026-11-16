@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-16T17:15",
+ "gegenereerd": "2026-11-16T17:17",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -9041,11 +9041,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-16T00:04:21",
-   "soort": "info",
-   "tekst": "2026-11-15-5 online op instagram: Hebreeën 11:1"
-  },
-  {
    "t": "2026-11-16T00:04:29",
    "soort": "info",
    "tekst": "2026-11-15-5 online op facebook: Hebreeën 11:1"
@@ -9344,6 +9339,11 @@
    "t": "2026-11-16T17:03:59",
    "soort": "info",
    "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
+  },
+  {
+   "t": "2026-11-16T17:17:26",
+   "soort": "info",
+   "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
   }
  ],
  "recente_fouten": [
@@ -9540,7 +9540,7 @@
    "detail": "0 nieuwe aanleidingen"
   },
   "maken": {
-   "ok": "2026-11-16T17:03",
+   "ok": "2026-11-16T17:17",
    "laatst_ok": true,
    "detail": "2 posts klaargezet"
   },
