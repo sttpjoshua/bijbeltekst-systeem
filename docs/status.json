@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T18:47:17",
+ "updated": "2026-11-16T19:02:12",
  "agents": {
   "verskiezer": {
    "t": "2026-11-16T12:02:55",
@@ -32,7 +32,7 @@
    "state": "done"
   },
   "community": {
-   "t": "2026-11-16T18:01:15",
+   "t": "2026-11-16T19:01:09",
    "task": "1 nieuwe reactie gevonden",
    "state": "done"
   }
@@ -56,6 +56,10 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "19:02",
+   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
   {
    "t": "18:47",
    "msg": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
@@ -98,10 +102,6 @@
   },
   {
    "t": "17:03",
-   "msg": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "16:46",
    "msg": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
   }
  ],
