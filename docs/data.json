@@ -1,12 +1,12 @@
 {
- "gegenereerd": "2026-11-16T00:04",
+ "gegenereerd": "2026-11-16T01:17",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
   "kanaalnaam": "Bibleverse",
   "posts_per_dag": 2,
   "max_posts_per_dag": 3,
-  "verkenning": 0.2,
+  "verkenning": 0.4,
   "platformen_actief": [
    "instagram",
    "facebook"
@@ -1195,8 +1195,36 @@
     "instagram": "https://www.instagram.com/reel/Dfx6mvMMZYl/",
     "facebook": "https://www.facebook.com/2126715447983667"
    },
-   "totaal": {},
-   "per_platform": {},
+   "totaal": {
+    "views": 6,
+    "reach": 1,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0
+   },
+   "per_platform": {
+    "instagram": {
+     "views": 6,
+     "reach": 1,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "t": null
+    },
+    "facebook": {
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "t": null
+    }
+   },
    "score": {},
    "keuzebron": {
     "huisstijl": "experiment",
@@ -1217,7 +1245,30 @@
     "reel_scene": "verkenning",
     "hashtag_stijl": "test"
    },
-   "momenten": {},
+   "momenten": {
+    "instagram": {
+     "1u": {
+      "views": 6,
+      "reach": 1,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": null
+     }
+    },
+    "facebook": {
+     "1u": {
+      "views": 0,
+      "reach": null,
+      "likes": null,
+      "comments": null,
+      "shares": null,
+      "saves": null,
+      "follows": null
+     }
+    }
+   },
    "pub": {
     "instagram": "2026-11-16T00:04+01:00",
     "facebook": "2026-11-16T00:04+01:00"
@@ -1422,8 +1473,36 @@
     "instagram": "https://www.instagram.com/reel/Dfx6ZWdqdcw/",
     "facebook": "https://www.facebook.com/1855067655692892"
    },
-   "totaal": {},
-   "per_platform": {},
+   "totaal": {
+    "views": 4,
+    "reach": 2,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0
+   },
+   "per_platform": {
+    "instagram": {
+     "views": 4,
+     "reach": 2,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "t": null
+    },
+    "facebook": {
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "t": null
+    }
+   },
    "score": {},
    "keuzebron": {
     "huisstijl": "experiment",
@@ -1444,7 +1523,30 @@
     "reel_scene": "strategie",
     "hashtag_stijl": "test"
    },
-   "momenten": {},
+   "momenten": {
+    "instagram": {
+     "1u": {
+      "views": 4,
+      "reach": 2,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": null
+     }
+    },
+    "facebook": {
+     "1u": {
+      "views": 0,
+      "reach": null,
+      "likes": null,
+      "comments": null,
+      "shares": null,
+      "saves": null,
+      "follows": null
+     }
+    }
+   },
    "pub": {
     "instagram": "2026-11-16T00:02+01:00",
     "facebook": "2026-11-16T00:02+01:00"
@@ -6657,16 +6759,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-15T12:16:54",
-   "soort": "info",
-   "tekst": "2026-11-15-4 online op facebook: Filippenzen 4:13"
-  },
-  {
-   "t": "2026-11-15T12:56:10",
-   "soort": "info",
-   "tekst": "Statistieken opgehaald voor 15 posts"
-  },
-  {
    "t": "2026-11-15T12:58:43",
    "soort": "info",
    "tekst": "Snel leren afgelopen: terug naar de normale instellingen"
@@ -6955,6 +7047,16 @@
    "t": "2026-11-16T00:04:29",
    "soort": "info",
    "tekst": "2026-11-15-5 online op facebook: Hebreeën 11:1"
+  },
+  {
+   "t": "2026-11-16T01:15:43",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 4 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-16T01:17:34",
+   "soort": "info",
+   "tekst": "Bediening: Experimenteren ingesteld op 40%"
   }
  ],
  "recente_fouten": [
@@ -7220,8 +7322,8 @@
  "weken": {
   "deze": {
    "posts": 30,
-   "reach": 335,
-   "views": 392,
+   "reach": 338,
+   "views": 402,
    "likes": 14,
    "comments": 0,
    "saves": 1,
@@ -10357,7 +10459,7 @@
    },
    {
     "naam": "verkennen",
-    "tekst": "20% van de keuzes is bewust iets nieuws"
+    "tekst": "40% van de keuzes is bewust iets nieuws"
    }
   ],
   "komend": [
@@ -10512,8 +10614,8 @@
     "reel_scene": "onderweg",
     "reel_haak": "geen",
     "opening": null,
-    "hashtag_stijl": "zoekwoord",
-    "tijdslot": "20:30",
+    "hashtag_stijl": "zonder",
+    "tijdslot": "12:15",
     "tijdslot_fb": "12:15",
     "palet": "papier_blauw",
     "lettertype": "cormorant",
@@ -10559,7 +10661,7 @@
    "variabelen": {
     "huisstijl": "papier_blauw",
     "thema": "troost",
-    "hook_stijl": "vraag",
+    "hook_stijl": "rustig",
     "formaat": "video",
     "uitleg_op_beeld": true,
     "achtergrondbron": "verloop",
@@ -10689,7 +10791,7 @@
    "variabelen": {
     "huisstijl": "perzik",
     "thema": "vertrouwen",
-    "hook_stijl": "vraag",
+    "hook_stijl": "uitdaging",
     "formaat": "video",
     "uitleg_op_beeld": true,
     "achtergrondbron": "verloop",
@@ -10754,7 +10856,7 @@
    "variabelen": {
     "huisstijl": "papier_blauw",
     "thema": "humor_herkenbaar",
-    "hook_stijl": "vraag",
+    "hook_stijl": "geen",
     "formaat": "video",
     "uitleg_op_beeld": true,
     "achtergrondbron": "verloop",
@@ -10813,23 +10915,23 @@
   },
   {
    "datum": "2026-11-21",
-   "ref": "Jeremia 31:3",
-   "tekst": "De HEERE is mij verschenen van verre tijden! Ja, Ik heb u liefgehad met een eeuwige liefde; daarom heb Ik u getrokken met goedertierenheid.",
-   "vers_id": "Jeremiah-31-3-3",
+   "ref": "Handelingen 1:8",
+   "tekst": "Maar gij zult ontvangen de kracht des Heiligen Geestes, Die over u komen zal; en gij zult Mijn getuigen zijn, zo te Jeruzalem, als in geheel Judea en Samaria, en tot aan het uiterste der aarde.",
+   "vers_id": "Acts-1-8-8",
    "variabelen": {
     "huisstijl": "bosgroen",
-    "thema": "liefde",
+    "thema": "moed",
     "hook_stijl": "vraag",
     "formaat": "video",
     "uitleg_op_beeld": true,
     "achtergrondbron": "verloop",
-    "boekgroep": "profeten",
-    "lengte": "middel",
+    "boekgroep": "brieven",
+    "lengte": "lang",
     "bron": "bekend",
     "vraag_onderaan": true,
     "reel_stijl": "markeren",
     "carrousel_stijl": null,
-    "reel_kleur": "goud",
+    "reel_kleur": "mint",
     "markeer_achtergrond": "foto",
     "markeer_streep": "woord",
     "markeer_opening": "vers",
@@ -10837,8 +10939,8 @@
     "reel_scene": null,
     "reel_haak": "geen",
     "opening": null,
-    "hashtag_stijl": "zoekwoord",
-    "tijdslot": "20:30",
+    "hashtag_stijl": "zonder",
+    "tijdslot": "22:00",
     "tijdslot_fb": "04:00",
     "palet": "bosgroen",
     "lettertype": "montserrat_zwaar",
@@ -10878,9 +10980,9 @@
   },
   {
    "datum": "2026-11-21",
-   "ref": "1 Johannes 3:18",
-   "tekst": "Mijn kinderkens, laat ons niet liefhebben met den woorde, noch met de tong, maar met de daad en waarheid.",
-   "vers_id": "I_John-3-18-18",
+   "ref": "Jeremia 31:3",
+   "tekst": "De HEERE is mij verschenen van verre tijden! Ja, Ik heb u liefgehad met een eeuwige liefde; daarom heb Ik u getrokken met goedertierenheid.",
+   "vers_id": "Jeremiah-31-3-3",
    "variabelen": {
     "huisstijl": "papier_blauw",
     "thema": "liefde",
@@ -10888,7 +10990,7 @@
     "formaat": "video",
     "uitleg_op_beeld": true,
     "achtergrondbron": "verloop",
-    "boekgroep": "brieven",
+    "boekgroep": "profeten",
     "lengte": "middel",
     "bron": "bekend",
     "vraag_onderaan": true,
@@ -10898,8 +11000,8 @@
     "markeer_achtergrond": null,
     "markeer_streep": null,
     "markeer_opening": null,
-    "reel_plaatsing": "boven",
-    "reel_scene": "natuur",
+    "reel_plaatsing": "midden",
+    "reel_scene": "dichtbij",
     "reel_haak": "geen",
     "opening": null,
     "hashtag_stijl": "zoekwoord",
@@ -11008,9 +11110,9 @@
   },
   {
    "datum": "2026-11-22",
-   "ref": "Jesaja 41:13",
-   "tekst": "Want Ik, de HEERE, uw God, grijp uw rechterhand aan, Die tot u zeg: Vrees niet, Ik help u.",
-   "vers_id": "Isaiah-41-13-13",
+   "ref": "Romeinen 8:37",
+   "tekst": "Maar in dit alles zijn wij meer dan overwinnaars, door Hem, Die ons liefgehad heeft.",
+   "vers_id": "Romans-8-37-37",
    "variabelen": {
     "huisstijl": "perzik",
     "thema": "moed",
@@ -11018,10 +11120,10 @@
     "formaat": "video",
     "uitleg_op_beeld": true,
     "achtergrondbron": "verloop",
-    "boekgroep": "profeten",
-    "lengte": "middel",
+    "boekgroep": "brieven",
+    "lengte": "kort",
     "bron": "bekend",
-    "vraag_onderaan": true,
+    "vraag_onderaan": false,
     "reel_stijl": "markeren",
     "carrousel_stijl": null,
     "reel_kleur": "goud",
@@ -11048,6 +11150,136 @@
     "thema": "strategie",
     "hook_stijl": "strategie",
     "formaat": "aandeel reels",
+    "uitleg_op_beeld": "strategie",
+    "achtergrondbron": "strategie",
+    "boekgroep": "strategie",
+    "lengte": "strategie",
+    "bron": "strategie",
+    "vraag_onderaan": "strategie",
+    "reel_stijl": "test markeren",
+    "carrousel_stijl": "n.v.t.",
+    "reel_kleur": "strategie",
+    "markeer_achtergrond": "strategie",
+    "markeer_streep": "strategie",
+    "markeer_opening": "strategie",
+    "reel_plaatsing": "n.v.t.",
+    "reel_scene": "n.v.t.",
+    "reel_haak": "n.v.t.",
+    "opening": "n.v.t.",
+    "hashtag_stijl": "strategie",
+    "tijdslot": "strategie",
+    "video_uitleg": "vaste regel"
+   },
+   "reeks": null,
+   "reeks_label": null
+  },
+  {
+   "datum": "2026-11-23",
+   "ref": "Jesaja 41:13",
+   "tekst": "Want Ik, de HEERE, uw God, grijp uw rechterhand aan, Die tot u zeg: Vrees niet, Ik help u.",
+   "vers_id": "Isaiah-41-13-13",
+   "variabelen": {
+    "huisstijl": "roze",
+    "thema": "moed",
+    "hook_stijl": "vraag",
+    "formaat": "carrousel",
+    "uitleg_op_beeld": true,
+    "achtergrondbron": "beeld",
+    "boekgroep": "profeten",
+    "lengte": "middel",
+    "bron": "bekend",
+    "vraag_onderaan": true,
+    "reel_stijl": null,
+    "carrousel_stijl": "markeren",
+    "reel_kleur": "mint",
+    "markeer_achtergrond": "papier",
+    "markeer_streep": "regel",
+    "markeer_opening": "sterk",
+    "reel_plaatsing": null,
+    "reel_scene": null,
+    "reel_haak": null,
+    "opening": "vers",
+    "hashtag_stijl": "zonder",
+    "tijdslot": "04:00",
+    "tijdslot_fb": "20:30",
+    "palet": "zachtroze",
+    "lettertype": "cormorant_cursief",
+    "layout": "links",
+    "achtergrond": "diagonaal",
+    "hook_op_beeld": false,
+    "aanleiding": "kalender",
+    "video_uitleg": null
+   },
+   "keuzebron": {
+    "huisstijl": "ochtend",
+    "thema": "reeks",
+    "hook_stijl": "strategie",
+    "formaat": "strategie",
+    "uitleg_op_beeld": "strategie",
+    "achtergrondbron": "strategie",
+    "boekgroep": "strategie",
+    "lengte": "strategie",
+    "bron": "strategie",
+    "vraag_onderaan": "strategie",
+    "reel_stijl": "n.v.t.",
+    "carrousel_stijl": "strategie",
+    "reel_kleur": "strategie",
+    "markeer_achtergrond": "strategie",
+    "markeer_streep": "strategie",
+    "markeer_opening": "strategie",
+    "reel_plaatsing": "n.v.t.",
+    "reel_scene": "n.v.t.",
+    "reel_haak": "n.v.t.",
+    "opening": "stijl markeren",
+    "hashtag_stijl": "strategie",
+    "tijdslot": "reeks",
+    "video_uitleg": "n.v.t."
+   },
+   "reeks": "Moed voor de week",
+   "reeks_label": "MOED VOOR DE WEEK"
+  },
+  {
+   "datum": "2026-11-23",
+   "ref": "Psalm 119:165",
+   "tekst": "Die Uw wet beminnen, hebben groten vrede, en zij hebben geen aanstoot.",
+   "vers_id": "Psalms-119-165-165",
+   "variabelen": {
+    "huisstijl": "schaduw_blauw",
+    "thema": "vrede_rust",
+    "hook_stijl": "rustig",
+    "formaat": "video",
+    "uitleg_op_beeld": true,
+    "achtergrondbron": "beeld",
+    "boekgroep": "psalmen",
+    "lengte": "kort",
+    "bron": "bekend",
+    "vraag_onderaan": true,
+    "reel_stijl": "markeren",
+    "carrousel_stijl": null,
+    "reel_kleur": "roze",
+    "markeer_achtergrond": "papier",
+    "markeer_streep": "woord",
+    "markeer_opening": "sterk",
+    "reel_plaatsing": null,
+    "reel_scene": null,
+    "reel_haak": "geen",
+    "opening": null,
+    "hashtag_stijl": "zonder",
+    "tijdslot": "22:00",
+    "tijdslot_fb": "22:00",
+    "palet": "papier_blauw",
+    "lettertype": "cormorant",
+    "layout": "links",
+    "achtergrond": "papier_schaduw",
+    "hook_op_beeld": false,
+    "aanleiding": "tijdloos",
+    "video_uitleg": true
+   },
+   "keuzebron": {
+    "huisstijl": "strategie",
+    "thema": "strategie",
+    "hook_stijl": "strategie",
+    "formaat": "strategie",
     "uitleg_op_beeld": "strategie",
     "achtergrondbron": "strategie",
     "boekgroep": "strategie",

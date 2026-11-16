@@ -6,7 +6,7 @@
  "github_repo": "sttpjoshua/bijbeltekst-systeem",
  "posts_per_dag": 2,
  "max_posts_per_dag": 3,
- "verkenning": 0.2,
+ "verkenning": 0.4,
  "platformen_actief": [
   "instagram",
   "facebook"
