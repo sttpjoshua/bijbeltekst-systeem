@@ -8547,7 +8547,7 @@
  },
  {
   "id": "2026-11-16-n1745",
-  "status": "gerenderd",
+  "status": "gepubliceerd",
   "vers_id": "Romans-15-13-13",
   "ref": "Romeinen 15:13",
   "tekst": "De God nu der hoop vervulle ulieden met alle blijdschap en vrede in het geloven, opdat gij overvloedig moogt zijn in de hoop, door de kracht des Heiligen Geestes.",
@@ -8622,7 +8622,19 @@
   "story_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nood/nood-20261111-3-436-story.jpg",
   "goedgekeurd": true,
   "datum": "2026-11-16",
-  "nood": true
+  "nood": true,
+  "gepubliceerd": {
+   "instagram": {
+    "id": "17943308721390353",
+    "url": "https://www.instagram.com/p/Dfz0R1EFwHk/",
+    "t": "2026-11-16T17:46+01:00"
+   },
+   "facebook": {
+    "id": "1015160368352770_122134789256879910",
+    "url": "https://www.facebook.com/1015160368352770_122134789256879910",
+    "t": "2026-11-16T17:46+01:00"
+   }
+  }
  },
  {
   "id": "2026-11-16-n2200",

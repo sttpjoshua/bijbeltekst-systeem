@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T17:17:27",
+ "updated": "2026-11-16T17:46:33",
  "agents": {
   "verskiezer": {
    "t": "2026-11-16T12:02:55",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-16T12:17:36",
-   "task": "Postte Psalm 136:26 op facebook",
+   "t": "2026-11-16T17:46:33",
+   "task": "Postte Romeinen 15:13 op facebook",
    "state": "done"
   },
   "controller": {
@@ -38,8 +38,8 @@
   }
  },
  "stats": {
-  "posts_today": 1,
-  "posts_total": 42,
+  "posts_today": 2,
+  "posts_total": 43,
   "reach_7d": 273,
   "best_time": "04:00",
   "next_post": "2026-11-16T04:00:00"
@@ -56,6 +56,18 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "17:46",
+   "msg": "2026-11-16-n1745 online op facebook: Romeinen 15:13"
+  },
+  {
+   "t": "17:46",
+   "msg": "2026-11-16-n1745 online op instagram: Romeinen 15:13"
+  },
+  {
+   "t": "17:46",
+   "msg": "2026-11-16-n1745 ook als story geplaatst"
+  },
   {
    "t": "17:17",
    "msg": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
@@ -91,18 +103,6 @@
   {
    "t": "15:17",
    "msg": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "15:02",
-   "msg": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "14:57",
-   "msg": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "14:47",
-   "msg": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
   }
  ],
  "lampen": [
@@ -118,8 +118,8 @@
   },
   {
    "naam": "Dagelijkse taak",
-   "kleur": "groen",
-   "tekst": "ok"
+   "kleur": "oranje",
+   "tekst": "te lang stil"
   },
   {
    "naam": "Avondcontrole",
