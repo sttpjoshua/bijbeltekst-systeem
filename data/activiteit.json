@@ -1,17 +1,17 @@
 {
  "verskiezer": {
-  "t": "2026-11-16T01:17:34",
-  "task": "Experimenteren ingesteld op 40%",
+  "t": "2026-11-16T09:02:31",
+  "task": "Koos Psalm 85:9, Kolossenzen 3:2",
   "state": "done"
  },
  "designer": {
-  "t": "2026-11-16T01:19:54",
-  "task": "Psalm 136:26 opnieuw gemaakt (stijl mint, achtergrond foto)",
+  "t": "2026-11-16T09:03:00",
+  "task": "Ontwierp Kolossenzen 3:2 in stijl papier_blauw",
   "state": "done"
  },
  "video": {
-  "t": "2026-11-16T01:19:54",
-  "task": "Monteerde video Psalm 136:26 met muziek",
+  "t": "2026-11-16T09:03:00",
+  "task": "Monteerde video Kolossenzen 3:2 met muziek",
   "state": "done"
  },
  "dispatcher": {
@@ -20,8 +20,8 @@
   "state": "done"
  },
  "controller": {
-  "t": "2026-11-16T01:21:58",
-  "task": "Verzoek voor Claude in de wachtrij gezet",
+  "t": "2026-11-16T09:03:00",
+  "task": "Posts klaargezet uit de tekstbank",
   "state": "done"
  },
  "analist": {

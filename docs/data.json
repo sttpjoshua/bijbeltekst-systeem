@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-16T09:01",
+ "gegenereerd": "2026-11-16T09:03",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -309,6 +309,184 @@
   "inzichten": []
  },
  "posts": [
+  {
+   "id": "2026-11-18-2",
+   "datum": "2026-11-18",
+   "ref": "Kolossenzen 3:2",
+   "tekst": "Bedenkt de dingen, die boven zijn, niet die op de aarde zijn.",
+   "hook": "Vraag bij één zorg: maakt dit over een jaar nog uit?",
+   "status": "gerenderd",
+   "variabelen": {
+    "huisstijl": "papier_blauw",
+    "thema": "vrede_rust",
+    "hook_stijl": "uitdaging",
+    "formaat": "video",
+    "uitleg_op_beeld": true,
+    "achtergrondbron": "verloop",
+    "boekgroep": "brieven",
+    "lengte": "kort",
+    "bron": "bekend",
+    "vraag_onderaan": true,
+    "reel_stijl": "situatie",
+    "carrousel_stijl": null,
+    "reel_kleur": null,
+    "markeer_achtergrond": null,
+    "markeer_streep": null,
+    "markeer_opening": null,
+    "reel_plaatsing": "midden",
+    "reel_scene": "onderweg",
+    "reel_haak": "geen",
+    "opening": null,
+    "hashtag_stijl": "zonder",
+    "tijdslot": "12:15",
+    "tijdslot_fb": "12:15",
+    "palet": "papier_blauw",
+    "lettertype": "cormorant",
+    "layout": "links",
+    "achtergrond": "papier",
+    "hook_op_beeld": false,
+    "aanleiding": "tijdloos",
+    "video_uitleg": true
+   },
+   "vers_id": "Colossians-3-2-2",
+   "goedgekeurd": null,
+   "reeks": null,
+   "reeks_label": null,
+   "reserve_ref": null,
+   "caption": "Vraag bij één zorg: maakt dit over een jaar nog uit?\n\n\"Bedenkt de dingen, die boven zijn, niet die op de aarde zijn.\"\nKolossenzen 3:2\n\nEr is meer dan wat je nu ziet.\n\nWaar gaan jouw gedachten de meeste tijd naartoe?",
+   "uitleg": "Richt je gedachten op wat boven is, niet op wat op aarde is.",
+   "media": "docs/media/2026-11/2026-11-18-2.mp4",
+   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-18-2.mp4",
+   "media_urls": [
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-18-2.mp4"
+   ],
+   "thumb": "thumbs/2026-11-18-2.jpg",
+   "platformen": [],
+   "links": {},
+   "totaal": {},
+   "per_platform": {},
+   "score": {},
+   "keuzebron": {
+    "huisstijl": "strategie",
+    "thema": "strategie",
+    "hook_stijl": "strategie",
+    "formaat": "aandeel reels",
+    "uitleg_op_beeld": "strategie",
+    "achtergrondbron": "strategie",
+    "boekgroep": "experiment",
+    "lengte": "strategie",
+    "bron": "strategie",
+    "vraag_onderaan": "strategie",
+    "reel_stijl": "vaste regel",
+    "carrousel_stijl": "n.v.t.",
+    "reel_kleur": "n.v.t.",
+    "markeer_achtergrond": "n.v.t.",
+    "markeer_streep": "n.v.t.",
+    "markeer_opening": "n.v.t.",
+    "reel_plaatsing": "strategie",
+    "reel_scene": "strategie",
+    "reel_haak": "n.v.t.",
+    "opening": "n.v.t.",
+    "hashtag_stijl": "strategie",
+    "tijdslot": "strategie",
+    "video_uitleg": "vaste regel"
+   },
+   "momenten": {},
+   "pub": {},
+   "gemist": [],
+   "nood": false,
+   "nieuws": null,
+   "online": null
+  },
+  {
+   "id": "2026-11-18-1",
+   "datum": "2026-11-18",
+   "ref": "Psalm 85:9",
+   "tekst": "Ik zal horen, wat God, de HEERE, spreken zal; want Hij zal tot Zijn volk en tot Zijn gunstgenoten van vrede spreken; maar dat zij niet weder tot dwaasheid keren.",
+   "hook": "Wanneer luisterde jij voor het laatst echt?",
+   "status": "gerenderd",
+   "variabelen": {
+    "huisstijl": "schaduw_blauw",
+    "thema": "humor_herkenbaar",
+    "hook_stijl": "vraag",
+    "formaat": "video",
+    "uitleg_op_beeld": true,
+    "achtergrondbron": "verloop",
+    "boekgroep": "psalmen",
+    "lengte": "middel",
+    "bron": "ontdekking",
+    "vraag_onderaan": true,
+    "reel_stijl": "markeren",
+    "carrousel_stijl": null,
+    "reel_kleur": "goud",
+    "markeer_achtergrond": "kleur",
+    "markeer_streep": "woord",
+    "markeer_opening": "vers",
+    "reel_plaatsing": null,
+    "reel_scene": null,
+    "reel_haak": "geen",
+    "opening": null,
+    "hashtag_stijl": "zoekwoord",
+    "tijdslot": "22:00",
+    "tijdslot_fb": "17:45",
+    "palet": "papier_blauw",
+    "lettertype": "cormorant",
+    "layout": "links",
+    "achtergrond": "papier_schaduw",
+    "hook_op_beeld": false,
+    "aanleiding": "tijdloos",
+    "video_uitleg": true
+   },
+   "vers_id": "Psalms-85-9-9",
+   "goedgekeurd": null,
+   "reeks": null,
+   "reeks_label": null,
+   "reserve_ref": null,
+   "caption": "Wanneer luisterde jij voor het laatst echt?\n\n\"Ik zal horen, wat God, de HEERE, spreken zal; want Hij zal tot Zijn volk en tot Zijn gunstgenoten van vrede spreken; maar dat zij niet weder tot dwaasheid keren.\"\nPsalm 85:9\n\nVoor je iets tegen God zegt, mag je eerst luisteren. Hij spreekt over vrede.\n\nWaar heb jij vandaag vrede nodig?",
+   "uitleg": "Luister naar God: Hij spreekt over vrede voor wie bij Hem hoort.",
+   "media": "docs/media/2026-11/2026-11-18-1.mp4",
+   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-18-1.mp4",
+   "media_urls": [
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-18-1.mp4"
+   ],
+   "thumb": "thumbs/2026-11-18-1.jpg",
+   "platformen": [],
+   "links": {},
+   "totaal": {},
+   "per_platform": {},
+   "score": {},
+   "keuzebron": {
+    "huisstijl": "strategie",
+    "thema": "strategie",
+    "hook_stijl": "tekstbank",
+    "formaat": "aandeel reels",
+    "uitleg_op_beeld": "strategie",
+    "achtergrondbron": "strategie",
+    "boekgroep": "experiment",
+    "lengte": "strategie",
+    "bron": "strategie",
+    "vraag_onderaan": "strategie",
+    "reel_stijl": "test markeren",
+    "carrousel_stijl": "n.v.t.",
+    "reel_kleur": "strategie",
+    "markeer_achtergrond": "strategie",
+    "markeer_streep": "strategie",
+    "markeer_opening": "strategie",
+    "reel_plaatsing": "n.v.t.",
+    "reel_scene": "n.v.t.",
+    "reel_haak": "n.v.t.",
+    "opening": "n.v.t.",
+    "hashtag_stijl": "strategie",
+    "tijdslot": "strategie",
+    "video_uitleg": "vaste regel"
+   },
+   "momenten": {},
+   "pub": {},
+   "gemist": [],
+   "nood": false,
+   "nieuws": null,
+   "online": null
+  },
   {
    "id": "2026-11-17-5",
    "datum": "2026-11-17",
@@ -6795,11 +6973,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-15T14:37:32",
-   "soort": "info",
-   "tekst": "Dagelijkse run (zelfstandig): 4 posts voor 16 en 17 november gecontroleerd (carrousel en reel bekeken, leesbaar), reserveverzen voor 17 november ingevuld (Prediker 4:9-10 en Kolossenzen 3:2), tekstbank 78 dagen, noodvoorraad 6/6"
-  },
-  {
    "t": "2026-11-15T17:46:51",
    "soort": "info",
    "tekst": "2026-11-15-4 ook als story geplaatst"
@@ -7095,6 +7268,11 @@
    "tekst": "Politiek nieuws (NOS): \"Wekdienst 16/11: Coalitie verder met crisisoverleg • Interland Duitsland-Nederland\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
    "code": "nieuws_voorstel",
    "post": "n111607010"
+  },
+  {
+   "t": "2026-11-16T09:03:00",
+   "soort": "info",
+   "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-18 (teksten uit de tekstbank)."
   }
  ],
  "recente_fouten": [
@@ -7286,9 +7464,9 @@
    "detail": "1 nieuwe aanleidingen"
   },
   "maken": {
-   "ok": "2026-11-15T23:24",
+   "ok": "2026-11-16T09:03",
    "laatst_ok": true,
-   "detail": "4 posts klaargezet"
+   "detail": "2 posts klaargezet"
   },
   "avondcontrole": {
    "ok": "2026-11-15T20:48",
@@ -7777,8 +7955,8 @@
    },
    "humor_herkenbaar": {
     "totaal": 30,
-    "beschikbaar": 25,
-    "nooit": 26
+    "beschikbaar": 24,
+    "nooit": 25
    },
    "dankbaarheid": {
     "totaal": 92,
@@ -7792,8 +7970,8 @@
    },
    "vrede_rust": {
     "totaal": 42,
-    "beschikbaar": 37,
-    "nooit": 38
+    "beschikbaar": 36,
+    "nooit": 37
    }
   },
   "verzen_totaal": 558,
@@ -7821,6 +7999,10 @@
    },
    {
     "naam": "ES_Bed Time - Traditional.mp3",
+    "keer": 1
+   },
+   {
+    "naam": "ES_Calm - Amber Glow.mp3",
     "keer": 1
    },
    {
@@ -7876,6 +8058,10 @@
     "keer": 1
    },
    {
+    "naam": "ES_Softest of Feathers - Calm Shores.mp3",
+    "keer": 1
+   },
+   {
     "naam": "ES_Surroundings - Helmut Schenker.mp3",
     "keer": 1
    },
@@ -7894,14 +8080,6 @@
    {
     "naam": "ES_You Set My World On Fire (Instrumental Version) - Loving Caliber.mp3",
     "keer": 1
-   },
-   {
-    "naam": "ES_Calm - Amber Glow.mp3",
-    "keer": 0
-   },
-   {
-    "naam": "ES_Softest of Feathers - Calm Shores.mp3",
-    "keer": 0
    },
    {
     "naam": "ES_That's What Christmas Is About (Instrumental Version) - Loving Caliber.mp3",
@@ -8068,8 +8246,8 @@
  },
  "tekstbank": {
   "verzen": 197,
-  "vrij": 157,
-  "dagen": 78,
+  "vrij": 155,
+  "dagen": 77,
   "zelfstandig": true
  },
  "tekstbank_lijst": [
@@ -8097,8 +8275,8 @@
    "kw": "boven",
    "herkenning": "Voor iedereen die vastloopt in dagelijkse zorgen.",
    "uit": false,
-   "laatst": null,
-   "n": 0
+   "laatst": "2026-11-18",
+   "n": 1
   },
   {
    "id": "Deuteronomy-31-6-6",
@@ -9672,8 +9850,8 @@
    "kw": "vrede",
    "herkenning": "",
    "uit": false,
-   "laatst": null,
-   "n": 0
+   "laatst": "2026-11-18",
+   "n": 1
   },
   {
    "id": "Psalms-9-11-11",
@@ -10470,7 +10648,7 @@
      {
       "optie": "psalmen",
       "online": 1,
-      "gepland": 3,
+      "gepland": 4,
       "n": 0,
       "gem": null,
       "oordeel": "weinig data"
@@ -10510,7 +10688,7 @@
      {
       "optie": "brieven",
       "online": 3,
-      "gepland": 0,
+      "gepland": 1,
       "n": 3,
       "gem": 0.74,
       "oordeel": "weinig data"
@@ -10616,140 +10794,41 @@
       "bron": "test markeren"
      }
     ]
+   },
+   {
+    "id": "2026-11-18-2",
+    "ref": "Kolossenzen 3:2",
+    "datum": "2026-11-18",
+    "tijdslot": "12:15",
+    "tests": [
+     {
+      "dimensie": "boekgroep",
+      "optie": "brieven",
+      "bron": "experiment"
+     }
+    ]
+   },
+   {
+    "id": "2026-11-18-1",
+    "ref": "Psalm 85:9",
+    "datum": "2026-11-18",
+    "tijdslot": "22:00",
+    "tests": [
+     {
+      "dimensie": "boekgroep",
+      "optie": "psalmen",
+      "bron": "experiment"
+     },
+     {
+      "dimensie": "reel_stijl",
+      "optie": "markeren",
+      "bron": "test markeren"
+     }
+    ]
    }
   ]
  },
  "planning": [
-  {
-   "datum": "2026-11-18",
-   "ref": "Psalm 85:9",
-   "tekst": "Ik zal horen, wat God, de HEERE, spreken zal; want Hij zal tot Zijn volk en tot Zijn gunstgenoten van vrede spreken; maar dat zij niet weder tot dwaasheid keren.",
-   "vers_id": "Psalms-85-9-9",
-   "variabelen": {
-    "huisstijl": "schaduw_blauw",
-    "thema": "humor_herkenbaar",
-    "hook_stijl": "rustig",
-    "formaat": "video",
-    "uitleg_op_beeld": true,
-    "achtergrondbron": "verloop",
-    "boekgroep": "psalmen",
-    "lengte": "middel",
-    "bron": "ontdekking",
-    "vraag_onderaan": true,
-    "reel_stijl": "markeren",
-    "carrousel_stijl": null,
-    "reel_kleur": "goud",
-    "markeer_achtergrond": "kleur",
-    "markeer_streep": "woord",
-    "markeer_opening": "vers",
-    "reel_plaatsing": null,
-    "reel_scene": null,
-    "reel_haak": "geen",
-    "opening": null,
-    "hashtag_stijl": "zoekwoord",
-    "tijdslot": "22:00",
-    "tijdslot_fb": "17:45",
-    "palet": "papier_blauw",
-    "lettertype": "cormorant",
-    "layout": "links",
-    "achtergrond": "papier_schaduw",
-    "hook_op_beeld": false,
-    "aanleiding": "tijdloos",
-    "video_uitleg": true
-   },
-   "keuzebron": {
-    "huisstijl": "strategie",
-    "thema": "strategie",
-    "hook_stijl": "strategie",
-    "formaat": "aandeel reels",
-    "uitleg_op_beeld": "strategie",
-    "achtergrondbron": "strategie",
-    "boekgroep": "experiment",
-    "lengte": "strategie",
-    "bron": "strategie",
-    "vraag_onderaan": "strategie",
-    "reel_stijl": "test markeren",
-    "carrousel_stijl": "n.v.t.",
-    "reel_kleur": "strategie",
-    "markeer_achtergrond": "strategie",
-    "markeer_streep": "strategie",
-    "markeer_opening": "strategie",
-    "reel_plaatsing": "n.v.t.",
-    "reel_scene": "n.v.t.",
-    "reel_haak": "n.v.t.",
-    "opening": "n.v.t.",
-    "hashtag_stijl": "strategie",
-    "tijdslot": "strategie",
-    "video_uitleg": "vaste regel"
-   },
-   "reeks": null,
-   "reeks_label": null
-  },
-  {
-   "datum": "2026-11-18",
-   "ref": "Kolossenzen 3:2",
-   "tekst": "Bedenkt de dingen, die boven zijn, niet die op de aarde zijn.",
-   "vers_id": "Colossians-3-2-2",
-   "variabelen": {
-    "huisstijl": "papier_blauw",
-    "thema": "vrede_rust",
-    "hook_stijl": "uitdaging",
-    "formaat": "video",
-    "uitleg_op_beeld": true,
-    "achtergrondbron": "verloop",
-    "boekgroep": "brieven",
-    "lengte": "kort",
-    "bron": "bekend",
-    "vraag_onderaan": true,
-    "reel_stijl": "situatie",
-    "carrousel_stijl": null,
-    "reel_kleur": null,
-    "markeer_achtergrond": null,
-    "markeer_streep": null,
-    "markeer_opening": null,
-    "reel_plaatsing": "midden",
-    "reel_scene": "onderweg",
-    "reel_haak": "geen",
-    "opening": null,
-    "hashtag_stijl": "zonder",
-    "tijdslot": "12:15",
-    "tijdslot_fb": "12:15",
-    "palet": "papier_blauw",
-    "lettertype": "cormorant",
-    "layout": "links",
-    "achtergrond": "papier",
-    "hook_op_beeld": false,
-    "aanleiding": "tijdloos",
-    "video_uitleg": true
-   },
-   "keuzebron": {
-    "huisstijl": "strategie",
-    "thema": "strategie",
-    "hook_stijl": "strategie",
-    "formaat": "aandeel reels",
-    "uitleg_op_beeld": "strategie",
-    "achtergrondbron": "strategie",
-    "boekgroep": "experiment",
-    "lengte": "strategie",
-    "bron": "strategie",
-    "vraag_onderaan": "strategie",
-    "reel_stijl": "vaste regel",
-    "carrousel_stijl": "n.v.t.",
-    "reel_kleur": "n.v.t.",
-    "markeer_achtergrond": "n.v.t.",
-    "markeer_streep": "n.v.t.",
-    "markeer_opening": "n.v.t.",
-    "reel_plaatsing": "strategie",
-    "reel_scene": "strategie",
-    "reel_haak": "n.v.t.",
-    "opening": "n.v.t.",
-    "hashtag_stijl": "strategie",
-    "tijdslot": "strategie",
-    "video_uitleg": "vaste regel"
-   },
-   "reeks": null,
-   "reeks_label": null
-  },
   {
    "datum": "2026-11-19",
    "ref": "Klaagliederen 3:22-23",
