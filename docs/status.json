@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T01:17:34",
+ "updated": "2026-11-16T01:19:55",
  "agents": {
   "verskiezer": {
    "t": "2026-11-16T01:17:34",
@@ -7,13 +7,13 @@
    "state": "done"
   },
   "designer": {
-   "t": "2026-11-15T23:24:23",
-   "task": "Ontwierp Psalm 56:4 in stijl hemelsblauw",
+   "t": "2026-11-16T01:19:54",
+   "task": "Psalm 136:26 opnieuw gemaakt (stijl mint, achtergrond foto)",
    "state": "done"
   },
   "video": {
-   "t": "2026-11-15T23:24:23",
-   "task": "Monteerde video Psalm 56:4 met muziek",
+   "t": "2026-11-16T01:19:54",
+   "task": "Monteerde video Psalm 136:26 met muziek",
    "state": "done"
   },
   "dispatcher": {
@@ -57,6 +57,10 @@
  ],
  "log": [
   {
+   "t": "01:19",
+   "msg": "Bediening: Psalm 136:26 opnieuw gemaakt (stijl mint, achtergrond foto)"
+  },
+  {
    "t": "01:17",
    "msg": "Bediening: Experimenteren ingesteld op 40%"
   },
@@ -99,10 +103,6 @@
   {
    "t": "23:30",
    "msg": "2026-11-15-5 overgeslagen: daglimiet bereikt"
-  },
-  {
-   "t": "23:30",
-   "msg": "2026-11-15-3 overgeslagen: daglimiet bereikt"
   }
  ],
  "lampen": [

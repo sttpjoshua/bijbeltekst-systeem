@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-16T01:17",
+ "gegenereerd": "2026-11-16T01:19",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -732,7 +732,7 @@
    "hook": "Schrijf vijf eigen redenen om God te danken.",
    "status": "gerenderd",
    "variabelen": {
-    "huisstijl": "schaduw_blauw",
+    "huisstijl": "mint",
     "thema": "dankbaarheid",
     "hook_stijl": "uitdaging",
     "formaat": "video",
@@ -752,10 +752,10 @@
     "hashtag_stijl": "zoekwoord",
     "tijdslot": "20:30",
     "tijdslot_fb": "12:15",
-    "palet": "papier_blauw",
-    "lettertype": "cormorant",
-    "layout": "links",
-    "achtergrond": "papier_schaduw",
+    "palet": "mint",
+    "lettertype": "dmserif",
+    "layout": "centraal",
+    "achtergrond": "diagonaal",
     "hook_op_beeld": false,
     "aanleiding": "tijdloos",
     "video_uitleg": true
@@ -779,17 +779,17 @@
    "per_platform": {},
    "score": {},
    "keuzebron": {
-    "huisstijl": "experiment",
+    "huisstijl": "joshua",
     "thema": "experiment",
     "hook_stijl": "experiment",
     "formaat": "aandeel reels",
     "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "experiment",
+    "achtergrondbron": "joshua",
     "boekgroep": "experiment",
     "lengte": "experiment",
     "bron": "experiment",
     "vraag_onderaan": "experiment",
-    "reel_stijl": "vaste regel",
+    "reel_stijl": "joshua",
     "carrousel_stijl": "n.v.t.",
     "reel_kleur": "n.v.t.",
     "reel_plaatsing": "experiment",
@@ -6759,11 +6759,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-15T12:58:43",
-   "soort": "info",
-   "tekst": "Snel leren afgelopen: terug naar de normale instellingen"
-  },
-  {
    "t": "2026-11-15T13:15:34",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
@@ -7057,6 +7052,11 @@
    "t": "2026-11-16T01:17:34",
    "soort": "info",
    "tekst": "Bediening: Experimenteren ingesteld op 40%"
+  },
+  {
+   "t": "2026-11-16T01:19:54",
+   "soort": "info",
+   "tekst": "Bediening: Psalm 136:26 opnieuw gemaakt (stijl mint, achtergrond foto)"
   }
  ],
  "recente_fouten": [
@@ -7208,7 +7208,7 @@
    "fout": "2026-11-08T00:28",
    "laatst_ok": true,
    "detail": "muziek en foto's beschikbaar",
-   "ok": "2026-11-12T09:45"
+   "ok": "2026-11-16T01:19"
   },
   "reacties": {
    "ok": "2026-11-15T23:01",
