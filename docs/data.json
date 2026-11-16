@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-16T12:47",
+ "gegenereerd": "2026-11-16T12:59",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -7459,26 +7459,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-15T21:15:34",
-   "soort": "info",
-   "tekst": "2026-11-15-3 overgeslagen: daglimiet bereikt"
-  },
-  {
-   "t": "2026-11-15T21:15:34",
-   "soort": "info",
-   "tekst": "2026-11-15-5 overgeslagen: daglimiet bereikt"
-  },
-  {
-   "t": "2026-11-15T21:30:49",
-   "soort": "info",
-   "tekst": "2026-11-15-3 overgeslagen: daglimiet bereikt"
-  },
-  {
-   "t": "2026-11-15T21:30:49",
-   "soort": "info",
-   "tekst": "2026-11-15-5 overgeslagen: daglimiet bereikt"
-  },
-  {
    "t": "2026-11-15T21:45:31",
    "soort": "info",
    "tekst": "2026-11-15-3 overgeslagen: daglimiet bereikt"
@@ -7762,6 +7742,26 @@
    "t": "2026-11-16T12:47:11",
    "soort": "info",
    "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
+  },
+  {
+   "t": "2026-11-16T12:59:03",
+   "soort": "info",
+   "tekst": "Verbinding met Instagram werkt (@bibleverse_nl)"
+  },
+  {
+   "t": "2026-11-16T12:59:04",
+   "soort": "info",
+   "tekst": "Token heeft alle rechten, ook voor statistieken"
+  },
+  {
+   "t": "2026-11-16T12:59:05",
+   "soort": "info",
+   "tekst": "Verbinding met Facebook-pagina werkt (Bibleversenl)"
+  },
+  {
+   "t": "2026-11-16T12:59:08",
+   "soort": "info",
+   "tekst": "Statistieken lezen werkt"
   }
  ],
  "recente_fouten": [
@@ -7893,20 +7893,20 @@
    "detail": "1 Johannes 4:18 geplaatst"
   },
   "instagram_lezen": {
-   "ok": "2026-11-15T12:58",
+   "ok": "2026-11-16T12:59",
    "laatst_ok": true,
-   "detail": "3 volgers"
+   "detail": "4 volgers"
   },
   "sleutel_instagram": {
    "verloopt": "nooit",
    "geldig": true,
-   "ok": "2026-11-15T12:58",
+   "ok": "2026-11-16T12:59",
    "laatst_ok": true
   },
   "sleutel_facebook": {
    "verloopt": "nooit",
    "geldig": true,
-   "ok": "2026-11-15T12:58",
+   "ok": "2026-11-16T12:59",
    "laatst_ok": true
   },
   "materiaal_actions": {
@@ -7932,7 +7932,7 @@
    "detail": "15 nieuwe metingen"
   },
   "zelftest": {
-   "ok": "2026-11-15T14:36",
+   "ok": "2026-11-16T12:59",
    "laatst_ok": true,
    "detail": "18 onderdelen gemaakt en gecontroleerd"
   },
@@ -8021,6 +8021,12 @@
    "datum": "2026-11-15",
    "instagram": 3,
    "ig_posts": 40,
+   "facebook": 0
+  },
+  {
+   "datum": "2026-11-16",
+   "instagram": 4,
+   "ig_posts": 45,
    "facebook": 0
   }
  ],
