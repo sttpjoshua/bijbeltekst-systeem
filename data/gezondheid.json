@@ -5,20 +5,20 @@
   "detail": "1 Johannes 4:18 geplaatst"
  },
  "instagram_lezen": {
-  "ok": "2026-11-16T12:59",
+  "ok": "2026-11-16T13:44",
   "laatst_ok": true,
   "detail": "4 volgers"
  },
  "sleutel_instagram": {
   "verloopt": "nooit",
   "geldig": true,
-  "ok": "2026-11-16T12:59",
+  "ok": "2026-11-16T13:44",
   "laatst_ok": true
  },
  "sleutel_facebook": {
   "verloopt": "nooit",
   "geldig": true,
-  "ok": "2026-11-16T12:59",
+  "ok": "2026-11-16T13:44",
   "laatst_ok": true
  },
  "materiaal_actions": {
@@ -28,7 +28,7 @@
   "ok": "2026-11-16T13:17"
  },
  "reacties": {
-  "ok": "2026-11-16T13:01",
+  "ok": "2026-11-16T13:44",
   "laatst_ok": true,
   "detail": "1 nieuwe reacties",
   "fout": "2026-11-08T18:00"
@@ -39,9 +39,9 @@
   "detail": "Psalm 136:26 geplaatst"
  },
  "statistieken": {
-  "ok": "2026-11-15T12:58",
+  "ok": "2026-11-16T13:44",
   "laatst_ok": true,
-  "detail": "15 nieuwe metingen"
+  "detail": "23 nieuwe metingen"
  },
  "zelftest": {
   "ok": "2026-11-16T12:59",
@@ -75,7 +75,7 @@
   "detail": "alles klopte"
  },
  "leren": {
-  "ok": "2026-11-14T12:27",
+  "ok": "2026-11-16T13:44",
   "laatst_ok": true,
   "detail": "dagelijks (snel leren)"
  }
