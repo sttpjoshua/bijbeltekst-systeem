@@ -28,8 +28,12 @@
   "nieuws:n111512011",
   "uitschieter:2026-11-15-4",
   "dag:2026-11-15",
-  "nieuws:n111607010"
+  "nieuws:n111607010",
+  "mijl:b100"
  ],
- "mijlpalen": [],
+ "mijlpalen": [
+  "b100",
+  "b100:2026-11-15-4"
+ ],
  "menu": true
 }
