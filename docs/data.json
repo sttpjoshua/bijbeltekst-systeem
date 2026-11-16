@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-16T18:45",
+ "gegenereerd": "2026-11-16T18:47",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -9050,14 +9050,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-16T07:01:15",
-   "soort": "fout",
-   "tekst": "Politiek nieuws (NOS): \"Wekdienst 16/11: Coalitie verder met crisisoverleg • Interland Duitsland-Nederland\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
-   "code": "nieuws_voorstel",
-   "post": "n111607010",
-   "opgelost": true
-  },
-  {
    "t": "2026-11-16T09:03:00",
    "soort": "info",
    "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-18 (teksten uit de tekstbank)."
@@ -9353,6 +9345,11 @@
    "t": "2026-11-16T18:36:31",
    "soort": "info",
    "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
+  },
+  {
+   "t": "2026-11-16T18:47:16",
+   "soort": "info",
+   "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
   }
  ],
  "recente_fouten": [
@@ -9549,7 +9546,7 @@
    "detail": "0 nieuwe aanleidingen"
   },
   "maken": {
-   "ok": "2026-11-16T18:36",
+   "ok": "2026-11-16T18:47",
    "laatst_ok": true,
    "detail": "2 posts klaargezet"
   },
