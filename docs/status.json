@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T07:01:10",
+ "updated": "2026-11-16T07:15:57",
  "agents": {
   "verskiezer": {
    "t": "2026-11-16T01:17:34",
@@ -22,8 +22,8 @@
    "state": "done"
   },
   "controller": {
-   "t": "2026-11-15T12:01:08",
-   "task": "Politiek nieuws (NOS): \"Crisisoverleg D66, VVD en CDA vanochtend verde",
+   "t": "2026-11-16T07:01:15",
+   "task": "Politiek nieuws (NOS): \"Wekdienst 16/11: Coalitie verder met crisisove",
    "state": "error"
   },
   "analist": {
@@ -56,6 +56,10 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "07:01",
+   "msg": "Politiek nieuws (NOS): \"Wekdienst 16/11: Coalitie verder met crisisoverleg • Interland Duitsland-Nederland\". N"
+  },
   {
    "t": "05:15",
    "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
@@ -99,10 +103,6 @@
   {
    "t": "00:02",
    "msg": "2026-11-15-3 online op facebook: 2 Korinthe 5:17"
-  },
-  {
-   "t": "00:02",
-   "msg": "2026-11-15-3 online op instagram: 2 Korinthe 5:17"
   }
  ],
  "lampen": [
