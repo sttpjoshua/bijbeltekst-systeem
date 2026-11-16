@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T20:34:30",
+ "updated": "2026-11-16T20:47:17",
  "agents": {
   "verskiezer": {
    "t": "2026-11-16T12:02:55",
@@ -57,6 +57,10 @@
  ],
  "log": [
   {
+   "t": "20:47",
+   "msg": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
+  },
+  {
    "t": "20:34",
    "msg": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
   },
@@ -99,10 +103,6 @@
   {
    "t": "19:02",
    "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
-   "t": "18:47",
-   "msg": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
   }
  ],
  "lampen": [
