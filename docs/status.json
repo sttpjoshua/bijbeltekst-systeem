@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T16:30:53",
+ "updated": "2026-11-16T16:32:53",
  "agents": {
   "verskiezer": {
    "t": "2026-11-16T12:02:55",
@@ -57,6 +57,10 @@
  ],
  "log": [
   {
+   "t": "16:32",
+   "msg": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
+  },
+  {
    "t": "16:17",
    "msg": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
   },
@@ -99,10 +103,6 @@
   {
    "t": "13:53",
    "msg": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "13:51",
-   "msg": "Bediening: Psalm 56:4 opnieuw gemaakt (stijl schaduw_rood, achtergrond kleurverloop)"
   }
  ],
  "lampen": [
