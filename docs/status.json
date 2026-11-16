@@ -1,19 +1,19 @@
 {
- "updated": "2026-11-16T12:02:21",
+ "updated": "2026-11-16T12:03:20",
  "agents": {
   "verskiezer": {
-   "t": "2026-11-16T11:57:06",
-   "task": "Voorstel genegeerd",
+   "t": "2026-11-16T12:02:55",
+   "task": "Koos Psalm 119:165, Openbaring 21:4",
    "state": "done"
   },
   "designer": {
-   "t": "2026-11-16T11:46:17",
-   "task": "Ontwierp Jesaja 55:12 in stijl mint",
+   "t": "2026-11-16T12:03:19",
+   "task": "Ontwierp Openbaring 21:4 in stijl perzik",
    "state": "done"
   },
   "video": {
-   "t": "2026-11-16T11:46:17",
-   "task": "Monteerde video Jesaja 55:12 met muziek",
+   "t": "2026-11-16T12:03:19",
+   "task": "Monteerde video Openbaring 21:4 met muziek",
    "state": "done"
   },
   "dispatcher": {
@@ -57,6 +57,10 @@
  ],
  "log": [
   {
+   "t": "12:03",
+   "msg": "Zelfstandig 7 posts klaargezet voor 2026-11-17, 2026-11-18 (teksten uit de tekstbank)."
+  },
+  {
    "t": "12:00",
    "msg": "Zelfherstel: Geen post klaar voor 2026-11-16 22:00 → noodpost Spreuken 6:6 ingezet om 22:00"
   },
@@ -99,10 +103,6 @@
   {
    "t": "11:44",
    "msg": "Bediening: Posts per dag ingesteld op 3. Ontbrekende posts voor morgen worden vanavond rond 21:00 gemaakt"
-  },
-  {
-   "t": "09:03",
-   "msg": "Zelfstandig 2 posts klaargezet voor 2026-11-18 (teksten uit de tekstbank)."
   }
  ],
  "lampen": [

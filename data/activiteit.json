@@ -1,17 +1,17 @@
 {
  "verskiezer": {
-  "t": "2026-11-16T11:57:06",
-  "task": "Voorstel genegeerd",
+  "t": "2026-11-16T12:02:55",
+  "task": "Koos Psalm 119:165, Openbaring 21:4",
   "state": "done"
  },
  "designer": {
-  "t": "2026-11-16T11:46:17",
-  "task": "Ontwierp Jesaja 55:12 in stijl mint",
+  "t": "2026-11-16T12:03:19",
+  "task": "Ontwierp Openbaring 21:4 in stijl perzik",
   "state": "done"
  },
  "video": {
-  "t": "2026-11-16T11:46:17",
-  "task": "Monteerde video Jesaja 55:12 met muziek",
+  "t": "2026-11-16T12:03:19",
+  "task": "Monteerde video Openbaring 21:4 met muziek",
   "state": "done"
  },
  "dispatcher": {
@@ -20,8 +20,8 @@
   "state": "done"
  },
  "controller": {
-  "t": "2026-11-16T12:00:27",
-  "task": "Zelf opgelost: noodpost Spreuken 6:6 ingezet om 22:00",
+  "t": "2026-11-16T12:03:19",
+  "task": "Posts klaargezet uit de tekstbank",
   "state": "done"
  },
  "analist": {

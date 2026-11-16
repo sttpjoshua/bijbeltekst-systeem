@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-16T12:02",
+ "gegenereerd": "2026-11-16T12:03",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -309,6 +309,184 @@
   "inzichten": []
  },
  "posts": [
+  {
+   "id": "2026-11-18-5",
+   "datum": "2026-11-18",
+   "ref": "Openbaring 21:4",
+   "tekst": "En God zal alle tranen van hun ogen afwissen; en de dood zal niet meer zijn; noch rouw, noch gekrijt, noch moeite zal meer zijn; want de eerste dingen zijn weggegaan.",
+   "hook": "Stuur vandaag een berichtje naar iemand die rouwt.",
+   "status": "gerenderd",
+   "variabelen": {
+    "huisstijl": "perzik",
+    "thema": "troost",
+    "hook_stijl": "uitdaging",
+    "formaat": "video",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "beeld",
+    "boekgroep": "brieven",
+    "lengte": "middel",
+    "bron": "bekend",
+    "vraag_onderaan": true,
+    "reel_stijl": "markeren",
+    "carrousel_stijl": null,
+    "reel_kleur": "abrikoos",
+    "markeer_achtergrond": "papier",
+    "markeer_streep": "regel",
+    "markeer_opening": "sterk",
+    "reel_plaatsing": null,
+    "reel_scene": null,
+    "reel_haak": "geen",
+    "opening": null,
+    "hashtag_stijl": "zonder",
+    "tijdslot": "17:45",
+    "tijdslot_fb": "22:00",
+    "palet": "perzik",
+    "lettertype": "playfair",
+    "layout": "citaat",
+    "achtergrond": "diagonaal",
+    "hook_op_beeld": false,
+    "aanleiding": "tijdloos",
+    "video_uitleg": true
+   },
+   "vers_id": "Revelation_of_John-21-4-4",
+   "goedgekeurd": null,
+   "reeks": null,
+   "reeks_label": null,
+   "reserve_ref": null,
+   "caption": "Stuur vandaag een berichtje naar iemand die rouwt.\n\n\"En God zal alle tranen van hun ogen afwissen; en de dood zal niet meer zijn; noch rouw, noch gekrijt, noch moeite zal meer zijn; want de eerste dingen zijn weggegaan.\"\nOpenbaring 21:4\n\nVerdriet heeft niet het laatste woord.\n\nWaar verlang jij naar in die nieuwe wereld?",
+   "uitleg": "",
+   "media": "docs/media/2026-11/2026-11-18-5.mp4",
+   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-18-5.mp4",
+   "media_urls": [
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-18-5.mp4"
+   ],
+   "thumb": "thumbs/2026-11-18-5.jpg",
+   "platformen": [],
+   "links": {},
+   "totaal": {},
+   "per_platform": {},
+   "score": {},
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "aandeel reels",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "reel_stijl": "test markeren",
+    "carrousel_stijl": "n.v.t.",
+    "reel_kleur": "experiment",
+    "markeer_achtergrond": "experiment",
+    "markeer_streep": "experiment",
+    "markeer_opening": "experiment",
+    "reel_plaatsing": "n.v.t.",
+    "reel_scene": "n.v.t.",
+    "reel_haak": "n.v.t.",
+    "opening": "n.v.t.",
+    "hashtag_stijl": "experiment",
+    "tijdslot": "experiment",
+    "video_uitleg": "vaste regel"
+   },
+   "momenten": {},
+   "pub": {},
+   "gemist": [],
+   "nood": false,
+   "nieuws": null,
+   "online": null
+  },
+  {
+   "id": "2026-11-18-4",
+   "datum": "2026-11-18",
+   "ref": "Psalm 119:165",
+   "tekst": "Die Uw wet beminnen, hebben groten vrede, en zij hebben geen aanstoot.",
+   "hook": "",
+   "status": "gerenderd",
+   "variabelen": {
+    "huisstijl": "schaduw_rood",
+    "thema": "vrede_rust",
+    "hook_stijl": "geen",
+    "formaat": "video",
+    "uitleg_op_beeld": true,
+    "achtergrondbron": "beeld",
+    "boekgroep": "psalmen",
+    "lengte": "kort",
+    "bron": "bekend",
+    "vraag_onderaan": true,
+    "reel_stijl": "markeren",
+    "carrousel_stijl": null,
+    "reel_kleur": "hemel",
+    "markeer_achtergrond": "foto",
+    "markeer_streep": "regel",
+    "markeer_opening": "sterk",
+    "reel_plaatsing": null,
+    "reel_scene": null,
+    "reel_haak": "geen",
+    "opening": null,
+    "hashtag_stijl": "zonder",
+    "tijdslot": "20:30",
+    "tijdslot_fb": "04:00",
+    "palet": "papier_rood",
+    "lettertype": "cormorant",
+    "layout": "links",
+    "achtergrond": "papier_schaduw",
+    "hook_op_beeld": false,
+    "aanleiding": "tijdloos",
+    "video_uitleg": true
+   },
+   "vers_id": "Psalms-119-165-165",
+   "goedgekeurd": null,
+   "reeks": null,
+   "reeks_label": null,
+   "reserve_ref": null,
+   "caption": "\"Die Uw wet beminnen, hebben groten vrede, en zij hebben geen aanstoot.\"\nPsalm 119:165\n\nGods woorden geven vrede.\n\nWelk Bijbelvers geeft jou vrede?",
+   "uitleg": "Wie van Uw woorden houdt, heeft grote vrede.",
+   "media": "docs/media/2026-11/2026-11-18-4.mp4",
+   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-18-4.mp4",
+   "media_urls": [
+    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-18-4.mp4"
+   ],
+   "thumb": "thumbs/2026-11-18-4.jpg",
+   "platformen": [],
+   "links": {},
+   "totaal": {},
+   "per_platform": {},
+   "score": {},
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "aandeel reels",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "reel_stijl": "test markeren",
+    "carrousel_stijl": "n.v.t.",
+    "reel_kleur": "experiment",
+    "markeer_achtergrond": "experiment",
+    "markeer_streep": "experiment",
+    "markeer_opening": "experiment",
+    "reel_plaatsing": "n.v.t.",
+    "reel_scene": "n.v.t.",
+    "reel_haak": "n.v.t.",
+    "opening": "n.v.t.",
+    "hashtag_stijl": "experiment",
+    "tijdslot": "experiment",
+    "video_uitleg": "vaste regel"
+   },
+   "momenten": {},
+   "pub": {},
+   "gemist": [],
+   "nood": false,
+   "nieuws": null,
+   "online": null
+  },
   {
    "id": "2026-11-18-3",
    "datum": "2026-11-18",
@@ -7266,11 +7444,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-15T19:45:33",
-   "soort": "info",
-   "tekst": "2026-11-15-5 overgeslagen: daglimiet bereikt"
-  },
-  {
    "t": "2026-11-15T20:01:13",
    "soort": "info",
    "tekst": "2026-11-15-5 overgeslagen: daglimiet bereikt"
@@ -7567,6 +7740,11 @@
    "t": "2026-11-16T12:00:27",
    "soort": "info",
    "tekst": "Zelfherstel: Geen post klaar voor 2026-11-16 22:00 → noodpost Spreuken 6:6 ingezet om 22:00"
+  },
+  {
+   "t": "2026-11-16T12:03:19",
+   "soort": "info",
+   "tekst": "Zelfstandig 7 posts klaargezet voor 2026-11-17, 2026-11-18 (teksten uit de tekstbank)."
   }
  ],
  "recente_fouten": [
@@ -7751,9 +7929,9 @@
    "detail": "1 nieuwe aanleidingen"
   },
   "maken": {
-   "ok": "2026-11-16T11:58",
+   "ok": "2026-11-16T12:03",
    "laatst_ok": true,
-   "detail": "2 posts klaargezet"
+   "detail": "7 posts klaargezet"
   },
   "avondcontrole": {
    "ok": "2026-11-15T20:48",
@@ -8219,8 +8397,8 @@
   "verzen": {
    "troost": {
     "totaal": 56,
-    "beschikbaar": 51,
-    "nooit": 52
+    "beschikbaar": 50,
+    "nooit": 51
    },
    "moed": {
     "totaal": 44,
@@ -8264,8 +8442,8 @@
    },
    "vrede_rust": {
     "totaal": 42,
-    "beschikbaar": 35,
-    "nooit": 36
+    "beschikbaar": 34,
+    "nooit": 35
    }
   },
   "verzen_totaal": 558,
@@ -8275,6 +8453,10 @@
   "ontdekking": 258,
   "per_dag": 5,
   "muziek": [
+   {
+    "naam": "ES_Bed Time - Traditional.mp3",
+    "keer": 2
+   },
    {
     "naam": "ES_A Higher Calling - Mandala Dreams.mp3",
     "keer": 1
@@ -8289,10 +8471,6 @@
    },
    {
     "naam": "ES_April - Jakob Ahlbom.mp3",
-    "keer": 1
-   },
-   {
-    "naam": "ES_Bed Time - Traditional.mp3",
     "keer": 1
    },
    {
@@ -8376,15 +8554,15 @@
     "keer": 1
    },
    {
+    "naam": "ES_When the Sun Rises - Center of Attention.mp3",
+    "keer": 1
+   },
+   {
     "naam": "ES_You Set My World On Fire (Instrumental Version) - Loving Caliber.mp3",
     "keer": 1
    },
    {
     "naam": "ES_That's What Christmas Is About (Instrumental Version) - Loving Caliber.mp3",
-    "keer": 0
-   },
-   {
-    "naam": "ES_When the Sun Rises - Center of Attention.mp3",
     "keer": 0
    }
   ],
@@ -8399,6 +8577,14 @@
    },
    {
     "naam": "pexels-cacito-10020710.jpg",
+    "keer": 1
+   },
+   {
+    "naam": "pexels-dang-vu-hai-683750211-34035083.jpg",
+    "keer": 1
+   },
+   {
+    "naam": "pexels-dima-langemann-154794175-10633172.jpg",
     "keer": 1
    },
    {
@@ -8448,14 +8634,6 @@
    {
     "naam": "pexels-yusuf-kaya-288172498-18179575.jpg",
     "keer": 1
-   },
-   {
-    "naam": "pexels-dang-vu-hai-683750211-34035083.jpg",
-    "keer": 0
-   },
-   {
-    "naam": "pexels-dima-langemann-154794175-10633172.jpg",
-    "keer": 0
    },
    {
     "naam": "pexels-jonathanborba-4764316.jpg",
@@ -8558,7 +8736,7 @@
  },
  "tekstbank": {
   "verzen": 197,
-  "vrij": 154,
+  "vrij": 152,
   "dagen": 30,
   "zelfstandig": true
  },
@@ -9775,8 +9953,8 @@
    "kw": "vrede",
    "herkenning": "Voor iedereen die vrede zoekt.",
    "uit": false,
-   "laatst": null,
-   "n": 0
+   "laatst": "2026-11-18",
+   "n": 1
   },
   {
    "id": "Psalms-119-50-50",
@@ -10225,8 +10403,8 @@
    "kw": "tranen",
    "herkenning": "Voor iedereen die vandaag iemand mist.",
    "uit": false,
-   "laatst": null,
-   "n": 0
+   "laatst": "2026-11-18",
+   "n": 1
   },
   {
    "id": "Revelation_of_John-21-5-5",
@@ -10960,7 +11138,7 @@
      {
       "optie": "psalmen",
       "online": 1,
-      "gepland": 4,
+      "gepland": 5,
       "n": 0,
       "gem": null,
       "oordeel": "weinig data"
@@ -11000,7 +11178,7 @@
      {
       "optie": "brieven",
       "online": 3,
-      "gepland": 3,
+      "gepland": 4,
       "n": 3,
       "gem": 0.74,
       "oordeel": "weinig data"
@@ -11087,6 +11265,42 @@
       "dimensie": "boekgroep",
       "optie": "brieven",
       "bron": "experiment"
+     }
+    ]
+   },
+   {
+    "id": "2026-11-18-5",
+    "ref": "Openbaring 21:4",
+    "datum": "2026-11-18",
+    "tijdslot": "17:45",
+    "tests": [
+     {
+      "dimensie": "boekgroep",
+      "optie": "brieven",
+      "bron": "experiment"
+     },
+     {
+      "dimensie": "reel_stijl",
+      "optie": "markeren",
+      "bron": "test markeren"
+     }
+    ]
+   },
+   {
+    "id": "2026-11-18-4",
+    "ref": "Psalm 119:165",
+    "datum": "2026-11-18",
+    "tijdslot": "20:30",
+    "tests": [
+     {
+      "dimensie": "boekgroep",
+      "optie": "psalmen",
+      "bron": "experiment"
+     },
+     {
+      "dimensie": "reel_stijl",
+      "optie": "markeren",
+      "bron": "test markeren"
      }
     ]
    },
@@ -11297,136 +11511,6 @@
     "markeer_opening": "n.v.t.",
     "reel_plaatsing": "experiment",
     "reel_scene": "experiment",
-    "reel_haak": "n.v.t.",
-    "opening": "n.v.t.",
-    "hashtag_stijl": "experiment",
-    "tijdslot": "experiment",
-    "video_uitleg": "vaste regel"
-   },
-   "reeks": null,
-   "reeks_label": null
-  },
-  {
-   "datum": "2026-11-18",
-   "ref": "Psalm 119:165",
-   "tekst": "Die Uw wet beminnen, hebben groten vrede, en zij hebben geen aanstoot.",
-   "vers_id": "Psalms-119-165-165",
-   "variabelen": {
-    "huisstijl": "schaduw_rood",
-    "thema": "vrede_rust",
-    "hook_stijl": "geen",
-    "formaat": "video",
-    "uitleg_op_beeld": true,
-    "achtergrondbron": "beeld",
-    "boekgroep": "psalmen",
-    "lengte": "kort",
-    "bron": "bekend",
-    "vraag_onderaan": true,
-    "reel_stijl": "markeren",
-    "carrousel_stijl": null,
-    "reel_kleur": "hemel",
-    "markeer_achtergrond": "foto",
-    "markeer_streep": "regel",
-    "markeer_opening": "sterk",
-    "reel_plaatsing": null,
-    "reel_scene": null,
-    "reel_haak": "geen",
-    "opening": null,
-    "hashtag_stijl": "zonder",
-    "tijdslot": "20:30",
-    "tijdslot_fb": "04:00",
-    "palet": "papier_rood",
-    "lettertype": "cormorant",
-    "layout": "links",
-    "achtergrond": "papier_schaduw",
-    "hook_op_beeld": false,
-    "aanleiding": "tijdloos",
-    "video_uitleg": true
-   },
-   "keuzebron": {
-    "huisstijl": "experiment",
-    "thema": "experiment",
-    "hook_stijl": "experiment",
-    "formaat": "aandeel reels",
-    "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "experiment",
-    "boekgroep": "experiment",
-    "lengte": "experiment",
-    "bron": "experiment",
-    "vraag_onderaan": "experiment",
-    "reel_stijl": "test markeren",
-    "carrousel_stijl": "n.v.t.",
-    "reel_kleur": "experiment",
-    "markeer_achtergrond": "experiment",
-    "markeer_streep": "experiment",
-    "markeer_opening": "experiment",
-    "reel_plaatsing": "n.v.t.",
-    "reel_scene": "n.v.t.",
-    "reel_haak": "n.v.t.",
-    "opening": "n.v.t.",
-    "hashtag_stijl": "experiment",
-    "tijdslot": "experiment",
-    "video_uitleg": "vaste regel"
-   },
-   "reeks": null,
-   "reeks_label": null
-  },
-  {
-   "datum": "2026-11-18",
-   "ref": "Openbaring 21:4",
-   "tekst": "En God zal alle tranen van hun ogen afwissen; en de dood zal niet meer zijn; noch rouw, noch gekrijt, noch moeite zal meer zijn; want de eerste dingen zijn weggegaan.",
-   "vers_id": "Revelation_of_John-21-4-4",
-   "variabelen": {
-    "huisstijl": "perzik",
-    "thema": "troost",
-    "hook_stijl": "uitdaging",
-    "formaat": "video",
-    "uitleg_op_beeld": false,
-    "achtergrondbron": "beeld",
-    "boekgroep": "brieven",
-    "lengte": "middel",
-    "bron": "bekend",
-    "vraag_onderaan": true,
-    "reel_stijl": "markeren",
-    "carrousel_stijl": null,
-    "reel_kleur": "abrikoos",
-    "markeer_achtergrond": "papier",
-    "markeer_streep": "regel",
-    "markeer_opening": "sterk",
-    "reel_plaatsing": null,
-    "reel_scene": null,
-    "reel_haak": "geen",
-    "opening": null,
-    "hashtag_stijl": "zonder",
-    "tijdslot": "17:45",
-    "tijdslot_fb": "22:00",
-    "palet": "perzik",
-    "lettertype": "playfair",
-    "layout": "citaat",
-    "achtergrond": "diagonaal",
-    "hook_op_beeld": false,
-    "aanleiding": "tijdloos",
-    "video_uitleg": true
-   },
-   "keuzebron": {
-    "huisstijl": "experiment",
-    "thema": "experiment",
-    "hook_stijl": "experiment",
-    "formaat": "aandeel reels",
-    "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "experiment",
-    "boekgroep": "experiment",
-    "lengte": "experiment",
-    "bron": "experiment",
-    "vraag_onderaan": "experiment",
-    "reel_stijl": "test markeren",
-    "carrousel_stijl": "n.v.t.",
-    "reel_kleur": "experiment",
-    "markeer_achtergrond": "experiment",
-    "markeer_streep": "experiment",
-    "markeer_opening": "experiment",
-    "reel_plaatsing": "n.v.t.",
-    "reel_scene": "n.v.t.",
     "reel_haak": "n.v.t.",
     "opening": "n.v.t.",
     "hashtag_stijl": "experiment",
@@ -11672,7 +11756,7 @@
     "huisstijl": "experiment",
     "thema": "experiment",
     "hook_stijl": "experiment",
-    "formaat": "experiment",
+    "formaat": "aandeel reels",
     "uitleg_op_beeld": "experiment",
     "achtergrondbron": "experiment",
     "boekgroep": "experiment",
@@ -11737,7 +11821,7 @@
     "huisstijl": "experiment",
     "thema": "experiment",
     "hook_stijl": "experiment",
-    "formaat": "experiment",
+    "formaat": "aandeel reels",
     "uitleg_op_beeld": "experiment",
     "achtergrondbron": "experiment",
     "boekgroep": "experiment",
@@ -11965,23 +12049,23 @@
     "huisstijl": "perzik",
     "thema": "liefde",
     "hook_stijl": "rustig",
-    "formaat": "carrousel",
+    "formaat": "video",
     "uitleg_op_beeld": true,
     "achtergrondbron": "verloop",
     "boekgroep": "evangelien",
     "lengte": "middel",
     "bron": "bekend",
     "vraag_onderaan": false,
-    "reel_stijl": null,
-    "carrousel_stijl": "standaard",
+    "reel_stijl": "situatie",
+    "carrousel_stijl": null,
     "reel_kleur": null,
-    "markeer_achtergrond": "schaduw",
-    "markeer_streep": "regel",
-    "markeer_opening": "vers",
-    "reel_plaatsing": null,
-    "reel_scene": null,
-    "reel_haak": null,
-    "opening": "verhaal",
+    "markeer_achtergrond": null,
+    "markeer_streep": null,
+    "markeer_opening": null,
+    "reel_plaatsing": "midden",
+    "reel_scene": "natuur",
+    "reel_haak": "geen",
+    "opening": null,
     "hashtag_stijl": "zoekwoord",
     "tijdslot": "22:00",
     "tijdslot_fb": "20:30",
@@ -11991,69 +12075,69 @@
     "achtergrond": "diagonaal",
     "hook_op_beeld": false,
     "aanleiding": "tijdloos",
-    "video_uitleg": null
+    "video_uitleg": true
    },
    "keuzebron": {
     "huisstijl": "experiment",
     "thema": "experiment",
     "hook_stijl": "experiment",
-    "formaat": "experiment",
+    "formaat": "aandeel reels",
     "uitleg_op_beeld": "experiment",
     "achtergrondbron": "experiment",
     "boekgroep": "experiment",
     "lengte": "experiment",
     "bron": "experiment",
     "vraag_onderaan": "experiment",
-    "reel_stijl": "n.v.t.",
-    "carrousel_stijl": "experiment",
+    "reel_stijl": "vaste regel",
+    "carrousel_stijl": "n.v.t.",
     "reel_kleur": "n.v.t.",
-    "markeer_achtergrond": "experiment",
-    "markeer_streep": "experiment",
-    "markeer_opening": "experiment",
-    "reel_plaatsing": "n.v.t.",
-    "reel_scene": "n.v.t.",
+    "markeer_achtergrond": "n.v.t.",
+    "markeer_streep": "n.v.t.",
+    "markeer_opening": "n.v.t.",
+    "reel_plaatsing": "experiment",
+    "reel_scene": "experiment",
     "reel_haak": "n.v.t.",
-    "opening": "experiment",
+    "opening": "n.v.t.",
     "hashtag_stijl": "experiment",
     "tijdslot": "experiment",
-    "video_uitleg": "n.v.t."
+    "video_uitleg": "vaste regel"
    },
    "reeks": null,
    "reeks_label": null
   },
   {
    "datum": "2026-11-20",
-   "ref": "Johannes 15:13",
-   "tekst": "Niemand heeft meerder liefde dan deze, dat iemand zijn leven zette voor zijn vrienden.",
-   "vers_id": "John-15-13-13",
+   "ref": "Micha 6:8",
+   "tekst": "Hij heeft u bekend gemaakt, o mens! wat goed is; en wat eist de HEERE van u, dan recht te doen, en weldadigheid lief te hebben, en ootmoediglijk te wandelen met uw God?",
+   "vers_id": "Micah-6-8-8",
    "variabelen": {
-    "huisstijl": "salie",
-    "thema": "liefde",
-    "hook_stijl": "uitdaging",
+    "huisstijl": "avond",
+    "thema": "wijsheid",
+    "hook_stijl": "geen",
     "formaat": "video",
     "uitleg_op_beeld": true,
     "achtergrondbron": "beeld",
-    "boekgroep": "evangelien",
-    "lengte": "kort",
+    "boekgroep": "profeten",
+    "lengte": "middel",
     "bron": "bekend",
-    "vraag_onderaan": true,
+    "vraag_onderaan": false,
     "reel_stijl": "markeren",
     "carrousel_stijl": null,
     "reel_kleur": "roze",
-    "markeer_achtergrond": "foto",
+    "markeer_achtergrond": "papier",
     "markeer_streep": "woord",
     "markeer_opening": "vers",
     "reel_plaatsing": null,
     "reel_scene": null,
     "reel_haak": "geen",
     "opening": null,
-    "hashtag_stijl": "mix",
+    "hashtag_stijl": "zonder",
     "tijdslot": "20:30",
-    "tijdslot_fb": "04:00",
-    "palet": "salie",
-    "lettertype": "cormorant",
-    "layout": "kader",
-    "achtergrond": "effen",
+    "tijdslot_fb": "22:00",
+    "palet": "nacht",
+    "lettertype": "playfair",
+    "layout": "citaat",
+    "achtergrond": "licht",
     "hook_op_beeld": false,
     "aanleiding": "tijdloos",
     "video_uitleg": true
@@ -12062,7 +12146,7 @@
     "huisstijl": "experiment",
     "thema": "experiment",
     "hook_stijl": "experiment",
-    "formaat": "experiment",
+    "formaat": "aandeel reels",
     "uitleg_op_beeld": "experiment",
     "achtergrondbron": "experiment",
     "boekgroep": "experiment",
@@ -12422,7 +12506,7 @@
     "hook_stijl": "rustig",
     "formaat": "carrousel",
     "uitleg_op_beeld": true,
-    "achtergrondbron": "verloop",
+    "achtergrondbron": "beeld",
     "boekgroep": "profeten",
     "lengte": "lang",
     "bron": "bekend",
@@ -12454,7 +12538,7 @@
     "hook_stijl": "experiment",
     "formaat": "experiment",
     "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "limiet",
+    "achtergrondbron": "experiment",
     "boekgroep": "experiment",
     "lengte": "experiment",
     "bron": "experiment",
@@ -12543,9 +12627,9 @@
   },
   {
    "datum": "2026-11-22",
-   "ref": "1 Johannes 4:19",
-   "tekst": "Wij hebben Hem lief, omdat Hij ons eerst liefgehad heeft.",
-   "vers_id": "I_John-4-19-19",
+   "ref": "Romeinen 5:8",
+   "tekst": "Maar God bevestigt Zijn liefde jegens ons, dat Christus voor ons gestorven is, als wij nog zondaars waren.",
+   "vers_id": "Romans-5-8-8",
    "variabelen": {
     "huisstijl": "avond",
     "thema": "liefde",
@@ -12554,7 +12638,7 @@
     "uitleg_op_beeld": false,
     "achtergrondbron": "verloop",
     "boekgroep": "brieven",
-    "lengte": "kort",
+    "lengte": "middel",
     "bron": "bekend",
     "vraag_onderaan": false,
     "reel_stijl": "markeren",
@@ -12803,9 +12887,9 @@
   },
   {
    "datum": "2026-11-23",
-   "ref": "Micha 7:7",
-   "tekst": "Maar ik zal uitzien naar den HEERE, ik zal wachten op de God mijns heils; mijn God zal mij horen.",
-   "vers_id": "Micah-7-7-7",
+   "ref": "Psalm 130:5",
+   "tekst": "Ik verwacht den HEERE; mijn ziel verwacht, en ik hoop op Zijn Woord.",
+   "vers_id": "Psalms-130-5-5",
    "variabelen": {
     "huisstijl": "schaduw_groen",
     "thema": "hoop",
@@ -12813,8 +12897,8 @@
     "formaat": "video",
     "uitleg_op_beeld": true,
     "achtergrondbron": "verloop",
-    "boekgroep": "profeten",
-    "lengte": "middel",
+    "boekgroep": "psalmen",
+    "lengte": "kort",
     "bron": "bekend",
     "vraag_onderaan": false,
     "reel_stijl": "situatie",
@@ -12877,7 +12961,7 @@
     "hook_stijl": "vraag",
     "formaat": "video",
     "uitleg_op_beeld": true,
-    "achtergrondbron": "beeld",
+    "achtergrondbron": "verloop",
     "boekgroep": "brieven",
     "lengte": "lang",
     "bron": "bekend",
@@ -12909,7 +12993,7 @@
     "hook_stijl": "experiment",
     "formaat": "experiment",
     "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "experiment",
+    "achtergrondbron": "limiet",
     "boekgroep": "experiment",
     "lengte": "experiment",
     "bron": "experiment",
@@ -12942,7 +13026,7 @@
     "hook_stijl": "rustig",
     "formaat": "carrousel",
     "uitleg_op_beeld": true,
-    "achtergrondbron": "verloop",
+    "achtergrondbron": "beeld",
     "boekgroep": "brieven",
     "lengte": "middel",
     "bron": "bekend",
@@ -12974,7 +13058,7 @@
     "hook_stijl": "experiment",
     "formaat": "experiment",
     "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "limiet",
+    "achtergrondbron": "experiment",
     "boekgroep": "experiment",
     "lengte": "experiment",
     "bron": "experiment",
