@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T13:17:19",
+ "updated": "2026-11-16T13:18:13",
  "agents": {
   "verskiezer": {
    "t": "2026-11-16T12:02:55",
@@ -7,13 +7,13 @@
    "state": "done"
   },
   "designer": {
-   "t": "2026-11-16T12:03:19",
-   "task": "Ontwierp Openbaring 21:4 in stijl perzik",
+   "t": "2026-11-16T13:18:08",
+   "task": "Psalm 136:26 opnieuw gemaakt (stijl meelees-roze, achtergrond foto)",
    "state": "done"
   },
   "video": {
-   "t": "2026-11-16T12:03:19",
-   "task": "Monteerde video Openbaring 21:4 met muziek",
+   "t": "2026-11-16T13:18:07",
+   "task": "Monteerde video Psalm 136:26 met muziek",
    "state": "done"
   },
   "dispatcher": {
@@ -57,11 +57,27 @@
  ],
  "log": [
   {
-   "t": "13:17",
+   "t": "12:17",
+   "msg": "2026-11-16-5 online op facebook: Psalm 136:26"
+  },
+  {
+   "t": "12:17",
+   "msg": "2026-11-16-n1215 online op facebook: 1 Johannes 4:18"
+  },
+  {
+   "t": "12:17",
+   "msg": "2026-11-16-n1215 online op instagram: 1 Johannes 4:18"
+  },
+  {
+   "t": "12:19",
    "msg": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
   },
   {
-   "t": "13:05",
+   "t": "12:32",
+   "msg": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
+  },
+  {
+   "t": "12:47",
    "msg": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
   },
   {
@@ -81,28 +97,20 @@
    "msg": "Verbinding met Instagram werkt (@bibleverse_nl)"
   },
   {
-   "t": "12:47",
+   "t": "13:05",
    "msg": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
   },
   {
-   "t": "12:32",
+   "t": "13:17",
    "msg": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
   },
   {
-   "t": "12:19",
-   "msg": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
+   "t": "13:18",
+   "msg": "Eerste-uurcijfers van 3 posts vastgelegd"
   },
   {
-   "t": "12:17",
-   "msg": "2026-11-16-5 online op facebook: Psalm 136:26"
-  },
-  {
-   "t": "12:17",
-   "msg": "2026-11-16-n1215 online op facebook: 1 Johannes 4:18"
-  },
-  {
-   "t": "12:17",
-   "msg": "2026-11-16-n1215 online op instagram: 1 Johannes 4:18"
+   "t": "13:18",
+   "msg": "Bediening: Psalm 136:26 opnieuw gemaakt (stijl meelees-roze, achtergrond foto)"
   }
  ],
  "lampen": [

@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-16T13:17",
+ "gegenereerd": "2026-11-16T13:18",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1401,8 +1401,28 @@
     "tijdslot": "nood"
    },
    "momenten": {
-    "instagram": {},
-    "facebook": {}
+    "instagram": {
+     "1u": {
+      "views": 0,
+      "reach": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0
+     }
+    },
+    "facebook": {
+     "1u": {
+      "views": null,
+      "reach": null,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": null,
+      "follows": null
+     }
+    }
    },
    "pub": {
     "instagram": "2026-11-16T12:17+01:00",
@@ -1431,11 +1451,11 @@
     "lengte": "kort",
     "bron": "bekend",
     "vraag_onderaan": false,
-    "reel_stijl": "situatie",
+    "reel_stijl": "markeren",
     "carrousel_stijl": null,
-    "reel_kleur": null,
-    "reel_plaatsing": "midden",
-    "reel_scene": "onderweg",
+    "reel_kleur": "roze",
+    "reel_plaatsing": null,
+    "reel_scene": null,
     "reel_haak": "geen",
     "opening": null,
     "hashtag_stijl": "zoekwoord",
@@ -1502,7 +1522,7 @@
     "vraag_onderaan": "experiment",
     "reel_stijl": "joshua",
     "carrousel_stijl": "n.v.t.",
-    "reel_kleur": "n.v.t.",
+    "reel_kleur": "joshua",
     "reel_plaatsing": "experiment",
     "reel_scene": "experiment",
     "reel_haak": "n.v.t.",
@@ -1512,7 +1532,17 @@
     "video_uitleg": "vaste regel"
    },
    "momenten": {
-    "facebook": {}
+    "facebook": {
+     "1u": {
+      "views": 0,
+      "reach": null,
+      "likes": null,
+      "comments": null,
+      "shares": null,
+      "saves": null,
+      "follows": null
+     }
+    }
    },
    "pub": {
     "facebook": "2026-11-16T12:17+01:00"
@@ -7813,6 +7843,16 @@
    "t": "2026-11-16T13:17:19",
    "soort": "info",
    "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
+  },
+  {
+   "t": "2026-11-16T13:18:08",
+   "soort": "info",
+   "tekst": "Bediening: Psalm 136:26 opnieuw gemaakt (stijl meelees-roze, achtergrond foto)"
+  },
+  {
+   "t": "2026-11-16T13:18:12",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 3 posts vastgelegd"
   }
  ],
  "recente_fouten": [
@@ -7964,7 +8004,7 @@
    "fout": "2026-11-08T00:28",
    "laatst_ok": true,
    "detail": "muziek en foto's beschikbaar",
-   "ok": "2026-11-16T01:19"
+   "ok": "2026-11-16T13:17"
   },
   "reacties": {
    "ok": "2026-11-16T13:01",

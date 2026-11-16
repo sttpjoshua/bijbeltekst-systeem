@@ -7237,11 +7237,11 @@
    "lengte": "kort",
    "bron": "bekend",
    "vraag_onderaan": false,
-   "reel_stijl": "situatie",
+   "reel_stijl": "markeren",
    "carrousel_stijl": null,
-   "reel_kleur": null,
-   "reel_plaatsing": "midden",
-   "reel_scene": "onderweg",
+   "reel_kleur": "roze",
+   "reel_plaatsing": null,
+   "reel_scene": null,
    "reel_haak": "geen",
    "opening": null,
    "hashtag_stijl": "zoekwoord",
@@ -7268,7 +7268,7 @@
    "vraag_onderaan": "experiment",
    "reel_stijl": "joshua",
    "carrousel_stijl": "n.v.t.",
-   "reel_kleur": "n.v.t.",
+   "reel_kleur": "joshua",
    "reel_plaatsing": "experiment",
    "reel_scene": "experiment",
    "reel_haak": "n.v.t.",
@@ -7305,6 +7305,16 @@
      "saves": null,
      "follows": null,
      "avg_watch_ms": null
+    },
+    "1u": {
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "avg_watch_ms": null
     }
    }
   },
@@ -7317,8 +7327,8 @@
   "reel_herkenning": "Voor iedereen die vandaag iets zoekt wat blijft.",
   "handle": "@bibleverse_nl",
   "muziek_start": 34.9,
-  "cover_ms": 2500,
-  "duur": 14.89,
+  "cover_ms": 6023,
+  "duur": 17.94,
   "media_extra": [],
   "thumb": "thumbs/2026-11-16-5.jpg",
   "media_urls": [
@@ -8142,11 +8152,31 @@
      "saves": 0,
      "follows": 0,
      "avg_watch_ms": null
+    },
+    "1u": {
+     "views": 0,
+     "reach": 0,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": 0,
+     "avg_watch_ms": null
     }
    },
    "facebook": {
     "laatst": {
      "t": "2026-11-16T13:01+01:00",
+     "views": null,
+     "reach": null,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": null,
+     "follows": null,
+     "avg_watch_ms": null
+    },
+    "1u": {
      "views": null,
      "reach": null,
      "likes": 0,
