@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T01:21:58",
+ "updated": "2026-11-16T04:01:52",
  "agents": {
   "verskiezer": {
    "t": "2026-11-16T01:17:34",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-16T00:04:29",
-   "task": "Postte Hebreeën 11:1 op facebook",
+   "t": "2026-11-16T04:01:52",
+   "task": "Postte Jesaja 40:31 op instagram",
    "state": "done"
   },
   "controller": {
@@ -56,6 +56,14 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "04:01",
+   "msg": "2026-11-16-1 online op instagram: Jesaja 40:31"
+  },
+  {
+   "t": "04:01",
+   "msg": "2026-11-16-1 ook als story geplaatst"
+  },
   {
    "t": "01:21",
    "msg": "Bediening: Verzoek voor Claude in de wachtrij gezet"
@@ -95,14 +103,6 @@
   {
    "t": "00:02",
    "msg": "2026-11-15-3 ook als story geplaatst"
-  },
-  {
-   "t": "23:45",
-   "msg": "2026-11-15-5 overgeslagen: daglimiet bereikt"
-  },
-  {
-   "t": "23:45",
-   "msg": "2026-11-15-3 overgeslagen: daglimiet bereikt"
   }
  ],
  "lampen": [
