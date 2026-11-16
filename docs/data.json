@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-16T11:48",
+ "gegenereerd": "2026-11-16T11:54",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -7130,11 +7130,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-15T18:15:32",
-   "soort": "info",
-   "tekst": "2026-11-15-5 overgeslagen: daglimiet bereikt"
-  },
-  {
    "t": "2026-11-15T18:30:41",
    "soort": "info",
    "tekst": "2026-11-15-5 overgeslagen: daglimiet bereikt"
@@ -7404,7 +7399,8 @@
    "soort": "fout",
    "tekst": "Politiek nieuws (NOS): \"Wekdienst 16/11: Coalitie verder met crisisoverleg • Interland Duitsland-Nederland\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
    "code": "nieuws_voorstel",
-   "post": "n111607010"
+   "post": "n111607010",
+   "opgelost": true
   },
   {
    "t": "2026-11-16T09:03:00",
@@ -7430,6 +7426,11 @@
    "t": "2026-11-16T11:48:50",
    "soort": "info",
    "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
+  },
+  {
+   "t": "2026-11-16T11:54:48",
+   "soort": "info",
+   "tekst": "Bediening: Voorstel genegeerd"
   }
  ],
  "recente_fouten": [
@@ -7446,13 +7447,6 @@
    "tekst": "Politiek nieuws (NOS): \"Crisisoverleg D66, VVD en CDA vanochtend verder in Hilversum\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
    "code": "nieuws_voorstel",
    "post": "n111512011"
-  },
-  {
-   "t": "2026-11-16T07:01:15",
-   "soort": "fout",
-   "tekst": "Politiek nieuws (NOS): \"Wekdienst 16/11: Coalitie verder met crisisoverleg • Interland Duitsland-Nederland\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
-   "code": "nieuws_voorstel",
-   "post": "n111607010"
   }
  ],
  "versen_totaal": 300,
@@ -10203,7 +10197,7 @@
     "link": "https://nos.nl/l/2639666",
     "categorie": "politiek",
     "zwaar": false,
-    "status": "voorstel",
+    "status": "genegeerd",
     "post": null,
     "opties": [
      {

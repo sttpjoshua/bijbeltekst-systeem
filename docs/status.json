@@ -1,9 +1,9 @@
 {
- "updated": "2026-11-16T11:48:50",
+ "updated": "2026-11-16T11:54:49",
  "agents": {
   "verskiezer": {
-   "t": "2026-11-16T11:45:54",
-   "task": "Koos Jesaja 55:12",
+   "t": "2026-11-16T11:54:48",
+   "task": "Voorstel genegeerd",
    "state": "done"
   },
   "designer": {
@@ -22,8 +22,8 @@
    "state": "done"
   },
   "controller": {
-   "t": "2026-11-16T07:01:15",
-   "task": "Politiek nieuws (NOS): \"Wekdienst 16/11: Coalitie verder met crisisove",
+   "t": "2026-11-15T12:01:08",
+   "task": "Politiek nieuws (NOS): \"Crisisoverleg D66, VVD en CDA vanochtend verde",
    "state": "error"
   },
   "analist": {
@@ -56,6 +56,10 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "11:54",
+   "msg": "Bediening: Voorstel genegeerd"
+  },
   {
    "t": "11:48",
    "msg": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
@@ -99,10 +103,6 @@
   {
    "t": "01:19",
    "msg": "Bediening: Psalm 136:26 opnieuw gemaakt (stijl mint, achtergrond foto)"
-  },
-  {
-   "t": "01:17",
-   "msg": "Bediening: Experimenteren ingesteld op 40%"
   }
  ],
  "lampen": [
