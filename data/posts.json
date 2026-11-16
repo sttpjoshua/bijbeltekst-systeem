@@ -6295,7 +6295,32 @@
   "media": "docs/media/2026-11/2026-11-15-3.mp4",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-3.mp4",
   "metricool": {},
-  "stats": {},
+  "stats": {
+   "instagram": {
+    "1u": {
+     "views": 4,
+     "reach": 2,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "avg_watch_ms": 1359
+    }
+   },
+   "facebook": {
+    "1u": {
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "avg_watch_ms": null
+    }
+   }
+  },
   "beeld": null,
   "muziek": "ES_The Pulsation of Tranquility - Cora Zea.mp3",
   "geluid": null,
@@ -6585,7 +6610,32 @@
   "media": "docs/media/2026-11/2026-11-15-5.mp4",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-15-5.mp4",
   "metricool": {},
-  "stats": {},
+  "stats": {
+   "instagram": {
+    "1u": {
+     "views": 6,
+     "reach": 1,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "avg_watch_ms": 902
+    }
+   },
+   "facebook": {
+    "1u": {
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "avg_watch_ms": null
+    }
+   }
+  },
   "beeld": "pexels-rebornfilmes-36114793.jpg",
   "muziek": "ES_Lights of Destination - Helmut Schenker.mp3",
   "geluid": "ES_Ambience, Lakeside, Spring Day, Italy, Lake, Calm, Birds, Wood, Creaks 01 - Epidemic Sound.mp3",
