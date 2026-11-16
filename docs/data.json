@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-16T13:47",
+ "gegenereerd": "2026-11-16T13:51",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1331,12 +1331,12 @@
    "hook": "Een goede start begint hier.",
    "status": "gerenderd",
    "variabelen": {
-    "huisstijl": "hemelsblauw",
+    "huisstijl": "schaduw_rood",
     "thema": "vertrouwen",
     "hook_stijl": "geen",
     "formaat": "video",
     "uitleg_op_beeld": true,
-    "achtergrondbron": "beeld",
+    "achtergrondbron": "verloop",
     "boekgroep": "psalmen",
     "lengte": "kort",
     "bron": "bekend",
@@ -1351,10 +1351,10 @@
     "hashtag_stijl": "zonder",
     "tijdslot": "04:00",
     "tijdslot_fb": "04:00",
-    "palet": "hemelsblauw",
-    "lettertype": "montserrat_zwaar",
+    "palet": "papier_rood",
+    "lettertype": "cormorant",
     "layout": "links",
-    "achtergrond": "diagonaal",
+    "achtergrond": "papier_schaduw",
     "hook_op_beeld": false,
     "aanleiding": "tijdloos",
     "video_uitleg": true
@@ -1378,17 +1378,17 @@
    "per_platform": {},
    "score": {},
    "keuzebron": {
-    "huisstijl": "ochtend",
+    "huisstijl": "joshua",
     "thema": "experiment",
     "hook_stijl": "experiment",
     "formaat": "aandeel reels",
     "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "experiment",
+    "achtergrondbron": "joshua",
     "boekgroep": "experiment",
     "lengte": "experiment",
     "bron": "experiment",
     "vraag_onderaan": "experiment",
-    "reel_stijl": "vaste regel",
+    "reel_stijl": "joshua",
     "carrousel_stijl": "n.v.t.",
     "reel_kleur": "n.v.t.",
     "reel_plaatsing": "experiment",
@@ -9041,11 +9041,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-15T22:45:34",
-   "soort": "info",
-   "tekst": "2026-11-15-5 overgeslagen: daglimiet bereikt"
-  },
-  {
    "t": "2026-11-15T23:01:10",
    "soort": "info",
    "tekst": "2026-11-15-3 overgeslagen: daglimiet bereikt"
@@ -9344,6 +9339,11 @@
    "t": "2026-11-16T13:47:35",
    "soort": "info",
    "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
+  },
+  {
+   "t": "2026-11-16T13:51:52",
+   "soort": "info",
+   "tekst": "Bediening: Psalm 56:4 opnieuw gemaakt (stijl schaduw_rood, achtergrond kleurverloop)"
   }
  ],
  "recente_fouten": [
@@ -9500,7 +9500,7 @@
    "fout": "2026-11-08T00:28",
    "laatst_ok": true,
    "detail": "muziek en foto's beschikbaar",
-   "ok": "2026-11-16T13:17"
+   "ok": "2026-11-16T13:51"
   },
   "reacties": {
    "ok": "2026-11-16T13:44",
@@ -10277,10 +10277,6 @@
     "keer": 1
    },
    {
-    "naam": "pexels-molnartamasphotography-29202982.jpg",
-    "keer": 1
-   },
-   {
     "naam": "pexels-rebornfilmes-36114793.jpg",
     "keer": 1
    },
@@ -10314,6 +10310,10 @@
    },
    {
     "naam": "pexels-leticia-alvares-1805702-38774608.jpg",
+    "keer": 0
+   },
+   {
+    "naam": "pexels-molnartamasphotography-29202982.jpg",
     "keer": 0
    },
    {
@@ -13442,7 +13442,7 @@
     "hook_stijl": "vraag",
     "formaat": "video",
     "uitleg_op_beeld": false,
-    "achtergrondbron": "verloop",
+    "achtergrondbron": "beeld",
     "boekgroep": "spreuken",
     "lengte": "middel",
     "bron": "bekend",
@@ -13474,7 +13474,7 @@
     "hook_stijl": "experiment",
     "formaat": "aandeel reels",
     "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "limiet",
+    "achtergrondbron": "experiment",
     "boekgroep": "experiment",
     "lengte": "experiment",
     "bron": "experiment",

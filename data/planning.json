@@ -1,5 +1,5 @@
 {
- "gemaakt": "2026-11-16T13:47",
+ "gemaakt": "2026-11-16T13:51",
  "strategie_versie": 2,
  "posts": [
   {
@@ -508,7 +508,7 @@
     "hook_stijl": "vraag",
     "formaat": "video",
     "uitleg_op_beeld": false,
-    "achtergrondbron": "verloop",
+    "achtergrondbron": "beeld",
     "boekgroep": "spreuken",
     "lengte": "middel",
     "bron": "bekend",
@@ -540,7 +540,7 @@
     "hook_stijl": "experiment",
     "formaat": "aandeel reels",
     "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "limiet",
+    "achtergrondbron": "experiment",
     "boekgroep": "experiment",
     "lengte": "experiment",
     "bron": "experiment",
