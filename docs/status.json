@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T20:32:44",
+ "updated": "2026-11-16T20:34:30",
  "agents": {
   "verskiezer": {
    "t": "2026-11-16T12:02:55",
@@ -57,6 +57,10 @@
  ],
  "log": [
   {
+   "t": "20:34",
+   "msg": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
+  },
+  {
    "t": "20:32",
    "msg": "2026-11-16-5 online op instagram: Psalm 136:26"
   },
@@ -98,10 +102,6 @@
   },
   {
    "t": "18:47",
-   "msg": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "18:36",
    "msg": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
   }
  ],
