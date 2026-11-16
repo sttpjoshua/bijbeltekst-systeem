@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-16T05:00",
+ "gegenereerd": "2026-11-16T05:15",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1113,8 +1113,26 @@
    "links": {
     "instagram": "https://www.instagram.com/p/DfyV6zAl744/"
    },
-   "totaal": {},
-   "per_platform": {},
+   "totaal": {
+    "views": 0,
+    "reach": 0,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0
+   },
+   "per_platform": {
+    "instagram": {
+     "views": 0,
+     "reach": 0,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": 0,
+     "t": null
+    }
+   },
    "score": {},
    "keuzebron": {
     "huisstijl": "experiment",
@@ -1138,7 +1156,19 @@
     "tijdslot": "reeks",
     "video_uitleg": "n.v.t."
    },
-   "momenten": {},
+   "momenten": {
+    "instagram": {
+     "1u": {
+      "views": 0,
+      "reach": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0
+     }
+    }
+   },
    "pub": {
     "instagram": "2026-11-16T04:01+01:00"
    },
@@ -6765,11 +6795,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-15T14:36:11",
-   "soort": "info",
-   "tekst": "Teruggebracht naar 2 posts per dag: 2026-11-16-2 (2 Korinthe 1:4), 2026-11-16-4 (Psalm 47:7), 2026-11-16-3 (Exodus 14:14), 2026-11-17-5 (Jakobus 3:13), 2026-11-17-3 (1 Petrus 4:8), 2026-11-17-2 (Prediker 10:18) overgeslagen"
-  },
-  {
    "t": "2026-11-15T14:37:32",
    "soort": "info",
    "tekst": "Zelf opgelost: na het einde van snel leren stonden er voor 16 en 17 november nog 5 posts per dag klaar, terwijl het maximum 3 is en het doel 2. Teruggebracht naar 2 per dag (Moed voor de week en de 20:30-post op 16 nov, de 04:00- en 20:30-post op 17 nov). Het systeem doet dit voortaan zelf zodra snel leren afloopt (nieuw commando: systeem.py inkorten)."
@@ -7063,6 +7088,11 @@
    "t": "2026-11-16T04:01:52",
    "soort": "info",
    "tekst": "2026-11-16-1 online op instagram: Jesaja 40:31"
+  },
+  {
+   "t": "2026-11-16T05:15:40",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
   }
  ],
  "recente_fouten": [
