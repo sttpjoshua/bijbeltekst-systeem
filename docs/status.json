@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T12:03:20",
+ "updated": "2026-11-16T12:17:36",
  "agents": {
   "verskiezer": {
    "t": "2026-11-16T12:02:55",
@@ -17,17 +17,17 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-16T04:01:52",
-   "task": "Postte Jesaja 40:31 op instagram",
+   "t": "2026-11-16T12:17:36",
+   "task": "Postte Psalm 136:26 op facebook",
    "state": "done"
   },
   "controller": {
-   "t": "2026-11-15T12:01:08",
-   "task": "Politiek nieuws (NOS): \"Crisisoverleg D66, VVD en CDA vanochtend verde",
+   "t": "2026-11-16T12:02:27",
+   "task": "Politiek nieuws (NOS): \"Oekraïne valt Krimbrug aan, grote droneaanval ",
    "state": "error"
   },
   "analist": {
-   "t": "2026-11-16T12:00:27",
+   "t": "2026-11-16T12:16:24",
    "task": "Snel leren aangezet tot 2026-11-30: 5 posts per dag, elke dag leren. O",
    "state": "done"
   },
@@ -38,8 +38,8 @@
   }
  },
  "stats": {
-  "posts_today": 0,
-  "posts_total": 41,
+  "posts_today": 1,
+  "posts_total": 42,
   "reach_7d": 192,
   "best_time": "nog onbekend",
   "next_post": "2026-11-16T04:00:00"
@@ -57,8 +57,32 @@
  ],
  "log": [
   {
+   "t": "12:17",
+   "msg": "2026-11-16-5 online op facebook: Psalm 136:26"
+  },
+  {
+   "t": "12:17",
+   "msg": "2026-11-16-n1215 online op facebook: 1 Johannes 4:18"
+  },
+  {
+   "t": "12:17",
+   "msg": "2026-11-16-n1215 online op instagram: 1 Johannes 4:18"
+  },
+  {
+   "t": "12:17",
+   "msg": "2026-11-16-n1215 ook als story geplaatst"
+  },
+  {
+   "t": "12:16",
+   "msg": "Bediening: Snel leren aangezet tot 2026-11-30: 5 posts per dag, elke dag leren. Ontbrekende posts voor morgen "
+  },
+  {
    "t": "12:03",
    "msg": "Zelfstandig 7 posts klaargezet voor 2026-11-17, 2026-11-18 (teksten uit de tekstbank)."
+  },
+  {
+   "t": "12:02",
+   "msg": "Politiek nieuws (NOS): \"Oekraïne valt Krimbrug aan, grote droneaanval op Rusland\". Neutrale post erover maken "
   },
   {
    "t": "12:00",
@@ -79,30 +103,6 @@
   {
    "t": "11:57",
    "msg": "Bediening: Voorstel genegeerd"
-  },
-  {
-   "t": "11:56",
-   "msg": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "11:54",
-   "msg": "Bediening: Voorstel genegeerd"
-  },
-  {
-   "t": "11:48",
-   "msg": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "11:46",
-   "msg": "Zelfstandig 5 posts klaargezet voor 2026-11-17, 2026-11-18 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "11:44",
-   "msg": "Zelfherstel: Geen post klaar voor 2026-11-16 12:15 → noodpost 1 Johannes 4:18 ingezet om 12:15"
-  },
-  {
-   "t": "11:44",
-   "msg": "Bediening: Posts per dag ingesteld op 3. Ontbrekende posts voor morgen worden vanavond rond 21:00 gemaakt"
   }
  ],
  "lampen": [
