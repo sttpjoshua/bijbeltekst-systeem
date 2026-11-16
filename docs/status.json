@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T20:47:17",
+ "updated": "2026-11-16T20:52:03",
  "agents": {
   "verskiezer": {
    "t": "2026-11-16T12:02:55",
@@ -7,8 +7,8 @@
    "state": "done"
   },
   "designer": {
-   "t": "2026-11-16T13:51:52",
-   "task": "Psalm 56:4 opnieuw gemaakt (stijl schaduw_rood, achtergrond kleurverlo",
+   "t": "2026-11-16T20:51:19",
+   "task": "Ontwierp Psalm 95:2 in stijl paars",
    "state": "done"
   },
   "video": {
@@ -57,6 +57,26 @@
  ],
  "log": [
   {
+   "t": "20:52",
+   "msg": "Avondcontrole: 3 posts voor 17 nov teruggezet (nu 5), 18 nov had er al 5. Reserveverzen voor 8 posts ingevuld;"
+  },
+  {
+   "t": "20:52",
+   "msg": "Zelf opgelost: noodvoorraad aanvullen liep vast op noodposts zonder tijdslot (tekstbank.is_ochtend). Hersteld;"
+  },
+  {
+   "t": "20:52",
+   "msg": "Zelf opgelost: na het aanzetten van snel leren (5 per dag) bleven 3 eerder ingekorte posts per dag afgekeurd e"
+  },
+  {
+   "t": "20:51",
+   "msg": "Noodvoorraad zelf aangevuld uit de tekstbank: 6 van 6 klaar"
+  },
+  {
+   "t": "20:50",
+   "msg": "Teruggezet na verhoging naar 5 posts per dag: 2026-11-17-2 (Prediker 10:18), 2026-11-17-3 (1 Petrus 4:8), 2026"
+  },
+  {
    "t": "20:47",
    "msg": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
   },
@@ -83,26 +103,6 @@
   {
    "t": "20:03",
    "msg": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "19:47",
-   "msg": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "19:32",
-   "msg": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "19:16",
-   "msg": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "19:03",
-   "msg": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "19:02",
-   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
   }
  ],
  "lampen": [

@@ -7724,7 +7724,7 @@
  {
   "id": "2026-11-17-2",
   "datum": "2026-11-17",
-  "status": "afgekeurd",
+  "status": "gerenderd",
   "vers_id": "Ecclesiastes-10-18-18",
   "ref": "Prediker 10:18",
   "tekst": "Door grote luiheid verzwakt het gebint, en door slapheid der handen wordt het huis doorlekkende.",
@@ -7782,7 +7782,7 @@
   },
   "hook": "Welk klusje laat jij liggen?",
   "beeld_hook": "",
-  "caption": "Welk klusje laat jij liggen?\n\n\"Door grote luiheid verzwakt het gebint, en door slapheid der handen wordt het huis doorlekkende.\"\nPrediker 10:18\n\nKleine dingen uitstellen worden grote problemen.\n\nWelk klusje in huis stel jij al te lang uit?",
+  "caption": "Welk klusje laat jij liggen?\n\n\"Door grote luiheid verzwakt het gebint, en door slapheid der handen wordt het huis doorlekkende.\"\nPrediker 10:18\n\nWat je klein laat liggen, wordt vanzelf groter.\n\nWelk klusje in huis stel jij al te lang uit?",
   "hashtags": [
    "#humor",
    "#herkenbaar",
@@ -7816,12 +7816,33 @@
   ],
   "story_url": null,
   "goedgekeurd": null,
-  "reden": "meer dan 2 posts per dag"
+  "reserve": {
+   "vers_id": "Acts-1-8-8",
+   "ref": "Handelingen 1:8",
+   "tekst": "Maar gij zult ontvangen de kracht des Heiligen Geestes, Die over u komen zal; en gij zult Mijn getuigen zijn, zo te Jeruzalem, als in geheel Judea en Samaria, en tot aan het uiterste der aarde.",
+   "vertaling": "SV",
+   "thema": "moed",
+   "boekgroep": "brieven",
+   "lengte": "lang",
+   "bron": "bekend",
+   "hook": "Even dit, voor je aan je dag begint.",
+   "caption": "Even dit, voor je aan je dag begint.\n\n\"Maar gij zult ontvangen de kracht des Heiligen Geestes, Die over u komen zal; en gij zult Mijn getuigen zijn, zo te Jeruzalem, als in geheel Judea en Samaria, en tot aan het uiterste der aarde.\"\nHandelingen 1:8\n\nJe hoeft niet op eigen kracht te getuigen. God geeft de kracht die je nodig hebt.\n\nWaar heb jij vandaag Gods kracht voor nodig?",
+   "hashtags": [
+    "#moed",
+    "#heiligegeest",
+    "#bijbeltekst",
+    "#geloof"
+   ],
+   "uitleg": "Je hoeft niet op eigen kracht te getuigen. God geeft de kracht die je nodig hebt.",
+   "betekenis": "Jezus belooft Zijn leerlingen de kracht van de Heilige Geest. Met die kracht vertellen ze over Hem, eerst dichtbij en daarna tot het einde van de wereld.",
+   "toepassing": "Wie is vandaag jouw 'Jeruzalem', dichtbij? Laat één persoon iets zien van Gods liefde, met een woord of een daad.",
+   "kernwoord": "kracht"
+  }
  },
  {
   "id": "2026-11-17-3",
   "datum": "2026-11-17",
-  "status": "afgekeurd",
+  "status": "gerenderd",
   "vers_id": "I_Peter-4-8-8",
   "ref": "1 Petrus 4:8",
   "tekst": "Maar vooral hebt vurige liefde tot elkander; want de liefde zal menigte van zonden bedekken.",
@@ -7912,7 +7933,27 @@
   ],
   "story_url": null,
   "goedgekeurd": null,
-  "reden": "meer dan 2 posts per dag"
+  "reserve": {
+   "vers_id": "John-16-33-33",
+   "ref": "Johannes 16:33",
+   "tekst": "Deze dingen heb Ik tot u gesproken, opdat gij in Mij vrede hebt. In de wereld zult gij verdrukking hebben, maar hebt goeden moed, Ik heb de wereld overwonnen.",
+   "vertaling": "SV",
+   "thema": "troost",
+   "boekgroep": "evangelien",
+   "lengte": "middel",
+   "bron": "bekend",
+   "hook": "Neem dit vers mee door je zwaarste moment vandaag.",
+   "caption": "Neem dit vers mee door je zwaarste moment vandaag.\n\n\"Deze dingen heb Ik tot u gesproken, opdat gij in Mij vrede hebt. In de wereld zult gij verdrukking hebben, maar hebt goeden moed, Ik heb de wereld overwonnen.\"\nJohannes 16:33\n\nHet is zwaar, maar Jezus heeft gewonnen.",
+   "hashtags": [
+    "#bijbelvers",
+    "#liefde",
+    "#johannes"
+   ],
+   "uitleg": "",
+   "betekenis": "Jezus belooft geen makkelijk leven. Hij zegt eerlijk: je zult het zwaar hebben. Maar Hij geeft ook moed: Hij heeft de wereld al overwonnen. Bij Hem is vrede.",
+   "toepassing": "Wat is zwaar op dit moment? Zeg vandaag: Jezus heeft dit al overwonnen.",
+   "kernwoord": "overwonnen"
+  }
  },
  {
   "id": "2026-11-17-4",
@@ -8025,7 +8066,7 @@
  {
   "id": "2026-11-17-5",
   "datum": "2026-11-17",
-  "status": "afgekeurd",
+  "status": "gerenderd",
   "vers_id": "James-3-13-13",
   "ref": "Jakobus 3:13",
   "tekst": "Wie is wijs en verstandig onder u? die bewijze uit zijn goeden wandel zijn werken in zachtmoedige wijsheid.",
@@ -8116,7 +8157,27 @@
   ],
   "story_url": null,
   "goedgekeurd": null,
-  "reden": "meer dan 2 posts per dag"
+  "reserve": {
+   "vers_id": "Psalms-37-5-5",
+   "ref": "Psalm 37:5",
+   "tekst": "Wentel uw weg op den HEERE, en vertrouw op Hem; Hij zal het maken.",
+   "vertaling": "SV",
+   "thema": "hoop",
+   "boekgroep": "psalmen",
+   "lengte": "kort",
+   "bron": "bekend",
+   "hook": "Wat draag jij dat eigenlijk te zwaar is?",
+   "caption": "Wat draag jij dat eigenlijk te zwaar is?\n\n\"Wentel uw weg op den HEERE, en vertrouw op Hem; Hij zal het maken.\"\nPsalm 37:5\n\nJe hoeft niet alles zelf te dragen.\n\nWat zou jij vandaag naar God willen rollen?",
+   "hashtags": [
+    "#bijbelvers",
+    "#wijsheid",
+    "#psalm"
+   ],
+   "uitleg": "",
+   "betekenis": "Wentelen betekent: rollen, iets zwaars van je afrollen naar een ander. David zegt: rol je plannen en zorgen naar God. Hij zal het maken.",
+   "toepassing": "Rol vandaag één plan of zorg in gebed naar God. Laat het daarna echt bij Hem liggen.",
+   "kernwoord": "Wentel"
+  }
  },
  {
   "id": "2026-11-18-1",
@@ -8217,7 +8278,28 @@
    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-18-1.mp4"
   ],
   "story_url": null,
-  "goedgekeurd": null
+  "goedgekeurd": null,
+  "reserve": {
+   "vers_id": "Psalms-95-2-2",
+   "ref": "Psalm 95:2",
+   "tekst": "Laat ons Zijn aangezicht tegemoet gaan met lof; laat ons Hem juichen met psalmen.",
+   "vertaling": "SV",
+   "thema": "dankbaarheid",
+   "boekgroep": "psalmen",
+   "lengte": "kort",
+   "bron": "bekend",
+   "hook": "Wanneer heb jij voor het laatst gejuicht?",
+   "caption": "Wanneer heb jij voor het laatst gejuicht?\n\n\"Laat ons Zijn aangezicht tegemoet gaan met lof; laat ons Hem juichen met psalmen.\"\nPsalm 95:2\n\nGod tegemoet gaan met vreugde.\n\nWelk lied zing jij het liefst voor God?",
+   "hashtags": [
+    "#bijbelvers",
+    "#humor",
+    "#psalm"
+   ],
+   "uitleg": "Laten we met dank bij Hem komen en juichen met liederen.",
+   "betekenis": "De dichter roept op om God tegemoet te gaan met dank en vreugde. Niet sloom of plichtmatig, maar met juichen. God is het waard.",
+   "toepassing": "Zet vandaag je favoriete lofprijzingslied op en zing mee.",
+   "kernwoord": "juichen"
+  }
  },
  {
   "id": "2026-11-18-2",
@@ -8314,7 +8396,24 @@
    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-18-2.mp4"
   ],
   "story_url": null,
-  "goedgekeurd": null
+  "goedgekeurd": null,
+  "reserve": {
+   "vers_id": "Psalms-30-6-6",
+   "ref": "Psalm 30:6",
+   "tekst": "Want een ogenblik is er in Zijn toorn, maar een leven in Zijn goedgunstigheid; des avonds vernacht het geween, maar des morgens is er gejuich.",
+   "vertaling": "SV",
+   "thema": "troost",
+   "boekgroep": "psalmen",
+   "lengte": "middel",
+   "bron": "bekend",
+   "hook": "Lees dit langzaam, als de nacht lang lijkt.",
+   "caption": "Lees dit langzaam, als de nacht lang lijkt.\n\n\"Want een ogenblik is er in Zijn toorn, maar een leven in Zijn goedgunstigheid; des avonds vernacht het geween, maar des morgens is er gejuich.\"\nPsalm 30:6\n\nVerdriet duurt een nacht, Gods goedheid een leven lang.\n\nWat helpt jou door een moeilijke nacht?",
+   "hashtags": [],
+   "uitleg": "Huilen mag de hele nacht duren, maar 's morgens komt er gejuich.",
+   "betekenis": "David weet wat verdriet is. Maar hij weet ook dat verdriet niet blijft. Na de nacht komt de ochtend. Gods goedheid duurt langer dan de moeilijke tijd.",
+   "toepassing": "Heb je verdriet? Houd vast: dit is de nacht, de ochtend komt.",
+   "kernwoord": "gejuich"
+  }
  },
  {
   "id": "2026-11-16-n1215",
@@ -8553,7 +8652,28 @@
    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-18-3.mp4"
   ],
   "story_url": null,
-  "goedgekeurd": null
+  "goedgekeurd": null,
+  "reserve": {
+   "vers_id": "I_Peter-5-7-7",
+   "ref": "1 Petrus 5:7",
+   "tekst": "Werpt al uw bekommernis op Hem, want Hij zorgt voor u.",
+   "vertaling": "SV",
+   "thema": "troost",
+   "boekgroep": "brieven",
+   "lengte": "kort",
+   "bron": "bekend",
+   "hook": "Goedemorgen. Mag deze dag goed beginnen.",
+   "caption": "Goedemorgen. Mag deze dag goed beginnen.\n\n\"Werpt al uw bekommernis op Hem, want Hij zorgt voor u.\"\n1 Petrus 5:7\n\nGod zorgt voor jou, ook vandaag.\n\nWelke zorg gooi jij vandaag op God?",
+   "hashtags": [
+    "#bijbelvers",
+    "#rust",
+    "#1petrus"
+   ],
+   "uitleg": "Gooi al je zorgen op Hem, want Hij zorgt voor je.",
+   "betekenis": "Petrus gebruikt een sterk woord: werp. Je zorgen niet voorzichtig neerleggen, maar van je afgooien. Op God. Want Hij zorgt echt voor jou.",
+   "toepassing": "Schrijf je zorgen op, bid erover en gooi het briefje weg.",
+   "kernwoord": "zorgt"
+  }
  },
  {
   "id": "2026-11-16-n1745",
@@ -8867,7 +8987,24 @@
    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-18-4.mp4"
   ],
   "story_url": null,
-  "goedgekeurd": null
+  "goedgekeurd": null,
+  "reserve": {
+   "vers_id": "Psalms-146-5-5",
+   "ref": "Psalm 146:5",
+   "tekst": "Welgelukzalig is hij, die den God Jakobs tot zijn Hulp heeft, wiens verwachting op den HEERE, zijn God is.",
+   "vertaling": "SV",
+   "thema": "hoop",
+   "boekgroep": "psalmen",
+   "lengte": "middel",
+   "bron": "bekend",
+   "hook": "",
+   "caption": "\"Welgelukzalig is hij, die den God Jakobs tot zijn Hulp heeft, wiens verwachting op den HEERE, zijn God is.\"\nPsalm 146:5\n\nGelukkig ben je als je hoop op God rust.\n\nOp wie of wat rust jouw hoop?",
+   "hashtags": [],
+   "uitleg": "Gelukkig is wie God als hulp heeft en zijn hoop op Hem zet.",
+   "betekenis": "De psalm waarschuwt eerst: vertrouw niet op machtige mensen, ze gaan voorbij. Gelukkig is wie God als hulp heeft. Hij blijft.",
+   "toepassing": "Zet je hoop vandaag bewust op God, niet op een persoon of een situatie.",
+   "kernwoord": "Hulp"
+  }
  },
  {
   "id": "2026-11-18-5",
@@ -8964,6 +9101,23 @@
    "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-18-5.mp4"
   ],
   "story_url": null,
-  "goedgekeurd": null
+  "goedgekeurd": null,
+  "reserve": {
+   "vers_id": "Isaiah-66-13-13",
+   "ref": "Jesaja 66:13",
+   "tekst": "Als een, dien zijn moeder troost, alzo zal Ik u troosten; ja, gij zult te Jeruzalem getroost worden.",
+   "vertaling": "SV",
+   "thema": "troost",
+   "boekgroep": "profeten",
+   "lengte": "middel",
+   "bron": "bekend",
+   "hook": "Laat je vandaag troosten door dit vers.",
+   "caption": "Laat je vandaag troosten door dit vers.\n\n\"Als een, dien zijn moeder troost, alzo zal Ik u troosten; ja, gij zult te Jeruzalem getroost worden.\"\nJesaja 66:13\n\nGod troost je teder en dichtbij.\n\nWie troostte jou vroeger als je verdriet had?",
+   "hashtags": [],
+   "uitleg": "",
+   "betekenis": "God vergelijkt Zichzelf met een moeder die haar kind troost. Teder, dichtbij, geduldig. Zo wil God jou troosten als je verdriet hebt.",
+   "toepassing": "Heb je troost nodig? Vraag God vandaag of Hij je wil troosten zoals een moeder.",
+   "kernwoord": "moeder"
+  }
  }
 ]

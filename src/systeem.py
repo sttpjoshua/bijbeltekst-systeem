@@ -457,15 +457,31 @@ def cmd_kies(datum):
     verzen = laad("data/verzen.json")
     posts = laad("data/posts.json", [])
     rnd = random.Random(f"{datum}-{len(posts)}")
-    al_vandaag = [p for p in posts if p["datum"] == datum]
-    n = min(cfg["posts_per_dag"], cfg["max_posts_per_dag"]) - len(al_vandaag)
+    per_dag = min(cfg["posts_per_dag"], cfg["max_posts_per_dag"])
+    # Posts die het systeem eerder heeft ingekort ("meer dan N posts per dag") en die nu weer passen
+    # (posts_per_dag is verhoogd): eerst die terugzetten in plaats van nieuwe te kiezen. Door Joshua
+    # overgeslagen posts (zonder die reden) blijven afgekeurd.
+    actief = lambda: [p for p in posts if p["datum"] == datum and p["status"] != "afgekeurd"]
+    terug = []
+    for p in sorted([p for p in posts if p["datum"] == datum and p["status"] == "afgekeurd"
+                     and str(p.get("reden", "")).startswith("meer dan ") and p.get("media")
+                     and os.path.exists(P(p["media"]))], key=lambda p: p["id"]):
+        bezet = {q["variabelen"]["tijdslot"] for q in actief()}
+        if len(actief()) >= per_dag or p["variabelen"].get("tijdslot") in bezet:
+            continue
+        p["status"] = "gerenderd"; p.pop("reden", None); terug.append(f"{p['id']} ({p['ref']})")
+    if terug:
+        bewaar("data/posts.json", posts)
+        cmd_log(f"Teruggezet na verhoging naar {per_dag} posts per dag: {', '.join(terug)}")
+    al_vandaag = [p for p in posts if p["datum"] == datum]  # alle posts van die dag, voor unieke ids
+    n = per_dag - len(actief())
     if n <= 0:
         print("Voor", datum, "zijn al genoeg posts gepland."); return
     mat = materiaal(cfg)
     # Volg de planning die op het dashboard stond, als die nog klopt
     uitgesloten = set(cfg.get("verzen_uitsluiten", [])) | {p["vers_id"] for p in posts} | set(cfg.get("verzen_later", {}))
     gepland = [x for x in laad("data/planning.json", {}).get("posts", []) if x["datum"] == datum]
-    slots = {p["variabelen"]["tijdslot"] for p in al_vandaag}
+    slots = {p["variabelen"]["tijdslot"] for p in actief()}
     nieuw = []
     for x in gepland:
         if len(nieuw) >= n or x["vers_id"] in uitgesloten or x["variabelen"]["tijdslot"] in slots:

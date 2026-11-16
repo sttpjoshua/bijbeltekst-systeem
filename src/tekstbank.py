@@ -55,7 +55,8 @@ def ochtend_opener(p):
 
 
 def is_ochtend(p):
-    return (p.get("variabelen") or {}).get("tijdslot", "99") < "10:00"
+    # noodposts hebben nog geen tijdslot (None): die zijn tijdloos, dus geen ochtendgroet
+    return ((p.get("variabelen") or {}).get("tijdslot") or "99") < "10:00"
 
 
 

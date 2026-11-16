@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-16T20:47",
+ "gegenereerd": "2026-11-16T20:52",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -838,7 +838,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Jesaja 66:13",
    "caption": "Stuur vandaag een berichtje naar iemand die rouwt.\n\n\"En God zal alle tranen van hun ogen afwissen; en de dood zal niet meer zijn; noch rouw, noch gekrijt, noch moeite zal meer zijn; want de eerste dingen zijn weggegaan.\"\nOpenbaring 21:4\n\nVerdriet heeft niet het laatste woord.\n\nWaar verlang jij naar in die nieuwe wereld?",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-18-5.mp4",
@@ -927,7 +927,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Psalm 146:5",
    "caption": "\"Die Uw wet beminnen, hebben groten vrede, en zij hebben geen aanstoot.\"\nPsalm 119:165\n\nGods woorden geven vrede.\n\nWelk Bijbelvers geeft jou vrede?",
    "uitleg": "Wie van Uw woorden houdt, heeft grote vrede.",
    "media": "docs/media/2026-11/2026-11-18-4.mp4",
@@ -1016,7 +1016,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "1 Petrus 5:7",
    "caption": "Goedemorgen. Mag deze dag goed beginnen.\n\n\"Want in blijdschap zult gijlieden uittrekken, en met vrede voortgeleid worden; de bergen en heuvelen zullen geschal maken met vrolijk gezang voor uw aangezicht, en alle bomen des velds zullen de handen samenklappen.\"\nJesaja 55:12\n\nGod leidt je in vrede en vreugde.\n\nWat maakt jou vrolijk in de natuur?",
    "uitleg": "Jullie zullen vol vreugde vertrekken en in vrede geleid worden.",
    "media": "docs/media/2026-11/2026-11-18-3.mp4",
@@ -1105,7 +1105,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Psalm 30:6",
    "caption": "Vraag bij één zorg: maakt dit over een jaar nog uit?\n\n\"Bedenkt de dingen, die boven zijn, niet die op de aarde zijn.\"\nKolossenzen 3:2\n\nEr is meer dan wat je nu ziet.\n\nWaar gaan jouw gedachten de meeste tijd naartoe?",
    "uitleg": "Richt je gedachten op wat boven is, niet op wat op aarde is.",
    "media": "docs/media/2026-11/2026-11-18-2.mp4",
@@ -1194,7 +1194,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Psalm 95:2",
    "caption": "Wanneer luisterde jij voor het laatst echt?\n\n\"Ik zal horen, wat God, de HEERE, spreken zal; want Hij zal tot Zijn volk en tot Zijn gunstgenoten van vrede spreken; maar dat zij niet weder tot dwaasheid keren.\"\nPsalm 85:9\n\nVoor je iets tegen God zegt, mag je eerst luisteren. Hij spreekt over vrede.\n\nWaar heb jij vandaag vrede nodig?",
    "uitleg": "Luister naar God: Hij spreekt over vrede voor wie bij Hem hoort.",
    "media": "docs/media/2026-11/2026-11-18-1.mp4",
@@ -1246,7 +1246,7 @@
    "ref": "Jakobus 3:13",
    "tekst": "Wie is wijs en verstandig onder u? die bewijze uit zijn goeden wandel zijn werken in zachtmoedige wijsheid.",
    "hook": "Wat laat jouw leven zien?",
-   "status": "afgekeurd",
+   "status": "gerenderd",
    "variabelen": {
     "huisstijl": "paars",
     "thema": "wijsheid",
@@ -1280,7 +1280,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Psalm 37:5",
    "caption": "Wat laat jouw leven zien?\n\n\"Wie is wijs en verstandig onder u? die bewijze uit zijn goeden wandel zijn werken in zachtmoedige wijsheid.\"\nJakobus 3:13\n\nWijsheid zie je aan hoe iemand leeft.\n\nWie is voor jou een voorbeeld van wijsheid?",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-17-5.mp4",
@@ -1412,7 +1412,7 @@
    "ref": "1 Petrus 4:8",
    "tekst": "Maar vooral hebt vurige liefde tot elkander; want de liefde zal menigte van zonden bedekken.",
    "hook": "Laat vandaag één ergernis los.",
-   "status": "afgekeurd",
+   "status": "gerenderd",
    "variabelen": {
     "huisstijl": "papier_rood",
     "thema": "liefde",
@@ -1446,7 +1446,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Johannes 16:33",
    "caption": "Laat vandaag één ergernis los.\n\n\"Maar vooral hebt vurige liefde tot elkander; want de liefde zal menigte van zonden bedekken.\"\n1 Petrus 4:8\n\nLiefde vergeeft en geeft een nieuwe kans.",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-17-3.mp4",
@@ -1495,7 +1495,7 @@
    "ref": "Prediker 10:18",
    "tekst": "Door grote luiheid verzwakt het gebint, en door slapheid der handen wordt het huis doorlekkende.",
    "hook": "Welk klusje laat jij liggen?",
-   "status": "afgekeurd",
+   "status": "gerenderd",
    "variabelen": {
     "huisstijl": "schaduw_rood",
     "thema": "humor_herkenbaar",
@@ -1529,8 +1529,8 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
-   "caption": "Welk klusje laat jij liggen?\n\n\"Door grote luiheid verzwakt het gebint, en door slapheid der handen wordt het huis doorlekkende.\"\nPrediker 10:18\n\nKleine dingen uitstellen worden grote problemen.\n\nWelk klusje in huis stel jij al te lang uit?",
+   "reserve_ref": "Handelingen 1:8",
+   "caption": "Welk klusje laat jij liggen?\n\n\"Door grote luiheid verzwakt het gebint, en door slapheid der handen wordt het huis doorlekkende.\"\nPrediker 10:18\n\nWat je klein laat liggen, wordt vanzelf groter.\n\nWelk klusje in huis stel jij al te lang uit?",
    "uitleg": "Door luiheid zakt het dak in, en door slappe handen lekt het huis.",
    "media": "docs/media/2026-11/2026-11-17-2.mp4",
    "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-17-2.mp4",
@@ -9107,33 +9107,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-16T12:02:27",
-   "soort": "fout",
-   "tekst": "Politiek nieuws (NOS): \"Oekraïne valt Krimbrug aan, grote droneaanval op Rusland\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
-   "code": "nieuws_voorstel",
-   "post": "n111612020"
-  },
-  {
-   "t": "2026-11-16T12:03:19",
-   "soort": "info",
-   "tekst": "Zelfstandig 7 posts klaargezet voor 2026-11-17, 2026-11-18 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "2026-11-16T12:16:24",
-   "soort": "info",
-   "tekst": "Bediening: Snel leren aangezet tot 2026-11-30: 5 posts per dag, elke dag leren. Ontbrekende posts voor morgen worden vanavond rond 21:00 gemaakt"
-  },
-  {
-   "t": "2026-11-16T12:17:19",
-   "soort": "info",
-   "tekst": "2026-11-16-n1215 ook als story geplaatst"
-  },
-  {
-   "t": "2026-11-16T12:17:19",
-   "soort": "info",
-   "tekst": "2026-11-16-n1215 online op instagram: 1 Johannes 4:18"
-  },
-  {
    "t": "2026-11-16T12:17:27",
    "soort": "info",
    "tekst": "2026-11-16-n1215 online op facebook: 1 Johannes 4:18"
@@ -9407,6 +9380,31 @@
    "t": "2026-11-16T20:47:17",
    "soort": "info",
    "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
+  },
+  {
+   "t": "2026-11-16T20:50:13",
+   "soort": "info",
+   "tekst": "Teruggezet na verhoging naar 5 posts per dag: 2026-11-17-2 (Prediker 10:18), 2026-11-17-3 (1 Petrus 4:8), 2026-11-17-5 (Jakobus 3:13)"
+  },
+  {
+   "t": "2026-11-16T20:51:19",
+   "soort": "info",
+   "tekst": "Noodvoorraad zelf aangevuld uit de tekstbank: 6 van 6 klaar"
+  },
+  {
+   "t": "2026-11-16T20:52:03",
+   "soort": "info",
+   "tekst": "Zelf opgelost: na het aanzetten van snel leren (5 per dag) bleven 3 eerder ingekorte posts per dag afgekeurd en vulde 'kies' niets aan, waardoor Posts maken steeds opnieuw draaide en vandaag 3 noodposts nodig waren. 'kies' zet ingekorte posts nu terug (of kiest nieuwe op vrije tijdsloten); voor 17 nov zijn Prediker 10:18 (17:45), 1 Petrus 4:8 (22:00) en Jakobus 3:13 (12:15) teruggezet."
+  },
+  {
+   "t": "2026-11-16T20:52:03",
+   "soort": "info",
+   "tekst": "Zelf opgelost: noodvoorraad aanvullen liep vast op noodposts zonder tijdslot (tekstbank.is_ochtend). Hersteld; noodvoorraad weer 6 klaar."
+  },
+  {
+   "t": "2026-11-16T20:52:03",
+   "soort": "info",
+   "tekst": "Avondcontrole: 3 posts voor 17 nov teruggezet (nu 5), 18 nov had er al 5. Reserveverzen voor 8 posts ingevuld; 4 deel-hooks in de tekstbank vervangen (geen engagement-bait)."
   }
  ],
  "recente_fouten": [
@@ -9582,7 +9580,7 @@
    "detail": "23 nieuwe metingen"
   },
   "zelftest": {
-   "ok": "2026-11-16T12:59",
+   "ok": "2026-11-16T20:51",
    "laatst_ok": true,
    "detail": "18 onderdelen gemaakt en gecontroleerd"
   },
@@ -9608,14 +9606,19 @@
    "detail": "2 posts klaargezet"
   },
   "avondcontrole": {
-   "ok": "2026-11-15T20:48",
+   "ok": "2026-11-16T20:52",
    "laatst_ok": true,
-   "detail": "alles klopte"
+   "detail": "3 posts aangevuld"
   },
   "leren": {
    "ok": "2026-11-16T13:44",
    "laatst_ok": true,
    "detail": "dagelijks (snel leren)"
+  },
+  "nood": {
+   "ok": "2026-11-16T20:51",
+   "laatst_ok": true,
+   "detail": "noodvoorraad 6/6"
   }
  },
  "groei": [
@@ -10136,7 +10139,7 @@
    "liefde": {
     "totaal": 67,
     "beschikbaar": 63,
-    "nooit": 64
+    "nooit": 63
    },
    "hoop": {
     "totaal": 44,
@@ -10151,12 +10154,12 @@
    "wijsheid": {
     "totaal": 92,
     "beschikbaar": 86,
-    "nooit": 87
+    "nooit": 86
    },
    "humor_herkenbaar": {
     "totaal": 30,
     "beschikbaar": 23,
-    "nooit": 24
+    "nooit": 23
    },
    "dankbaarheid": {
     "totaal": 92,
@@ -10459,7 +10462,7 @@
   }
  ],
  "nood": {
-  "klaar": 3,
+  "klaar": 6,
   "doel": 6
  },
  "tekstbank": {
@@ -12884,9 +12887,10 @@
    "id": "20261116012158",
    "t": "2026-11-16T01:21",
    "tekst": "Ik wil altijd 5 Posts per dag blijven doen, dat lijkt mij het beste voor alles",
-   "status": "wacht",
-   "antwoord": "",
-   "soort": "vraag"
+   "status": "klaar",
+   "antwoord": "Geregeld: ook na snel leren (30 nov) blijft het systeem op 5 posts per dag. Ik heb ook een fout opgelost waardoor morgen maar 2 van de 5 posts klaarstonden; nu staan er voor morgen en overmorgen elk 5 klaar.",
+   "soort": "vraag",
+   "bijgewerkt": "2026-11-16T20:52"
   },
   {
    "id": "20261108184021",
@@ -12946,7 +12950,7 @@
      {
       "optie": "wijsheid",
       "online": 0,
-      "gepland": 0,
+      "gepland": 1,
       "n": 0,
       "gem": null,
       "oordeel": "weinig data"
@@ -12970,7 +12974,7 @@
      {
       "optie": "brieven",
       "online": 5,
-      "gepland": 2,
+      "gepland": 4,
       "n": 3,
       "gem": 0.95,
       "oordeel": "weinig data"
@@ -13004,6 +13008,32 @@
     ]
    },
    {
+    "id": "2026-11-17-5",
+    "ref": "Jakobus 3:13",
+    "datum": "2026-11-17",
+    "tijdslot": "12:15",
+    "tests": [
+     {
+      "dimensie": "boekgroep",
+      "optie": "brieven",
+      "bron": "experiment"
+     }
+    ]
+   },
+   {
+    "id": "2026-11-17-2",
+    "ref": "Prediker 10:18",
+    "datum": "2026-11-17",
+    "tijdslot": "17:45",
+    "tests": [
+     {
+      "dimensie": "boekgroep",
+      "optie": "wijsheid",
+      "bron": "experiment"
+     }
+    ]
+   },
+   {
     "id": "2026-11-17-1",
     "ref": "Psalm 27:14",
     "datum": "2026-11-17",
@@ -13012,6 +13042,24 @@
      {
       "dimensie": "boekgroep",
       "optie": "psalmen",
+      "bron": "experiment"
+     },
+     {
+      "dimensie": "reel_stijl",
+      "optie": "markeren",
+      "bron": "test markeren"
+     }
+    ]
+   },
+   {
+    "id": "2026-11-17-3",
+    "ref": "1 Petrus 4:8",
+    "datum": "2026-11-17",
+    "tijdslot": "22:00",
+    "tests": [
+     {
+      "dimensie": "boekgroep",
+      "optie": "brieven",
       "bron": "experiment"
      },
      {

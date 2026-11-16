@@ -2299,5 +2299,30 @@
   "t": "2026-11-16T20:47:17",
   "soort": "info",
   "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
+ },
+ {
+  "t": "2026-11-16T20:50:13",
+  "soort": "info",
+  "tekst": "Teruggezet na verhoging naar 5 posts per dag: 2026-11-17-2 (Prediker 10:18), 2026-11-17-3 (1 Petrus 4:8), 2026-11-17-5 (Jakobus 3:13)"
+ },
+ {
+  "t": "2026-11-16T20:51:19",
+  "soort": "info",
+  "tekst": "Noodvoorraad zelf aangevuld uit de tekstbank: 6 van 6 klaar"
+ },
+ {
+  "t": "2026-11-16T20:52:03",
+  "soort": "info",
+  "tekst": "Zelf opgelost: na het aanzetten van snel leren (5 per dag) bleven 3 eerder ingekorte posts per dag afgekeurd en vulde 'kies' niets aan, waardoor Posts maken steeds opnieuw draaide en vandaag 3 noodposts nodig waren. 'kies' zet ingekorte posts nu terug (of kiest nieuwe op vrije tijdsloten); voor 17 nov zijn Prediker 10:18 (17:45), 1 Petrus 4:8 (22:00) en Jakobus 3:13 (12:15) teruggezet."
+ },
+ {
+  "t": "2026-11-16T20:52:03",
+  "soort": "info",
+  "tekst": "Zelf opgelost: noodvoorraad aanvullen liep vast op noodposts zonder tijdslot (tekstbank.is_ochtend). Hersteld; noodvoorraad weer 6 klaar."
+ },
+ {
+  "t": "2026-11-16T20:52:03",
+  "soort": "info",
+  "tekst": "Avondcontrole: 3 posts voor 17 nov teruggezet (nu 5), 18 nov had er al 5. Reserveverzen voor 8 posts ingevuld; 4 deel-hooks in de tekstbank vervangen (geen engagement-bait)."
  }
 ]

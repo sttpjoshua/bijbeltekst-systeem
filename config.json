@@ -56,8 +56,8 @@
  "tijd_voorstel_laatst": "2026-11-15",
  "situatie_openingszin": false,
  "leermodus_vorige": {
-  "posts_per_dag": 3,
-  "max_posts_per_dag": 3,
+  "posts_per_dag": 5,
+  "max_posts_per_dag": 5,
   "verkenning": 0.4
  },
  "leermodus_start": "2026-11-16",

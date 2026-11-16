@@ -142,7 +142,7 @@ Na het schrijven en renderen van de posts (dagelijkse run, en avondcontrole als 
 - **Reeksen** (`data/reeksen.json`): Advent (29 nov t/m 24 dec, 07:30, label "ADVENT · DAG n"), Kerst (25-26 dec), Nieuwjaar (1 jan), elke maandag "Moed voor de week" (07:30) en elke zondag "Vers van de week" (12:15, het best scorende vers van de afgelopen week). Bij een reekspost noem je de reeks in de caption (bijvoorbeeld "Advent, dag 3:" of "Moed voor de week:") en schrijf je de uitleg in het licht van de reeks (Advent: verwachting en licht richting Kerst).
 - **Stories:** elke post gaat automatisch ook als story op Instagram (`stories` in config).
 - **Video's:** het vers verschijnt stukje voor stukje; de lengte past zich aan (9 tot 18 seconden). Niets aan te doen in de teksten.
-- Na snel leren gaat het systeem terug naar **2 posts per dag**.
+- Na snel leren blijft het systeem op **5 posts per dag** (16 nov, Joshua: "altijd 5 posts per dag"; `leermodus_vorige` staat op 5).
 
 ## Reacties (Community-manager)
 `data/reacties.json` bevat reacties op de posts. Bij elke dagelijkse run en avondcontrole: schrijf voor elke reactie met status "nieuw" drie antwoordopties op maat in `opties` (een lijst van 3: warm en persoonlijk, kort, en een met een korte bemoediging of verwijzing naar het vers), zet de beste ook in `voorstel` en zet de status op "voorgesteld". Bij een reactie die beter genegeerd kan worden: `opties` leeg. Joshua kiest of past aan in het dashboard (Overzicht › Reacties) of in het kantoor (Community-manager), en dan wordt het geplaatst.
