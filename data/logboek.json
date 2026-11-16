@@ -1997,5 +1997,12 @@
   "t": "2026-11-16T12:00:27",
   "soort": "info",
   "tekst": "Zelfherstel: Geen post klaar voor 2026-11-16 22:00 → noodpost Spreuken 6:6 ingezet om 22:00"
+ },
+ {
+  "t": "2026-11-16T12:02:27",
+  "soort": "fout",
+  "tekst": "Politiek nieuws (NOS): \"Oekraïne valt Krimbrug aan, grote droneaanval op Rusland\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
+  "code": "nieuws_voorstel",
+  "post": "n111612020"
  }
 ]
