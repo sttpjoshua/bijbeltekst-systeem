@@ -1933,5 +1933,15 @@
   "t": "2026-11-16T09:03:00",
   "soort": "info",
   "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-18 (teksten uit de tekstbank)."
+ },
+ {
+  "t": "2026-11-16T11:44:33",
+  "soort": "info",
+  "tekst": "Bediening: Posts per dag ingesteld op 3. Ontbrekende posts voor morgen worden vanavond rond 21:00 gemaakt"
+ },
+ {
+  "t": "2026-11-16T11:44:33",
+  "soort": "info",
+  "tekst": "Zelfherstel: Geen post klaar voor 2026-11-16 12:15 → noodpost 1 Johannes 4:18 ingezet om 12:15"
  }
 ]
