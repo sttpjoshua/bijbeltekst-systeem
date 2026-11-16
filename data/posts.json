@@ -6962,7 +6962,7 @@
   "reeks_label": "MOED VOOR DE WEEK",
   "id": "2026-11-16-1",
   "datum": "2026-11-16",
-  "status": "gerenderd",
+  "status": "gepubliceerd",
   "vers_id": "Isaiah-40-31-31",
   "ref": "Jesaja 40:31",
   "tekst": "Maar dien den HEERE verwachten, zullen de kracht vernieuwen; zij zullen opvaren met vleugelen, gelijk de arenden; zij zullen lopen, en niet moede worden; zij zullen wandelen, en niet mat worden.",
@@ -7108,6 +7108,11 @@
     "id": "18020353931745258",
     "url": "https://www.instagram.com/p/DfyV6zAl744/",
     "t": "2026-11-16T04:01+01:00"
+   },
+   "facebook": {
+    "id": "1015160368352770_122134802660879910",
+    "url": "https://www.facebook.com/1015160368352770_122134802660879910",
+    "t": "2026-11-16T20:30+01:00"
    }
   }
  },
@@ -7451,7 +7456,7 @@
  {
   "id": "2026-11-16-5",
   "datum": "2026-11-16",
-  "status": "gerenderd",
+  "status": "gepubliceerd",
   "vers_id": "Psalms-136-26-26",
   "ref": "Psalm 136:26",
   "tekst": "Looft den God des hemels; want Zijn goedertierenheid is in der eeuwigheid.",
@@ -7592,6 +7597,11 @@
     "id": "1656499635949874",
     "url": "https://www.facebook.com/1656499635949874",
     "t": "2026-11-16T12:17+01:00"
+   },
+   "instagram": {
+    "id": "18171632845516285",
+    "url": "https://www.instagram.com/reel/Df0HP6HzavS/",
+    "t": "2026-11-16T20:32+01:00"
    }
   }
  },
