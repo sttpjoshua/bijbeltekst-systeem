@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-16T11:56",
+ "gegenereerd": "2026-11-16T11:57",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -7431,6 +7431,11 @@
    "t": "2026-11-16T11:56:13",
    "soort": "info",
    "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
+  },
+  {
+   "t": "2026-11-16T11:57:06",
+   "soort": "info",
+   "tekst": "Bediening: Voorstel genegeerd"
   }
  ],
  "recente_fouten": [
@@ -10500,7 +10505,7 @@
     "link": "https://nos.nl/l/2639426",
     "categorie": "politiek",
     "zwaar": false,
-    "status": "voorstel",
+    "status": "genegeerd",
     "post": null,
     "opties": [
      {

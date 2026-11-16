@@ -1366,6 +1366,14 @@
   "post": "n111407010"
  },
  {
+  "t": "2026-11-14T07:01:23",
+  "soort": "fout",
+  "tekst": "Politiek nieuws (NOS): \"Italiaanse minister: scholen niet meteen dicht na een bommelding\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
+  "code": "nieuws_voorstel",
+  "post": "n111407010",
+  "opgelost": true
+ },
+ {
   "t": "2026-11-14T07:32:13",
   "soort": "info",
   "tekst": "2026-11-14-2 ook als story geplaatst"
@@ -1964,5 +1972,10 @@
   "t": "2026-11-16T11:56:13",
   "soort": "info",
   "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
+ },
+ {
+  "t": "2026-11-16T11:57:06",
+  "soort": "info",
+  "tekst": "Bediening: Voorstel genegeerd"
  }
 ]
