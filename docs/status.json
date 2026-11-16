@@ -1,19 +1,19 @@
 {
- "updated": "2026-11-16T11:45:31",
+ "updated": "2026-11-16T11:46:17",
  "agents": {
   "verskiezer": {
-   "t": "2026-11-16T11:44:33",
-   "task": "Posts per dag ingesteld op 3. Ontbrekende posts voor morgen worden van",
+   "t": "2026-11-16T11:45:54",
+   "task": "Koos Jesaja 55:12",
    "state": "done"
   },
   "designer": {
-   "t": "2026-11-16T09:03:00",
-   "task": "Ontwierp Kolossenzen 3:2 in stijl papier_blauw",
+   "t": "2026-11-16T11:46:17",
+   "task": "Ontwierp Jesaja 55:12 in stijl mint",
    "state": "done"
   },
   "video": {
-   "t": "2026-11-16T09:03:00",
-   "task": "Monteerde video Kolossenzen 3:2 met muziek",
+   "t": "2026-11-16T11:46:17",
+   "task": "Monteerde video Jesaja 55:12 met muziek",
    "state": "done"
   },
   "dispatcher": {
@@ -57,6 +57,10 @@
  ],
  "log": [
   {
+   "t": "11:46",
+   "msg": "Zelfstandig 5 posts klaargezet voor 2026-11-17, 2026-11-18 (teksten uit de tekstbank)."
+  },
+  {
    "t": "11:44",
    "msg": "Zelfherstel: Geen post klaar voor 2026-11-16 12:15 → noodpost 1 Johannes 4:18 ingezet om 12:15"
   },
@@ -99,10 +103,6 @@
   {
    "t": "01:15",
    "msg": "Eerste-uurcijfers van 4 posts vastgelegd"
-  },
-  {
-   "t": "00:04",
-   "msg": "2026-11-15-5 online op facebook: Hebreeën 11:1"
   }
  ],
  "lampen": [
