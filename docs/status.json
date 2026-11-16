@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T11:57:06",
+ "updated": "2026-11-16T11:58:33",
  "agents": {
   "verskiezer": {
    "t": "2026-11-16T11:57:06",
@@ -57,28 +57,28 @@
  ],
  "log": [
   {
-   "t": "01:21",
-   "msg": "Bediening: Verzoek voor Claude in de wachtrij gezet"
+   "t": "11:58",
+   "msg": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
   },
   {
-   "t": "04:01",
-   "msg": "2026-11-16-1 online op instagram: Jesaja 40:31"
+   "t": "11:57",
+   "msg": "Bediening: Voorstel genegeerd"
   },
   {
-   "t": "04:01",
-   "msg": "2026-11-16-1 ook als story geplaatst"
+   "t": "11:56",
+   "msg": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
   },
   {
-   "t": "05:15",
-   "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
+   "t": "11:54",
+   "msg": "Bediening: Voorstel genegeerd"
   },
   {
-   "t": "07:01",
-   "msg": "Politiek nieuws (NOS): \"Wekdienst 16/11: Coalitie verder met crisisoverleg • Interland Duitsland-Nederland\". N"
+   "t": "11:48",
+   "msg": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
   },
   {
-   "t": "09:03",
-   "msg": "Zelfstandig 2 posts klaargezet voor 2026-11-18 (teksten uit de tekstbank)."
+   "t": "11:46",
+   "msg": "Zelfstandig 5 posts klaargezet voor 2026-11-17, 2026-11-18 (teksten uit de tekstbank)."
   },
   {
    "t": "11:44",
@@ -89,24 +89,20 @@
    "msg": "Bediening: Posts per dag ingesteld op 3. Ontbrekende posts voor morgen worden vanavond rond 21:00 gemaakt"
   },
   {
-   "t": "11:46",
-   "msg": "Zelfstandig 5 posts klaargezet voor 2026-11-17, 2026-11-18 (teksten uit de tekstbank)."
+   "t": "09:03",
+   "msg": "Zelfstandig 2 posts klaargezet voor 2026-11-18 (teksten uit de tekstbank)."
   },
   {
-   "t": "11:48",
-   "msg": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
+   "t": "07:01",
+   "msg": "Politiek nieuws (NOS): \"Wekdienst 16/11: Coalitie verder met crisisoverleg • Interland Duitsland-Nederland\". N"
   },
   {
-   "t": "11:54",
-   "msg": "Bediening: Voorstel genegeerd"
+   "t": "05:15",
+   "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
   },
   {
-   "t": "11:56",
-   "msg": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "11:57",
-   "msg": "Bediening: Voorstel genegeerd"
+   "t": "04:01",
+   "msg": "2026-11-16-1 online op instagram: Jesaja 40:31"
   }
  ],
  "lampen": [
