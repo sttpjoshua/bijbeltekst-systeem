@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-16T12:18",
+ "gegenereerd": "2026-11-16T12:19",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -7459,11 +7459,6 @@
  "laatste_rapport": null,
  "logboek": [
   {
-   "t": "2026-11-15T20:45:35",
-   "soort": "info",
-   "tekst": "2026-11-15-5 overgeslagen: daglimiet bereikt"
-  },
-  {
    "t": "2026-11-15T21:01:07",
    "soort": "info",
    "tekst": "2026-11-15-3 overgeslagen: daglimiet bereikt"
@@ -7762,6 +7757,11 @@
    "t": "2026-11-16T12:17:36",
    "soort": "info",
    "tekst": "2026-11-16-5 online op facebook: Psalm 136:26"
+  },
+  {
+   "t": "2026-11-16T12:19:20",
+   "soort": "info",
+   "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
   }
  ],
  "recente_fouten": [
@@ -7953,9 +7953,9 @@
    "detail": "1 nieuwe aanleidingen"
   },
   "maken": {
-   "ok": "2026-11-16T12:03",
+   "ok": "2026-11-16T12:19",
    "laatst_ok": true,
-   "detail": "7 posts klaargezet"
+   "detail": "2 posts klaargezet"
   },
   "avondcontrole": {
    "ok": "2026-11-15T20:48",
