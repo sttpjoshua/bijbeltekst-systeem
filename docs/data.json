@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-16T16:45",
+ "gegenereerd": "2026-11-16T16:46",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -9041,11 +9041,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-16T00:02:18",
-   "soort": "info",
-   "tekst": "2026-11-15-3 online op facebook: 2 Korinthe 5:17"
-  },
-  {
    "t": "2026-11-16T00:04:21",
    "soort": "info",
    "tekst": "2026-11-15-5 ook als story geplaatst"
@@ -9344,6 +9339,11 @@
    "t": "2026-11-16T16:32:53",
    "soort": "info",
    "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
+  },
+  {
+   "t": "2026-11-16T16:46:50",
+   "soort": "info",
+   "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
   }
  ],
  "recente_fouten": [
@@ -9540,7 +9540,7 @@
    "detail": "1 nieuwe aanleidingen"
   },
   "maken": {
-   "ok": "2026-11-16T16:32",
+   "ok": "2026-11-16T16:46",
    "laatst_ok": true,
    "detail": "2 posts klaargezet"
   },
