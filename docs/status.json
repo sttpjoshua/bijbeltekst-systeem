@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T17:30:48",
+ "updated": "2026-11-17T17:47:48",
  "agents": {
   "verskiezer": {
    "t": "2026-11-17T09:02:38",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-17T12:16:53",
-   "task": "Postte Jakobus 3:13 op instagram",
+   "t": "2026-11-17T17:47:48",
+   "task": "Postte Prediker 10:18 op instagram",
    "state": "done"
   },
   "controller": {
@@ -38,11 +38,11 @@
   }
  },
  "stats": {
-  "posts_today": 1,
-  "posts_total": 47,
+  "posts_today": 2,
+  "posts_total": 48,
   "reach_7d": 531,
   "best_time": "04:00",
-  "next_post": "2026-11-17T12:15:00"
+  "next_post": "2026-11-17T17:45:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
@@ -56,6 +56,18 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "17:47",
+   "msg": "2026-11-17-2 online op instagram: Prediker 10:18"
+  },
+  {
+   "t": "17:47",
+   "msg": "2026-11-17-2 ook als story geplaatst"
+  },
+  {
+   "t": "17:46",
+   "msg": "2026-11-17-5 online op facebook: Jakobus 3:13"
+  },
   {
    "t": "14:38",
    "msg": "Dagelijkse run (zelfstandig): tekstbank aangevuld met 60 verzen (nu 257, ongeveer 41 dagen vrij), posts van 18"
@@ -91,18 +103,6 @@
   {
    "t": "07:01",
    "msg": "Politiek nieuws (NOS): \"Biden in memoires fel over einde campagne: ‘Had Trump kunnen verslaan’\". Neutrale post"
-  },
-  {
-   "t": "05:15",
-   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
-   "t": "04:03",
-   "msg": "2026-11-17-4 online op facebook: Psalm 56:4"
-  },
-  {
-   "t": "04:02",
-   "msg": "2026-11-17-4 online op instagram: Psalm 56:4"
   }
  ],
  "lampen": [
