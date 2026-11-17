@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-17T18:30",
+ "gegenereerd": "2026-11-17T18:46",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1760,6 +1760,16 @@
      "saves": 0,
      "follows": null,
      "t": "2026-11-17T16:01+01:00"
+    },
+    "facebook": {
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "t": null
     }
    },
    "score": {},
@@ -1794,6 +1804,17 @@
       "comments": 0,
       "shares": 0,
       "saves": 0,
+      "follows": null
+     }
+    },
+    "facebook": {
+     "1u": {
+      "views": 0,
+      "reach": null,
+      "likes": null,
+      "comments": null,
+      "shares": null,
+      "saves": null,
       "follows": null
      }
     }
@@ -10063,11 +10084,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-16T14:47:00",
-   "soort": "info",
-   "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
-  },
-  {
    "t": "2026-11-16T14:57:33",
    "soort": "info",
    "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
@@ -10363,6 +10379,11 @@
    "t": "2026-11-17T17:47:48",
    "soort": "info",
    "tekst": "2026-11-17-2 online op instagram: Prediker 10:18"
+  },
+  {
+   "t": "2026-11-17T18:46:07",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
   }
  ],
  "recente_fouten": [
