@@ -8072,7 +8072,32 @@
   "media": "docs/media/2026-11/2026-11-17-4.mp4",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-17-4.mp4",
   "metricool": {},
-  "stats": {},
+  "stats": {
+   "instagram": {
+    "1u": {
+     "views": 1,
+     "reach": 1,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "avg_watch_ms": 529
+    }
+   },
+   "facebook": {
+    "1u": {
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "avg_watch_ms": null
+    }
+   }
+  },
   "beeld": null,
   "muziek": "ES_Fjalldrommar - Center of Attention.mp3",
   "geluid": "ES_Ambience, Swamp, Wetland After Rain, Water Dripping, Humid, Distant Fowl - Epidemic Sound.mp3",
