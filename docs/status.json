@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T13:15:37",
+ "updated": "2026-11-17T13:31:11",
  "agents": {
   "verskiezer": {
    "t": "2026-11-17T09:02:38",
@@ -57,6 +57,10 @@
  ],
  "log": [
   {
+   "t": "13:31",
+   "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
+  },
+  {
    "t": "12:16",
    "msg": "2026-11-17-5 online op instagram: Jakobus 3:13"
   },
@@ -99,10 +103,6 @@
   {
    "t": "22:03",
    "msg": "2026-11-16-n2200 online op instagram: Spreuken 6:6"
-  },
-  {
-   "t": "22:03",
-   "msg": "2026-11-16-n2200 ook als story geplaatst"
   }
  ],
  "lampen": [
