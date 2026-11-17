@@ -1,19 +1,19 @@
 {
- "updated": "2026-11-17T09:01:19",
+ "updated": "2026-11-17T09:03:50",
  "agents": {
   "verskiezer": {
-   "t": "2026-11-16T12:02:55",
-   "task": "Koos Psalm 119:165, Openbaring 21:4",
+   "t": "2026-11-17T09:02:38",
+   "task": "Koos Jeremia 29:11, Spreuken 26:17, Spreuken 16:18, Spreuken 19:24, Numeri 6:24-26",
    "state": "done"
   },
   "designer": {
-   "t": "2026-11-16T20:51:19",
-   "task": "Ontwierp Psalm 95:2 in stijl paars",
+   "t": "2026-11-17T09:03:50",
+   "task": "Ontwierp Numeri 6:24-26 in stijl schaduw_rood",
    "state": "done"
   },
   "video": {
-   "t": "2026-11-16T13:51:52",
-   "task": "Monteerde video Psalm 56:4 met muziek",
+   "t": "2026-11-17T09:03:50",
+   "task": "Monteerde video Numeri 6:24-26 met muziek",
    "state": "done"
   },
   "dispatcher": {
@@ -57,6 +57,10 @@
  ],
  "log": [
   {
+   "t": "09:03",
+   "msg": "Zelfstandig 5 posts klaargezet voor 2026-11-19 (teksten uit de tekstbank)."
+  },
+  {
    "t": "07:01",
    "msg": "Politiek nieuws (NOS): \"Biden in memoires fel over einde campagne: ‘Had Trump kunnen verslaan’\". Neutrale post"
   },
@@ -99,10 +103,6 @@
   {
    "t": "21:30",
    "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
-  },
-  {
-   "t": "20:52",
-   "msg": "Avondcontrole: 3 posts voor 17 nov teruggezet (nu 5), 18 nov had er al 5. Reserveverzen voor 8 posts ingevuld;"
   }
  ],
  "lampen": [
