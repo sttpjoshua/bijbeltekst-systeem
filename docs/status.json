@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T18:46:07",
+ "updated": "2026-11-17T19:03:09",
  "agents": {
   "verskiezer": {
    "t": "2026-11-17T09:02:38",
@@ -32,7 +32,7 @@
    "state": "done"
   },
   "community": {
-   "t": "2026-11-17T18:01:23",
+   "t": "2026-11-17T19:01:41",
    "task": "1 nieuwe reactie gevonden",
    "state": "done"
   }
@@ -56,6 +56,10 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "19:03",
+   "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
+  },
   {
    "t": "18:46",
    "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
@@ -99,10 +103,6 @@
   {
    "t": "12:16",
    "msg": "2026-11-17-5 ook als story geplaatst"
-  },
-  {
-   "t": "09:03",
-   "msg": "Zelfstandig 5 posts klaargezet voor 2026-11-19 (teksten uit de tekstbank)."
   }
  ],
  "lampen": [
