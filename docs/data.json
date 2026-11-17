@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-16T23:01",
+ "gegenereerd": "2026-11-17T04:03",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1329,7 +1329,7 @@
    "ref": "Psalm 56:4",
    "tekst": "Ten dage, als ik zal vrezen, zal ik op U vertrouwen.",
    "hook": "Een goede start begint hier.",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "schaduw_rood",
     "thema": "vertrouwen",
@@ -1372,8 +1372,14 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-17-4.mp4"
    ],
    "thumb": "thumbs/2026-11-17-4.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "instagram",
+    "facebook"
+   ],
+   "links": {
+    "instagram": "https://www.instagram.com/reel/Df06vcrTs1A/",
+    "facebook": "https://www.facebook.com/1309444431318291"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -1400,11 +1406,14 @@
     "video_uitleg": "vaste regel"
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "instagram": "2026-11-17T04:02+01:00",
+    "facebook": "2026-11-17T04:03+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": null,
-   "online": null
+   "online": "2026-11-17T04:02+01:00"
   },
   {
    "id": "2026-11-17-3",
@@ -1705,8 +1714,36 @@
     "instagram": "https://www.instagram.com/p/Df0RtTfE5Rk/",
     "facebook": "https://www.facebook.com/1015160368352770_122134807400879910"
    },
-   "totaal": {},
-   "per_platform": {},
+   "totaal": {
+    "views": 0,
+    "reach": 0,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0
+   },
+   "per_platform": {
+    "instagram": {
+     "views": 0,
+     "reach": 0,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": 0,
+     "t": null
+    },
+    "facebook": {
+     "views": null,
+     "reach": null,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": null,
+     "follows": null,
+     "t": null
+    }
+   },
    "score": {},
    "keuzebron": {
     "huisstijl": "nood",
@@ -1722,7 +1759,30 @@
     "opening": "nood",
     "tijdslot": "nood"
    },
-   "momenten": {},
+   "momenten": {
+    "instagram": {
+     "1u": {
+      "views": 0,
+      "reach": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0
+     }
+    },
+    "facebook": {
+     "1u": {
+      "views": null,
+      "reach": null,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": null,
+      "follows": null
+     }
+    }
+   },
    "pub": {
     "instagram": "2026-11-16T22:03+01:00",
     "facebook": "2026-11-16T22:03+01:00"
@@ -9158,26 +9218,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-16T12:59:03",
-   "soort": "info",
-   "tekst": "Verbinding met Instagram werkt (@bibleverse_nl)"
-  },
-  {
-   "t": "2026-11-16T12:59:04",
-   "soort": "info",
-   "tekst": "Token heeft alle rechten, ook voor statistieken"
-  },
-  {
-   "t": "2026-11-16T12:59:05",
-   "soort": "info",
-   "tekst": "Verbinding met Facebook-pagina werkt (Bibleversenl)"
-  },
-  {
-   "t": "2026-11-16T12:59:08",
-   "soort": "info",
-   "tekst": "Statistieken lezen werkt"
-  },
-  {
    "t": "2026-11-16T13:05:16",
    "soort": "info",
    "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
@@ -9456,6 +9496,26 @@
    "t": "2026-11-16T22:03:34",
    "soort": "info",
    "tekst": "2026-11-16-n2200 online op facebook: Spreuken 6:6"
+  },
+  {
+   "t": "2026-11-16T23:15:55",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-17T04:02:48",
+   "soort": "info",
+   "tekst": "2026-11-17-4 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-17T04:02:48",
+   "soort": "info",
+   "tekst": "2026-11-17-4 online op instagram: Psalm 56:4"
+  },
+  {
+   "t": "2026-11-17T04:03:01",
+   "soort": "info",
+   "tekst": "2026-11-17-4 online op facebook: Psalm 56:4"
   }
  ],
  "recente_fouten": [
@@ -9587,9 +9647,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-16T22:03",
+   "ok": "2026-11-17T04:02",
    "laatst_ok": true,
-   "detail": "Spreuken 6:6 geplaatst"
+   "detail": "Psalm 56:4 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-16T13:44",
@@ -9621,9 +9681,9 @@
    "fout": "2026-11-08T18:00"
   },
   "facebook": {
-   "ok": "2026-11-16T22:03",
+   "ok": "2026-11-17T04:03",
    "laatst_ok": true,
-   "detail": "Spreuken 6:6 geplaatst"
+   "detail": "Psalm 56:4 geplaatst"
   },
   "statistieken": {
    "ok": "2026-11-16T13:44",
@@ -9736,19 +9796,19 @@
  ],
  "weken": {
   "deze": {
-   "posts": 35,
-   "reach": 514,
-   "views": 607,
-   "likes": 18,
+   "posts": 31,
+   "reach": 463,
+   "views": 532,
+   "likes": 14,
    "comments": 0,
    "saves": 1,
    "shares": 0
   },
   "vorige": {
-   "posts": 11,
-   "reach": 82,
-   "views": 132,
-   "likes": 20,
+   "posts": 16,
+   "reach": 133,
+   "views": 207,
+   "likes": 24,
    "comments": 3,
    "saves": 0,
    "shares": 0
@@ -10170,9 +10230,9 @@
  "snel_leren": {
   "start": "2026-11-16",
   "tot": "2026-11-30",
-  "dag": 1,
+  "dag": 2,
   "dagen": 14,
-  "online": 5,
+  "online": 6,
   "gemeten": 0
  },
  "voorraad": {
@@ -12984,8 +13044,8 @@
     "opties": [
      {
       "optie": "psalmen",
-      "online": 2,
-      "gepland": 4,
+      "online": 3,
+      "gepland": 3,
       "n": 0,
       "gem": null,
       "oordeel": "weinig data"
@@ -13045,19 +13105,6 @@
    }
   ],
   "komend": [
-   {
-    "id": "2026-11-17-4",
-    "ref": "Psalm 56:4",
-    "datum": "2026-11-17",
-    "tijdslot": "04:00",
-    "tests": [
-     {
-      "dimensie": "boekgroep",
-      "optie": "psalmen",
-      "bron": "experiment"
-     }
-    ]
-   },
    {
     "id": "2026-11-17-5",
     "ref": "Jakobus 3:13",
