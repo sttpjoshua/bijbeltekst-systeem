@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T14:15:40",
+ "updated": "2026-11-17T14:21:06",
  "agents": {
   "verskiezer": {
    "t": "2026-11-17T09:02:38",
@@ -27,12 +27,12 @@
    "state": "error"
   },
   "analist": {
-   "t": "2026-11-16T13:44:58",
-   "task": "Weekanalyse: strategie v2",
+   "t": "2026-11-17T14:21:06",
+   "task": "Weekanalyse: strategie v3",
    "state": "done"
   },
   "community": {
-   "t": "2026-11-17T14:01:23",
+   "t": "2026-11-17T14:21:06",
    "task": "1 nieuwe reactie gevonden",
    "state": "done"
   }
@@ -40,13 +40,13 @@
  "stats": {
   "posts_today": 1,
   "posts_total": 47,
-  "reach_7d": 263,
+  "reach_7d": 531,
   "best_time": "04:00",
   "next_post": "2026-11-17T12:15:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
-  "instagram": 343,
+  "instagram": 611,
   "facebook": 4,
   "youtube": 0,
   "tiktok": 0
@@ -56,6 +56,14 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "14:21",
+   "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
+  },
+  {
+   "t": "14:19",
+   "msg": "Statistieken opgehaald voor 18 posts"
+  },
   {
    "t": "13:31",
    "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
@@ -95,14 +103,6 @@
   {
    "t": "23:15",
    "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
-   "t": "22:03",
-   "msg": "2026-11-16-n2200 online op facebook: Spreuken 6:6"
-  },
-  {
-   "t": "22:03",
-   "msg": "2026-11-16-n2200 online op instagram: Spreuken 6:6"
   }
  ],
  "lampen": [
@@ -143,10 +143,10 @@
   }
  ],
  "volgers": {
-  "ig": 4,
+  "ig": 5,
   "fb": 0,
-  "totaal": 4,
-  "week": 1,
+  "totaal": 5,
+  "week": 2,
   "reeks": [
    0,
    1,
@@ -157,14 +157,15 @@
    3,
    3,
    3,
-   4
+   4,
+   5
   ]
  },
  "top_post": {
   "ref": "Sefanja 3:17",
   "thumb": "thumbs/2026-11-14-2.jpg",
   "bereik": 53,
-  "score": 2.26,
+  "score": 3.0,
   "formaat": "video"
  },
  "snel_leren": {
