@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T04:03:01",
+ "updated": "2026-11-17T07:01:19",
  "agents": {
   "verskiezer": {
    "t": "2026-11-16T12:02:55",
@@ -32,7 +32,7 @@
    "state": "done"
   },
   "community": {
-   "t": "2026-11-16T23:01:29",
+   "t": "2026-11-17T07:01:19",
    "task": "1 nieuwe reactie gevonden",
    "state": "done"
   }
@@ -56,6 +56,10 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "05:15",
+   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
   {
    "t": "04:03",
    "msg": "2026-11-17-4 online op facebook: Psalm 56:4"
@@ -99,10 +103,6 @@
   {
    "t": "20:52",
    "msg": "Zelf opgelost: noodvoorraad aanvullen liep vast op noodposts zonder tijdslot (tekstbank.is_ochtend). Hersteld;"
-  },
-  {
-   "t": "20:52",
-   "msg": "Zelf opgelost: na het aanzetten van snel leren (5 per dag) bleven 3 eerder ingekorte posts per dag afgekeurd e"
   }
  ],
  "lampen": [

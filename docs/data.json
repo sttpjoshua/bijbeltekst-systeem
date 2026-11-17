@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-17T04:03",
+ "gegenereerd": "2026-11-17T07:01",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1380,8 +1380,36 @@
     "instagram": "https://www.instagram.com/reel/Df06vcrTs1A/",
     "facebook": "https://www.facebook.com/1309444431318291"
    },
-   "totaal": {},
-   "per_platform": {},
+   "totaal": {
+    "views": 1,
+    "reach": 1,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0
+   },
+   "per_platform": {
+    "instagram": {
+     "views": 1,
+     "reach": 1,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "t": null
+    },
+    "facebook": {
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "t": null
+    }
+   },
    "score": {},
    "keuzebron": {
     "huisstijl": "joshua",
@@ -1405,7 +1433,30 @@
     "tijdslot": "experiment",
     "video_uitleg": "vaste regel"
    },
-   "momenten": {},
+   "momenten": {
+    "instagram": {
+     "1u": {
+      "views": 1,
+      "reach": 1,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": null
+     }
+    },
+    "facebook": {
+     "1u": {
+      "views": 0,
+      "reach": null,
+      "likes": null,
+      "comments": null,
+      "shares": null,
+      "saves": null,
+      "follows": null
+     }
+    }
+   },
    "pub": {
     "instagram": "2026-11-17T04:02+01:00",
     "facebook": "2026-11-17T04:03+01:00"
@@ -9218,11 +9269,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-16T13:05:16",
-   "soort": "info",
-   "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
-  },
-  {
    "t": "2026-11-16T13:17:19",
    "soort": "info",
    "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
@@ -9516,6 +9562,11 @@
    "t": "2026-11-17T04:03:01",
    "soort": "info",
    "tekst": "2026-11-17-4 online op facebook: Psalm 56:4"
+  },
+  {
+   "t": "2026-11-17T05:15:36",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
   }
  ],
  "recente_fouten": [
@@ -9675,7 +9726,7 @@
    "ok": "2026-11-16T13:51"
   },
   "reacties": {
-   "ok": "2026-11-16T23:01",
+   "ok": "2026-11-17T07:01",
    "laatst_ok": true,
    "detail": "1 nieuwe reacties",
    "fout": "2026-11-08T18:00"
@@ -9797,8 +9848,8 @@
  "weken": {
   "deze": {
    "posts": 31,
-   "reach": 463,
-   "views": 532,
+   "reach": 464,
+   "views": 533,
    "likes": 14,
    "comments": 0,
    "saves": 1,
