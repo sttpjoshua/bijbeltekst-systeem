@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-17T07:01",
+ "gegenereerd": "2026-11-17T08:01",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -9269,11 +9269,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-16T13:17:19",
-   "soort": "info",
-   "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
-  },
-  {
    "t": "2026-11-16T13:18:08",
    "soort": "info",
    "tekst": "Bediening: Psalm 136:26 opnieuw gemaakt (stijl meelees-roze, achtergrond foto)"
@@ -9567,6 +9562,13 @@
    "t": "2026-11-17T05:15:36",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-17T07:01:24",
+   "soort": "fout",
+   "tekst": "Politiek nieuws (NOS): \"Biden in memoires fel over einde campagne: ‘Had Trump kunnen verslaan’\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
+   "code": "nieuws_voorstel",
+   "post": "n111707010"
   }
  ],
  "recente_fouten": [
@@ -9590,6 +9592,13 @@
    "tekst": "Politiek nieuws (NOS): \"Oekraïne valt Krimbrug aan, grote droneaanval op Rusland\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
    "code": "nieuws_voorstel",
    "post": "n111612020"
+  },
+  {
+   "t": "2026-11-17T07:01:24",
+   "soort": "fout",
+   "tekst": "Politiek nieuws (NOS): \"Biden in memoires fel over einde campagne: ‘Had Trump kunnen verslaan’\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
+   "code": "nieuws_voorstel",
+   "post": "n111707010"
   }
  ],
  "versen_totaal": 300,
@@ -9726,7 +9735,7 @@
    "ok": "2026-11-16T13:51"
   },
   "reacties": {
-   "ok": "2026-11-17T07:01",
+   "ok": "2026-11-17T08:01",
    "laatst_ok": true,
    "detail": "1 nieuwe reacties",
    "fout": "2026-11-08T18:00"
@@ -9755,12 +9764,12 @@
    "fout": "2026-11-11T13:49",
    "laatst_ok": true,
    "detail": "1 bericht(en) verstuurd",
-   "ok": "2026-11-16T21:30"
+   "ok": "2026-11-17T07:30"
   },
   "nieuws": {
-   "ok": "2026-11-16T17:01",
+   "ok": "2026-11-17T07:01",
    "laatst_ok": true,
-   "detail": "0 nieuwe aanleidingen"
+   "detail": "1 nieuwe aanleidingen"
   },
   "maken": {
    "ok": "2026-11-16T20:47",
@@ -12415,6 +12424,70 @@
    "licht_automatisch": true
   },
   "recent": [
+   {
+    "id": "n111707010",
+    "t": "2026-11-17T06:34+01:00",
+    "bron": "NOS",
+    "kop": "Biden in memoires fel over einde campagne: ‘Had Trump kunnen verslaan’",
+    "link": "https://nos.nl/l/2639821",
+    "categorie": "politiek",
+    "zwaar": false,
+    "status": "voorstel",
+    "post": null,
+    "opties": [
+     {
+      "vers_id": "James-1-5-5",
+      "ref": "Jakobus 1:5",
+      "tekst": "En indien iemand van u wijsheid ontbreekt, dat hij ze van God begere, Die een iegelijk mildelijk geeft, en niet verwijt; en zij zal hem gegeven worden.",
+      "zin": "Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.",
+      "kernwoord": "wijsheid",
+      "betekenis": "Jakobus zegt: weet je het niet? Vraag het God. Hij geeft royaal en verwijt je niets. Je hoeft je niet te schamen dat je het niet weet.",
+      "toepassing": "Vraag God vandaag om wijsheid voor één concrete beslissing.",
+      "brug": "Een vast punt in veel geluid.",
+      "caption": "Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.\n\n\"En indien iemand van u wijsheid ontbreekt, dat hij ze van God begere, Die een iegelijk mildelijk geeft, en niet verwijt; en zij zal hem gegeven worden.\"\nJakobus 1:5\n\nEen vast punt in veel geluid. God geeft graag wijsheid aan wie erom vraagt.\n\nWaar heb jij wijsheid voor nodig?",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111707010-1-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111707010-1-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111707010-1-3.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111707010-1-4.jpg"
+      ]
+     },
+     {
+      "vers_id": "Isaiah-30-15-15",
+      "ref": "Jesaja 30:15",
+      "tekst": "Want alzo zegt de Heere HEERE, de Heilige Israels: Door wederkering en rust zoudt gijlieden behouden worden, in stilheid en in vertrouwen zou uw sterkte zijn; doch gij hebt niet gewild.",
+      "zin": "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.",
+      "kernwoord": "stilheid",
+      "betekenis": "God zegt tegen Zijn volk dat ze niet sterk worden door druk te doen, maar door terug te keren naar Hem en stil te worden. Kracht zit in rust en vertrouwen.",
+      "toepassing": "Zoek vandaag één moment om helemaal niets te doen en alleen stil te zijn bij God.",
+      "brug": "Bij alle onrust: wat blijft staan.",
+      "caption": "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.\n\n\"Want alzo zegt de Heere HEERE, de Heilige Israels: Door wederkering en rust zoudt gijlieden behouden worden, in stilheid en in vertrouwen zou uw sterkte zijn; doch gij hebt niet gewild.\"\nJesaja 30:15\n\nBij alle onrust: wat blijft staan. In stilte en vertrouwen vind je kracht.\n\nWaar haal jij je kracht vandaan?",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111707010-2-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111707010-2-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111707010-2-3.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111707010-2-4.jpg"
+      ]
+     },
+     {
+      "vers_id": "Psalms-9-11-11",
+      "ref": "Psalm 9:11",
+      "tekst": "En die Uw Naam kennen, zullen op U vertrouwen, omdat Gij, HEERE, niet hebt verlaten degenen, die U zoeken.",
+      "zin": "Veel meningen, veel onrust. Even terug naar wat vaststaat.",
+      "kernwoord": "verlaten",
+      "betekenis": "David zegt: wie God echt leert kennen, gaat Hem vertrouwen. Want God laat mensen die Hem zoeken nooit alleen. Vertrouwen groeit door Hem te leren kennen.",
+      "toepassing": "Neem vandaag tien minuten om iets over God te lezen of te leren.",
+      "brug": "Bij alle onrust: wat blijft staan.",
+      "caption": "Veel meningen, veel onrust. Even terug naar wat vaststaat.\n\n\"En die Uw Naam kennen, zullen op U vertrouwen, omdat Gij, HEERE, niet hebt verlaten degenen, die U zoeken.\"\nPsalm 9:11\n\nBij alle onrust: wat blijft staan. Hoe beter je God kent, hoe meer je Hem vertrouwt.\n\nHoe leer jij God beter kennen?",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111707010-3-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111707010-3-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111707010-3-3.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111707010-3-4.jpg"
+      ]
+     }
+    ]
+   },
    {
     "id": "n111612020",
     "t": "2026-11-16T11:13+01:00",
