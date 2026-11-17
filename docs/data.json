@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-17T20:15",
+ "gegenereerd": "2026-11-17T20:33",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -2020,8 +2020,12 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-17-3.mp4"
    ],
    "thumb": "thumbs/2026-11-17-3.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "facebook"
+   ],
+   "links": {
+    "facebook": "https://www.facebook.com/1449278226698619"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -2048,11 +2052,13 @@
     "video_uitleg": "vaste regel"
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "facebook": "2026-11-17T20:33+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": null,
-   "online": null
+   "online": "2026-11-17T20:33+01:00"
   },
   {
    "id": "2026-11-17-2",
@@ -2060,7 +2066,7 @@
    "ref": "Prediker 10:18",
    "tekst": "Door grote luiheid verzwakt het gebint, en door slapheid der handen wordt het huis doorlekkende.",
    "hook": "Welk klusje laat jij liggen?",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "schaduw_rood",
     "thema": "humor_herkenbaar",
@@ -2104,10 +2110,12 @@
    ],
    "thumb": "thumbs/2026-11-17-2.jpg",
    "platformen": [
-    "instagram"
+    "instagram",
+    "facebook"
    ],
    "links": {
-    "instagram": "https://www.instagram.com/reel/Df2ZJuhuKLt/"
+    "instagram": "https://www.instagram.com/reel/Df2ZJuhuKLt/",
+    "facebook": "https://www.facebook.com/2082962822405300"
    },
    "totaal": {
     "views": 6,
@@ -2166,7 +2174,8 @@
     }
    },
    "pub": {
-    "instagram": "2026-11-17T17:47+01:00"
+    "instagram": "2026-11-17T17:47+01:00",
+    "facebook": "2026-11-17T20:31+01:00"
    },
    "gemist": [],
    "nood": false,
@@ -2179,7 +2188,7 @@
    "ref": "Psalm 27:14",
    "tekst": "Wacht op den HEERE, zijt sterk, en Hij zal uw hart versterken, ja, wacht op den HEERE.",
    "hook": "Wacht. Wees sterk. Wacht.",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "papier_groen",
     "thema": "moed",
@@ -2222,8 +2231,14 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-17-1.mp4"
    ],
    "thumb": "thumbs/2026-11-17-1.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "instagram",
+    "facebook"
+   ],
+   "links": {
+    "instagram": "https://www.instagram.com/reel/Df2sB0AKR1x/",
+    "facebook": "https://www.facebook.com/1886216729243533"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -2250,11 +2265,14 @@
     "video_uitleg": "vaste regel"
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "instagram": "2026-11-17T20:32+01:00",
+    "facebook": "2026-11-17T20:33+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": null,
-   "online": null
+   "online": "2026-11-17T20:32+01:00"
   },
   {
    "id": "2026-11-16-n2200",
@@ -10114,31 +10132,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-16T15:02:33",
-   "soort": "info",
-   "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "2026-11-16T15:17:02",
-   "soort": "info",
-   "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "2026-11-16T15:32:56",
-   "soort": "info",
-   "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "2026-11-16T15:46:47",
-   "soort": "info",
-   "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "2026-11-16T16:05:20",
-   "soort": "info",
-   "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
-  },
-  {
    "t": "2026-11-16T16:17:18",
    "soort": "info",
    "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
@@ -10414,6 +10407,31 @@
    "t": "2026-11-17T19:03:09",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-17T20:31:32",
+   "soort": "info",
+   "tekst": "2026-11-17-2 online op facebook: Prediker 10:18"
+  },
+  {
+   "t": "2026-11-17T20:32:55",
+   "soort": "info",
+   "tekst": "2026-11-17-1 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-17T20:32:55",
+   "soort": "info",
+   "tekst": "2026-11-17-1 online op instagram: Psalm 27:14"
+  },
+  {
+   "t": "2026-11-17T20:33:01",
+   "soort": "info",
+   "tekst": "2026-11-17-1 online op facebook: Psalm 27:14"
+  },
+  {
+   "t": "2026-11-17T20:33:08",
+   "soort": "info",
+   "tekst": "2026-11-17-3 online op facebook: 1 Petrus 4:8"
   }
  ],
  "recente_fouten": [
@@ -10538,9 +10556,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-17T17:47",
+   "ok": "2026-11-17T20:32",
    "laatst_ok": true,
-   "detail": "Prediker 10:18 geplaatst"
+   "detail": "Psalm 27:14 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-17T14:20",
@@ -10572,9 +10590,9 @@
    "fout": "2026-11-08T18:00"
   },
   "facebook": {
-   "ok": "2026-11-17T17:46",
+   "ok": "2026-11-17T20:33",
    "laatst_ok": true,
-   "detail": "Jakobus 3:13 geplaatst"
+   "detail": "1 Petrus 4:8 geplaatst"
   },
   "statistieken": {
    "ok": "2026-11-17T14:21",
@@ -10693,9 +10711,9 @@
  ],
  "weken": {
   "deze": {
-   "posts": 32,
-   "reach": 555,
-   "views": 615,
+   "posts": 34,
+   "reach": 558,
+   "views": 621,
    "likes": 15,
    "comments": 0,
    "saves": 1,
@@ -11141,7 +11159,7 @@
   "tot": "2026-11-30",
   "dag": 2,
   "dagen": 14,
-  "online": 7,
+  "online": 9,
   "gemeten": 0
  },
  "voorraad": {
@@ -14569,8 +14587,8 @@
     "opties": [
      {
       "optie": "psalmen",
-      "online": 3,
-      "gepland": 3,
+      "online": 4,
+      "gepland": 2,
       "n": 0,
       "gem": null,
       "oordeel": "weinig data"
@@ -14585,8 +14603,8 @@
      },
      {
       "optie": "wijsheid",
-      "online": 0,
-      "gepland": 2,
+      "online": 1,
+      "gepland": 1,
       "n": 0,
       "gem": null,
       "oordeel": "weinig data"
@@ -14630,42 +14648,6 @@
    }
   ],
   "komend": [
-   {
-    "id": "2026-11-17-1",
-    "ref": "Psalm 27:14",
-    "datum": "2026-11-17",
-    "tijdslot": "20:30",
-    "tests": [
-     {
-      "dimensie": "boekgroep",
-      "optie": "psalmen",
-      "bron": "experiment"
-     },
-     {
-      "dimensie": "reel_stijl",
-      "optie": "markeren",
-      "bron": "test markeren"
-     }
-    ]
-   },
-   {
-    "id": "2026-11-17-3",
-    "ref": "1 Petrus 4:8",
-    "datum": "2026-11-17",
-    "tijdslot": "22:00",
-    "tests": [
-     {
-      "dimensie": "boekgroep",
-      "optie": "brieven",
-      "bron": "experiment"
-     },
-     {
-      "dimensie": "reel_stijl",
-      "optie": "markeren",
-      "bron": "test markeren"
-     }
-    ]
-   },
    {
     "id": "2026-11-18-3",
     "ref": "Jesaja 55:12",

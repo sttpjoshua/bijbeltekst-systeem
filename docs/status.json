@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T20:15:48",
+ "updated": "2026-11-17T20:33:08",
  "agents": {
   "verskiezer": {
    "t": "2026-11-17T09:02:38",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-17T17:47:48",
-   "task": "Postte Prediker 10:18 op instagram",
+   "t": "2026-11-17T20:33:08",
+   "task": "Postte 1 Petrus 4:8 op facebook",
    "state": "done"
   },
   "controller": {
@@ -38,11 +38,11 @@
   }
  },
  "stats": {
-  "posts_today": 2,
-  "posts_total": 48,
+  "posts_today": 4,
+  "posts_total": 50,
   "reach_7d": 531,
   "best_time": "04:00",
-  "next_post": "2026-11-17T17:45:00"
+  "next_post": "2026-11-17T22:00:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
@@ -56,6 +56,26 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "20:33",
+   "msg": "2026-11-17-3 online op facebook: 1 Petrus 4:8"
+  },
+  {
+   "t": "20:33",
+   "msg": "2026-11-17-1 online op facebook: Psalm 27:14"
+  },
+  {
+   "t": "20:32",
+   "msg": "2026-11-17-1 online op instagram: Psalm 27:14"
+  },
+  {
+   "t": "20:32",
+   "msg": "2026-11-17-1 ook als story geplaatst"
+  },
+  {
+   "t": "20:31",
+   "msg": "2026-11-17-2 online op facebook: Prediker 10:18"
+  },
   {
    "t": "19:03",
    "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
@@ -83,26 +103,6 @@
   {
    "t": "14:33",
    "msg": "Materiaal-repo niet gekloond (add_repo ontbreekt in deze sessie); GitHub Actions vult muziek aan"
-  },
-  {
-   "t": "14:21",
-   "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
-  },
-  {
-   "t": "14:19",
-   "msg": "Statistieken opgehaald voor 18 posts"
-  },
-  {
-   "t": "13:31",
-   "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
-  },
-  {
-   "t": "12:16",
-   "msg": "2026-11-17-5 online op instagram: Jakobus 3:13"
-  },
-  {
-   "t": "12:16",
-   "msg": "2026-11-17-5 ook als story geplaatst"
   }
  ],
  "lampen": [
