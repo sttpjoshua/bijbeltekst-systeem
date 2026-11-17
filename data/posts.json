@@ -7866,7 +7866,32 @@
   "media": "docs/media/2026-11/2026-11-17-1.mp4",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-17-1.mp4",
   "metricool": {},
-  "stats": {},
+  "stats": {
+   "instagram": {
+    "1u": {
+     "views": 5,
+     "reach": 2,
+     "likes": 1,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "avg_watch_ms": 994
+    }
+   },
+   "facebook": {
+    "1u": {
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "avg_watch_ms": null
+    }
+   }
+  },
   "beeld": null,
   "muziek": "ES_April - Jakob Ahlbom.mp3",
   "geluid": null,
@@ -8018,6 +8043,18 @@
      "follows": null,
      "avg_watch_ms": 5032
     }
+   },
+   "facebook": {
+    "1u": {
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "avg_watch_ms": null
+    }
    }
   },
   "beeld": null,
@@ -8148,7 +8185,20 @@
   "media": "docs/media/2026-11/2026-11-17-3.mp4",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-17-3.mp4",
   "metricool": {},
-  "stats": {},
+  "stats": {
+   "facebook": {
+    "1u": {
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "avg_watch_ms": null
+    }
+   }
+  },
   "beeld": null,
   "muziek": "ES_Every Detail - Johannes Bornlof.mp3",
   "geluid": null,

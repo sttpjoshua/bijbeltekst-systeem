@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-17T21:30",
+ "gegenereerd": "2026-11-17T21:45",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -2026,8 +2026,26 @@
    "links": {
     "facebook": "https://www.facebook.com/1449278226698619"
    },
-   "totaal": {},
-   "per_platform": {},
+   "totaal": {
+    "views": 0,
+    "reach": 0,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0
+   },
+   "per_platform": {
+    "facebook": {
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "t": null
+    }
+   },
    "score": {},
    "keuzebron": {
     "huisstijl": "experiment",
@@ -2051,7 +2069,19 @@
     "tijdslot": "experiment",
     "video_uitleg": "vaste regel"
    },
-   "momenten": {},
+   "momenten": {
+    "facebook": {
+     "1u": {
+      "views": 0,
+      "reach": null,
+      "likes": null,
+      "comments": null,
+      "shares": null,
+      "saves": null,
+      "follows": null
+     }
+    }
+   },
    "pub": {
     "facebook": "2026-11-17T20:33+01:00"
    },
@@ -2135,6 +2165,16 @@
      "saves": 0,
      "follows": null,
      "t": "2026-11-17T19:01+01:00"
+    },
+    "facebook": {
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "t": null
     }
    },
    "score": {},
@@ -2169,6 +2209,17 @@
       "comments": 0,
       "shares": 0,
       "saves": 0,
+      "follows": null
+     }
+    },
+    "facebook": {
+     "1u": {
+      "views": 0,
+      "reach": null,
+      "likes": null,
+      "comments": null,
+      "shares": null,
+      "saves": null,
       "follows": null
      }
     }
@@ -2239,8 +2290,36 @@
     "instagram": "https://www.instagram.com/reel/Df2sB0AKR1x/",
     "facebook": "https://www.facebook.com/1886216729243533"
    },
-   "totaal": {},
-   "per_platform": {},
+   "totaal": {
+    "views": 5,
+    "reach": 2,
+    "likes": 1,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0
+   },
+   "per_platform": {
+    "instagram": {
+     "views": 5,
+     "reach": 2,
+     "likes": 1,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "t": null
+    },
+    "facebook": {
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "t": null
+    }
+   },
    "score": {},
    "keuzebron": {
     "huisstijl": "experiment",
@@ -2264,7 +2343,30 @@
     "tijdslot": "experiment",
     "video_uitleg": "vaste regel"
    },
-   "momenten": {},
+   "momenten": {
+    "instagram": {
+     "1u": {
+      "views": 5,
+      "reach": 2,
+      "likes": 1,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": null
+     }
+    },
+    "facebook": {
+     "1u": {
+      "views": 0,
+      "reach": null,
+      "likes": null,
+      "comments": null,
+      "shares": null,
+      "saves": null,
+      "follows": null
+     }
+    }
+   },
    "pub": {
     "instagram": "2026-11-17T20:32+01:00",
     "facebook": "2026-11-17T20:33+01:00"
@@ -10132,11 +10234,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-16T16:17:18",
-   "soort": "info",
-   "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
-  },
-  {
    "t": "2026-11-16T16:32:53",
    "soort": "info",
    "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
@@ -10432,6 +10529,11 @@
    "t": "2026-11-17T20:33:08",
    "soort": "info",
    "tekst": "2026-11-17-3 online op facebook: 1 Petrus 4:8"
+  },
+  {
+   "t": "2026-11-17T21:45:42",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 4 posts vastgelegd"
   }
  ],
  "recente_fouten": [
@@ -10613,7 +10715,7 @@
    "fout": "2026-11-11T13:49",
    "laatst_ok": true,
    "detail": "1 bericht(en) verstuurd",
-   "ok": "2026-11-17T10:02"
+   "ok": "2026-11-17T21:30"
   },
   "nieuws": {
    "ok": "2026-11-17T17:01",
@@ -10712,9 +10814,9 @@
  "weken": {
   "deze": {
    "posts": 34,
-   "reach": 558,
-   "views": 621,
-   "likes": 15,
+   "reach": 560,
+   "views": 626,
+   "likes": 16,
    "comments": 0,
    "saves": 1,
    "shares": 0
