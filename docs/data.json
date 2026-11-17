@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-17T12:01",
+ "gegenereerd": "2026-11-17T12:16",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1734,8 +1734,12 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-17-5.mp4"
    ],
    "thumb": "thumbs/2026-11-17-5.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "instagram"
+   ],
+   "links": {
+    "instagram": "https://www.instagram.com/reel/Df1zR2kBr1L/"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -1762,11 +1766,13 @@
     "video_uitleg": "vaste regel"
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "instagram": "2026-11-17T12:16+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": null,
-   "online": null
+   "online": "2026-11-17T12:16+01:00"
   },
   {
    "id": "2026-11-17-4",
@@ -9714,16 +9720,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-16T13:18:12",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 3 posts vastgelegd"
-  },
-  {
-   "t": "2026-11-16T13:19:26",
-   "soort": "info",
-   "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
-  },
-  {
    "t": "2026-11-16T13:32:03",
    "soort": "info",
    "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
@@ -10014,23 +10010,19 @@
    "t": "2026-11-17T09:03:50",
    "soort": "info",
    "tekst": "Zelfstandig 5 posts klaargezet voor 2026-11-19 (teksten uit de tekstbank)."
+  },
+  {
+   "t": "2026-11-17T12:16:53",
+   "soort": "info",
+   "tekst": "2026-11-17-5 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-17T12:16:53",
+   "soort": "info",
+   "tekst": "2026-11-17-5 online op instagram: Jakobus 3:13"
   }
  ],
  "recente_fouten": [
-  {
-   "t": "2026-11-15T12:01:08",
-   "soort": "fout",
-   "tekst": "Zwaar nieuws (NOS): \"Doodstraf voor plegers fatale aanslag op kerk Jordanië\". Wil je er een troostende post over? Die gaat dan pas 6 uur na het nieuws online.",
-   "code": "nieuws_voorstel",
-   "post": "n111512010"
-  },
-  {
-   "t": "2026-11-15T12:01:08",
-   "soort": "fout",
-   "tekst": "Politiek nieuws (NOS): \"Crisisoverleg D66, VVD en CDA vanochtend verder in Hilversum\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
-   "code": "nieuws_voorstel",
-   "post": "n111512011"
-  },
   {
    "t": "2026-11-16T12:02:27",
    "soort": "fout",
@@ -10152,9 +10144,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-17T04:02",
+   "ok": "2026-11-17T12:16",
    "laatst_ok": true,
-   "detail": "Psalm 56:4 geplaatst"
+   "detail": "Jakobus 3:13 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-16T13:44",
@@ -10212,7 +10204,7 @@
    "ok": "2026-11-17T10:02"
   },
   "nieuws": {
-   "ok": "2026-11-17T07:01",
+   "ok": "2026-11-17T12:01",
    "laatst_ok": true,
    "detail": "1 nieuwe aanleidingen"
   },
@@ -12870,6 +12862,18 @@
   },
   "recent": [
    {
+    "id": "n111712010",
+    "t": "2026-11-17T09:37+01:00",
+    "bron": "NOS",
+    "kop": "Oudste sinterklaasgedicht van rond 1640 ontdekt: 'Beetje knullige rijm'",
+    "link": "https://nos.nl/l/2639838",
+    "categorie": "sinterklaas",
+    "zwaar": false,
+    "status": "geen_plek",
+    "post": null,
+    "opties": null
+   },
+   {
     "id": "n111707010",
     "t": "2026-11-17T06:34+01:00",
     "bron": "NOS",
@@ -13675,19 +13679,6 @@
   ],
   "komend": [
    {
-    "id": "2026-11-17-5",
-    "ref": "Jakobus 3:13",
-    "datum": "2026-11-17",
-    "tijdslot": "12:15",
-    "tests": [
-     {
-      "dimensie": "boekgroep",
-      "optie": "brieven",
-      "bron": "experiment"
-     }
-    ]
-   },
-   {
     "id": "2026-11-17-2",
     "ref": "Prediker 10:18",
     "datum": "2026-11-17",
@@ -13857,6 +13848,19 @@
       "dimensie": "reel_stijl",
       "optie": "markeren",
       "bron": "test markeren"
+     }
+    ]
+   },
+   {
+    "id": "2026-11-19-4",
+    "ref": "Spreuken 19:24",
+    "datum": "2026-11-19",
+    "tijdslot": "20:30",
+    "tests": [
+     {
+      "dimensie": "boekgroep",
+      "optie": "spreuken",
+      "bron": "experiment"
      }
     ]
    }

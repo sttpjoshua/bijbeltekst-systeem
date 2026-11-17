@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T12:01:16",
+ "updated": "2026-11-17T12:16:53",
  "agents": {
   "verskiezer": {
    "t": "2026-11-17T09:02:38",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-17T04:03:01",
-   "task": "Postte Psalm 56:4 op facebook",
+   "t": "2026-11-17T12:16:53",
+   "task": "Postte Jakobus 3:13 op instagram",
    "state": "done"
   },
   "controller": {
@@ -56,6 +56,14 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "12:16",
+   "msg": "2026-11-17-5 online op instagram: Jakobus 3:13"
+  },
+  {
+   "t": "12:16",
+   "msg": "2026-11-17-5 ook als story geplaatst"
+  },
   {
    "t": "09:03",
    "msg": "Zelfstandig 5 posts klaargezet voor 2026-11-19 (teksten uit de tekstbank)."
@@ -95,14 +103,6 @@
   {
    "t": "22:03",
    "msg": "2026-11-16-n2200 ook als story geplaatst"
-  },
-  {
-   "t": "21:41",
-   "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
-  },
-  {
-   "t": "21:30",
-   "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
   }
  ],
  "lampen": [
