@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T21:45:42",
+ "updated": "2026-11-17T22:03:16",
  "agents": {
   "verskiezer": {
    "t": "2026-11-17T09:02:38",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-17T20:33:08",
-   "task": "Postte 1 Petrus 4:8 op facebook",
+   "t": "2026-11-17T22:03:16",
+   "task": "Postte 1 Petrus 4:8 op instagram",
    "state": "done"
   },
   "controller": {
@@ -32,17 +32,17 @@
    "state": "done"
   },
   "community": {
-   "t": "2026-11-17T21:01:21",
+   "t": "2026-11-17T22:01:14",
    "task": "1 nieuwe reactie gevonden",
    "state": "done"
   }
  },
  "stats": {
-  "posts_today": 4,
-  "posts_total": 50,
+  "posts_today": 5,
+  "posts_total": 51,
   "reach_7d": 531,
   "best_time": "04:00",
-  "next_post": "2026-11-17T22:00:00"
+  "next_post": "2026-11-18T04:00:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
@@ -56,6 +56,14 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "22:03",
+   "msg": "2026-11-17-3 online op instagram: 1 Petrus 4:8"
+  },
+  {
+   "t": "22:03",
+   "msg": "2026-11-17-3 ook als story geplaatst"
+  },
   {
    "t": "21:45",
    "msg": "Eerste-uurcijfers van 4 posts vastgelegd"
@@ -95,14 +103,6 @@
   {
    "t": "17:47",
    "msg": "2026-11-17-2 ook als story geplaatst"
-  },
-  {
-   "t": "17:46",
-   "msg": "2026-11-17-5 online op facebook: Jakobus 3:13"
-  },
-  {
-   "t": "14:38",
-   "msg": "Dagelijkse run (zelfstandig): tekstbank aangevuld met 60 verzen (nu 257, ongeveer 41 dagen vrij), posts van 18"
   }
  ],
  "lampen": [
