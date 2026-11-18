@@ -201,3 +201,6 @@ Carrousel in de meelees-stijl (12 nov): dimensie `carrousel_stijl` (standaard | 
 ## Reels aangepast (15 nov, Joshua akkoord)
 - Situatie-reel: geen openingszin ("Voor iedereen die...") meer; het vers staat vanaf seconde 0 op het herkenbare beeld en gaat halverwege over in het rustbeeld (`situatie_openingszin` = false in config). Reden: kijkers haakten af na 1,5 tot 2 s, de openingszin stond 3,8 s in beeld.
 - Meelees-reel is nu ongeveer de helft van de reels (`markeer_aandeel` 0.5), met nieuwe varianten die het systeem test: `markeer_achtergrond` (kleur, papier, schaduw, foto: zacht vervaagd en licht), `markeer_streep` (regel of woord) en `markeer_opening` (vers, of sterk: eerst 1,7 s het stukje rond het kernwoord groot, letterlijk uit het vers). Zichtbaar op het dashboard bij "Wat werkt beter?".
+
+## Reeltekst meer in het midden (18 nov)
+- reels.PLAATSING: midden 0.46, boven 0.37 (was 0.25); tekstblok blijft binnen de veilige zone van Instagram (170t 74

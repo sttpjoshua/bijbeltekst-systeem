@@ -263,7 +263,7 @@ def maak_reel(post, pad, stijl="kinetisch", haak=None, fotos=None, tempo=1.0):
 # =====================================================================
 # Herkenbare situatie (nieuwe aanpak, 11 nov): echte video, het HELE vers in één keer in beeld.
 # =====================================================================
-PLAATSING = {"onder": 0.70, "midden": 0.47, "boven": 0.25}  # Joshua (11 nov): midden en boven, die worden getest
+PLAATSING = {"onder": 0.70, "midden": 0.46, "boven": 0.37}  # Joshua (11 nov): midden en boven, die worden getest
 
 
 def _band(plaatsing):
@@ -273,9 +273,9 @@ def _band(plaatsing):
     if plaatsing == "onder":
         a = np.clip((y - 0.42) / 0.40, 0, 1) ** 1.3 * 190
     elif plaatsing == "boven":
-        a = np.clip((0.58 - y) / 0.40, 0, 1) ** 1.3 * 190
+        a = np.clip((0.66 - y) / 0.44, 0, 1) ** 1.3 * 190
     else:
-        a = 70 + 90 * np.exp(-((y - 0.47) / 0.22) ** 2)
+        a = 70 + 90 * np.exp(-((y - 0.46) / 0.22) ** 2)
     a = np.repeat(a, B, axis=1).astype("uint8")
     laag = Image.new("RGBA", (B, H), (8, 8, 12, 0))
     laag.putalpha(Image.fromarray(a, "L"))
@@ -302,7 +302,7 @@ def _tekstvlak(post, regels_spec, plaatsing):
             g = 74
             while True:
                 f = R._font(serif, g); rg = R._wrap(tekst, f, int(B * 0.82), d)
-                if len(rg) * g * 1.3 <= H * 0.42 or g <= 40:
+                if len(rg) * g * 1.3 <= H * 0.36 or g <= 40:
                     break
                 g -= 4
             blokken.append(("vers", rg, f, int(g * 1.3)))
@@ -317,6 +317,8 @@ def _tekstvlak(post, regels_spec, plaatsing):
             blokken.append((soort, [tekst], f, int(f.size * 1.9)))
     hoogte = sum(lh * len(rg) for _, rg, _, lh in blokken)
     y = int(H * PLAATSING[plaatsing] - hoogte / 2)
+    # veilige zone van Instagram: niet onder de knoppen bovenin (tot 17%) en niet in de onderkant met naam en bijschrift (vanaf 74%)
+    y = max(int(H * 0.17), min(y, int(H * 0.74 - hoogte)))
     staat = R._kernstaat(post, wit[:3], goud[:3])
     for soort, rg, f, lh in blokken:
         for r in rg:
