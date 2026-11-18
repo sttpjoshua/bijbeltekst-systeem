@@ -1,20 +1,5 @@
 [
  {
-  "t": "2026-11-07T12:30",
-  "soort": "info",
-  "tekst": "2026-11-07-1 online op instagram: Kolossenzen 3:15"
- },
- {
-  "t": "2026-11-07T12:32",
-  "soort": "info",
-  "tekst": "Verbinding met Instagram werkt (@bibleverse_nl)"
- },
- {
-  "t": "2026-11-07T12:32",
-  "soort": "info",
-  "tekst": "Token heeft alle rechten, ook voor statistieken"
- },
- {
   "t": "2026-11-07T12:32",
   "soort": "fout",
   "tekst": "Facebook-verbinding mislukt: 400: {\"error\":{\"message\":\"(#100) Object does not exist, cannot be loaded due to missing permission or reviewable feature, or does not support this operation. This endpoint requires the 'pages_read_eng",
@@ -2545,5 +2530,20 @@
   "t": "2026-11-18T14:35:00",
   "soort": "info",
   "tekst": "Dagelijkse run: 10 posts voor 19 en 20 nov gecontroleerd (zelfstandig gemaakt), reserveverzen voor 20 nov ingevuld. Tekstbank 40 dagen, noodvoorraad 6."
+ },
+ {
+  "t": "2026-11-18T17:48:04",
+  "soort": "info",
+  "tekst": "2026-11-18-5 ook als story geplaatst"
+ },
+ {
+  "t": "2026-11-18T17:48:04",
+  "soort": "info",
+  "tekst": "2026-11-18-5 online op instagram: Openbaring 21:4"
+ },
+ {
+  "t": "2026-11-18T17:48:15",
+  "soort": "info",
+  "tekst": "2026-11-18-1 online op facebook: Psalm 85:9"
  }
 ]

@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T17:31:15",
+ "updated": "2026-11-18T17:48:15",
  "agents": {
   "verskiezer": {
    "t": "2026-11-18T09:02:53",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-18T12:17:11",
-   "task": "Postte Kolossenzen 3:2 op facebook",
+   "t": "2026-11-18T17:48:15",
+   "task": "Postte Psalm 85:9 op facebook",
    "state": "done"
   },
   "controller": {
@@ -57,6 +57,18 @@
  ],
  "log": [
   {
+   "t": "17:48",
+   "msg": "2026-11-18-1 online op facebook: Psalm 85:9"
+  },
+  {
+   "t": "17:48",
+   "msg": "2026-11-18-5 online op instagram: Openbaring 21:4"
+  },
+  {
+   "t": "17:48",
+   "msg": "2026-11-18-5 ook als story geplaatst"
+  },
+  {
    "t": "14:35",
    "msg": "Dagelijkse run: 10 posts voor 19 en 20 nov gecontroleerd (zelfstandig gemaakt), reserveverzen voor 20 nov inge"
   },
@@ -91,18 +103,6 @@
   {
    "t": "12:17",
    "msg": "2026-11-18-2 ook als story geplaatst"
-  },
-  {
-   "t": "12:15",
-   "msg": "2026-11-18-3 online op facebook: Jesaja 55:12"
-  },
-  {
-   "t": "12:02",
-   "msg": "Politiek nieuws (NOS): \"Kabinet is na afwenden crisis 'terug bij af', weeffout niet hersteld\". Neutrale post e"
-  },
-  {
-   "t": "12:02",
-   "msg": "Zwaar nieuws (NOS): \"Man krijgt 27 jaar cel voor beramen van moordaanslag op Trump\". Wil je er een troostende "
   }
  ],
  "lampen": [

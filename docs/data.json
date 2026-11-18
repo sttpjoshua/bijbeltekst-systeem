@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-18T17:31",
+ "gegenereerd": "2026-11-18T17:48",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1740,8 +1740,12 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-18-5.mp4"
    ],
    "thumb": "thumbs/2026-11-18-5.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "instagram"
+   ],
+   "links": {
+    "instagram": "https://www.instagram.com/reel/Df496Kax3NY/"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -1771,11 +1775,13 @@
     "video_uitleg": "vaste regel"
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "instagram": "2026-11-18T17:48+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": null,
-   "online": null
+   "online": "2026-11-18T17:48+01:00"
   },
   {
    "id": "2026-11-18-4",
@@ -2252,8 +2258,12 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-18-1.mp4"
    ],
    "thumb": "thumbs/2026-11-18-1.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "facebook"
+   ],
+   "links": {
+    "facebook": "https://www.facebook.com/1492029156329872"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -2283,11 +2293,13 @@
     "video_uitleg": "vaste regel"
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "facebook": "2026-11-18T17:48+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": null,
-   "online": null
+   "online": "2026-11-18T17:48+01:00"
   },
   {
    "id": "2026-11-17-5",
@@ -11195,21 +11207,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-16T20:32:44",
-   "soort": "info",
-   "tekst": "2026-11-16-5 online op instagram: Psalm 136:26"
-  },
-  {
-   "t": "2026-11-16T20:34:30",
-   "soort": "info",
-   "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "2026-11-16T20:47:17",
-   "soort": "info",
-   "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
-  },
-  {
    "t": "2026-11-16T20:50:13",
    "soort": "info",
    "tekst": "Teruggezet na verhoging naar 5 posts per dag: 2026-11-17-2 (Prediker 10:18), 2026-11-17-3 (1 Petrus 4:8), 2026-11-17-5 (Jakobus 3:13)"
@@ -11501,6 +11498,21 @@
    "t": "2026-11-18T14:35:00",
    "soort": "info",
    "tekst": "Dagelijkse run: 10 posts voor 19 en 20 nov gecontroleerd (zelfstandig gemaakt), reserveverzen voor 20 nov ingevuld. Tekstbank 40 dagen, noodvoorraad 6."
+  },
+  {
+   "t": "2026-11-18T17:48:04",
+   "soort": "info",
+   "tekst": "2026-11-18-5 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-18T17:48:04",
+   "soort": "info",
+   "tekst": "2026-11-18-5 online op instagram: Openbaring 21:4"
+  },
+  {
+   "t": "2026-11-18T17:48:15",
+   "soort": "info",
+   "tekst": "2026-11-18-1 online op facebook: Psalm 85:9"
   }
  ],
  "recente_fouten": [
@@ -11644,9 +11656,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-18T12:17",
+   "ok": "2026-11-18T17:48",
    "laatst_ok": true,
-   "detail": "Kolossenzen 3:2 geplaatst"
+   "detail": "Openbaring 21:4 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-18T14:03",
@@ -11678,9 +11690,9 @@
    "fout": "2026-11-08T18:00"
   },
   "facebook": {
-   "ok": "2026-11-18T12:17",
+   "ok": "2026-11-18T17:48",
    "laatst_ok": true,
-   "detail": "Kolossenzen 3:2 geplaatst"
+   "detail": "Psalm 85:9 geplaatst"
   },
   "statistieken": {
    "ok": "2026-11-18T14:03",
@@ -15955,42 +15967,6 @@
    }
   ],
   "komend": [
-   {
-    "id": "2026-11-18-5",
-    "ref": "Openbaring 21:4",
-    "datum": "2026-11-18",
-    "tijdslot": "17:45",
-    "tests": [
-     {
-      "dimensie": "boekgroep",
-      "optie": "brieven",
-      "bron": "experiment"
-     },
-     {
-      "dimensie": "reel_stijl",
-      "optie": "markeren",
-      "bron": "test markeren"
-     }
-    ]
-   },
-   {
-    "id": "2026-11-18-1",
-    "ref": "Psalm 85:9",
-    "datum": "2026-11-18",
-    "tijdslot": "22:00",
-    "tests": [
-     {
-      "dimensie": "boekgroep",
-      "optie": "psalmen",
-      "bron": "experiment"
-     },
-     {
-      "dimensie": "reel_stijl",
-      "optie": "markeren",
-      "bron": "test markeren"
-     }
-    ]
-   },
    {
     "id": "2026-11-19-1",
     "ref": "Jeremia 29:11",
