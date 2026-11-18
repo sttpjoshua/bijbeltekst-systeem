@@ -1,10 +1,5 @@
 [
  {
-  "t": "2026-11-07T00:40",
-  "soort": "info",
-  "tekst": "Eerste post klaargezet: 7 nov 12:15, Kolossenzen 3:15 (video)"
- },
- {
   "t": "2026-11-07T11:07",
   "soort": "info",
   "tekst": "Verbinding met Instagram werkt (@bibleverse_nl)"
@@ -2547,5 +2542,10 @@
   "t": "2026-11-18T12:17:11",
   "soort": "info",
   "tekst": "2026-11-18-2 online op facebook: Kolossenzen 3:2"
+ },
+ {
+  "t": "2026-11-18T13:15:43",
+  "soort": "info",
+  "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
  }
 ]

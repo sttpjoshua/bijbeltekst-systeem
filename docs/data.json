@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-18T13:04",
+ "gegenereerd": "2026-11-18T13:15",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -2030,7 +2030,17 @@
       "follows": null
      }
     },
-    "facebook": {}
+    "facebook": {
+     "1u": {
+      "views": 0,
+      "reach": null,
+      "likes": null,
+      "comments": null,
+      "shares": null,
+      "saves": null,
+      "follows": null
+     }
+    }
    },
    "pub": {
     "instagram": "2026-11-18T04:02+01:00",
@@ -10832,11 +10842,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-16T19:32:38",
-   "soort": "info",
-   "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
-  },
-  {
    "t": "2026-11-16T19:47:40",
    "soort": "info",
    "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
@@ -11138,6 +11143,11 @@
    "t": "2026-11-18T12:17:11",
    "soort": "info",
    "tekst": "2026-11-18-2 online op facebook: Kolossenzen 3:2"
+  },
+  {
+   "t": "2026-11-18T13:15:43",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
   }
  ],
  "recente_fouten": [
