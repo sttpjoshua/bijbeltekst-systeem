@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-18T21:30",
+ "gegenereerd": "2026-11-18T21:45",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1874,8 +1874,8 @@
     "instagram": "https://www.instagram.com/reel/Df5QzFDAaxK/"
    },
    "totaal": {
-    "views": 0,
-    "reach": 0,
+    "views": 3,
+    "reach": 2,
     "likes": 0,
     "comments": 0,
     "shares": 0,
@@ -1891,6 +1891,16 @@
      "saves": null,
      "follows": null,
      "t": "2026-11-18T19:02+01:00"
+    },
+    "instagram": {
+     "views": 3,
+     "reach": 2,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "t": null
     }
    },
    "score": {},
@@ -1928,6 +1938,17 @@
       "comments": null,
       "shares": null,
       "saves": null,
+      "follows": null
+     }
+    },
+    "instagram": {
+     "1u": {
+      "views": 3,
+      "reach": 2,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
       "follows": null
      }
     }
@@ -11272,11 +11293,6 @@
   {
    "t": "2026-11-16T20:52:03",
    "soort": "info",
-   "tekst": "Zelf opgelost: noodvoorraad aanvullen liep vast op noodposts zonder tijdslot (tekstbank.is_ochtend). Hersteld; noodvoorraad weer 6 klaar."
-  },
-  {
-   "t": "2026-11-16T20:52:03",
-   "soort": "info",
    "tekst": "Avondcontrole: 3 posts voor 17 nov teruggezet (nu 5), 18 nov had er al 5. Reserveverzen voor 8 posts ingevuld; 4 deel-hooks in de tekstbank vervangen (geen engagement-bait)."
   },
   {
@@ -11576,6 +11592,11 @@
    "t": "2026-11-18T20:32:35",
    "soort": "info",
    "tekst": "2026-11-18-4 online op instagram: Psalm 119:165"
+  },
+  {
+   "t": "2026-11-18T21:45:47",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
   }
  ],
  "recente_fouten": [
@@ -11776,7 +11797,7 @@
    "fout": "2026-11-11T13:49",
    "laatst_ok": true,
    "detail": "1 bericht(en) verstuurd",
-   "ok": "2026-11-18T12:02"
+   "ok": "2026-11-18T21:30"
   },
   "nieuws": {
    "ok": "2026-11-18T17:01",
@@ -11881,8 +11902,8 @@
  "weken": {
   "deze": {
    "posts": 33,
-   "reach": 724,
-   "views": 782,
+   "reach": 726,
+   "views": 785,
    "likes": 16,
    "comments": 0,
    "saves": 1,

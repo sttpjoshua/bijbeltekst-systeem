@@ -1,11 +1,6 @@
 [
  {
   "t": "2026-11-07T12:34",
-  "soort": "info",
-  "tekst": "Token heeft alle rechten, ook voor statistieken"
- },
- {
-  "t": "2026-11-07T12:34",
   "soort": "fout",
   "tekst": "Facebook-verbinding mislukt: 400: {\"error\":{\"message\":\"(#100) Object does not exist, cannot be loaded due to missing permission or reviewable feature, or does not support this operation. This endpoint requires the 'pages_read_engagement' permission or the 'Page Public Content Access' feature or the 'Page Public Metadata Access' feature. Refer to https:\\/\\/developers.facebook.com\\/docs\\/apps\\/review\\/login-permissions#manage-pages, | Rechten in token: business_management, instagram_basic, instagram_content_publish, instagram_manage_insights, pages_show_list, public_profile",
   "opgelost": true
@@ -2544,5 +2539,10 @@
   "t": "2026-11-18T20:32:35",
   "soort": "info",
   "tekst": "2026-11-18-4 online op instagram: Psalm 119:165"
+ },
+ {
+  "t": "2026-11-18T21:45:47",
+  "soort": "info",
+  "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
  }
 ]
