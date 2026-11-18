@@ -2,11 +2,6 @@
  {
   "t": "2026-11-07T12:41",
   "soort": "info",
-  "tekst": "Token heeft alle rechten, ook voor statistieken"
- },
- {
-  "t": "2026-11-07T12:41",
-  "soort": "info",
   "tekst": "Verbinding met Facebook-pagina werkt (Bibleversenl)"
  },
  {
@@ -2543,5 +2538,10 @@
   "t": "2026-11-18T22:05:37",
   "soort": "info",
   "tekst": "2026-11-18-1 online op instagram: Psalm 85:9"
+ },
+ {
+  "t": "2026-11-18T23:15:50",
+  "soort": "info",
+  "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
  }
 ]
