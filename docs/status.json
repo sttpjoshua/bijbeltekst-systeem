@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T21:45:48",
+ "updated": "2026-11-18T22:05:37",
  "agents": {
   "verskiezer": {
    "t": "2026-11-18T09:02:53",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-18T20:32:35",
-   "task": "Postte Psalm 119:165 op instagram",
+   "t": "2026-11-18T22:05:37",
+   "task": "Postte Psalm 85:9 op instagram",
    "state": "done"
   },
   "controller": {
@@ -32,17 +32,17 @@
    "state": "done"
   },
   "community": {
-   "t": "2026-11-18T21:01:46",
+   "t": "2026-11-18T22:01:33",
    "task": "1 nieuwe reactie gevonden",
    "state": "done"
   }
  },
  "stats": {
-  "posts_today": 3,
-  "posts_total": 54,
+  "posts_today": 5,
+  "posts_total": 56,
   "reach_7d": 596,
   "best_time": "04:00",
-  "next_post": "2026-11-18T17:45:00"
+  "next_post": "2026-11-19T04:00:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
@@ -56,6 +56,18 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "22:05",
+   "msg": "2026-11-18-1 online op instagram: Psalm 85:9"
+  },
+  {
+   "t": "22:05",
+   "msg": "2026-11-18-1 ook als story geplaatst"
+  },
+  {
+   "t": "22:03",
+   "msg": "2026-11-18-5 online op facebook: Openbaring 21:4"
+  },
   {
    "t": "21:45",
    "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
@@ -91,18 +103,6 @@
   {
    "t": "14:35",
    "msg": "Materiaal-repo niet gekloond (add_repo ontbrak in deze sessie); posts waren al gemaakt met muziek, niets nodig"
-  },
-  {
-   "t": "14:03",
-   "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
-  },
-  {
-   "t": "14:00",
-   "msg": "Statistieken opgehaald voor 21 posts"
-  },
-  {
-   "t": "13:31",
-   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
   }
  ],
  "lampen": [
