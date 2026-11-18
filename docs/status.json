@@ -1,19 +1,19 @@
 {
- "updated": "2026-11-18T09:01:18",
+ "updated": "2026-11-18T09:04:03",
  "agents": {
   "verskiezer": {
-   "t": "2026-11-17T09:02:38",
-   "task": "Koos Jeremia 29:11, Spreuken 26:17, Spreuken 16:18, Spreuken 19:24, Numeri 6:24-26",
+   "t": "2026-11-18T09:02:53",
+   "task": "Koos Spreuken 29:11, Spreuken 20:13, Filippenzen 4:6-7, Psalm 131:2, Micha 6:8",
    "state": "done"
   },
   "designer": {
-   "t": "2026-11-17T09:03:50",
-   "task": "Ontwierp Numeri 6:24-26 in stijl schaduw_rood",
+   "t": "2026-11-18T09:04:03",
+   "task": "Ontwierp Micha 6:8 in stijl papier_groen",
    "state": "done"
   },
   "video": {
-   "t": "2026-11-17T09:03:50",
-   "task": "Monteerde video Numeri 6:24-26 met muziek",
+   "t": "2026-11-18T09:04:02",
+   "task": "Monteerde video Psalm 131:2 met muziek",
    "state": "done"
   },
   "dispatcher": {
@@ -57,6 +57,10 @@
  ],
  "log": [
   {
+   "t": "09:04",
+   "msg": "Zelfstandig 5 posts klaargezet voor 2026-11-20 (teksten uit de tekstbank)."
+  },
+  {
    "t": "07:01",
    "msg": "Politiek nieuws (NOS): \"Verdachte dodelijke steekpartij Amsterdam tijdens strafzaak aangevallen in rechtszaal\""
   },
@@ -99,10 +103,6 @@
   {
    "t": "20:33",
    "msg": "2026-11-17-1 online op facebook: Psalm 27:14"
-  },
-  {
-   "t": "20:32",
-   "msg": "2026-11-17-1 online op instagram: Psalm 27:14"
   }
  ],
  "lampen": [
