@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-18T10:02",
+ "gegenereerd": "2026-11-18T10:05",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1071,7 +1071,7 @@
    "ref": "Spreuken 20:13",
    "tekst": "Heb den slaap niet lief, opdat gij niet arm wordt; open uw ogen, verzadig u met brood.",
    "hook": "Voor iedereen die vanochtend vijf keer op snooze drukte.",
-   "status": "opnieuw_maken",
+   "status": "gerenderd",
    "variabelen": {
     "huisstijl": "paars",
     "thema": "humor_herkenbaar",
@@ -1338,7 +1338,7 @@
    "ref": "Spreuken 19:24",
    "tekst": "Een luiaard verbergt de hand in den boezem, en hij zal ze niet weder aan zijn mond brengen.",
    "hook": "Wat ligt er bij jou klaar dat je nog niet oppakt?",
-   "status": "opnieuw_maken",
+   "status": "gerenderd",
    "variabelen": {
     "huisstijl": "papier_rood",
     "thema": "humor_herkenbaar",
@@ -1427,7 +1427,7 @@
    "ref": "Spreuken 16:18",
    "tekst": "Hovaardigheid is voor de verbreking, en hoogheid des geestes voor den val.",
    "hook": "",
-   "status": "opnieuw_maken",
+   "status": "gerenderd",
    "variabelen": {
     "huisstijl": "paars",
     "thema": "humor_herkenbaar",
@@ -1516,7 +1516,7 @@
    "ref": "Spreuken 26:17",
    "tekst": "De voorbijgaande, die zich vertoornt in een twist, die hem niet aangaat, is gelijk die een hond bij de oren grijpt.",
    "hook": "Laat vandaag één discussie bewust aan je voorbijgaan.",
-   "status": "opnieuw_maken",
+   "status": "gerenderd",
    "variabelen": {
     "huisstijl": "papier_rood",
     "thema": "humor_herkenbaar",
@@ -10778,11 +10778,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-16T18:17:33",
-   "soort": "info",
-   "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
-  },
-  {
    "t": "2026-11-16T18:32:03",
    "soort": "info",
    "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
@@ -11080,6 +11075,11 @@
    "t": "2026-11-18T09:04:03",
    "soort": "info",
    "tekst": "Zelfstandig 5 posts klaargezet voor 2026-11-20 (teksten uit de tekstbank)."
+  },
+  {
+   "t": "2026-11-18T10:05:01",
+   "soort": "info",
+   "tekst": "Zelfstandig 10 posts klaargezet voor 2026-11-19, 2026-11-20 (teksten uit de tekstbank)."
   }
  ],
  "recente_fouten": [
@@ -11268,7 +11268,7 @@
    "fout": "2026-11-11T13:49",
    "laatst_ok": true,
    "detail": "1 bericht(en) verstuurd",
-   "ok": "2026-11-18T07:30"
+   "ok": "2026-11-18T10:02"
   },
   "nieuws": {
    "ok": "2026-11-18T07:01",
@@ -11276,9 +11276,9 @@
    "detail": "1 nieuwe aanleidingen"
   },
   "maken": {
-   "ok": "2026-11-18T09:04",
+   "ok": "2026-11-18T10:05",
    "laatst_ok": true,
-   "detail": "5 posts klaargezet"
+   "detail": "10 posts klaargezet"
   },
   "avondcontrole": {
    "ok": "2026-11-17T20:48",
