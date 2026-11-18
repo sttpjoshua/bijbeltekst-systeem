@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-18T05:01",
+ "gegenereerd": "2026-11-18T05:15",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1387,8 +1387,26 @@
    "links": {
     "facebook": "https://www.facebook.com/1500685981912139"
    },
-   "totaal": {},
-   "per_platform": {},
+   "totaal": {
+    "views": 0,
+    "reach": 0,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0
+   },
+   "per_platform": {
+    "facebook": {
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "t": null
+    }
+   },
    "score": {},
    "keuzebron": {
     "huisstijl": "experiment",
@@ -1415,7 +1433,19 @@
     "tijdslot": "experiment",
     "video_uitleg": "vaste regel"
    },
-   "momenten": {},
+   "momenten": {
+    "facebook": {
+     "1u": {
+      "views": 0,
+      "reach": null,
+      "likes": null,
+      "comments": null,
+      "shares": null,
+      "saves": null,
+      "follows": null
+     }
+    }
+   },
    "pub": {
     "facebook": "2026-11-18T04:03+01:00"
    },
@@ -1482,8 +1512,26 @@
    "links": {
     "instagram": "https://www.instagram.com/reel/Df3fdUSAskt/"
    },
-   "totaal": {},
-   "per_platform": {},
+   "totaal": {
+    "views": 0,
+    "reach": 0,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0
+   },
+   "per_platform": {
+    "instagram": {
+     "views": 0,
+     "reach": 0,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "t": null
+    }
+   },
    "score": {},
    "keuzebron": {
     "huisstijl": "strategie",
@@ -1510,7 +1558,19 @@
     "tijdslot": "strategie",
     "video_uitleg": "vaste regel"
    },
-   "momenten": {},
+   "momenten": {
+    "instagram": {
+     "1u": {
+      "views": 0,
+      "reach": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": null
+     }
+    }
+   },
    "pub": {
     "instagram": "2026-11-18T04:02+01:00"
    },
@@ -10270,11 +10330,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-16T17:46:33",
-   "soort": "info",
-   "tekst": "2026-11-16-n1745 online op facebook: Romeinen 15:13"
-  },
-  {
    "t": "2026-11-16T17:47:47",
    "soort": "info",
    "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
@@ -10570,6 +10625,11 @@
    "t": "2026-11-18T04:03:00",
    "soort": "info",
    "tekst": "2026-11-18-4 online op facebook: Psalm 119:165"
+  },
+  {
+   "t": "2026-11-18T05:15:47",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
   }
  ],
  "recente_fouten": [

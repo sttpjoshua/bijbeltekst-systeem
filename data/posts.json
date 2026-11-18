@@ -9124,7 +9124,20 @@
   "media": "docs/media/2026-11/2026-11-18-3.mp4",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-18-3.mp4",
   "metricool": {},
-  "stats": {},
+  "stats": {
+   "instagram": {
+    "1u": {
+     "views": 0,
+     "reach": 0,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "avg_watch_ms": 0
+    }
+   }
+  },
   "beeld": null,
   "muziek": "ES_The Water Remains - Rand Aldo.mp3",
   "geluid": null,
@@ -9545,7 +9558,20 @@
   "media": "docs/media/2026-11/2026-11-18-4.mp4",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-18-4.mp4",
   "metricool": {},
-  "stats": {},
+  "stats": {
+   "facebook": {
+    "1u": {
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "avg_watch_ms": null
+    }
+   }
+  },
   "beeld": "pexels-dima-langemann-154794175-10633172.jpg",
   "muziek": "ES_When the Sun Rises - Center of Attention.mp3",
   "geluid": "ES_Ambience, Seaside, Mudflats, Water, Stream, Wind, Birds, Background - Epidemic Sound.mp3",
