@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-18T20:15",
+ "gegenereerd": "2026-11-18T20:32",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1819,7 +1819,7 @@
    "ref": "Psalm 119:165",
    "tekst": "Die Uw wet beminnen, hebben groten vrede, en zij hebben geen aanstoot.",
    "hook": "",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "schaduw_rood",
     "thema": "vrede_rust",
@@ -1866,10 +1866,12 @@
    ],
    "thumb": "thumbs/2026-11-18-4.jpg",
    "platformen": [
-    "facebook"
+    "facebook",
+    "instagram"
    ],
    "links": {
-    "facebook": "https://www.facebook.com/1500685981912139"
+    "facebook": "https://www.facebook.com/1500685981912139",
+    "instagram": "https://www.instagram.com/reel/Df5QzFDAaxK/"
    },
    "totaal": {
     "views": 0,
@@ -1931,7 +1933,8 @@
     }
    },
    "pub": {
-    "facebook": "2026-11-18T04:03+01:00"
+    "facebook": "2026-11-18T04:03+01:00",
+    "instagram": "2026-11-18T20:32+01:00"
    },
    "gemist": [],
    "nood": false,
@@ -11267,16 +11270,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-16T20:51:19",
-   "soort": "info",
-   "tekst": "Noodvoorraad zelf aangevuld uit de tekstbank: 6 van 6 klaar"
-  },
-  {
-   "t": "2026-11-16T20:52:03",
-   "soort": "info",
-   "tekst": "Zelf opgelost: na het aanzetten van snel leren (5 per dag) bleven 3 eerder ingekorte posts per dag afgekeurd en vulde 'kies' niets aan, waardoor Posts maken steeds opnieuw draaide en vandaag 3 noodposts nodig waren. 'kies' zet ingekorte posts nu terug (of kiest nieuwe op vrije tijdsloten); voor 17 nov zijn Prediker 10:18 (17:45), 1 Petrus 4:8 (22:00) en Jakobus 3:13 (12:15) teruggezet."
-  },
-  {
    "t": "2026-11-16T20:52:03",
    "soort": "info",
    "tekst": "Zelf opgelost: noodvoorraad aanvullen liep vast op noodposts zonder tijdslot (tekstbank.is_ochtend). Hersteld; noodvoorraad weer 6 klaar."
@@ -11573,6 +11566,16 @@
    "t": "2026-11-18T19:05:51",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-18T20:32:35",
+   "soort": "info",
+   "tekst": "2026-11-18-4 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-18T20:32:35",
+   "soort": "info",
+   "tekst": "2026-11-18-4 online op instagram: Psalm 119:165"
   }
  ],
  "recente_fouten": [
@@ -11716,9 +11719,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-18T17:48",
+   "ok": "2026-11-18T20:32",
    "laatst_ok": true,
-   "detail": "Openbaring 21:4 geplaatst"
+   "detail": "Psalm 119:165 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-18T14:03",
@@ -11877,7 +11880,7 @@
  ],
  "weken": {
   "deze": {
-   "posts": 32,
+   "posts": 33,
    "reach": 724,
    "views": 782,
    "likes": 16,
@@ -12379,7 +12382,7 @@
   "tot": "2026-11-30",
   "dag": 3,
   "dagen": 14,
-  "online": 12,
+  "online": 13,
   "gemeten": 3
  },
  "voorraad": {
@@ -15966,8 +15969,8 @@
     "opties": [
      {
       "optie": "psalmen",
-      "online": 4,
-      "gepland": 3,
+      "online": 5,
+      "gepland": 2,
       "n": 1,
       "gem": 0.17,
       "oordeel": "weinig data"
