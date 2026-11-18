@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-18T14:30",
+ "gegenereerd": "2026-11-18T14:35",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -838,7 +838,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Johannes 15:13",
    "caption": "\"Hij heeft u bekend gemaakt, o mens! wat goed is; en wat eist de HEERE van u, dan recht te doen, en weldadigheid lief te hebben, en ootmoediglijk te wandelen met uw God?\"\nMicha 6:8\n\nRecht doen, trouw liefhebben, nederig wandelen.",
    "uitleg": "God vraagt: doe wat recht is, houd van trouw en wandel nederig met je God.",
    "media": "docs/media/2026-11/2026-11-20-5-1.jpg",
@@ -930,7 +930,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Jesaja 43:1",
    "caption": "\"Zo ik mijn ziel niet heb gezet en stil gehouden, gelijk een gespeend kind bij zijn moeder! Mijn ziel is als een gespeend kind in mij.\"\nPsalm 131:2\n\nBij God mag je gewoon stil en veilig zijn.",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-20-4.mp4",
@@ -1019,7 +1019,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Galaten 3:26",
    "caption": "Goedemorgen. Mag deze dag goed beginnen.\n\n\"Weest in geen ding bezorgd; maar laat uw begeerten in alles, door bidden en smeken, met dankzegging bekend worden bij God; En de vrede Gods, die alle verstand te boven gaat, zal uw harten en uw zinnen bewaren in Christus Jezus.\"\nFilippenzen 4:6-7\n\nZorgen mag je omzetten in gebed.\n\nWelke zorg breng jij vandaag bij God?",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-20-3.mp4",
@@ -1108,7 +1108,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Jesaja 40:8",
    "caption": "Voor iedereen die vanochtend vijf keer op snooze drukte.\n\n\"Heb den slaap niet lief, opdat gij niet arm wordt; open uw ogen, verzadig u met brood.\"\nSpreuken 20:13\n\nRust is goed, maar opstaan ook.\n\nHoe vaak druk jij op snooze?",
    "uitleg": "Houd niet te veel van slapen, maar word wakker en je hebt genoeg te eten.",
    "media": "docs/media/2026-11/2026-11-20-2.mp4",
@@ -1197,7 +1197,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Romeinen 13:10",
    "caption": "Tel tot tien voor je vandaag reageert.\n\n\"Een zot laat zijn gansen geest uit, maar de wijze wederhoudt dien achterwaarts.\"\nSpreuken 29:11\n\nNiet alles wat je voelt, hoeft eruit.",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-20-1.mp4",
@@ -11195,16 +11195,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-16T20:30:52",
-   "soort": "info",
-   "tekst": "2026-11-16-1 online op facebook: Jesaja 40:31"
-  },
-  {
-   "t": "2026-11-16T20:32:44",
-   "soort": "info",
-   "tekst": "2026-11-16-5 ook als story geplaatst"
-  },
-  {
    "t": "2026-11-16T20:32:44",
    "soort": "info",
    "tekst": "2026-11-16-5 online op instagram: Psalm 136:26"
@@ -11501,6 +11491,16 @@
    "t": "2026-11-18T14:03:42",
    "soort": "info",
    "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
+  },
+  {
+   "t": "2026-11-18T14:35:00",
+   "soort": "info",
+   "tekst": "Materiaal-repo niet gekloond (add_repo ontbrak in deze sessie); posts waren al gemaakt met muziek, niets nodig."
+  },
+  {
+   "t": "2026-11-18T14:35:00",
+   "soort": "info",
+   "tekst": "Dagelijkse run: 10 posts voor 19 en 20 nov gecontroleerd (zelfstandig gemaakt), reserveverzen voor 20 nov ingevuld. Tekstbank 40 dagen, noodvoorraad 6."
   }
  ],
  "recente_fouten": [
@@ -11693,7 +11693,7 @@
    "detail": "18 onderdelen gemaakt en gecontroleerd"
   },
   "dagelijks": {
-   "ok": "2026-11-17T14:38",
+   "ok": "2026-11-18T14:35",
    "laatst_ok": true,
    "detail": "10 posts voor MORGEN en OVERMORGEN klaargezet"
   },

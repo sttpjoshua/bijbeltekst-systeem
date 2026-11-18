@@ -1,16 +1,5 @@
 [
  {
-  "t": "2026-11-07T11:08",
-  "soort": "info",
-  "tekst": "Token heeft alle rechten, ook voor statistieken"
- },
- {
-  "t": "2026-11-07T12:15",
-  "soort": "fout",
-  "tekst": "2026-11-07-1 instagram mislukt: 400: {\"error\":{\"message\":\"Fatal\",\"type\":\"OAuthException\",\"code\":-1,\"error_subcode\":2207085,\"is_transient\":false,\"error_user_title\":\"Algemene interne fout\",\"error_user_msg\":\"Er is een interne serverfout opgetreden. Probeer het later opnieuw.\",\"fbtrace_id\":\"AlxxdZefWuKRL9xjgZiXFDo\"}}",
-  "opgelost": true
- },
- {
   "t": "2026-11-07T12:30",
   "soort": "info",
   "tekst": "2026-11-07-1 online op instagram: Kolossenzen 3:15"
@@ -2546,5 +2535,15 @@
   "t": "2026-11-18T14:03:42",
   "soort": "info",
   "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
+ },
+ {
+  "t": "2026-11-18T14:35:00",
+  "soort": "info",
+  "tekst": "Materiaal-repo niet gekloond (add_repo ontbrak in deze sessie); posts waren al gemaakt met muziek, niets nodig."
+ },
+ {
+  "t": "2026-11-18T14:35:00",
+  "soort": "info",
+  "tekst": "Dagelijkse run: 10 posts voor 19 en 20 nov gecontroleerd (zelfstandig gemaakt), reserveverzen voor 20 nov ingevuld. Tekstbank 40 dagen, noodvoorraad 6."
  }
 ]
