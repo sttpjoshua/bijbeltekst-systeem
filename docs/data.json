@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-18T13:15",
+ "gegenereerd": "2026-11-18T13:31",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -2168,8 +2168,28 @@
     "video_uitleg": "vaste regel"
    },
    "momenten": {
-    "instagram": {},
-    "facebook": {}
+    "instagram": {
+     "1u": {
+      "views": 13,
+      "reach": 9,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": null
+     }
+    },
+    "facebook": {
+     "1u": {
+      "views": 0,
+      "reach": null,
+      "likes": null,
+      "comments": null,
+      "shares": null,
+      "saves": null,
+      "follows": null
+     }
+    }
    },
    "pub": {
     "instagram": "2026-11-18T12:17+01:00",
@@ -10842,11 +10862,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-16T19:47:40",
-   "soort": "info",
-   "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
-  },
-  {
    "t": "2026-11-16T20:03:20",
    "soort": "info",
    "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
@@ -11148,6 +11163,11 @@
    "t": "2026-11-18T13:15:43",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-18T13:31:01",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
   }
  ],
  "recente_fouten": [
