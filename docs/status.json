@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T23:01:17",
+ "updated": "2026-11-18T04:03:00",
  "agents": {
   "verskiezer": {
    "t": "2026-11-17T09:02:38",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-17T22:03:16",
-   "task": "Postte 1 Petrus 4:8 op instagram",
+   "t": "2026-11-18T04:03:00",
+   "task": "Postte Psalm 119:165 op facebook",
    "state": "done"
   },
   "controller": {
@@ -38,9 +38,9 @@
   }
  },
  "stats": {
-  "posts_today": 5,
+  "posts_today": 0,
   "posts_total": 51,
-  "reach_7d": 531,
+  "reach_7d": 479,
   "best_time": "04:00",
   "next_post": "2026-11-18T04:00:00"
  },
@@ -56,6 +56,22 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "04:03",
+   "msg": "2026-11-18-4 online op facebook: Psalm 119:165"
+  },
+  {
+   "t": "04:02",
+   "msg": "2026-11-18-3 online op instagram: Jesaja 55:12"
+  },
+  {
+   "t": "04:02",
+   "msg": "2026-11-18-3 ook als story geplaatst"
+  },
+  {
+   "t": "23:15",
+   "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
+  },
   {
    "t": "22:03",
    "msg": "2026-11-17-3 online op instagram: 1 Petrus 4:8"
@@ -87,22 +103,6 @@
   {
    "t": "20:31",
    "msg": "2026-11-17-2 online op facebook: Prediker 10:18"
-  },
-  {
-   "t": "19:03",
-   "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
-  },
-  {
-   "t": "18:46",
-   "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
-  },
-  {
-   "t": "17:47",
-   "msg": "2026-11-17-2 online op instagram: Prediker 10:18"
-  },
-  {
-   "t": "17:47",
-   "msg": "2026-11-17-2 ook als story geplaatst"
   }
  ],
  "lampen": [
@@ -169,7 +169,7 @@
   "formaat": "video"
  },
  "snel_leren": {
-  "dag": 2,
+  "dag": 3,
   "dagen": 14,
   "tot": "2026-11-30"
  }
