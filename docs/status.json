@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T13:45:42",
+ "updated": "2026-11-18T14:03:42",
  "agents": {
   "verskiezer": {
    "t": "2026-11-18T09:02:53",
@@ -27,12 +27,12 @@
    "state": "error"
   },
   "analist": {
-   "t": "2026-11-17T14:21:06",
-   "task": "Weekanalyse: strategie v3",
+   "t": "2026-11-18T14:03:42",
+   "task": "Weekanalyse: strategie v4",
    "state": "done"
   },
   "community": {
-   "t": "2026-11-18T13:01:49",
+   "t": "2026-11-18T14:03:42",
    "task": "1 nieuwe reactie gevonden",
    "state": "done"
   }
@@ -40,13 +40,13 @@
  "stats": {
   "posts_today": 2,
   "posts_total": 53,
-  "reach_7d": 479,
+  "reach_7d": 596,
   "best_time": "04:00",
   "next_post": "2026-11-18T17:45:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
-  "instagram": 611,
+  "instagram": 729,
   "facebook": 4,
   "youtube": 0,
   "tiktok": 0
@@ -56,6 +56,14 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "14:03",
+   "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
+  },
+  {
+   "t": "14:00",
+   "msg": "Statistieken opgehaald voor 21 posts"
+  },
   {
    "t": "13:31",
    "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
@@ -95,14 +103,6 @@
   {
    "t": "09:04",
    "msg": "Zelfstandig 5 posts klaargezet voor 2026-11-20 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "07:01",
-   "msg": "Politiek nieuws (NOS): \"Verdachte dodelijke steekpartij Amsterdam tijdens strafzaak aangevallen in rechtszaal\""
-  },
-  {
-   "t": "05:15",
-   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
   }
  ],
  "lampen": [
@@ -158,13 +158,14 @@
    3,
    3,
    4,
+   5,
    5
   ]
  },
  "top_post": {
-  "ref": "Sefanja 3:17",
-  "thumb": "thumbs/2026-11-14-2.jpg",
-  "bereik": 53,
+  "ref": "Filippenzen 4:13",
+  "thumb": "thumbs/2026-11-15-4.jpg",
+  "bereik": 126,
   "score": 3.0,
   "formaat": "video"
  },

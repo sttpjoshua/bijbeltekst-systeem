@@ -1,16 +1,5 @@
 [
  {
-  "t": "2026-11-07T11:07",
-  "soort": "fout",
-  "tekst": "Token mist rechten: instagram_manage_insights",
-  "opgelost": true
- },
- {
-  "t": "2026-11-07T11:08",
-  "soort": "info",
-  "tekst": "Verbinding met Instagram werkt (@bibleverse_nl)"
- },
- {
   "t": "2026-11-07T11:08",
   "soort": "info",
   "tekst": "Token heeft alle rechten, ook voor statistieken"
@@ -2547,5 +2536,15 @@
   "t": "2026-11-18T13:31:01",
   "soort": "info",
   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
+ },
+ {
+  "t": "2026-11-18T14:00:49",
+  "soort": "info",
+  "tekst": "Statistieken opgehaald voor 21 posts"
+ },
+ {
+  "t": "2026-11-18T14:03:42",
+  "soort": "info",
+  "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
  }
 ]

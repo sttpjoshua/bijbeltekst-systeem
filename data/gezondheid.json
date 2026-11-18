@@ -5,20 +5,20 @@
   "detail": "Kolossenzen 3:2 geplaatst"
  },
  "instagram_lezen": {
-  "ok": "2026-11-17T14:20",
+  "ok": "2026-11-18T14:03",
   "laatst_ok": true,
   "detail": "5 volgers"
  },
  "sleutel_instagram": {
   "verloopt": "nooit",
   "geldig": true,
-  "ok": "2026-11-17T14:20",
+  "ok": "2026-11-18T14:03",
   "laatst_ok": true
  },
  "sleutel_facebook": {
   "verloopt": "nooit",
   "geldig": true,
-  "ok": "2026-11-17T14:20",
+  "ok": "2026-11-18T14:03",
   "laatst_ok": true
  },
  "materiaal_actions": {
@@ -28,7 +28,7 @@
   "ok": "2026-11-16T13:51"
  },
  "reacties": {
-  "ok": "2026-11-18T13:01",
+  "ok": "2026-11-18T14:03",
   "laatst_ok": true,
   "detail": "1 nieuwe reacties",
   "fout": "2026-11-08T18:00"
@@ -39,9 +39,9 @@
   "detail": "Kolossenzen 3:2 geplaatst"
  },
  "statistieken": {
-  "ok": "2026-11-17T14:21",
+  "ok": "2026-11-18T14:03",
   "laatst_ok": true,
-  "detail": "18 nieuwe metingen"
+  "detail": "21 nieuwe metingen"
  },
  "zelftest": {
   "ok": "2026-11-16T20:51",
@@ -75,7 +75,7 @@
   "detail": "alles klopte"
  },
  "leren": {
-  "ok": "2026-11-17T14:21",
+  "ok": "2026-11-18T14:03",
   "laatst_ok": true,
   "detail": "dagelijks (snel leren)"
  },
