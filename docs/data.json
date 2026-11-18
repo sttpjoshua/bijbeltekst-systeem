@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-18T07:01",
+ "gegenereerd": "2026-11-18T07:15",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -10330,11 +10330,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-16T17:47:47",
-   "soort": "info",
-   "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
-  },
-  {
    "t": "2026-11-16T18:03:01",
    "soort": "info",
    "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
@@ -10630,6 +10625,13 @@
    "t": "2026-11-18T05:15:47",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-18T07:01:20",
+   "soort": "fout",
+   "tekst": "Politiek nieuws (NOS): \"Verdachte dodelijke steekpartij Amsterdam tijdens strafzaak aangevallen in rechtszaal\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
+   "code": "nieuws_voorstel",
+   "post": "n111807010"
   }
  ],
  "recente_fouten": [
@@ -10646,6 +10648,13 @@
    "tekst": "Politiek nieuws (NOS): \"Biden in memoires fel over einde campagne: ‘Had Trump kunnen verslaan’\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
    "code": "nieuws_voorstel",
    "post": "n111707010"
+  },
+  {
+   "t": "2026-11-18T07:01:20",
+   "soort": "fout",
+   "tekst": "Politiek nieuws (NOS): \"Verdachte dodelijke steekpartij Amsterdam tijdens strafzaak aangevallen in rechtszaal\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
+   "code": "nieuws_voorstel",
+   "post": "n111807010"
   }
  ],
  "versen_totaal": 300,
@@ -10814,9 +10823,9 @@
    "ok": "2026-11-17T21:30"
   },
   "nieuws": {
-   "ok": "2026-11-17T17:01",
+   "ok": "2026-11-18T07:01",
    "laatst_ok": true,
-   "detail": "0 nieuwe aanleidingen"
+   "detail": "1 nieuwe aanleidingen"
   },
   "maken": {
    "ok": "2026-11-17T09:03",
@@ -13999,6 +14008,69 @@
    "licht_automatisch": true
   },
   "recent": [
+   {
+    "id": "n111807010",
+    "t": "2026-11-17T19:45+01:00",
+    "bron": "NOS",
+    "kop": "Verdachte dodelijke steekpartij Amsterdam tijdens strafzaak aangevallen in rechtszaal",
+    "link": "https://nos.nl/l/2639924",
+    "categorie": "politiek",
+    "zwaar": false,
+    "status": "voorstel",
+    "post": null,
+    "opties": [
+     {
+      "vers_id": "Philippians-4-6-7",
+      "ref": "Filippenzen 4:6-7",
+      "tekst": "Weest in geen ding bezorgd; maar laat uw begeerten in alles, door bidden en smeken, met dankzegging bekend worden bij God; En de vrede Gods, die alle verstand te boven gaat, zal uw harten en uw zinnen bewaren in Christus Jezus.",
+      "zin": "Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.",
+      "kernwoord": "bezorgd",
+      "betekenis": "Paulus geeft een recept tegen zorgen: bid, vraag, en dank. Dan geeft God vrede die je niet kunt uitleggen. Die vrede bewaakt je hart en je gedachten.",
+      "toepassing": "Schrijf je grootste zorg op, bid erover, en noem er één ding bij waar je dankbaar voor bent.",
+      "brug": "Bij alle onrust: wat blijft staan.",
+      "caption": "Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.\n\n\"Weest in geen ding bezorgd; maar laat uw begeerten in alles, door bidden en smeken, met dankzegging bekend worden bij God; En de vrede Gods, die alle verstand te boven gaat, zal uw harten en uw zinnen bewaren in Christus Jezus.\"\nFilippenzen 4:6-7\n\nBij alle onrust: wat blijft staan. Zorgen mag je omzetten in gebed.\n\nWelke zorg breng jij vandaag bij God?",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111807010-1-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111807010-1-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111807010-1-3.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111807010-1-4.jpg"
+      ]
+     },
+     {
+      "vers_id": "Psalms-62-2-2",
+      "ref": "Psalm 62:2",
+      "tekst": "Immers is mijn ziel stil tot God; van Hem is mijn heil.",
+      "zin": "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.",
+      "kernwoord": "stil",
+      "betekenis": "David is omringd door onrust, maar hij vindt rust bij God. Hij hoeft zichzelf niet te redden. Zijn redding komt van God, en daarom kan hij stil zijn.",
+      "toepassing": "Neem vandaag vijf minuten stilte zonder telefoon, alleen bij God.",
+      "brug": "Bij alle onrust: wat blijft staan.",
+      "caption": "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.\n\n\"Immers is mijn ziel stil tot God; van Hem is mijn heil.\"\nPsalm 62:2\n\nBij alle onrust: wat blijft staan. Bij God mag je ziel tot rust komen.\n\nWat helpt jou om stil te worden?",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111807010-2-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111807010-2-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111807010-2-3.jpg"
+      ]
+     },
+     {
+      "vers_id": "James-3-17-17",
+      "ref": "Jakobus 3:17",
+      "tekst": "Maar de wijsheid, die van boven is, die is ten eerste zuiver, daarna vreedzaam, bescheiden, gezeggelijk, vol van barmhartigheid en van goede vruchten, niet partijdig oordelende, en ongeveinsd.",
+      "zin": "Veel meningen, veel onrust. Even terug naar wat vaststaat.",
+      "kernwoord": "vreedzaam",
+      "betekenis": "Jakobus beschrijft hoe echte wijsheid eruitziet. Het is niet slim praten of gelijk krijgen, maar zuiver, vredig, mild en vol goede daden. Je herkent haar aan de vruchten.",
+      "toepassing": "Kies vandaag één eigenschap uit dit vers en oefen erin.",
+      "brug": "Bij alle onrust: wat blijft staan.",
+      "caption": "Veel meningen, veel onrust. Even terug naar wat vaststaat.\n\n\"Maar de wijsheid, die van boven is, die is ten eerste zuiver, daarna vreedzaam, bescheiden, gezeggelijk, vol van barmhartigheid en van goede vruchten, niet partijdig oordelende, en ongeveinsd.\"\nJakobus 3:17\n\nBij alle onrust: wat blijft staan. Echte wijsheid is vreedzaam en zacht.\n\nWelke eigenschap uit dit vers zou jij willen groeien?",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111807010-3-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111807010-3-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111807010-3-3.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111807010-3-4.jpg"
+      ]
+     }
+    ]
+   },
    {
     "id": "n111712010",
     "t": "2026-11-17T09:37+01:00",

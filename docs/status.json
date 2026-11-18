@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T07:01:14",
+ "updated": "2026-11-18T07:15:37",
  "agents": {
   "verskiezer": {
    "t": "2026-11-17T09:02:38",
@@ -22,8 +22,8 @@
    "state": "done"
   },
   "controller": {
-   "t": "2026-11-17T07:01:24",
-   "task": "Politiek nieuws (NOS): \"Biden in memoires fel over einde campagne: ‘Ha",
+   "t": "2026-11-18T07:01:20",
+   "task": "Politiek nieuws (NOS): \"Verdachte dodelijke steekpartij Amsterdam tijd",
    "state": "error"
   },
   "analist": {
@@ -56,6 +56,10 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "07:01",
+   "msg": "Politiek nieuws (NOS): \"Verdachte dodelijke steekpartij Amsterdam tijdens strafzaak aangevallen in rechtszaal\""
+  },
   {
    "t": "05:15",
    "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
@@ -99,10 +103,6 @@
   {
    "t": "20:32",
    "msg": "2026-11-17-1 online op instagram: Psalm 27:14"
-  },
-  {
-   "t": "20:32",
-   "msg": "2026-11-17-1 ook als story geplaatst"
   }
  ],
  "lampen": [
