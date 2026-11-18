@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-18T12:01",
+ "gegenereerd": "2026-11-18T12:17",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1908,7 +1908,7 @@
    "ref": "Jesaja 55:12",
    "tekst": "Want in blijdschap zult gijlieden uittrekken, en met vrede voortgeleid worden; de bergen en heuvelen zullen geschal maken met vrolijk gezang voor uw aangezicht, en alle bomen des velds zullen de handen samenklappen.",
    "hook": "Goedemorgen. Mag deze dag goed beginnen.",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "mint",
     "thema": "vrede_rust",
@@ -1955,10 +1955,12 @@
    ],
    "thumb": "thumbs/2026-11-18-3.jpg",
    "platformen": [
-    "instagram"
+    "instagram",
+    "facebook"
    ],
    "links": {
-    "instagram": "https://www.instagram.com/reel/Df3fdUSAskt/"
+    "instagram": "https://www.instagram.com/reel/Df3fdUSAskt/",
+    "facebook": "https://www.facebook.com/1191446786643053"
    },
    "totaal": {
     "views": 14,
@@ -2020,7 +2022,8 @@
     }
    },
    "pub": {
-    "instagram": "2026-11-18T04:02+01:00"
+    "instagram": "2026-11-18T04:02+01:00",
+    "facebook": "2026-11-18T12:15+01:00"
    },
    "gemist": [],
    "nood": false,
@@ -2033,7 +2036,7 @@
    "ref": "Kolossenzen 3:2",
    "tekst": "Bedenkt de dingen, die boven zijn, niet die op de aarde zijn.",
    "hook": "Vraag bij één zorg: maakt dit over een jaar nog uit?",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "papier_blauw",
     "thema": "vrede_rust",
@@ -2079,8 +2082,14 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-18-2.mp4"
    ],
    "thumb": "thumbs/2026-11-18-2.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "instagram",
+    "facebook"
+   ],
+   "links": {
+    "instagram": "https://www.instagram.com/reel/Df4YGEECiMi/",
+    "facebook": "https://www.facebook.com/1427702402778564"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -2110,11 +2119,14 @@
     "video_uitleg": "vaste regel"
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "instagram": "2026-11-18T12:17+01:00",
+    "facebook": "2026-11-18T12:17+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": null,
-   "online": null
+   "online": "2026-11-18T12:17+01:00"
   },
   {
    "id": "2026-11-18-1",
@@ -10778,36 +10790,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-16T18:32:03",
-   "soort": "info",
-   "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "2026-11-16T18:36:31",
-   "soort": "info",
-   "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "2026-11-16T18:47:16",
-   "soort": "info",
-   "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "2026-11-16T19:02:12",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
-   "t": "2026-11-16T19:03:48",
-   "soort": "info",
-   "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "2026-11-16T19:16:53",
-   "soort": "info",
-   "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
-  },
-  {
    "t": "2026-11-16T19:32:38",
    "soort": "info",
    "tekst": "Zelfstandig 2 posts klaargezet voor 2026-11-17 (teksten uit de tekstbank)."
@@ -11080,16 +11062,43 @@
    "t": "2026-11-18T10:05:01",
    "soort": "info",
    "tekst": "Zelfstandig 10 posts klaargezet voor 2026-11-19, 2026-11-20 (teksten uit de tekstbank)."
+  },
+  {
+   "t": "2026-11-18T12:02:02",
+   "soort": "fout",
+   "tekst": "Zwaar nieuws (NOS): \"Man krijgt 27 jaar cel voor beramen van moordaanslag op Trump\". Wil je er een troostende post over? Die gaat dan pas 6 uur na het nieuws online.",
+   "code": "nieuws_voorstel",
+   "post": "n111812020"
+  },
+  {
+   "t": "2026-11-18T12:02:04",
+   "soort": "fout",
+   "tekst": "Politiek nieuws (NOS): \"Kabinet is na afwenden crisis 'terug bij af', weeffout niet hersteld\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
+   "code": "nieuws_voorstel",
+   "post": "n111812021"
+  },
+  {
+   "t": "2026-11-18T12:15:49",
+   "soort": "info",
+   "tekst": "2026-11-18-3 online op facebook: Jesaja 55:12"
+  },
+  {
+   "t": "2026-11-18T12:17:03",
+   "soort": "info",
+   "tekst": "2026-11-18-2 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-18T12:17:03",
+   "soort": "info",
+   "tekst": "2026-11-18-2 online op instagram: Kolossenzen 3:2"
+  },
+  {
+   "t": "2026-11-18T12:17:11",
+   "soort": "info",
+   "tekst": "2026-11-18-2 online op facebook: Kolossenzen 3:2"
   }
  ],
  "recente_fouten": [
-  {
-   "t": "2026-11-16T12:02:27",
-   "soort": "fout",
-   "tekst": "Politiek nieuws (NOS): \"Oekraïne valt Krimbrug aan, grote droneaanval op Rusland\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
-   "code": "nieuws_voorstel",
-   "post": "n111612020"
-  },
   {
    "t": "2026-11-17T07:01:24",
    "soort": "fout",
@@ -11103,6 +11112,20 @@
    "tekst": "Politiek nieuws (NOS): \"Verdachte dodelijke steekpartij Amsterdam tijdens strafzaak aangevallen in rechtszaal\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
    "code": "nieuws_voorstel",
    "post": "n111807010"
+  },
+  {
+   "t": "2026-11-18T12:02:02",
+   "soort": "fout",
+   "tekst": "Zwaar nieuws (NOS): \"Man krijgt 27 jaar cel voor beramen van moordaanslag op Trump\". Wil je er een troostende post over? Die gaat dan pas 6 uur na het nieuws online.",
+   "code": "nieuws_voorstel",
+   "post": "n111812020"
+  },
+  {
+   "t": "2026-11-18T12:02:04",
+   "soort": "fout",
+   "tekst": "Politiek nieuws (NOS): \"Kabinet is na afwenden crisis 'terug bij af', weeffout niet hersteld\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
+   "code": "nieuws_voorstel",
+   "post": "n111812021"
   }
  ],
  "versen_totaal": 300,
@@ -11211,9 +11234,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-18T04:02",
+   "ok": "2026-11-18T12:17",
    "laatst_ok": true,
-   "detail": "Jesaja 55:12 geplaatst"
+   "detail": "Kolossenzen 3:2 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-17T14:20",
@@ -11245,9 +11268,9 @@
    "fout": "2026-11-08T18:00"
   },
   "facebook": {
-   "ok": "2026-11-18T04:03",
+   "ok": "2026-11-18T12:17",
    "laatst_ok": true,
-   "detail": "Psalm 119:165 geplaatst"
+   "detail": "Kolossenzen 3:2 geplaatst"
   },
   "statistieken": {
    "ok": "2026-11-17T14:21",
@@ -11268,12 +11291,12 @@
    "fout": "2026-11-11T13:49",
    "laatst_ok": true,
    "detail": "1 bericht(en) verstuurd",
-   "ok": "2026-11-18T10:02"
+   "ok": "2026-11-18T12:02"
   },
   "nieuws": {
-   "ok": "2026-11-18T07:01",
+   "ok": "2026-11-18T12:02",
    "laatst_ok": true,
-   "detail": "1 nieuwe aanleidingen"
+   "detail": "2 nieuwe aanleidingen"
   },
   "maken": {
    "ok": "2026-11-18T10:05",
@@ -11366,9 +11389,9 @@
  ],
  "weken": {
   "deze": {
-   "posts": 30,
-   "reach": 658,
-   "views": 715,
+   "posts": 32,
+   "reach": 672,
+   "views": 729,
    "likes": 14,
    "comments": 0,
    "saves": 1,
@@ -11814,7 +11837,7 @@
   "tot": "2026-11-30",
   "dag": 3,
   "dagen": 14,
-  "online": 10,
+  "online": 12,
   "gemeten": 0
  },
  "voorraad": {
@@ -14457,6 +14480,132 @@
   },
   "recent": [
    {
+    "id": "n111812021",
+    "t": "2026-11-18T09:43+01:00",
+    "bron": "NOS",
+    "kop": "Kabinet is na afwenden crisis 'terug bij af', weeffout niet hersteld",
+    "link": "https://nos.nl/l/2639978",
+    "categorie": "politiek",
+    "zwaar": false,
+    "status": "voorstel",
+    "post": null,
+    "opties": [
+     {
+      "vers_id": "Psalms-62-2-2",
+      "ref": "Psalm 62:2",
+      "tekst": "Immers is mijn ziel stil tot God; van Hem is mijn heil.",
+      "zin": "Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.",
+      "kernwoord": "stil",
+      "betekenis": "David is omringd door onrust, maar hij vindt rust bij God. Hij hoeft zichzelf niet te redden. Zijn redding komt van God, en daarom kan hij stil zijn.",
+      "toepassing": "Neem vandaag vijf minuten stilte zonder telefoon, alleen bij God.",
+      "brug": "Bij alle onrust: wat blijft staan.",
+      "caption": "Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.\n\n\"Immers is mijn ziel stil tot God; van Hem is mijn heil.\"\nPsalm 62:2\n\nBij alle onrust: wat blijft staan. Bij God mag je ziel tot rust komen.",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812021-1-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812021-1-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812021-1-3.jpg"
+      ]
+     },
+     {
+      "vers_id": "Ecclesiastes-4-9-10",
+      "ref": "Prediker 4:9-10",
+      "tekst": "Twee zijn beter dan een; want zij hebben een goede beloning van hun arbeid; Want indien zij vallen, de een richt zijn metgezel op; maar wee den ene, die gevallen is, want er is geen tweede om hem op te helpen.",
+      "zin": "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.",
+      "kernwoord": "Twee",
+      "betekenis": "Prediker ziet het nut van samen. Alleen kom je minder ver. En als je valt, heb je iemand nodig die je overeind helpt. Vriendschap is geen luxe.",
+      "toepassing": "Bel of app vandaag iemand die alleen is.",
+      "brug": "Bij alle onrust: wat blijft staan.",
+      "caption": "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.\n\n\"Twee zijn beter dan een; want zij hebben een goede beloning van hun arbeid; Want indien zij vallen, de een richt zijn metgezel op; maar wee den ene, die gevallen is, want er is geen tweede om hem op te helpen.\"\nPrediker 4:9-10\n\nBij alle onrust: wat blijft staan. We hebben elkaar nodig.",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812021-2-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812021-2-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812021-2-3.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812021-2-4.jpg"
+      ]
+     },
+     {
+      "vers_id": "James-3-17-17",
+      "ref": "Jakobus 3:17",
+      "tekst": "Maar de wijsheid, die van boven is, die is ten eerste zuiver, daarna vreedzaam, bescheiden, gezeggelijk, vol van barmhartigheid en van goede vruchten, niet partijdig oordelende, en ongeveinsd.",
+      "zin": "Veel meningen, veel onrust. Even terug naar wat vaststaat.",
+      "kernwoord": "vreedzaam",
+      "betekenis": "Jakobus beschrijft hoe echte wijsheid eruitziet. Het is niet slim praten of gelijk krijgen, maar zuiver, vredig, mild en vol goede daden. Je herkent haar aan de vruchten.",
+      "toepassing": "Kies vandaag één eigenschap uit dit vers en oefen erin.",
+      "brug": "Een vast punt in veel geluid.",
+      "caption": "Veel meningen, veel onrust. Even terug naar wat vaststaat.\n\n\"Maar de wijsheid, die van boven is, die is ten eerste zuiver, daarna vreedzaam, bescheiden, gezeggelijk, vol van barmhartigheid en van goede vruchten, niet partijdig oordelende, en ongeveinsd.\"\nJakobus 3:17\n\nEen vast punt in veel geluid. Echte wijsheid is vreedzaam en zacht.",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812021-3-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812021-3-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812021-3-3.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812021-3-4.jpg"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "n111812020",
+    "t": "2026-11-18T09:54+01:00",
+    "bron": "NOS",
+    "kop": "Man krijgt 27 jaar cel voor beramen van moordaanslag op Trump",
+    "link": "https://nos.nl/l/2639980",
+    "categorie": "zwaar",
+    "zwaar": true,
+    "status": "voorstel",
+    "post": null,
+    "opties": [
+     {
+      "vers_id": "Psalms-130-5-5",
+      "ref": "Psalm 130:5",
+      "tekst": "Ik verwacht den HEERE; mijn ziel verwacht, en ik hoop op Zijn Woord.",
+      "zin": "Er gebeurt veel in de wereld dat zwaar is. Even stil, samen.",
+      "kernwoord": "verwacht",
+      "betekenis": "De dichter wacht op God, zoals een wachter op de ochtend wacht. Wachten is moeilijk, maar hij weet dat God komt. Zijn hoop rust op wat God beloofd heeft.",
+      "toepassing": "Waar wacht je op? Lees vandaag een belofte uit de Bijbel en houd die vast.",
+      "brug": "Als er geen woorden zijn: dit.",
+      "caption": "Er gebeurt veel in de wereld dat zwaar is. Even stil, samen.\n\n\"Ik verwacht den HEERE; mijn ziel verwacht, en ik hoop op Zijn Woord.\"\nPsalm 130:5\n\nAls er geen woorden zijn: dit. Wachten op God is wachten met hoop.",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812020-1-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812020-1-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812020-1-3.jpg"
+      ]
+     },
+     {
+      "vers_id": "John-16-33-33",
+      "ref": "Johannes 16:33",
+      "tekst": "Deze dingen heb Ik tot u gesproken, opdat gij in Mij vrede hebt. In de wereld zult gij verdrukking hebben, maar hebt goeden moed, Ik heb de wereld overwonnen.",
+      "zin": "Soms is het nieuws te zwaar voor woorden. Dan is er dit.",
+      "kernwoord": "overwonnen",
+      "betekenis": "Jezus belooft geen makkelijk leven. Hij zegt eerlijk: je zult het zwaar hebben. Maar Hij geeft ook moed: Hij heeft de wereld al overwonnen. Bij Hem is vrede.",
+      "toepassing": "Wat is zwaar op dit moment? Zeg vandaag: Jezus heeft dit al overwonnen.",
+      "brug": "Als er geen woorden zijn: dit.",
+      "caption": "Soms is het nieuws te zwaar voor woorden. Dan is er dit.\n\n\"Deze dingen heb Ik tot u gesproken, opdat gij in Mij vrede hebt. In de wereld zult gij verdrukking hebben, maar hebt goeden moed, Ik heb de wereld overwonnen.\"\nJohannes 16:33\n\nAls er geen woorden zijn: dit. Het is zwaar, maar Jezus heeft gewonnen.",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812020-2-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812020-2-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812020-2-3.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812020-2-4.jpg"
+      ]
+     },
+     {
+      "vers_id": "Psalms-23-2-3",
+      "ref": "Psalm 23:2-3",
+      "tekst": "Hij doet mij nederliggen in grazige weiden; Hij voert mij zachtjes aan zeer stille wateren. Hij verkwikt mijn ziel; Hij leidt mij in het spoor der gerechtigheid, om Zijns Naams wil.",
+      "zin": "Voor iedereen die vandaag geraakt is door wat er gebeurde.",
+      "kernwoord": "verkwikt",
+      "betekenis": "David ziet God als een herder die precies weet wat zijn schapen nodig hebben: rust, eten, stil water. God zorgt voor je, ook voor je ziel.",
+      "toepassing": "Zoek vandaag een rustige plek buiten en sta even stil bij Gods zorg.",
+      "brug": "Bij zwaar nieuws: troost die er is.",
+      "caption": "Voor iedereen die vandaag geraakt is door wat er gebeurde.\n\n\"Hij doet mij nederliggen in grazige weiden; Hij voert mij zachtjes aan zeer stille wateren. Hij verkwikt mijn ziel; Hij leidt mij in het spoor der gerechtigheid, om Zijns Naams wil.\"\nPsalm 23:2-3\n\nBij zwaar nieuws: troost die er is. God weet wat jouw ziel nodig heeft.",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812020-3-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812020-3-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812020-3-3.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812020-3-4.jpg"
+      ]
+     }
+    ]
+   },
+   {
     "id": "n111807010",
     "t": "2026-11-17T19:45+01:00",
     "bron": "NOS",
@@ -15299,8 +15448,8 @@
      },
      {
       "optie": "profeten",
-      "online": 1,
-      "gepland": 3,
+      "online": 2,
+      "gepland": 2,
       "n": 1,
       "gem": 1.81,
       "oordeel": "weinig data"
@@ -15315,8 +15464,8 @@
      },
      {
       "optie": "brieven",
-      "online": 7,
-      "gepland": 3,
+      "online": 8,
+      "gepland": 2,
       "n": 5,
       "gem": 1.21,
       "oordeel": "geen duidelijk verschil"
@@ -15336,19 +15485,6 @@
    }
   ],
   "komend": [
-   {
-    "id": "2026-11-18-2",
-    "ref": "Kolossenzen 3:2",
-    "datum": "2026-11-18",
-    "tijdslot": "12:15",
-    "tests": [
-     {
-      "dimensie": "boekgroep",
-      "optie": "brieven",
-      "bron": "experiment"
-     }
-    ]
-   },
    {
     "id": "2026-11-18-5",
     "ref": "Openbaring 21:4",
@@ -15508,6 +15644,19 @@
      {
       "dimensie": "boekgroep",
       "optie": "spreuken",
+      "bron": "experiment"
+     }
+    ]
+   },
+   {
+    "id": "2026-11-20-5",
+    "ref": "Micha 6:8",
+    "datum": "2026-11-20",
+    "tijdslot": "22:00",
+    "tests": [
+     {
+      "dimensie": "boekgroep",
+      "optie": "profeten",
       "bron": "experiment"
      }
     ]

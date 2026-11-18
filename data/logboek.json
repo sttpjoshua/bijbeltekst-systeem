@@ -1,20 +1,5 @@
 [
  {
-  "t": "2026-11-06T23:33",
-  "soort": "info",
-  "tekst": "Systeem geïnstalleerd, wacht op Metricool-merk"
- },
- {
-  "t": "2026-11-06T23:38",
-  "soort": "info",
-  "tekst": "Verbinding met Instagram werkt (@bibleverse_nl)"
- },
- {
-  "t": "2026-11-06T23:48",
-  "soort": "info",
-  "tekst": "Overgestapt van Metricool naar direct posten via GitHub Actions"
- },
- {
   "t": "2026-11-07T00:40",
   "soort": "info",
   "tekst": "Eerste post klaargezet: 7 nov 12:15, Kolossenzen 3:15 (video)"
@@ -2542,5 +2527,25 @@
   "tekst": "Politiek nieuws (NOS): \"Kabinet is na afwenden crisis 'terug bij af', weeffout niet hersteld\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
   "code": "nieuws_voorstel",
   "post": "n111812021"
+ },
+ {
+  "t": "2026-11-18T12:15:49",
+  "soort": "info",
+  "tekst": "2026-11-18-3 online op facebook: Jesaja 55:12"
+ },
+ {
+  "t": "2026-11-18T12:17:03",
+  "soort": "info",
+  "tekst": "2026-11-18-2 ook als story geplaatst"
+ },
+ {
+  "t": "2026-11-18T12:17:03",
+  "soort": "info",
+  "tekst": "2026-11-18-2 online op instagram: Kolossenzen 3:2"
+ },
+ {
+  "t": "2026-11-18T12:17:11",
+  "soort": "info",
+  "tekst": "2026-11-18-2 online op facebook: Kolossenzen 3:2"
  }
 ]

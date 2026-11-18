@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T12:01:56",
+ "updated": "2026-11-18T12:17:11",
  "agents": {
   "verskiezer": {
    "t": "2026-11-18T09:02:53",
@@ -17,13 +17,13 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-18T04:03:00",
-   "task": "Postte Psalm 119:165 op facebook",
+   "t": "2026-11-18T12:17:11",
+   "task": "Postte Kolossenzen 3:2 op facebook",
    "state": "done"
   },
   "controller": {
-   "t": "2026-11-18T07:01:20",
-   "task": "Politiek nieuws (NOS): \"Verdachte dodelijke steekpartij Amsterdam tijd",
+   "t": "2026-11-18T12:02:04",
+   "task": "Politiek nieuws (NOS): \"Kabinet is na afwenden crisis 'terug bij af', ",
    "state": "error"
   },
   "analist": {
@@ -38,11 +38,11 @@
   }
  },
  "stats": {
-  "posts_today": 0,
-  "posts_total": 51,
+  "posts_today": 2,
+  "posts_total": 53,
   "reach_7d": 479,
   "best_time": "04:00",
-  "next_post": "2026-11-18T04:00:00"
+  "next_post": "2026-11-18T17:45:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
@@ -56,6 +56,30 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "12:17",
+   "msg": "2026-11-18-2 online op facebook: Kolossenzen 3:2"
+  },
+  {
+   "t": "12:17",
+   "msg": "2026-11-18-2 online op instagram: Kolossenzen 3:2"
+  },
+  {
+   "t": "12:17",
+   "msg": "2026-11-18-2 ook als story geplaatst"
+  },
+  {
+   "t": "12:15",
+   "msg": "2026-11-18-3 online op facebook: Jesaja 55:12"
+  },
+  {
+   "t": "12:02",
+   "msg": "Politiek nieuws (NOS): \"Kabinet is na afwenden crisis 'terug bij af', weeffout niet hersteld\". Neutrale post e"
+  },
+  {
+   "t": "12:02",
+   "msg": "Zwaar nieuws (NOS): \"Man krijgt 27 jaar cel voor beramen van moordaanslag op Trump\". Wil je er een troostende "
+  },
   {
    "t": "10:05",
    "msg": "Zelfstandig 10 posts klaargezet voor 2026-11-19, 2026-11-20 (teksten uit de tekstbank)."
@@ -79,30 +103,6 @@
   {
    "t": "04:02",
    "msg": "2026-11-18-3 online op instagram: Jesaja 55:12"
-  },
-  {
-   "t": "04:02",
-   "msg": "2026-11-18-3 ook als story geplaatst"
-  },
-  {
-   "t": "23:15",
-   "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
-  },
-  {
-   "t": "22:03",
-   "msg": "2026-11-17-3 online op instagram: 1 Petrus 4:8"
-  },
-  {
-   "t": "22:03",
-   "msg": "2026-11-17-3 ook als story geplaatst"
-  },
-  {
-   "t": "21:45",
-   "msg": "Eerste-uurcijfers van 4 posts vastgelegd"
-  },
-  {
-   "t": "20:33",
-   "msg": "2026-11-17-3 online op facebook: 1 Petrus 4:8"
   }
  ],
  "lampen": [
