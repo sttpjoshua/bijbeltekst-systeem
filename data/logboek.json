@@ -1,12 +1,6 @@
 [
  {
   "t": "2026-11-07T12:32",
-  "soort": "fout",
-  "tekst": "Facebook-verbinding mislukt: 400: {\"error\":{\"message\":\"(#100) Object does not exist, cannot be loaded due to missing permission or reviewable feature, or does not support this operation. This endpoint requires the 'pages_read_eng",
-  "opgelost": true
- },
- {
-  "t": "2026-11-07T12:32",
   "soort": "info",
   "tekst": "Statistieken lezen werkt"
  },
@@ -2545,5 +2539,10 @@
   "t": "2026-11-18T17:48:15",
   "soort": "info",
   "tekst": "2026-11-18-1 online op facebook: Psalm 85:9"
+ },
+ {
+  "t": "2026-11-18T19:05:51",
+  "soort": "info",
+  "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
  }
 ]
