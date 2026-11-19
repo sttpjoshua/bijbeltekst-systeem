@@ -2,11 +2,6 @@
  {
   "t": "2026-11-07T15:06",
   "soort": "info",
-  "tekst": "Verbinding met Instagram werkt (@bibleverse_nl)"
- },
- {
-  "t": "2026-11-07T15:06",
-  "soort": "info",
   "tekst": "Token heeft alle rechten, ook voor statistieken"
  },
  {
@@ -2544,5 +2539,10 @@
   "t": "2026-11-19T12:17:05",
   "soort": "info",
   "tekst": "2026-11-19-2 online op facebook: Spreuken 26:17"
+ },
+ {
+  "t": "2026-11-19T13:31:15",
+  "soort": "info",
+  "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
  }
 ]
