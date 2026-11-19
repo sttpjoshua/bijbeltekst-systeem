@@ -1,25 +1,5 @@
 [
  {
-  "t": "2026-11-07T22:24",
-  "soort": "info",
-  "tekst": "4 extra posts voor 8 november gemaakt (snel leren stond na de dagelijkse run aan)"
- },
- {
-  "t": "2026-11-07T22:30",
-  "soort": "info",
-  "tekst": "Te weinig posts voor 2026-11-07: verwacht, snel leren ging vandaag pas aan (geen fout)"
- },
- {
-  "t": "2026-11-07T22:48",
-  "soort": "info",
-  "tekst": "Verbinding met Instagram werkt (@bibleverse_nl)"
- },
- {
-  "t": "2026-11-07T22:48",
-  "soort": "info",
-  "tekst": "Token heeft alle rechten, ook voor statistieken"
- },
- {
   "t": "2026-11-07T22:48",
   "soort": "info",
   "tekst": "Verbinding met Facebook-pagina werkt (Bibleversenl)"
@@ -2544,5 +2524,25 @@
   "t": "2026-11-19T16:20:44",
   "soort": "info",
   "tekst": "Bediening: Nieuws: maximaal per dag 1"
+ },
+ {
+  "t": "2026-11-19T17:45:56",
+  "soort": "info",
+  "tekst": "2026-11-19-1 online op facebook: Jeremia 29:11"
+ },
+ {
+  "t": "2026-11-19T17:46:03",
+  "soort": "info",
+  "tekst": "2026-11-19-3 online op facebook: Spreuken 16:18"
+ },
+ {
+  "t": "2026-11-19T17:47:12",
+  "soort": "info",
+  "tekst": "2026-11-19-5 ook als story geplaatst"
+ },
+ {
+  "t": "2026-11-19T17:47:12",
+  "soort": "info",
+  "tekst": "2026-11-19-5 online op instagram: Numeri 6:24-26"
  }
 ]

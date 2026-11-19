@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-19T17:31",
+ "gegenereerd": "2026-11-19T17:47",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1699,7 +1699,7 @@
    "ref": "Numeri 6:24-26",
    "tekst": "De HEERE zegene u, en behoede u! De HEERE doe Zijn aangezicht over u lichten, en zij u genadig! De HEERE verheffe Zijn aangezicht over u, en geve u vrede!",
    "hook": "Voor iedereen die vandaag een zegen kan gebruiken.",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "schaduw_rood",
     "thema": "vrede_rust",
@@ -1746,10 +1746,12 @@
    ],
    "thumb": "thumbs/2026-11-19-5.jpg",
    "platformen": [
-    "facebook"
+    "facebook",
+    "instagram"
    ],
    "links": {
-    "facebook": "https://www.facebook.com/2101082333873909"
+    "facebook": "https://www.facebook.com/2101082333873909",
+    "instagram": "https://www.instagram.com/reel/Df7irWMh8cN/"
    },
    "totaal": {
     "views": 0,
@@ -1811,7 +1813,8 @@
     }
    },
    "pub": {
-    "facebook": "2026-11-19T04:03+01:00"
+    "facebook": "2026-11-19T04:03+01:00",
+    "instagram": "2026-11-19T17:47+01:00"
    },
    "gemist": [],
    "nood": false,
@@ -1913,7 +1916,7 @@
    "ref": "Spreuken 16:18",
    "tekst": "Hovaardigheid is voor de verbreking, en hoogheid des geestes voor den val.",
    "hook": "",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "paars",
     "thema": "humor_herkenbaar",
@@ -1960,10 +1963,12 @@
    ],
    "thumb": "thumbs/2026-11-19-3.jpg",
    "platformen": [
-    "instagram"
+    "instagram",
+    "facebook"
    ],
    "links": {
-    "instagram": "https://www.instagram.com/reel/Df684KwPWu4/"
+    "instagram": "https://www.instagram.com/reel/Df684KwPWu4/",
+    "facebook": "https://www.facebook.com/1119210230730142"
    },
    "totaal": {
     "views": 12,
@@ -2025,7 +2030,8 @@
     }
    },
    "pub": {
-    "instagram": "2026-11-19T12:16+01:00"
+    "instagram": "2026-11-19T12:16+01:00",
+    "facebook": "2026-11-19T17:46+01:00"
    },
    "gemist": [],
    "nood": false,
@@ -2163,7 +2169,7 @@
    "ref": "Jeremia 29:11",
    "tekst": "Want Ik weet de gedachten, die Ik over u denk, spreekt de HEERE, gedachten des vredes, en niet des kwaads, dat Ik u geve het einde en de verwachting.",
    "hook": "Vandaag is een nieuwe kans. Lees dit eerst.",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "papier_groen",
     "thema": "hoop",
@@ -2210,10 +2216,12 @@
    ],
    "thumb": "thumbs/2026-11-19-1.jpg",
    "platformen": [
-    "instagram"
+    "instagram",
+    "facebook"
    ],
    "links": {
-    "instagram": "https://www.instagram.com/reel/Df6EW37vB8T/"
+    "instagram": "https://www.instagram.com/reel/Df6EW37vB8T/",
+    "facebook": "https://www.facebook.com/1749164979509933"
    },
    "totaal": {
     "views": 18,
@@ -2275,7 +2283,8 @@
     }
    },
    "pub": {
-    "instagram": "2026-11-19T04:03+01:00"
+    "instagram": "2026-11-19T04:03+01:00",
+    "facebook": "2026-11-19T17:45+01:00"
    },
    "gemist": [],
    "nood": false,
@@ -12268,26 +12277,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-17T14:38:54",
-   "soort": "info",
-   "tekst": "Dagelijkse run (zelfstandig): tekstbank aangevuld met 60 verzen (nu 257, ongeveer 41 dagen vrij), posts van 18 en 19 nov gecontroleerd (10 reels gerenderd), reserveverzen voor 19 nov ingevuld"
-  },
-  {
-   "t": "2026-11-17T17:46:13",
-   "soort": "info",
-   "tekst": "2026-11-17-5 online op facebook: Jakobus 3:13"
-  },
-  {
-   "t": "2026-11-17T17:47:48",
-   "soort": "info",
-   "tekst": "2026-11-17-2 ook als story geplaatst"
-  },
-  {
-   "t": "2026-11-17T17:47:48",
-   "soort": "info",
-   "tekst": "2026-11-17-2 online op instagram: Prediker 10:18"
-  },
-  {
    "t": "2026-11-17T18:46:07",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
@@ -12574,6 +12563,26 @@
    "t": "2026-11-19T16:20:44",
    "soort": "info",
    "tekst": "Bediening: Nieuws: maximaal per dag 1"
+  },
+  {
+   "t": "2026-11-19T17:45:56",
+   "soort": "info",
+   "tekst": "2026-11-19-1 online op facebook: Jeremia 29:11"
+  },
+  {
+   "t": "2026-11-19T17:46:03",
+   "soort": "info",
+   "tekst": "2026-11-19-3 online op facebook: Spreuken 16:18"
+  },
+  {
+   "t": "2026-11-19T17:47:12",
+   "soort": "info",
+   "tekst": "2026-11-19-5 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-19T17:47:12",
+   "soort": "info",
+   "tekst": "2026-11-19-5 online op instagram: Numeri 6:24-26"
   }
  ],
  "recente_fouten": [
@@ -12722,9 +12731,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-19T12:16",
+   "ok": "2026-11-19T17:47",
    "laatst_ok": true,
-   "detail": "Spreuken 16:18 geplaatst"
+   "detail": "Numeri 6:24-26 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-19T14:00",
@@ -12756,9 +12765,9 @@
    "fout": "2026-11-08T18:00"
   },
   "facebook": {
-   "ok": "2026-11-19T12:17",
+   "ok": "2026-11-19T17:46",
    "laatst_ok": true,
-   "detail": "Spreuken 26:17 geplaatst"
+   "detail": "Spreuken 16:18 geplaatst"
   },
   "statistieken": {
    "ok": "2026-11-19T14:00",
@@ -12889,9 +12898,9 @@
  ],
  "weken": {
   "deze": {
-   "posts": 30,
-   "reach": 832,
-   "views": 900,
+   "posts": 33,
+   "reach": 860,
+   "views": 930,
    "likes": 17,
    "comments": 0,
    "saves": 3,
@@ -13442,7 +13451,7 @@
   "tot": "2026-11-30",
   "dag": 4,
   "dagen": 14,
-  "online": 15,
+  "online": 18,
   "gemeten": 7
  },
  "voorraad": {
@@ -17106,24 +17115,24 @@
      },
      {
       "optie": "spreuken",
-      "online": 1,
-      "gepland": 5,
+      "online": 2,
+      "gepland": 4,
       "n": 1,
       "gem": 0.24,
       "oordeel": "weinig data"
      },
      {
       "optie": "wijsheid",
-      "online": 1,
-      "gepland": 1,
+      "online": 2,
+      "gepland": 0,
       "n": 1,
       "gem": 0.17,
       "oordeel": "weinig data"
      },
      {
       "optie": "profeten",
-      "online": 2,
-      "gepland": 2,
+      "online": 3,
+      "gepland": 1,
       "n": 1,
       "gem": 2.05,
       "oordeel": "weinig data"
