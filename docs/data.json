@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-19T18:31",
+ "gegenereerd": "2026-11-19T18:45",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -2241,6 +2241,16 @@
      "saves": 0,
      "follows": null,
      "t": "2026-11-19T16:01+01:00"
+    },
+    "facebook": {
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "t": null
     }
    },
    "score": {},
@@ -2278,6 +2288,17 @@
       "comments": 0,
       "shares": 0,
       "saves": 0,
+      "follows": null
+     }
+    },
+    "facebook": {
+     "1u": {
+      "views": 0,
+      "reach": null,
+      "likes": null,
+      "comments": null,
+      "shares": null,
+      "saves": null,
       "follows": null
      }
     }
@@ -12277,11 +12298,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-17T18:46:07",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
-  },
-  {
    "t": "2026-11-17T19:03:09",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
@@ -12583,6 +12599,11 @@
    "t": "2026-11-19T17:47:12",
    "soort": "info",
    "tekst": "2026-11-19-5 online op instagram: Numeri 6:24-26"
+  },
+  {
+   "t": "2026-11-19T18:45:45",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
   }
  ],
  "recente_fouten": [
