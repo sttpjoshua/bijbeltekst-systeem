@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T15:45:43",
+ "updated": "2026-11-19T16:03:15",
  "agents": {
   "verskiezer": {
    "t": "2026-11-19T09:11:06",
@@ -32,7 +32,7 @@
    "state": "done"
   },
   "community": {
-   "t": "2026-11-19T15:01:39",
+   "t": "2026-11-19T16:01:41",
    "task": "1 nieuwe reactie gevonden",
    "state": "done"
   }
@@ -164,9 +164,9 @@
   ]
  },
  "top_post": {
-  "ref": "Psalm 27:14",
-  "thumb": "thumbs/2026-11-17-1.jpg",
-  "bereik": 62,
+  "ref": "Openbaring 21:4",
+  "thumb": "thumbs/2026-11-18-5.jpg",
+  "bereik": 64,
   "score": 3.0,
   "formaat": "video"
  },
