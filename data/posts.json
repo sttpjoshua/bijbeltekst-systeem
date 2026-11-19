@@ -11018,7 +11018,32 @@
   "media": "docs/media/2026-11/2026-11-19-4.mp4",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-19-4.mp4",
   "metricool": {},
-  "stats": {},
+  "stats": {
+   "instagram": {
+    "1u": {
+     "views": 14,
+     "reach": 10,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "avg_watch_ms": 1737
+    }
+   },
+   "facebook": {
+    "1u": {
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "avg_watch_ms": null
+    }
+   }
+  },
   "beeld": "pexels-leticia-alvares-1805702-38774608.jpg",
   "muziek": "ES_The Bird's World - Elm Lake.mp3",
   "geluid": "ES_Ambience, Lakeside, Spring Day, Italy, Lake, Calm, Birds, Wood, Creaks 01 - Epidemic Sound.mp3",
