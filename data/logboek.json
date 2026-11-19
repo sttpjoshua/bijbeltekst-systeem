@@ -1,10 +1,5 @@
 [
  {
-  "t": "2026-11-07T14:34",
-  "soort": "info",
-  "tekst": "1 post klaargezet voor 8 nov 07:30 (Jesaja 43:19, carrousel)"
- },
- {
   "t": "2026-11-07T14:55",
   "soort": "info",
   "tekst": "Verbinding met Instagram werkt (@bibleverse_nl)"
@@ -2542,5 +2537,12 @@
   "t": "2026-11-19T05:15:52",
   "soort": "info",
   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
+ },
+ {
+  "t": "2026-11-19T07:01:33",
+  "soort": "fout",
+  "tekst": "Politiek nieuws (NOS): \"Wekdienst 19/11: Xi, Poetin en Trump met elkaar om tafel • Uitspraak in genocidezaak Myanm\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
+  "code": "nieuws_voorstel",
+  "post": "n111907010"
  }
 ]

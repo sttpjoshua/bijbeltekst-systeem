@@ -1,1 +1,50 @@
-[]
+[
+ {
+  "t": "2026-11-19T07:01+01:00",
+  "soort": "direct",
+  "tekst": "📰 *Nieuwsvoorstel* (politiek, altijd neutraal)\nNOS: Wekdienst 19/11: Xi, Poetin en Trump met elkaar om tafel • Uitspraak in genocidezaak Myanmar\n\n*Optie 1:* Hebreeën 4:9\nOpening: \"Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.\"\n*Optie 2:* Spreuken 16:32\nOpening: \"Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.\"\n*Optie 3:* Psalm 116:7\nOpening: \"Veel meningen, veel onrust. Even terug naar wat vaststaat.\"\n\nKies een optie, of pas de openingszin aan in het dashboard.",
+  "sleutel": "nieuws:n111907010",
+  "knoppen": [
+   [
+    [
+     "Optie 1",
+     {
+      "actie": "nieuws_maken",
+      "id": "n111907010",
+      "keuze": 0
+     }
+    ],
+    [
+     "Optie 2",
+     {
+      "actie": "nieuws_maken",
+      "id": "n111907010",
+      "keuze": 1
+     }
+    ],
+    [
+     "Optie 3",
+     {
+      "actie": "nieuws_maken",
+      "id": "n111907010",
+      "keuze": 2
+     }
+    ]
+   ],
+   [
+    [
+     "Negeren",
+     {
+      "actie": "nieuws_negeren",
+      "id": "n111907010"
+     }
+    ]
+   ]
+  ],
+  "fotos": [
+   "docs/media/nieuws/n111907010-1-1.jpg",
+   "docs/media/nieuws/n111907010-2-1.jpg",
+   "docs/media/nieuws/n111907010-3-1.jpg"
+  ]
+ }
+]
