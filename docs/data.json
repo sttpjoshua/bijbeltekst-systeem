@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-19T21:45",
+ "gegenereerd": "2026-11-19T22:05",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1754,8 +1754,8 @@
     "instagram": "https://www.instagram.com/reel/Df7irWMh8cN/"
    },
    "totaal": {
-    "views": 1,
-    "reach": 0,
+    "views": 17,
+    "reach": 15,
     "likes": 0,
     "comments": 0,
     "shares": 0,
@@ -1770,17 +1770,17 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     },
     "instagram": {
-     "views": 1,
-     "reach": 0,
+     "views": 17,
+     "reach": 15,
      "likes": 0,
      "comments": 0,
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     }
    },
    "score": {},
@@ -1903,8 +1903,8 @@
     "facebook": "https://www.facebook.com/2145940366033043"
    },
    "totaal": {
-    "views": 14,
-    "reach": 10,
+    "views": 19,
+    "reach": 14,
     "likes": 0,
     "comments": 0,
     "shares": 0,
@@ -1912,14 +1912,14 @@
    },
    "per_platform": {
     "instagram": {
-     "views": 14,
-     "reach": 10,
+     "views": 19,
+     "reach": 14,
      "likes": 0,
      "comments": 0,
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": null
+     "t": "2026-11-19T22:02+01:00"
     },
     "facebook": {
      "views": 0,
@@ -1929,7 +1929,7 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": null
+     "t": "2026-11-19T22:02+01:00"
     }
    },
    "score": {},
@@ -2052,8 +2052,8 @@
     "facebook": "https://www.facebook.com/1119210230730142"
    },
    "totaal": {
-    "views": 17,
-    "reach": 15,
+    "views": 23,
+    "reach": 17,
     "likes": 0,
     "comments": 0,
     "shares": 0,
@@ -2061,14 +2061,14 @@
    },
    "per_platform": {
     "instagram": {
-     "views": 17,
-     "reach": 15,
+     "views": 23,
+     "reach": 17,
      "likes": 0,
      "comments": 0,
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     },
     "facebook": {
      "views": 0,
@@ -2078,7 +2078,7 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     }
    },
    "score": {},
@@ -2146,7 +2146,7 @@
    "ref": "Spreuken 26:17",
    "tekst": "De voorbijgaande, die zich vertoornt in een twist, die hem niet aangaat, is gelijk die een hond bij de oren grijpt.",
    "hook": "Laat vandaag één discussie bewust aan je voorbijgaan.",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "papier_rood",
     "thema": "humor_herkenbaar",
@@ -2193,10 +2193,12 @@
    ],
    "thumb": "thumbs/2026-11-19-2.jpg",
    "platformen": [
-    "facebook"
+    "facebook",
+    "instagram"
    ],
    "links": {
-    "facebook": "https://www.facebook.com/2483411898851593"
+    "facebook": "https://www.facebook.com/2483411898851593",
+    "instagram": "https://www.instagram.com/reel/Df8ANQIBBpI/"
    },
    "totaal": {
     "views": 0,
@@ -2215,7 +2217,7 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     }
    },
    "score": {},
@@ -2258,7 +2260,8 @@
     }
    },
    "pub": {
-    "facebook": "2026-11-19T12:17+01:00"
+    "facebook": "2026-11-19T12:17+01:00",
+    "instagram": "2026-11-19T22:05+01:00"
    },
    "gemist": [],
    "nood": false,
@@ -2326,8 +2329,8 @@
     "facebook": "https://www.facebook.com/1749164979509933"
    },
    "totaal": {
-    "views": 20,
-    "reach": 19,
+    "views": 21,
+    "reach": 20,
     "likes": 0,
     "comments": 0,
     "shares": 0,
@@ -2335,14 +2338,14 @@
    },
    "per_platform": {
     "instagram": {
-     "views": 20,
-     "reach": 19,
+     "views": 21,
+     "reach": 20,
      "likes": 0,
      "comments": 0,
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     },
     "facebook": {
      "views": 0,
@@ -2352,7 +2355,7 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     }
    },
    "score": {},
@@ -2475,8 +2478,8 @@
     "facebook": "https://www.facebook.com/1856945978833959"
    },
    "totaal": {
-    "views": 95,
-    "reach": 80,
+    "views": 96,
+    "reach": 81,
     "likes": 5,
     "comments": 0,
     "shares": 0,
@@ -2484,14 +2487,14 @@
    },
    "per_platform": {
     "instagram": {
-     "views": 95,
-     "reach": 80,
+     "views": 96,
+     "reach": 81,
      "likes": 5,
      "comments": 0,
      "shares": 0,
      "saves": 2,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     },
     "facebook": {
      "views": 0,
@@ -2501,7 +2504,7 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     }
    },
    "score": {
@@ -2636,7 +2639,7 @@
    },
    "totaal": {
     "views": 20,
-    "reach": 19,
+    "reach": 20,
     "likes": 0,
     "comments": 0,
     "shares": 0,
@@ -2651,17 +2654,17 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     },
     "instagram": {
      "views": 20,
-     "reach": 19,
+     "reach": 20,
      "likes": 0,
      "comments": 0,
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     }
    },
    "score": {},
@@ -2809,7 +2812,7 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     },
     "facebook": {
      "views": 0,
@@ -2819,7 +2822,7 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     }
    },
    "score": {},
@@ -2976,7 +2979,7 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     },
     "facebook": {
      "views": 0,
@@ -2986,7 +2989,7 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     }
    },
    "score": {
@@ -3129,8 +3132,8 @@
     "instagram": "https://www.instagram.com/reel/Df5baK_z79U/"
    },
    "totaal": {
-    "views": 20,
-    "reach": 20,
+    "views": 21,
+    "reach": 21,
     "likes": 1,
     "comments": 0,
     "shares": 0,
@@ -3145,17 +3148,17 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     },
     "instagram": {
-     "views": 20,
-     "reach": 20,
+     "views": 21,
+     "reach": 21,
      "likes": 1,
      "comments": 0,
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     }
    },
    "score": {},
@@ -3300,7 +3303,7 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     },
     "facebook": {
      "views": 0,
@@ -3310,7 +3313,7 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     }
    },
    "score": {
@@ -3463,7 +3466,7 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     },
     "facebook": {
      "views": 0,
@@ -3473,7 +3476,7 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     }
    },
    "score": {},
@@ -3624,7 +3627,7 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     },
     "instagram": {
      "views": 41,
@@ -3634,7 +3637,7 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     }
    },
    "score": {
@@ -3787,7 +3790,7 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     },
     "facebook": {
      "views": 0,
@@ -3797,7 +3800,7 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     }
    },
    "score": {
@@ -3950,7 +3953,7 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     },
     "facebook": {
      "views": 0,
@@ -3960,7 +3963,7 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     }
    },
    "score": {
@@ -4106,7 +4109,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     },
     "facebook": {
      "views": null,
@@ -4116,7 +4119,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     }
    },
    "score": {},
@@ -4252,7 +4255,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     },
     "facebook": {
      "views": null,
@@ -4262,7 +4265,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     }
    },
    "score": {},
@@ -4398,7 +4401,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     },
     "facebook": {
      "views": null,
@@ -4408,7 +4411,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     }
    },
    "score": {},
@@ -4551,7 +4554,7 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     },
     "instagram": {
      "views": 40,
@@ -4561,7 +4564,7 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     }
    },
    "score": {
@@ -4965,7 +4968,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     },
     "facebook": {
      "views": null,
@@ -4975,7 +4978,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     }
    },
    "score": {},
@@ -5123,7 +5126,7 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     },
     "facebook": {
      "views": 0,
@@ -5133,7 +5136,7 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     }
    },
    "score": {
@@ -5281,7 +5284,7 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     },
     "instagram": {
      "views": 131,
@@ -5291,7 +5294,7 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     }
    },
    "score": {
@@ -5439,7 +5442,7 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     },
     "facebook": {
      "views": 0,
@@ -5449,7 +5452,7 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     }
    },
    "score": {
@@ -5596,7 +5599,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     },
     "facebook": {
      "views": null,
@@ -5606,7 +5609,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     }
    },
    "score": {},
@@ -5750,7 +5753,7 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     },
     "instagram": {
      "views": 29,
@@ -5760,7 +5763,7 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     }
    },
    "score": {
@@ -5905,7 +5908,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     },
     "facebook": {
      "views": null,
@@ -5915,7 +5918,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     }
    },
    "score": {},
@@ -6056,7 +6059,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     },
     "instagram": {
      "views": 1,
@@ -6066,7 +6069,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     }
    },
    "score": {},
@@ -6208,7 +6211,7 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     },
     "facebook": {
      "views": 0,
@@ -6218,7 +6221,7 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     }
    },
    "score": {
@@ -6366,7 +6369,7 @@
      "shares": 0,
      "saves": 1,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     },
     "facebook": {
      "views": 0,
@@ -6376,7 +6379,7 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     }
    },
    "score": {
@@ -6524,7 +6527,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     },
     "instagram": {
      "views": 0,
@@ -6534,7 +6537,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     }
    },
    "score": {},
@@ -6679,7 +6682,7 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     },
     "facebook": {
      "views": 0,
@@ -6689,7 +6692,7 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     }
    },
    "score": {},
@@ -6835,7 +6838,7 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     },
     "instagram": {
      "views": 37,
@@ -6845,7 +6848,7 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     }
    },
    "score": {
@@ -6993,7 +6996,7 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     },
     "facebook": {
      "views": 0,
@@ -7003,7 +7006,7 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     }
    },
    "score": {},
@@ -7149,7 +7152,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     },
     "instagram": {
      "views": 1,
@@ -7159,7 +7162,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     }
    },
    "score": {},
@@ -7303,7 +7306,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     },
     "facebook": {
      "views": null,
@@ -7313,7 +7316,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     }
    },
    "score": {},
@@ -7472,7 +7475,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-19T19:02+01:00"
+     "t": "2026-11-19T22:02+01:00"
     }
    },
    "score": {},
@@ -12400,16 +12403,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-17T20:33:08",
-   "soort": "info",
-   "tekst": "2026-11-17-3 online op facebook: 1 Petrus 4:8"
-  },
-  {
-   "t": "2026-11-17T21:45:42",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 4 posts vastgelegd"
-  },
-  {
    "t": "2026-11-17T22:03:16",
    "soort": "info",
    "tekst": "2026-11-17-3 ook als story geplaatst"
@@ -12706,6 +12699,16 @@
    "t": "2026-11-19T21:45:50",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-19T22:05:14",
+   "soort": "info",
+   "tekst": "2026-11-19-2 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-19T22:05:14",
+   "soort": "info",
+   "tekst": "2026-11-19-2 online op instagram: Spreuken 26:17"
   }
  ],
  "recente_fouten": [
@@ -12854,9 +12857,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-19T20:32",
+   "ok": "2026-11-19T22:05",
    "laatst_ok": true,
-   "detail": "Spreuken 19:24 geplaatst"
+   "detail": "Spreuken 26:17 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-19T14:00",
@@ -12882,7 +12885,7 @@
    "ok": "2026-11-16T13:51"
   },
   "reacties": {
-   "ok": "2026-11-19T21:01",
+   "ok": "2026-11-19T22:02",
    "laatst_ok": true,
    "detail": "1 nieuwe reacties",
    "fout": "2026-11-08T18:00"
@@ -13021,9 +13024,9 @@
  ],
  "weken": {
   "deze": {
-   "posts": 34,
-   "reach": 901,
-   "views": 976,
+   "posts": 35,
+   "reach": 926,
+   "views": 1006,
    "likes": 19,
    "comments": 0,
    "saves": 3,
@@ -13574,7 +13577,7 @@
   "tot": "2026-11-30",
   "dag": 4,
   "dagen": 14,
-  "online": 19,
+  "online": 20,
   "gemeten": 7
  },
  "voorraad": {
@@ -17238,8 +17241,8 @@
      },
      {
       "optie": "spreuken",
-      "online": 3,
-      "gepland": 3,
+      "online": 4,
+      "gepland": 2,
       "n": 1,
       "gem": 0.24,
       "oordeel": "weinig data"
