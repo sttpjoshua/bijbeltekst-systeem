@@ -1,10 +1,5 @@
 [
  {
-  "t": "2026-11-07T15:19",
-  "soort": "info",
-  "tekst": "Bediening: Snel leren aangezet tot 2026-11-14: 5 posts per dag, elke dag leren"
- },
- {
   "t": "2026-11-07T22:24",
   "soort": "info",
   "tekst": "4 extra posts voor 8 november gemaakt (snel leren stond na de dagelijkse run aan)"
@@ -2544,5 +2539,10 @@
   "t": "2026-11-19T14:34:26",
   "soort": "info",
   "tekst": "Dagelijkse run: 10 posts voor 20 en 21 nov staan klaar (zelfstandig gemaakt, gecontroleerd); reserveverzen voor 21 nov ingevuld"
+ },
+ {
+  "t": "2026-11-19T16:20:44",
+  "soort": "info",
+  "tekst": "Bediening: Nieuws: maximaal per dag 1"
  }
 ]
