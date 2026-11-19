@@ -216,6 +216,14 @@ def _themas(cat, zwaar):
     return ["troost", "hoop", "vrede_rust"] if zwaar else (["wijsheid", "vrede_rust", "vertrouwen"] if cat == "politiek" else LICHT[cat]["themas"])
 
 
+def _goedgekeurd(soort, cat):
+    """Door Joshua goedgekeurde zinnen van de lokale AI (data/nieuws_extra.json); nooit voor zwaar nieuws of politiek."""
+    try:
+        return list(json.load(open("data/nieuws_extra.json", encoding="utf-8")).get(soort, {}).get(cat, []))
+    except (OSError, ValueError):
+        return []
+
+
 def _zinnen(cat, zwaar, kop=""):
     """Openingszinnen die het moment noemen; bij bepaalde woorden in de kop eerst de specifiekere zinnen."""
     if zwaar:
@@ -224,12 +232,13 @@ def _zinnen(cat, zwaar, kop=""):
         return POLITIEK_ZINNEN
     k = " " + kop.lower() + " "
     sub = [z for woorden, zinnen in LICHT[cat].get("subs", []) if any(w in k for w in woorden) for z in zinnen]
-    return sub + LICHT[cat]["zinnen"] if sub else LICHT[cat]["zinnen"]
+    basis = LICHT[cat]["zinnen"] + _goedgekeurd("zinnen", cat)  # plus zinnen van de lokale AI die Joshua goedkeurde
+    return sub + basis if sub else basis
 
 
 def _brug(cat, zwaar, item, vers_id=""):
     """Eén zin voor de uitleg: waarom dit vers bij dit moment past (vast per nieuwsitem en vers)."""
-    lijst = BRUGGEN["zwaar" if zwaar else cat]
+    lijst = BRUGGEN["zwaar" if zwaar else cat] + ([] if zwaar else _goedgekeurd("bruggen", cat))
     return random.Random(item["kop"] + vers_id).choice(lijst)
 
 

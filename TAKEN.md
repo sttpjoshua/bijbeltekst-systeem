@@ -204,3 +204,4 @@ Carrousel in de meelees-stijl (12 nov): dimensie `carrousel_stijl` (standaard | 
 
 ## Reeltekst meer in het midden (18 nov)
 - reels.PLAATSING: midden 0.46, boven 0.37 (was 0.25). Het tekstblok blijft binnen de veilige zone van Instagram (17 tot 74 procent van de hoogte); lange verzen krijgen een kleinere letter. Geplande reels met plaatsing boven zijn opnieuw gemaakt.
+- Lokale AI (19 nov): Mac-programma tools/mac/bijbel_helper.py schrijft concepten (data/concepten.json) voor tekstbank en lichte nieuwszinnen; goedkeuren in dashboard (Tekstbank, blok Lokale AI); src/concepten.py; goedgekeurde nieuwszinnen in data/nieuws_extra.json.

@@ -387,7 +387,7 @@ html[data-thema=donker] .kpost .knws{background:#3a2e14;color:#ffd98a}
         <div class="blok"><h3>Experimenteren: <span id="vVerk"></span></h3><input type="range" id="rVerk" min="10" max="40" step="5"><button class="btn" id="sVerk">Opslaan</button><div class="sub" style="margin-top:6px">Hoe vaak het systeem iets nieuws probeert in plaats van wat al goed werkt.</div></div>
       </div>
       <h3 class="bkop">📚 Tekstbank</h3>
-      <div class="bed"><div class="blok" style="grid-column:1/-1"><div id="bTekstbank"></div></div></div>
+      <div class="bed"><div class="blok" style="grid-column:1/-1"><div id="bConcepten"></div><div id="bTekstbank"></div></div></div>
       <h3 class="bkop">🔔 Meldingen</h3>
       <div class="bed">
         <div class="blok" style="grid-column:1/-1"><h3>Meldingen op je telefoon (Telegram)</h3><div id="bWa"></div></div>
@@ -439,7 +439,7 @@ function bouw(){
   const p=D.posts;
   try{const gem=D.posts.filter(x=>x.totaal&&(x.totaal.reach!=null||x.totaal.views!=null)&&x.score&&Object.keys(x.score).length).length;
     document.getElementById("gewSam").textContent=gem<6?`(wordt interessant vanaf 6 gemeten posts; nu ${gem})`:"";if(gem>=6)document.getElementById("gewDet").open=true}catch(e){}
-  bouwNieuwsKeuze();bouwAandacht();bouwVandaag();bouwWeekVgl();bouwAB();bouwMaand();bouwTekstbank();bouwReacties();bouwVolgende();bouwLaatst();bouwVerzoeken();bouwGezondheid();bouwTegels();bouwSnelLeren();bouwGroei();bouwTop();bouwInzichten();bouwExperimenten();bouwVoorraad();
+  bouwNieuwsKeuze();bouwAandacht();bouwVandaag();bouwWeekVgl();bouwAB();bouwMaand();bouwConcepten();bouwTekstbank();bouwReacties();bouwVolgende();bouwLaatst();bouwVerzoeken();bouwGezondheid();bouwTegels();bouwSnelLeren();bouwGroei();bouwTop();bouwInzichten();bouwExperimenten();bouwVoorraad();
   {const x=D.experimenten||{};const ex=x.actief?`Test loopt: ${(x.onderdelen||[]).map(o=>(NAMEN[o.dimensie]||o.dimensie).toLowerCase()).join(", ")}`:x.snel?"Snel leren staat aan":"Geen test actief";
    inklap("experimenten","Waar het systeem mee experimenteert",ex,false,true);
    inklap("abKaart","Wat werkt beter?","Vergelijkingen per onderdeel",false,true);
@@ -647,6 +647,30 @@ function bouwMaand(){
       ${ins.map(i=>`<div class="inzicht"><div class="sub">Analyse ${esc(i.datum)}</div>${esc(i.tekst)}</div>`).join("")}</div>`;
   document.getElementById("mndKies").onchange=e=>{MAANDSEL=e.target.value;bouwMaand()};
   document.getElementById("mndPrint").onclick=()=>{document.querySelectorAll("#maandKaart details").forEach(d=>d.open=true);document.body.classList.add("printmaand");const w=()=>{document.body.classList.remove("printmaand");window.removeEventListener("afterprint",w)};window.addEventListener("afterprint",w);window.print()};
+}
+function bouwConcepten(){
+  const el=document.getElementById("bConcepten");if(!el)return;
+  const A=D.lokale_ai||{verzen:[],nieuws:[],mac:{},zonder_tekst:0},mac=A.mac||{};
+  const nu=Date.now(),t=mac.t?new Date(mac.t).getTime():0,uren=t?(nu-t)/36e5:null;
+  const leeft=uren!==null&&uren<8;
+  const status=!t?"Het Mac-programma heeft zich nog niet gemeld.":(leeft?`Mac-programma actief (laatst gezien ${Math.round(uren*10)/10<1?"minder dan een uur":Math.round(uren)+" uur"} geleden, ${esc(mac.model||"")}).`:`Mac-programma laatst gezien ${Math.round(uren)} uur geleden: staat je Mac uit? Het systeem draait gewoon door.`);
+  const V=A.verzen||[],N=A.nieuws||[],goed=V.filter(x=>!x.fouten.length).length;
+  const toon=V.slice(0,5);
+  el.innerHTML=`<h3 style="margin:0 0 4px">Lokale AI: concepten ter goedkeuring</h3>
+    <div class="sub">${status} ${A.zonder_tekst} verzen hebben nog geen tekst en kunnen daarom nog niet gekozen worden. Niets komt in de tekstbank zonder jouw akkoord.</div>
+    ${V.length||N.length?`<div class="sub" style="margin-top:6px"><b>${V.length}</b> teksten voor verzen (${goed} haalden de controle)${N.length?`, <b>${N.length}</b> nieuwszinnen`:""}.</div>`:`<div class="leeg">Geen concepten die wachten.</div>`}
+    ${goed?`<div style="margin:8px 0"><button class="btn prim" data-cok-alles="1">Keur alle ${goed} goed die de controle haalden</button></div>`:""}
+    ${toon.map(x=>`<div class="tbr"><div><b>${esc(x.ref)}</b><span class="kw">${esc(x.e.kw)}</span><div class="sub">${esc(x.tekst)}</div></div>
+      <div style="font-size:13px"><b>Wat betekent dit?</b> ${esc(x.e.betekenis)}<br><b>Vandaag:</b> ${esc(x.e.toepassing)}<br><span class="sub">${esc(x.e.hooks.herkenning)} · ${esc((x.e.tags||[]).join(" "))}</span>${x.fouten.length?`<div class="sub" style="color:var(--rood,#c0392b)">Controle: ${esc(x.fouten.join("; "))}</div>`:""}</div>
+      <div class="seg"><button class="btn prim" data-cok="${esc(x.id)}" ${x.fouten.length?"disabled":""}>Goed</button><button class="btn" data-cnee="${esc(x.id)}">Nee</button></div></div>`).join("")}
+    ${V.length>toon.length?`<div class="sub">En nog ${V.length-toon.length} concepten; na het nakijken van deze komen de volgende.</div>`:""}
+    ${N.length?`<details style="margin-top:8px"><summary class="sub">Nieuwszinnen (${N.length})</summary>${N.slice(0,12).map(x=>`<div class="tbr"><div class="sub">${esc(x.cat)} · ${x.soort==="bruggen"?"brug":"opening"}</div><div style="font-size:13px">${esc(x.tekst)}</div><div class="seg"><button class="btn prim" data-nok="${esc(x.soort)}§§${esc(x.cat)}§§${esc(x.tekst)}">Goed</button><button class="btn" data-nnee="${esc(x.soort)}§§${esc(x.cat)}§§${esc(x.tekst)}">Nee</button></div></div>`).join("")}</details>`:""}`;
+  const byId=id=>V.find(x=>x.id===id)||{};
+  el.querySelectorAll("[data-cok]").forEach(b=>b.onclick=()=>stuur({actie:"concept_ok",vers_id:b.dataset.cok,ref:byId(b.dataset.cok).ref},b));
+  el.querySelectorAll("[data-cnee]").forEach(b=>b.onclick=()=>stuur({actie:"concept_nee",vers_id:b.dataset.cnee,ref:byId(b.dataset.cnee).ref},b));
+  el.querySelectorAll("[data-cok-alles]").forEach(b=>b.onclick=()=>stuur({actie:"concept_alles"},b));
+  el.querySelectorAll("[data-nok]").forEach(b=>{const [soort,cat,tekst]=b.dataset.nok.split("§§");b.onclick=()=>stuur({actie:"nieuws_concept_ok",soort,cat,tekst},b)});
+  el.querySelectorAll("[data-nnee]").forEach(b=>{const [soort,cat,tekst]=b.dataset.nnee.split("§§");b.onclick=()=>stuur({actie:"nieuws_concept_nee",soort,cat,tekst},b)});
 }
 const TB={q:"",f:"alle",n:30,edit:null};
 function bouwTekstbank(){

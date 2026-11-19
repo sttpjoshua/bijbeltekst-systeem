@@ -1287,6 +1287,7 @@ def dashboard_extra(cfg, posts):
             "nood": {"klaar": len(nood_klaar()), "doel": NOOD_DOEL},
             "tekstbank": {**bank_voorraad(cfg), "zelfstandig": bool(cfg.get("zelfstandig"))},
             "tekstbank_lijst": _bank_lijst(cfg, posts),
+            "lokale_ai": _lokale_ai(),
             "nieuws": {"instelling": {**{"aan": True, "max_per_dag": 2, "licht_automatisch": True}, **(cfg.get("nieuws") or {})},
                        "recent": [{k: x.get(k) for k in ("id", "t", "bron", "kop", "link", "categorie", "zwaar", "status", "post", "opties")}
                                   for x in laad("data/nieuws.json", [])[-25:]][::-1]},
@@ -1761,6 +1762,15 @@ def automaak_dagen(cfg=None, posts=None):
         if len(klaar) < nodig or any(p["datum"] == d and p["status"] == "wacht_op_tekst" for p in posts):
             uit.append(d)
     return uit
+
+def _lokale_ai():
+    """Concepten van de lokale AI op de Mac (zie src/concepten.py). Nooit een reden dat het dashboard faalt."""
+    try:
+        import concepten
+        concepten.voorbeelden_schrijven()
+        return concepten.dashboard()
+    except Exception as ex:
+        return {"verzen": [], "nieuws": [], "zonder_tekst": 0, "mac": {}, "fout": str(ex)[:120]}
 
 def _bank_lijst(cfg, posts):
     """Voor het dashboard: alle verzen in de tekstbank met herkenningszin, laatst geplaatst en of ze uit staan."""

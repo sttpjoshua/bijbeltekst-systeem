@@ -1,0 +1,134 @@
+{
+ "storm": {
+  "zinnen": [
+   "Storm vandaag, met veel wind. Waar houd jij je aan vast als het waait?",
+   "Het stormt buiten. Binnen mag het stil worden.",
+   "De storm trekt over het land. Er is iets wat blijft staan."
+  ],
+  "bruggen": [
+   "Bij storm: houvast als het waait.",
+   "Als het stormt, kun je hierop rusten."
+  ]
+ },
+ "winter": {
+  "zinnen": [
+   "Winterweer vandaag. Een goed moment om even stil te staan.",
+   "Het is koud buiten. Tijd voor iets wat je van binnen warm maakt.",
+   "Langzaam aan vandaag. Dat mag."
+  ],
+  "bruggen": [
+   "In de winterkou: warmte van binnen.",
+   "Bij vorst en sneeuw: rust en warmte."
+  ]
+ },
+ "hitte": {
+  "zinnen": [
+   "Hittegolf: het is heet vandaag. Zoek de schaduw, en even rust.",
+   "Zo warm vandaag. Neem het rustig, ook van binnen.",
+   "Het is bloedheet. Waar vind jij verkoeling?"
+  ],
+  "bruggen": [
+   "Bij hitte: schaduw en verkwikking.",
+   "Te warm? Even op adem komen."
+  ]
+ },
+ "regen": {
+  "zinnen": [
+   "Het regent weer. Grijze lucht vandaag, maar hier is iets van licht.",
+   "Nat en grijs buiten. Even binnen blijven bij God.",
+   "Een natte dag. Water dat valt, brengt ook nieuw leven."
+  ],
+  "bruggen": [
+   "Op een natte dag: licht in het grijs.",
+   "Bij grijs weer: kleur van binnen."
+  ]
+ },
+ "sintmaarten": {
+  "zinnen": [
+   "Sint-Maarten vandaag: lampionnen en snoep. Het verhaal erachter gaat over delen.",
+   "Sint-Maarten deelde zijn mantel. Wie kun jij vandaag iets geven?",
+   "Vanavond lopen er lampionnen door de straat. Klein licht, maar het maakt verschil."
+  ],
+  "bruggen": [
+   "Sint-Maarten: delen en een klein licht.",
+   "Een klein licht doet ertoe."
+  ]
+ },
+ "sinterklaas": {
+  "zinnen": [
+   "Sinterklaas is in het land en heel Nederland denkt aan cadeaus. Dit is er één die blijft.",
+   "Het is Sinterklaastijd. Wat is het mooiste wat jij ooit kreeg?",
+   "Pakjes en pepernoten. En een gave die je niet hoeft te verdienen."
+  ],
+  "bruggen": [
+   "In Sinterklaastijd: wat God geeft.",
+   "Cadeaus zijn mooi, deze gave blijft."
+  ]
+ },
+ "sport": {
+  "zinnen": [
+   "Er wordt gejuicht om een overwinning vandaag. Ook jij hebt redenen om te juichen.",
+   "Winnen is mooi. Er is iets wat nog meer telt.",
+   "Goud voor de winnaar. En wat krijgt wie volhoudt?"
+  ],
+  "bruggen": [
+   "Bij een overwinning: wat blijft.",
+   "Winnen is mooi, volhouden telt."
+  ]
+ },
+ "drukte": {
+  "zinnen": [
+   "Files en vertragingen vandaag. Dit is voor die minuten in de auto of op het perron.",
+   "Treinen staan stil, wegen zitten vol. Misschien is dat niet eens zo erg.",
+   "Alles loopt vertraagd vandaag. Een kans om rustig te worden."
+  ],
+  "bruggen": [
+   "Staat alles stil? Dit is rust.",
+   "Moet je wachten? Sta even stil hierbij."
+  ]
+ },
+ "examens": {
+  "zinnen": [
+   "Het is examentijd en dat voelt spannend. Dit is voor jou.",
+   "Je hebt geleerd, je hebt je best gedaan. De rest mag je loslaten.",
+   "Examens of niet: wijsheid is meer dan een cijfer."
+  ],
+  "bruggen": [
+   "Voor wie spanning voelt: rust.",
+   "Spannend? Dit helpt om los te laten."
+  ]
+ },
+ "klok": {
+  "zinnen": [
+   "De klok is verzet, een uur erbij of eraf. Wat doe jij met je tijd?",
+   "Een uur extra of minder. Tijd is een geschenk.",
+   "Winter- of zomertijd: de dag heeft weer een andere vorm."
+  ],
+  "bruggen": [
+   "Nu de klok verzet is: tijd die blijft.",
+   "Over tijd gesproken: dit blijft."
+  ]
+ },
+ "koopjes": {
+  "zinnen": [
+   "Black Friday: overal aanbiedingen. Wat heb je eigenlijk al?",
+   "Iedereen jaagt op koopjes vandaag. Dit is gratis, en blijft.",
+   "Kortingen alom. En de beste dingen zijn niet te koop."
+  ],
+  "bruggen": [
+   "Midden in de koopjes: wat echt telt.",
+   "Wat is genoeg? Dit geeft antwoord."
+  ]
+ },
+ "maandag": {
+  "zinnen": [
+   "Blue Monday, de somberste dag van het jaar, zeggen ze. Hier is iets van hoop.",
+   "Voel je je somber vandaag? Je bent niet de enige.",
+   "Een zware maandag? Er is iets wat bij je blijft."
+  ],
+  "bruggen": [
+   "Op een sombere dag: hoop die blijft.",
+   "Zwaar? Hier kun je bij schuilen."
+  ]
+ }
+}
