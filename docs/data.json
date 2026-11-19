@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-19T14:31",
+ "gegenereerd": "2026-11-19T14:34",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -838,7 +838,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "2 Korinthe 9:15",
    "caption": "Voor iedereen die heen en weer geslingerd wordt.\n\n\"Welke wij hebben als een anker der ziel, hetwelk zeker en vast is, en ingaat in het binnenste van het voorhangsel.\"\nHebreeën 6:19\n\nHoop op God houdt je vast in de storm.",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-21-5-1.jpg",
@@ -930,7 +930,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Psalm 118:6",
    "caption": "Vandaag is een nieuwe kans. Lees dit eerst.\n\n\"Wentel uw weg op den HEERE, en vertrouw op Hem; Hij zal het maken.\"\nPsalm 37:5\n\nJe hoeft niet alles zelf te dragen.",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-21-4.mp4",
@@ -1019,7 +1019,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Psalm 73:26",
    "caption": "Lees dit vers en onderstreep 'levende hoop'.\n\n\"Geloofd zij de God en Vader van onzen Heere Jezus Christus, Die naar Zijn grote barmhartigheid ons heeft wedergeboren, tot een levende hoop, door de opstanding van Jezus Christus uit de doden.\"\n1 Petrus 1:3\n\nEen hoop die leeft.\n\nWat betekent een levende hoop voor jou?",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-21-3.mp4",
@@ -1108,7 +1108,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Jesaja 26:4",
    "caption": "Die dag dat je alles tegelijk wilt doen...\n\n\"En Jezus, antwoordende, zeide tot haar: Martha, Martha, gij bekommert en ontrust u over vele dingen; Maar een ding is nodig; doch Maria heeft het goede deel uitgekozen, hetwelk van haar niet zal weggenomen worden.\"\nLukas 10:41-42\n\nEén ding is nodig.",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-21-2.mp4",
@@ -1197,7 +1197,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Jesaja 41:13",
    "caption": "\"En nu blijft geloof, hoop en liefde, deze drie; doch de meeste van deze is de liefde.\"\n1 Korinthe 13:13\n\nLiefde is het belangrijkste wat er is.\n\nWat is voor jou de liefdevolle keuze vandaag?",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-21-1-1.jpg",
@@ -12268,16 +12268,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-17T14:19:16",
-   "soort": "info",
-   "tekst": "Statistieken opgehaald voor 18 posts"
-  },
-  {
-   "t": "2026-11-17T14:21:06",
-   "soort": "info",
-   "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
-  },
-  {
    "t": "2026-11-17T14:33:30",
    "soort": "info",
    "tekst": "Materiaal-repo niet gekloond (add_repo ontbreekt in deze sessie); GitHub Actions vult muziek aan"
@@ -12574,6 +12564,16 @@
    "t": "2026-11-19T14:00:45",
    "soort": "info",
    "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
+  },
+  {
+   "t": "2026-11-19T14:34:26",
+   "soort": "info",
+   "tekst": "Materiaal-repo niet gekloond (add_repo ontbreekt in deze sessie); GitHub Actions vult muziek zo nodig aan"
+  },
+  {
+   "t": "2026-11-19T14:34:26",
+   "soort": "info",
+   "tekst": "Dagelijkse run: 10 posts voor 20 en 21 nov staan klaar (zelfstandig gemaakt, gecontroleerd); reserveverzen voor 21 nov ingevuld"
   }
  ],
  "recente_fouten": [
@@ -12771,9 +12771,9 @@
    "detail": "18 onderdelen gemaakt en gecontroleerd"
   },
   "dagelijks": {
-   "ok": "2026-11-18T14:35",
+   "ok": "2026-11-19T14:34",
    "laatst_ok": true,
-   "detail": "10 posts voor MORGEN en OVERMORGEN klaargezet"
+   "detail": "10 posts voor 20 en 21 nov klaargezet"
   },
   "whatsapp": {
    "fout": "2026-11-11T13:49",

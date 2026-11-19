@@ -1,15 +1,5 @@
 [
  {
-  "t": "2026-11-07T15:06",
-  "soort": "info",
-  "tekst": "Statistieken lezen werkt"
- },
- {
-  "t": "2026-11-07T15:19",
-  "soort": "info",
-  "tekst": "Bediening: Posts per dag ingesteld op 3"
- },
- {
   "t": "2026-11-07T15:19",
   "soort": "info",
   "tekst": "Bediening: Snel leren aangezet tot 2026-11-14: 5 posts per dag, elke dag leren"
@@ -2544,5 +2534,15 @@
   "t": "2026-11-19T14:00:45",
   "soort": "info",
   "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
+ },
+ {
+  "t": "2026-11-19T14:34:26",
+  "soort": "info",
+  "tekst": "Materiaal-repo niet gekloond (add_repo ontbreekt in deze sessie); GitHub Actions vult muziek zo nodig aan"
+ },
+ {
+  "t": "2026-11-19T14:34:26",
+  "soort": "info",
+  "tekst": "Dagelijkse run: 10 posts voor 20 en 21 nov staan klaar (zelfstandig gemaakt, gecontroleerd); reserveverzen voor 21 nov ingevuld"
  }
 ]
