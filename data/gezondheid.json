@@ -5,20 +5,20 @@
   "detail": "Spreuken 16:18 geplaatst"
  },
  "instagram_lezen": {
-  "ok": "2026-11-18T14:03",
+  "ok": "2026-11-19T14:00",
   "laatst_ok": true,
   "detail": "5 volgers"
  },
  "sleutel_instagram": {
   "verloopt": "nooit",
   "geldig": true,
-  "ok": "2026-11-18T14:03",
+  "ok": "2026-11-19T14:00",
   "laatst_ok": true
  },
  "sleutel_facebook": {
   "verloopt": "nooit",
   "geldig": true,
-  "ok": "2026-11-18T14:03",
+  "ok": "2026-11-19T14:00",
   "laatst_ok": true
  },
  "materiaal_actions": {
@@ -28,7 +28,7 @@
   "ok": "2026-11-16T13:51"
  },
  "reacties": {
-  "ok": "2026-11-19T13:01",
+  "ok": "2026-11-19T14:00",
   "laatst_ok": true,
   "detail": "1 nieuwe reacties",
   "fout": "2026-11-08T18:00"
@@ -39,7 +39,7 @@
   "detail": "Spreuken 26:17 geplaatst"
  },
  "statistieken": {
-  "ok": "2026-11-18T14:03",
+  "ok": "2026-11-19T14:00",
   "laatst_ok": true,
   "detail": "21 nieuwe metingen"
  },
@@ -75,7 +75,7 @@
   "detail": "alles klopte"
  },
  "leren": {
-  "ok": "2026-11-18T14:03",
+  "ok": "2026-11-19T14:00",
   "laatst_ok": true,
   "detail": "dagelijks (snel leren)"
  },

@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-19T13:45",
+ "gegenereerd": "2026-11-19T14:00",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -36,8 +36,8 @@
   "extra_tijdsloten": []
  },
  "strategie": {
-  "versie": 4,
-  "bijgewerkt": "2026-11-18",
+  "versie": 5,
+  "bijgewerkt": "2026-11-19",
   "gewichten": {
    "huisstijl": {
     "avond": 0.35,
@@ -71,22 +71,22 @@
    },
    "hook_stijl": {
     "vraag": 1.0,
-    "herkenning": 1.12,
-    "uitdaging": 1.0,
+    "herkenning": 1.18,
+    "uitdaging": 1.042,
     "rustig": 1.0,
     "geen": 1.0
    },
    "formaat": {
-    "video": 1.057,
+    "video": 1.094,
     "carrousel": 1.0
    },
    "uitleg_op_beeld": {
-    "True": 1.0,
-    "False": 1.06
+    "True": 0.94,
+    "False": 1.12
    },
    "achtergrondbron": {
-    "verloop": 1.06,
-    "beeld": 0.78
+    "verloop": 1.043,
+    "beeld": 0.84
    },
    "boekgroep": {
     "psalmen": 1.0,
@@ -94,27 +94,27 @@
     "wijsheid": 1.0,
     "profeten": 1.0,
     "evangelien": 1.0,
-    "brieven": 1.12
+    "brieven": 1.18
    },
    "lengte": {
-    "kort": 1.0,
-    "middel": 0.88,
+    "kort": 1.06,
+    "middel": 0.94,
     "lang": 1.0
    },
    "bron": {
-    "bekend": 1.036,
+    "bekend": 1.096,
     "ontdekking": 1.0
    },
    "vraag_onderaan": {
-    "True": 1.094,
-    "False": 1.0
+    "True": 1.095,
+    "False": 1.06
    },
    "reel_stijl": {
     "klassiek": 1.0,
     "kinetisch": 1.0,
     "beeld": 1.0,
-    "situatie": 0.906,
-    "markeren": 1.0
+    "situatie": 0.868,
+    "markeren": 1.06
    },
    "carrousel_stijl": {
     "standaard": 1.0,
@@ -142,7 +142,7 @@
     "sterk": 1.0
    },
    "reel_plaatsing": {
-    "midden": 0.94,
+    "midden": 0.889,
     "boven": 1.0
    },
    "reel_scene": {
@@ -151,7 +151,7 @@
     "onderweg": 1.0
    },
    "reel_haak": {
-    "geen": 1.018,
+    "geen": 1.071,
     "vraag": 1.0
    },
    "opening": {
@@ -161,13 +161,13 @@
    },
    "hashtag_stijl": {
     "mix": 1.0,
-    "zoekwoord": 1.031,
+    "zoekwoord": 1.086,
     "zonder": 1.0
    },
    "tijdslot": {
     "04:00": 1.0,
     "12:15": 1.0,
-    "17:45": 1.0,
+    "17:45": 1.06,
     "20:30": 1.0,
     "22:00": 1.0
    }
@@ -183,109 +183,109 @@
     "roze": 2,
     "bosgroen": 0,
     "mint": 1,
-    "perzik": 0,
-    "papier_rood": 0,
-    "papier_groen": 0,
-    "papier_blauw": 0,
+    "perzik": 1,
+    "papier_rood": 1,
+    "papier_groen": 1,
+    "papier_blauw": 1,
     "schaduw_rood": 1,
     "schaduw_groen": 0,
     "schaduw_blauw": 0
    },
    "thema": {
-    "troost": 1,
-    "moed": 1,
-    "liefde": 1,
+    "troost": 2,
+    "moed": 2,
+    "liefde": 2,
     "hoop": 2,
     "vertrouwen": 0,
     "wijsheid": 2,
     "humor_herkenbaar": 1,
     "dankbaarheid": 1,
     "identiteit": 2,
-    "vrede_rust": 1
+    "vrede_rust": 2
    },
    "hook_stijl": {
     "vraag": 4,
     "herkenning": 5,
-    "uitdaging": 2,
-    "rustig": 1,
+    "uitdaging": 5,
+    "rustig": 2,
     "geen": 0
    },
    "formaat": {
-    "video": 12,
+    "video": 16,
     "carrousel": 0
    },
    "uitleg_op_beeld": {
-    "True": 4,
-    "False": 8
+    "True": 6,
+    "False": 10
    },
    "achtergrondbron": {
-    "verloop": 5,
-    "beeld": 7
+    "verloop": 8,
+    "beeld": 8
    },
    "boekgroep": {
-    "psalmen": 1,
+    "psalmen": 2,
     "spreuken": 1,
     "wijsheid": 1,
     "profeten": 1,
     "evangelien": 1,
-    "brieven": 6
+    "brieven": 9
    },
    "lengte": {
-    "kort": 3,
-    "middel": 7,
+    "kort": 5,
+    "middel": 9,
     "lang": 1
    },
    "bron": {
-    "bekend": 10,
+    "bekend": 14,
     "ontdekking": 1
    },
    "vraag_onderaan": {
-    "True": 7,
-    "False": 4
+    "True": 9,
+    "False": 6
    },
    "reel_stijl": {
     "klassiek": 0,
     "kinetisch": 0,
     "beeld": 0,
-    "situatie": 7,
-    "markeren": 3
+    "situatie": 8,
+    "markeren": 6
    },
    "carrousel_stijl": {
     "standaard": 0,
     "markeren": 0
    },
    "reel_kleur": {
-    "abrikoos": 0,
+    "abrikoos": 1,
     "mint": 1,
-    "hemel": 1,
-    "roze": 1,
+    "hemel": 2,
+    "roze": 2,
     "goud": 0
    },
    "markeer_achtergrond": {
     "kleur": 0,
-    "papier": 0,
+    "papier": 1,
     "schaduw": 0,
     "foto": 0
    },
    "markeer_streep": {
-    "regel": 0,
+    "regel": 1,
     "woord": 0
    },
    "markeer_opening": {
     "vers": 0,
-    "sterk": 0
+    "sterk": 1
    },
    "reel_plaatsing": {
-    "midden": 5,
+    "midden": 6,
     "boven": 2
    },
    "reel_scene": {
     "natuur": 1,
     "dichtbij": 3,
-    "onderweg": 3
+    "onderweg": 4
    },
    "reel_haak": {
-    "geen": 10,
+    "geen": 14,
     "vraag": 0
    },
    "opening": {
@@ -295,15 +295,15 @@
    },
    "hashtag_stijl": {
     "mix": 4,
-    "zoekwoord": 5,
-    "zonder": 1
+    "zoekwoord": 7,
+    "zonder": 3
    },
    "tijdslot": {
     "04:00": 0,
-    "12:15": 2,
-    "17:45": 4,
-    "20:30": 3,
-    "22:00": 2
+    "12:15": 3,
+    "17:45": 5,
+    "20:30": 4,
+    "22:00": 3
    }
   },
   "inzichten": [],
@@ -316,32 +316,32 @@
     },
     "zand": {
      "n": 2,
-     "gem": 1.68,
+     "gem": 1.75,
      "oordeel": "weinig data"
     },
     "salie": {
      "n": 2,
-     "gem": 0.89,
+     "gem": 1.07,
      "oordeel": "weinig data"
     },
     "zonsopgang": {
      "n": 1,
-     "gem": 0.83,
+     "gem": 0.77,
      "oordeel": "weinig data"
     },
     "hemelsblauw": {
      "n": 2,
-     "gem": 1.03,
+     "gem": 0.91,
      "oordeel": "weinig data"
     },
     "paars": {
      "n": 1,
-     "gem": 0.68,
+     "gem": 0.57,
      "oordeel": "weinig data"
     },
     "roze": {
      "n": 2,
-     "gem": 1.38,
+     "gem": 1.42,
      "oordeel": "weinig data"
     },
     "bosgroen": {
@@ -351,32 +351,32 @@
     },
     "mint": {
      "n": 1,
-     "gem": 0.62,
+     "gem": 0.65,
      "oordeel": "weinig data"
     },
     "perzik": {
-     "n": 0,
-     "gem": null,
+     "n": 1,
+     "gem": 1.8,
      "oordeel": "weinig data"
     },
     "papier_rood": {
-     "n": 0,
-     "gem": null,
+     "n": 1,
+     "gem": 1.09,
      "oordeel": "weinig data"
     },
     "papier_groen": {
-     "n": 0,
-     "gem": null,
+     "n": 1,
+     "gem": 1.42,
      "oordeel": "weinig data"
     },
     "papier_blauw": {
-     "n": 0,
-     "gem": null,
+     "n": 1,
+     "gem": 0.65,
      "oordeel": "weinig data"
     },
     "schaduw_rood": {
      "n": 1,
-     "gem": 0.81,
+     "gem": 0.62,
      "oordeel": "weinig data"
     },
     "schaduw_groen": {
@@ -392,23 +392,23 @@
    },
    "thema": {
     "troost": {
-     "n": 1,
-     "gem": 1.85,
+     "n": 2,
+     "gem": 2.51,
      "oordeel": "weinig data"
     },
     "moed": {
-     "n": 1,
-     "gem": 2.82,
+     "n": 2,
+     "gem": 2.56,
      "oordeel": "weinig data"
     },
     "liefde": {
-     "n": 1,
-     "gem": 2.01,
+     "n": 2,
+     "gem": 2.04,
      "oordeel": "weinig data"
     },
     "hoop": {
      "n": 2,
-     "gem": 1.37,
+     "gem": 1.11,
      "oordeel": "weinig data"
     },
     "vertrouwen": {
@@ -418,12 +418,12 @@
     },
     "wijsheid": {
      "n": 2,
-     "gem": 0.22,
+     "gem": 0.2,
      "oordeel": "weinig data"
     },
     "humor_herkenbaar": {
      "n": 1,
-     "gem": 0.22,
+     "gem": 0.17,
      "oordeel": "weinig data"
     },
     "dankbaarheid": {
@@ -433,34 +433,34 @@
     },
     "identiteit": {
      "n": 2,
-     "gem": 1.08,
+     "gem": 0.85,
      "oordeel": "weinig data"
     },
     "vrede_rust": {
-     "n": 1,
-     "gem": 0.16,
+     "n": 2,
+     "gem": 0.18,
      "oordeel": "weinig data"
     }
    },
    "hook_stijl": {
     "vraag": {
      "n": 4,
-     "gem": 0.82,
+     "gem": 0.83,
      "oordeel": "weinig data"
     },
     "herkenning": {
      "n": 5,
-     "gem": 1.39,
-     "oordeel": "waarschijnlijk beter"
+     "gem": 1.42,
+     "oordeel": "geen duidelijk verschil"
     },
     "uitdaging": {
-     "n": 2,
-     "gem": 1.06,
-     "oordeel": "weinig data"
+     "n": 5,
+     "gem": 1.08,
+     "oordeel": "geen duidelijk verschil"
     },
     "rustig": {
-     "n": 1,
-     "gem": 0.57,
+     "n": 2,
+     "gem": 1.03,
      "oordeel": "weinig data"
     },
     "geen": {
@@ -471,8 +471,8 @@
    },
    "formaat": {
     "video": {
-     "n": 12,
-     "gem": 1.08,
+     "n": 16,
+     "gem": 1.12,
      "oordeel": "geen duidelijk verschil"
     },
     "carrousel": {
@@ -483,99 +483,99 @@
    },
    "uitleg_op_beeld": {
     "True": {
-     "n": 4,
-     "gem": 0.64,
-     "oordeel": "weinig data"
+     "n": 6,
+     "gem": 0.8,
+     "oordeel": "geen duidelijk verschil"
     },
     "False": {
-     "n": 8,
-     "gem": 1.25,
+     "n": 10,
+     "gem": 1.44,
      "oordeel": "geen duidelijk verschil"
     }
    },
    "achtergrondbron": {
     "verloop": {
-     "n": 5,
-     "gem": 1.13,
+     "n": 8,
+     "gem": 1.06,
      "oordeel": "geen duidelijk verschil"
     },
     "beeld": {
-     "n": 7,
-     "gem": 1.04,
+     "n": 8,
+     "gem": 1.17,
      "oordeel": "geen duidelijk verschil"
     }
    },
    "boekgroep": {
     "psalmen": {
-     "n": 1,
-     "gem": 0.17,
+     "n": 2,
+     "gem": 1.13,
      "oordeel": "weinig data"
     },
     "spreuken": {
      "n": 1,
-     "gem": 0.26,
+     "gem": 0.24,
      "oordeel": "weinig data"
     },
     "wijsheid": {
      "n": 1,
-     "gem": 0.22,
+     "gem": 0.17,
      "oordeel": "weinig data"
     },
     "profeten": {
      "n": 1,
-     "gem": 2.01,
+     "gem": 2.05,
      "oordeel": "weinig data"
     },
     "evangelien": {
      "n": 1,
-     "gem": 0.16,
+     "gem": 0.19,
      "oordeel": "weinig data"
     },
     "brieven": {
-     "n": 6,
-     "gem": 1.31,
+     "n": 9,
+     "gem": 1.34,
      "oordeel": "geen duidelijk verschil"
     }
    },
    "lengte": {
     "kort": {
-     "n": 3,
-     "gem": 1.08,
-     "oordeel": "weinig data"
+     "n": 5,
+     "gem": 1.14,
+     "oordeel": "geen duidelijk verschil"
     },
     "middel": {
-     "n": 7,
-     "gem": 0.78,
+     "n": 9,
+     "gem": 1.03,
      "oordeel": "geen duidelijk verschil"
     },
     "lang": {
      "n": 1,
-     "gem": 2.01,
+     "gem": 2.05,
      "oordeel": "weinig data"
     }
    },
    "bron": {
     "bekend": {
-     "n": 10,
-     "gem": 1.05,
+     "n": 14,
+     "gem": 1.2,
      "oordeel": "geen duidelijk verschil"
     },
     "ontdekking": {
      "n": 1,
-     "gem": 0.18,
+     "gem": 0.15,
      "oordeel": "weinig data"
     }
    },
    "vraag_onderaan": {
     "True": {
-     "n": 7,
-     "gem": 1.15,
+     "n": 9,
+     "gem": 1.14,
      "oordeel": "geen duidelijk verschil"
     },
     "False": {
-     "n": 4,
-     "gem": 0.66,
-     "oordeel": "weinig data"
+     "n": 6,
+     "gem": 1.13,
+     "oordeel": "geen duidelijk verschil"
     }
    },
    "reel_stijl": {
@@ -595,14 +595,14 @@
      "oordeel": "weinig data"
     },
     "situatie": {
-     "n": 7,
-     "gem": 0.85,
-     "oordeel": "geen duidelijk verschil"
+     "n": 8,
+     "gem": 0.8,
+     "oordeel": "waarschijnlijk slechter"
     },
     "markeren": {
-     "n": 3,
-     "gem": 1.43,
-     "oordeel": "weinig data"
+     "n": 6,
+     "gem": 1.48,
+     "oordeel": "waarschijnlijk beter"
     }
    },
    "carrousel_stijl": {
@@ -619,23 +619,23 @@
    },
    "reel_kleur": {
     "abrikoos": {
-     "n": 0,
-     "gem": null,
+     "n": 1,
+     "gem": 1.8,
      "oordeel": "weinig data"
     },
     "mint": {
      "n": 1,
-     "gem": 1.27,
+     "gem": 1.29,
      "oordeel": "weinig data"
     },
     "hemel": {
-     "n": 1,
-     "gem": 2.4,
+     "n": 2,
+     "gem": 1.84,
      "oordeel": "weinig data"
     },
     "roze": {
-     "n": 1,
-     "gem": 0.62,
+     "n": 2,
+     "gem": 1.03,
      "oordeel": "weinig data"
     },
     "goud": {
@@ -651,8 +651,8 @@
      "oordeel": "weinig data"
     },
     "papier": {
-     "n": 0,
-     "gem": null,
+     "n": 1,
+     "gem": 1.8,
      "oordeel": "weinig data"
     },
     "schaduw": {
@@ -668,8 +668,8 @@
    },
    "markeer_streep": {
     "regel": {
-     "n": 0,
-     "gem": null,
+     "n": 1,
+     "gem": 1.8,
      "oordeel": "weinig data"
     },
     "woord": {
@@ -685,15 +685,15 @@
      "oordeel": "weinig data"
     },
     "sterk": {
-     "n": 0,
-     "gem": null,
+     "n": 1,
+     "gem": 1.8,
      "oordeel": "weinig data"
     }
    },
    "reel_plaatsing": {
     "midden": {
-     "n": 5,
-     "gem": 0.89,
+     "n": 6,
+     "gem": 0.81,
      "oordeel": "geen duidelijk verschil"
     },
     "boven": {
@@ -705,24 +705,24 @@
    "reel_scene": {
     "natuur": {
      "n": 1,
-     "gem": 0.61,
+     "gem": 0.72,
      "oordeel": "weinig data"
     },
     "dichtbij": {
      "n": 3,
-     "gem": 0.78,
+     "gem": 0.66,
      "oordeel": "weinig data"
     },
     "onderweg": {
-     "n": 3,
-     "gem": 1.01,
+     "n": 4,
+     "gem": 0.93,
      "oordeel": "weinig data"
     }
    },
    "reel_haak": {
     "geen": {
-     "n": 10,
-     "gem": 1.02,
+     "n": 14,
+     "gem": 1.09,
      "oordeel": "geen duidelijk verschil"
     },
     "vraag": {
@@ -751,17 +751,17 @@
    "hashtag_stijl": {
     "mix": {
      "n": 4,
-     "gem": 1.1,
+     "gem": 1.06,
      "oordeel": "weinig data"
     },
     "zoekwoord": {
-     "n": 5,
-     "gem": 1.06,
+     "n": 7,
+     "gem": 1.14,
      "oordeel": "geen duidelijk verschil"
     },
     "zonder": {
-     "n": 1,
-     "gem": 0.57,
+     "n": 3,
+     "gem": 1.03,
      "oordeel": "weinig data"
     }
    },
@@ -772,23 +772,23 @@
      "oordeel": "weinig data"
     },
     "12:15": {
-     "n": 2,
+     "n": 3,
      "gem": 0.45,
      "oordeel": "weinig data"
     },
     "17:45": {
-     "n": 4,
-     "gem": 1.06,
-     "oordeel": "weinig data"
+     "n": 5,
+     "gem": 1.23,
+     "oordeel": "geen duidelijk verschil"
     },
     "20:30": {
-     "n": 3,
-     "gem": 1.32,
+     "n": 4,
+     "gem": 1.47,
      "oordeel": "weinig data"
     },
     "22:00": {
-     "n": 2,
-     "gem": 1.13,
+     "n": 3,
+     "gem": 1.11,
      "oordeel": "weinig data"
     }
    }
@@ -1768,7 +1768,7 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     }
    },
    "score": {},
@@ -1966,8 +1966,8 @@
     "instagram": "https://www.instagram.com/reel/Df684KwPWu4/"
    },
    "totaal": {
-    "views": 1,
-    "reach": 0,
+    "views": 7,
+    "reach": 7,
     "likes": 0,
     "comments": 0,
     "shares": 0,
@@ -1975,14 +1975,14 @@
    },
    "per_platform": {
     "instagram": {
-     "views": 1,
-     "reach": 0,
+     "views": 7,
+     "reach": 7,
      "likes": 0,
      "comments": 0,
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     }
    },
    "score": {},
@@ -2107,7 +2107,7 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     }
    },
    "score": {},
@@ -2232,7 +2232,7 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     }
    },
    "score": {},
@@ -2343,8 +2343,8 @@
     "facebook": "https://www.facebook.com/1856945978833959"
    },
    "totaal": {
-    "views": 64,
-    "reach": 54,
+    "views": 66,
+    "reach": 55,
     "likes": 2,
     "comments": 0,
     "shares": 0,
@@ -2352,14 +2352,14 @@
    },
    "per_platform": {
     "instagram": {
-     "views": 64,
-     "reach": 54,
+     "views": 66,
+     "reach": 55,
      "likes": 2,
      "comments": 0,
      "shares": 0,
      "saves": 1,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     },
     "facebook": {
      "views": 0,
@@ -2369,10 +2369,12 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     }
    },
-   "score": {},
+   "score": {
+    "instagram": 3.0
+   },
    "keuzebron": {
     "huisstijl": "experiment",
     "thema": "experiment",
@@ -2407,6 +2409,15 @@
       "comments": 0,
       "shares": 0,
       "saves": 0,
+      "follows": null
+     },
+     "24u": {
+      "views": 66,
+      "reach": 55,
+      "likes": 2,
+      "comments": 0,
+      "shares": 0,
+      "saves": 1,
       "follows": null
      }
     },
@@ -2492,7 +2503,7 @@
     "instagram": "https://www.instagram.com/reel/Df5QzFDAaxK/"
    },
    "totaal": {
-    "views": 15,
+    "views": 16,
     "reach": 15,
     "likes": 0,
     "comments": 0,
@@ -2508,17 +2519,17 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     },
     "instagram": {
-     "views": 15,
+     "views": 16,
      "reach": 15,
      "likes": 0,
      "comments": 0,
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     }
    },
    "score": {},
@@ -2550,6 +2561,15 @@
    "momenten": {
     "facebook": {
      "1u": {
+      "views": 0,
+      "reach": null,
+      "likes": null,
+      "comments": null,
+      "shares": null,
+      "saves": null,
+      "follows": null
+     },
+     "24u": {
       "views": 0,
       "reach": null,
       "likes": null,
@@ -2657,7 +2677,7 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     },
     "facebook": {
      "views": 0,
@@ -2667,7 +2687,7 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     }
    },
    "score": {},
@@ -2706,10 +2726,28 @@
       "shares": 0,
       "saves": 0,
       "follows": null
+     },
+     "24u": {
+      "views": 18,
+      "reach": 18,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": null
      }
     },
     "facebook": {
      "1u": {
+      "views": 0,
+      "reach": null,
+      "likes": null,
+      "comments": null,
+      "shares": null,
+      "saves": null,
+      "follows": null
+     },
+     "24u": {
       "views": 0,
       "reach": null,
       "likes": null,
@@ -2806,7 +2844,7 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     },
     "facebook": {
      "views": 0,
@@ -2816,10 +2854,12 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     }
    },
-   "score": {},
+   "score": {
+    "instagram": 0.44
+   },
    "keuzebron": {
     "huisstijl": "strategie",
     "thema": "strategie",
@@ -2855,10 +2895,28 @@
       "shares": 0,
       "saves": 0,
       "follows": null
+     },
+     "24u": {
+      "views": 26,
+      "reach": 27,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": null
      }
     },
     "facebook": {
      "1u": {
+      "views": 0,
+      "reach": null,
+      "likes": null,
+      "comments": null,
+      "shares": null,
+      "saves": null,
+      "follows": null
+     },
+     "24u": {
       "views": 0,
       "reach": null,
       "likes": null,
@@ -2955,7 +3013,7 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     },
     "instagram": {
      "views": 17,
@@ -2965,7 +3023,7 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     }
    },
    "score": {},
@@ -2997,6 +3055,15 @@
    "momenten": {
     "facebook": {
      "1u": {
+      "views": 0,
+      "reach": null,
+      "likes": null,
+      "comments": null,
+      "shares": null,
+      "saves": null,
+      "follows": null
+     },
+     "24u": {
       "views": 0,
       "reach": null,
       "likes": null,
@@ -3101,7 +3168,7 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     },
     "facebook": {
      "views": 0,
@@ -3111,11 +3178,11 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     }
    },
    "score": {
-    "instagram": 0.41
+    "instagram": 0.4
    },
    "keuzebron": {
     "huisstijl": "experiment",
@@ -3264,7 +3331,7 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     },
     "facebook": {
      "views": 0,
@@ -3274,7 +3341,7 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     }
    },
    "score": {},
@@ -3425,7 +3492,7 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     },
     "instagram": {
      "views": 40,
@@ -3435,10 +3502,12 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     }
    },
-   "score": {},
+   "score": {
+    "instagram": 2.34
+   },
    "keuzebron": {
     "huisstijl": "experiment",
     "thema": "experiment",
@@ -3471,6 +3540,15 @@
       "shares": null,
       "saves": null,
       "follows": null
+     },
+     "24u": {
+      "views": 0,
+      "reach": null,
+      "likes": null,
+      "comments": null,
+      "shares": null,
+      "saves": null,
+      "follows": null
      }
     },
     "instagram": {
@@ -3478,6 +3556,15 @@
       "views": 3,
       "reach": 2,
       "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": null
+     },
+     "24u": {
+      "views": 40,
+      "reach": 36,
+      "likes": 1,
       "comments": 0,
       "shares": 0,
       "saves": 0,
@@ -3568,7 +3655,7 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     },
     "facebook": {
      "views": 0,
@@ -3578,11 +3665,11 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     }
    },
    "score": {
-    "instagram": 0.49
+    "instagram": 0.48
    },
    "keuzebron": {
     "huisstijl": "experiment",
@@ -3629,6 +3716,15 @@
     },
     "facebook": {
      "1u": {
+      "views": 0,
+      "reach": null,
+      "likes": null,
+      "comments": null,
+      "shares": null,
+      "saves": null,
+      "follows": null
+     },
+     "24u": {
       "views": 0,
       "reach": null,
       "likes": null,
@@ -3722,7 +3818,7 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     },
     "facebook": {
      "views": 0,
@@ -3732,10 +3828,12 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     }
    },
-   "score": {},
+   "score": {
+    "instagram": 3.0
+   },
    "keuzebron": {
     "huisstijl": "experiment",
     "thema": "experiment",
@@ -3768,10 +3866,28 @@
       "shares": 0,
       "saves": 0,
       "follows": null
+     },
+     "24u": {
+      "views": 63,
+      "reach": 62,
+      "likes": 3,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": null
      }
     },
     "facebook": {
      "1u": {
+      "views": 0,
+      "reach": null,
+      "likes": null,
+      "comments": null,
+      "shares": null,
+      "saves": null,
+      "follows": null
+     },
+     "24u": {
       "views": 0,
       "reach": null,
       "likes": null,
@@ -3858,7 +3974,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     },
     "facebook": {
      "views": null,
@@ -3868,7 +3984,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     }
    },
    "score": {},
@@ -4004,7 +4120,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     },
     "facebook": {
      "views": null,
@@ -4014,7 +4130,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     }
    },
    "score": {},
@@ -4150,7 +4266,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     },
     "facebook": {
      "views": null,
@@ -4160,7 +4276,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     }
    },
    "score": {},
@@ -4303,7 +4419,7 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     },
     "instagram": {
      "views": 40,
@@ -4313,11 +4429,11 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     }
    },
    "score": {
-    "instagram": 0.45
+    "instagram": 0.43
    },
    "keuzebron": {
     "huisstijl": "joshua",
@@ -4717,7 +4833,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     },
     "facebook": {
      "views": null,
@@ -4727,7 +4843,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     }
    },
    "score": {},
@@ -4875,7 +4991,7 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     },
     "facebook": {
      "views": 0,
@@ -4885,11 +5001,11 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     }
    },
    "score": {
-    "instagram": 0.76
+    "instagram": 0.73
    },
    "keuzebron": {
     "huisstijl": "experiment",
@@ -5033,7 +5149,7 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     },
     "instagram": {
      "views": 131,
@@ -5043,11 +5159,11 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     }
    },
    "score": {
-    "instagram": 3.0
+    "instagram": 2.36
    },
    "keuzebron": {
     "huisstijl": "experiment",
@@ -5191,7 +5307,7 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     },
     "facebook": {
      "views": 0,
@@ -5201,11 +5317,11 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     }
    },
    "score": {
-    "instagram": 3.0
+    "instagram": 1.67
    },
    "keuzebron": {
     "huisstijl": "experiment",
@@ -5348,7 +5464,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     },
     "facebook": {
      "views": null,
@@ -5358,7 +5474,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     }
    },
    "score": {},
@@ -5502,7 +5618,7 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     },
     "instagram": {
      "views": 29,
@@ -5512,11 +5628,11 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     }
    },
    "score": {
-    "instagram": 0.27
+    "instagram": 0.26
    },
    "keuzebron": {
     "huisstijl": "experiment",
@@ -5657,7 +5773,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     },
     "facebook": {
      "views": null,
@@ -5667,7 +5783,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     }
    },
    "score": {},
@@ -5808,7 +5924,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     },
     "instagram": {
      "views": 1,
@@ -5818,7 +5934,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     }
    },
    "score": {},
@@ -5960,7 +6076,7 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     },
     "facebook": {
      "views": 0,
@@ -5970,11 +6086,11 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     }
    },
    "score": {
-    "instagram": 0.53
+    "instagram": 0.52
    },
    "keuzebron": {
     "huisstijl": "experiment",
@@ -6118,7 +6234,7 @@
      "shares": 0,
      "saves": 1,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     },
     "facebook": {
      "views": 0,
@@ -6128,7 +6244,7 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     }
    },
    "score": {
@@ -6276,7 +6392,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     },
     "instagram": {
      "views": 0,
@@ -6286,7 +6402,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     }
    },
    "score": {},
@@ -6431,7 +6547,7 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     },
     "facebook": {
      "views": 0,
@@ -6441,7 +6557,7 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     }
    },
    "score": {},
@@ -6587,7 +6703,7 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     },
     "instagram": {
      "views": 37,
@@ -6597,11 +6713,11 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     }
    },
    "score": {
-    "instagram": 0.45
+    "instagram": 0.44
    },
    "keuzebron": {
     "huisstijl": "experiment",
@@ -6745,7 +6861,7 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     },
     "facebook": {
      "views": 0,
@@ -6755,7 +6871,7 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     }
    },
    "score": {},
@@ -6901,7 +7017,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     },
     "instagram": {
      "views": 1,
@@ -6911,7 +7027,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     }
    },
    "score": {},
@@ -7055,7 +7171,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     },
     "facebook": {
      "views": null,
@@ -7065,7 +7181,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     }
    },
    "score": {},
@@ -7214,7 +7330,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     },
     "instagram": {
      "views": 1,
@@ -7224,7 +7340,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     }
    },
    "score": {},
@@ -7373,7 +7489,7 @@
      "shares": 0,
      "saves": 0,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     },
     "facebook": {
      "views": 0,
@@ -7383,7 +7499,7 @@
      "shares": null,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     }
    },
    "score": {},
@@ -7528,7 +7644,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     },
     "facebook": {
      "views": null,
@@ -7538,7 +7654,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     }
    },
    "score": {},
@@ -7688,7 +7804,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-19T10:01+01:00"
+     "t": null
     },
     "facebook": {
      "views": null,
@@ -7698,7 +7814,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T13:01+01:00"
+     "t": "2026-11-19T13:59+01:00"
     }
    },
    "score": {},
@@ -7731,6 +7847,15 @@
       "follows": 0
      },
      "24u": {
+      "views": 4,
+      "reach": 1,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0
+     },
+     "7d": {
       "views": 4,
       "reach": 1,
       "likes": 0,
@@ -7844,7 +7969,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-18T22:01+01:00"
+     "t": null
     },
     "facebook": {
      "views": null,
@@ -7854,7 +7979,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-19T10:01+01:00"
+     "t": null
     }
    },
    "score": {},
@@ -7883,6 +8008,15 @@
       "shares": 0,
       "saves": 0,
       "follows": 0
+     },
+     "7d": {
+      "views": 2,
+      "reach": 1,
+      "likes": 1,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0
      }
     },
     "facebook": {
@@ -7896,6 +8030,15 @@
       "follows": null
      },
      "24u": {
+      "views": null,
+      "reach": null,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": null,
+      "follows": null
+     },
+     "7d": {
       "views": null,
       "reach": null,
       "likes": 0,
@@ -7982,7 +8125,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-18T22:01+01:00"
+     "t": null
     },
     "facebook": {
      "views": null,
@@ -7992,7 +8135,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-18T22:01+01:00"
+     "t": null
     }
    },
    "score": {},
@@ -8020,10 +8163,28 @@
       "shares": 0,
       "saves": 0,
       "follows": 0
+     },
+     "7d": {
+      "views": 0,
+      "reach": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0
      }
     },
     "facebook": {
      "24u": {
+      "views": null,
+      "reach": null,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": null,
+      "follows": null
+     },
+     "7d": {
       "views": null,
       "reach": null,
       "likes": 0,
@@ -8112,7 +8273,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-18T19:02+01:00"
+     "t": null
     },
     "facebook": {
      "views": null,
@@ -8122,7 +8283,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-18T19:02+01:00"
+     "t": null
     }
    },
    "score": {},
@@ -8151,10 +8312,28 @@
       "shares": 0,
       "saves": 0,
       "follows": 0
+     },
+     "7d": {
+      "views": 5,
+      "reach": 2,
+      "likes": 1,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0
      }
     },
     "facebook": {
      "24u": {
+      "views": null,
+      "reach": null,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": null,
+      "follows": null
+     },
+     "7d": {
       "views": null,
       "reach": null,
       "likes": 0,
@@ -8249,7 +8428,7 @@
      "shares": 0,
      "saves": 0,
      "follows": 0,
-     "t": "2026-11-18T16:02+01:00"
+     "t": null
     },
     "facebook": {
      "views": null,
@@ -8259,7 +8438,7 @@
      "shares": 0,
      "saves": null,
      "follows": null,
-     "t": "2026-11-18T16:02+01:00"
+     "t": null
     }
    },
    "score": {},
@@ -8288,10 +8467,28 @@
       "shares": 0,
       "saves": 0,
       "follows": 0
+     },
+     "7d": {
+      "views": 4,
+      "reach": 1,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0
      }
     },
     "facebook": {
      "24u": {
+      "views": null,
+      "reach": null,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": null,
+      "follows": null
+     },
+     "7d": {
       "views": null,
       "reach": null,
       "likes": 0,
@@ -11263,11 +11460,149 @@
      "22:00": 1.0
     }
    }
+  },
+  {
+   "datum": "2026-11-19",
+   "versie": 5,
+   "gewichten": {
+    "huisstijl": {
+     "avond": 0.35,
+     "zand": 1.0,
+     "salie": 1.0,
+     "zonsopgang": 1.0,
+     "hemelsblauw": 1.0,
+     "paars": 1.0,
+     "roze": 1.0,
+     "bosgroen": 1.0,
+     "mint": 1.0,
+     "perzik": 1.0,
+     "papier_rood": 1.0,
+     "papier_groen": 1.0,
+     "papier_blauw": 1.0,
+     "schaduw_rood": 1.0,
+     "schaduw_groen": 1.0,
+     "schaduw_blauw": 1.0
+    },
+    "thema": {
+     "troost": 1.0,
+     "moed": 1.0,
+     "liefde": 1.0,
+     "hoop": 1.0,
+     "vertrouwen": 1.0,
+     "wijsheid": 1.0,
+     "humor_herkenbaar": 1.0,
+     "dankbaarheid": 1.0,
+     "identiteit": 1.0,
+     "vrede_rust": 1.0
+    },
+    "hook_stijl": {
+     "vraag": 1.0,
+     "herkenning": 1.18,
+     "uitdaging": 1.042,
+     "rustig": 1.0,
+     "geen": 1.0
+    },
+    "formaat": {
+     "video": 1.094,
+     "carrousel": 1.0
+    },
+    "uitleg_op_beeld": {
+     "True": 0.94,
+     "False": 1.12
+    },
+    "achtergrondbron": {
+     "verloop": 1.043,
+     "beeld": 0.84
+    },
+    "boekgroep": {
+     "psalmen": 1.0,
+     "spreuken": 1.0,
+     "wijsheid": 1.0,
+     "profeten": 1.0,
+     "evangelien": 1.0,
+     "brieven": 1.18
+    },
+    "lengte": {
+     "kort": 1.06,
+     "middel": 0.94,
+     "lang": 1.0
+    },
+    "bron": {
+     "bekend": 1.096,
+     "ontdekking": 1.0
+    },
+    "vraag_onderaan": {
+     "True": 1.095,
+     "False": 1.06
+    },
+    "reel_stijl": {
+     "klassiek": 1.0,
+     "kinetisch": 1.0,
+     "beeld": 1.0,
+     "situatie": 0.868,
+     "markeren": 1.06
+    },
+    "carrousel_stijl": {
+     "standaard": 1.0,
+     "markeren": 1.0
+    },
+    "reel_kleur": {
+     "abrikoos": 1.0,
+     "mint": 1.0,
+     "hemel": 1.0,
+     "roze": 1.0,
+     "goud": 1.0
+    },
+    "markeer_achtergrond": {
+     "kleur": 1.0,
+     "papier": 1.0,
+     "schaduw": 1.0,
+     "foto": 1.0
+    },
+    "markeer_streep": {
+     "regel": 1.0,
+     "woord": 1.0
+    },
+    "markeer_opening": {
+     "vers": 1.0,
+     "sterk": 1.0
+    },
+    "reel_plaatsing": {
+     "midden": 0.889,
+     "boven": 1.0
+    },
+    "reel_scene": {
+     "natuur": 1.0,
+     "dichtbij": 1.0,
+     "onderweg": 1.0
+    },
+    "reel_haak": {
+     "geen": 1.071,
+     "vraag": 1.0
+    },
+    "opening": {
+     "vers": 1.0,
+     "stopper": 1.0,
+     "verhaal": 1.0
+    },
+    "hashtag_stijl": {
+     "mix": 1.0,
+     "zoekwoord": 1.086,
+     "zonder": 1.0
+    },
+    "tijdslot": {
+     "04:00": 1.0,
+     "12:15": 1.0,
+     "17:45": 1.06,
+     "20:30": 1.0,
+     "22:00": 1.0
+    }
+   }
   }
  ],
  "laatste_rapport": {
-  "datum": "2026-11-18",
-  "aantal_metingen": 12,
+  "datum": "2026-11-19",
+  "aantal_metingen": 16,
   "dimensies": {
    "huisstijl": {
     "avond": {
@@ -11279,42 +11614,42 @@
     },
     "zand": {
      "n": 2,
-     "gem": 1.68,
+     "gem": 1.75,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
     },
     "salie": {
      "n": 2,
-     "gem": 0.89,
+     "gem": 1.07,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
     },
     "zonsopgang": {
      "n": 1,
-     "gem": 0.83,
+     "gem": 0.77,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
     },
     "hemelsblauw": {
      "n": 2,
-     "gem": 1.03,
+     "gem": 0.91,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
     },
     "paars": {
      "n": 1,
-     "gem": 0.68,
+     "gem": 0.57,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
     },
     "roze": {
      "n": 2,
-     "gem": 1.38,
+     "gem": 1.42,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
@@ -11328,42 +11663,42 @@
     },
     "mint": {
      "n": 1,
-     "gem": 0.62,
+     "gem": 0.65,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
     },
     "perzik": {
-     "n": 0,
-     "gem": null,
+     "n": 1,
+     "gem": 1.8,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
     },
     "papier_rood": {
-     "n": 0,
-     "gem": null,
+     "n": 1,
+     "gem": 1.09,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
     },
     "papier_groen": {
-     "n": 0,
-     "gem": null,
+     "n": 1,
+     "gem": 1.42,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
     },
     "papier_blauw": {
-     "n": 0,
-     "gem": null,
+     "n": 1,
+     "gem": 0.65,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
     },
     "schaduw_rood": {
      "n": 1,
-     "gem": 0.81,
+     "gem": 0.62,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
@@ -11385,29 +11720,29 @@
    },
    "thema": {
     "troost": {
-     "n": 1,
-     "gem": 1.85,
+     "n": 2,
+     "gem": 2.51,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
     },
     "moed": {
-     "n": 1,
-     "gem": 2.82,
+     "n": 2,
+     "gem": 2.56,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
     },
     "liefde": {
-     "n": 1,
-     "gem": 2.01,
+     "n": 2,
+     "gem": 2.04,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
     },
     "hoop": {
      "n": 2,
-     "gem": 1.37,
+     "gem": 1.11,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
@@ -11421,14 +11756,14 @@
     },
     "wijsheid": {
      "n": 2,
-     "gem": 0.22,
+     "gem": 0.2,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
     },
     "humor_herkenbaar": {
      "n": 1,
-     "gem": 0.22,
+     "gem": 0.17,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
@@ -11442,14 +11777,14 @@
     },
     "identiteit": {
      "n": 2,
-     "gem": 1.08,
+     "gem": 0.85,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
     },
     "vrede_rust": {
-     "n": 1,
-     "gem": 0.16,
+     "n": 2,
+     "gem": 0.18,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
@@ -11458,28 +11793,28 @@
    "hook_stijl": {
     "vraag": {
      "n": 4,
-     "gem": 0.82,
+     "gem": 0.83,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
     },
     "herkenning": {
      "n": 5,
-     "gem": 1.39,
-     "oordeel": "waarschijnlijk beter",
-     "oud": 1.06,
-     "nieuw": 1.12
+     "gem": 1.42,
+     "oordeel": "geen duidelijk verschil",
+     "oud": 1.12,
+     "nieuw": 1.18
     },
     "uitdaging": {
-     "n": 2,
-     "gem": 1.06,
-     "oordeel": "weinig data",
+     "n": 5,
+     "gem": 1.08,
+     "oordeel": "geen duidelijk verschil",
      "oud": 1.0,
-     "nieuw": 1.0
+     "nieuw": 1.042
     },
     "rustig": {
-     "n": 1,
-     "gem": 0.57,
+     "n": 2,
+     "gem": 1.03,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
@@ -11494,11 +11829,11 @@
    },
    "formaat": {
     "video": {
-     "n": 12,
-     "gem": 1.08,
+     "n": 16,
+     "gem": 1.12,
      "oordeel": "geen duidelijk verschil",
-     "oud": 1.059,
-     "nieuw": 1.057
+     "oud": 1.057,
+     "nieuw": 1.094
     },
     "carrousel": {
      "n": 0,
@@ -11510,98 +11845,98 @@
    },
    "uitleg_op_beeld": {
     "True": {
-     "n": 4,
-     "gem": 0.64,
-     "oordeel": "weinig data",
-     "oud": 1.0,
-     "nieuw": 1.0
-    },
-    "False": {
-     "n": 8,
-     "gem": 1.25,
+     "n": 6,
+     "gem": 0.8,
      "oordeel": "geen duidelijk verschil",
      "oud": 1.0,
-     "nieuw": 1.06
+     "nieuw": 0.94
+    },
+    "False": {
+     "n": 10,
+     "gem": 1.44,
+     "oordeel": "geen duidelijk verschil",
+     "oud": 1.06,
+     "nieuw": 1.12
     }
    },
    "achtergrondbron": {
     "verloop": {
-     "n": 5,
-     "gem": 1.13,
+     "n": 8,
+     "gem": 1.06,
      "oordeel": "geen duidelijk verschil",
-     "oud": 1.0,
-     "nieuw": 1.06
+     "oud": 1.06,
+     "nieuw": 1.043
     },
     "beeld": {
-     "n": 7,
-     "gem": 1.04,
+     "n": 8,
+     "gem": 1.17,
      "oordeel": "geen duidelijk verschil",
-     "oud": 0.72,
-     "nieuw": 0.78
+     "oud": 0.78,
+     "nieuw": 0.84
     }
    },
    "boekgroep": {
     "psalmen": {
-     "n": 1,
-     "gem": 0.17,
+     "n": 2,
+     "gem": 1.13,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
     },
     "spreuken": {
      "n": 1,
-     "gem": 0.26,
+     "gem": 0.24,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
     },
     "wijsheid": {
      "n": 1,
-     "gem": 0.22,
+     "gem": 0.17,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
     },
     "profeten": {
      "n": 1,
-     "gem": 2.01,
+     "gem": 2.05,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
     },
     "evangelien": {
      "n": 1,
-     "gem": 0.16,
+     "gem": 0.19,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
     },
     "brieven": {
-     "n": 6,
-     "gem": 1.31,
+     "n": 9,
+     "gem": 1.34,
      "oordeel": "geen duidelijk verschil",
-     "oud": 1.06,
-     "nieuw": 1.12
+     "oud": 1.12,
+     "nieuw": 1.18
     }
    },
    "lengte": {
     "kort": {
-     "n": 3,
-     "gem": 1.08,
-     "oordeel": "weinig data",
+     "n": 5,
+     "gem": 1.14,
+     "oordeel": "geen duidelijk verschil",
      "oud": 1.0,
-     "nieuw": 1.0
+     "nieuw": 1.06
     },
     "middel": {
-     "n": 7,
-     "gem": 0.78,
+     "n": 9,
+     "gem": 1.03,
      "oordeel": "geen duidelijk verschil",
-     "oud": 0.94,
-     "nieuw": 0.88
+     "oud": 0.88,
+     "nieuw": 0.94
     },
     "lang": {
      "n": 1,
-     "gem": 2.01,
+     "gem": 2.05,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
@@ -11609,15 +11944,15 @@
    },
    "bron": {
     "bekend": {
-     "n": 10,
-     "gem": 1.05,
+     "n": 14,
+     "gem": 1.2,
      "oordeel": "geen duidelijk verschil",
-     "oud": 1.0,
-     "nieuw": 1.036
+     "oud": 1.036,
+     "nieuw": 1.096
     },
     "ontdekking": {
      "n": 1,
-     "gem": 0.18,
+     "gem": 0.15,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
@@ -11625,18 +11960,18 @@
    },
    "vraag_onderaan": {
     "True": {
-     "n": 7,
-     "gem": 1.15,
+     "n": 9,
+     "gem": 1.14,
      "oordeel": "geen duidelijk verschil",
-     "oud": 1.06,
-     "nieuw": 1.094
+     "oud": 1.094,
+     "nieuw": 1.095
     },
     "False": {
-     "n": 4,
-     "gem": 0.66,
-     "oordeel": "weinig data",
+     "n": 6,
+     "gem": 1.13,
+     "oordeel": "geen duidelijk verschil",
      "oud": 1.0,
-     "nieuw": 1.0
+     "nieuw": 1.06
     }
    },
    "reel_stijl": {
@@ -11662,18 +11997,18 @@
      "nieuw": 1.0
     },
     "situatie": {
-     "n": 7,
-     "gem": 0.85,
-     "oordeel": "geen duidelijk verschil",
-     "oud": 0.94,
-     "nieuw": 0.906
+     "n": 8,
+     "gem": 0.8,
+     "oordeel": "waarschijnlijk slechter",
+     "oud": 0.906,
+     "nieuw": 0.868
     },
     "markeren": {
-     "n": 3,
-     "gem": 1.43,
-     "oordeel": "weinig data",
+     "n": 6,
+     "gem": 1.48,
+     "oordeel": "waarschijnlijk beter",
      "oud": 1.0,
-     "nieuw": 1.0
+     "nieuw": 1.06
     }
    },
    "carrousel_stijl": {
@@ -11694,29 +12029,29 @@
    },
    "reel_kleur": {
     "abrikoos": {
-     "n": 0,
-     "gem": null,
+     "n": 1,
+     "gem": 1.8,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
     },
     "mint": {
      "n": 1,
-     "gem": 1.27,
+     "gem": 1.29,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
     },
     "hemel": {
-     "n": 1,
-     "gem": 2.4,
+     "n": 2,
+     "gem": 1.84,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
     },
     "roze": {
-     "n": 1,
-     "gem": 0.62,
+     "n": 2,
+     "gem": 1.03,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
@@ -11738,8 +12073,8 @@
      "nieuw": 1.0
     },
     "papier": {
-     "n": 0,
-     "gem": null,
+     "n": 1,
+     "gem": 1.8,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
@@ -11761,8 +12096,8 @@
    },
    "markeer_streep": {
     "regel": {
-     "n": 0,
-     "gem": null,
+     "n": 1,
+     "gem": 1.8,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
@@ -11784,8 +12119,8 @@
      "nieuw": 1.0
     },
     "sterk": {
-     "n": 0,
-     "gem": null,
+     "n": 1,
+     "gem": 1.8,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
@@ -11793,11 +12128,11 @@
    },
    "reel_plaatsing": {
     "midden": {
-     "n": 5,
-     "gem": 0.89,
+     "n": 6,
+     "gem": 0.81,
      "oordeel": "geen duidelijk verschil",
-     "oud": 1.0,
-     "nieuw": 0.94
+     "oud": 0.94,
+     "nieuw": 0.889
     },
     "boven": {
      "n": 2,
@@ -11810,21 +12145,21 @@
    "reel_scene": {
     "natuur": {
      "n": 1,
-     "gem": 0.61,
+     "gem": 0.72,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
     },
     "dichtbij": {
      "n": 3,
-     "gem": 0.78,
+     "gem": 0.66,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
     },
     "onderweg": {
-     "n": 3,
-     "gem": 1.01,
+     "n": 4,
+     "gem": 0.93,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
@@ -11832,11 +12167,11 @@
    },
    "reel_haak": {
     "geen": {
-     "n": 10,
-     "gem": 1.02,
+     "n": 14,
+     "gem": 1.09,
      "oordeel": "geen duidelijk verschil",
-     "oud": 1.031,
-     "nieuw": 1.018
+     "oud": 1.018,
+     "nieuw": 1.071
     },
     "vraag": {
      "n": 0,
@@ -11872,21 +12207,21 @@
    "hashtag_stijl": {
     "mix": {
      "n": 4,
-     "gem": 1.1,
+     "gem": 1.06,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
     },
     "zoekwoord": {
-     "n": 5,
-     "gem": 1.06,
+     "n": 7,
+     "gem": 1.14,
      "oordeel": "geen duidelijk verschil",
-     "oud": 1.0,
-     "nieuw": 1.031
+     "oud": 1.031,
+     "nieuw": 1.086
     },
     "zonder": {
-     "n": 1,
-     "gem": 0.57,
+     "n": 3,
+     "gem": 1.03,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
@@ -11901,29 +12236,29 @@
      "nieuw": 1.0
     },
     "12:15": {
-     "n": 2,
+     "n": 3,
      "gem": 0.45,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
     },
     "17:45": {
-     "n": 4,
-     "gem": 1.06,
-     "oordeel": "weinig data",
+     "n": 5,
+     "gem": 1.23,
+     "oordeel": "geen duidelijk verschil",
      "oud": 1.0,
-     "nieuw": 1.0
+     "nieuw": 1.06
     },
     "20:30": {
-     "n": 3,
-     "gem": 1.32,
+     "n": 4,
+     "gem": 1.47,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
     },
     "22:00": {
-     "n": 2,
-     "gem": 1.13,
+     "n": 3,
+     "gem": 1.11,
      "oordeel": "weinig data",
      "oud": 1.0,
      "nieuw": 1.0
@@ -11932,16 +12267,6 @@
   }
  },
  "logboek": [
-  {
-   "t": "2026-11-17T12:16:53",
-   "soort": "info",
-   "tekst": "2026-11-17-5 online op instagram: Jakobus 3:13"
-  },
-  {
-   "t": "2026-11-17T13:31:10",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
-  },
   {
    "t": "2026-11-17T14:19:16",
    "soort": "info",
@@ -12239,6 +12564,16 @@
    "t": "2026-11-19T13:31:15",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-19T13:59:11",
+   "soort": "info",
+   "tekst": "Statistieken opgehaald voor 21 posts"
+  },
+  {
+   "t": "2026-11-19T14:00:45",
+   "soort": "info",
+   "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
   }
  ],
  "recente_fouten": [
@@ -12277,22 +12612,27 @@
   "weekdag": [
    {
     "optie": "zondag",
-    "gem": 1.35,
+    "gem": 1.29,
     "n": 5
    },
    {
+    "optie": "woensdag",
+    "gem": 1.14,
+    "n": 2
+   },
+   {
     "optie": "zaterdag",
-    "gem": 1.09,
+    "gem": 1.08,
     "n": 2
    },
    {
     "optie": "dinsdag",
-    "gem": 0.95,
-    "n": 3
+    "gem": 1.06,
+    "n": 5
    },
    {
     "optie": "vrijdag",
-    "gem": 0.9,
+    "gem": 0.88,
     "n": 1
    },
    {
@@ -12304,36 +12644,36 @@
   "tijd_ig": [
    {
     "optie": "20:30",
-    "gem": 1.19,
-    "n": 3
-   },
-   {
-    "optie": "07:30",
-    "gem": 1.19,
-    "n": 1
-   },
-   {
-    "optie": "22:00",
-    "gem": 1.06,
-    "n": 2
-   },
-   {
-    "optie": "17:45",
-    "gem": 1.04,
+    "gem": 1.31,
     "n": 4
    },
    {
+    "optie": "07:30",
+    "gem": 1.2,
+    "n": 1
+   },
+   {
+    "optie": "17:45",
+    "gem": 1.16,
+    "n": 5
+   },
+   {
+    "optie": "22:00",
+    "gem": 1.07,
+    "n": 3
+   },
+   {
     "optie": "12:15",
-    "gem": 0.73,
-    "n": 2
+    "gem": 0.67,
+    "n": 3
    }
   ],
   "tijd_fb": [],
   "formaat_ig": [
    {
     "optie": "video",
-    "gem": 1.07,
-    "n": 12
+    "gem": 1.1,
+    "n": 16
    }
   ],
   "formaat_fb": []
@@ -12387,20 +12727,20 @@
    "detail": "Spreuken 16:18 geplaatst"
   },
   "instagram_lezen": {
-   "ok": "2026-11-18T14:03",
+   "ok": "2026-11-19T14:00",
    "laatst_ok": true,
    "detail": "5 volgers"
   },
   "sleutel_instagram": {
    "verloopt": "nooit",
    "geldig": true,
-   "ok": "2026-11-18T14:03",
+   "ok": "2026-11-19T14:00",
    "laatst_ok": true
   },
   "sleutel_facebook": {
    "verloopt": "nooit",
    "geldig": true,
-   "ok": "2026-11-18T14:03",
+   "ok": "2026-11-19T14:00",
    "laatst_ok": true
   },
   "materiaal_actions": {
@@ -12410,7 +12750,7 @@
    "ok": "2026-11-16T13:51"
   },
   "reacties": {
-   "ok": "2026-11-19T13:01",
+   "ok": "2026-11-19T14:00",
    "laatst_ok": true,
    "detail": "1 nieuwe reacties",
    "fout": "2026-11-08T18:00"
@@ -12421,7 +12761,7 @@
    "detail": "Spreuken 26:17 geplaatst"
   },
   "statistieken": {
-   "ok": "2026-11-18T14:03",
+   "ok": "2026-11-19T14:00",
    "laatst_ok": true,
    "detail": "21 nieuwe metingen"
   },
@@ -12457,7 +12797,7 @@
    "detail": "alles klopte"
   },
   "leren": {
-   "ok": "2026-11-18T14:03",
+   "ok": "2026-11-19T14:00",
    "laatst_ok": true,
    "detail": "dagelijks (snel leren)"
   },
@@ -12539,13 +12879,19 @@
    "instagram": 5,
    "ig_posts": 55,
    "facebook": 0
+  },
+  {
+   "datum": "2026-11-19",
+   "instagram": 5,
+   "ig_posts": 60,
+   "facebook": 0
   }
  ],
  "weken": {
   "deze": {
    "posts": 30,
-   "reach": 819,
-   "views": 880,
+   "reach": 820,
+   "views": 883,
    "likes": 16,
    "comments": 0,
    "saves": 2,
@@ -12566,99 +12912,123 @@
    "dimensie": "huisstijl",
    "opties": [
     {
+     "optie": "perzik",
+     "gem": 1.8,
+     "n": 1,
+     "oordeel": "weinig data"
+    },
+    {
      "optie": "zand",
-     "gem": 1.68,
+     "gem": 1.75,
      "n": 2,
      "oordeel": "weinig data"
     },
     {
      "optie": "roze",
-     "gem": 1.38,
+     "gem": 1.42,
+     "n": 2,
+     "oordeel": "weinig data"
+    },
+    {
+     "optie": "papier_groen",
+     "gem": 1.42,
+     "n": 1,
+     "oordeel": "weinig data"
+    },
+    {
+     "optie": "papier_rood",
+     "gem": 1.09,
+     "n": 1,
+     "oordeel": "weinig data"
+    },
+    {
+     "optie": "salie",
+     "gem": 1.07,
      "n": 2,
      "oordeel": "weinig data"
     },
     {
      "optie": "hemelsblauw",
-     "gem": 1.03,
-     "n": 2,
-     "oordeel": "weinig data"
-    },
-    {
-     "optie": "salie",
-     "gem": 0.89,
+     "gem": 0.91,
      "n": 2,
      "oordeel": "weinig data"
     },
     {
      "optie": "zonsopgang",
-     "gem": 0.83,
-     "n": 1,
-     "oordeel": "weinig data"
-    },
-    {
-     "optie": "schaduw_rood",
-     "gem": 0.81,
-     "n": 1,
-     "oordeel": "weinig data"
-    },
-    {
-     "optie": "paars",
-     "gem": 0.68,
+     "gem": 0.77,
      "n": 1,
      "oordeel": "weinig data"
     },
     {
      "optie": "mint",
+     "gem": 0.65,
+     "n": 1,
+     "oordeel": "weinig data"
+    },
+    {
+     "optie": "papier_blauw",
+     "gem": 0.65,
+     "n": 1,
+     "oordeel": "weinig data"
+    },
+    {
+     "optie": "schaduw_rood",
      "gem": 0.62,
+     "n": 1,
+     "oordeel": "weinig data"
+    },
+    {
+     "optie": "paars",
+     "gem": 0.57,
      "n": 1,
      "oordeel": "weinig data"
     }
    ],
-   "metingen": 12
+   "metingen": 16
   },
   {
    "dimensie": "thema",
    "opties": [
     {
      "optie": "moed",
-     "gem": 2.82,
-     "n": 1,
-     "oordeel": "weinig data"
-    },
-    {
-     "optie": "liefde",
-     "gem": 2.01,
-     "n": 1,
+     "gem": 2.56,
+     "n": 2,
      "oordeel": "weinig data"
     },
     {
      "optie": "troost",
-     "gem": 1.85,
-     "n": 1,
+     "gem": 2.51,
+     "n": 2,
+     "oordeel": "weinig data"
+    },
+    {
+     "optie": "liefde",
+     "gem": 2.04,
+     "n": 2,
      "oordeel": "weinig data"
     },
     {
      "optie": "hoop",
-     "gem": 1.37,
+     "gem": 1.11,
      "n": 2,
      "oordeel": "weinig data"
     },
     {
      "optie": "identiteit",
-     "gem": 1.08,
+     "gem": 0.85,
      "n": 2,
      "oordeel": "weinig data"
     },
     {
      "optie": "wijsheid",
-     "gem": 0.22,
+     "gem": 0.2,
      "n": 2,
      "oordeel": "weinig data"
     },
     {
-     "optie": "humor_herkenbaar",
-     "gem": 0.22,
-     "n": 1,
+     "optie": "vrede_rust",
+     "gem": 0.18,
+     "n": 2,
      "oordeel": "weinig data"
     },
     {
@@ -12668,211 +13038,211 @@
      "oordeel": "weinig data"
     },
     {
-     "optie": "vrede_rust",
-     "gem": 0.16,
+     "optie": "humor_herkenbaar",
+     "gem": 0.17,
      "n": 1,
      "oordeel": "weinig data"
     }
    ],
-   "metingen": 12
+   "metingen": 16
   },
   {
    "dimensie": "hook_stijl",
    "opties": [
     {
      "optie": "herkenning",
-     "gem": 1.39,
+     "gem": 1.42,
      "n": 5,
-     "oordeel": "waarschijnlijk beter"
+     "oordeel": "geen duidelijk verschil"
     },
     {
      "optie": "uitdaging",
-     "gem": 1.06,
+     "gem": 1.08,
+     "n": 5,
+     "oordeel": "geen duidelijk verschil"
+    },
+    {
+     "optie": "rustig",
+     "gem": 1.03,
      "n": 2,
      "oordeel": "weinig data"
     },
     {
      "optie": "vraag",
-     "gem": 0.82,
+     "gem": 0.83,
      "n": 4,
-     "oordeel": "weinig data"
-    },
-    {
-     "optie": "rustig",
-     "gem": 0.57,
-     "n": 1,
      "oordeel": "weinig data"
     }
    ],
-   "metingen": 12
+   "metingen": 16
   },
   {
    "dimensie": "formaat",
    "opties": [
     {
      "optie": "video",
-     "gem": 1.08,
-     "n": 12,
+     "gem": 1.12,
+     "n": 16,
      "oordeel": "geen duidelijk verschil"
     }
    ],
-   "metingen": 12
+   "metingen": 16
   },
   {
    "dimensie": "uitleg_op_beeld",
    "opties": [
     {
      "optie": false,
-     "gem": 1.25,
-     "n": 8,
+     "gem": 1.44,
+     "n": 10,
      "oordeel": "geen duidelijk verschil"
     },
     {
      "optie": true,
-     "gem": 0.64,
-     "n": 4,
-     "oordeel": "weinig data"
+     "gem": 0.8,
+     "n": 6,
+     "oordeel": "geen duidelijk verschil"
     }
    ],
-   "metingen": 12
+   "metingen": 16
   },
   {
    "dimensie": "achtergrondbron",
    "opties": [
     {
-     "optie": "verloop",
-     "gem": 1.13,
-     "n": 5,
+     "optie": "beeld",
+     "gem": 1.17,
+     "n": 8,
      "oordeel": "geen duidelijk verschil"
     },
     {
-     "optie": "beeld",
-     "gem": 1.04,
-     "n": 7,
+     "optie": "verloop",
+     "gem": 1.06,
+     "n": 8,
      "oordeel": "geen duidelijk verschil"
     }
    ],
-   "metingen": 12
+   "metingen": 16
   },
   {
    "dimensie": "boekgroep",
    "opties": [
     {
      "optie": "profeten",
-     "gem": 2.01,
+     "gem": 2.05,
      "n": 1,
      "oordeel": "weinig data"
     },
     {
      "optie": "brieven",
-     "gem": 1.31,
-     "n": 6,
+     "gem": 1.34,
+     "n": 9,
      "oordeel": "geen duidelijk verschil"
     },
     {
-     "optie": "spreuken",
-     "gem": 0.26,
-     "n": 1,
-     "oordeel": "weinig data"
-    },
-    {
-     "optie": "wijsheid",
-     "gem": 0.22,
-     "n": 1,
-     "oordeel": "weinig data"
-    },
-    {
      "optie": "psalmen",
-     "gem": 0.17,
+     "gem": 1.13,
+     "n": 2,
+     "oordeel": "weinig data"
+    },
+    {
+     "optie": "spreuken",
+     "gem": 0.24,
      "n": 1,
      "oordeel": "weinig data"
     },
     {
      "optie": "evangelien",
-     "gem": 0.16,
+     "gem": 0.19,
+     "n": 1,
+     "oordeel": "weinig data"
+    },
+    {
+     "optie": "wijsheid",
+     "gem": 0.17,
      "n": 1,
      "oordeel": "weinig data"
     }
    ],
-   "metingen": 11
+   "metingen": 15
   },
   {
    "dimensie": "lengte",
    "opties": [
     {
      "optie": "lang",
-     "gem": 2.01,
+     "gem": 2.05,
      "n": 1,
      "oordeel": "weinig data"
     },
     {
      "optie": "kort",
-     "gem": 1.08,
-     "n": 3,
-     "oordeel": "weinig data"
+     "gem": 1.14,
+     "n": 5,
+     "oordeel": "geen duidelijk verschil"
     },
     {
      "optie": "middel",
-     "gem": 0.78,
-     "n": 7,
+     "gem": 1.03,
+     "n": 9,
      "oordeel": "geen duidelijk verschil"
     }
    ],
-   "metingen": 11
+   "metingen": 15
   },
   {
    "dimensie": "bron",
    "opties": [
     {
      "optie": "bekend",
-     "gem": 1.05,
-     "n": 10,
+     "gem": 1.2,
+     "n": 14,
      "oordeel": "geen duidelijk verschil"
     },
     {
      "optie": "ontdekking",
-     "gem": 0.18,
+     "gem": 0.15,
      "n": 1,
      "oordeel": "weinig data"
     }
    ],
-   "metingen": 11
+   "metingen": 15
   },
   {
    "dimensie": "vraag_onderaan",
    "opties": [
     {
      "optie": true,
-     "gem": 1.15,
-     "n": 7,
+     "gem": 1.14,
+     "n": 9,
      "oordeel": "geen duidelijk verschil"
     },
     {
      "optie": false,
-     "gem": 0.66,
-     "n": 4,
-     "oordeel": "weinig data"
+     "gem": 1.13,
+     "n": 6,
+     "oordeel": "geen duidelijk verschil"
     }
    ],
-   "metingen": 11
+   "metingen": 15
   },
   {
    "dimensie": "reel_stijl",
    "opties": [
     {
      "optie": "markeren",
-     "gem": 1.43,
-     "n": 3,
-     "oordeel": "weinig data"
+     "gem": 1.48,
+     "n": 6,
+     "oordeel": "waarschijnlijk beter"
     },
     {
      "optie": "situatie",
-     "gem": 0.85,
-     "n": 7,
-     "oordeel": "geen duidelijk verschil"
+     "gem": 0.8,
+     "n": 8,
+     "oordeel": "waarschijnlijk slechter"
     }
    ],
-   "metingen": 10
+   "metingen": 14
   },
   {
    "dimensie": "carrousel_stijl",
@@ -12884,47 +13254,74 @@
    "opties": [
     {
      "optie": "hemel",
-     "gem": 2.4,
+     "gem": 1.84,
+     "n": 2,
+     "oordeel": "weinig data"
+    },
+    {
+     "optie": "abrikoos",
+     "gem": 1.8,
      "n": 1,
      "oordeel": "weinig data"
     },
     {
      "optie": "mint",
-     "gem": 1.27,
+     "gem": 1.29,
      "n": 1,
      "oordeel": "weinig data"
     },
     {
      "optie": "roze",
-     "gem": 0.62,
+     "gem": 1.03,
+     "n": 2,
+     "oordeel": "weinig data"
+    }
+   ],
+   "metingen": 6
+  },
+  {
+   "dimensie": "markeer_achtergrond",
+   "opties": [
+    {
+     "optie": "papier",
+     "gem": 1.8,
      "n": 1,
      "oordeel": "weinig data"
     }
    ],
-   "metingen": 3
-  },
-  {
-   "dimensie": "markeer_achtergrond",
-   "opties": [],
-   "metingen": 0
+   "metingen": 1
   },
   {
    "dimensie": "markeer_streep",
-   "opties": [],
-   "metingen": 0
+   "opties": [
+    {
+     "optie": "regel",
+     "gem": 1.8,
+     "n": 1,
+     "oordeel": "weinig data"
+    }
+   ],
+   "metingen": 1
   },
   {
    "dimensie": "markeer_opening",
-   "opties": [],
-   "metingen": 0
+   "opties": [
+    {
+     "optie": "sterk",
+     "gem": 1.8,
+     "n": 1,
+     "oordeel": "weinig data"
+    }
+   ],
+   "metingen": 1
   },
   {
    "dimensie": "reel_plaatsing",
    "opties": [
     {
      "optie": "midden",
-     "gem": 0.89,
-     "n": 5,
+     "gem": 0.81,
+     "n": 6,
      "oordeel": "geen duidelijk verschil"
     },
     {
@@ -12934,43 +13331,43 @@
      "oordeel": "weinig data"
     }
    ],
-   "metingen": 7
+   "metingen": 8
   },
   {
    "dimensie": "reel_scene",
    "opties": [
     {
      "optie": "onderweg",
-     "gem": 1.01,
-     "n": 3,
-     "oordeel": "weinig data"
-    },
-    {
-     "optie": "dichtbij",
-     "gem": 0.78,
-     "n": 3,
+     "gem": 0.93,
+     "n": 4,
      "oordeel": "weinig data"
     },
     {
      "optie": "natuur",
-     "gem": 0.61,
+     "gem": 0.72,
      "n": 1,
+     "oordeel": "weinig data"
+    },
+    {
+     "optie": "dichtbij",
+     "gem": 0.66,
+     "n": 3,
      "oordeel": "weinig data"
     }
    ],
-   "metingen": 7
+   "metingen": 8
   },
   {
    "dimensie": "reel_haak",
    "opties": [
     {
      "optie": "geen",
-     "gem": 1.02,
-     "n": 10,
+     "gem": 1.09,
+     "n": 14,
      "oordeel": "geen duidelijk verschil"
     }
    ],
-   "metingen": 10
+   "metingen": 14
   },
   {
    "dimensie": "opening",
@@ -12981,72 +13378,72 @@
    "dimensie": "hashtag_stijl",
    "opties": [
     {
+     "optie": "zoekwoord",
+     "gem": 1.14,
+     "n": 7,
+     "oordeel": "geen duidelijk verschil"
+    },
+    {
      "optie": "mix",
-     "gem": 1.1,
+     "gem": 1.06,
      "n": 4,
      "oordeel": "weinig data"
     },
     {
-     "optie": "zoekwoord",
-     "gem": 1.06,
-     "n": 5,
-     "oordeel": "geen duidelijk verschil"
-    },
-    {
      "optie": "zonder",
-     "gem": 0.57,
-     "n": 1,
+     "gem": 1.03,
+     "n": 3,
      "oordeel": "weinig data"
     }
    ],
-   "metingen": 10
+   "metingen": 14
   },
   {
    "dimensie": "tijdslot",
    "opties": [
     {
      "optie": "07:30",
-     "gem": 1.57,
+     "gem": 1.59,
      "n": 1,
      "oordeel": "weinig data"
     },
     {
      "optie": "20:30",
-     "gem": 1.32,
-     "n": 3,
-     "oordeel": "weinig data"
-    },
-    {
-     "optie": "22:00",
-     "gem": 1.13,
-     "n": 2,
+     "gem": 1.47,
+     "n": 4,
      "oordeel": "weinig data"
     },
     {
      "optie": "17:45",
-     "gem": 1.06,
-     "n": 4,
+     "gem": 1.23,
+     "n": 5,
+     "oordeel": "geen duidelijk verschil"
+    },
+    {
+     "optie": "22:00",
+     "gem": 1.11,
+     "n": 3,
      "oordeel": "weinig data"
     },
     {
      "optie": "12:15",
      "gem": 0.45,
-     "n": 2,
+     "n": 3,
      "oordeel": "weinig data"
     }
    ],
-   "metingen": 12
+   "metingen": 16
   }
  ],
  "min_posts_voor_leren": 6,
- "gemeten_posts": 12,
+ "gemeten_posts": 16,
  "snel_leren": {
   "start": "2026-11-16",
   "tot": "2026-11-30",
   "dag": 4,
   "dagen": 14,
   "online": 15,
-  "gemeten": 3
+  "gemeten": 7
  },
  "voorraad": {
   "verzen": {
@@ -16709,8 +17106,8 @@
       "optie": "psalmen",
       "online": 6,
       "gepland": 2,
-      "n": 1,
-      "gem": 0.17,
+      "n": 2,
+      "gem": 1.13,
       "oordeel": "weinig data"
      },
      {
@@ -16718,7 +17115,7 @@
       "online": 1,
       "gepland": 5,
       "n": 1,
-      "gem": 0.26,
+      "gem": 0.24,
       "oordeel": "weinig data"
      },
      {
@@ -16726,7 +17123,7 @@
       "online": 1,
       "gepland": 1,
       "n": 1,
-      "gem": 0.22,
+      "gem": 0.17,
       "oordeel": "weinig data"
      },
      {
@@ -16734,7 +17131,7 @@
       "online": 2,
       "gepland": 2,
       "n": 1,
-      "gem": 2.01,
+      "gem": 2.05,
       "oordeel": "weinig data"
      },
      {
@@ -16742,15 +17139,15 @@
       "online": 1,
       "gepland": 1,
       "n": 1,
-      "gem": 0.16,
+      "gem": 0.19,
       "oordeel": "weinig data"
      },
      {
       "optie": "brieven",
       "online": 9,
       "gepland": 4,
-      "n": 6,
-      "gem": 1.31,
+      "n": 9,
+      "gem": 1.34,
       "oordeel": "geen duidelijk verschil"
      }
     ]
@@ -16935,40 +17332,105 @@
    "tekst": "De HEERE uw God, is in het midden van u, een Held, Die verlossen zal; Hij zal over u vrolijk zijn met blijdschap, Hij zal zwijgen in Zijn liefde, Hij zal Zich over u verheugen met gejuich.",
    "vers_id": "Zephaniah-3-17-17",
    "variabelen": {
-    "huisstijl": "bosgroen",
+    "huisstijl": "zand",
     "thema": "liefde",
     "hook_stijl": "rustig",
-    "formaat": "carrousel",
-    "uitleg_op_beeld": false,
+    "formaat": "video",
+    "uitleg_op_beeld": true,
     "achtergrondbron": "verloop",
     "boekgroep": "profeten",
     "lengte": "lang",
     "bron": "bekend",
     "vraag_onderaan": true,
-    "reel_stijl": null,
-    "carrousel_stijl": "standaard",
-    "reel_kleur": null,
+    "reel_stijl": "markeren",
+    "carrousel_stijl": null,
+    "reel_kleur": "mint",
     "markeer_achtergrond": "schaduw",
-    "markeer_streep": "woord",
+    "markeer_streep": "regel",
     "markeer_opening": "vers",
     "reel_plaatsing": null,
     "reel_scene": null,
-    "reel_haak": null,
-    "opening": "verhaal",
-    "hashtag_stijl": "zoekwoord",
+    "reel_haak": "geen",
+    "opening": null,
+    "hashtag_stijl": "zonder",
     "tijdslot": "12:15",
-    "tijdslot_fb": "20:30",
-    "palet": "bosgroen",
-    "lettertype": "montserrat_zwaar",
-    "layout": "links",
-    "achtergrond": "diagonaal",
+    "tijdslot_fb": "12:15",
+    "palet": "zand",
+    "lettertype": "dmserif",
+    "layout": "centraal",
+    "achtergrond": "verloop",
     "hook_op_beeld": false,
     "aanleiding": "kalender",
-    "video_uitleg": null
+    "video_uitleg": true
    },
    "keuzebron": {
     "huisstijl": "experiment",
     "thema": "reeks",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "reel_stijl": "test markeren",
+    "carrousel_stijl": "n.v.t.",
+    "reel_kleur": "experiment",
+    "markeer_achtergrond": "experiment",
+    "markeer_streep": "experiment",
+    "markeer_opening": "experiment",
+    "reel_plaatsing": "n.v.t.",
+    "reel_scene": "n.v.t.",
+    "reel_haak": "n.v.t.",
+    "opening": "n.v.t.",
+    "hashtag_stijl": "experiment",
+    "tijdslot": "reeks",
+    "video_uitleg": "vaste regel"
+   },
+   "reeks": "Vers van de week",
+   "reeks_label": "VERS VAN DE WEEK"
+  },
+  {
+   "datum": "2026-11-22",
+   "ref": "Filippenzen 1:6",
+   "tekst": "Vertrouwende ditzelve, dat Hij, Die in u een goed werk begonnen heeft, dat voleindigen zal tot op den dag van Jezus Christus.",
+   "vers_id": "Philippians-1-6-6",
+   "variabelen": {
+    "huisstijl": "zand",
+    "thema": "moed",
+    "hook_stijl": "vraag",
+    "formaat": "carrousel",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "beeld",
+    "boekgroep": "brieven",
+    "lengte": "middel",
+    "bron": "bekend",
+    "vraag_onderaan": true,
+    "reel_stijl": null,
+    "carrousel_stijl": "standaard",
+    "reel_kleur": null,
+    "markeer_achtergrond": "kleur",
+    "markeer_streep": "regel",
+    "markeer_opening": "vers",
+    "reel_plaatsing": null,
+    "reel_scene": null,
+    "reel_haak": null,
+    "opening": "vers",
+    "hashtag_stijl": "zonder",
+    "tijdslot": "17:45",
+    "tijdslot_fb": "20:30",
+    "palet": "zand",
+    "lettertype": "dmserif",
+    "layout": "centraal",
+    "achtergrond": "verloop",
+    "hook_op_beeld": false,
+    "aanleiding": "tijdloos",
+    "video_uitleg": null
+   },
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
     "hook_stijl": "experiment",
     "formaat": "experiment",
     "uitleg_op_beeld": "experiment",
@@ -16988,174 +17450,44 @@
     "reel_haak": "n.v.t.",
     "opening": "experiment",
     "hashtag_stijl": "experiment",
-    "tijdslot": "reeks",
-    "video_uitleg": "n.v.t."
-   },
-   "reeks": "Vers van de week",
-   "reeks_label": "VERS VAN DE WEEK"
-  },
-  {
-   "datum": "2026-11-22",
-   "ref": "1 Korinthe 15:58",
-   "tekst": "Zo dan, mijn geliefde broeders! Zijt standvastig, onbewegelijk, altijd overvloedig zijnde in het werk des Heeren, als die weet, dat uw arbeid niet ijdel is in den Heere.",
-   "vers_id": "I_Corinthians-15-58-58",
-   "variabelen": {
-    "huisstijl": "schaduw_blauw",
-    "thema": "moed",
-    "hook_stijl": "geen",
-    "formaat": "video",
-    "uitleg_op_beeld": false,
-    "achtergrondbron": "verloop",
-    "boekgroep": "brieven",
-    "lengte": "middel",
-    "bron": "bekend",
-    "vraag_onderaan": false,
-    "reel_stijl": "markeren",
-    "carrousel_stijl": null,
-    "reel_kleur": "goud",
-    "markeer_achtergrond": "foto",
-    "markeer_streep": "regel",
-    "markeer_opening": "vers",
-    "reel_plaatsing": null,
-    "reel_scene": null,
-    "reel_haak": "geen",
-    "opening": null,
-    "hashtag_stijl": "zoekwoord",
-    "tijdslot": "22:00",
-    "tijdslot_fb": "20:30",
-    "palet": "papier_blauw",
-    "lettertype": "cormorant",
-    "layout": "links",
-    "achtergrond": "papier_schaduw",
-    "hook_op_beeld": false,
-    "aanleiding": "tijdloos",
-    "video_uitleg": true
-   },
-   "keuzebron": {
-    "huisstijl": "experiment",
-    "thema": "experiment",
-    "hook_stijl": "experiment",
-    "formaat": "aandeel reels",
-    "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "experiment",
-    "boekgroep": "experiment",
-    "lengte": "experiment",
-    "bron": "experiment",
-    "vraag_onderaan": "experiment",
-    "reel_stijl": "test markeren",
-    "carrousel_stijl": "n.v.t.",
-    "reel_kleur": "experiment",
-    "markeer_achtergrond": "experiment",
-    "markeer_streep": "experiment",
-    "markeer_opening": "experiment",
-    "reel_plaatsing": "n.v.t.",
-    "reel_scene": "n.v.t.",
-    "reel_haak": "n.v.t.",
-    "opening": "n.v.t.",
-    "hashtag_stijl": "experiment",
     "tijdslot": "experiment",
-    "video_uitleg": "vaste regel"
+    "video_uitleg": "n.v.t."
    },
    "reeks": null,
    "reeks_label": null
   },
   {
    "datum": "2026-11-22",
-   "ref": "Jesaja 43:4",
-   "tekst": "Van toen af, dat gij kostelijk zijt geweest in Mijn ogen, zijt gij verheerlijkt geweest, en Ik heb u liefgehad; daarom heb Ik mensen in uw plaats gegeven, en volken in plaats van uw ziel.",
-   "vers_id": "Isaiah-43-4-4",
+   "ref": "Psalm 18:3",
+   "tekst": "De HEERE is mijn Steenrots, en mijn Burg, en mijn Uithelper; mijn God, mijn Rots, op Welken ik betrouw; mijn Schild, en de Hoorn mijns heils, mijn Hoog Vertrek.",
+   "vers_id": "Psalms-18-3-3",
    "variabelen": {
-    "huisstijl": "papier_groen",
-    "thema": "identiteit",
-    "hook_stijl": "vraag",
+    "huisstijl": "perzik",
+    "thema": "moed",
+    "hook_stijl": "herkenning",
     "formaat": "video",
     "uitleg_op_beeld": false,
     "achtergrondbron": "beeld",
-    "boekgroep": "profeten",
-    "lengte": "lang",
+    "boekgroep": "psalmen",
+    "lengte": "middel",
     "bron": "bekend",
     "vraag_onderaan": true,
     "reel_stijl": "markeren",
     "carrousel_stijl": null,
     "reel_kleur": "hemel",
-    "markeer_achtergrond": "schaduw",
+    "markeer_achtergrond": "papier",
     "markeer_streep": "woord",
-    "markeer_opening": "vers",
-    "reel_plaatsing": null,
-    "reel_scene": null,
-    "reel_haak": "geen",
-    "opening": null,
-    "hashtag_stijl": "zonder",
-    "tijdslot": "04:00",
-    "tijdslot_fb": "20:30",
-    "palet": "papier_groen",
-    "lettertype": "cormorant",
-    "layout": "links",
-    "achtergrond": "papier",
-    "hook_op_beeld": false,
-    "aanleiding": "tijdloos",
-    "video_uitleg": true
-   },
-   "keuzebron": {
-    "huisstijl": "ochtend",
-    "thema": "experiment",
-    "hook_stijl": "experiment",
-    "formaat": "aandeel reels",
-    "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "experiment",
-    "boekgroep": "experiment",
-    "lengte": "experiment",
-    "bron": "experiment",
-    "vraag_onderaan": "experiment",
-    "reel_stijl": "test markeren",
-    "carrousel_stijl": "n.v.t.",
-    "reel_kleur": "experiment",
-    "markeer_achtergrond": "experiment",
-    "markeer_streep": "experiment",
-    "markeer_opening": "experiment",
-    "reel_plaatsing": "n.v.t.",
-    "reel_scene": "n.v.t.",
-    "reel_haak": "n.v.t.",
-    "opening": "n.v.t.",
-    "hashtag_stijl": "experiment",
-    "tijdslot": "experiment",
-    "video_uitleg": "vaste regel"
-   },
-   "reeks": null,
-   "reeks_label": null
-  },
-  {
-   "datum": "2026-11-22",
-   "ref": "1 Petrus 5:6",
-   "tekst": "Vernedert u dan onder de krachtige hand Gods, opdat Hij u verhoge te Zijner tijd.",
-   "vers_id": "I_Peter-5-6-6",
-   "variabelen": {
-    "huisstijl": "zonsopgang",
-    "thema": "vertrouwen",
-    "hook_stijl": "geen",
-    "formaat": "video",
-    "uitleg_op_beeld": false,
-    "achtergrondbron": "beeld",
-    "boekgroep": "brieven",
-    "lengte": "kort",
-    "bron": "bekend",
-    "vraag_onderaan": false,
-    "reel_stijl": "markeren",
-    "carrousel_stijl": null,
-    "reel_kleur": "goud",
-    "markeer_achtergrond": "foto",
-    "markeer_streep": "woord",
-    "markeer_opening": "vers",
+    "markeer_opening": "sterk",
     "reel_plaatsing": null,
     "reel_scene": null,
     "reel_haak": "geen",
     "opening": null,
     "hashtag_stijl": "zoekwoord",
-    "tijdslot": "17:45",
-    "tijdslot_fb": "17:45",
-    "palet": "zonsopgang_fris",
-    "lettertype": "lora",
-    "layout": "links",
+    "tijdslot": "20:30",
+    "tijdslot_fb": "20:30",
+    "palet": "perzik",
+    "lettertype": "playfair",
+    "layout": "citaat",
     "achtergrond": "diagonaal",
     "hook_op_beeld": false,
     "aanleiding": "tijdloos",
@@ -17165,7 +17497,7 @@
     "huisstijl": "experiment",
     "thema": "experiment",
     "hook_stijl": "experiment",
-    "formaat": "experiment",
+    "formaat": "aandeel reels",
     "uitleg_op_beeld": "experiment",
     "achtergrondbron": "experiment",
     "boekgroep": "experiment",
@@ -17191,37 +17523,102 @@
   },
   {
    "datum": "2026-11-22",
-   "ref": "Romeinen 8:24-25",
-   "tekst": "Want wij zijn in hope zalig geworden. De hoop nu, die gezien wordt, is geen hoop; want hetgeen iemand ziet, waarom zal hij het ook hopen? Maar indien wij hopen, hetgeen wij niet zien, zo verwachten wij het met lijdzaamheid.",
-   "vers_id": "Romans-8-24-25",
+   "ref": "Romeinen 12:12",
+   "tekst": "Verblijdt u in de hoop. Zijt geduldig in de verdrukking. Volhardt in het gebed.",
+   "vers_id": "Romans-12-12-12",
    "variabelen": {
-    "huisstijl": "schaduw_groen",
+    "huisstijl": "zand",
     "thema": "hoop",
+    "hook_stijl": "geen",
+    "formaat": "carrousel",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "beeld",
+    "boekgroep": "brieven",
+    "lengte": "kort",
+    "bron": "bekend",
+    "vraag_onderaan": false,
+    "reel_stijl": null,
+    "carrousel_stijl": "standaard",
+    "reel_kleur": null,
+    "markeer_achtergrond": "kleur",
+    "markeer_streep": "woord",
+    "markeer_opening": "vers",
+    "reel_plaatsing": null,
+    "reel_scene": null,
+    "reel_haak": null,
+    "opening": "verhaal",
+    "hashtag_stijl": "zoekwoord",
+    "tijdslot": "04:00",
+    "tijdslot_fb": "12:15",
+    "palet": "zand",
+    "lettertype": "dmserif",
+    "layout": "centraal",
+    "achtergrond": "verloop",
+    "hook_op_beeld": false,
+    "aanleiding": "tijdloos",
+    "video_uitleg": null
+   },
+   "keuzebron": {
+    "huisstijl": "ochtend",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "reel_stijl": "n.v.t.",
+    "carrousel_stijl": "experiment",
+    "reel_kleur": "n.v.t.",
+    "markeer_achtergrond": "experiment",
+    "markeer_streep": "experiment",
+    "markeer_opening": "experiment",
+    "reel_plaatsing": "n.v.t.",
+    "reel_scene": "n.v.t.",
+    "reel_haak": "n.v.t.",
+    "opening": "experiment",
+    "hashtag_stijl": "experiment",
+    "tijdslot": "experiment",
+    "video_uitleg": "n.v.t."
+   },
+   "reeks": null,
+   "reeks_label": null
+  },
+  {
+   "datum": "2026-11-22",
+   "ref": "2 Korinthe 4:8-9",
+   "tekst": "Als die in alles verdrukt worden, doch niet benauwd; twijfelmoedig, doch niet mismoedig; Vervolgd, doch niet daarin verlaten; nedergeworpen, doch niet verdorven.",
+   "vers_id": "II_Corinthians-4-8-9",
+   "variabelen": {
+    "huisstijl": "papier_groen",
+    "thema": "moed",
     "hook_stijl": "herkenning",
     "formaat": "video",
     "uitleg_op_beeld": false,
     "achtergrondbron": "verloop",
     "boekgroep": "brieven",
-    "lengte": "lang",
+    "lengte": "middel",
     "bron": "bekend",
     "vraag_onderaan": true,
     "reel_stijl": "markeren",
     "carrousel_stijl": null,
-    "reel_kleur": "hemel",
-    "markeer_achtergrond": "kleur",
-    "markeer_streep": "regel",
+    "reel_kleur": "abrikoos",
+    "markeer_achtergrond": "foto",
+    "markeer_streep": "woord",
     "markeer_opening": "vers",
     "reel_plaatsing": null,
     "reel_scene": null,
     "reel_haak": "geen",
     "opening": null,
-    "hashtag_stijl": "zonder",
-    "tijdslot": "20:30",
+    "hashtag_stijl": "zoekwoord",
+    "tijdslot": "22:00",
     "tijdslot_fb": "17:45",
     "palet": "papier_groen",
     "lettertype": "cormorant",
     "layout": "links",
-    "achtergrond": "papier_schaduw",
+    "achtergrond": "papier",
     "hook_op_beeld": false,
     "aanleiding": "tijdloos",
     "video_uitleg": true
@@ -17230,7 +17627,7 @@
     "huisstijl": "experiment",
     "thema": "experiment",
     "hook_stijl": "experiment",
-    "formaat": "experiment",
+    "formaat": "aandeel reels",
     "uitleg_op_beeld": "experiment",
     "achtergrondbron": "experiment",
     "boekgroep": "experiment",
@@ -17256,35 +17653,35 @@
   },
   {
    "datum": "2026-11-23",
-   "ref": "Efeze 6:10",
-   "tekst": "Voorts, mijn broeders, wordt krachtig in den Heere, en in de sterkte Zijner macht.",
-   "vers_id": "Ephesians-6-10-10",
+   "ref": "Jesaja 12:2",
+   "tekst": "Ziet, God is mijn Heil, ik zal vertrouwen en niet vrezen; want de Heere HEERE is mijn Sterkte en mijn Psalm, en Hij is mij tot Heil geworden.",
+   "vers_id": "Isaiah-12-2-2",
    "variabelen": {
-    "huisstijl": "roze",
+    "huisstijl": "zonsopgang",
     "thema": "moed",
-    "hook_stijl": "rustig",
+    "hook_stijl": "herkenning",
     "formaat": "video",
-    "uitleg_op_beeld": true,
-    "achtergrondbron": "beeld",
-    "boekgroep": "brieven",
-    "lengte": "kort",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "verloop",
+    "boekgroep": "profeten",
+    "lengte": "middel",
     "bron": "bekend",
     "vraag_onderaan": true,
     "reel_stijl": "markeren",
     "carrousel_stijl": null,
     "reel_kleur": "hemel",
     "markeer_achtergrond": "foto",
-    "markeer_streep": "woord",
-    "markeer_opening": "vers",
+    "markeer_streep": "regel",
+    "markeer_opening": "sterk",
     "reel_plaatsing": null,
     "reel_scene": null,
     "reel_haak": "geen",
     "opening": null,
-    "hashtag_stijl": "zoekwoord",
+    "hashtag_stijl": "mix",
     "tijdslot": "04:00",
-    "tijdslot_fb": "12:15",
-    "palet": "zachtroze",
-    "lettertype": "cormorant_cursief",
+    "tijdslot_fb": "22:00",
+    "palet": "zonsopgang_fris",
+    "lettertype": "lora",
     "layout": "links",
     "achtergrond": "diagonaal",
     "hook_op_beeld": false,
@@ -17292,7 +17689,7 @@
     "video_uitleg": true
    },
    "keuzebron": {
-    "huisstijl": "ochtend",
+    "huisstijl": "experiment",
     "thema": "reeks",
     "hook_stijl": "experiment",
     "formaat": "experiment",
@@ -17321,102 +17718,37 @@
   },
   {
    "datum": "2026-11-23",
-   "ref": "Kolossenzen 3:14",
-   "tekst": "En boven dit alles doet aan de liefde, dewelke is de band der volmaaktheid.",
-   "vers_id": "Colossians-3-14-14",
+   "ref": "2 Kronieken 20:15",
+   "tekst": "En hij zeide: Merkt op, geheel Juda, en gij, inwoners van Jeruzalem, en gij, koning Josafat! Alzo zegt de HEERE tot ulieden: Vreest gijlieden niet, en wordt niet ontzet vanwege deze grote menigte; want de strijd is niet uwe, maar Gods.",
+   "vers_id": "II_Chronicles-20-15-15",
    "variabelen": {
-    "huisstijl": "schaduw_blauw",
-    "thema": "liefde",
+    "huisstijl": "avond",
+    "thema": "moed",
     "hook_stijl": "herkenning",
-    "formaat": "video",
-    "uitleg_op_beeld": false,
-    "achtergrondbron": "beeld",
-    "boekgroep": "brieven",
-    "lengte": "kort",
-    "bron": "bekend",
-    "vraag_onderaan": true,
-    "reel_stijl": "markeren",
-    "carrousel_stijl": null,
-    "reel_kleur": "roze",
-    "markeer_achtergrond": "foto",
-    "markeer_streep": "woord",
-    "markeer_opening": "sterk",
-    "reel_plaatsing": null,
-    "reel_scene": null,
-    "reel_haak": "geen",
-    "opening": null,
-    "hashtag_stijl": "mix",
-    "tijdslot": "17:45",
-    "tijdslot_fb": "17:45",
-    "palet": "papier_blauw",
-    "lettertype": "cormorant",
-    "layout": "links",
-    "achtergrond": "papier_schaduw",
-    "hook_op_beeld": false,
-    "aanleiding": "tijdloos",
-    "video_uitleg": true
-   },
-   "keuzebron": {
-    "huisstijl": "experiment",
-    "thema": "experiment",
-    "hook_stijl": "experiment",
-    "formaat": "experiment",
-    "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "experiment",
-    "boekgroep": "experiment",
-    "lengte": "experiment",
-    "bron": "experiment",
-    "vraag_onderaan": "experiment",
-    "reel_stijl": "test markeren",
-    "carrousel_stijl": "n.v.t.",
-    "reel_kleur": "experiment",
-    "markeer_achtergrond": "experiment",
-    "markeer_streep": "experiment",
-    "markeer_opening": "experiment",
-    "reel_plaatsing": "n.v.t.",
-    "reel_scene": "n.v.t.",
-    "reel_haak": "n.v.t.",
-    "opening": "n.v.t.",
-    "hashtag_stijl": "experiment",
-    "tijdslot": "experiment",
-    "video_uitleg": "vaste regel"
-   },
-   "reeks": null,
-   "reeks_label": null
-  },
-  {
-   "datum": "2026-11-23",
-   "ref": "Openbaring 7:17",
-   "tekst": "Want het Lam, Dat in het midden des troons is, zal hen weiden, en zal hun een Leidsman zijn tot levende fonteinen der wateren; en God zal alle tranen van hun ogen afwissen.",
-   "vers_id": "Revelation_of_John-7-17-17",
-   "variabelen": {
-    "huisstijl": "schaduw_groen",
-    "thema": "troost",
-    "hook_stijl": "uitdaging",
     "formaat": "carrousel",
     "uitleg_op_beeld": false,
     "achtergrondbron": "verloop",
-    "boekgroep": "brieven",
+    "boekgroep": "wijsheid",
     "lengte": "lang",
     "bron": "bekend",
     "vraag_onderaan": true,
     "reel_stijl": null,
-    "carrousel_stijl": "markeren",
-    "reel_kleur": "mint",
-    "markeer_achtergrond": "kleur",
-    "markeer_streep": "woord",
-    "markeer_opening": "vers",
+    "carrousel_stijl": "standaard",
+    "reel_kleur": null,
+    "markeer_achtergrond": "schaduw",
+    "markeer_streep": "regel",
+    "markeer_opening": "sterk",
     "reel_plaatsing": null,
     "reel_scene": null,
     "reel_haak": null,
-    "opening": "vers",
-    "hashtag_stijl": "zoekwoord",
+    "opening": "stopper",
+    "hashtag_stijl": "mix",
     "tijdslot": "20:30",
-    "tijdslot_fb": "12:15",
-    "palet": "papier_groen",
-    "lettertype": "cormorant",
-    "layout": "links",
-    "achtergrond": "papier_schaduw",
+    "tijdslot_fb": "04:00",
+    "palet": "nacht",
+    "lettertype": "playfair",
+    "layout": "citaat",
+    "achtergrond": "licht",
     "hook_op_beeld": false,
     "aanleiding": "tijdloos",
     "video_uitleg": null
@@ -17434,14 +17766,14 @@
     "vraag_onderaan": "experiment",
     "reel_stijl": "n.v.t.",
     "carrousel_stijl": "experiment",
-    "reel_kleur": "experiment",
+    "reel_kleur": "n.v.t.",
     "markeer_achtergrond": "experiment",
     "markeer_streep": "experiment",
     "markeer_opening": "experiment",
     "reel_plaatsing": "n.v.t.",
     "reel_scene": "n.v.t.",
     "reel_haak": "n.v.t.",
-    "opening": "stijl markeren",
+    "opening": "experiment",
     "hashtag_stijl": "experiment",
     "tijdslot": "experiment",
     "video_uitleg": "n.v.t."
@@ -17451,23 +17783,23 @@
   },
   {
    "datum": "2026-11-23",
-   "ref": "Micha 7:7",
-   "tekst": "Maar ik zal uitzien naar den HEERE, ik zal wachten op de God mijns heils; mijn God zal mij horen.",
-   "vers_id": "Micah-7-7-7",
+   "ref": "Psalm 138:3",
+   "tekst": "Ten dage, als ik riep, zo hebt Gij mij verhoord; Gij hebt mij versterkt met kracht in mijn ziel.",
+   "vers_id": "Psalms-138-3-3",
    "variabelen": {
-    "huisstijl": "papier_blauw",
-    "thema": "hoop",
-    "hook_stijl": "uitdaging",
+    "huisstijl": "papier_groen",
+    "thema": "moed",
+    "hook_stijl": "geen",
     "formaat": "video",
     "uitleg_op_beeld": false,
     "achtergrondbron": "verloop",
-    "boekgroep": "profeten",
+    "boekgroep": "psalmen",
     "lengte": "middel",
     "bron": "bekend",
     "vraag_onderaan": true,
     "reel_stijl": "markeren",
     "carrousel_stijl": null,
-    "reel_kleur": "hemel",
+    "reel_kleur": "mint",
     "markeer_achtergrond": "kleur",
     "markeer_streep": "woord",
     "markeer_opening": "sterk",
@@ -17475,10 +17807,10 @@
     "reel_scene": null,
     "reel_haak": "geen",
     "opening": null,
-    "hashtag_stijl": "zonder",
+    "hashtag_stijl": "mix",
     "tijdslot": "22:00",
-    "tijdslot_fb": "22:00",
-    "palet": "papier_blauw",
+    "tijdslot_fb": "17:45",
+    "palet": "papier_groen",
     "lettertype": "cormorant",
     "layout": "links",
     "achtergrond": "papier",
@@ -17520,163 +17852,33 @@
    "tekst": "Maar gij zult ontvangen de kracht des Heiligen Geestes, Die over u komen zal; en gij zult Mijn getuigen zijn, zo te Jeruzalem, als in geheel Judea en Samaria, en tot aan het uiterste der aarde.",
    "vers_id": "Acts-1-8-8",
    "variabelen": {
-    "huisstijl": "zand",
+    "huisstijl": "avond",
     "thema": "moed",
-    "hook_stijl": "geen",
-    "formaat": "carrousel",
-    "uitleg_op_beeld": true,
-    "achtergrondbron": "beeld",
+    "hook_stijl": "herkenning",
+    "formaat": "video",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "verloop",
     "boekgroep": "brieven",
     "lengte": "lang",
     "bron": "bekend",
-    "vraag_onderaan": false,
-    "reel_stijl": null,
-    "carrousel_stijl": "standaard",
-    "reel_kleur": null,
-    "markeer_achtergrond": "papier",
+    "vraag_onderaan": true,
+    "reel_stijl": "markeren",
+    "carrousel_stijl": null,
+    "reel_kleur": "mint",
+    "markeer_achtergrond": "schaduw",
     "markeer_streep": "regel",
     "markeer_opening": "vers",
     "reel_plaatsing": null,
     "reel_scene": null,
-    "reel_haak": null,
-    "opening": "verhaal",
-    "hashtag_stijl": "zoekwoord",
-    "tijdslot": "12:15",
-    "tijdslot_fb": "17:45",
-    "palet": "zand",
-    "lettertype": "dmserif",
-    "layout": "centraal",
-    "achtergrond": "verloop",
-    "hook_op_beeld": false,
-    "aanleiding": "tijdloos",
-    "video_uitleg": null
-   },
-   "keuzebron": {
-    "huisstijl": "experiment",
-    "thema": "experiment",
-    "hook_stijl": "experiment",
-    "formaat": "experiment",
-    "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "experiment",
-    "boekgroep": "experiment",
-    "lengte": "experiment",
-    "bron": "experiment",
-    "vraag_onderaan": "experiment",
-    "reel_stijl": "n.v.t.",
-    "carrousel_stijl": "experiment",
-    "reel_kleur": "n.v.t.",
-    "markeer_achtergrond": "experiment",
-    "markeer_streep": "experiment",
-    "markeer_opening": "experiment",
-    "reel_plaatsing": "n.v.t.",
-    "reel_scene": "n.v.t.",
-    "reel_haak": "n.v.t.",
-    "opening": "experiment",
-    "hashtag_stijl": "experiment",
-    "tijdslot": "experiment",
-    "video_uitleg": "n.v.t."
-   },
-   "reeks": null,
-   "reeks_label": null
-  },
-  {
-   "datum": "2026-11-24",
-   "ref": "Hebreeën 4:15",
-   "tekst": "Want wij hebben geen hogepriester, die niet kan medelijden hebben met onze zwakheden, maar Die in alle dingen, gelijk als wij, is verzocht geweest, doch zonder zonde.",
-   "vers_id": "Hebrews-4-15-15",
-   "variabelen": {
-    "huisstijl": "papier_blauw",
-    "thema": "troost",
-    "hook_stijl": "uitdaging",
-    "formaat": "carrousel",
-    "uitleg_op_beeld": true,
-    "achtergrondbron": "verloop",
-    "boekgroep": "brieven",
-    "lengte": "middel",
-    "bron": "bekend",
-    "vraag_onderaan": true,
-    "reel_stijl": null,
-    "carrousel_stijl": "standaard",
-    "reel_kleur": null,
-    "markeer_achtergrond": "papier",
-    "markeer_streep": "woord",
-    "markeer_opening": "vers",
-    "reel_plaatsing": null,
-    "reel_scene": null,
-    "reel_haak": null,
-    "opening": "stopper",
-    "hashtag_stijl": "zoekwoord",
-    "tijdslot": "22:00",
-    "tijdslot_fb": "04:00",
-    "palet": "papier_blauw",
-    "lettertype": "cormorant",
-    "layout": "links",
-    "achtergrond": "papier",
-    "hook_op_beeld": false,
-    "aanleiding": "tijdloos",
-    "video_uitleg": null
-   },
-   "keuzebron": {
-    "huisstijl": "experiment",
-    "thema": "experiment",
-    "hook_stijl": "experiment",
-    "formaat": "experiment",
-    "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "experiment",
-    "boekgroep": "experiment",
-    "lengte": "experiment",
-    "bron": "experiment",
-    "vraag_onderaan": "experiment",
-    "reel_stijl": "n.v.t.",
-    "carrousel_stijl": "experiment",
-    "reel_kleur": "n.v.t.",
-    "markeer_achtergrond": "experiment",
-    "markeer_streep": "experiment",
-    "markeer_opening": "experiment",
-    "reel_plaatsing": "n.v.t.",
-    "reel_scene": "n.v.t.",
-    "reel_haak": "n.v.t.",
-    "opening": "experiment",
-    "hashtag_stijl": "experiment",
-    "tijdslot": "experiment",
-    "video_uitleg": "n.v.t."
-   },
-   "reeks": null,
-   "reeks_label": null
-  },
-  {
-   "datum": "2026-11-24",
-   "ref": "2 Korinthe 9:15",
-   "tekst": "Doch Gode zij dank voor Zijn onuitsprekelijke gave.",
-   "vers_id": "II_Corinthians-9-15-15",
-   "variabelen": {
-    "huisstijl": "zand",
-    "thema": "dankbaarheid",
-    "hook_stijl": "geen",
-    "formaat": "video",
-    "uitleg_op_beeld": true,
-    "achtergrondbron": "verloop",
-    "boekgroep": "brieven",
-    "lengte": "kort",
-    "bron": "bekend",
-    "vraag_onderaan": false,
-    "reel_stijl": "situatie",
-    "carrousel_stijl": null,
-    "reel_kleur": null,
-    "markeer_achtergrond": null,
-    "markeer_streep": null,
-    "markeer_opening": null,
-    "reel_plaatsing": "midden",
-    "reel_scene": "onderweg",
     "reel_haak": "geen",
     "opening": null,
-    "hashtag_stijl": "mix",
-    "tijdslot": "20:30",
-    "tijdslot_fb": "20:30",
-    "palet": "zand",
-    "lettertype": "dmserif",
-    "layout": "centraal",
-    "achtergrond": "verloop",
+    "hashtag_stijl": "zonder",
+    "tijdslot": "17:45",
+    "tijdslot_fb": "12:15",
+    "palet": "nacht",
+    "lettertype": "playfair",
+    "layout": "citaat",
+    "achtergrond": "licht",
     "hook_op_beeld": false,
     "aanleiding": "tijdloos",
     "video_uitleg": true
@@ -17687,19 +17889,84 @@
     "hook_stijl": "experiment",
     "formaat": "experiment",
     "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "limiet",
+    "achtergrondbron": "experiment",
     "boekgroep": "experiment",
     "lengte": "experiment",
     "bron": "experiment",
     "vraag_onderaan": "experiment",
-    "reel_stijl": "vaste regel",
+    "reel_stijl": "test markeren",
     "carrousel_stijl": "n.v.t.",
-    "reel_kleur": "n.v.t.",
-    "markeer_achtergrond": "n.v.t.",
-    "markeer_streep": "n.v.t.",
-    "markeer_opening": "n.v.t.",
-    "reel_plaatsing": "experiment",
-    "reel_scene": "experiment",
+    "reel_kleur": "experiment",
+    "markeer_achtergrond": "experiment",
+    "markeer_streep": "experiment",
+    "markeer_opening": "experiment",
+    "reel_plaatsing": "n.v.t.",
+    "reel_scene": "n.v.t.",
+    "reel_haak": "n.v.t.",
+    "opening": "n.v.t.",
+    "hashtag_stijl": "experiment",
+    "tijdslot": "experiment",
+    "video_uitleg": "vaste regel"
+   },
+   "reeks": null,
+   "reeks_label": null
+  },
+  {
+   "datum": "2026-11-23",
+   "ref": "Psalm 146:5",
+   "tekst": "Welgelukzalig is hij, die den God Jakobs tot zijn Hulp heeft, wiens verwachting op den HEERE, zijn God is.",
+   "vers_id": "Psalms-146-5-5",
+   "variabelen": {
+    "huisstijl": "schaduw_groen",
+    "thema": "hoop",
+    "hook_stijl": "vraag",
+    "formaat": "video",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "verloop",
+    "boekgroep": "psalmen",
+    "lengte": "middel",
+    "bron": "bekend",
+    "vraag_onderaan": true,
+    "reel_stijl": "markeren",
+    "carrousel_stijl": null,
+    "reel_kleur": "abrikoos",
+    "markeer_achtergrond": "papier",
+    "markeer_streep": "regel",
+    "markeer_opening": "vers",
+    "reel_plaatsing": null,
+    "reel_scene": null,
+    "reel_haak": "geen",
+    "opening": null,
+    "hashtag_stijl": "mix",
+    "tijdslot": "12:15",
+    "tijdslot_fb": "22:00",
+    "palet": "papier_groen",
+    "lettertype": "cormorant",
+    "layout": "links",
+    "achtergrond": "papier_schaduw",
+    "hook_op_beeld": false,
+    "aanleiding": "tijdloos",
+    "video_uitleg": true
+   },
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "reel_stijl": "test markeren",
+    "carrousel_stijl": "n.v.t.",
+    "reel_kleur": "experiment",
+    "markeer_achtergrond": "experiment",
+    "markeer_streep": "experiment",
+    "markeer_opening": "experiment",
+    "reel_plaatsing": "n.v.t.",
+    "reel_scene": "n.v.t.",
     "reel_haak": "n.v.t.",
     "opening": "n.v.t.",
     "hashtag_stijl": "experiment",
@@ -17711,34 +17978,34 @@
   },
   {
    "datum": "2026-11-24",
-   "ref": "2 Korinthe 4:8-9",
-   "tekst": "Als die in alles verdrukt worden, doch niet benauwd; twijfelmoedig, doch niet mismoedig; Vervolgd, doch niet daarin verlaten; nedergeworpen, doch niet verdorven.",
-   "vers_id": "II_Corinthians-4-8-9",
+   "ref": "Psalm 27:1",
+   "tekst": "De HEERE is mijn Licht en mijn Heil, voor wien zou ik vrezen? De HEERE is mijns levens kracht, voor wien zou ik vervaard zijn?",
+   "vers_id": "Psalms-27-1-1",
    "variabelen": {
-    "huisstijl": "papier_groen",
+    "huisstijl": "papier_blauw",
     "thema": "moed",
-    "hook_stijl": "herkenning",
+    "hook_stijl": "uitdaging",
     "formaat": "video",
-    "uitleg_op_beeld": true,
+    "uitleg_op_beeld": false,
     "achtergrondbron": "verloop",
-    "boekgroep": "brieven",
+    "boekgroep": "psalmen",
     "lengte": "middel",
     "bron": "bekend",
     "vraag_onderaan": false,
     "reel_stijl": "markeren",
     "carrousel_stijl": null,
-    "reel_kleur": "goud",
-    "markeer_achtergrond": "kleur",
-    "markeer_streep": "woord",
+    "reel_kleur": "hemel",
+    "markeer_achtergrond": "papier",
+    "markeer_streep": "regel",
     "markeer_opening": "vers",
     "reel_plaatsing": null,
     "reel_scene": null,
     "reel_haak": "geen",
     "opening": null,
-    "hashtag_stijl": "mix",
-    "tijdslot": "17:45",
-    "tijdslot_fb": "22:00",
-    "palet": "papier_groen",
+    "hashtag_stijl": "zoekwoord",
+    "tijdslot": "04:00",
+    "tijdslot_fb": "20:30",
+    "palet": "papier_blauw",
     "lettertype": "cormorant",
     "layout": "links",
     "achtergrond": "papier",
@@ -17776,43 +18043,173 @@
   },
   {
    "datum": "2026-11-24",
-   "ref": "Mattheüs 5:14",
-   "tekst": "Gij zijt het licht der wereld; een stad boven op een berg liggende, kan niet verborgen zijn.",
-   "vers_id": "Matthew-5-14-14",
+   "ref": "Hebreeën 13:6",
+   "tekst": "Zodat wij vrijmoediglijk durven zeggen: De Heere is mij een Helper, en ik zal niet vrezen, wat mij een mens zal doen.",
+   "vers_id": "Hebrews-13-6-6",
    "variabelen": {
-    "huisstijl": "mint",
-    "thema": "identiteit",
-    "hook_stijl": "herkenning",
-    "formaat": "carrousel",
+    "huisstijl": "zand",
+    "thema": "moed",
+    "hook_stijl": "geen",
+    "formaat": "video",
     "uitleg_op_beeld": false,
     "achtergrondbron": "verloop",
-    "boekgroep": "evangelien",
+    "boekgroep": "brieven",
     "lengte": "middel",
     "bron": "bekend",
     "vraag_onderaan": true,
+    "reel_stijl": "situatie",
+    "carrousel_stijl": null,
+    "reel_kleur": null,
+    "markeer_achtergrond": null,
+    "markeer_streep": null,
+    "markeer_opening": null,
+    "reel_plaatsing": "boven",
+    "reel_scene": "natuur",
+    "reel_haak": "geen",
+    "opening": null,
+    "hashtag_stijl": "zonder",
+    "tijdslot": "20:30",
+    "tijdslot_fb": "20:30",
+    "palet": "zand",
+    "lettertype": "dmserif",
+    "layout": "centraal",
+    "achtergrond": "verloop",
+    "hook_op_beeld": false,
+    "aanleiding": "tijdloos",
+    "video_uitleg": true
+   },
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "reel_stijl": "vaste regel",
+    "carrousel_stijl": "n.v.t.",
+    "reel_kleur": "n.v.t.",
+    "markeer_achtergrond": "n.v.t.",
+    "markeer_streep": "n.v.t.",
+    "markeer_opening": "n.v.t.",
+    "reel_plaatsing": "experiment",
+    "reel_scene": "experiment",
+    "reel_haak": "n.v.t.",
+    "opening": "n.v.t.",
+    "hashtag_stijl": "experiment",
+    "tijdslot": "experiment",
+    "video_uitleg": "vaste regel"
+   },
+   "reeks": null,
+   "reeks_label": null
+  },
+  {
+   "datum": "2026-11-24",
+   "ref": "Romeinen 8:24-25",
+   "tekst": "Want wij zijn in hope zalig geworden. De hoop nu, die gezien wordt, is geen hoop; want hetgeen iemand ziet, waarom zal hij het ook hopen? Maar indien wij hopen, hetgeen wij niet zien, zo verwachten wij het met lijdzaamheid.",
+   "vers_id": "Romans-8-24-25",
+   "variabelen": {
+    "huisstijl": "papier_rood",
+    "thema": "hoop",
+    "hook_stijl": "rustig",
+    "formaat": "video",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "beeld",
+    "boekgroep": "brieven",
+    "lengte": "lang",
+    "bron": "bekend",
+    "vraag_onderaan": true,
+    "reel_stijl": "markeren",
+    "carrousel_stijl": null,
+    "reel_kleur": "abrikoos",
+    "markeer_achtergrond": "schaduw",
+    "markeer_streep": "regel",
+    "markeer_opening": "sterk",
+    "reel_plaatsing": null,
+    "reel_scene": null,
+    "reel_haak": "geen",
+    "opening": null,
+    "hashtag_stijl": "zonder",
+    "tijdslot": "17:45",
+    "tijdslot_fb": "22:00",
+    "palet": "papier_rood",
+    "lettertype": "cormorant",
+    "layout": "links",
+    "achtergrond": "papier",
+    "hook_op_beeld": false,
+    "aanleiding": "tijdloos",
+    "video_uitleg": true
+   },
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "reel_stijl": "test markeren",
+    "carrousel_stijl": "n.v.t.",
+    "reel_kleur": "experiment",
+    "markeer_achtergrond": "experiment",
+    "markeer_streep": "experiment",
+    "markeer_opening": "experiment",
+    "reel_plaatsing": "n.v.t.",
+    "reel_scene": "n.v.t.",
+    "reel_haak": "n.v.t.",
+    "opening": "n.v.t.",
+    "hashtag_stijl": "experiment",
+    "tijdslot": "experiment",
+    "video_uitleg": "vaste regel"
+   },
+   "reeks": null,
+   "reeks_label": null
+  },
+  {
+   "datum": "2026-11-24",
+   "ref": "Psalm 103:11",
+   "tekst": "Want zo hoog de hemel is boven de aarde, is Zijn goedertierenheid geweldig over degenen, die Hem vrezen.",
+   "vers_id": "Psalms-103-11-11",
+   "variabelen": {
+    "huisstijl": "zand",
+    "thema": "liefde",
+    "hook_stijl": "geen",
+    "formaat": "carrousel",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "verloop",
+    "boekgroep": "psalmen",
+    "lengte": "middel",
+    "bron": "bekend",
+    "vraag_onderaan": false,
     "reel_stijl": null,
     "carrousel_stijl": "standaard",
     "reel_kleur": null,
-    "markeer_achtergrond": "foto",
+    "markeer_achtergrond": "papier",
     "markeer_streep": "woord",
     "markeer_opening": "sterk",
     "reel_plaatsing": null,
     "reel_scene": null,
     "reel_haak": null,
     "opening": "stopper",
-    "hashtag_stijl": "zonder",
-    "tijdslot": "04:00",
-    "tijdslot_fb": "04:00",
-    "palet": "mint",
+    "hashtag_stijl": "mix",
+    "tijdslot": "22:00",
+    "tijdslot_fb": "20:30",
+    "palet": "zand",
     "lettertype": "dmserif",
     "layout": "centraal",
-    "achtergrond": "diagonaal",
+    "achtergrond": "verloop",
     "hook_op_beeld": false,
     "aanleiding": "tijdloos",
     "video_uitleg": null
    },
    "keuzebron": {
-    "huisstijl": "ochtend",
+    "huisstijl": "experiment",
     "thema": "experiment",
     "hook_stijl": "experiment",
     "formaat": "experiment",
@@ -17841,20 +18238,20 @@
   },
   {
    "datum": "2026-11-24",
-   "ref": "2 Timotheüs 4:7",
-   "tekst": "Ik heb den goeden strijd gestreden, ik heb den loop geeindigd, ik heb het geloof behouden.",
-   "vers_id": "II_Timothy-4-7-7",
+   "ref": "Psalm 145:18",
+   "tekst": "De HEERE is nabij allen, die Hem aanroepen, allen, die Hem aanroepen in der waarheid.",
+   "vers_id": "Psalms-145-18-18",
    "variabelen": {
-    "huisstijl": "bosgroen",
-    "thema": "moed",
-    "hook_stijl": "herkenning",
+    "huisstijl": "avond",
+    "thema": "troost",
+    "hook_stijl": "uitdaging",
     "formaat": "video",
     "uitleg_op_beeld": true,
-    "achtergrondbron": "verloop",
-    "boekgroep": "brieven",
-    "lengte": "middel",
+    "achtergrondbron": "beeld",
+    "boekgroep": "psalmen",
+    "lengte": "kort",
     "bron": "bekend",
-    "vraag_onderaan": false,
+    "vraag_onderaan": true,
     "reel_stijl": "situatie",
     "carrousel_stijl": null,
     "reel_kleur": null,
@@ -17862,16 +18259,16 @@
     "markeer_streep": null,
     "markeer_opening": null,
     "reel_plaatsing": "boven",
-    "reel_scene": "onderweg",
+    "reel_scene": "natuur",
     "reel_haak": "geen",
     "opening": null,
     "hashtag_stijl": "zoekwoord",
     "tijdslot": "12:15",
-    "tijdslot_fb": "17:45",
-    "palet": "bosgroen",
-    "lettertype": "montserrat_zwaar",
-    "layout": "links",
-    "achtergrond": "diagonaal",
+    "tijdslot_fb": "22:00",
+    "palet": "nacht",
+    "lettertype": "playfair",
+    "layout": "citaat",
+    "achtergrond": "licht",
     "hook_op_beeld": false,
     "aanleiding": "tijdloos",
     "video_uitleg": true
@@ -17906,102 +18303,37 @@
   },
   {
    "datum": "2026-11-25",
-   "ref": "Jesaja 12:2",
-   "tekst": "Ziet, God is mijn Heil, ik zal vertrouwen en niet vrezen; want de Heere HEERE is mijn Sterkte en mijn Psalm, en Hij is mij tot Heil geworden.",
-   "vers_id": "Isaiah-12-2-2",
+   "ref": "2 Timotheüs 4:7",
+   "tekst": "Ik heb den goeden strijd gestreden, ik heb den loop geeindigd, ik heb het geloof behouden.",
+   "vers_id": "II_Timothy-4-7-7",
    "variabelen": {
-    "huisstijl": "zand",
+    "huisstijl": "schaduw_blauw",
     "thema": "moed",
-    "hook_stijl": "geen",
+    "hook_stijl": "uitdaging",
     "formaat": "carrousel",
     "uitleg_op_beeld": false,
     "achtergrondbron": "verloop",
-    "boekgroep": "profeten",
+    "boekgroep": "brieven",
     "lengte": "middel",
     "bron": "bekend",
     "vraag_onderaan": true,
     "reel_stijl": null,
     "carrousel_stijl": "standaard",
     "reel_kleur": null,
-    "markeer_achtergrond": "papier",
-    "markeer_streep": "regel",
-    "markeer_opening": "vers",
-    "reel_plaatsing": null,
-    "reel_scene": null,
-    "reel_haak": null,
-    "opening": "stopper",
-    "hashtag_stijl": "zoekwoord",
-    "tijdslot": "04:00",
-    "tijdslot_fb": "17:45",
-    "palet": "zand",
-    "lettertype": "dmserif",
-    "layout": "centraal",
-    "achtergrond": "verloop",
-    "hook_op_beeld": false,
-    "aanleiding": "tijdloos",
-    "video_uitleg": null
-   },
-   "keuzebron": {
-    "huisstijl": "experiment",
-    "thema": "experiment",
-    "hook_stijl": "experiment",
-    "formaat": "experiment",
-    "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "limiet",
-    "boekgroep": "experiment",
-    "lengte": "experiment",
-    "bron": "experiment",
-    "vraag_onderaan": "experiment",
-    "reel_stijl": "n.v.t.",
-    "carrousel_stijl": "experiment",
-    "reel_kleur": "n.v.t.",
-    "markeer_achtergrond": "experiment",
-    "markeer_streep": "experiment",
-    "markeer_opening": "experiment",
-    "reel_plaatsing": "n.v.t.",
-    "reel_scene": "n.v.t.",
-    "reel_haak": "n.v.t.",
-    "opening": "experiment",
-    "hashtag_stijl": "experiment",
-    "tijdslot": "experiment",
-    "video_uitleg": "n.v.t."
-   },
-   "reeks": null,
-   "reeks_label": null
-  },
-  {
-   "datum": "2026-11-25",
-   "ref": "Psalm 103:11",
-   "tekst": "Want zo hoog de hemel is boven de aarde, is Zijn goedertierenheid geweldig over degenen, die Hem vrezen.",
-   "vers_id": "Psalms-103-11-11",
-   "variabelen": {
-    "huisstijl": "papier_blauw",
-    "thema": "liefde",
-    "hook_stijl": "uitdaging",
-    "formaat": "carrousel",
-    "uitleg_op_beeld": false,
-    "achtergrondbron": "verloop",
-    "boekgroep": "psalmen",
-    "lengte": "middel",
-    "bron": "bekend",
-    "vraag_onderaan": false,
-    "reel_stijl": null,
-    "carrousel_stijl": "standaard",
-    "reel_kleur": null,
-    "markeer_achtergrond": "kleur",
+    "markeer_achtergrond": "schaduw",
     "markeer_streep": "woord",
     "markeer_opening": "sterk",
     "reel_plaatsing": null,
     "reel_scene": null,
     "reel_haak": null,
-    "opening": "vers",
-    "hashtag_stijl": "zonder",
+    "opening": "verhaal",
+    "hashtag_stijl": "zoekwoord",
     "tijdslot": "20:30",
     "tijdslot_fb": "20:30",
     "palet": "papier_blauw",
     "lettertype": "cormorant",
     "layout": "links",
-    "achtergrond": "papier",
+    "achtergrond": "papier_schaduw",
     "hook_op_beeld": false,
     "aanleiding": "tijdloos",
     "video_uitleg": null
@@ -18036,17 +18368,82 @@
   },
   {
    "datum": "2026-11-25",
-   "ref": "Psalm 18:3",
-   "tekst": "De HEERE is mijn Steenrots, en mijn Burg, en mijn Uithelper; mijn God, mijn Rots, op Welken ik betrouw; mijn Schild, en de Hoorn mijns heils, mijn Hoog Vertrek.",
-   "vers_id": "Psalms-18-3-3",
+   "ref": "Jesaja 40:8",
+   "tekst": "Het gras verdort, de bloem valt af; maar het Woord onzes Gods bestaat in der eeuwigheid.",
+   "vers_id": "Isaiah-40-8-8",
    "variabelen": {
-    "huisstijl": "schaduw_blauw",
-    "thema": "moed",
-    "hook_stijl": "uitdaging",
+    "huisstijl": "schaduw_groen",
+    "thema": "hoop",
+    "hook_stijl": "herkenning",
     "formaat": "video",
     "uitleg_op_beeld": false,
     "achtergrondbron": "verloop",
-    "boekgroep": "psalmen",
+    "boekgroep": "profeten",
+    "lengte": "kort",
+    "bron": "bekend",
+    "vraag_onderaan": true,
+    "reel_stijl": "markeren",
+    "carrousel_stijl": null,
+    "reel_kleur": "mint",
+    "markeer_achtergrond": "foto",
+    "markeer_streep": "woord",
+    "markeer_opening": "sterk",
+    "reel_plaatsing": null,
+    "reel_scene": null,
+    "reel_haak": "geen",
+    "opening": null,
+    "hashtag_stijl": "zoekwoord",
+    "tijdslot": "22:00",
+    "tijdslot_fb": "20:30",
+    "palet": "papier_groen",
+    "lettertype": "cormorant",
+    "layout": "links",
+    "achtergrond": "papier_schaduw",
+    "hook_op_beeld": false,
+    "aanleiding": "tijdloos",
+    "video_uitleg": true
+   },
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "reel_stijl": "test markeren",
+    "carrousel_stijl": "n.v.t.",
+    "reel_kleur": "experiment",
+    "markeer_achtergrond": "experiment",
+    "markeer_streep": "experiment",
+    "markeer_opening": "experiment",
+    "reel_plaatsing": "n.v.t.",
+    "reel_scene": "n.v.t.",
+    "reel_haak": "n.v.t.",
+    "opening": "n.v.t.",
+    "hashtag_stijl": "experiment",
+    "tijdslot": "experiment",
+    "video_uitleg": "vaste regel"
+   },
+   "reeks": null,
+   "reeks_label": null
+  },
+  {
+   "datum": "2026-11-25",
+   "ref": "Johannes 16:33",
+   "tekst": "Deze dingen heb Ik tot u gesproken, opdat gij in Mij vrede hebt. In de wereld zult gij verdrukking hebben, maar hebt goeden moed, Ik heb de wereld overwonnen.",
+   "vers_id": "John-16-33-33",
+   "variabelen": {
+    "huisstijl": "papier_rood",
+    "thema": "troost",
+    "hook_stijl": "uitdaging",
+    "formaat": "video",
+    "uitleg_op_beeld": true,
+    "achtergrondbron": "verloop",
+    "boekgroep": "evangelien",
     "lengte": "middel",
     "bron": "bekend",
     "vraag_onderaan": true,
@@ -18056,17 +18453,212 @@
     "markeer_achtergrond": null,
     "markeer_streep": null,
     "markeer_opening": null,
-    "reel_plaatsing": "boven",
+    "reel_plaatsing": "midden",
     "reel_scene": "onderweg",
     "reel_haak": "geen",
     "opening": null,
-    "hashtag_stijl": "zoekwoord",
-    "tijdslot": "22:00",
+    "hashtag_stijl": "mix",
+    "tijdslot": "04:00",
     "tijdslot_fb": "12:15",
-    "palet": "papier_blauw",
+    "palet": "papier_rood",
+    "lettertype": "cormorant",
+    "layout": "links",
+    "achtergrond": "papier",
+    "hook_op_beeld": false,
+    "aanleiding": "tijdloos",
+    "video_uitleg": true
+   },
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "reel_stijl": "vaste regel",
+    "carrousel_stijl": "n.v.t.",
+    "reel_kleur": "n.v.t.",
+    "markeer_achtergrond": "n.v.t.",
+    "markeer_streep": "n.v.t.",
+    "markeer_opening": "n.v.t.",
+    "reel_plaatsing": "experiment",
+    "reel_scene": "experiment",
+    "reel_haak": "n.v.t.",
+    "opening": "n.v.t.",
+    "hashtag_stijl": "experiment",
+    "tijdslot": "experiment",
+    "video_uitleg": "vaste regel"
+   },
+   "reeks": null,
+   "reeks_label": null
+  },
+  {
+   "datum": "2026-11-25",
+   "ref": "1 Korinthe 15:58",
+   "tekst": "Zo dan, mijn geliefde broeders! Zijt standvastig, onbewegelijk, altijd overvloedig zijnde in het werk des Heeren, als die weet, dat uw arbeid niet ijdel is in den Heere.",
+   "vers_id": "I_Corinthians-15-58-58",
+   "variabelen": {
+    "huisstijl": "papier_rood",
+    "thema": "moed",
+    "hook_stijl": "herkenning",
+    "formaat": "video",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "verloop",
+    "boekgroep": "brieven",
+    "lengte": "middel",
+    "bron": "bekend",
+    "vraag_onderaan": false,
+    "reel_stijl": "markeren",
+    "carrousel_stijl": null,
+    "reel_kleur": "mint",
+    "markeer_achtergrond": "papier",
+    "markeer_streep": "regel",
+    "markeer_opening": "sterk",
+    "reel_plaatsing": null,
+    "reel_scene": null,
+    "reel_haak": "geen",
+    "opening": null,
+    "hashtag_stijl": "zonder",
+    "tijdslot": "12:15",
+    "tijdslot_fb": "12:15",
+    "palet": "papier_rood",
+    "lettertype": "cormorant",
+    "layout": "links",
+    "achtergrond": "papier",
+    "hook_op_beeld": false,
+    "aanleiding": "tijdloos",
+    "video_uitleg": true
+   },
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "reel_stijl": "test markeren",
+    "carrousel_stijl": "n.v.t.",
+    "reel_kleur": "experiment",
+    "markeer_achtergrond": "experiment",
+    "markeer_streep": "experiment",
+    "markeer_opening": "experiment",
+    "reel_plaatsing": "n.v.t.",
+    "reel_scene": "n.v.t.",
+    "reel_haak": "n.v.t.",
+    "opening": "n.v.t.",
+    "hashtag_stijl": "experiment",
+    "tijdslot": "experiment",
+    "video_uitleg": "vaste regel"
+   },
+   "reeks": null,
+   "reeks_label": null
+  },
+  {
+   "datum": "2026-11-25",
+   "ref": "Hooglied 8:7",
+   "tekst": "Vele wateren zouden deze liefde niet kunnen uitblussen; ja, de rivieren zouden ze niet verdrinken; al gaf iemand al het goed van zijn huis voor deze liefde, men zou hem te enenmale verachten.",
+   "vers_id": "Song_of_Solomon-8-7-7",
+   "variabelen": {
+    "huisstijl": "schaduw_groen",
+    "thema": "liefde",
+    "hook_stijl": "geen",
+    "formaat": "video",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "verloop",
+    "boekgroep": "wijsheid",
+    "lengte": "lang",
+    "bron": "bekend",
+    "vraag_onderaan": false,
+    "reel_stijl": "markeren",
+    "carrousel_stijl": null,
+    "reel_kleur": "mint",
+    "markeer_achtergrond": "schaduw",
+    "markeer_streep": "regel",
+    "markeer_opening": "sterk",
+    "reel_plaatsing": null,
+    "reel_scene": null,
+    "reel_haak": "geen",
+    "opening": null,
+    "hashtag_stijl": "mix",
+    "tijdslot": "17:45",
+    "tijdslot_fb": "22:00",
+    "palet": "papier_groen",
     "lettertype": "cormorant",
     "layout": "links",
     "achtergrond": "papier_schaduw",
+    "hook_op_beeld": false,
+    "aanleiding": "tijdloos",
+    "video_uitleg": true
+   },
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "experiment",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "reel_stijl": "test markeren",
+    "carrousel_stijl": "n.v.t.",
+    "reel_kleur": "experiment",
+    "markeer_achtergrond": "experiment",
+    "markeer_streep": "experiment",
+    "markeer_opening": "experiment",
+    "reel_plaatsing": "n.v.t.",
+    "reel_scene": "n.v.t.",
+    "reel_haak": "n.v.t.",
+    "opening": "n.v.t.",
+    "hashtag_stijl": "experiment",
+    "tijdslot": "experiment",
+    "video_uitleg": "vaste regel"
+   },
+   "reeks": null,
+   "reeks_label": null
+  },
+  {
+   "datum": "2026-11-26",
+   "ref": "Mattheüs 11:28",
+   "tekst": "Komt herwaarts tot Mij, allen die vermoeid en belast zijt, en Ik zal u rust geven.",
+   "vers_id": "Matthew-11-28-28",
+   "variabelen": {
+    "huisstijl": "papier_rood",
+    "thema": "troost",
+    "hook_stijl": "uitdaging",
+    "formaat": "video",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "verloop",
+    "boekgroep": "evangelien",
+    "lengte": "kort",
+    "bron": "bekend",
+    "vraag_onderaan": true,
+    "reel_stijl": "situatie",
+    "carrousel_stijl": null,
+    "reel_kleur": null,
+    "markeer_achtergrond": null,
+    "markeer_streep": null,
+    "markeer_opening": null,
+    "reel_plaatsing": "boven",
+    "reel_scene": "natuur",
+    "reel_haak": "geen",
+    "opening": null,
+    "hashtag_stijl": "zonder",
+    "tijdslot": "04:00",
+    "tijdslot_fb": "04:00",
+    "palet": "papier_rood",
+    "lettertype": "cormorant",
+    "layout": "links",
+    "achtergrond": "papier",
     "hook_op_beeld": false,
     "aanleiding": "tijdloos",
     "video_uitleg": true
@@ -18100,21 +18692,86 @@
    "reeks_label": null
   },
   {
-   "datum": "2026-11-25",
-   "ref": "Klaagliederen 3:24",
-   "tekst": "De HEERE is mijn Deel, zegt mijn ziel, daarom zal ik op Hem hopen.",
-   "vers_id": "Lamentations-3-24-24",
+   "datum": "2026-11-26",
+   "ref": "1 Petrus 5:7",
+   "tekst": "Werpt al uw bekommernis op Hem, want Hij zorgt voor u.",
+   "vers_id": "I_Peter-5-7-7",
    "variabelen": {
-    "huisstijl": "perzik",
-    "thema": "hoop",
-    "hook_stijl": "vraag",
-    "formaat": "video",
-    "uitleg_op_beeld": true,
+    "huisstijl": "zand",
+    "thema": "troost",
+    "hook_stijl": "herkenning",
+    "formaat": "carrousel",
+    "uitleg_op_beeld": false,
     "achtergrondbron": "verloop",
-    "boekgroep": "profeten",
+    "boekgroep": "brieven",
     "lengte": "kort",
     "bron": "bekend",
-    "vraag_onderaan": false,
+    "vraag_onderaan": true,
+    "reel_stijl": null,
+    "carrousel_stijl": "standaard",
+    "reel_kleur": null,
+    "markeer_achtergrond": "foto",
+    "markeer_streep": "regel",
+    "markeer_opening": "vers",
+    "reel_plaatsing": null,
+    "reel_scene": null,
+    "reel_haak": null,
+    "opening": "vers",
+    "hashtag_stijl": "zoekwoord",
+    "tijdslot": "17:45",
+    "tijdslot_fb": "20:30",
+    "palet": "zand",
+    "lettertype": "dmserif",
+    "layout": "centraal",
+    "achtergrond": "verloop",
+    "hook_op_beeld": false,
+    "aanleiding": "tijdloos",
+    "video_uitleg": null
+   },
+   "keuzebron": {
+    "huisstijl": "experiment",
+    "thema": "experiment",
+    "hook_stijl": "experiment",
+    "formaat": "aandeel reels",
+    "uitleg_op_beeld": "experiment",
+    "achtergrondbron": "experiment",
+    "boekgroep": "experiment",
+    "lengte": "experiment",
+    "bron": "experiment",
+    "vraag_onderaan": "experiment",
+    "reel_stijl": "n.v.t.",
+    "carrousel_stijl": "experiment",
+    "reel_kleur": "n.v.t.",
+    "markeer_achtergrond": "experiment",
+    "markeer_streep": "experiment",
+    "markeer_opening": "experiment",
+    "reel_plaatsing": "n.v.t.",
+    "reel_scene": "n.v.t.",
+    "reel_haak": "n.v.t.",
+    "opening": "kort vers",
+    "hashtag_stijl": "experiment",
+    "tijdslot": "experiment",
+    "video_uitleg": "n.v.t."
+   },
+   "reeks": null,
+   "reeks_label": null
+  },
+  {
+   "datum": "2026-11-26",
+   "ref": "2 Korinthe 12:9",
+   "tekst": "En Hij heeft tot mij gezegd: Mijn genade is u genoeg; want Mijn kracht wordt in zwakheid volbracht. Zo zal ik dan veel liever roemen in mijn zwakheden, opdat de kracht van Christus in mij wone.",
+   "vers_id": "II_Corinthians-12-9-9",
+   "variabelen": {
+    "huisstijl": "perzik",
+    "thema": "troost",
+    "hook_stijl": "herkenning",
+    "formaat": "video",
+    "uitleg_op_beeld": false,
+    "achtergrondbron": "verloop",
+    "boekgroep": "brieven",
+    "lengte": "lang",
+    "bron": "bekend",
+    "vraag_onderaan": true,
     "reel_stijl": "situatie",
     "carrousel_stijl": null,
     "reel_kleur": null,
@@ -18122,11 +18779,11 @@
     "markeer_streep": null,
     "markeer_opening": null,
     "reel_plaatsing": "midden",
-    "reel_scene": "natuur",
+    "reel_scene": "dichtbij",
     "reel_haak": "geen",
     "opening": null,
     "hashtag_stijl": "zoekwoord",
-    "tijdslot": "17:45",
+    "tijdslot": "20:30",
     "tijdslot_fb": "22:00",
     "palet": "perzik",
     "lettertype": "playfair",
@@ -18165,151 +18822,21 @@
    "reeks_label": null
   },
   {
-   "datum": "2026-11-25",
-   "ref": "Jesaja 40:8",
-   "tekst": "Het gras verdort, de bloem valt af; maar het Woord onzes Gods bestaat in der eeuwigheid.",
-   "vers_id": "Isaiah-40-8-8",
-   "variabelen": {
-    "huisstijl": "avond",
-    "thema": "hoop",
-    "hook_stijl": "herkenning",
-    "formaat": "video",
-    "uitleg_op_beeld": false,
-    "achtergrondbron": "verloop",
-    "boekgroep": "profeten",
-    "lengte": "kort",
-    "bron": "bekend",
-    "vraag_onderaan": true,
-    "reel_stijl": "situatie",
-    "carrousel_stijl": null,
-    "reel_kleur": null,
-    "markeer_achtergrond": null,
-    "markeer_streep": null,
-    "markeer_opening": null,
-    "reel_plaatsing": "boven",
-    "reel_scene": "onderweg",
-    "reel_haak": "geen",
-    "opening": null,
-    "hashtag_stijl": "mix",
-    "tijdslot": "12:15",
-    "tijdslot_fb": "04:00",
-    "palet": "nacht",
-    "lettertype": "playfair",
-    "layout": "citaat",
-    "achtergrond": "licht",
-    "hook_op_beeld": false,
-    "aanleiding": "tijdloos",
-    "video_uitleg": true
-   },
-   "keuzebron": {
-    "huisstijl": "experiment",
-    "thema": "experiment",
-    "hook_stijl": "experiment",
-    "formaat": "experiment",
-    "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "experiment",
-    "boekgroep": "experiment",
-    "lengte": "experiment",
-    "bron": "experiment",
-    "vraag_onderaan": "experiment",
-    "reel_stijl": "vaste regel",
-    "carrousel_stijl": "n.v.t.",
-    "reel_kleur": "n.v.t.",
-    "markeer_achtergrond": "n.v.t.",
-    "markeer_streep": "n.v.t.",
-    "markeer_opening": "n.v.t.",
-    "reel_plaatsing": "experiment",
-    "reel_scene": "experiment",
-    "reel_haak": "n.v.t.",
-    "opening": "n.v.t.",
-    "hashtag_stijl": "experiment",
-    "tijdslot": "experiment",
-    "video_uitleg": "vaste regel"
-   },
-   "reeks": null,
-   "reeks_label": null
-  },
-  {
    "datum": "2026-11-26",
-   "ref": "Psalm 71:5",
-   "tekst": "Want Gij zijt mijn Verwachting, Heere, HEERE! mijn Vertrouwen van mijn jeugd aan.",
-   "vers_id": "Psalms-71-5-5",
-   "variabelen": {
-    "huisstijl": "hemelsblauw",
-    "thema": "hoop",
-    "hook_stijl": "uitdaging",
-    "formaat": "carrousel",
-    "uitleg_op_beeld": false,
-    "achtergrondbron": "verloop",
-    "boekgroep": "psalmen",
-    "lengte": "kort",
-    "bron": "bekend",
-    "vraag_onderaan": false,
-    "reel_stijl": null,
-    "carrousel_stijl": "standaard",
-    "reel_kleur": null,
-    "markeer_achtergrond": "papier",
-    "markeer_streep": "regel",
-    "markeer_opening": "sterk",
-    "reel_plaatsing": null,
-    "reel_scene": null,
-    "reel_haak": null,
-    "opening": "vers",
-    "hashtag_stijl": "zonder",
-    "tijdslot": "17:45",
-    "tijdslot_fb": "20:30",
-    "palet": "hemelsblauw",
-    "lettertype": "montserrat_zwaar",
-    "layout": "links",
-    "achtergrond": "diagonaal",
-    "hook_op_beeld": false,
-    "aanleiding": "tijdloos",
-    "video_uitleg": null
-   },
-   "keuzebron": {
-    "huisstijl": "experiment",
-    "thema": "experiment",
-    "hook_stijl": "experiment",
-    "formaat": "experiment",
-    "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "limiet",
-    "boekgroep": "experiment",
-    "lengte": "experiment",
-    "bron": "experiment",
-    "vraag_onderaan": "experiment",
-    "reel_stijl": "n.v.t.",
-    "carrousel_stijl": "experiment",
-    "reel_kleur": "n.v.t.",
-    "markeer_achtergrond": "experiment",
-    "markeer_streep": "experiment",
-    "markeer_opening": "experiment",
-    "reel_plaatsing": "n.v.t.",
-    "reel_scene": "n.v.t.",
-    "reel_haak": "n.v.t.",
-    "opening": "experiment",
-    "hashtag_stijl": "experiment",
-    "tijdslot": "experiment",
-    "video_uitleg": "n.v.t."
-   },
-   "reeks": null,
-   "reeks_label": null
-  },
-  {
-   "datum": "2026-11-26",
-   "ref": "Psalm 121:1-2",
-   "tekst": "Ik hef mijn ogen op naar de bergen, van waar mijn hulp komen zal. Mijn hulp is van den HEERE, Die hemel en aarde gemaakt heeft.",
-   "vers_id": "Psalms-121-1-2",
+   "ref": "1 Johannes 4:19",
+   "tekst": "Wij hebben Hem lief, omdat Hij ons eerst liefgehad heeft.",
+   "vers_id": "I_John-4-19-19",
    "variabelen": {
     "huisstijl": "zand",
-    "thema": "troost",
+    "thema": "liefde",
     "hook_stijl": "geen",
     "formaat": "video",
     "uitleg_op_beeld": false,
     "achtergrondbron": "verloop",
-    "boekgroep": "psalmen",
-    "lengte": "middel",
+    "boekgroep": "brieven",
+    "lengte": "kort",
     "bron": "bekend",
-    "vraag_onderaan": true,
+    "vraag_onderaan": false,
     "reel_stijl": "situatie",
     "carrousel_stijl": null,
     "reel_kleur": null,
@@ -18321,8 +18848,8 @@
     "reel_haak": "geen",
     "opening": null,
     "hashtag_stijl": "zonder",
-    "tijdslot": "04:00",
-    "tijdslot_fb": "17:45",
+    "tijdslot": "22:00",
+    "tijdslot_fb": "04:00",
     "palet": "zand",
     "lettertype": "dmserif",
     "layout": "centraal",
@@ -18361,37 +18888,37 @@
   },
   {
    "datum": "2026-11-26",
-   "ref": "Jeremia 31:3",
-   "tekst": "De HEERE is mij verschenen van verre tijden! Ja, Ik heb u liefgehad met een eeuwige liefde; daarom heb Ik u getrokken met goedertierenheid.",
-   "vers_id": "Jeremiah-31-3-3",
+   "ref": "Psalm 91:1-2",
+   "tekst": "Die in de schuilplaats des Allerhoogsten is gezeten, die zal vernachten in de schaduw des Almachtigen. Ik zal tot den HEERE zeggen: Mijn Toevlucht en mijn Burg! mijn God, op Welken ik vertrouw!",
+   "vers_id": "Psalms-91-1-2",
    "variabelen": {
-    "huisstijl": "zand",
-    "thema": "liefde",
+    "huisstijl": "avond",
+    "thema": "vertrouwen",
     "hook_stijl": "herkenning",
     "formaat": "carrousel",
-    "uitleg_op_beeld": false,
+    "uitleg_op_beeld": true,
     "achtergrondbron": "verloop",
-    "boekgroep": "profeten",
-    "lengte": "middel",
+    "boekgroep": "psalmen",
+    "lengte": "lang",
     "bron": "bekend",
     "vraag_onderaan": true,
     "reel_stijl": null,
     "carrousel_stijl": "markeren",
-    "reel_kleur": "hemel",
-    "markeer_achtergrond": "kleur",
+    "reel_kleur": "roze",
+    "markeer_achtergrond": "papier",
     "markeer_streep": "regel",
-    "markeer_opening": "vers",
+    "markeer_opening": "sterk",
     "reel_plaatsing": null,
     "reel_scene": null,
     "reel_haak": null,
     "opening": "vers",
-    "hashtag_stijl": "mix",
-    "tijdslot": "20:30",
-    "tijdslot_fb": "12:15",
-    "palet": "zand",
-    "lettertype": "dmserif",
-    "layout": "centraal",
-    "achtergrond": "verloop",
+    "hashtag_stijl": "zonder",
+    "tijdslot": "12:15",
+    "tijdslot_fb": "20:30",
+    "palet": "nacht",
+    "lettertype": "playfair",
+    "layout": "citaat",
+    "achtergrond": "licht",
     "hook_op_beeld": false,
     "aanleiding": "tijdloos",
     "video_uitleg": null
@@ -18400,7 +18927,7 @@
     "huisstijl": "experiment",
     "thema": "experiment",
     "hook_stijl": "experiment",
-    "formaat": "experiment",
+    "formaat": "aandeel reels",
     "uitleg_op_beeld": "experiment",
     "achtergrondbron": "limiet",
     "boekgroep": "experiment",
@@ -18420,136 +18947,6 @@
     "hashtag_stijl": "experiment",
     "tijdslot": "experiment",
     "video_uitleg": "n.v.t."
-   },
-   "reeks": null,
-   "reeks_label": null
-  },
-  {
-   "datum": "2026-11-26",
-   "ref": "Jesaja 26:4",
-   "tekst": "Vertrouwt op den HEERE tot in der eeuwigheid; want in den Heere HEERE is een eeuwige rotssteen.",
-   "vers_id": "Isaiah-26-4-4",
-   "variabelen": {
-    "huisstijl": "avond",
-    "thema": "vertrouwen",
-    "hook_stijl": "geen",
-    "formaat": "video",
-    "uitleg_op_beeld": true,
-    "achtergrondbron": "verloop",
-    "boekgroep": "profeten",
-    "lengte": "middel",
-    "bron": "bekend",
-    "vraag_onderaan": true,
-    "reel_stijl": "situatie",
-    "carrousel_stijl": null,
-    "reel_kleur": null,
-    "markeer_achtergrond": null,
-    "markeer_streep": null,
-    "markeer_opening": null,
-    "reel_plaatsing": "boven",
-    "reel_scene": "natuur",
-    "reel_haak": "geen",
-    "opening": null,
-    "hashtag_stijl": "mix",
-    "tijdslot": "12:15",
-    "tijdslot_fb": "04:00",
-    "palet": "nacht",
-    "lettertype": "playfair",
-    "layout": "citaat",
-    "achtergrond": "licht",
-    "hook_op_beeld": false,
-    "aanleiding": "tijdloos",
-    "video_uitleg": true
-   },
-   "keuzebron": {
-    "huisstijl": "experiment",
-    "thema": "experiment",
-    "hook_stijl": "experiment",
-    "formaat": "experiment",
-    "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "experiment",
-    "boekgroep": "experiment",
-    "lengte": "experiment",
-    "bron": "experiment",
-    "vraag_onderaan": "experiment",
-    "reel_stijl": "vaste regel",
-    "carrousel_stijl": "n.v.t.",
-    "reel_kleur": "n.v.t.",
-    "markeer_achtergrond": "n.v.t.",
-    "markeer_streep": "n.v.t.",
-    "markeer_opening": "n.v.t.",
-    "reel_plaatsing": "experiment",
-    "reel_scene": "experiment",
-    "reel_haak": "n.v.t.",
-    "opening": "n.v.t.",
-    "hashtag_stijl": "experiment",
-    "tijdslot": "experiment",
-    "video_uitleg": "vaste regel"
-   },
-   "reeks": null,
-   "reeks_label": null
-  },
-  {
-   "datum": "2026-11-26",
-   "ref": "Galaten 3:26",
-   "tekst": "Want gij zijt allen kinderen Gods door het geloof in Christus Jezus.",
-   "vers_id": "Galatians-3-26-26",
-   "variabelen": {
-    "huisstijl": "perzik",
-    "thema": "identiteit",
-    "hook_stijl": "geen",
-    "formaat": "video",
-    "uitleg_op_beeld": true,
-    "achtergrondbron": "verloop",
-    "boekgroep": "brieven",
-    "lengte": "kort",
-    "bron": "bekend",
-    "vraag_onderaan": true,
-    "reel_stijl": "markeren",
-    "carrousel_stijl": null,
-    "reel_kleur": "abrikoos",
-    "markeer_achtergrond": "papier",
-    "markeer_streep": "regel",
-    "markeer_opening": "sterk",
-    "reel_plaatsing": null,
-    "reel_scene": null,
-    "reel_haak": "geen",
-    "opening": null,
-    "hashtag_stijl": "mix",
-    "tijdslot": "22:00",
-    "tijdslot_fb": "17:45",
-    "palet": "perzik",
-    "lettertype": "playfair",
-    "layout": "citaat",
-    "achtergrond": "diagonaal",
-    "hook_op_beeld": false,
-    "aanleiding": "tijdloos",
-    "video_uitleg": true
-   },
-   "keuzebron": {
-    "huisstijl": "experiment",
-    "thema": "experiment",
-    "hook_stijl": "experiment",
-    "formaat": "experiment",
-    "uitleg_op_beeld": "experiment",
-    "achtergrondbron": "limiet",
-    "boekgroep": "experiment",
-    "lengte": "experiment",
-    "bron": "experiment",
-    "vraag_onderaan": "experiment",
-    "reel_stijl": "test markeren",
-    "carrousel_stijl": "n.v.t.",
-    "reel_kleur": "experiment",
-    "markeer_achtergrond": "experiment",
-    "markeer_streep": "experiment",
-    "markeer_opening": "experiment",
-    "reel_plaatsing": "n.v.t.",
-    "reel_scene": "n.v.t.",
-    "reel_haak": "n.v.t.",
-    "opening": "n.v.t.",
-    "hashtag_stijl": "experiment",
-    "tijdslot": "experiment",
-    "video_uitleg": "vaste regel"
    },
    "reeks": null,
    "reeks_label": null

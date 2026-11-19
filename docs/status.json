@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T13:45:45",
+ "updated": "2026-11-19T14:00:46",
  "agents": {
   "verskiezer": {
    "t": "2026-11-19T09:11:06",
@@ -27,12 +27,12 @@
    "state": "error"
   },
   "analist": {
-   "t": "2026-11-18T14:03:42",
-   "task": "Weekanalyse: strategie v4",
+   "t": "2026-11-19T14:00:45",
+   "task": "Weekanalyse: strategie v5",
    "state": "done"
   },
   "community": {
-   "t": "2026-11-19T13:01:26",
+   "t": "2026-11-19T14:00:45",
    "task": "1 nieuwe reactie gevonden",
    "state": "done"
   }
@@ -40,13 +40,13 @@
  "stats": {
   "posts_today": 0,
   "posts_total": 56,
-  "reach_7d": 588,
-  "best_time": "04:00",
+  "reach_7d": 786,
+  "best_time": "17:45",
   "next_post": "2026-11-19T04:00:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
-  "instagram": 729,
+  "instagram": 927,
   "facebook": 4,
   "youtube": 0,
   "tiktok": 0
@@ -56,6 +56,14 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "14:00",
+   "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
+  },
+  {
+   "t": "13:59",
+   "msg": "Statistieken opgehaald voor 21 posts"
+  },
   {
    "t": "13:31",
    "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
@@ -95,14 +103,6 @@
   {
    "t": "04:03",
    "msg": "2026-11-19-1 ook als story geplaatst"
-  },
-  {
-   "t": "23:15",
-   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
-   "t": "22:05",
-   "msg": "2026-11-18-1 online op instagram: Psalm 85:9"
   }
  ],
  "lampen": [
@@ -159,13 +159,14 @@
    3,
    4,
    5,
+   5,
    5
   ]
  },
  "top_post": {
-  "ref": "Filippenzen 4:13",
-  "thumb": "thumbs/2026-11-15-4.jpg",
-  "bereik": 126,
+  "ref": "Psalm 27:14",
+  "thumb": "thumbs/2026-11-17-1.jpg",
+  "bereik": 62,
   "score": 3.0,
   "formaat": "video"
  },
