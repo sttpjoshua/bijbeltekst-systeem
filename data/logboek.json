@@ -1,20 +1,5 @@
 [
  {
-  "t": "2026-11-07T14:55",
-  "soort": "info",
-  "tekst": "Token heeft alle rechten, ook voor statistieken"
- },
- {
-  "t": "2026-11-07T14:55",
-  "soort": "info",
-  "tekst": "Verbinding met Facebook-pagina werkt (Bibleversenl)"
- },
- {
-  "t": "2026-11-07T14:55",
-  "soort": "info",
-  "tekst": "Statistieken lezen werkt"
- },
- {
   "t": "2026-11-07T15:06",
   "soort": "info",
   "tekst": "Verbinding met Instagram werkt (@bibleverse_nl)"
@@ -2544,5 +2529,20 @@
   "t": "2026-11-19T09:12:04",
   "soort": "info",
   "tekst": "Zelfstandig 5 posts klaargezet voor 2026-11-21 (teksten uit de tekstbank)."
+ },
+ {
+  "t": "2026-11-19T12:16:55",
+  "soort": "info",
+  "tekst": "2026-11-19-3 ook als story geplaatst"
+ },
+ {
+  "t": "2026-11-19T12:16:55",
+  "soort": "info",
+  "tekst": "2026-11-19-3 online op instagram: Spreuken 16:18"
+ },
+ {
+  "t": "2026-11-19T12:17:05",
+  "soort": "info",
+  "tekst": "2026-11-19-2 online op facebook: Spreuken 26:17"
  }
 ]

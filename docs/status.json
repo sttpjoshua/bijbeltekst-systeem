@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T12:01:31",
+ "updated": "2026-11-19T12:17:06",
  "agents": {
   "verskiezer": {
    "t": "2026-11-19T09:11:06",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-19T04:03:30",
-   "task": "Postte Numeri 6:24-26 op facebook",
+   "t": "2026-11-19T12:17:05",
+   "task": "Postte Spreuken 26:17 op facebook",
    "state": "done"
   },
   "controller": {
@@ -57,6 +57,18 @@
  ],
  "log": [
   {
+   "t": "12:17",
+   "msg": "2026-11-19-2 online op facebook: Spreuken 26:17"
+  },
+  {
+   "t": "12:16",
+   "msg": "2026-11-19-3 online op instagram: Spreuken 16:18"
+  },
+  {
+   "t": "12:16",
+   "msg": "2026-11-19-3 ook als story geplaatst"
+  },
+  {
    "t": "09:12",
    "msg": "Zelfstandig 5 posts klaargezet voor 2026-11-21 (teksten uit de tekstbank)."
   },
@@ -91,18 +103,6 @@
   {
    "t": "22:05",
    "msg": "2026-11-18-1 ook als story geplaatst"
-  },
-  {
-   "t": "22:03",
-   "msg": "2026-11-18-5 online op facebook: Openbaring 21:4"
-  },
-  {
-   "t": "21:45",
-   "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
-  },
-  {
-   "t": "20:32",
-   "msg": "2026-11-18-4 online op instagram: Psalm 119:165"
   }
  ],
  "lampen": [
