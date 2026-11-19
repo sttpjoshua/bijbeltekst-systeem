@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T18:58:26",
+ "updated": "2026-11-19T19:04:27",
  "agents": {
   "verskiezer": {
    "t": "2026-11-19T16:20:44",
@@ -32,7 +32,7 @@
    "state": "done"
   },
   "community": {
-   "t": "2026-11-19T18:01:31",
+   "t": "2026-11-19T19:02:28",
    "task": "1 nieuwe reactie gevonden",
    "state": "done"
   }
@@ -166,7 +166,7 @@
  "top_post": {
   "ref": "Openbaring 21:4",
   "thumb": "thumbs/2026-11-18-5.jpg",
-  "bereik": 64,
+  "bereik": 80,
   "score": 3.0,
   "formaat": "video"
  },
