@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T20:15:47",
+ "updated": "2026-11-19T20:33:10",
  "agents": {
   "verskiezer": {
    "t": "2026-11-19T16:20:44",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-19T17:47:12",
-   "task": "Postte Numeri 6:24-26 op instagram",
+   "t": "2026-11-19T20:33:10",
+   "task": "Postte Spreuken 19:24 op facebook",
    "state": "done"
   },
   "controller": {
@@ -38,11 +38,11 @@
   }
  },
  "stats": {
-  "posts_today": 3,
-  "posts_total": 59,
+  "posts_today": 4,
+  "posts_total": 60,
   "reach_7d": 786,
   "best_time": "17:45",
-  "next_post": "2026-11-19T20:30:00"
+  "next_post": "2026-11-19T22:00:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
@@ -56,6 +56,18 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "20:33",
+   "msg": "2026-11-19-4 online op facebook: Spreuken 19:24"
+  },
+  {
+   "t": "20:32",
+   "msg": "2026-11-19-4 online op instagram: Spreuken 19:24"
+  },
+  {
+   "t": "20:32",
+   "msg": "2026-11-19-4 ook als story geplaatst"
+  },
   {
    "t": "18:58",
    "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
@@ -91,18 +103,6 @@
   {
    "t": "14:34",
    "msg": "Materiaal-repo niet gekloond (add_repo ontbreekt in deze sessie); GitHub Actions vult muziek zo nodig aan"
-  },
-  {
-   "t": "14:00",
-   "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
-  },
-  {
-   "t": "13:59",
-   "msg": "Statistieken opgehaald voor 21 posts"
-  },
-  {
-   "t": "13:31",
-   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
   }
  ],
  "lampen": [
