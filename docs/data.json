@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-19T18:45",
+ "gegenereerd": "2026-11-19T18:58",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1771,6 +1771,16 @@
      "saves": null,
      "follows": null,
      "t": "2026-11-19T16:01+01:00"
+    },
+    "instagram": {
+     "views": 0,
+     "reach": 0,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "t": null
     }
    },
    "score": {},
@@ -1808,6 +1818,17 @@
       "comments": null,
       "shares": null,
       "saves": null,
+      "follows": null
+     }
+    },
+    "instagram": {
+     "1u": {
+      "views": 0,
+      "reach": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
       "follows": null
      }
     }
@@ -1988,6 +2009,16 @@
      "saves": 0,
      "follows": null,
      "t": "2026-11-19T16:01+01:00"
+    },
+    "facebook": {
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "t": null
     }
    },
    "score": {},
@@ -2025,6 +2056,17 @@
       "comments": 0,
       "shares": 0,
       "saves": 0,
+      "follows": null
+     }
+    },
+    "facebook": {
+     "1u": {
+      "views": 0,
+      "reach": null,
+      "likes": null,
+      "comments": null,
+      "shares": null,
+      "saves": null,
       "follows": null
      }
     }
@@ -12298,11 +12340,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-17T19:03:09",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
-  },
-  {
    "t": "2026-11-17T20:31:32",
    "soort": "info",
    "tekst": "2026-11-17-2 online op facebook: Prediker 10:18"
@@ -12604,6 +12641,11 @@
    "t": "2026-11-19T18:45:45",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-19T18:58:25",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
   }
  ],
  "recente_fouten": [
