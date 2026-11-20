@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T09:03:57",
+ "updated": "2026-11-20T09:33:54",
  "agents": {
   "verskiezer": {
    "t": "2026-11-20T09:02:57",
@@ -7,12 +7,12 @@
    "state": "done"
   },
   "designer": {
-   "t": "2026-11-20T09:03:56",
+   "t": "2026-11-20T09:33:54",
    "task": "Ontwierp Sefanja 3:17 in stijl schaduw_rood",
    "state": "done"
   },
   "video": {
-   "t": "2026-11-20T09:03:56",
+   "t": "2026-11-20T09:33:54",
    "task": "Monteerde video Sefanja 3:17 met muziek",
    "state": "done"
   },
@@ -57,6 +57,10 @@
  ],
  "log": [
   {
+   "t": "09:33",
+   "msg": "Zelfstandig 10 posts klaargezet voor 2026-11-21, 2026-11-22 (teksten uit de tekstbank)."
+  },
+  {
    "t": "09:03",
    "msg": "Zelfstandig 5 posts klaargezet voor 2026-11-22 (teksten uit de tekstbank)."
   },
@@ -99,10 +103,6 @@
   {
    "t": "20:33",
    "msg": "2026-11-19-4 online op facebook: Spreuken 19:24"
-  },
-  {
-   "t": "20:32",
-   "msg": "2026-11-19-4 online op instagram: Spreuken 19:24"
   }
  ],
  "lampen": [
