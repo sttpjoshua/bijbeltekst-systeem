@@ -2,11 +2,6 @@
  {
   "t": "2026-11-08T12:15",
   "soort": "info",
-  "tekst": "2026-11-08-4 ook als story geplaatst"
- },
- {
-  "t": "2026-11-08T12:15",
-  "soort": "info",
   "tekst": "2026-11-08-4 online op instagram: Psalm 23:1"
  },
  {
@@ -2210,7 +2205,8 @@
   "soort": "fout",
   "tekst": "Zwaar nieuws (NOS): \"Man krijgt 27 jaar cel voor beramen van moordaanslag op Trump\". Wil je er een troostende post over? Die gaat dan pas 6 uur na het nieuws online.",
   "code": "nieuws_voorstel",
-  "post": "n111812020"
+  "post": "n111812020",
+  "opgelost": true
  },
  {
   "t": "2026-11-18T12:02:04",
@@ -2545,6 +2541,11 @@
  },
  {
   "t": "2026-11-20T14:48:14",
+  "soort": "info",
+  "tekst": "Bediening: Voorstel genegeerd"
+ },
+ {
+  "t": "2026-11-20T14:50:09",
   "soort": "info",
   "tekst": "Bediening: Voorstel genegeerd"
  }

@@ -1,8 +1,8 @@
 {
- "updated": "2026-11-20T14:48:15",
+ "updated": "2026-11-20T14:50:10",
  "agents": {
   "verskiezer": {
-   "t": "2026-11-20T14:48:14",
+   "t": "2026-11-20T14:50:09",
    "task": "Voorstel genegeerd",
    "state": "done"
   },
@@ -57,6 +57,10 @@
  ],
  "log": [
   {
+   "t": "14:50",
+   "msg": "Bediening: Voorstel genegeerd"
+  },
+  {
    "t": "14:48",
    "msg": "Bediening: Voorstel genegeerd"
   },
@@ -99,10 +103,6 @@
   {
    "t": "09:03",
    "msg": "Zelfstandig 5 posts klaargezet voor 2026-11-22 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "07:01",
-   "msg": "Politiek nieuws (NOS): \"Hoogste cyberadviseur Trump vertrekt na reeks technische storingen\". Neutrale post ero"
   }
  ],
  "lampen": [
