@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-20T14:34",
+ "gegenereerd": "2026-11-20T14:48",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -13334,11 +13334,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-18T13:15:43",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
-  },
-  {
    "t": "2026-11-18T13:31:01",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
@@ -13636,6 +13631,11 @@
    "t": "2026-11-20T14:34:37",
    "soort": "info",
    "tekst": "Dagelijkse run: 10 posts voor 21 en 22 nov staan klaar (zelfstandig gemaakt, gecontroleerd); reserveverzen voor 22 nov ingevuld"
+  },
+  {
+   "t": "2026-11-20T14:48:14",
+   "soort": "info",
+   "tekst": "Bediening: Voorstel genegeerd"
   }
  ],
  "recente_fouten": [
@@ -17824,7 +17824,7 @@
     "link": "https://nos.nl/l/2639558",
     "categorie": "zwaar",
     "zwaar": true,
-    "status": "voorstel",
+    "status": "genegeerd",
     "post": null,
     "opties": [
      {
