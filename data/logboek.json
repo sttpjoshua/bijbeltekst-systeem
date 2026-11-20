@@ -1,10 +1,5 @@
 [
  {
-  "t": "2026-11-08T00:18",
-  "soort": "info",
-  "tekst": "Bediening: Johannes 14:27 krijgt stijl hemelsblauw; wordt bij de avondcontrole (20:47) opnieuw gemaakt"
- },
- {
   "t": "2026-11-08T00:21",
   "soort": "info",
   "tekst": "Johannes 14:27 opnieuw gemaakt in stijl hemelsblauw"
@@ -2544,5 +2539,12 @@
   "t": "2026-11-20T05:15:48",
   "soort": "info",
   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
+ },
+ {
+  "t": "2026-11-20T07:01:23",
+  "soort": "fout",
+  "tekst": "Politiek nieuws (NOS): \"Hoogste cyberadviseur Trump vertrekt na reeks technische storingen\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
+  "code": "nieuws_voorstel",
+  "post": "n112007010"
  }
 ]

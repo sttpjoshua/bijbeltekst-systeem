@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-20T04:02",
+ "gegenereerd": "2026-11-20T07:01",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1486,8 +1486,36 @@
     "instagram": "https://www.instagram.com/reel/Df8pFl3MwAx/",
     "facebook": "https://www.facebook.com/1766794491049587"
    },
-   "totaal": {},
-   "per_platform": {},
+   "totaal": {
+    "views": 3,
+    "reach": 1,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0
+   },
+   "per_platform": {
+    "instagram": {
+     "views": 3,
+     "reach": 1,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "t": null
+    },
+    "facebook": {
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "t": null
+    }
+   },
    "score": {},
    "keuzebron": {
     "huisstijl": "ochtend",
@@ -1514,7 +1542,30 @@
     "tijdslot": "experiment",
     "video_uitleg": "vaste regel"
    },
-   "momenten": {},
+   "momenten": {
+    "instagram": {
+     "1u": {
+      "views": 3,
+      "reach": 1,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": null
+     }
+    },
+    "facebook": {
+     "1u": {
+      "views": 0,
+      "reach": null,
+      "likes": null,
+      "comments": null,
+      "shares": null,
+      "saves": null,
+      "follows": null
+     }
+    }
+   },
    "pub": {
     "instagram": "2026-11-20T04:02+01:00",
     "facebook": "2026-11-20T04:02+01:00"
@@ -12433,11 +12484,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-18T04:02:51",
-   "soort": "info",
-   "tekst": "2026-11-18-3 online op instagram: Jesaja 55:12"
-  },
-  {
    "t": "2026-11-18T04:03:00",
    "soort": "info",
    "tekst": "2026-11-18-4 online op facebook: Psalm 119:165"
@@ -12739,6 +12785,11 @@
    "t": "2026-11-20T04:02:33",
    "soort": "info",
    "tekst": "2026-11-20-3 online op facebook: Filippenzen 4:6-7"
+  },
+  {
+   "t": "2026-11-20T05:15:48",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
   }
  ],
  "recente_fouten": [
@@ -12915,7 +12966,7 @@
    "ok": "2026-11-16T13:51"
   },
   "reacties": {
-   "ok": "2026-11-19T23:01",
+   "ok": "2026-11-20T07:01",
    "laatst_ok": true,
    "detail": "1 nieuwe reacties",
    "fout": "2026-11-08T18:00"
@@ -13055,8 +13106,8 @@
  "weken": {
   "deze": {
    "posts": 31,
-   "reach": 860,
-   "views": 948,
+   "reach": 861,
+   "views": 951,
    "likes": 18,
    "comments": 0,
    "saves": 3,
