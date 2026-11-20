@@ -1,10 +1,5 @@
 [
  {
-  "t": "2026-11-08T00:21",
-  "soort": "info",
-  "tekst": "Johannes 14:27 opnieuw gemaakt in stijl hemelsblauw"
- },
- {
   "t": "2026-11-08T00:28",
   "soort": "info",
   "tekst": "Bediening: Muziek en foto's in GitHub: NIET beschikbaar, controleer MATERIAAL_PAT"
@@ -2546,5 +2541,10 @@
   "tekst": "Politiek nieuws (NOS): \"Hoogste cyberadviseur Trump vertrekt na reeks technische storingen\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
   "code": "nieuws_voorstel",
   "post": "n112007010"
+ },
+ {
+  "t": "2026-11-20T09:03:56",
+  "soort": "info",
+  "tekst": "Zelfstandig 5 posts klaargezet voor 2026-11-22 (teksten uit de tekstbank)."
  }
 ]
