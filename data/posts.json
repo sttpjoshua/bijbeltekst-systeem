@@ -11638,7 +11638,32 @@
   "media": "docs/media/2026-11/2026-11-20-3.mp4",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-20-3.mp4",
   "metricool": {},
-  "stats": {},
+  "stats": {
+   "instagram": {
+    "1u": {
+     "views": 3,
+     "reach": 1,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "avg_watch_ms": 640
+    }
+   },
+   "facebook": {
+    "1u": {
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "avg_watch_ms": null
+    }
+   }
+  },
   "beeld": null,
   "muziek": "ES_Rain on Lotus Leaves - Aks & Lakshmi.mp3",
   "geluid": null,
