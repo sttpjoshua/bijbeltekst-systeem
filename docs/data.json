@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-20T20:15",
+ "gegenereerd": "2026-11-20T20:18",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -13372,11 +13372,6 @@
   {
    "t": "2026-11-18T17:48:04",
    "soort": "info",
-   "tekst": "2026-11-18-5 ook als story geplaatst"
-  },
-  {
-   "t": "2026-11-18T17:48:04",
-   "soort": "info",
    "tekst": "2026-11-18-5 online op instagram: Openbaring 21:4"
   },
   {
@@ -13673,6 +13668,11 @@
    "t": "2026-11-20T19:03:14",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-20T20:18:39",
+   "soort": "info",
+   "tekst": "Bediening: Reacties opgehaald: 1 nieuw"
   }
  ],
  "recente_fouten": [
@@ -13841,7 +13841,7 @@
    "ok": "2026-11-20T08:01",
    "laatst_ok": false,
    "detail": "400: {\"error\":{\"message\":\"Unsupported get request. Object with ID '18646160734043579' does not exist, cannot be loaded due to missing permissions, or does not s",
-   "fout": "2026-11-20T20:01"
+   "fout": "2026-11-20T20:18"
   },
   "facebook": {
    "ok": "2026-11-20T12:17",

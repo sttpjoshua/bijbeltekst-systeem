@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T20:15:53",
+ "updated": "2026-11-20T20:18:40",
  "agents": {
   "verskiezer": {
    "t": "2026-11-20T15:29:59",
@@ -32,8 +32,8 @@
    "state": "done"
   },
   "community": {
-   "t": "2026-11-20T20:01:14",
-   "task": "1 nieuwe reactie gevonden",
+   "t": "2026-11-20T20:18:39",
+   "task": "Reacties opgehaald: 1 nieuw",
    "state": "done"
   }
  },
@@ -56,6 +56,10 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "20:18",
+   "msg": "Bediening: Reacties opgehaald: 1 nieuw"
+  },
   {
    "t": "19:03",
    "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
@@ -99,10 +103,6 @@
   {
    "t": "13:31",
    "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
-   "t": "12:17",
-   "msg": "2026-11-20-5 online op facebook: Micha 6:8"
   }
  ],
  "lampen": [
