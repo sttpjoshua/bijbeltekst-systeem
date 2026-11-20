@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-20T20:18",
+ "gegenereerd": "2026-11-20T20:32",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -2103,7 +2103,7 @@
    "ref": "Spreuken 20:13",
    "tekst": "Heb den slaap niet lief, opdat gij niet arm wordt; open uw ogen, verzadig u met brood.",
    "hook": "Voor iedereen die vanochtend vijf keer op snooze drukte.",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "paars",
     "thema": "humor_herkenbaar",
@@ -2149,8 +2149,14 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-20-2.mp4"
    ],
    "thumb": "thumbs/2026-11-20-2.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "instagram",
+    "facebook"
+   ],
+   "links": {
+    "instagram": "https://www.instagram.com/reel/Df-aXRboDDy/",
+    "facebook": "https://www.facebook.com/2041377719899558"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -2180,11 +2186,14 @@
     "video_uitleg": "vaste regel"
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "instagram": "2026-11-20T20:32+01:00",
+    "facebook": "2026-11-20T20:32+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": null,
-   "online": null
+   "online": "2026-11-20T20:32+01:00"
   },
   {
    "id": "2026-11-20-1",
@@ -2192,7 +2201,7 @@
    "ref": "Spreuken 29:11",
    "tekst": "Een zot laat zijn gansen geest uit, maar de wijze wederhoudt dien achterwaarts.",
    "hook": "Tel tot tien voor je vandaag reageert.",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "schaduw_rood",
     "thema": "humor_herkenbaar",
@@ -2239,10 +2248,12 @@
    ],
    "thumb": "thumbs/2026-11-20-1.jpg",
    "platformen": [
-    "instagram"
+    "instagram",
+    "facebook"
    ],
    "links": {
-    "instagram": "https://www.instagram.com/reel/Df9hqnkyITK/"
+    "instagram": "https://www.instagram.com/reel/Df9hqnkyITK/",
+    "facebook": "https://www.facebook.com/1829567298374520"
    },
    "totaal": {
     "views": 18,
@@ -2304,7 +2315,8 @@
     }
    },
    "pub": {
-    "instagram": "2026-11-20T12:16+01:00"
+    "instagram": "2026-11-20T12:16+01:00",
+    "facebook": "2026-11-20T20:31+01:00"
    },
    "gemist": [],
    "nood": false,
@@ -13370,26 +13382,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-18T17:48:04",
-   "soort": "info",
-   "tekst": "2026-11-18-5 online op instagram: Openbaring 21:4"
-  },
-  {
-   "t": "2026-11-18T17:48:15",
-   "soort": "info",
-   "tekst": "2026-11-18-1 online op facebook: Psalm 85:9"
-  },
-  {
-   "t": "2026-11-18T19:05:51",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
-   "t": "2026-11-18T20:32:35",
-   "soort": "info",
-   "tekst": "2026-11-18-4 ook als story geplaatst"
-  },
-  {
    "t": "2026-11-18T20:32:35",
    "soort": "info",
    "tekst": "2026-11-18-4 online op instagram: Psalm 119:165"
@@ -13673,6 +13665,26 @@
    "t": "2026-11-20T20:18:39",
    "soort": "info",
    "tekst": "Bediening: Reacties opgehaald: 1 nieuw"
+  },
+  {
+   "t": "2026-11-20T20:31:04",
+   "soort": "info",
+   "tekst": "2026-11-20-1 online op facebook: Spreuken 29:11"
+  },
+  {
+   "t": "2026-11-20T20:32:25",
+   "soort": "info",
+   "tekst": "2026-11-20-2 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-20T20:32:25",
+   "soort": "info",
+   "tekst": "2026-11-20-2 online op instagram: Spreuken 20:13"
+  },
+  {
+   "t": "2026-11-20T20:32:32",
+   "soort": "info",
+   "tekst": "2026-11-20-2 online op facebook: Spreuken 20:13"
   }
  ],
  "recente_fouten": [
@@ -13810,9 +13822,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-20T17:46",
+   "ok": "2026-11-20T20:32",
    "laatst_ok": true,
-   "detail": "Psalm 131:2 geplaatst"
+   "detail": "Spreuken 20:13 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-20T13:52",
@@ -13844,9 +13856,9 @@
    "fout": "2026-11-20T20:18"
   },
   "facebook": {
-   "ok": "2026-11-20T12:17",
+   "ok": "2026-11-20T20:32",
    "laatst_ok": true,
-   "detail": "Micha 6:8 geplaatst"
+   "detail": "Spreuken 20:13 geplaatst"
   },
   "statistieken": {
    "ok": "2026-11-20T13:53",
@@ -13983,9 +13995,9 @@
  ],
  "weken": {
   "deze": {
-   "posts": 31,
-   "reach": 929,
-   "views": 1013,
+   "posts": 33,
+   "reach": 944,
+   "views": 1031,
    "likes": 19,
    "comments": 0,
    "saves": 3,
@@ -14584,7 +14596,7 @@
   "tot": "2026-11-30",
   "dag": 5,
   "dagen": 14,
-  "online": 21,
+  "online": 23,
   "gemeten": 12
  },
  "voorraad": {
@@ -18306,8 +18318,8 @@
      },
      {
       "optie": "spreuken",
-      "online": 4,
-      "gepland": 2,
+      "online": 6,
+      "gepland": 0,
       "n": 2,
       "gem": 0.28,
       "oordeel": "weinig data"
@@ -18359,19 +18371,6 @@
    }
   ],
   "komend": [
-   {
-    "id": "2026-11-20-2",
-    "ref": "Spreuken 20:13",
-    "datum": "2026-11-20",
-    "tijdslot": "20:30",
-    "tests": [
-     {
-      "dimensie": "boekgroep",
-      "optie": "spreuken",
-      "bron": "experiment"
-     }
-    ]
-   },
    {
     "id": "2026-11-21-4",
     "ref": "Psalm 37:5",

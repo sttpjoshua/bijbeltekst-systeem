@@ -1,25 +1,5 @@
 [
  {
-  "t": "2026-11-08T14:36",
-  "soort": "info",
-  "tekst": "10 posts klaargezet: 5 voor 9 nov (07:30, 12:15, 17:45, 20:30, 22:00) en 5 voor 10 nov (07:30, 12:15, 17:45, 20:30, 22:00), met reserveverzen"
- },
- {
-  "t": "2026-11-08T15:46",
-  "soort": "info",
-  "tekst": "Muziek alsnog toegevoegd aan 3 video('s)"
- },
- {
-  "t": "2026-11-08T17:45:47",
-  "soort": "info",
-  "tekst": "2026-11-08-2 ook als story geplaatst"
- },
- {
-  "t": "2026-11-08T17:45:47",
-  "soort": "info",
-  "tekst": "2026-11-08-2 online op instagram: Spreuken 15:1"
- },
- {
   "t": "2026-11-08T17:45:55",
   "soort": "info",
   "tekst": "2026-11-08-2 online op facebook: Spreuken 15:1"
@@ -2548,5 +2528,25 @@
   "t": "2026-11-20T20:18:39",
   "soort": "info",
   "tekst": "Bediening: Reacties opgehaald: 1 nieuw"
+ },
+ {
+  "t": "2026-11-20T20:31:04",
+  "soort": "info",
+  "tekst": "2026-11-20-1 online op facebook: Spreuken 29:11"
+ },
+ {
+  "t": "2026-11-20T20:32:25",
+  "soort": "info",
+  "tekst": "2026-11-20-2 ook als story geplaatst"
+ },
+ {
+  "t": "2026-11-20T20:32:25",
+  "soort": "info",
+  "tekst": "2026-11-20-2 online op instagram: Spreuken 20:13"
+ },
+ {
+  "t": "2026-11-20T20:32:32",
+  "soort": "info",
+  "tekst": "2026-11-20-2 online op facebook: Spreuken 20:13"
  }
 ]

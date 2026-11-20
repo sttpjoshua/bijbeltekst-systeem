@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T20:18:40",
+ "updated": "2026-11-20T20:32:33",
  "agents": {
   "verskiezer": {
    "t": "2026-11-20T15:29:59",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-20T17:46:48",
-   "task": "Postte Psalm 131:2 op instagram",
+   "t": "2026-11-20T20:32:32",
+   "task": "Postte Spreuken 20:13 op facebook",
    "state": "done"
   },
   "controller": {
@@ -38,11 +38,11 @@
   }
  },
  "stats": {
-  "posts_today": 1,
-  "posts_total": 62,
+  "posts_today": 3,
+  "posts_total": 64,
   "reach_7d": 891,
   "best_time": "17:45",
-  "next_post": "2026-11-20T12:15:00"
+  "next_post": "2026-11-20T17:45:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
@@ -56,6 +56,22 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "20:32",
+   "msg": "2026-11-20-2 online op facebook: Spreuken 20:13"
+  },
+  {
+   "t": "20:32",
+   "msg": "2026-11-20-2 online op instagram: Spreuken 20:13"
+  },
+  {
+   "t": "20:32",
+   "msg": "2026-11-20-2 ook als story geplaatst"
+  },
+  {
+   "t": "20:31",
+   "msg": "2026-11-20-1 online op facebook: Spreuken 29:11"
+  },
   {
    "t": "20:18",
    "msg": "Bediening: Reacties opgehaald: 1 nieuw"
@@ -87,22 +103,6 @@
   {
    "t": "14:34",
    "msg": "Dagelijkse run: 10 posts voor 21 en 22 nov staan klaar (zelfstandig gemaakt, gecontroleerd); reserveverzen voo"
-  },
-  {
-   "t": "14:34",
-   "msg": "Materiaal-repo niet gekloond (add_repo ontbreekt in deze sessie); GitHub Actions vult muziek zo nodig aan"
-  },
-  {
-   "t": "13:53",
-   "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
-  },
-  {
-   "t": "13:50",
-   "msg": "Statistieken opgehaald voor 20 posts"
-  },
-  {
-   "t": "13:31",
-   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
   }
  ],
  "lampen": [
