@@ -2,11 +2,6 @@
  {
   "t": "2026-11-08T12:15",
   "soort": "info",
-  "tekst": "2026-11-08-4 online op instagram: Psalm 23:1"
- },
- {
-  "t": "2026-11-08T12:15",
-  "soort": "info",
   "tekst": "2026-11-08-4 online op facebook: Psalm 23:1"
  },
  {
@@ -2345,7 +2340,8 @@
   "soort": "fout",
   "tekst": "Politiek nieuws (NOS): \"Wekdienst 19/11: Xi, Poetin en Trump met elkaar om tafel • Uitspraak in genocidezaak Myanm\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
   "code": "nieuws_voorstel",
-  "post": "n111907010"
+  "post": "n111907010",
+  "opgelost": true
  },
  {
   "t": "2026-11-19T09:12:04",
@@ -2546,6 +2542,11 @@
  },
  {
   "t": "2026-11-20T14:50:09",
+  "soort": "info",
+  "tekst": "Bediening: Voorstel genegeerd"
+ },
+ {
+  "t": "2026-11-20T15:29:59",
   "soort": "info",
   "tekst": "Bediening: Voorstel genegeerd"
  }

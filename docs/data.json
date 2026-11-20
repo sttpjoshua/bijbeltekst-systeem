@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-20T15:15",
+ "gegenereerd": "2026-11-20T15:30",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -13334,11 +13334,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-18T14:00:49",
-   "soort": "info",
-   "tekst": "Statistieken opgehaald voor 21 posts"
-  },
-  {
    "t": "2026-11-18T14:03:42",
    "soort": "info",
    "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
@@ -13433,7 +13428,8 @@
    "soort": "fout",
    "tekst": "Politiek nieuws (NOS): \"Wekdienst 19/11: Xi, Poetin en Trump met elkaar om tafel • Uitspraak in genocidezaak Myanm\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
    "code": "nieuws_voorstel",
-   "post": "n111907010"
+   "post": "n111907010",
+   "opgelost": true
   },
   {
    "t": "2026-11-19T09:12:04",
@@ -13636,16 +13632,14 @@
    "t": "2026-11-20T14:50:09",
    "soort": "info",
    "tekst": "Bediening: Voorstel genegeerd"
+  },
+  {
+   "t": "2026-11-20T15:29:59",
+   "soort": "info",
+   "tekst": "Bediening: Voorstel genegeerd"
   }
  ],
  "recente_fouten": [
-  {
-   "t": "2026-11-19T07:01:33",
-   "soort": "fout",
-   "tekst": "Politiek nieuws (NOS): \"Wekdienst 19/11: Xi, Poetin en Trump met elkaar om tafel • Uitspraak in genocidezaak Myanm\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
-   "code": "nieuws_voorstel",
-   "post": "n111907010"
-  },
   {
    "t": "2026-11-20T07:01:23",
    "soort": "fout",
@@ -17280,7 +17274,7 @@
     "link": "https://nos.nl/l/2640096",
     "categorie": "politiek",
     "zwaar": false,
-    "status": "voorstel",
+    "status": "genegeerd",
     "post": null,
     "opties": [
      {
