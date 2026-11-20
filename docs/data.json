@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-20T13:15",
+ "gegenereerd": "2026-11-20T13:31",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1803,7 +1803,17 @@
     "video_uitleg": "n.v.t."
    },
    "momenten": {
-    "facebook": {}
+    "facebook": {
+     "1u": {
+      "views": null,
+      "reach": null,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": null,
+      "follows": null
+     }
+    }
    },
    "pub": {
     "facebook": "2026-11-20T12:17+01:00"
@@ -2245,7 +2255,17 @@
     "video_uitleg": "vaste regel"
    },
    "momenten": {
-    "instagram": {}
+    "instagram": {
+     "1u": {
+      "views": 3,
+      "reach": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": null
+     }
+    }
    },
    "pub": {
     "instagram": "2026-11-20T12:16+01:00"
@@ -12986,13 +13006,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-18T12:02:04",
-   "soort": "fout",
-   "tekst": "Politiek nieuws (NOS): \"Kabinet is na afwenden crisis 'terug bij af', weeffout niet hersteld\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
-   "code": "nieuws_voorstel",
-   "post": "n111812021"
-  },
-  {
    "t": "2026-11-18T12:15:49",
    "soort": "info",
    "tekst": "2026-11-18-3 online op facebook: Jesaja 55:12"
@@ -13290,6 +13303,11 @@
    "t": "2026-11-20T12:17:00",
    "soort": "info",
    "tekst": "2026-11-20-5 online op facebook: Micha 6:8"
+  },
+  {
+   "t": "2026-11-20T13:31:05",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
   }
  ],
  "recente_fouten": [
