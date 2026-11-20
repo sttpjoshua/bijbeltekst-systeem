@@ -1,15 +1,5 @@
 [
  {
-  "t": "2026-11-08T07:30",
-  "soort": "info",
-  "tekst": "2026-11-08-1 story mislukt (post zelf staat wel online): 400: {\"error\":{\"message\":\"The requested resource does not exist\",\"type\":\"OAuthException\",\"code\":24,\"error_subcode\":22070"
- },
- {
-  "t": "2026-11-08T07:30",
-  "soort": "info",
-  "tekst": "2026-11-08-1 online op instagram: Jesaja 43:19"
- },
- {
   "t": "2026-11-08T07:31",
   "soort": "info",
   "tekst": "2026-11-08-1 online op facebook: Jesaja 43:19"
@@ -2546,5 +2536,15 @@
   "t": "2026-11-20T13:31:05",
   "soort": "info",
   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
+ },
+ {
+  "t": "2026-11-20T13:50:52",
+  "soort": "info",
+  "tekst": "Statistieken opgehaald voor 20 posts"
+ },
+ {
+  "t": "2026-11-20T13:53:30",
+  "soort": "info",
+  "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
  }
 ]

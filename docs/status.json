@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T13:45:39",
+ "updated": "2026-11-20T13:53:30",
  "agents": {
   "verskiezer": {
    "t": "2026-11-20T09:02:57",
@@ -27,12 +27,12 @@
    "state": "error"
   },
   "analist": {
-   "t": "2026-11-19T14:00:45",
-   "task": "Weekanalyse: strategie v5",
+   "t": "2026-11-20T13:53:30",
+   "task": "Weekanalyse: strategie v6",
    "state": "done"
   },
   "community": {
-   "t": "2026-11-20T13:01:39",
+   "t": "2026-11-20T13:53:30",
    "task": "1 nieuwe reactie gevonden",
    "state": "done"
   }
@@ -40,13 +40,13 @@
  "stats": {
   "posts_today": 1,
   "posts_total": 62,
-  "reach_7d": 782,
+  "reach_7d": 891,
   "best_time": "17:45",
   "next_post": "2026-11-20T12:15:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
-  "instagram": 927,
+  "instagram": 1038,
   "facebook": 4,
   "youtube": 0,
   "tiktok": 0
@@ -56,6 +56,14 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "13:53",
+   "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
+  },
+  {
+   "t": "13:50",
+   "msg": "Statistieken opgehaald voor 20 posts"
+  },
   {
    "t": "13:31",
    "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
@@ -95,14 +103,6 @@
   {
    "t": "04:02",
    "msg": "2026-11-20-3 online op instagram: Filippenzen 4:6-7"
-  },
-  {
-   "t": "04:02",
-   "msg": "2026-11-20-3 ook als story geplaatst"
-  },
-  {
-   "t": "23:15",
-   "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
   }
  ],
  "lampen": [
@@ -160,13 +160,14 @@
    4,
    5,
    5,
+   5,
    5
   ]
  },
  "top_post": {
-  "ref": "Openbaring 21:4",
-  "thumb": "thumbs/2026-11-18-5.jpg",
-  "bereik": 81,
+  "ref": "Filippenzen 4:13",
+  "thumb": "thumbs/2026-11-15-4.jpg",
+  "bereik": 126,
   "score": 3.0,
   "formaat": "video"
  },
