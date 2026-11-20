@@ -11619,6 +11619,18 @@
      "follows": null,
      "avg_watch_ms": 0
     }
+   },
+   "facebook": {
+    "1u": {
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "avg_watch_ms": null
+    }
    }
   },
   "beeld": null,
@@ -11751,7 +11763,32 @@
   "media": "docs/media/2026-11/2026-11-20-2.mp4",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-20-2.mp4",
   "metricool": {},
-  "stats": {},
+  "stats": {
+   "instagram": {
+    "1u": {
+     "views": 5,
+     "reach": 4,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "avg_watch_ms": 4242
+    }
+   },
+   "facebook": {
+    "1u": {
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "avg_watch_ms": null
+    }
+   }
+  },
   "beeld": "pexels-kosmeia-luna-2165039761-40454112.jpg",
   "muziek": "ES_Silent Memories - Calm Shores.mp3",
   "geluid": "ES_Water, Lap, Bay, Calm, Island, Croatia - Epidemic Sound.mp3",
