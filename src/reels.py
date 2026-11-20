@@ -374,7 +374,10 @@ def maak_situatie(post, pad, clips, plaatsing="onder", openingszin=False):
            "-stream_loop", "-1", "-t", str(duur - wissel + 0.6), "-i", b]
     for p, s, dd in segs:
         cmd += ["-loop", "1", "-t", str(dd), "-i", p]
-    f = [f"[0:v]{vul},trim=0:{max(wissel, 0.5)},setpts=PTS-STARTPTS[a]", f"[1:v]{vul},trim=0:{duur - wissel + 0.4},setpts=PTS-STARTPTS[b]"]
+    wazig = ",gblur=sigma=34"  # clips met een gezicht (zie clips.py) worden zo wazig dat niemand te herkennen is
+    va = vul + (wazig if os.path.exists(a + ".blur") else "")
+    vb = vul + (wazig if os.path.exists(b + ".blur") else "")
+    f = [f"[0:v]{va},trim=0:{max(wissel, 0.5)},setpts=PTS-STARTPTS[a]", f"[1:v]{vb},trim=0:{duur - wissel + 0.4},setpts=PTS-STARTPTS[b]"]
     if wissel > 0:
         f.append(f"[a][b]xfade=transition=fade:duration=0.45:offset={wissel - 0.45}[bg0]")
     else:

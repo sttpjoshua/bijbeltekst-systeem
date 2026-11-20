@@ -178,12 +178,60 @@ def _tekst(h):
     return " ".join([str(h.get("title") or ""), str(h.get("description") or ""), " ".join(map(str, h.get("tags") or []))]).lower()
 
 
+GEZICHT_OK = False   # eerst alleen clips zonder gezicht; vindt clips_voor er geen, dan mag het met sterke blur
+
+
+def gezicht_in(pad):
+    """True als er een duidelijk gezicht (breder dan 6% van het beeld) in de clip staat, False als niet, None als dat niet te controleren is.
+    Neemt 5 beelden uit de clip en zoekt met OpenCV (frontaal en zijaanzicht)."""
+    try:
+        import cv2, subprocess, tempfile, glob
+    except ImportError:
+        return None
+    tmp = tempfile.mkdtemp()
+    try:
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", pad, "-vf", "fps=1/1.5,scale=480:-2", "-frames:v", "5",
+                        os.path.join(tmp, "f%d.jpg")], check=True, timeout=60)
+        frontaal = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
+        zij = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_profileface.xml")
+        oog = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_eye.xml")
+        for f in sorted(glob.glob(os.path.join(tmp, "f*.jpg"))):
+            im = cv2.imread(f, cv2.IMREAD_GRAYSCALE)
+            if im is None:
+                continue
+            mn = max(24, int(im.shape[1] * 0.06))
+            ogen = oog.detectMultiScale(im, scaleFactor=1.1, minNeighbors=5, minSize=(max(12, int(im.shape[1] * 0.03)),) * 2)
+            if len(ogen) >= 2:   # twee ogen = een gezicht, ook als mond of neus bedekt zijn (telefoon, hand)
+                return True
+            for c in (frontaal, zij):
+                if len(c.detectMultiScale(im, scaleFactor=1.1, minNeighbors=4, minSize=(mn, mn))):
+                    return True
+            for c in (zij,):  # zijaanzicht naar de andere kant: spiegel het beeld
+                if len(c.detectMultiScale(cv2.flip(im, 1), scaleFactor=1.1, minNeighbors=4, minSize=(mn, mn))):
+                    return True
+        return False
+    except Exception as e:
+        print("Gezichtscontrole mislukt:", str(e)[:60])
+        return None
+    finally:
+        import shutil
+        shutil.rmtree(tmp, ignore_errors=True)
+
+
 def _haal(h, term):
     os.makedirs(MAP, exist_ok=True)
     pad = os.path.join(MAP, f"{h['id']}.mp4")
     if not os.path.exists(pad):
         _download(h, pad)
-    return pad, {"id": h["id"], "term": term, "titel": h.get("title"), "staand": h.get("is_vertical")}
+    g = gezicht_in(pad)
+    blur = pad + ".blur"
+    if g is None or g:  # niet te controleren telt als gezicht (veilig)
+        if not GEZICHT_OK:
+            raise RuntimeError("gezicht in beeld, volgende clip")
+        open(blur, "w").close()   # de reel maakt dit beeld zwaar wazig
+    elif os.path.exists(blur):
+        os.remove(blur)
+    return pad, {"id": h["id"], "term": term, "titel": h.get("title"), "staand": h.get("is_vertical"), "blur": os.path.exists(blur)}
 
 
 def kies(soort, thema, rnd, gebruikt, zin=""):
@@ -251,10 +299,20 @@ def clips_voor(post, rnd=None):
     thema = post["variabelen"].get("thema", "algemeen")
     rust = post["variabelen"].get("reel_scene") or rnd.choice(["natuur", "dichtbij", "onderweg"])
     zin = post.get("reel_herkenning") or post.get("verhaal_hook") or post.get("hook") or ""
+    global GEZICHT_OK
+    GEZICHT_OK = False   # Joshua (20 nov): geen gezichten in beeld; alleen als er niets anders is, zwaar geblurd
     a, ia = kies("situatie", thema, rnd, gebruikt, zin)
+    if not ia:
+        GEZICHT_OK = True
+        a, ia = kies("situatie", thema, rnd, gebruikt, zin)
+        GEZICHT_OK = False
     if ia:
         gebruikt.add(ia["id"])
     b, ib = kies(rust, thema, rnd, gebruikt)
+    if not ib:
+        GEZICHT_OK = True
+        b, ib = kies(rust, thema, rnd, gebruikt)
+        GEZICHT_OK = False
     nieuw = [dict(i, post=post["id"]) for i in (ia, ib) if i]
     S.bewaar("data/clips_gebruikt.json", (log + nieuw)[-400:])
     return [p for p in (a, b) if p], rust

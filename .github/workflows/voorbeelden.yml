@@ -28,7 +28,7 @@ jobs:
         env:
           MATERIAAL_PAT: ${{ secrets.MATERIAAL_PAT }}
         run: |
-          echo "pip"; pip install -q pillow numpy
+          echo "pip"; pip install -q pillow numpy "opencv-python-headless<5"
           echo "ffmpeg"; sh tools/ffmpeg.sh
           echo "media"; python3 tools/media.py koppel
           echo "materiaal"; git clone --depth 1 -q "https://x-access-token:${MATERIAAL_PAT}@github.com/sttpjoshua/bibleverse-materiaal.git" ../bibleverse-materiaal
