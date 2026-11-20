@@ -1,20 +1,5 @@
 [
  {
-  "t": "2026-11-08T18:08:26",
-  "soort": "info",
-  "tekst": "Verbinding met Instagram werkt (@bibleverse_nl)"
- },
- {
-  "t": "2026-11-08T18:08:26",
-  "soort": "info",
-  "tekst": "Token heeft alle rechten, ook voor statistieken"
- },
- {
-  "t": "2026-11-08T18:08:27",
-  "soort": "info",
-  "tekst": "Verbinding met Facebook-pagina werkt (Bibleversenl)"
- },
- {
   "t": "2026-11-08T18:08:29",
   "soort": "info",
   "tekst": "Statistieken lezen werkt"
@@ -2548,5 +2533,20 @@
   "t": "2026-11-20T21:45:43",
   "soort": "info",
   "tekst": "Eerste-uurcijfers van 3 posts vastgelegd"
+ },
+ {
+  "t": "2026-11-20T22:03:17",
+  "soort": "info",
+  "tekst": "2026-11-20-4 online op facebook: Psalm 131:2"
+ },
+ {
+  "t": "2026-11-20T22:04:21",
+  "soort": "info",
+  "tekst": "2026-11-20-5 ook als story geplaatst"
+ },
+ {
+  "t": "2026-11-20T22:04:21",
+  "soort": "info",
+  "tekst": "2026-11-20-5 online op instagram: Micha 6:8"
  }
 ]

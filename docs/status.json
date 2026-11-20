@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T21:45:44",
+ "updated": "2026-11-20T22:04:21",
  "agents": {
   "verskiezer": {
    "t": "2026-11-20T15:29:59",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-20T20:32:32",
-   "task": "Postte Spreuken 20:13 op facebook",
+   "t": "2026-11-20T22:04:21",
+   "task": "Postte Micha 6:8 op instagram",
    "state": "done"
   },
   "controller": {
@@ -32,17 +32,17 @@
    "state": "done"
   },
   "community": {
-   "t": "2026-11-20T21:01:42",
+   "t": "2026-11-20T22:01:16",
    "task": "1 nieuwe reactie gevonden",
    "state": "done"
   }
  },
  "stats": {
-  "posts_today": 3,
-  "posts_total": 64,
+  "posts_today": 5,
+  "posts_total": 66,
   "reach_7d": 891,
   "best_time": "17:45",
-  "next_post": "2026-11-20T17:45:00"
+  "next_post": "2026-11-21T04:00:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
@@ -56,6 +56,18 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "22:04",
+   "msg": "2026-11-20-5 online op instagram: Micha 6:8"
+  },
+  {
+   "t": "22:04",
+   "msg": "2026-11-20-5 ook als story geplaatst"
+  },
+  {
+   "t": "22:03",
+   "msg": "2026-11-20-4 online op facebook: Psalm 131:2"
+  },
   {
    "t": "21:45",
    "msg": "Eerste-uurcijfers van 3 posts vastgelegd"
@@ -91,18 +103,6 @@
   {
    "t": "17:46",
    "msg": "2026-11-20-4 ook als story geplaatst"
-  },
-  {
-   "t": "15:29",
-   "msg": "Bediening: Voorstel genegeerd"
-  },
-  {
-   "t": "14:50",
-   "msg": "Bediening: Voorstel genegeerd"
-  },
-  {
-   "t": "14:48",
-   "msg": "Bediening: Voorstel genegeerd"
   }
  ],
  "lampen": [
