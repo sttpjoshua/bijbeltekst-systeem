@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T18:45:46",
+ "updated": "2026-11-20T19:03:15",
  "agents": {
   "verskiezer": {
    "t": "2026-11-20T15:29:59",
@@ -32,7 +32,7 @@
    "state": "done"
   },
   "community": {
-   "t": "2026-11-20T18:01:11",
+   "t": "2026-11-20T19:01:40",
    "task": "1 nieuwe reactie gevonden",
    "state": "done"
   }
@@ -56,6 +56,10 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "19:03",
+   "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
+  },
   {
    "t": "17:46",
    "msg": "2026-11-20-4 online op instagram: Psalm 131:2"
@@ -99,10 +103,6 @@
   {
    "t": "12:17",
    "msg": "2026-11-20-5 online op facebook: Micha 6:8"
-  },
-  {
-   "t": "12:16",
-   "msg": "2026-11-20-1 online op instagram: Spreuken 29:11"
   }
  ],
  "lampen": [
