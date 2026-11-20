@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-20T14:30",
+ "gegenereerd": "2026-11-20T14:34",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -838,7 +838,7 @@
    "goedgekeurd": null,
    "reeks": "Vers van de week",
    "reeks_label": "VERS VAN DE WEEK",
-   "reserve_ref": null,
+   "reserve_ref": "Hebreeën 13:6",
    "caption": "Vers van de week.\n\n\"De HEERE uw God, is in het midden van u, een Held, Die verlossen zal; Hij zal over u vrolijk zijn met blijdschap, Hij zal zwijgen in Zijn liefde, Hij zal Zich over u verheugen met gejuich.\"\nSefanja 3:17\n\nGod is blij met jou.\n\nHoe zou het zijn als je wist dat God blij met je is?",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-22-5.mp4",
@@ -927,7 +927,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "2 Timotheüs 4:7",
    "caption": "Voor iedereen die deze week van alle kanten onder druk staat.\n\n\"Als die in alles verdrukt worden, doch niet benauwd; twijfelmoedig, doch niet mismoedig; Vervolgd, doch niet daarin verlaten; nedergeworpen, doch niet verdorven.\"\n2 Korinthe 4:8-9\n\nOnder druk, maar niet verlaten.\n\nWat is jouw 'doch niet' van deze week?",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-22-4.mp4",
@@ -1016,7 +1016,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Jesaja 62:3",
    "caption": "Goedemorgen. Een vers voor het begin van je dag.\n\n\"Verblijdt u in de hoop. Zijt geduldig in de verdrukking. Volhardt in het gebed.\"\nRomeinen 12:12\n\nHoop, geduld en gebed helpen je verder.",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-22-3-1.jpg",
@@ -1108,7 +1108,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "1 Petrus 2:9",
    "caption": "Voor iedereen die vaste grond zoekt.\n\n\"De HEERE is mijn Steenrots, en mijn Burg, en mijn Uithelper; mijn God, mijn Rots, op Welken ik betrouw; mijn Schild, en de Hoorn mijns heils, mijn Hoog Vertrek.\"\nPsalm 18:3\n\nGod is een rots waar je op kunt bouwen.\n\nWelk beeld van God spreekt jou het meest aan?",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-22-2.mp4",
@@ -1197,7 +1197,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "2 Korinthe 4:16",
    "caption": "Voel jij je weleens niet goed genoeg?\n\n\"Vertrouwende ditzelve, dat Hij, Die in u een goed werk begonnen heeft, dat voleindigen zal tot op den dag van Jezus Christus.\"\nFilippenzen 1:6\n\nGod maakt af wat Hij begon.\n\nWaar zie jij dat God nog met je bezig is?",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-22-1-1.jpg",
@@ -13334,16 +13334,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-18T12:17:03",
-   "soort": "info",
-   "tekst": "2026-11-18-2 online op instagram: Kolossenzen 3:2"
-  },
-  {
-   "t": "2026-11-18T12:17:11",
-   "soort": "info",
-   "tekst": "2026-11-18-2 online op facebook: Kolossenzen 3:2"
-  },
-  {
    "t": "2026-11-18T13:15:43",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
@@ -13636,6 +13626,16 @@
    "t": "2026-11-20T13:53:30",
    "soort": "info",
    "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
+  },
+  {
+   "t": "2026-11-20T14:34:37",
+   "soort": "info",
+   "tekst": "Materiaal-repo niet gekloond (add_repo ontbreekt in deze sessie); GitHub Actions vult muziek zo nodig aan"
+  },
+  {
+   "t": "2026-11-20T14:34:37",
+   "soort": "info",
+   "tekst": "Dagelijkse run: 10 posts voor 21 en 22 nov staan klaar (zelfstandig gemaakt, gecontroleerd); reserveverzen voor 22 nov ingevuld"
   }
  ],
  "recente_fouten": [
@@ -13829,9 +13829,9 @@
    "detail": "18 onderdelen gemaakt en gecontroleerd"
   },
   "dagelijks": {
-   "ok": "2026-11-19T14:34",
+   "ok": "2026-11-20T14:34",
    "laatst_ok": true,
-   "detail": "10 posts voor 20 en 21 nov klaargezet"
+   "detail": "10 posts voor 21 en 22 nov klaargezet"
   },
   "whatsapp": {
    "fout": "2026-11-11T13:49",

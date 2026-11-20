@@ -1,15 +1,5 @@
 [
  {
-  "t": "2026-11-08T07:31",
-  "soort": "info",
-  "tekst": "2026-11-08-1 online op facebook: Jesaja 43:19"
- },
- {
-  "t": "2026-11-08T12:15",
-  "soort": "info",
-  "tekst": "Statistieken opgehaald voor 1 posts"
- },
- {
   "t": "2026-11-08T12:15",
   "soort": "info",
   "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
@@ -2546,5 +2536,15 @@
   "t": "2026-11-20T13:53:30",
   "soort": "info",
   "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
+ },
+ {
+  "t": "2026-11-20T14:34:37",
+  "soort": "info",
+  "tekst": "Materiaal-repo niet gekloond (add_repo ontbreekt in deze sessie); GitHub Actions vult muziek zo nodig aan"
+ },
+ {
+  "t": "2026-11-20T14:34:37",
+  "soort": "info",
+  "tekst": "Dagelijkse run: 10 posts voor 21 en 22 nov staan klaar (zelfstandig gemaakt, gecontroleerd); reserveverzen voor 22 nov ingevuld"
  }
 ]
