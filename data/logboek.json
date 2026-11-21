@@ -1,10 +1,5 @@
 [
  {
-  "t": "2026-11-08T18:26:07",
-  "soort": "info",
-  "tekst": "Bediening: Fout als opgelost gemarkeerd"
- },
- {
   "t": "2026-11-08T18:27:40",
   "soort": "info",
   "tekst": "Bediening: Openstaande fouten als opgelost gemarkeerd"
@@ -2550,5 +2545,10 @@
   "tekst": "Zwaar nieuws (NOS): \"Denemarken zet Russische gezant uit na verijdelde aanslag op Oekraïense rapper\". Wil je er een troostende post over? Die gaat dan pas 6 uur na het nieuws online.",
   "code": "nieuws_voorstel",
   "post": "n112107011"
+ },
+ {
+  "t": "2026-11-21T09:03:44",
+  "soort": "info",
+  "tekst": "Zelfstandig 5 posts klaargezet voor 2026-11-23 (teksten uit de tekstbank)."
  }
 ]

@@ -1,19 +1,19 @@
 {
- "updated": "2026-11-21T09:01:25",
+ "updated": "2026-11-21T09:03:44",
  "agents": {
   "verskiezer": {
-   "t": "2026-11-20T15:29:59",
-   "task": "Voorstel genegeerd",
+   "t": "2026-11-21T09:02:38",
+   "task": "Koos Jesaja 40:29, Psalm 30:6, Openbaring 7:17, Psalm 139:14, 1 Korinthe 15:58",
    "state": "done"
   },
   "designer": {
-   "t": "2026-11-20T09:33:54",
-   "task": "Ontwierp Sefanja 3:17 in stijl schaduw_rood",
+   "t": "2026-11-21T09:03:44",
+   "task": "Ontwierp 1 Korinthe 15:58 in stijl perzik",
    "state": "done"
   },
   "video": {
-   "t": "2026-11-20T09:33:54",
-   "task": "Monteerde video Sefanja 3:17 met muziek",
+   "t": "2026-11-21T09:03:44",
+   "task": "Monteerde video 1 Korinthe 15:58 met muziek",
    "state": "done"
   },
   "dispatcher": {
@@ -57,6 +57,10 @@
  ],
  "log": [
   {
+   "t": "09:03",
+   "msg": "Zelfstandig 5 posts klaargezet voor 2026-11-23 (teksten uit de tekstbank)."
+  },
+  {
    "t": "07:01",
    "msg": "Zwaar nieuws (NOS): \"Denemarken zet Russische gezant uit na verijdelde aanslag op Oekraïense rapper\". Wil je e"
   },
@@ -99,10 +103,6 @@
   {
    "t": "20:32",
    "msg": "2026-11-20-2 online op facebook: Spreuken 20:13"
-  },
-  {
-   "t": "20:32",
-   "msg": "2026-11-20-2 online op instagram: Spreuken 20:13"
   }
  ],
  "lampen": [
