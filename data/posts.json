@@ -12521,6 +12521,16 @@
      "saves": null,
      "follows": null,
      "avg_watch_ms": null
+    },
+    "1u": {
+     "views": null,
+     "reach": null,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": null,
+     "follows": null,
+     "avg_watch_ms": null
     }
    }
   },
@@ -13096,6 +13106,16 @@
      "views": 1,
      "reach": 1,
      "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": 0,
+     "avg_watch_ms": null
+    },
+    "1u": {
+     "views": 2,
+     "reach": 1,
+     "likes": 1,
      "comments": 0,
      "shares": 0,
      "saves": 0,
