@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T23:01:07",
+ "updated": "2026-11-21T04:02:20",
  "agents": {
   "verskiezer": {
    "t": "2026-11-20T15:29:59",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-20T22:04:21",
-   "task": "Postte Micha 6:8 op instagram",
+   "t": "2026-11-21T04:02:20",
+   "task": "Postte Psalm 37:5 op instagram",
    "state": "done"
   },
   "controller": {
@@ -38,9 +38,9 @@
   }
  },
  "stats": {
-  "posts_today": 5,
+  "posts_today": 0,
   "posts_total": 66,
-  "reach_7d": 891,
+  "reach_7d": 821,
   "best_time": "17:45",
   "next_post": "2026-11-21T04:00:00"
  },
@@ -56,6 +56,18 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "04:02",
+   "msg": "2026-11-21-4 online op instagram: Psalm 37:5"
+  },
+  {
+   "t": "04:02",
+   "msg": "2026-11-21-4 ook als story geplaatst"
+  },
+  {
+   "t": "23:15",
+   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
   {
    "t": "22:04",
    "msg": "2026-11-20-5 online op instagram: Micha 6:8"
@@ -91,18 +103,6 @@
   {
    "t": "20:18",
    "msg": "Bediening: Reacties opgehaald: 1 nieuw"
-  },
-  {
-   "t": "19:03",
-   "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
-  },
-  {
-   "t": "17:46",
-   "msg": "2026-11-20-4 online op instagram: Psalm 131:2"
-  },
-  {
-   "t": "17:46",
-   "msg": "2026-11-20-4 ook als story geplaatst"
   }
  ],
  "lampen": [
@@ -123,8 +123,8 @@
   },
   {
    "naam": "Avondcontrole",
-   "kleur": "groen",
-   "tekst": "ok"
+   "kleur": "oranje",
+   "tekst": "te lang stil"
   },
   {
    "naam": "Statistieken",
@@ -172,7 +172,7 @@
   "formaat": "video"
  },
  "snel_leren": {
-  "dag": 5,
+  "dag": 6,
   "dagen": 14,
   "tot": "2026-11-30"
  }
