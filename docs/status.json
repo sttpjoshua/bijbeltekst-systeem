@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T20:15:40",
+ "updated": "2026-11-21T20:32:03",
  "agents": {
   "verskiezer": {
    "t": "2026-11-21T12:02:00",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-21T17:46:43",
-   "task": "Postte 1 Petrus 1:3 op facebook",
+   "t": "2026-11-21T20:32:02",
+   "task": "Postte Lukas 10:41-42 op facebook",
    "state": "done"
   },
   "controller": {
@@ -38,8 +38,8 @@
   }
  },
  "stats": {
-  "posts_today": 2,
-  "posts_total": 68,
+  "posts_today": 3,
+  "posts_total": 69,
   "reach_7d": 929,
   "best_time": "20:30",
   "next_post": "2026-11-21T12:15:00"
@@ -56,6 +56,18 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "20:32",
+   "msg": "2026-11-21-2 online op facebook: Lukas 10:41-42"
+  },
+  {
+   "t": "20:31",
+   "msg": "2026-11-21-2 online op instagram: Lukas 10:41-42"
+  },
+  {
+   "t": "20:31",
+   "msg": "2026-11-21-2 ook als story geplaatst"
+  },
   {
    "t": "19:03",
    "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
@@ -91,18 +103,6 @@
   {
    "t": "12:16",
    "msg": "2026-11-21-1 online op facebook: Psalm 100:4"
-  },
-  {
-   "t": "12:16",
-   "msg": "2026-11-21-5 online op instagram: Hebreeën 6:19"
-  },
-  {
-   "t": "12:16",
-   "msg": "2026-11-21-5 ook als story geplaatst"
-  },
-  {
-   "t": "12:15",
-   "msg": "2026-11-21-4 online op facebook: Psalm 37:5"
   }
  ],
  "lampen": [

@@ -1,20 +1,5 @@
 [
  {
-  "t": "2026-11-09T12:16:56",
-  "soort": "info",
-  "tekst": "2026-11-09-3 online op instagram: Mattheüs 6:26"
- },
- {
-  "t": "2026-11-09T12:17:07",
-  "soort": "info",
-  "tekst": "2026-11-09-5 online op facebook: Johannes 14:1"
- },
- {
-  "t": "2026-11-09T13:02:24",
-  "soort": "info",
-  "tekst": "Verbinding met Instagram werkt (@bibleverse_nl)"
- },
- {
   "t": "2026-11-09T13:02:24",
   "soort": "info",
   "tekst": "Token heeft alle rechten, ook voor statistieken"
@@ -2550,5 +2535,20 @@
   "t": "2026-11-21T19:03:04",
   "soort": "info",
   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
+ },
+ {
+  "t": "2026-11-21T20:31:52",
+  "soort": "info",
+  "tekst": "2026-11-21-2 ook als story geplaatst"
+ },
+ {
+  "t": "2026-11-21T20:31:52",
+  "soort": "info",
+  "tekst": "2026-11-21-2 online op instagram: Lukas 10:41-42"
+ },
+ {
+  "t": "2026-11-21T20:32:02",
+  "soort": "info",
+  "tekst": "2026-11-21-2 online op facebook: Lukas 10:41-42"
  }
 ]
