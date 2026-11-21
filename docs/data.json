@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-21T13:02",
+ "gegenereerd": "2026-11-21T13:15",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1938,7 +1938,17 @@
       "follows": null
      }
     },
-    "facebook": {}
+    "facebook": {
+     "1u": {
+      "views": 0,
+      "reach": null,
+      "likes": null,
+      "comments": null,
+      "shares": null,
+      "saves": null,
+      "follows": null
+     }
+    }
    },
    "pub": {
     "instagram": "2026-11-21T04:02+01:00",
@@ -14058,11 +14068,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-19T13:59:11",
-   "soort": "info",
-   "tekst": "Statistieken opgehaald voor 21 posts"
-  },
-  {
    "t": "2026-11-19T14:00:45",
    "soort": "info",
    "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
@@ -14362,6 +14367,11 @@
    "t": "2026-11-21T12:16:41",
    "soort": "info",
    "tekst": "2026-11-21-1 online op facebook: Psalm 100:4"
+  },
+  {
+   "t": "2026-11-21T13:15:41",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
   }
  ],
  "recente_fouten": [

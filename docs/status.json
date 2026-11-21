@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T13:02:37",
+ "updated": "2026-11-21T13:15:41",
  "agents": {
   "verskiezer": {
    "t": "2026-11-21T12:02:00",
@@ -57,6 +57,10 @@
  ],
  "log": [
   {
+   "t": "13:15",
+   "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
+  },
+  {
    "t": "12:16",
    "msg": "2026-11-21-1 online op facebook: Psalm 100:4"
   },
@@ -99,10 +103,6 @@
   {
    "t": "04:02",
    "msg": "2026-11-21-4 ook als story geplaatst"
-  },
-  {
-   "t": "23:15",
-   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
   }
  ],
  "lampen": [
