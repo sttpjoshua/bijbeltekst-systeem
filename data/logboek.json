@@ -1,20 +1,5 @@
 [
  {
-  "t": "2026-11-09T13:02:26",
-  "soort": "info",
-  "tekst": "Verbinding met Facebook-pagina werkt (Bibleversenl)"
- },
- {
-  "t": "2026-11-09T13:02:28",
-  "soort": "info",
-  "tekst": "Statistieken lezen werkt"
- },
- {
-  "t": "2026-11-09T13:48:24",
-  "soort": "info",
-  "tekst": "Statistieken opgehaald voor 6 posts"
- },
- {
   "t": "2026-11-09T13:48:49",
   "soort": "info",
   "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
@@ -2550,5 +2535,20 @@
   "t": "2026-11-21T21:45:52",
   "soort": "info",
   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
+ },
+ {
+  "t": "2026-11-21T22:03:38",
+  "soort": "info",
+  "tekst": "2026-11-21-5 online op facebook: Hebreeën 6:19"
+ },
+ {
+  "t": "2026-11-21T22:05:03",
+  "soort": "info",
+  "tekst": "2026-11-21-3 ook als story geplaatst"
+ },
+ {
+  "t": "2026-11-21T22:05:03",
+  "soort": "info",
+  "tekst": "2026-11-21-3 online op instagram: 1 Petrus 1:3"
  }
 ]

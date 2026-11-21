@@ -1,8 +1,8 @@
 {
  "instagram": {
-  "ok": "2026-11-21T20:31",
+  "ok": "2026-11-21T22:05",
   "laatst_ok": true,
-  "detail": "Lukas 10:41-42 geplaatst"
+  "detail": "1 Petrus 1:3 geplaatst"
  },
  "instagram_lezen": {
   "ok": "2026-11-21T13:37",
@@ -31,12 +31,12 @@
   "ok": "2026-11-20T08:01",
   "laatst_ok": false,
   "detail": "400: {\"error\":{\"message\":\"Unsupported get request. Object with ID '18646160734043579' does not exist, cannot be loaded due to missing permissions, or does not s",
-  "fout": "2026-11-21T21:01"
+  "fout": "2026-11-21T22:01"
  },
  "facebook": {
-  "ok": "2026-11-21T20:32",
+  "ok": "2026-11-21T22:03",
   "laatst_ok": true,
-  "detail": "Lukas 10:41-42 geplaatst"
+  "detail": "Hebreeën 6:19 geplaatst"
  },
  "statistieken": {
   "ok": "2026-11-21T13:37",
@@ -57,7 +57,7 @@
   "fout": "2026-11-11T13:49",
   "laatst_ok": true,
   "detail": "1 bericht(en) verstuurd",
-  "ok": "2026-11-21T21:30"
+  "ok": "2026-11-21T22:05"
  },
  "nieuws": {
   "ok": "2026-11-21T17:01",
