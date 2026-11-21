@@ -1,15 +1,5 @@
 [
  {
-  "t": "2026-11-08T22:02:06",
-  "soort": "info",
-  "tekst": "2026-11-08-5 online op facebook: 2 Timotheüs 1:7"
- },
- {
-  "t": "2026-11-09T07:31:41",
-  "soort": "info",
-  "tekst": "2026-11-09-1 ook als story geplaatst"
- },
- {
   "t": "2026-11-09T07:31:41",
   "soort": "info",
   "tekst": "2026-11-09-1 online op instagram: Psalm 34:3"
@@ -2550,5 +2540,15 @@
   "t": "2026-11-21T13:30:55",
   "soort": "info",
   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
+ },
+ {
+  "t": "2026-11-21T13:36:19",
+  "soort": "info",
+  "tekst": "Statistieken opgehaald voor 17 posts"
+ },
+ {
+  "t": "2026-11-21T13:37:28",
+  "soort": "info",
+  "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
  }
 ]
