@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-21T21:30",
+ "gegenereerd": "2026-11-21T21:45",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -2154,8 +2154,36 @@
     "instagram": "https://www.instagram.com/reel/DgA_H9rBQU5/",
     "facebook": "https://www.facebook.com/1767922528231487"
    },
-   "totaal": {},
-   "per_platform": {},
+   "totaal": {
+    "views": 10,
+    "reach": 5,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0
+   },
+   "per_platform": {
+    "instagram": {
+     "views": 10,
+     "reach": 5,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "t": null
+    },
+    "facebook": {
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "t": null
+    }
+   },
    "score": {},
    "keuzebron": {
     "huisstijl": "experiment",
@@ -2182,7 +2210,30 @@
     "tijdslot": "experiment",
     "video_uitleg": "vaste regel"
    },
-   "momenten": {},
+   "momenten": {
+    "instagram": {
+     "1u": {
+      "views": 10,
+      "reach": 5,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": null
+     }
+    },
+    "facebook": {
+     "1u": {
+      "views": 0,
+      "reach": null,
+      "likes": null,
+      "comments": null,
+      "shares": null,
+      "saves": null,
+      "follows": null
+     }
+    }
+   },
    "pub": {
     "instagram": "2026-11-21T20:31+01:00",
     "facebook": "2026-11-21T20:32+01:00"
@@ -14456,11 +14507,6 @@
   {
    "t": "2026-11-19T20:32:59",
    "soort": "info",
-   "tekst": "2026-11-19-4 ook als story geplaatst"
-  },
-  {
-   "t": "2026-11-19T20:32:59",
-   "soort": "info",
    "tekst": "2026-11-19-4 online op instagram: Spreuken 19:24"
   },
   {
@@ -14758,6 +14804,11 @@
    "t": "2026-11-21T20:32:02",
    "soort": "info",
    "tekst": "2026-11-21-2 online op facebook: Lukas 10:41-42"
+  },
+  {
+   "t": "2026-11-21T21:45:52",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
   }
  ],
  "recente_fouten": [
@@ -14965,8 +15016,8 @@
   "whatsapp": {
    "fout": "2026-11-11T13:49",
    "laatst_ok": true,
-   "detail": "2 bericht(en) verstuurd",
-   "ok": "2026-11-21T10:02"
+   "detail": "1 bericht(en) verstuurd",
+   "ok": "2026-11-21T21:30"
   },
   "nieuws": {
    "ok": "2026-11-21T17:01",
@@ -15089,8 +15140,8 @@
  "weken": {
   "deze": {
    "posts": 33,
-   "reach": 967,
-   "views": 1038,
+   "reach": 972,
+   "views": 1048,
    "likes": 24,
    "comments": 0,
    "saves": 2,
