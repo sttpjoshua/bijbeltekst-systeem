@@ -12855,7 +12855,20 @@
   "media": "docs/media/2026-11/2026-11-21-4.mp4",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-21-4.mp4",
   "metricool": {},
-  "stats": {},
+  "stats": {
+   "instagram": {
+    "1u": {
+     "views": 1,
+     "reach": 0,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "avg_watch_ms": 0
+    }
+   }
+  },
   "beeld": "pexels-molnartamasphotography-29202982.jpg",
   "muziek": "ES_Mind Flow - Aashray Harishankar.mp3",
   "geluid": "ES_Water, Lap, Bay, Calm, Island, Croatia - Epidemic Sound.mp3",

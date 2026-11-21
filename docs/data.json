@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-21T05:00",
+ "gegenereerd": "2026-11-21T05:15",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1395,8 +1395,26 @@
    "links": {
     "instagram": "https://www.instagram.com/reel/Df_N2Fbiibe/"
    },
-   "totaal": {},
-   "per_platform": {},
+   "totaal": {
+    "views": 1,
+    "reach": 0,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0
+   },
+   "per_platform": {
+    "instagram": {
+     "views": 1,
+     "reach": 0,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "t": null
+    }
+   },
    "score": {},
    "keuzebron": {
     "huisstijl": "ochtend",
@@ -1423,7 +1441,19 @@
     "tijdslot": "experiment",
     "video_uitleg": "vaste regel"
    },
-   "momenten": {},
+   "momenten": {
+    "instagram": {
+     "1u": {
+      "views": 1,
+      "reach": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": null
+     }
+    }
+   },
    "pub": {
     "instagram": "2026-11-21T04:02+01:00"
    },
@@ -13508,11 +13538,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-19T04:03:18",
-   "soort": "info",
-   "tekst": "2026-11-19-1 online op instagram: Jeremia 29:11"
-  },
-  {
    "t": "2026-11-19T04:03:30",
    "soort": "info",
    "tekst": "2026-11-19-5 online op facebook: Numeri 6:24-26"
@@ -13811,6 +13836,11 @@
    "t": "2026-11-21T04:02:20",
    "soort": "info",
    "tekst": "2026-11-21-4 online op instagram: Psalm 37:5"
+  },
+  {
+   "t": "2026-11-21T05:15:39",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
   }
  ],
  "recente_fouten": [
