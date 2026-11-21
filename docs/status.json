@@ -1,14 +1,14 @@
 {
- "updated": "2026-11-21T12:01:54",
+ "updated": "2026-11-21T12:16:41",
  "agents": {
   "verskiezer": {
-   "t": "2026-11-21T09:02:38",
-   "task": "Koos Jesaja 40:29, Psalm 30:6, Openbaring 7:17, Psalm 139:14, 1 Korinthe 15:58",
+   "t": "2026-11-21T12:02:00",
+   "task": "Nieuwspost gemaakt: Psalm 100:4",
    "state": "done"
   },
   "designer": {
-   "t": "2026-11-21T09:03:44",
-   "task": "Ontwierp 1 Korinthe 15:58 in stijl perzik",
+   "t": "2026-11-21T12:02:00",
+   "task": "Ontwierp Psalm 100:4 in stijl avond",
    "state": "done"
   },
   "video": {
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-21T04:02:20",
-   "task": "Postte Psalm 37:5 op instagram",
+   "t": "2026-11-21T12:16:41",
+   "task": "Postte Psalm 100:4 op facebook",
    "state": "done"
   },
   "controller": {
@@ -38,11 +38,11 @@
   }
  },
  "stats": {
-  "posts_today": 0,
-  "posts_total": 66,
+  "posts_today": 1,
+  "posts_total": 67,
   "reach_7d": 821,
   "best_time": "17:45",
-  "next_post": "2026-11-21T04:00:00"
+  "next_post": "2026-11-21T12:15:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
@@ -56,6 +56,26 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "12:16",
+   "msg": "2026-11-21-1 online op facebook: Psalm 100:4"
+  },
+  {
+   "t": "12:16",
+   "msg": "2026-11-21-5 online op instagram: Hebreeën 6:19"
+  },
+  {
+   "t": "12:16",
+   "msg": "2026-11-21-5 ook als story geplaatst"
+  },
+  {
+   "t": "12:15",
+   "msg": "2026-11-21-4 online op facebook: Psalm 37:5"
+  },
+  {
+   "t": "12:02",
+   "msg": "Nieuwspost: 1 Korinthe 13:13 vervangen door Psalm 100:4 (aanleiding: winter, NOS)"
+  },
   {
    "t": "09:03",
    "msg": "Zelfstandig 5 posts klaargezet voor 2026-11-23 (teksten uit de tekstbank)."
@@ -83,26 +103,6 @@
   {
    "t": "23:15",
    "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
-   "t": "22:04",
-   "msg": "2026-11-20-5 online op instagram: Micha 6:8"
-  },
-  {
-   "t": "22:04",
-   "msg": "2026-11-20-5 ook als story geplaatst"
-  },
-  {
-   "t": "22:03",
-   "msg": "2026-11-20-4 online op facebook: Psalm 131:2"
-  },
-  {
-   "t": "21:45",
-   "msg": "Eerste-uurcijfers van 3 posts vastgelegd"
-  },
-  {
-   "t": "20:32",
-   "msg": "2026-11-20-2 online op facebook: Spreuken 20:13"
   }
  ],
  "lampen": [
