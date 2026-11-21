@@ -1,15 +1,5 @@
 [
  {
-  "t": "2026-11-08T18:20:42",
-  "soort": "info",
-  "tekst": "Bediening: Antwoord geplaatst bij shaquana_brandsma (Spreuken 15:1)"
- },
- {
-  "t": "2026-11-08T18:22:09",
-  "soort": "info",
-  "tekst": "Bediening: Antwoord geplaatst bij shaquana_brandsma (Spreuken 15:1)"
- },
- {
   "t": "2026-11-08T18:26:07",
   "soort": "info",
   "tekst": "Bediening: Fout als opgelost gemarkeerd"
@@ -2546,5 +2536,19 @@
   "t": "2026-11-21T05:15:39",
   "soort": "info",
   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
+ },
+ {
+  "t": "2026-11-21T07:01:18",
+  "soort": "fout",
+  "tekst": "Politiek nieuws (NOS): \"Amerikaanse rechter keurt miljardenschikking Bayer over Roundup goed\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
+  "code": "nieuws_voorstel",
+  "post": "n112107010"
+ },
+ {
+  "t": "2026-11-21T07:01:20",
+  "soort": "fout",
+  "tekst": "Zwaar nieuws (NOS): \"Denemarken zet Russische gezant uit na verijdelde aanslag op Oekraïense rapper\". Wil je er een troostende post over? Die gaat dan pas 6 uur na het nieuws online.",
+  "code": "nieuws_voorstel",
+  "post": "n112107011"
  }
 ]
