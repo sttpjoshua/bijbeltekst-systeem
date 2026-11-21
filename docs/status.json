@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T17:30:55",
+ "updated": "2026-11-21T17:46:43",
  "agents": {
   "verskiezer": {
    "t": "2026-11-21T12:02:00",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-21T12:16:41",
-   "task": "Postte Psalm 100:4 op facebook",
+   "t": "2026-11-21T17:46:43",
+   "task": "Postte 1 Petrus 1:3 op facebook",
    "state": "done"
   },
   "controller": {
@@ -38,8 +38,8 @@
   }
  },
  "stats": {
-  "posts_today": 1,
-  "posts_total": 67,
+  "posts_today": 2,
+  "posts_total": 68,
   "reach_7d": 929,
   "best_time": "20:30",
   "next_post": "2026-11-21T12:15:00"
@@ -56,6 +56,18 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "17:46",
+   "msg": "2026-11-21-3 online op facebook: 1 Petrus 1:3"
+  },
+  {
+   "t": "17:46",
+   "msg": "2026-11-21-1 online op instagram: Psalm 100:4"
+  },
+  {
+   "t": "17:46",
+   "msg": "2026-11-21-1 ook als story geplaatst"
+  },
   {
    "t": "13:37",
    "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
@@ -91,18 +103,6 @@
   {
    "t": "12:02",
    "msg": "Nieuwspost: 1 Korinthe 13:13 vervangen door Psalm 100:4 (aanleiding: winter, NOS)"
-  },
-  {
-   "t": "09:03",
-   "msg": "Zelfstandig 5 posts klaargezet voor 2026-11-23 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "07:01",
-   "msg": "Zwaar nieuws (NOS): \"Denemarken zet Russische gezant uit na verijdelde aanslag op Oekraïense rapper\". Wil je e"
-  },
-  {
-   "t": "07:01",
-   "msg": "Politiek nieuws (NOS): \"Amerikaanse rechter keurt miljardenschikking Bayer over Roundup goed\". Neutrale post e"
   }
  ],
  "lampen": [
@@ -118,8 +118,8 @@
   },
   {
    "naam": "Dagelijkse taak",
-   "kleur": "groen",
-   "tekst": "ok"
+   "kleur": "oranje",
+   "tekst": "te lang stil"
   },
   {
    "naam": "Avondcontrole",

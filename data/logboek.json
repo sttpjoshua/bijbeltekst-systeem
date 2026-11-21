@@ -1,20 +1,5 @@
 [
  {
-  "t": "2026-11-09T07:31:41",
-  "soort": "info",
-  "tekst": "2026-11-09-1 online op instagram: Psalm 34:3"
- },
- {
-  "t": "2026-11-09T07:31:49",
-  "soort": "info",
-  "tekst": "2026-11-09-3 online op facebook: Mattheüs 6:26"
- },
- {
-  "t": "2026-11-09T07:31:56",
-  "soort": "info",
-  "tekst": "2026-11-09-4 online op facebook: Spreuken 5:1"
- },
- {
   "t": "2026-11-09T12:16:56",
   "soort": "info",
   "tekst": "2026-11-09-3 ook als story geplaatst"
@@ -2550,5 +2535,20 @@
   "t": "2026-11-21T13:37:28",
   "soort": "info",
   "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
+ },
+ {
+  "t": "2026-11-21T17:46:35",
+  "soort": "info",
+  "tekst": "2026-11-21-1 ook als story geplaatst"
+ },
+ {
+  "t": "2026-11-21T17:46:35",
+  "soort": "info",
+  "tekst": "2026-11-21-1 online op instagram: Psalm 100:4"
+ },
+ {
+  "t": "2026-11-21T17:46:43",
+  "soort": "info",
+  "tekst": "2026-11-21-3 online op facebook: 1 Petrus 1:3"
  }
 ]
