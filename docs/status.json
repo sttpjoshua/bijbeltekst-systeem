@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T07:01:11",
+ "updated": "2026-11-21T07:15:36",
  "agents": {
   "verskiezer": {
    "t": "2026-11-20T15:29:59",
@@ -22,8 +22,8 @@
    "state": "done"
   },
   "controller": {
-   "t": "2026-11-20T07:01:23",
-   "task": "Politiek nieuws (NOS): \"Hoogste cyberadviseur Trump vertrekt na reeks ",
+   "t": "2026-11-21T07:01:20",
+   "task": "Zwaar nieuws (NOS): \"Denemarken zet Russische gezant uit na verijdelde",
    "state": "error"
   },
   "analist": {
@@ -56,6 +56,14 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "07:01",
+   "msg": "Zwaar nieuws (NOS): \"Denemarken zet Russische gezant uit na verijdelde aanslag op Oekraïense rapper\". Wil je e"
+  },
+  {
+   "t": "07:01",
+   "msg": "Politiek nieuws (NOS): \"Amerikaanse rechter keurt miljardenschikking Bayer over Roundup goed\". Neutrale post e"
+  },
   {
    "t": "05:15",
    "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
@@ -95,14 +103,6 @@
   {
    "t": "20:32",
    "msg": "2026-11-20-2 online op instagram: Spreuken 20:13"
-  },
-  {
-   "t": "20:32",
-   "msg": "2026-11-20-2 ook als story geplaatst"
-  },
-  {
-   "t": "20:31",
-   "msg": "2026-11-20-1 online op facebook: Spreuken 29:11"
   }
  ],
  "lampen": [
