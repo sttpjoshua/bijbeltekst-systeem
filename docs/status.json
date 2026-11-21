@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T18:45:41",
+ "updated": "2026-11-21T19:03:06",
  "agents": {
   "verskiezer": {
    "t": "2026-11-21T12:02:00",
@@ -32,7 +32,7 @@
    "state": "done"
   },
   "community": {
-   "t": "2026-11-21T18:01:34",
+   "t": "2026-11-21T19:01:23",
    "task": "1 nieuwe reactie gevonden",
    "state": "done"
   }
@@ -56,6 +56,10 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "19:03",
+   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
   {
    "t": "17:46",
    "msg": "2026-11-21-3 online op facebook: 1 Petrus 1:3"
@@ -99,10 +103,6 @@
   {
    "t": "12:15",
    "msg": "2026-11-21-4 online op facebook: Psalm 37:5"
-  },
-  {
-   "t": "12:02",
-   "msg": "Nieuwspost: 1 Korinthe 13:13 vervangen door Psalm 100:4 (aanleiding: winter, NOS)"
   }
  ],
  "lampen": [
