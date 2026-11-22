@@ -31,7 +31,7 @@
   "ok": "2026-11-20T08:01",
   "laatst_ok": false,
   "detail": "400: {\"error\":{\"message\":\"Unsupported get request. Object with ID '18646160734043579' does not exist, cannot be loaded due to missing permissions, or does not s",
-  "fout": "2026-11-22T11:01"
+  "fout": "2026-11-22T12:01"
  },
  "facebook": {
   "ok": "2026-11-21T22:03",
@@ -60,9 +60,9 @@
   "ok": "2026-11-22T10:03"
  },
  "nieuws": {
-  "ok": "2026-11-22T07:01",
+  "ok": "2026-11-22T12:01",
   "laatst_ok": true,
-  "detail": "3 nieuwe aanleidingen"
+  "detail": "0 nieuwe aanleidingen"
  },
  "maken": {
   "ok": "2026-11-22T09:03",
