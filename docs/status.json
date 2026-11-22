@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T23:01:29",
+ "updated": "2026-11-22T04:02:07",
  "agents": {
   "verskiezer": {
    "t": "2026-11-21T12:02:00",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-21T22:05:03",
-   "task": "Postte 1 Petrus 1:3 op instagram",
+   "t": "2026-11-22T04:02:07",
+   "task": "Postte Romeinen 12:12 op instagram",
    "state": "done"
   },
   "controller": {
@@ -38,9 +38,9 @@
   }
  },
  "stats": {
-  "posts_today": 5,
+  "posts_today": 0,
   "posts_total": 71,
-  "reach_7d": 929,
+  "reach_7d": 825,
   "best_time": "20:30",
   "next_post": "2026-11-22T04:00:00"
  },
@@ -56,6 +56,18 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "04:02",
+   "msg": "2026-11-22-3 online op instagram: Romeinen 12:12"
+  },
+  {
+   "t": "04:02",
+   "msg": "2026-11-22-3 ook als story geplaatst"
+  },
+  {
+   "t": "23:15",
+   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
   {
    "t": "22:05",
    "msg": "2026-11-21-3 online op instagram: 1 Petrus 1:3"
@@ -91,18 +103,6 @@
   {
    "t": "17:46",
    "msg": "2026-11-21-3 online op facebook: 1 Petrus 1:3"
-  },
-  {
-   "t": "17:46",
-   "msg": "2026-11-21-1 online op instagram: Psalm 100:4"
-  },
-  {
-   "t": "17:46",
-   "msg": "2026-11-21-1 ook als story geplaatst"
-  },
-  {
-   "t": "13:37",
-   "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
   }
  ],
  "lampen": [
@@ -172,7 +172,7 @@
   "formaat": "video"
  },
  "snel_leren": {
-  "dag": 6,
+  "dag": 7,
   "dagen": 14,
   "tot": "2026-11-30"
  }

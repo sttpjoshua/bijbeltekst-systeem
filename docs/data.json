@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-21T23:01",
+ "gegenereerd": "2026-11-22T04:02",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1475,8 +1475,12 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-22-3-4.jpg"
    ],
    "thumb": "thumbs/2026-11-22-3.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "instagram"
+   ],
+   "links": {
+    "instagram": "https://www.instagram.com/p/DgByt0Xlzqu/"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -1506,11 +1510,13 @@
     "video_uitleg": "n.v.t."
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "instagram": "2026-11-22T04:02+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": null,
-   "online": null
+   "online": "2026-11-22T04:02+01:00"
   },
   {
    "id": "2026-11-22-2",
@@ -1773,6 +1779,16 @@
      "saves": 0,
      "follows": 0,
      "t": "2026-11-21T22:01+01:00"
+    },
+    "facebook": {
+     "views": null,
+     "reach": null,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": null,
+     "follows": null,
+     "t": null
     }
    },
    "score": {},
@@ -1811,6 +1827,17 @@
       "shares": 0,
       "saves": 0,
       "follows": 0
+     }
+    },
+    "facebook": {
+     "1u": {
+      "views": null,
+      "reach": null,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": null,
+      "follows": null
      }
     }
    },
@@ -2033,8 +2060,8 @@
     "instagram": "https://www.instagram.com/reel/DgBJvuxSh3R/"
    },
    "totaal": {
-    "views": 0,
-    "reach": 0,
+    "views": 6,
+    "reach": 3,
     "likes": 0,
     "comments": 0,
     "shares": 0,
@@ -2050,6 +2077,16 @@
      "saves": null,
      "follows": null,
      "t": "2026-11-21T22:01+01:00"
+    },
+    "instagram": {
+     "views": 6,
+     "reach": 3,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "t": null
     }
    },
    "score": {},
@@ -2087,6 +2124,17 @@
       "comments": null,
       "shares": null,
       "saves": null,
+      "follows": null
+     }
+    },
+    "instagram": {
+     "1u": {
+      "views": 6,
+      "reach": 3,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
       "follows": null
      }
     }
@@ -14511,21 +14559,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-19T22:05:14",
-   "soort": "info",
-   "tekst": "2026-11-19-2 ook als story geplaatst"
-  },
-  {
-   "t": "2026-11-19T22:05:14",
-   "soort": "info",
-   "tekst": "2026-11-19-2 online op instagram: Spreuken 26:17"
-  },
-  {
-   "t": "2026-11-19T23:15:53",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
-  },
-  {
    "t": "2026-11-20T04:02:21",
    "soort": "info",
    "tekst": "2026-11-20-3 ook als story geplaatst"
@@ -14815,6 +14848,21 @@
    "t": "2026-11-21T22:05:03",
    "soort": "info",
    "tekst": "2026-11-21-3 online op instagram: 1 Petrus 1:3"
+  },
+  {
+   "t": "2026-11-21T23:15:42",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-22T04:02:07",
+   "soort": "info",
+   "tekst": "2026-11-22-3 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-22T04:02:07",
+   "soort": "info",
+   "tekst": "2026-11-22-3 online op instagram: Romeinen 12:12"
   }
  ],
  "recente_fouten": [
@@ -14966,9 +15014,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-21T22:05",
+   "ok": "2026-11-22T04:02",
    "laatst_ok": true,
-   "detail": "1 Petrus 1:3 geplaatst"
+   "detail": "Romeinen 12:12 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-21T13:37",
@@ -15145,20 +15193,20 @@
  ],
  "weken": {
   "deze": {
-   "posts": 35,
-   "reach": 1004,
-   "views": 1081,
-   "likes": 25,
+   "posts": 30,
+   "reach": 715,
+   "views": 779,
+   "likes": 21,
    "comments": 0,
    "saves": 2,
    "shares": 0
   },
   "vorige": {
    "posts": 35,
-   "reach": 316,
-   "views": 420,
-   "likes": 30,
-   "comments": 3,
+   "reach": 544,
+   "views": 629,
+   "likes": 21,
+   "comments": 0,
    "saves": 1,
    "shares": 0
   }
@@ -15750,7 +15798,7 @@
  "snel_leren": {
   "start": "2026-11-16",
   "tot": "2026-11-30",
-  "dag": 6,
+  "dag": 7,
   "dagen": 14,
   "online": 30,
   "gemeten": 15
@@ -16047,12 +16095,6 @@
    "t": "2026-11-15T10:30",
    "probleem": "2026-11-15-1: beeld staat nog niet online",
    "actie": "wacht een kwartier en probeert het dan opnieuw",
-   "ok": true
-  },
-  {
-   "t": "2026-11-15T04:01",
-   "probleem": "2026-11-15-2 op instagram mislukt (400: {\"error\":{\"message\":\"Only photo or video can be accepted as media type.\",\"code\":9004,\"type\":\"OA)",
-   "actie": "poging 1 van 3; probeert het over een kwartier opnieuw",
    "ok": true
   }
  ],
@@ -19506,67 +19548,13 @@
   "uitschieter": true
  },
  "experimenten": {
-  "actief": true,
+  "actief": false,
   "van": "2026-11-15",
   "tot": "2026-11-21",
   "strikt": true,
   "snel": true,
   "snel_tot": "2026-11-30",
-  "onderdelen": [
-   {
-    "dimensie": "boekgroep",
-    "opties": [
-     {
-      "optie": "psalmen",
-      "online": 9,
-      "gepland": 3,
-      "n": 4,
-      "gem": 1.05,
-      "oordeel": "weinig data"
-     },
-     {
-      "optie": "spreuken",
-      "online": 6,
-      "gepland": 0,
-      "n": 4,
-      "gem": 0.26,
-      "oordeel": "weinig data"
-     },
-     {
-      "optie": "wijsheid",
-      "online": 2,
-      "gepland": 0,
-      "n": 2,
-      "gem": 0.19,
-      "oordeel": "weinig data"
-     },
-     {
-      "optie": "profeten",
-      "online": 4,
-      "gepland": 2,
-      "n": 2,
-      "gem": 1.11,
-      "oordeel": "weinig data"
-     },
-     {
-      "optie": "evangelien",
-      "online": 2,
-      "gepland": 0,
-      "n": 1,
-      "gem": 0.19,
-      "oordeel": "weinig data"
-     },
-     {
-      "optie": "brieven",
-      "online": 12,
-      "gepland": 5,
-      "n": 10,
-      "gem": 1.44,
-      "oordeel": "geen duidelijk verschil"
-     }
-    ]
-   }
-  ],
+  "onderdelen": [],
   "vast": [],
   "tests": [
    {
@@ -19579,19 +19567,6 @@
    }
   ],
   "komend": [
-   {
-    "id": "2026-11-22-3",
-    "ref": "Romeinen 12:12",
-    "datum": "2026-11-22",
-    "tijdslot": "04:00",
-    "tests": [
-     {
-      "dimensie": "boekgroep",
-      "optie": "brieven",
-      "bron": "experiment"
-     }
-    ]
-   },
    {
     "id": "2026-11-22-5",
     "ref": "Sefanja 3:17",
