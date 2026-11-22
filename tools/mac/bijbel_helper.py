@@ -24,7 +24,7 @@ from pathlib import Path
 
 REPO = "sttpjoshua/bijbeltekst-systeem"
 API = f"https://api.github.com/repos/{REPO}"
-VERSION = "3"
+VERSION = "4"
 MODEL_BIG = "mlx-community/Qwen2.5-14B-Instruct-4bit"
 MODEL_SMALL = "mlx-community/Qwen2.5-7B-Instruct-4bit"
 VERZEN_PER_RONDE = 10
@@ -228,6 +228,42 @@ REEKS_UITLEG = {
 }
 
 
+# ---------- nakijken: het model leest zijn eigen tekst na als strenge eindredacteur ----------
+SYSTEEM_NAKIJK = """Je bent een strenge Nederlandse eindredacteur voor een bijbelvers-kanaal op Instagram.
+Je krijgt een bijbelvers (Statenvertaling) en teksten die iemand erbij schreef. Controleer elk veld op:
+1. Klopt het met wat het vers zegt? Niets erbij verzinnen, niets omdraaien, geen beloftes die er niet staan.
+2. Is het natuurlijk, correct Nederlands zoals een Nederlander het zegt? Let op verkeerde woorden
+   (bijvoorbeeld 'zijn leven voor een ander neemt' moet 'geeft' zijn, 'wordt aangezet als voorbeeld' moet 'wordt genoemd als voorbeeld' zijn,
+   'God is op zijn hoede voor je behoeften' is fout), kromme zinnen ('Groots als Gods liefde is'), anglicismen en houterige formuleringen.
+3. Past de herkenningszin (begint met 'Voor iedereen die') echt bij het vers?
+4. Is de uitleg in gewone taal en niet gewoon de oude woorden van het vers?
+Wees streng: twijfel je, dan is het fout. Verbeter elk fout veld zelf, kort en eenvoudig, in de jij-vorm, zonder streepjes.
+Antwoord met alleen JSON: {"fouten": ["veld: wat er mis is", ...], "verbeterd": {"veld": "nieuwe tekst", ...}}.
+Hooks verbeter je als "hooks.vraag", "hooks.herkenning", "hooks.uitdaging" of "hooks.rustig". Is alles goed: {"fouten": [], "verbeterd": {}}."""
+TEKSTVELDEN = ("uitleg", "betekenis", "toepassing", "verhaal", "zin", "vraag")
+
+
+def nakijken(e, vers):
+    """Laat het model de tekst nalezen. Geeft (lijst fouten, item met verbeteringen)."""
+    teksten = {f: e.get(f) for f in TEKSTVELDEN}
+    teksten.update({f"hooks.{k}": v for k, v in (e.get("hooks") or {}).items()})
+    user = (f"Vers: {vers['ref']}\nTekst: {vers['tekst']}\n\nTeksten om na te kijken:\n"
+            f"{json.dumps(teksten, ensure_ascii=False, indent=1)}\nJSON:")
+    d = als_json(vraag(SYSTEEM_NAKIJK, user, max_tokens=1200, temp=0.2))
+    if not isinstance(d, dict):
+        return ["nakijken gaf geen geldig antwoord"], e
+    fouten = [str(f) for f in d.get("fouten") or [] if str(f).strip()]
+    nieuw = json.loads(json.dumps(e))
+    for veld, tekst in (d.get("verbeterd") or {}).items():
+        if not isinstance(tekst, str) or not tekst.strip():
+            continue
+        if veld in TEKSTVELDEN:
+            nieuw[veld] = tekst.strip()
+        elif veld.startswith("hooks.") and veld[6:] in (nieuw.get("hooks") or {}):
+            nieuw["hooks"][veld[6:]] = tekst.strip()
+    return fouten, nieuw
+
+
 def schrijf_vers(vers, bank):
     reeks = REEKS_UITLEG.get(vers.get("reeks", ""), "")
     user = (f"Zo ziet goed werk eruit (voorbeelden van eerdere verzen):\n\n{voorbeelden(bank)}\n\n"
@@ -247,8 +283,20 @@ def schrijf_vers(vers, bank):
         if T and isinstance(e.get("tags"), list):
             e["tags"] = T["schoon_tags"](e["tags"], BANK_TAGS)  # verzonnen hashtags eruit, aanvullen tot 3
         fouten = controle(e, vers)
-        if not fouten:
-            return e, []
+        if fouten:
+            continue
+        # eindredactie: nakijken, verbeteringen overnemen, en de verbeterde versie nog één keer nakijken
+        opm, e2 = nakijken(e, vers)
+        if not opm:
+            return dict(e, nagekeken=True), []
+        log("  nakijken:", "; ".join(opm)[:300])
+        if controle(e2, vers):
+            fouten = opm
+            continue
+        opm2, _ = nakijken(e2, vers)
+        if not opm2:
+            return dict(e2, nagekeken=True), []
+        fouten = opm2
     return None, fouten
 
 
@@ -259,10 +307,26 @@ Geen streepjes (— of –), geen emoji. Antwoord met alleen JSON: {"zinnen": [.
 zinnen: 4 openingszinnen van 40 tot 110 tekens. bruggen: 3 korte zinnen van maximaal 45 tekens die uitleggen waarom het vers bij dit moment past."""
 
 
+SYSTEEM_NAKIJK_ZIN = """Je bent een strenge Nederlandse eindredacteur. Je krijgt korte zinnen voor een bijbelvers-kanaal bij een licht nieuwsmoment.
+Een zin is fout als hij geen natuurlijk, correct Nederlands is, onzin of verzonnen woorden bevat, niet bij de categorie past,
+een spelfout heeft of vreemd klinkt. Twijfel je, dan is hij fout.
+Antwoord met alleen JSON: {"fout": [de foute zinnen, letterlijk overgenomen]}."""
+
+
 def nieuws_schrijven(cat, vb, bestaand):
     user = (f"Categorie: {cat}\nVoorbeelden openingszinnen: {json.dumps(vb.get('zinnen', []), ensure_ascii=False)}\n"
             f"Voorbeelden bruggen: {json.dumps(vb.get('bruggen', []), ensure_ascii=False)}\nSchrijf nieuwe, andere zinnen in dezelfde toon.")
     d = als_json(vraag(SYSTEEM_NIEUWS, user, max_tokens=900, temp=0.8)) or {}
+    # eindredactie: alleen zinnen die natuurlijk Nederlands zijn en kloppen
+    alle = [str(t).strip() for soort in ("zinnen", "bruggen") for t in d.get(soort, []) if str(t).strip()]
+    if alle:
+        oordeel = als_json(vraag(SYSTEEM_NAKIJK_ZIN, json.dumps({"categorie": cat, "zinnen": alle}, ensure_ascii=False) + "\nJSON:",
+                                 max_tokens=600, temp=0.2)) or {}
+        slecht = {str(t).strip() for t in oordeel.get("fout") or []}
+        if not isinstance(oordeel.get("fout"), list):
+            slecht = set(alle)  # geen geldig oordeel: niets doorlaten
+        for soort in ("zinnen", "bruggen"):
+            d[soort] = [t for t in d.get(soort, []) if str(t).strip() not in slecht]
     uit = {"zinnen": [], "bruggen": []}
     for soort, lo, hi in (("zinnen", 25, 120), ("bruggen", 10, 45)):
         for t in d.get(soort, []):
@@ -327,7 +391,9 @@ def werk():
             log("schrijven:", v["ref"])
             e, fouten = schrijf_vers(v, bank)
             if e:
-                conc["verzen"][v["id"]] = {"e": e, "model": model()[0].split("/")[-1], "t": nu.isoformat(timespec="minutes")}
+                nk = e.pop("nagekeken", False)
+                conc["verzen"][v["id"]] = {"e": e, "model": model()[0].split("/")[-1], "t": nu.isoformat(timespec="minutes"),
+                                           "nagekeken": nk}
                 tellers["concepten"] += 1
                 gewijzigd = True
             else:

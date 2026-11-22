@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-22T15:26",
+ "gegenereerd": "2026-11-22T15:36",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -19651,6 +19651,90 @@
     "fouten": []
    },
    {
+    "id": "John-14-27-27",
+    "ref": "Johannes 14:27",
+    "tekst": "Vrede laat Ik u, Mijn vrede geef Ik u; niet gelijkerwijs de wereld hem geeft, geef Ik hem u. Uw hart worde niet ontroerd en zij niet versaagd.",
+    "e": {
+     "kw": "vrede",
+     "uitleg": "Jezus belooft zijn volgelingen zijn eigen vrede, die anders dan de wereldse vrede is.",
+     "betekenis": "Deze vrede is een diepere, innerlijke rust die onafhankelijk is van de omstandigheden. Het is een geschenk dat alleen Jezus kan geven.",
+     "toepassing": "Vandaag zoek je diep in jezelf naar dat innerlijke rustpunt dat Jezus belooft.",
+     "verhaal": "Jezus belooft zijn volgelingen iets unieks.",
+     "zin": "Jezus geeft zijn volgelingen zijn eigen vrede.",
+     "vraag": "Wat is jouw zoektocht naar innerlijke rust?",
+     "hooks": {
+      "vraag": "Wat is de vrede die Jezus belooft?",
+      "herkenning": "Voor iedereen die op zoek is naar innerlijke rust.",
+      "uitdaging": "Zoek vandaag diep in jezelf naar die innerlijke rust.",
+      "rustig": "De vrede die Jezus belooft."
+     },
+     "tags": [
+      "#bijbeltekst",
+      "#geloof",
+      "#bemoediging"
+     ],
+     "ref": "Johannes 14:27"
+    },
+    "t": "2026-11-22T14:27+00:00",
+    "fouten": []
+   },
+   {
+    "id": "Colossians-3-15-15",
+    "ref": "Kolossenzen 3:15",
+    "tekst": "En de vrede Gods heerse in uw harten, tot welken gij ook geroepen zijt in een lichaam; en weest dankbaar.",
+    "e": {
+     "kw": "vrede",
+     "uitleg": "De vrede van God moet in je hart heersen en daar dankbaar voor zijn.",
+     "betekenis": "Paulus benadrukt dat de vrede die God in je hart brengt, een geschenk is voor het hele lichaam van gelovigen. Het is een gevoel dat je dankbaar voor moet zijn.",
+     "toepassing": "Vandaag neem je een moment om God te bedanken voor de innerlijke rust die Hij in je leven brengt.",
+     "verhaal": "De vrede die God in je hart brengt, is een geschenk voor het hele geloofsverband.",
+     "zin": "Dankbaar zijn voor Gods innerlijke vrede.",
+     "vraag": "Waar ben jij dankbaar voor in je leven?",
+     "hooks": {
+      "vraag": "Ben jij vandaag dankbaar voor Gods vrede?",
+      "herkenning": "Voor iedereen die zoekt naar innerlijke rust.",
+      "uitdaging": "Bedank God vandaag voor Zijn vrede.",
+      "rustig": "De vrede die Gods geschenk is."
+     },
+     "tags": [
+      "#dankbaarheid",
+      "#kolossenzen",
+      "#bijbeltekst"
+     ],
+     "ref": "Kolossenzen 3:15"
+    },
+    "t": "2026-11-22T14:27+00:00",
+    "fouten": []
+   },
+   {
+    "id": "Romans-8-18-18",
+    "ref": "Romeinen 8:18",
+    "tekst": "Want ik houde het daarvoor, dat het lijden dezes tegenwoordigen tijds niet is te waarderen tegen de heerlijkheid, die aan ons zal geopenbaard worden.",
+    "e": {
+     "kw": "waarderen",
+     "uitleg": "Het lijden is niet te waarderen tegen de toekomstige heerlijkheid.",
+     "betekenis": "Paulus legt uit dat het lijden dat we nu ervaren, niet te vergelijken is met de toekomstige heerlijkheid. De beloofde heerlijkheid is veel groter.",
+     "toepassing": "Schrijf vandaag een gedachte omtrent de uitdagingen die je tegenkomt en hoe ze in het grotere beeld ervan zouden kunnen staan.",
+     "verhaal": "Paulus spreekt over de onvergelijkbare heerlijkheid die ons te wachten staat.",
+     "zin": "De toekomstige heerlijkheid is onvoorstelbaar.",
+     "vraag": "Wat is je grootste uitdaging vandaag? Hoe zou die eruit zien in een groter beeld?",
+     "hooks": {
+      "vraag": "Hoe zou je uitdagingen eruit zien in een groter beeld?",
+      "herkenning": "Voor iedereen die vandaag uitdagingen ervaart.",
+      "uitdaging": "Schrijf een gedachte over je uitdagingen.",
+      "rustig": "De toekomstige heerlijkheid is onvoorstelbaar."
+     },
+     "tags": [
+      "#troost",
+      "#bijbeltekst",
+      "#geloof"
+     ],
+     "ref": "Romeinen 8:18"
+    },
+    "t": "2026-11-22T14:27+00:00",
+    "fouten": []
+   },
+   {
     "id": "Proverbs-15-1-1",
     "ref": "Spreuken 15:1",
     "tekst": "Een zacht antwoord keert de grimmigheid af; maar een smartend woord doet den toorn oprijzen.",
@@ -19954,12 +20038,12 @@
   ],
   "zonder_tekst": 301,
   "mac": {
-   "t": "2026-11-22T14:02+00:00",
+   "t": "2026-11-22T14:27+00:00",
    "model": "Qwen2.5-14B-Instruct-4bit",
-   "versie": "2",
+   "versie": "3",
    "laatste_ronde": {
-    "concepten": 10,
-    "mislukt": 0
+    "concepten": 8,
+    "mislukt": 2
    }
   }
  },
