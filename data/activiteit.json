@@ -1,17 +1,17 @@
 {
  "verskiezer": {
-  "t": "2026-11-21T12:02:00",
-  "task": "Nieuwspost gemaakt: Psalm 100:4",
+  "t": "2026-11-22T09:02:46",
+  "task": "Koos Jesaja 43:4, 2 Korinthe 12:9, 2 Timotheüs 4:7, Psalm 31:15-16, Psalm 91:1-2",
   "state": "done"
  },
  "designer": {
-  "t": "2026-11-21T12:02:00",
-  "task": "Ontwierp Psalm 100:4 in stijl avond",
+  "t": "2026-11-22T09:03:20",
+  "task": "Ontwierp Psalm 91:1-2 in stijl zand",
   "state": "done"
  },
  "video": {
-  "t": "2026-11-21T09:03:44",
-  "task": "Monteerde video 1 Korinthe 15:58 met muziek",
+  "t": "2026-11-22T09:03:19",
+  "task": "Monteerde video Psalm 31:15-16 met muziek",
   "state": "done"
  },
  "dispatcher": {
@@ -20,7 +20,7 @@
   "state": "done"
  },
  "controller": {
-  "t": "2026-11-21T09:03:44",
+  "t": "2026-11-22T09:03:20",
   "task": "Posts klaargezet uit de tekstbank",
   "state": "done"
  },

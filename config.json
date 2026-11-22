@@ -32,10 +32,10 @@
  "stories": true,
  "experiment": {
   "dims": [
-   "boekgroep"
+   "huisstijl"
   ],
-  "van": "2026-11-15",
-  "tot": "2026-11-21"
+  "van": "2026-11-22",
+  "tot": "2026-11-28"
  },
  "verzen_uitsluiten": [
   "II_Corinthians-5-6-6",

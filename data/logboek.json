@@ -1,15 +1,5 @@
 [
  {
-  "t": "2026-11-09T20:30:46",
-  "soort": "info",
-  "tekst": "2026-11-09-1 online op facebook: Psalm 34:3"
- },
- {
-  "t": "2026-11-09T20:32:35",
-  "soort": "info",
-  "tekst": "2026-11-09-2 ook als story geplaatst"
- },
- {
   "t": "2026-11-09T20:32:35",
   "soort": "info",
   "tekst": "2026-11-09-2 online op instagram: Spreuken 14:8"
@@ -2552,5 +2542,15 @@
   "tekst": "Politiek nieuws (NOS): \"Premier Jetten en Britse premier Burnham dineren in Rijksmuseum, praten over Oekraïne\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
   "code": "nieuws_voorstel",
   "post": "n112207011"
+ },
+ {
+  "t": "2026-11-22T09:02:46",
+  "soort": "info",
+  "tekst": "Experiment deze week: stijl"
+ },
+ {
+  "t": "2026-11-22T09:03:20",
+  "soort": "info",
+  "tekst": "Zelfstandig 5 posts klaargezet voor 2026-11-24 (teksten uit de tekstbank)."
  }
 ]
