@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-22T12:01",
+ "gegenereerd": "2026-11-22T12:17",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1699,7 +1699,7 @@
    "ref": "Sefanja 3:17",
    "tekst": "De HEERE uw God, is in het midden van u, een Held, Die verlossen zal; Hij zal over u vrolijk zijn met blijdschap, Hij zal zwijgen in Zijn liefde, Hij zal Zich over u verheugen met gejuich.",
    "hook": "Vers van de week.",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "schaduw_rood",
     "thema": "liefde",
@@ -1745,8 +1745,14 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-22-5.mp4"
    ],
    "thumb": "thumbs/2026-11-22-5.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "instagram",
+    "facebook"
+   ],
+   "links": {
+    "instagram": "https://www.instagram.com/reel/DgCrSf2BjgP/",
+    "facebook": "https://www.facebook.com/2956314371398630"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -1776,11 +1782,14 @@
     "video_uitleg": "vaste regel"
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "instagram": "2026-11-22T12:17+01:00",
+    "facebook": "2026-11-22T12:17+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": null,
-   "online": null
+   "online": "2026-11-22T12:17+01:00"
   },
   {
    "id": "2026-11-22-4",
@@ -1877,7 +1886,7 @@
    "ref": "Romeinen 12:12",
    "tekst": "Verblijdt u in de hoop. Zijt geduldig in de verdrukking. Volhardt in het gebed.",
    "hook": "Goedemorgen. Een vers voor het begin van je dag.",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "zand",
     "thema": "hoop",
@@ -1927,10 +1936,12 @@
    ],
    "thumb": "thumbs/2026-11-22-3.jpg",
    "platformen": [
-    "instagram"
+    "instagram",
+    "facebook"
    ],
    "links": {
-    "instagram": "https://www.instagram.com/p/DgByt0Xlzqu/"
+    "instagram": "https://www.instagram.com/p/DgByt0Xlzqu/",
+    "facebook": "https://www.facebook.com/1015160368352770_122135372834879910"
    },
    "totaal": {
     "views": 0,
@@ -1992,7 +2003,8 @@
     }
    },
    "pub": {
-    "instagram": "2026-11-22T04:02+01:00"
+    "instagram": "2026-11-22T04:02+01:00",
+    "facebook": "2026-11-22T12:15+01:00"
    },
    "gemist": [],
    "nood": false,
@@ -15040,28 +15052,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-20T07:01:23",
-   "soort": "fout",
-   "tekst": "Politiek nieuws (NOS): \"Hoogste cyberadviseur Trump vertrekt na reeks technische storingen\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
-   "code": "nieuws_voorstel",
-   "post": "n112007010"
-  },
-  {
-   "t": "2026-11-20T09:03:56",
-   "soort": "info",
-   "tekst": "Zelfstandig 5 posts klaargezet voor 2026-11-22 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "2026-11-20T09:33:54",
-   "soort": "info",
-   "tekst": "Zelfstandig 10 posts klaargezet voor 2026-11-21, 2026-11-22 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "2026-11-20T12:16:50",
-   "soort": "info",
-   "tekst": "2026-11-20-1 ook als story geplaatst"
-  },
-  {
    "t": "2026-11-20T12:16:50",
    "soort": "info",
    "tekst": "2026-11-20-1 online op instagram: Spreuken 29:11"
@@ -15346,6 +15336,26 @@
    "t": "2026-11-22T09:03:20",
    "soort": "info",
    "tekst": "Zelfstandig 5 posts klaargezet voor 2026-11-24 (teksten uit de tekstbank)."
+  },
+  {
+   "t": "2026-11-22T12:15:49",
+   "soort": "info",
+   "tekst": "2026-11-22-3 online op facebook: Romeinen 12:12"
+  },
+  {
+   "t": "2026-11-22T12:17:52",
+   "soort": "info",
+   "tekst": "2026-11-22-5 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-22T12:17:52",
+   "soort": "info",
+   "tekst": "2026-11-22-5 online op instagram: Sefanja 3:17"
+  },
+  {
+   "t": "2026-11-22T12:17:59",
+   "soort": "info",
+   "tekst": "2026-11-22-5 online op facebook: Sefanja 3:17"
   }
  ],
  "recente_fouten": [
@@ -15497,9 +15507,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-22T04:02",
+   "ok": "2026-11-22T12:17",
    "laatst_ok": true,
-   "detail": "Romeinen 12:12 geplaatst"
+   "detail": "Sefanja 3:17 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-21T13:37",
@@ -15531,9 +15541,9 @@
    "fout": "2026-11-22T12:01"
   },
   "facebook": {
-   "ok": "2026-11-21T22:03",
+   "ok": "2026-11-22T12:17",
    "laatst_ok": true,
-   "detail": "Hebreeën 6:19 geplaatst"
+   "detail": "Sefanja 3:17 geplaatst"
   },
   "statistieken": {
    "ok": "2026-11-21T13:37",
@@ -15557,9 +15567,9 @@
    "ok": "2026-11-22T10:03"
   },
   "nieuws": {
-   "ok": "2026-11-22T07:01",
+   "ok": "2026-11-22T12:01",
    "laatst_ok": true,
-   "detail": "3 nieuwe aanleidingen"
+   "detail": "0 nieuwe aanleidingen"
   },
   "maken": {
    "ok": "2026-11-22T09:03",
@@ -15676,7 +15686,7 @@
  ],
  "weken": {
   "deze": {
-   "posts": 30,
+   "posts": 32,
    "reach": 802,
    "views": 861,
    "likes": 23,
@@ -16283,7 +16293,7 @@
   "tot": "2026-11-30",
   "dag": 7,
   "dagen": 14,
-  "online": 30,
+  "online": 32,
   "gemeten": 15
  },
  "voorraad": {
@@ -20045,8 +20055,8 @@
      },
      {
       "optie": "zand",
-      "online": 0,
-      "gepland": 6,
+      "online": 1,
+      "gepland": 5,
       "n": 2,
       "gem": 1.77,
       "oordeel": "weinig data"
@@ -20141,8 +20151,8 @@
      },
      {
       "optie": "schaduw_rood",
-      "online": 0,
-      "gepland": 1,
+      "online": 1,
+      "gepland": 0,
       "n": 4,
       "gem": 0.65,
       "oordeel": "weinig data"
@@ -20178,19 +20188,6 @@
    }
   ],
   "komend": [
-   {
-    "id": "2026-11-22-5",
-    "ref": "Sefanja 3:17",
-    "datum": "2026-11-22",
-    "tijdslot": "12:15",
-    "tests": [
-     {
-      "dimensie": "huisstijl",
-      "optie": "schaduw_rood",
-      "bron": "experiment"
-     }
-    ]
-   },
    {
     "id": "2026-11-22-1",
     "ref": "Filippenzen 1:6",
@@ -20346,6 +20343,24 @@
       "dimensie": "huisstijl",
       "optie": "papier_groen",
       "bron": "experiment"
+     }
+    ]
+   },
+   {
+    "id": "2026-11-24-3",
+    "ref": "2 Timotheüs 4:7",
+    "datum": "2026-11-24",
+    "tijdslot": "22:00",
+    "tests": [
+     {
+      "dimensie": "huisstijl",
+      "optie": "zand",
+      "bron": "experiment"
+     },
+     {
+      "dimensie": "reel_stijl",
+      "optie": "markeren",
+      "bron": "test markeren"
      }
     ]
    }
