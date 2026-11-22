@@ -1,9 +1,9 @@
 {
- "t": "2026-11-22T14:27+00:00",
+ "t": "2026-11-22T17:57+00:00",
  "model": "Qwen2.5-14B-Instruct-4bit",
- "versie": "3",
+ "versie": "4",
  "laatste_ronde": {
-  "concepten": 8,
-  "mislukt": 2
+  "concepten": 0,
+  "mislukt": 10
  }
 }
