@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-22T21:15",
+ "gegenereerd": "2026-11-22T21:30",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -2297,6 +2297,16 @@
      "saves": 0,
      "follows": 0,
      "t": "2026-11-22T19:01+01:00"
+    },
+    "facebook": {
+     "views": null,
+     "reach": null,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": null,
+     "follows": null,
+     "t": null
     }
    },
    "score": {},
@@ -2335,6 +2345,17 @@
       "shares": 0,
       "saves": 0,
       "follows": 0
+     }
+    },
+    "facebook": {
+     "1u": {
+      "views": null,
+      "reach": null,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": null,
+      "follows": null
      }
     }
    },
@@ -15550,11 +15571,6 @@
   {
    "t": "2026-11-20T20:32:25",
    "soort": "info",
-   "tekst": "2026-11-20-2 ook als story geplaatst"
-  },
-  {
-   "t": "2026-11-20T20:32:25",
-   "soort": "info",
    "tekst": "2026-11-20-2 online op instagram: Spreuken 20:13"
   },
   {
@@ -15852,6 +15868,11 @@
    "t": "2026-11-22T20:32:32",
    "soort": "info",
    "tekst": "2026-11-22-2 online op facebook: Psalm 18:3"
+  },
+  {
+   "t": "2026-11-22T21:30:55",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
   }
  ],
  "recente_fouten": [
@@ -19877,6 +19898,21 @@
    },
    {
     "soort": "zinnen",
+    "cat": "storm",
+    "tekst": "Buiten is het stormachtig. Gaat het binnen rustig aan?"
+   },
+   {
+    "soort": "zinnen",
+    "cat": "storm",
+    "tekst": "De wind blaat buiten. Kun jij boven de storm uitkomen?"
+   },
+   {
+    "soort": "zinnen",
+    "cat": "storm",
+    "tekst": "De storm fluit door de bomen. Lijkt het stil in jouw huis?"
+   },
+   {
+    "soort": "zinnen",
     "cat": "winter",
     "tekst": "Sneeuw bedekt de straten. Een witte kerst komt eraan."
    },
@@ -19884,6 +19920,26 @@
     "soort": "zinnen",
     "cat": "winter",
     "tekst": "Buiten is het winterkoud, binnen zoet het aroma van een gloeiende haard."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "winter",
+    "tekst": "Wat een ijzige ochtend! Een perfect moment voor een warme kruidenthee."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "winter",
+    "tekst": "Geeft maar rust, straks zonnetje. Tussen al dat witte lijkt elk spoortje van kleur zo kostbaar."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "winter",
+    "tekst": "Wat een koude dag, kruip maar lekker onder de dekens en geniet van dit moment."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "winter",
+    "tekst": "Deze koude wind benadrukt hoe fijn het is om binnen te zijn. Komt jou ook zo voor?"
    },
    {
     "soort": "zinnen",
@@ -19907,6 +19963,16 @@
    },
    {
     "soort": "zinnen",
+    "cat": "hitte",
+    "tekst": "De zon brandt feller dan ooit. Geniet van de warmte, maar rust even af."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "hitte",
+    "tekst": "Tussen hitte en schaduw: waar ruim je je het beste uit?"
+   },
+   {
+    "soort": "zinnen",
     "cat": "regen",
     "tekst": "Grijze regendruppels op het raam. Een rustig moment om te bidden."
    },
@@ -19924,6 +19990,16 @@
     "soort": "zinnen",
     "cat": "regen",
     "tekst": "Gekleurde regendruppels op het asfalt bieden een warme rust in het kussen van de regen."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "regen",
+    "tekst": "Regendruppels vallen vanuit de lichte grijze wolken."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "regen",
+    "tekst": "Een regenachtige ochtend: de natuur drinkt in alle rust."
    },
    {
     "soort": "zinnen",
@@ -19947,6 +20023,21 @@
    },
    {
     "soort": "zinnen",
+    "cat": "sintmaarten",
+    "tekst": "Sint-Maarten: snoepjes garen en liefde die de straten verlichten."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "sintmaarten",
+    "tekst": "Vanavond fladderen lampionnen, symbool van het Licht dat we delen."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "sintmaarten",
+    "tekst": "Sint-Maarten toont ons hoe we elkaar kunnen verwarmen."
+   },
+   {
+    "soort": "zinnen",
     "cat": "sinterklaas",
     "tekst": "Sinterklaas is er weer. Heel de straat klinkt vol muziek."
    },
@@ -19962,6 +20053,11 @@
    },
    {
     "soort": "zinnen",
+    "cat": "sinterklaas",
+    "tekst": "Klusjes doen voor Sinterklaas. Een gave voor de hele familie."
+   },
+   {
+    "soort": "zinnen",
     "cat": "sport",
     "tekst": "Bij de basketbalwedstrijd: zoete overwinning. Wat is jouw zoete overwinning vandaag?"
    },
@@ -19969,6 +20065,21 @@
     "soort": "zinnen",
     "cat": "sport",
     "tekst": "Golfballen vliegen via de fairway. Hoe vliegt jouw leven vandaag?"
+   },
+   {
+    "soort": "zinnen",
+    "cat": "sport",
+    "tekst": "De ploeg vliegt naar de finish. Jouw leven sprint ook op."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "sport",
+    "tekst": "Scoreborden schitteren. Jouw innerlijke kracht schittert ook."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "sport",
+    "tekst": "Een speler springt van vreugde. Jouw leven is vol redenen om te springen."
    },
    {
     "soort": "zinnen",
@@ -19984,6 +20095,16 @@
     "soort": "zinnen",
     "cat": "drukte",
     "tekst": "Stadions vol, straten vol. Luchtige rust in het midden."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "drukte",
+    "tekst": "Gewoon even vast staan op het perron, tussen al dat snel voorbij gaan."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "drukte",
+    "tekst": "Wachten op de bus? Dan zijn het deze woorden die bij je wachten passen."
    },
    {
     "soort": "zinnen",
@@ -20007,6 +20128,11 @@
    },
    {
     "soort": "zinnen",
+    "cat": "examens",
+    "tekst": "De bibliotheek is rustiger dan ooit, iedereen studeert in stilte."
+   },
+   {
+    "soort": "zinnen",
     "cat": "klok",
     "tekst": "De klok wijst een nieuw uur aan. Hoe ga jij deze tijd vullen?"
    },
@@ -20024,6 +20150,21 @@
     "soort": "zinnen",
     "cat": "klok",
     "tekst": "De grote klok tikt opnieuw. Een nieuwe tijd, een nieuw begin."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "klok",
+    "tekst": "De klok wijst weer een nieuwe dag aan. Hoe ga jij die begroeten?"
+   },
+   {
+    "soort": "zinnen",
+    "cat": "klok",
+    "tekst": "Zonnewende: tijd om de klok te verstellen. Stel dat ook in je leven?"
+   },
+   {
+    "soort": "zinnen",
+    "cat": "klok",
+    "tekst": "De klok springt vooruit. Wat maakt jou zo blij vandaag?"
    },
    {
     "soort": "zinnen",
@@ -20047,6 +20188,16 @@
    },
    {
     "soort": "zinnen",
+    "cat": "koopjes",
+    "tekst": "Koopjesjacht op volle toeren. Werken of knipperen?"
+   },
+   {
+    "soort": "zinnen",
+    "cat": "koopjes",
+    "tekst": "Iedereen zoekt het beste deal. Is dit echt de beste?"
+   },
+   {
+    "soort": "zinnen",
     "cat": "maandag",
     "tekst": "Maandagmorgen kan zwaar zijn, maar er is altijd hoop aan de horizon."
    },
@@ -20066,6 +20217,16 @@
     "tekst": "Zware tijden? Zelfs op een moeilijke maandag kan er iets opbloeien."
    },
    {
+    "soort": "zinnen",
+    "cat": "maandag",
+    "tekst": "Het duurt nog even voor het weekend, maar elke stap naar voor is een stap in de goede richting."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "maandag",
+    "tekst": "Een nieuwe maandag, een nieuwe kans om te beginnen. Geniet ervan!"
+   },
+   {
     "soort": "bruggen",
     "cat": "winter",
     "tekst": "Winter biedt gelegenheid tot knusse momenten."
@@ -20074,6 +20235,16 @@
     "soort": "bruggen",
     "cat": "hitte",
     "tekst": "Gelijk aan de hitte, zoetigdaden verkoelen."
+   },
+   {
+    "soort": "bruggen",
+    "cat": "hitte",
+    "tekst": "Bij hitte: geniet maar rust af."
+   },
+   {
+    "soort": "bruggen",
+    "cat": "hitte",
+    "tekst": "Te warm? Een ijsje opsnuiven helpt."
    },
    {
     "soort": "bruggen",
@@ -20102,8 +20273,18 @@
    },
    {
     "soort": "bruggen",
+    "cat": "sport",
+    "tekst": "In het sportverhaal: waar we trots op zijn."
+   },
+   {
+    "soort": "bruggen",
     "cat": "examens",
     "tekst": "Een examen is geen eindstreep, maar een stap."
+   },
+   {
+    "soort": "bruggen",
+    "cat": "examens",
+    "tekst": "Rust en concentratie helpen je te presteren."
    },
    {
     "soort": "bruggen",
@@ -20117,18 +20298,43 @@
    },
    {
     "soort": "bruggen",
+    "cat": "klok",
+    "tekst": "Tijd voor verandering: de klok wijst het aan."
+   },
+   {
+    "soort": "bruggen",
     "cat": "koopjes",
     "tekst": "Kans om jouw favorieten te bezitten."
    },
    {
     "soort": "bruggen",
+    "cat": "koopjes",
+    "tekst": "De beste koopjes zijn vaak onverwacht"
+   },
+   {
+    "soort": "bruggen",
     "cat": "maandag",
     "tekst": "Op een zware dag: blijf focussen op de hoop."
+   },
+   {
+    "soort": "bruggen",
+    "cat": "storm",
+    "tekst": "Zelfs in de storm vindt men rust."
+   },
+   {
+    "soort": "bruggen",
+    "cat": "regen",
+    "tekst": "Regen brengt rust en kalme ogenblikken."
+   },
+   {
+    "soort": "bruggen",
+    "cat": "regen",
+    "tekst": "Water dat valt, biedt rust en kalmte aan."
    }
   ],
   "zonder_tekst": 301,
   "mac": {
-   "t": "2026-11-22T17:57+00:00",
+   "t": "2026-11-22T20:09+00:00",
    "model": "Qwen2.5-14B-Instruct-4bit",
    "versie": "4",
    "laatste_ronde": {
