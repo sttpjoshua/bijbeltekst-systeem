@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T13:03:43",
+ "updated": "2026-11-22T13:35:37",
  "agents": {
   "verskiezer": {
    "t": "2026-11-22T09:02:46",
@@ -27,12 +27,12 @@
    "state": "error"
   },
   "analist": {
-   "t": "2026-11-21T13:37:28",
-   "task": "Weekanalyse: strategie v7",
+   "t": "2026-11-22T13:35:37",
+   "task": "Weekanalyse: strategie v8",
    "state": "done"
   },
   "community": {
-   "t": "2026-11-22T13:01:48",
+   "t": "2026-11-22T13:35:37",
    "task": "1 nieuwe reactie gevonden",
    "state": "done"
   }
@@ -40,13 +40,13 @@
  "stats": {
   "posts_today": 2,
   "posts_total": 73,
-  "reach_7d": 825,
+  "reach_7d": 972,
   "best_time": "20:30",
   "next_post": "2026-11-22T17:45:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
-  "instagram": 1148,
+  "instagram": 1296,
   "facebook": 4,
   "youtube": 0,
   "tiktok": 0
@@ -56,6 +56,22 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "13:35",
+   "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
+  },
+  {
+   "t": "13:33",
+   "msg": "Statistieken opgehaald voor 22 posts"
+  },
+  {
+   "t": "13:30",
+   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
+  {
+   "t": "13:15",
+   "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
+  },
   {
    "t": "12:17",
    "msg": "2026-11-22-5 online op facebook: Sefanja 3:17"
@@ -87,22 +103,6 @@
   {
    "t": "05:15",
    "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
-  },
-  {
-   "t": "04:02",
-   "msg": "2026-11-22-3 online op instagram: Romeinen 12:12"
-  },
-  {
-   "t": "04:02",
-   "msg": "2026-11-22-3 ook als story geplaatst"
-  },
-  {
-   "t": "23:15",
-   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
-   "t": "22:05",
-   "msg": "2026-11-21-3 online op instagram: 1 Petrus 1:3"
   }
  ],
  "lampen": [
@@ -143,12 +143,11 @@
   }
  ],
  "volgers": {
-  "ig": 6,
+  "ig": 7,
   "fb": 0,
-  "totaal": 6,
-  "week": 3,
+  "totaal": 7,
+  "week": 4,
   "reeks": [
-   1,
    1,
    3,
    3,
@@ -161,7 +160,8 @@
    5,
    5,
    5,
-   6
+   6,
+   7
   ]
  },
  "top_post": {

@@ -1,15 +1,5 @@
 [
  {
-  "t": "2026-11-10T12:16:19",
-  "soort": "info",
-  "tekst": "2026-11-10-5 ook als story geplaatst"
- },
- {
-  "t": "2026-11-10T12:16:19",
-  "soort": "info",
-  "tekst": "2026-11-10-5 online op instagram: Jesaja 26:3"
- },
- {
   "t": "2026-11-10T13:35:26",
   "soort": "info",
   "tekst": "Statistieken opgehaald voor 9 posts"
@@ -2552,5 +2542,15 @@
   "t": "2026-11-22T13:30:55",
   "soort": "info",
   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
+ },
+ {
+  "t": "2026-11-22T13:33:37",
+  "soort": "info",
+  "tekst": "Statistieken opgehaald voor 22 posts"
+ },
+ {
+  "t": "2026-11-22T13:35:37",
+  "soort": "info",
+  "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
  }
 ]

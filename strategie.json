@@ -1,6 +1,6 @@
 {
- "versie": 7,
- "bijgewerkt": "2026-11-21",
+ "versie": 8,
+ "bijgewerkt": "2026-11-22",
  "gewichten": {
   "huisstijl": {
    "avond": 0.35,
@@ -27,57 +27,57 @@
    "hoop": 1.0,
    "vertrouwen": 1.0,
    "wijsheid": 1.0,
-   "humor_herkenbaar": 0.94,
+   "humor_herkenbaar": 0.88,
    "dankbaarheid": 1.0,
    "identiteit": 1.0,
-   "vrede_rust": 1.0
+   "vrede_rust": 0.94
   },
   "hook_stijl": {
-   "vraag": 0.939,
-   "herkenning": 1.227,
-   "uitdaging": 0.994,
+   "vraag": 0.952,
+   "herkenning": 1.178,
+   "uitdaging": 0.985,
    "rustig": 1.0,
-   "geen": 1.0
+   "geen": 1.06
   },
   "formaat": {
-   "video": 1.058,
+   "video": 1.082,
    "carrousel": 1.0
   },
   "uitleg_op_beeld": {
-   "True": 0.82,
-   "False": 1.186
+   "True": 0.808,
+   "False": 1.246
   },
   "achtergrondbron": {
-   "verloop": 1.024,
-   "beeld": 0.96
+   "verloop": 1.073,
+   "beeld": 1.02
   },
   "boekgroep": {
-   "psalmen": 1.0,
+   "psalmen": 1.06,
    "spreuken": 1.0,
    "wijsheid": 1.0,
    "profeten": 1.0,
    "evangelien": 1.0,
-   "brieven": 1.278
+   "brieven": 1.305
   },
   "lengte": {
-   "kort": 0.94,
-   "middel": 0.92,
+   "kort": 0.937,
+   "middel": 0.98,
    "lang": 1.0
   },
   "bron": {
-   "bekend": 0.979,
+   "bekend": 1.039,
    "ontdekking": 1.0
   },
   "vraag_onderaan": {
-   "True": 1.026,
-   "False": 0.94
+   "True": 1.021,
+   "False": 1.0
   },
   "reel_stijl": {
    "klassiek": 1.0,
    "kinetisch": 1.0,
    "beeld": 1.0,
-   "situatie": 0.958,
-   "markeren": 1.131
+   "situatie": 1.008,
+   "markeren": 1.118
   },
   "carrousel_stijl": {
    "standaard": 1.0,
@@ -105,16 +105,16 @@
    "sterk": 1.0
   },
   "reel_plaatsing": {
-   "midden": 0.973,
+   "midden": 1.033,
    "boven": 1.0
   },
   "reel_scene": {
    "natuur": 1.0,
-   "dichtbij": 1.0,
-   "onderweg": 1.018
+   "dichtbij": 1.028,
+   "onderweg": 1.012
   },
   "reel_haak": {
-   "geen": 1.045,
+   "geen": 1.064,
    "vraag": 1.0
   },
   "opening": {
@@ -123,15 +123,15 @@
    "verhaal": 1.0
   },
   "hashtag_stijl": {
-   "mix": 1.009,
-   "zoekwoord": 1.127,
-   "zonder": 0.94
+   "mix": 0.979,
+   "zoekwoord": 1.162,
+   "zonder": 0.978
   },
   "tijdslot": {
    "04:00": 1.0,
-   "12:15": 0.94,
-   "17:45": 1.098,
-   "20:30": 1.12,
+   "12:15": 0.88,
+   "17:45": 1.154,
+   "20:30": 1.166,
    "22:00": 1.0
   }
  },
@@ -146,10 +146,10 @@
    "roze": 2,
    "bosgroen": 0,
    "mint": 2,
-   "perzik": 1,
+   "perzik": 2,
    "papier_rood": 2,
    "papier_groen": 2,
-   "papier_blauw": 1,
+   "papier_blauw": 2,
    "schaduw_rood": 4,
    "schaduw_groen": 0,
    "schaduw_blauw": 1
@@ -158,35 +158,35 @@
    "troost": 2,
    "moed": 2,
    "liefde": 2,
-   "hoop": 3,
+   "hoop": 4,
    "vertrouwen": 1,
    "wijsheid": 2,
    "humor_herkenbaar": 5,
    "dankbaarheid": 1,
    "identiteit": 2,
-   "vrede_rust": 4
+   "vrede_rust": 5
   },
   "hook_stijl": {
    "vraag": 6,
    "herkenning": 6,
    "uitdaging": 7,
    "rustig": 2,
-   "geen": 3
+   "geen": 5
   },
   "formaat": {
-   "video": 24,
+   "video": 26,
    "carrousel": 0
   },
   "uitleg_op_beeld": {
    "True": 10,
-   "False": 14
+   "False": 16
   },
   "achtergrondbron": {
-   "verloop": 13,
-   "beeld": 11
+   "verloop": 14,
+   "beeld": 12
   },
   "boekgroep": {
-   "psalmen": 4,
+   "psalmen": 6,
    "spreuken": 4,
    "wijsheid": 2,
    "profeten": 2,
@@ -194,23 +194,23 @@
    "brieven": 10
   },
   "lengte": {
-   "kort": 8,
-   "middel": 13,
+   "kort": 9,
+   "middel": 14,
    "lang": 2
   },
   "bron": {
-   "bekend": 21,
+   "bekend": 23,
    "ontdekking": 2
   },
   "vraag_onderaan": {
    "True": 15,
-   "False": 8
+   "False": 10
   },
   "reel_stijl": {
    "klassiek": 0,
    "kinetisch": 0,
    "beeld": 0,
-   "situatie": 12,
+   "situatie": 14,
    "markeren": 10
   },
   "carrousel_stijl": {
@@ -239,16 +239,16 @@
    "sterk": 3
   },
   "reel_plaatsing": {
-   "midden": 8,
+   "midden": 10,
    "boven": 4
   },
   "reel_scene": {
-   "natuur": 2,
-   "dichtbij": 4,
+   "natuur": 3,
+   "dichtbij": 5,
    "onderweg": 6
   },
   "reel_haak": {
-   "geen": 22,
+   "geen": 24,
    "vraag": 0
   },
   "opening": {
@@ -258,13 +258,13 @@
   },
   "hashtag_stijl": {
    "mix": 8,
-   "zoekwoord": 9,
-   "zonder": 5
+   "zoekwoord": 10,
+   "zonder": 6
   },
   "tijdslot": {
-   "04:00": 2,
+   "04:00": 3,
    "12:15": 5,
-   "17:45": 6,
+   "17:45": 7,
    "20:30": 6,
    "22:00": 4
   }
@@ -279,27 +279,27 @@
    },
    "zand": {
     "n": 2,
-    "gem": 1.77,
+    "gem": 1.63,
     "oordeel": "weinig data"
    },
    "salie": {
     "n": 2,
-    "gem": 1.08,
+    "gem": 1.13,
     "oordeel": "weinig data"
    },
    "zonsopgang": {
     "n": 1,
-    "gem": 0.84,
+    "gem": 0.68,
     "oordeel": "weinig data"
    },
    "hemelsblauw": {
     "n": 2,
-    "gem": 0.8,
+    "gem": 0.85,
     "oordeel": "weinig data"
    },
    "paars": {
     "n": 2,
-    "gem": 0.8,
+    "gem": 0.79,
     "oordeel": "weinig data"
    },
    "roze": {
@@ -314,32 +314,32 @@
    },
    "mint": {
     "n": 2,
-    "gem": 1.23,
+    "gem": 1.07,
     "oordeel": "weinig data"
    },
    "perzik": {
-    "n": 1,
-    "gem": 1.97,
+    "n": 2,
+    "gem": 1.92,
     "oordeel": "weinig data"
    },
    "papier_rood": {
     "n": 2,
-    "gem": 1.01,
+    "gem": 1.05,
     "oordeel": "weinig data"
    },
    "papier_groen": {
     "n": 2,
-    "gem": 1.07,
+    "gem": 1.09,
     "oordeel": "weinig data"
    },
    "papier_blauw": {
-    "n": 1,
-    "gem": 0.75,
+    "n": 2,
+    "gem": 1.13,
     "oordeel": "weinig data"
    },
    "schaduw_rood": {
     "n": 4,
-    "gem": 0.65,
+    "gem": 0.6,
     "oordeel": "weinig data"
    },
    "schaduw_groen": {
@@ -349,19 +349,19 @@
    },
    "schaduw_blauw": {
     "n": 1,
-    "gem": 0.83,
+    "gem": 0.89,
     "oordeel": "weinig data"
    }
   },
   "thema": {
    "troost": {
     "n": 2,
-    "gem": 2.44,
+    "gem": 2.51,
     "oordeel": "weinig data"
    },
    "moed": {
     "n": 2,
-    "gem": 2.41,
+    "gem": 2.49,
     "oordeel": "weinig data"
    },
    "liefde": {
@@ -370,24 +370,24 @@
     "oordeel": "weinig data"
    },
    "hoop": {
-    "n": 3,
-    "gem": 0.66,
+    "n": 4,
+    "gem": 1.04,
     "oordeel": "weinig data"
    },
    "vertrouwen": {
     "n": 1,
-    "gem": 2.63,
+    "gem": 2.16,
     "oordeel": "weinig data"
    },
    "wijsheid": {
     "n": 2,
-    "gem": 0.23,
+    "gem": 0.2,
     "oordeel": "weinig data"
    },
    "humor_herkenbaar": {
     "n": 5,
-    "gem": 0.54,
-    "oordeel": "waarschijnlijk slechter"
+    "gem": 0.56,
+    "oordeel": "geen duidelijk verschil"
    },
    "dankbaarheid": {
     "n": 1,
@@ -396,46 +396,46 @@
    },
    "identiteit": {
     "n": 2,
-    "gem": 1.19,
+    "gem": 1.27,
     "oordeel": "weinig data"
    },
    "vrede_rust": {
-    "n": 4,
-    "gem": 0.17,
-    "oordeel": "weinig data"
+    "n": 5,
+    "gem": 0.68,
+    "oordeel": "geen duidelijk verschil"
    }
   },
   "hook_stijl": {
    "vraag": {
     "n": 6,
-    "gem": 0.9,
+    "gem": 0.92,
     "oordeel": "geen duidelijk verschil"
    },
    "herkenning": {
     "n": 6,
-    "gem": 1.38,
-    "oordeel": "waarschijnlijk beter"
+    "gem": 1.3,
+    "oordeel": "geen duidelijk verschil"
    },
    "uitdaging": {
     "n": 7,
-    "gem": 0.99,
+    "gem": 0.98,
     "oordeel": "geen duidelijk verschil"
    },
    "rustig": {
     "n": 2,
-    "gem": 1.04,
+    "gem": 1.11,
     "oordeel": "weinig data"
    },
    "geen": {
-    "n": 3,
-    "gem": 0.99,
-    "oordeel": "weinig data"
+    "n": 5,
+    "gem": 1.22,
+    "oordeel": "geen duidelijk verschil"
    }
   },
   "formaat": {
    "video": {
-    "n": 24,
-    "gem": 1.07,
+    "n": 26,
+    "gem": 1.09,
     "oordeel": "geen duidelijk verschil"
    },
    "carrousel": {
@@ -447,46 +447,46 @@
   "uitleg_op_beeld": {
    "True": {
     "n": 10,
-    "gem": 0.71,
+    "gem": 0.73,
     "oordeel": "geen duidelijk verschil"
    },
    "False": {
-    "n": 14,
-    "gem": 1.24,
+    "n": 16,
+    "gem": 1.38,
     "oordeel": "geen duidelijk verschil"
    }
   },
   "achtergrondbron": {
    "verloop": {
-    "n": 13,
-    "gem": 1.03,
+    "n": 14,
+    "gem": 1.09,
     "oordeel": "geen duidelijk verschil"
    },
    "beeld": {
-    "n": 11,
-    "gem": 1.11,
+    "n": 12,
+    "gem": 1.09,
     "oordeel": "geen duidelijk verschil"
    }
   },
   "boekgroep": {
    "psalmen": {
-    "n": 4,
-    "gem": 1.05,
-    "oordeel": "weinig data"
+    "n": 6,
+    "gem": 1.55,
+    "oordeel": "geen duidelijk verschil"
    },
    "spreuken": {
     "n": 4,
-    "gem": 0.26,
+    "gem": 0.24,
     "oordeel": "weinig data"
    },
    "wijsheid": {
     "n": 2,
-    "gem": 0.19,
+    "gem": 0.18,
     "oordeel": "weinig data"
    },
    "profeten": {
     "n": 2,
-    "gem": 1.11,
+    "gem": 1.02,
     "oordeel": "weinig data"
    },
    "evangelien": {
@@ -496,36 +496,36 @@
    },
    "brieven": {
     "n": 10,
-    "gem": 1.44,
+    "gem": 1.43,
     "oordeel": "geen duidelijk verschil"
    }
   },
   "lengte": {
    "kort": {
-    "n": 8,
-    "gem": 0.76,
+    "n": 9,
+    "gem": 0.91,
     "oordeel": "geen duidelijk verschil"
    },
    "middel": {
-    "n": 13,
-    "gem": 0.9,
+    "n": 14,
+    "gem": 1.06,
     "oordeel": "geen duidelijk verschil"
    },
    "lang": {
     "n": 2,
-    "gem": 2.34,
+    "gem": 2.03,
     "oordeel": "weinig data"
    }
   },
   "bron": {
    "bekend": {
-    "n": 21,
-    "gem": 0.98,
+    "n": 23,
+    "gem": 1.09,
     "oordeel": "geen duidelijk verschil"
    },
    "ontdekking": {
     "n": 2,
-    "gem": 0.97,
+    "gem": 1.04,
     "oordeel": "weinig data"
    }
   },
@@ -536,8 +536,8 @@
     "oordeel": "geen duidelijk verschil"
    },
    "False": {
-    "n": 8,
-    "gem": 0.86,
+    "n": 10,
+    "gem": 1.17,
     "oordeel": "geen duidelijk verschil"
    }
   },
@@ -558,13 +558,13 @@
     "oordeel": "weinig data"
    },
    "situatie": {
-    "n": 12,
-    "gem": 0.94,
+    "n": 14,
+    "gem": 1.01,
     "oordeel": "geen duidelijk verschil"
    },
    "markeren": {
     "n": 10,
-    "gem": 1.18,
+    "gem": 1.17,
     "oordeel": "geen duidelijk verschil"
    }
   },
@@ -583,12 +583,12 @@
   "reel_kleur": {
    "abrikoos": {
     "n": 2,
-    "gem": 1.38,
+    "gem": 1.29,
     "oordeel": "weinig data"
    },
    "mint": {
     "n": 1,
-    "gem": 1.41,
+    "gem": 1.29,
     "oordeel": "weinig data"
    },
    "hemel": {
@@ -598,24 +598,24 @@
    },
    "roze": {
     "n": 3,
-    "gem": 1.02,
+    "gem": 1.04,
     "oordeel": "weinig data"
    },
    "goud": {
     "n": 1,
-    "gem": 0.83,
+    "gem": 0.89,
     "oordeel": "weinig data"
    }
   },
   "markeer_achtergrond": {
    "kleur": {
     "n": 1,
-    "gem": 0.83,
+    "gem": 0.89,
     "oordeel": "weinig data"
    },
    "papier": {
     "n": 3,
-    "gem": 1.16,
+    "gem": 1.08,
     "oordeel": "weinig data"
    },
    "schaduw": {
@@ -625,67 +625,67 @@
    },
    "foto": {
     "n": 1,
-    "gem": 0.36,
+    "gem": 0.37,
     "oordeel": "weinig data"
    }
   },
   "markeer_streep": {
    "regel": {
     "n": 4,
-    "gem": 0.96,
+    "gem": 0.9,
     "oordeel": "weinig data"
    },
    "woord": {
     "n": 1,
-    "gem": 0.83,
+    "gem": 0.89,
     "oordeel": "weinig data"
    }
   },
   "markeer_opening": {
    "vers": {
     "n": 2,
-    "gem": 0.81,
+    "gem": 0.79,
     "oordeel": "weinig data"
    },
    "sterk": {
     "n": 3,
-    "gem": 1.02,
+    "gem": 0.97,
     "oordeel": "weinig data"
    }
   },
   "reel_plaatsing": {
    "midden": {
-    "n": 8,
-    "gem": 0.96,
+    "n": 10,
+    "gem": 1.07,
     "oordeel": "geen duidelijk verschil"
    },
    "boven": {
     "n": 4,
-    "gem": 0.92,
+    "gem": 0.87,
     "oordeel": "weinig data"
    }
   },
   "reel_scene": {
    "natuur": {
-    "n": 2,
-    "gem": 0.67,
+    "n": 3,
+    "gem": 0.92,
     "oordeel": "weinig data"
    },
    "dichtbij": {
-    "n": 4,
-    "gem": 0.95,
-    "oordeel": "weinig data"
+    "n": 5,
+    "gem": 1.05,
+    "oordeel": "geen duidelijk verschil"
    },
    "onderweg": {
     "n": 6,
-    "gem": 1.03,
+    "gem": 1.02,
     "oordeel": "geen duidelijk verschil"
    }
   },
   "reel_haak": {
    "geen": {
-    "n": 22,
-    "gem": 1.05,
+    "n": 24,
+    "gem": 1.07,
     "oordeel": "geen duidelijk verschil"
    },
    "vraag": {
@@ -714,44 +714,44 @@
   "hashtag_stijl": {
    "mix": {
     "n": 8,
-    "gem": 1.01,
+    "gem": 0.97,
     "oordeel": "geen duidelijk verschil"
    },
    "zoekwoord": {
-    "n": 9,
-    "gem": 1.18,
+    "n": 10,
+    "gem": 1.23,
     "oordeel": "geen duidelijk verschil"
    },
    "zonder": {
-    "n": 5,
-    "gem": 0.88,
+    "n": 6,
+    "gem": 0.96,
     "oordeel": "geen duidelijk verschil"
    }
   },
   "tijdslot": {
    "04:00": {
-    "n": 2,
-    "gem": 1.2,
+    "n": 3,
+    "gem": 1.31,
     "oordeel": "weinig data"
    },
    "12:15": {
     "n": 5,
-    "gem": 0.54,
+    "gem": 0.52,
     "oordeel": "waarschijnlijk slechter"
    },
    "17:45": {
-    "n": 6,
-    "gem": 1.16,
+    "n": 7,
+    "gem": 1.24,
     "oordeel": "geen duidelijk verschil"
    },
    "20:30": {
     "n": 6,
-    "gem": 1.26,
+    "gem": 1.28,
     "oordeel": "geen duidelijk verschil"
    },
    "22:00": {
     "n": 4,
-    "gem": 1.13,
+    "gem": 1.15,
     "oordeel": "weinig data"
    }
   }
