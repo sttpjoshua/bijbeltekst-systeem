@@ -1,10 +1,5 @@
 [
  {
-  "t": "2026-11-10T20:30:57",
-  "soort": "info",
-  "tekst": "2026-11-10-5 online op facebook: Jesaja 26:3"
- },
- {
   "t": "2026-11-10T20:32:03",
   "soort": "info",
   "tekst": "2026-11-10-1 ook als story geplaatst"
@@ -2552,5 +2547,10 @@
   "t": "2026-11-22T17:46:27",
   "soort": "info",
   "tekst": "2026-11-22-4 online op facebook: 2 Korinthe 4:8-9"
+ },
+ {
+  "t": "2026-11-22T19:03:07",
+  "soort": "info",
+  "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
  }
 ]
