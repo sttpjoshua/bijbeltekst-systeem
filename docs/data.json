@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-22T19:45",
+ "gegenereerd": "2026-11-22T20:01",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -16022,7 +16022,7 @@
    "ok": "2026-11-20T08:01",
    "laatst_ok": false,
    "detail": "400: {\"error\":{\"message\":\"Unsupported get request. Object with ID '18646160734043579' does not exist, cannot be loaded due to missing permissions, or does not s",
-   "fout": "2026-11-22T19:01"
+   "fout": "2026-11-22T20:01"
   },
   "facebook": {
    "ok": "2026-11-22T17:46",
