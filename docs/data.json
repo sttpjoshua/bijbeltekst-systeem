@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-22T20:15",
+ "gegenereerd": "2026-11-22T20:32",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -2125,7 +2125,7 @@
    "ref": "Psalm 18:3",
    "tekst": "De HEERE is mijn Steenrots, en mijn Burg, en mijn Uithelper; mijn God, mijn Rots, op Welken ik betrouw; mijn Schild, en de Hoorn mijns heils, mijn Hoog Vertrek.",
    "hook": "Voor iedereen die vaste grond zoekt.",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "perzik",
     "thema": "moed",
@@ -2171,8 +2171,14 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-22-2.mp4"
    ],
    "thumb": "thumbs/2026-11-22-2.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "instagram",
+    "facebook"
+   ],
+   "links": {
+    "instagram": "https://www.instagram.com/reel/DgDj82fSYAJ/",
+    "facebook": "https://www.facebook.com/4536642273268833"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -2202,11 +2208,14 @@
     "video_uitleg": "vaste regel"
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "instagram": "2026-11-22T20:32+01:00",
+    "facebook": "2026-11-22T20:32+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": null,
-   "online": null
+   "online": "2026-11-22T20:32+01:00"
   },
   {
    "id": "2026-11-22-1",
@@ -2214,7 +2223,7 @@
    "ref": "Filippenzen 1:6",
    "tekst": "Vertrouwende ditzelve, dat Hij, Die in u een goed werk begonnen heeft, dat voleindigen zal tot op den dag van Jezus Christus.",
    "hook": "Voel jij je weleens niet goed genoeg?",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "zand",
     "thema": "moed",
@@ -2263,10 +2272,12 @@
    ],
    "thumb": "thumbs/2026-11-22-1.jpg",
    "platformen": [
-    "instagram"
+    "instagram",
+    "facebook"
    ],
    "links": {
-    "instagram": "https://www.instagram.com/p/DgDRCw6DhqQ/"
+    "instagram": "https://www.instagram.com/p/DgDRCw6DhqQ/",
+    "facebook": "https://www.facebook.com/1015160368352770_122135413886879910"
    },
    "totaal": {
     "views": 2,
@@ -2328,7 +2339,8 @@
     }
    },
    "pub": {
-    "instagram": "2026-11-22T17:46+01:00"
+    "instagram": "2026-11-22T17:46+01:00",
+    "facebook": "2026-11-22T20:30+01:00"
    },
    "gemist": [],
    "nood": false,
@@ -15536,26 +15548,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-20T17:46:48",
-   "soort": "info",
-   "tekst": "2026-11-20-4 online op instagram: Psalm 131:2"
-  },
-  {
-   "t": "2026-11-20T19:03:14",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
-  },
-  {
-   "t": "2026-11-20T20:18:39",
-   "soort": "info",
-   "tekst": "Bediening: Reacties opgehaald: 1 nieuw"
-  },
-  {
-   "t": "2026-11-20T20:31:04",
-   "soort": "info",
-   "tekst": "2026-11-20-1 online op facebook: Spreuken 29:11"
-  },
-  {
    "t": "2026-11-20T20:32:25",
    "soort": "info",
    "tekst": "2026-11-20-2 ook als story geplaatst"
@@ -15840,6 +15832,26 @@
    "t": "2026-11-22T19:03:07",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-22T20:30:59",
+   "soort": "info",
+   "tekst": "2026-11-22-1 online op facebook: Filippenzen 1:6"
+  },
+  {
+   "t": "2026-11-22T20:32:24",
+   "soort": "info",
+   "tekst": "2026-11-22-2 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-22T20:32:24",
+   "soort": "info",
+   "tekst": "2026-11-22-2 online op instagram: Psalm 18:3"
+  },
+  {
+   "t": "2026-11-22T20:32:32",
+   "soort": "info",
+   "tekst": "2026-11-22-2 online op facebook: Psalm 18:3"
   }
  ],
  "recente_fouten": [
@@ -15991,9 +16003,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-22T17:46",
+   "ok": "2026-11-22T20:32",
    "laatst_ok": true,
-   "detail": "Filippenzen 1:6 geplaatst"
+   "detail": "Psalm 18:3 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-22T13:35",
@@ -16025,9 +16037,9 @@
    "fout": "2026-11-22T20:03"
   },
   "facebook": {
-   "ok": "2026-11-22T17:46",
+   "ok": "2026-11-22T20:32",
    "laatst_ok": true,
-   "detail": "2 Korinthe 4:8-9 geplaatst"
+   "detail": "Psalm 18:3 geplaatst"
   },
   "statistieken": {
    "ok": "2026-11-22T13:35",
@@ -16176,9 +16188,9 @@
  ],
  "weken": {
   "deze": {
-   "posts": 32,
-   "reach": 846,
-   "views": 908,
+   "posts": 34,
+   "reach": 847,
+   "views": 910,
    "likes": 24,
    "comments": 0,
    "saves": 2,
@@ -16783,7 +16795,7 @@
   "tot": "2026-11-30",
   "dag": 7,
   "dagen": 14,
-  "online": 32,
+  "online": 34,
   "gemeten": 17
  },
  "voorraad": {
@@ -21264,8 +21276,8 @@
      },
      {
       "optie": "zand",
-      "online": 1,
-      "gepland": 5,
+      "online": 2,
+      "gepland": 4,
       "n": 2,
       "gem": 1.63,
       "oordeel": "weinig data"
@@ -21328,8 +21340,8 @@
      },
      {
       "optie": "perzik",
-      "online": 0,
-      "gepland": 4,
+      "online": 1,
+      "gepland": 3,
       "n": 2,
       "gem": 1.92,
       "oordeel": "weinig data"
@@ -21397,24 +21409,6 @@
    }
   ],
   "komend": [
-   {
-    "id": "2026-11-22-2",
-    "ref": "Psalm 18:3",
-    "datum": "2026-11-22",
-    "tijdslot": "20:30",
-    "tests": [
-     {
-      "dimensie": "huisstijl",
-      "optie": "perzik",
-      "bron": "experiment"
-     },
-     {
-      "dimensie": "reel_stijl",
-      "optie": "markeren",
-      "bron": "test markeren"
-     }
-    ]
-   },
    {
     "id": "2026-11-23-5",
     "ref": "1 Korinthe 15:58",

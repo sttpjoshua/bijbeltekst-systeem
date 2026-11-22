@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T20:15:41",
+ "updated": "2026-11-22T20:32:32",
  "agents": {
   "verskiezer": {
    "t": "2026-11-22T09:02:46",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-22T17:46:27",
-   "task": "Postte 2 Korinthe 4:8-9 op facebook",
+   "t": "2026-11-22T20:32:32",
+   "task": "Postte Psalm 18:3 op facebook",
    "state": "done"
   },
   "controller": {
@@ -38,11 +38,11 @@
   }
  },
  "stats": {
-  "posts_today": 2,
-  "posts_total": 73,
+  "posts_today": 4,
+  "posts_total": 75,
   "reach_7d": 972,
   "best_time": "20:30",
-  "next_post": "2026-11-22T17:45:00"
+  "next_post": "2026-11-22T22:00:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
@@ -56,6 +56,22 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "20:32",
+   "msg": "2026-11-22-2 online op facebook: Psalm 18:3"
+  },
+  {
+   "t": "20:32",
+   "msg": "2026-11-22-2 online op instagram: Psalm 18:3"
+  },
+  {
+   "t": "20:32",
+   "msg": "2026-11-22-2 ook als story geplaatst"
+  },
+  {
+   "t": "20:30",
+   "msg": "2026-11-22-1 online op facebook: Filippenzen 1:6"
+  },
   {
    "t": "19:03",
    "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
@@ -87,22 +103,6 @@
   {
    "t": "13:35",
    "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
-  },
-  {
-   "t": "13:33",
-   "msg": "Statistieken opgehaald voor 22 posts"
-  },
-  {
-   "t": "13:30",
-   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
-   "t": "13:15",
-   "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
-  },
-  {
-   "t": "12:17",
-   "msg": "2026-11-22-5 online op facebook: Sefanja 3:17"
   }
  ],
  "lampen": [
