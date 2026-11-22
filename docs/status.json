@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T07:01:19",
+ "updated": "2026-11-22T07:15:40",
  "agents": {
   "verskiezer": {
    "t": "2026-11-21T12:02:00",
@@ -22,8 +22,8 @@
    "state": "done"
   },
   "controller": {
-   "t": "2026-11-21T07:01:20",
-   "task": "Zwaar nieuws (NOS): \"Denemarken zet Russische gezant uit na verijdelde",
+   "t": "2026-11-22T07:01:26",
+   "task": "Politiek nieuws (NOS): \"Premier Jetten en Britse premier Burnham diner",
    "state": "error"
   },
   "analist": {
@@ -56,6 +56,10 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "07:01",
+   "msg": "Politiek nieuws (NOS): \"Premier Jetten en Britse premier Burnham dineren in Rijksmuseum, praten over Oekraïne\""
+  },
   {
    "t": "05:15",
    "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
@@ -99,10 +103,6 @@
   {
    "t": "20:31",
    "msg": "2026-11-21-2 ook als story geplaatst"
-  },
-  {
-   "t": "19:03",
-   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
   }
  ],
  "lampen": [
