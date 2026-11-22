@@ -1,15 +1,5 @@
 [
  {
-  "t": "2026-11-10T13:36:03",
-  "soort": "info",
-  "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
- },
- {
-  "t": "2026-11-10T17:46:22",
-  "soort": "info",
-  "tekst": "2026-11-10-4 ook als story geplaatst"
- },
- {
   "t": "2026-11-10T17:46:22",
   "soort": "info",
   "tekst": "2026-11-10-4 online op instagram: Spreuken 26:15"
@@ -2552,5 +2542,15 @@
   "t": "2026-11-22T14:08:20",
   "soort": "info",
   "tekst": "Avondcontrole: morgen en overmorgen hebben elk 5 posts klaar. Tekstbank aangevuld met de 26 reeksverzen van Advent en Kerst (stonden er niet in, waardoor Advent vanaf 29 nov een willekeurig vers zou krijgen). Lokale AI schrijft voortaan eerst voor reeksverzen; planning 29 nov staat nu op Jesaja 40:3."
+ },
+ {
+  "t": "2026-11-22T14:35:02",
+  "soort": "info",
+  "tekst": "Materiaal-repo niet gecloned (add_repo ontbreekt in deze sessie); GitHub Actions vult muziek zelf aan"
+ },
+ {
+  "t": "2026-11-22T14:35:02",
+  "soort": "info",
+  "tekst": "Dagelijkse run: 10 posts voor 23 en 24 nov gecontroleerd (zelfstandig gemaakt), reserveverzen ingevuld uit de tekstbank, tekstbank 36 dagen"
  }
 ]
