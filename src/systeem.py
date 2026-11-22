@@ -214,6 +214,15 @@ def alle_verzen():
         _ALLE = uit
     return _ALLE
 
+def reeks_verzen():
+    """Vaste verzen van de reeksen (Advent, Kerst, Nieuwjaar): {vers_id: vers met 'reeks'}. Ze staan niet in de gewone
+    verzenlijst, maar hebben wel een tekstbankitem nodig, anders kan het systeem de reekspost niet zelf maken."""
+    uit = {}
+    for r in laad("data/reeksen.json", {}).get("reeksen", []):
+        for v in r.get("verzen", []):
+            uit.setdefault(v["id"], dict(v, reeks=r["naam"], van=r.get("van", "")))
+    return uit
+
 def toppers(posts):
     """Verzen die duidelijk beter scoorden; die mogen na 30 dagen al terugkomen."""
     sc = {}
@@ -306,7 +315,8 @@ def bank_voorraad(cfg=None, posts=None):
     bank = tekstbank.laad()
     grens = (dt.date.today() - dt.timedelta(days=cfg["vers_niet_herhalen_dagen"])).isoformat()
     recent = {p["vers_id"] for p in posts if p["datum"] >= grens} | set(cfg.get("verzen_uitsluiten", []))
-    vrij = len([k for k in bank if k not in recent])
+    gewoon = {v["id"] for v in alle_verzen()}  # reeksverzen (Advent, Kerst) tellen niet mee als vrije voorraad
+    vrij = len([k for k in bank if k not in recent and k in gewoon])
     per_dag = max(1, min(cfg["posts_per_dag"], cfg["max_posts_per_dag"]))
     return {"verzen": len(bank), "vrij": vrij, "dagen": vrij // per_dag}
 
@@ -1975,6 +1985,8 @@ def cmd_tekstbank(actie="status"):
     import tekstbank
     bank = tekstbank.laad()
     verzen = {x["id"]: x for x in alle_verzen()}
+    for vid, v in reeks_verzen().items():  # reeksverzen (Advent, Kerst) staan ook in de bank
+        verzen.setdefault(vid, v)
     if actie == "zaai":
         n = 0
         for p in laad("data/posts.json", []) + laad("data/noodvoorraad.json", []):

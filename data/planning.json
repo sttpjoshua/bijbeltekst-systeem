@@ -1,5 +1,5 @@
 {
- "gemaakt": "2026-11-22T13:35",
+ "gemaakt": "2026-11-22T14:07",
  "strategie_versie": 8,
  "posts": [
   {
@@ -1648,9 +1648,9 @@
    "id": "2026-11-29-1",
    "datum": "2026-11-29",
    "status": "wacht_op_tekst",
-   "vers_id": "Romans-5-5-5",
-   "ref": "Romeinen 5:5",
-   "tekst": "En de hoop beschaamt niet, omdat de liefde Gods in onze harten uitgestort is door den Heiligen Geest, Die ons is gegeven.",
+   "vers_id": "Isaiah-40-3-3",
+   "ref": "Jesaja 40:3",
+   "tekst": "Een stem des roependen in de woestijn: Bereidt den weg des HEEREN, maakt recht in de wildernis een baan voor onzen God!",
    "vertaling": "SV",
    "variabelen": {
     "huisstijl": "mint",
@@ -1659,7 +1659,7 @@
     "formaat": "video",
     "uitleg_op_beeld": false,
     "achtergrondbron": "beeld",
-    "boekgroep": "brieven",
+    "boekgroep": "profeten",
     "lengte": "middel",
     "bron": "bekend",
     "vraag_onderaan": true,

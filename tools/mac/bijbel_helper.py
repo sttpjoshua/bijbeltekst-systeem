@@ -24,7 +24,7 @@ from pathlib import Path
 
 REPO = "sttpjoshua/bijbeltekst-systeem"
 API = f"https://api.github.com/repos/{REPO}"
-VERSION = "1"
+VERSION = "2"
 MODEL_BIG = "mlx-community/Qwen2.5-14B-Instruct-4bit"
 MODEL_SMALL = "mlx-community/Qwen2.5-7B-Instruct-4bit"
 VERZEN_PER_RONDE = 10
@@ -191,9 +191,18 @@ def voorbeelden(bank, n=3):
                                     ensure_ascii=False)) for k, e in uit)
 
 
+REEKS_UITLEG = {
+    "Advent": "Dit vers hoort bij de reeks Advent (de weken voor Kerst). Schrijf in het licht van Advent: verwachting, wachten en licht richting Kerst.",
+    "Kerst": "Dit vers hoort bij Kerst. Schrijf in het licht van de geboorte van Jezus: blijdschap, vrede en God die dichtbij komt.",
+    "Nieuwjaar": "Dit vers hoort bij Nieuwjaar. Schrijf in het licht van een nieuw begin.",
+}
+
+
 def schrijf_vers(vers, bank):
+    reeks = REEKS_UITLEG.get(vers.get("reeks", ""), "")
     user = (f"Zo ziet goed werk eruit (voorbeelden van eerdere verzen):\n\n{voorbeelden(bank)}\n\n"
-            f"Nu het vers waar je voor schrijft:\nVers: {vers['ref']}\nTekst: {vers['tekst']}\nThema: {vers.get('thema', '')}\nJSON:")
+            f"Nu het vers waar je voor schrijft:\nVers: {vers['ref']}\nTekst: {vers['tekst']}\nThema: {vers.get('thema', '')}\n"
+            + (f"{reeks}\n" if reeks else "") + "JSON:")
     fouten = []
     for poging in range(3):
         extra = "" if not fouten else "\n\nDe vorige poging had deze fouten, los ze op: " + "; ".join(fouten)
@@ -264,8 +273,14 @@ def werk():
     # 1. verzen zonder tekst (bekende verzen eerst, dan de ontdekkingen uit de hele Bijbel)
     if len(conc["verzen"]) < MAX_OPEN_CONCEPTEN:
         bekend, pool = lees("data/verzen.json", []), lees("data/bijbel_pool.json", [])
+        # reeksverzen (Advent, Kerst, Nieuwjaar) eerst, de eerstvolgende reeks vooraan: zonder tekst kan het systeem
+        # de reekspost niet zelf maken
+        reeksen = sorted(lees("data/reeksen.json", {}).get("reeksen", []), key=lambda r: r.get("van") or "9999")
+        vandaag = datetime.now().strftime("%Y-%m-%d")
+        reeks = [dict(v, reeks=r["naam"]) for r in reeksen if r.get("verzen") and (r.get("tot") or r.get("van") or "9999") >= vandaag
+                 for v in r["verzen"]]
         gezien, wachtrij = set(), []
-        for v in bekend + pool:
+        for v in reeks + bekend + pool:
             if v["id"] in gezien:
                 continue
             gezien.add(v["id"])

@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T14:01:32",
+ "updated": "2026-11-22T14:08:20",
  "agents": {
   "verskiezer": {
    "t": "2026-11-22T09:02:46",
@@ -57,6 +57,10 @@
  ],
  "log": [
   {
+   "t": "14:08",
+   "msg": "Avondcontrole: morgen en overmorgen hebben elk 5 posts klaar. Tekstbank aangevuld met de 26 reeksverzen van Ad"
+  },
+  {
    "t": "13:35",
    "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
   },
@@ -99,10 +103,6 @@
   {
    "t": "07:01",
    "msg": "Politiek nieuws (NOS): \"Premier Jetten en Britse premier Burnham dineren in Rijksmuseum, praten over Oekraïne\""
-  },
-  {
-   "t": "05:15",
-   "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
   }
  ],
  "lampen": [
@@ -123,8 +123,8 @@
   },
   {
    "naam": "Avondcontrole",
-   "kleur": "oranje",
-   "tekst": "te lang stil"
+   "kleur": "groen",
+   "tekst": "ok"
   },
   {
    "naam": "Statistieken",

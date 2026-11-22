@@ -75,7 +75,7 @@ def goedkeuren(vid):
     k = c["verzen"].get(vid)
     if not k:
         return False, "Dit concept bestaat niet meer"
-    vers = next((x for x in S.alle_verzen() if x["id"] == vid), None)
+    vers = next((x for x in S.alle_verzen() if x["id"] == vid), None) or S.reeks_verzen().get(vid)
     if not vers:
         return False, "Dit vers staat niet in de verzenlijst"
     fouten = controle(vid, k["e"], vers["tekst"])
@@ -141,6 +141,8 @@ def dashboard():
     import systeem as S
     c = laad()
     verzen = {x["id"]: x for x in S.alle_verzen()}
+    for vid, v in S.reeks_verzen().items():  # Advent en Kerst: ook concepten van de lokale AI
+        verzen.setdefault(vid, v)
     lijst = []
     for vid, k in c["verzen"].items():
         v = verzen.get(vid)

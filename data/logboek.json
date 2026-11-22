@@ -1,10 +1,5 @@
 [
  {
-  "t": "2026-11-10T13:35:26",
-  "soort": "info",
-  "tekst": "Statistieken opgehaald voor 9 posts"
- },
- {
   "t": "2026-11-10T13:36:03",
   "soort": "info",
   "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
@@ -2552,5 +2547,10 @@
   "t": "2026-11-22T13:35:37",
   "soort": "info",
   "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
+ },
+ {
+  "t": "2026-11-22T14:08:20",
+  "soort": "info",
+  "tekst": "Avondcontrole: morgen en overmorgen hebben elk 5 posts klaar. Tekstbank aangevuld met de 26 reeksverzen van Advent en Kerst (stonden er niet in, waardoor Advent vanaf 29 nov een willekeurig vers zou krijgen). Lokale AI schrijft voortaan eerst voor reeksverzen; planning 29 nov staat nu op Jesaja 40:3."
  }
 ]
