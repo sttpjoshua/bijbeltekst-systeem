@@ -24,7 +24,7 @@ from pathlib import Path
 
 REPO = "sttpjoshua/bijbeltekst-systeem"
 API = f"https://api.github.com/repos/{REPO}"
-VERSION = "2"
+VERSION = "3"
 MODEL_BIG = "mlx-community/Qwen2.5-14B-Instruct-4bit"
 MODEL_SMALL = "mlx-community/Qwen2.5-7B-Instruct-4bit"
 VERZEN_PER_RONDE = 10
@@ -36,6 +36,7 @@ STREEP = re.compile("[—–]")
 CJK = re.compile("[぀-ヿ㐀-鿿가-힯]")
 KEY = None
 _model = None
+BANK_TAGS = set()
 
 
 def log(*a):
@@ -83,6 +84,31 @@ def schrijf(pad, data, bericht):
         if e.code in (409, 422):
             return False
         raise
+
+
+# ---------- taalcontrole (src/taalcontrole.py, elke ronde vers van GitHub) ----------
+_taal = None
+
+
+def taal():
+    """Laadt src/taalcontrole.py uit de repo (spelling, verzonnen woorden, hashtags). Lukt dat niet: None."""
+    global _taal
+    if _taal is not None:
+        return _taal or None
+    try:
+        import wordfreq  # noqa: F401
+    except ImportError:
+        log("taalcontrole: wordfreq installeren (eenmalig)")
+        subprocess.run([sys.executable, "-m", "pip", "install", "-q", "--disable-pip-version-check", "wordfreq"], check=False)
+    try:
+        code = gh("/contents/src/taalcontrole.py?ref=main", raw=True).decode("utf-8")
+        ns = {"__name__": "taalcontrole"}
+        exec(compile(code, "taalcontrole.py", "exec"), ns)
+        _taal = ns
+    except Exception as e:
+        log("taalcontrole niet geladen:", repr(e))
+        _taal = False
+    return _taal or None
 
 
 # ---------- het model ----------
@@ -161,6 +187,9 @@ def controle(e, vers):
         uit.append("alleen Nederlands, geen Chinese of Japanse tekens")
     if str(e.get("betekenis") or "").strip() in vers["tekst"]:
         uit.append("betekenis moet het vers uitleggen, niet herhalen")
+    T = taal()
+    if T:
+        uit += T["problemen"](e, vers["tekst"], BANK_TAGS)
     return uit
 
 
@@ -180,7 +209,8 @@ Velden:
  zin: één korte zin voor onder de post, maximaal 140 tekens
  vraag: één oprechte open vraag aan de lezer, eindigt op ?, maximaal 100 tekens
  hooks: {vraag: korte vraag, herkenning: begint met 'Voor iedereen die' en is maximaal 85 tekens, uitdaging: korte opdracht, rustig: korte rustige zin}
- tags: 3 tot 5 hashtags, bijvoorbeeld ["#rust","#vertrouwen","#bijbeltekst"]"""
+ tags: 3 tot 5 hashtags van één bestaand Nederlands woord of een bijbelboek, bijvoorbeeld ["#rust","#vertrouwen","#bijbeltekst"]; verzin geen samengestelde hashtags
+Spel namen zoals in de Nederlandse Bijbel: Paulus, Petrus, Jezus, Mozes, Maria, Jozef, Johannes, Jesaja. Zeg 'dit vers', niet 'deze passage'."""
 
 
 def voorbeelden(bank, n=3):
@@ -213,6 +243,9 @@ def schrijf_vers(vers, bank):
         e = {k: e.get(k) for k in ("kw", "uitleg", "betekenis", "toepassing", "verhaal", "zin", "vraag", "hooks", "tags")}
         e["ref"] = vers["ref"]
         e = {k: (v.strip() if isinstance(v, str) else v) for k, v in e.items()}
+        T = taal()
+        if T and isinstance(e.get("tags"), list):
+            e["tags"] = T["schoon_tags"](e["tags"], BANK_TAGS)  # verzonnen hashtags eruit, aanvullen tot 3
         fouten = controle(e, vers)
         if not fouten:
             return e, []
@@ -234,6 +267,9 @@ def nieuws_schrijven(cat, vb, bestaand):
     for soort, lo, hi in (("zinnen", 25, 120), ("bruggen", 10, 45)):
         for t in d.get(soort, []):
             t = str(t).strip()
+            T = taal()
+            if T and T["zin_problemen"](t):
+                continue
             if lo <= len(t) <= hi and not STREEP.search(t) and not CJK.search(t) and t not in bestaand and t not in uit[soort]:
                 uit[soort].append(t)
     return uit
@@ -260,6 +296,7 @@ def werk():
         log("lokale AI staat uit in config.json")
         return
     bank = lees("data/tekstbank.json", {})
+    BANK_TAGS.update(t for e in bank.values() for t in e.get("tags") or [])
     conc = lees("data/concepten.json", {})
     conc.setdefault("verzen", {})
     conc.setdefault("afgekeurd", [])

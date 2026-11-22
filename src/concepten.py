@@ -49,9 +49,19 @@ def extra():
     return e
 
 
+def bank_tags():
+    """Alle hashtags die al in de tekstbank staan (die zijn door mensen gekozen en dus goed)."""
+    return {t for e in tekstbank.laad().values() for t in e.get("tags") or []}
+
+
 def controle(vid, e, vers_tekst=None):
     """Zelfde regels als de tekstbank, plus extra eisen voor tekst die een model schreef."""
     uit = tekstbank.problemen(vid, e, vers_tekst)
+    try:  # spelling, verzonnen woorden en hashtags (src/taalcontrole.py, dezelfde controle als op de Mac)
+        import taalcontrole
+        uit += taalcontrole.problemen(e, vers_tekst or "", bank_tags())
+    except Exception:
+        pass
     alles = " ".join(str(v) for v in e.values() if isinstance(v, str)) + " " + " ".join((e.get("hooks") or {}).values())
     if CJK.search(alles):
         uit.append("bevat Chinese of Japanse tekens")
@@ -112,6 +122,13 @@ def nieuws_goedkeuren(soort, cat, tekst):
         return False, "Dit concept bestaat niet meer"
     if STREEP.search(tekst) or CJK.search(tekst) or (soort == "bruggen" and len(tekst) > 45) or not 10 <= len(tekst) <= 140:
         return False, "Controle faalt (lengte of streepje)"
+    try:
+        import taalcontrole
+        fout = taalcontrole.zin_problemen(tekst)
+    except Exception:
+        fout = []
+    if fout:
+        return False, "Controle faalt: " + "; ".join(fout)
     x[soort].setdefault(cat, [])
     if tekst not in x[soort][cat]:
         x[soort][cat].append(tekst)

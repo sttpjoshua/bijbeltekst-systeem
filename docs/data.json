@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-22T15:01",
+ "gegenereerd": "2026-11-22T15:26",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -15963,7 +15963,7 @@
    "detail": "22 nieuwe metingen"
   },
   "zelftest": {
-   "ok": "2026-11-22T14:08",
+   "ok": "2026-11-22T15:26",
    "laatst_ok": true,
    "detail": "18 onderdelen gemaakt en gecontroleerd"
   },
@@ -19563,10 +19563,405 @@
   }
  ],
  "lokale_ai": {
-  "verzen": [],
-  "nieuws": [],
+  "verzen": [
+   {
+    "id": "I_John-4-18-18",
+    "ref": "1 Johannes 4:18",
+    "tekst": "Er is in de liefde geen vrees, maar de volmaakte liefde drijft de vrees buiten; want de vrees heeft pijn, en die vreest, is niet volmaakt in de liefde.",
+    "e": {
+     "kw": "vrees",
+     "uitleg": "Volmaakte liefde maakt vrees onmogelijk.",
+     "betekenis": "Volmaakte liefde is zo sterk dat ze alle angst verdrijft. Als je volledig liefhebt, heb je geen reden om bang te zijn. Liefde geeft rust.",
+     "toepassing": "Zoek vandaag een manier om iemand die je liefhebt, te vertellen dat je van hem houdt.",
+     "verhaal": "Wat als liefde alle angst zou verdrijven?",
+     "zin": "Volmaakte liefde drijft de vrees buiten.",
+     "vraag": "Waar ben jij bang voor en hoe kan liefde je daarbij helpen?",
+     "hooks": {
+      "vraag": "Heb jij ooit ervaren dat liefde angst verdrijft?",
+      "herkenning": "Voor iedereen die bang is maar hoopt op liefde.",
+      "uitdaging": "Zeg vandaag tegen iemand dat je van hem houdt.",
+      "rustig": "De volmaakte liefde drijft de vrees buiten."
+     },
+     "tags": [
+      "#liefde",
+      "#vrees",
+      "#bijbeltekst",
+      "#1johannes"
+     ],
+     "ref": "1 Johannes 4:18"
+    },
+    "t": "2026-11-22T14:02+00:00",
+    "fouten": []
+   },
+   {
+    "id": "II_Timothy-1-7-7",
+    "ref": "2 Timotheüs 1:7",
+    "tekst": "Want God heeft ons niet gegeven een geest der vreesachtigheid, maar der kracht, en der liefde, en der gematigdheid.",
+    "e": {
+     "kw": "kracht",
+     "uitleg": "God heeft ons kracht, liefde en gematigdheid gegeven, niet angst.",
+     "betekenis": "Dit vers stelt ons gerust. We hoeven niet bang te zijn voor de uitdagingen in ons leven. God heeft ons kracht gegeven om moedig te zijn, liefde om te delen en wijsheid om rustig te blijven.",
+     "toepassing": "Vandaag stel je één situatie of angst voor die je moedig wilt aanpakken.",
+     "verhaal": "Ken je dat gevoel van angst?",
+     "zin": "God heeft ons kracht gegeven om moedig te zijn.",
+     "vraag": "Wat is de grootste angst die je vandaag overwinnen wilt?",
+     "hooks": {
+      "vraag": "Heb jij vandaag al iets gedaan dat je angstig maakte?",
+      "herkenning": "Voor iedereen die vandaag bang is om iets te doen.",
+      "uitdaging": "Maak vandaag een moedige keuze.",
+      "rustig": "God is met je."
+     },
+     "tags": [
+      "#moed",
+      "#kracht",
+      "#bijbeltekst",
+      "#vrees"
+     ],
+     "ref": "2 Timotheüs 1:7"
+    },
+    "t": "2026-11-22T14:02+00:00",
+    "fouten": []
+   },
+   {
+    "id": "Isaiah-43-19-19",
+    "ref": "Jesaja 43:19",
+    "tekst": "Ziet, Ik zal wat nieuws maken, nu zal het uitspruiten, zult gijlieden dat niet weten? Ja, Ik zal in de woestijn een weg leggen, en rivieren in de wildernis.",
+    "e": {
+     "kw": "nieuws",
+     "uitleg": "God belooft nieuwe dingen te doen die we kunnen zien.",
+     "betekenis": "God wil nieuwe dingen doen die onverwacht zijn, zelfs in de moeilijkste situaties. Hij maakt een nieuwe weg en water in de dorstige woestijn.",
+     "toepassing": "Vandaag, als iets onverwachts gebeurt, probeer erop te letten of het misschien een nieuwe gave van God is.",
+     "verhaal": "God maakt nieuwe wegen in de plaatsen waar we het minst verwachten.",
+     "zin": "Nieuwe dingen zijn op komst, zelfs in de moeilijkste tijden.",
+     "vraag": "Waar verwacht je nieuwe dingen van God?",
+     "hooks": {
+      "vraag": "Zie je nieuwe dingen in de moeilijke tijden?",
+      "herkenning": "Voor iedereen die nieuwe dingen zoekt.",
+      "uitdaging": "Bewust op zoek naar nieuwe dingen.",
+      "rustig": "Nieuwe dingen zijn onderweg."
+     },
+     "tags": [
+      "#hoop",
+      "#bijbeltekst",
+      "#jesaja"
+     ],
+     "ref": "Jesaja 43:19"
+    },
+    "t": "2026-11-22T14:02+00:00",
+    "fouten": []
+   },
+   {
+    "id": "Proverbs-15-1-1",
+    "ref": "Spreuken 15:1",
+    "tekst": "Een zacht antwoord keert de grimmigheid af; maar een smartend woord doet den toorn oprijzen.",
+    "e": {
+     "kw": "antwoord",
+     "uitleg": "Een vriendelijke reactie kalmeert; een harde veroordeelt.",
+     "betekenis": "Spreuken legt uit dat hoe je reageert op een belediging of kritiek, ertoe kan leiden dat de situatie beter of slechter wordt. Een rustige reactie kan kalmeren, terwijl een scherpe opmerking kan uitlokken.",
+     "toepassing": "Vandaag, als iemand boos is op je, antwoord dan rustig en vriendelijk.",
+     "verhaal": "Een zacht antwoord kan een ruzie afwenden.",
+     "zin": "Een rustige reactie kan een situatie kalmeren.",
+     "vraag": "Hoe heb je vandaag gereageerd op kritiek?",
+     "hooks": {
+      "vraag": "Zou een rustige reactie vandaag verstandiger zijn geweest?",
+      "herkenning": "Voor iedereen die vaak in ruzies terechtkomt.",
+      "uitdaging": "Probeer vandaag rustig te blijven.",
+      "rustig": "Een rustige reactie kalmeert."
+     },
+     "tags": [
+      "#wijsheid",
+      "#spreuken",
+      "#reactie",
+      "#bijbeltekst"
+     ],
+     "ref": "Spreuken 15:1"
+    },
+    "t": "2026-11-22T14:02+00:00",
+    "fouten": []
+   }
+  ],
+  "nieuws": [
+   {
+    "soort": "zinnen",
+    "cat": "storm",
+    "tekst": "De wind woei hard vandaag, wat een herinnering om vast te houden."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "storm",
+    "tekst": "Buiten stormt het, maar binnen is het rustig en veilig."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "storm",
+    "tekst": "Een harde storm, maar blijkbaar geen reden om in paniek te raken."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "storm",
+    "tekst": "Zo wervelende wind, net als in het Bijbelverhaal dat we lezen."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "winter",
+    "tekst": "Sneeuw bedekt de straten. Een witte kerst komt eraan."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "winter",
+    "tekst": "Buiten is het winterkoud, binnen zoet het aroma van een gloeiende haard."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "hitte",
+    "tekst": "Dit zonnige weer roept uit naar een ijsje of een koel drankje."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "hitte",
+    "tekst": "Nog een hitte dag. Geniet van de warmte, maar koel ook af."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "hitte",
+    "tekst": "Deze hittegolf zet de draai op. Logeer maar eens in de schaduw."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "hitte",
+    "tekst": "Bloedhitte zorgt voor zweet, maar ook voor mooie herinneringen."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "regen",
+    "tekst": "Grijze regendruppels op het raam. Een rustig moment om te bidden."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "regen",
+    "tekst": "Een regenachtige dag brengt donkere wolken, maar een helder gevoel van innerlijke rust."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "regen",
+    "tekst": "Buiten regent het, binnen zoekt men rust in de Bijbel."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "regen",
+    "tekst": "Gekleurde regendruppels op het asfalt bieden een warme rust in het kussen van de regen."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "sintmaarten",
+    "tekst": "Sint-Maarten: lampionnen zweven in de nacht."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "sintmaarten",
+    "tekst": "Snoepjes in handen, liefde in het hart vandaag."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "sintmaarten",
+    "tekst": "Vanavond wordt de straat gevuld met lichtjes en liefde."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "sintmaarten",
+    "tekst": "Sint-Maarten: klein wonderschone momenten door de straat."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "sinterklaas",
+    "tekst": "Sinterklaas is er weer. Heel de straat klinkt vol muziek."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "sinterklaas",
+    "tekst": "Sinterklaas brengt cadeaus. Beter kan er niet aan."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "sinterklaas",
+    "tekst": "Sinterklaas is er. Nu is het tijd voor leuke verhalen."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "sport",
+    "tekst": "Bij de basketbalwedstrijd: zoete overwinning. Wat is jouw zoete overwinning vandaag?"
+   },
+   {
+    "soort": "zinnen",
+    "cat": "sport",
+    "tekst": "Golfballen vliegen via de fairway. Hoe vliegt jouw leven vandaag?"
+   },
+   {
+    "soort": "zinnen",
+    "cat": "drukte",
+    "tekst": "Verstopt zich in de rij, vinden rust in het gedrang."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "drukte",
+    "tekst": "Vertragingen en files vandaag. Een moment om geduld te oefenen."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "drukte",
+    "tekst": "Stadions vol, straten vol. Luchtige rust in het midden."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "examens",
+    "tekst": "Papiertjes in de lucht voor het grote examen?"
+   },
+   {
+    "soort": "zinnen",
+    "cat": "examens",
+    "tekst": "Niet je hele toekomst, maar één moment."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "examens",
+    "tekst": "De truc zit in rust vinden tijdens het examen."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "examens",
+    "tekst": "Toetsen zijn er om te leren, niet om te vrezen."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "klok",
+    "tekst": "De klok wijst een nieuw uur aan. Hoe ga jij deze tijd vullen?"
+   },
+   {
+    "soort": "zinnen",
+    "cat": "klok",
+    "tekst": "Een uur verzet: nieuwe uren, nieuwe mogelijkheden."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "klok",
+    "tekst": "De klok wijst een nieuwe kant op. Wat is jouw nieuwe richting?"
+   },
+   {
+    "soort": "zinnen",
+    "cat": "klok",
+    "tekst": "De grote klok tikt opnieuw. Een nieuwe tijd, een nieuw begin."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "koopjes",
+    "tekst": "Koopjesweek: vrije hand in de winkel is een droom."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "koopjes",
+    "tekst": "Overal kortingen: de perfecte dag om iets leuks voor jezelf te kiezen."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "koopjes",
+    "tekst": "Sale-seizoen is aan de gang: wat haal je met je spaargeld?"
+   },
+   {
+    "soort": "zinnen",
+    "cat": "koopjes",
+    "tekst": "Tussen al die aanbiedingen: welk voordeel is echt bijzonder?"
+   },
+   {
+    "soort": "zinnen",
+    "cat": "maandag",
+    "tekst": "Maandagmorgen kan zwaar zijn, maar er is altijd hoop aan de horizon."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "maandag",
+    "tekst": "Begin van de week, tijd om nieuwe krachten op te doen."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "maandag",
+    "tekst": "Een nieuwe week begint, laat de zorgen achter en stappen."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "maandag",
+    "tekst": "Zware tijden? Zelfs op een moeilijke maandag kan er iets opbloeien."
+   },
+   {
+    "soort": "bruggen",
+    "cat": "winter",
+    "tekst": "Winter biedt gelegenheid tot knusse momenten."
+   },
+   {
+    "soort": "bruggen",
+    "cat": "hitte",
+    "tekst": "Gelijk aan de hitte, zoetigdaden verkoelen."
+   },
+   {
+    "soort": "bruggen",
+    "cat": "sintmaarten",
+    "tekst": "Delen van liefde, net als Sint-Maarten"
+   },
+   {
+    "soort": "bruggen",
+    "cat": "sintmaarten",
+    "tekst": "Simpel licht maakt de nacht kleurrijker."
+   },
+   {
+    "soort": "bruggen",
+    "cat": "sinterklaas",
+    "tekst": "In deze tijd, diep genieten van muziek."
+   },
+   {
+    "soort": "bruggen",
+    "cat": "sinterklaas",
+    "tekst": "Sinterklaas brengt licht en gezelligheid."
+   },
+   {
+    "soort": "bruggen",
+    "cat": "sport",
+    "tekst": "Natuurlijk ritme in sport zoals in elke daad"
+   },
+   {
+    "soort": "bruggen",
+    "cat": "examens",
+    "tekst": "Een examen is geen eindstreep, maar een stap."
+   },
+   {
+    "soort": "bruggen",
+    "cat": "klok",
+    "tekst": "Nieuwe tijd, nieuwe dromen."
+   },
+   {
+    "soort": "bruggen",
+    "cat": "klok",
+    "tekst": "De klok helpt ons de tijd opnieuw te vullen."
+   },
+   {
+    "soort": "bruggen",
+    "cat": "koopjes",
+    "tekst": "Kans om jouw favorieten te bezitten."
+   },
+   {
+    "soort": "bruggen",
+    "cat": "maandag",
+    "tekst": "Op een zware dag: blijf focussen op de hoop."
+   }
+  ],
   "zonder_tekst": 301,
-  "mac": {}
+  "mac": {
+   "t": "2026-11-22T14:02+00:00",
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "versie": "2",
+   "laatste_ronde": {
+    "concepten": 10,
+    "mislukt": 0
+   }
+  }
  },
  "nieuws": {
   "instelling": {
