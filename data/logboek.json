@@ -1,10 +1,5 @@
 [
  {
-  "t": "2026-11-10T22:03:05",
-  "soort": "info",
-  "tekst": "2026-11-10-2 online op instagram: Openbaring 21:5"
- },
- {
   "t": "2026-11-10T22:03:13",
   "soort": "info",
   "tekst": "2026-11-10-2 online op facebook: Openbaring 21:5"
@@ -2552,5 +2547,10 @@
   "t": "2026-11-22T21:30:55",
   "soort": "info",
   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
+ },
+ {
+  "t": "2026-11-22T21:45:44",
+  "soort": "info",
+  "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
  }
 ]

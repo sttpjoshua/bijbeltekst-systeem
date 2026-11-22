@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-22T21:30",
+ "gegenereerd": "2026-11-22T21:45",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -2179,8 +2179,36 @@
     "instagram": "https://www.instagram.com/reel/DgDj82fSYAJ/",
     "facebook": "https://www.facebook.com/4536642273268833"
    },
-   "totaal": {},
-   "per_platform": {},
+   "totaal": {
+    "views": 9,
+    "reach": 6,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0
+   },
+   "per_platform": {
+    "instagram": {
+     "views": 9,
+     "reach": 6,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "t": null
+    },
+    "facebook": {
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "t": null
+    }
+   },
    "score": {},
    "keuzebron": {
     "huisstijl": "experiment",
@@ -2207,7 +2235,30 @@
     "tijdslot": "experiment",
     "video_uitleg": "vaste regel"
    },
-   "momenten": {},
+   "momenten": {
+    "instagram": {
+     "1u": {
+      "views": 9,
+      "reach": 6,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": null
+     }
+    },
+    "facebook": {
+     "1u": {
+      "views": 0,
+      "reach": null,
+      "likes": null,
+      "comments": null,
+      "shares": null,
+      "saves": null,
+      "follows": null
+     }
+    }
+   },
    "pub": {
     "instagram": "2026-11-22T20:32+01:00",
     "facebook": "2026-11-22T20:32+01:00"
@@ -15569,11 +15620,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-20T20:32:25",
-   "soort": "info",
-   "tekst": "2026-11-20-2 online op instagram: Spreuken 20:13"
-  },
-  {
    "t": "2026-11-20T20:32:32",
    "soort": "info",
    "tekst": "2026-11-20-2 online op facebook: Spreuken 20:13"
@@ -15873,6 +15919,11 @@
    "t": "2026-11-22T21:30:55",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-22T21:45:44",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
   }
  ],
  "recente_fouten": [
@@ -16081,7 +16132,7 @@
    "fout": "2026-11-11T13:49",
    "laatst_ok": true,
    "detail": "1 bericht(en) verstuurd",
-   "ok": "2026-11-22T10:03"
+   "ok": "2026-11-22T21:30"
   },
   "nieuws": {
    "ok": "2026-11-22T17:01",
@@ -16210,8 +16261,8 @@
  "weken": {
   "deze": {
    "posts": 34,
-   "reach": 847,
-   "views": 910,
+   "reach": 853,
+   "views": 919,
    "likes": 24,
    "comments": 0,
    "saves": 2,

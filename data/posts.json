@@ -13987,7 +13987,32 @@
   "media": "docs/media/2026-11/2026-11-22-2.mp4",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-22-2.mp4",
   "metricool": {},
-  "stats": {},
+  "stats": {
+   "instagram": {
+    "1u": {
+     "views": 9,
+     "reach": 6,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "avg_watch_ms": 1956
+    }
+   },
+   "facebook": {
+    "1u": {
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "avg_watch_ms": null
+    }
+   }
+  },
   "beeld": "pexels-vanngo-ng-105653827-38504182.jpg",
   "muziek": "ES_The Pulsation of Tranquility - Cora Zea.mp3",
   "geluid": "ES_Water, Lap, Lake, Water, Calm, Small Splashes, Distant Boat - Epidemic Sound.mp3",
