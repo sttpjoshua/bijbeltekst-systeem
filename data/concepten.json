@@ -1,0 +1,606 @@
+{
+ "verzen": {
+  "Psalms-23-1-1": {
+   "e": {
+    "kw": "Herder",
+    "uitleg": "God is mijn Herder, dus ik heb alles wat ik nodig heb.",
+    "betekenis": "Dit vers stelt voor dat God als een goede Herder is die zorgt voor al onze behoeften. We hoeven ons niet zorgen te maken over wat we missen, omdat Hij voor ons zorgt.",
+    "toepassing": "Vandaag schrijf je op wat God al voor je gedaan heeft.",
+    "verhaal": "Je bent niet alleen in deze wereld, God zorgt voor je.",
+    "zin": "God zorgt voor alles wat ik nodig heb.",
+    "vraag": "Wat maakt je ervan overtuigd dat God voor jou zorgt?",
+    "hooks": {
+     "vraag": "Weet je zeker dat God voor jou zorgt?",
+     "herkenning": "Voor iedereen die zich vandaag zorgen maakt over wat er nog moet gebeuren.",
+     "uitdaging": "Schrijf op wat God al voor jou gedaan heeft.",
+     "rustig": "God zorgt voor alles wat ik nodig heb."
+    },
+    "tags": [
+     "#troost",
+     "#psalmen",
+     "#bijbeltekst",
+     "#zorgen"
+    ],
+    "ref": "Psalm 23:1"
+   },
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-22T14:02+00:00"
+  },
+  "John-14-27-27": {
+   "e": {
+    "kw": "vrede",
+    "uitleg": "Jezus geeft zijn volgelingen zijn vrede, niet die van de wereld.",
+    "betekenis": "Deze vrede is anders dan de wereld kent. Het is een innerlijke rust die onverwoestbaar is, zelfs in moeilijke tijden. Jezus wil ons troosten en kalmeren.",
+    "toepassing": "Vandaag zoek je de innerlijke rust die Jezus belooft, in plaats van de druk van de wereld.",
+    "verhaal": "Jezus wil ons geruststellen en een innerlijke vrede geven.",
+    "zin": "Jezus geeft een vrede die de wereld niet kan bieden.",
+    "vraag": "Waar zoek je vandaag rust en troost?",
+    "hooks": {
+     "vraag": "Wat zoekt je hart vandaag?",
+     "herkenning": "Voor iedereen die rust zoekt in de storm.",
+     "uitdaging": "Zoek vandaag de vrede die Jezus belooft.",
+     "rustig": "Rust in de belofte van Jezus."
+    },
+    "tags": [
+     "#bijbeltekst",
+     "#vredetrots",
+     "#johannes"
+    ],
+    "ref": "Johannes 14:27"
+   },
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-22T14:02+00:00"
+  },
+  "II_Timothy-1-7-7": {
+   "e": {
+    "kw": "kracht",
+    "uitleg": "God heeft ons kracht, liefde en gematigdheid gegeven, niet angst.",
+    "betekenis": "Dit vers stelt ons gerust. We hoeven niet bang te zijn voor de uitdagingen in ons leven. God heeft ons kracht gegeven om moedig te zijn, liefde om te delen en wijsheid om rustig te blijven.",
+    "toepassing": "Vandaag stel je één situatie of angst voor die je moedig wilt aanpakken.",
+    "verhaal": "Ken je dat gevoel van angst?",
+    "zin": "God heeft ons kracht gegeven om moedig te zijn.",
+    "vraag": "Wat is de grootste angst die je vandaag overwinnen wilt?",
+    "hooks": {
+     "vraag": "Heb jij vandaag al iets gedaan dat je angstig maakte?",
+     "herkenning": "Voor iedereen die vandaag bang is om iets te doen.",
+     "uitdaging": "Maak vandaag een moedige keuze.",
+     "rustig": "God is met je."
+    },
+    "tags": [
+     "#moed",
+     "#kracht",
+     "#bijbeltekst",
+     "#vrees"
+    ],
+    "ref": "2 Timotheüs 1:7"
+   },
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-22T14:02+00:00"
+  },
+  "I_John-4-18-18": {
+   "e": {
+    "kw": "vrees",
+    "uitleg": "Volmaakte liefde maakt vrees onmogelijk.",
+    "betekenis": "Volmaakte liefde is zo sterk dat ze alle angst verdrijft. Als je volledig liefhebt, heb je geen reden om bang te zijn. Liefde geeft rust.",
+    "toepassing": "Zoek vandaag een manier om iemand die je liefhebt, te vertellen dat je van hem houdt.",
+    "verhaal": "Wat als liefde alle angst zou verdrijven?",
+    "zin": "Volmaakte liefde drijft de vrees buiten.",
+    "vraag": "Waar ben jij bang voor en hoe kan liefde je daarbij helpen?",
+    "hooks": {
+     "vraag": "Heb jij ooit ervaren dat liefde angst verdrijft?",
+     "herkenning": "Voor iedereen die bang is maar hoopt op liefde.",
+     "uitdaging": "Zeg vandaag tegen iemand dat je van hem houdt.",
+     "rustig": "De volmaakte liefde drijft de vrees buiten."
+    },
+    "tags": [
+     "#liefde",
+     "#vrees",
+     "#bijbeltekst",
+     "#1johannes"
+    ],
+    "ref": "1 Johannes 4:18"
+   },
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-22T14:02+00:00"
+  },
+  "Romans-15-13-13": {
+   "e": {
+    "kw": "hoop",
+    "uitleg": "De God van hoop vult ons met blijdschap en vrede.",
+    "betekenis": "Deze passage belooft dat God onze hoop vervult met blijdschap en vrede. Dit leidt tot een overvloed aan hoop, gestaag aangewakend door de Heilige Geest.",
+    "toepassing": "De volgende keer dat je onzeker bent, stel jezelf gerust met Gods belofte aan jou.",
+    "verhaal": "God wil dat we vrede en blijdschap ervaren.",
+    "zin": "God vult je leven met blijdschap en vrede.",
+    "vraag": "Waar ben je vandaag onzeker over?",
+    "hooks": {
+     "vraag": "Waar ben je onzeker?",
+     "herkenning": "Voor iedereen die vandaag onzeker is.",
+     "uitdaging": "Stel je onzekerheden gerust met Gods belofte aan jou.",
+     "rustig": "Gods belofte is sterker dan onze onzekerheden."
+    },
+    "tags": [
+     "#hoop",
+     "#bijbeltekst",
+     "#vreden",
+     "#blijdschap"
+    ],
+    "ref": "Romeinen 15:13"
+   },
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-22T14:02+00:00"
+  },
+  "Isaiah-43-19-19": {
+   "e": {
+    "kw": "nieuws",
+    "uitleg": "God belooft nieuwe dingen te doen die we kunnen zien.",
+    "betekenis": "God wil nieuwe dingen doen die onverwacht zijn, zelfs in de moeilijkste situaties. Hij maakt een nieuwe weg en water in de dorstige woestijn.",
+    "toepassing": "Vandaag, als iets onverwachts gebeurt, probeer erop te letten of het misschien een nieuwe gave van God is.",
+    "verhaal": "God maakt nieuwe wegen in de plaatsen waar we het minst verwachten.",
+    "zin": "Nieuwe dingen zijn op komst, zelfs in de moeilijkste tijden.",
+    "vraag": "Waar verwacht je nieuwe dingen van God?",
+    "hooks": {
+     "vraag": "Zie je nieuwe dingen in de moeilijke tijden?",
+     "herkenning": "Voor iedereen die nieuwe dingen zoekt.",
+     "uitdaging": "Bewust op zoek naar nieuwe dingen.",
+     "rustig": "Nieuwe dingen zijn onderweg."
+    },
+    "tags": [
+     "#hoop",
+     "#nieuwebegin",
+     "#bijbeltekst",
+     "#jesaja"
+    ],
+    "ref": "Jesaja 43:19"
+   },
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-22T14:02+00:00"
+  },
+  "Proverbs-15-1-1": {
+   "e": {
+    "kw": "antwoord",
+    "uitleg": "Een vriendelijke reactie kalmeert; een harde veroordeelt.",
+    "betekenis": "Spreuken legt uit dat hoe je reageert op een belediging of kritiek, ertoe kan leiden dat de situatie beter of slechter wordt. Een rustige reactie kan kalmeren, terwijl een scherpe opmerking kan uitlokken.",
+    "toepassing": "Vandaag, als iemand boos is op je, antwoord dan rustig en vriendelijk.",
+    "verhaal": "Een zacht antwoord kan een ruzie afwenden.",
+    "zin": "Een rustige reactie kan een situatie kalmeren.",
+    "vraag": "Hoe heb je vandaag gereageerd op kritiek?",
+    "hooks": {
+     "vraag": "Zou een rustige reactie vandaag verstandiger zijn geweest?",
+     "herkenning": "Voor iedereen die vaak in ruzies terechtkomt.",
+     "uitdaging": "Probeer vandaag rustig te blijven.",
+     "rustig": "Een rustige reactie kalmeert."
+    },
+    "tags": [
+     "#wijsheid",
+     "#spreuken",
+     "#reactie",
+     "#bijbeltekst"
+    ],
+    "ref": "Spreuken 15:1"
+   },
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-22T14:02+00:00"
+  },
+  "Proverbs-6-6-6": {
+   "e": {
+    "kw": "mier",
+    "uitleg": "Kijk eens hoe de mier haar werk doet, luiaard.",
+    "betekenis": "Deze passage maakt een verwoede mier tot voorbeeld voor iemand die niet wil werken. Ze is slim en hardwerkend. De boodschap is duidelijk: luiaards, leer van de mier.",
+    "toepassing": "Vandaag maak je een lijstje van dingen die je moet doen en begin je daaraan.",
+    "verhaal": "De mier is een toonbeeld van hardwerkend zijn, zonder te klagen.",
+    "zin": "De mier is een voorbeeld van hardwerkend zijn.",
+    "vraag": "Waar leer je vandaag van de mier?",
+    "hooks": {
+     "vraag": "Wat zou je doen als je een mier was?",
+     "herkenning": "Voor iedereen die zichzelf soms een luiaard vindt.",
+     "uitdaging": "Maak een lijstje van dingen die je moet doen en begin eraan.",
+     "rustig": "De mier weet wat ze moet doen."
+    },
+    "tags": [
+     "#bijbeltekst",
+     "#mier",
+     "#hardwerkend",
+     "#inspiratie"
+    ],
+    "ref": "Spreuken 6:6"
+   },
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-22T14:02+00:00"
+  },
+  "Colossians-3-15-15": {
+   "e": {
+    "kw": "vrede",
+    "uitleg": "De vrede van God regent over ons, dus wees dankbaar.",
+    "betekenis": "Deze tekst herinnert ons eraan dat de vrede die we ervaren, een geschenk is van God. Die vrede kan ons ertoe aanzetten om dankbaar te zijn.",
+    "toepassing": "Vandaag zeg je één ding bedankt dat je anders wel had overgeslagen.",
+    "verhaal": "Gods vrede zorgt ervoor dat we dankbaar zijn.",
+    "zin": "De vrede Gods brengt dankbaarheid.",
+    "vraag": "Wat ben je vandaag dankbaar voor?",
+    "hooks": {
+     "vraag": "Wat ben je dankbaar voor?",
+     "herkenning": "Voor iedereen die vandaag dankbaar is.",
+     "uitdaging": "Zeg bedankt voor iets dat je anders had overgeslagen.",
+     "rustig": "De vrede Gods regent over ons."
+    },
+    "tags": [
+     "#dankbaarheid",
+     "#kolossenzen",
+     "#bijbeltekst",
+     "#vredeliefde"
+    ],
+    "ref": "Kolossenzen 3:15"
+   },
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-22T14:02+00:00"
+  },
+  "Romans-8-18-18": {
+   "e": {
+    "kw": "waarderen",
+    "uitleg": "Het lijden is nu moeilijk te meten tegen de toekomstige heerlijkheid.",
+    "betekenis": "De Bijbel zegt dat het huidige lijden te licht is om te meten tegen de toekomstige heerlijkheid. We zullen een groot gevoel van vreugde ervaren dat nu moeilijk te begrijpen is.",
+    "toepassing": "Schrijf vandaag op wat je huidige lijden is. Overweeg hoe dat lijden vergeleken is tegen de toekomstige beloften.",
+    "verhaal": "Pauwels schrijft over dingen die nog niet zichtbaar zijn.",
+    "zin": "Het huidige lijden is te licht om te meten tegen de toekomstige beloften.",
+    "vraag": "Wat is jouw huidige lijden dat je opschrijft?",
+    "hooks": {
+     "vraag": "Wat is jouw huidige lijden dat je opschrijft?",
+     "herkenning": "Voor iedereen die heden lijdt, maar hoop heeft.",
+     "uitdaging": "Schrijf vandaag op wat je huidige lijden is.",
+     "rustig": "De toekomstige beloften zijn groter dan nu te bevatten."
+    },
+    "tags": [
+     "#lijden",
+     "#hoop",
+     "#bijbeltekst"
+    ],
+    "ref": "Romeinen 8:18"
+   },
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-22T14:02+00:00"
+  }
+ },
+ "afgekeurd": [],
+ "nieuws": {
+  "zinnen": {
+   "storm": [
+    {
+     "tekst": "De wind woei hard vandaag, wat een herinnering om vast te houden.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    },
+    {
+     "tekst": "Buiten stormt het, maar binnen is het rustig en veilig.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    },
+    {
+     "tekst": "Een harde storm, maar blijkbaar geen reden om in paniek te raken.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    },
+    {
+     "tekst": "Zo wervelende wind, net als in het Bijbelverhaal dat we lezen.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    }
+   ],
+   "winter": [
+    {
+     "tekst": "Sneeuw bedekt de straten. Een witte kerst komt eraan.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    },
+    {
+     "tekst": "Met een warme trui en knusse trakteerder word het winterweer draaglijk.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    },
+    {
+     "tekst": "Buiten is het winterkoud, binnen zoet het aroma van een gloeiende haard.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    }
+   ],
+   "hitte": [
+    {
+     "tekst": "Dit zonnige weer roept uit naar een ijsje of een koel drankje.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    },
+    {
+     "tekst": "Nog een hitte dag. Geniet van de warmte, maar koel ook af.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    },
+    {
+     "tekst": "Deze hittegolf zet de draai op. Logeer maar eens in de schaduw.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    },
+    {
+     "tekst": "Bloedhitte zorgt voor zweet, maar ook voor mooie herinneringen.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    }
+   ],
+   "regen": [
+    {
+     "tekst": "Grijze regendruppels op het raam. Een rustig moment om te bidden.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    },
+    {
+     "tekst": "Een regenachtige dag brengt donkere wolken, maar een helder gevoel van innerlijke rust.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    },
+    {
+     "tekst": "Buiten regent het, binnen zoekt men rust in de Bijbel.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    },
+    {
+     "tekst": "Gekleurde regendruppels op het asfalt bieden een warme rust in het kussen van de regen.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    }
+   ],
+   "sintmaarten": [
+    {
+     "tekst": "Sint-Maarten: lampionnen zweven in de nacht.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    },
+    {
+     "tekst": "Snoepjes in handen, liefde in het hart vandaag.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    },
+    {
+     "tekst": "Vanavond wordt de straat gevuld met lichtjes en liefde.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    },
+    {
+     "tekst": "Sint-Maarten: klein wonderschone momenten door de straat.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    }
+   ],
+   "sinterklaas": [
+    {
+     "tekst": "Sinterklaas is er weer. Heel de straat klinkt vol muziek.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    },
+    {
+     "tekst": "Sinterklaas brengt cadeaus. Beter kan er niet aan.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    },
+    {
+     "tekst": "Sinterklas in het land. Niemand hoeft het alleen af te wachten.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    },
+    {
+     "tekst": "Sinterklaas is er. Nu is het tijd voor leuke verhalen.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    }
+   ],
+   "sport": [
+    {
+     "tekst": "De rugbymarstraffen zijn opgeheven. Jij moedigt ook welke rug aan?",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    },
+    {
+     "tekst": "Bij de basketbalwedstrijd: zoete overwinning. Wat is jouw zoete overwinning vandaag?",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    },
+    {
+     "tekst": "Golfballen vliegen via de fairway. Hoe vliegt jouw leven vandaag?",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    },
+    {
+     "tekst": "Zoendraven vandaag voor de schansspringers. Jij zoen je missies vandaag hoe dan?",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    }
+   ],
+   "drukte": [
+    {
+     "tekst": "Verstopt zich in de rij, vinden rust in het gedrang.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    },
+    {
+     "tekst": "Vertragingen en files vandaag. Een moment om geduld te oefenen.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    },
+    {
+     "tekst": "De wegweg is vol, maar binnen is het rustig. Oefen stilte.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    },
+    {
+     "tekst": "Stadions vol, straten vol. Luchtige rust in het midden.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    }
+   ],
+   "examens": [
+    {
+     "tekst": "Papiertjes in de lucht voor het grote examen?",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    },
+    {
+     "tekst": "Niet je hele toekomst, maar één moment.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    },
+    {
+     "tekst": "De truc zit in rust vinden tijdens het examen.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    },
+    {
+     "tekst": "Toetsen zijn er om te leren, niet om te vrezen.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    }
+   ],
+   "klok": [
+    {
+     "tekst": "De klok wijst een nieuw uur aan. Hoe ga jij deze tijd vullen?",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    },
+    {
+     "tekst": "Een uur verzet: nieuwe uren, nieuwe mogelijkheden.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    },
+    {
+     "tekst": "De klok wijst een nieuwe kant op. Wat is jouw nieuwe richting?",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    },
+    {
+     "tekst": "De grote klok tikt opnieuw. Een nieuwe tijd, een nieuw begin.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    }
+   ],
+   "koopjes": [
+    {
+     "tekst": "Koopjesweek: vrije hand in de winkel is een droom.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    },
+    {
+     "tekst": "Overal kortingen: de perfecte dag om iets leuks voor jezelf te kiezen.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    },
+    {
+     "tekst": "Sale-seizoen is aan de gang: wat haal je met je spaargeld?",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    },
+    {
+     "tekst": "Tussen al die aanbiedingen: welk voordeel is echt bijzonder?",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    }
+   ],
+   "maandag": [
+    {
+     "tekst": "Maandagmorgen kan zwaar zijn, maar er is altijd hoop aan de horizon.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    },
+    {
+     "tekst": "Begin van de week, tijd om nieuwe krachten op te doen.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    },
+    {
+     "tekst": "Een nieuwe week begint, laat de zorgen achter en stappen.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    },
+    {
+     "tekst": "Zware tijden? Zelfs op een moeilijke maandag kan er iets opbloeien.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    }
+   ]
+  },
+  "bruggen": {
+   "winter": [
+    {
+     "tekst": "Winter biedt gelegenheid tot knusse momenten.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    }
+   ],
+   "hitte": [
+    {
+     "tekst": "Gelijk aan de hitte, zoetigdaden verkoelen.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    }
+   ],
+   "sintmaarten": [
+    {
+     "tekst": "Delen van liefde, net als Sint-Maarten",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    },
+    {
+     "tekst": "Simpel licht maakt de nacht kleurrijker.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    }
+   ],
+   "sinterklaas": [
+    {
+     "tekst": "In deze tijd, diep genieten van muziek.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    },
+    {
+     "tekst": "Sinterklaas brengt licht en gezelligheid.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    }
+   ],
+   "sport": [
+    {
+     "tekst": "Natuurlijk ritme in sport zoals in elke daad",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    }
+   ],
+   "examens": [
+    {
+     "tekst": "Een examen is geen eindstreep, maar een stap.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    }
+   ],
+   "klok": [
+    {
+     "tekst": "Nieuwe tijd, nieuwe dromen.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    },
+    {
+     "tekst": "De klok helpt ons de tijd opnieuw te vullen.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    }
+   ],
+   "koopjes": [
+    {
+     "tekst": "Kans om jouw favorieten te bezitten.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    }
+   ],
+   "maandag": [
+    {
+     "tekst": "Op een zware dag: blijf focussen op de hoop.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-22T14:02+00:00"
+    }
+   ]
+  }
+ }
+}
