@@ -102,6 +102,206 @@
    },
    "model": "Qwen2.5-14B-Instruct-4bit",
    "t": "2026-11-22T14:02+00:00"
+  },
+  "Psalms-23-1-1": {
+   "e": {
+    "kw": "Herder",
+    "uitleg": "God is als een Herder die voor zijn schaap zorgt.",
+    "betekenis": "In deze zin wordt duidelijk dat God als een Herder werkt om ons te leiden en te beschermen. Hij zorgt ervoor dat we goed worden verzorgd en niets ons ontbreekt.",
+    "toepassing": "Vandaag kun je je herinneren dat God op zijn hoede is voor jouw behoeften.",
+    "verhaal": "Wist je dat God net zo op zijn hoede is voor jou als een herder voor zijn schaap?",
+    "zin": "God zorgt voor jou.",
+    "vraag": "Waar zie je God's zorg vandaag?",
+    "hooks": {
+     "vraag": "Waar zie jij Gods zorg?",
+     "herkenning": "Voor iedereen die zich vandaag verwend voelt.",
+     "uitdaging": "Laat vandaag zien hoeveel je Gods zorg waardeert.",
+     "rustig": "God is mijn herder."
+    },
+    "tags": [
+     "#troost",
+     "#bijbeltekst",
+     "#psalmen"
+    ],
+    "ref": "Psalm 23:1"
+   },
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-22T14:27+00:00"
+  },
+  "John-14-27-27": {
+   "e": {
+    "kw": "vrede",
+    "uitleg": "Jezus belooft zijn volgelingen zijn eigen vrede, die anders dan de wereldse vrede is.",
+    "betekenis": "Deze vrede is een diepere, innerlijke rust die onafhankelijk is van de omstandigheden. Het is een geschenk dat alleen Jezus kan geven.",
+    "toepassing": "Vandaag zoek je diep in jezelf naar dat innerlijke rustpunt dat Jezus belooft.",
+    "verhaal": "Jezus belooft zijn volgelingen iets unieks.",
+    "zin": "Jezus geeft zijn volgelingen zijn eigen vrede.",
+    "vraag": "Wat is jouw zoektocht naar innerlijke rust?",
+    "hooks": {
+     "vraag": "Wat is de vrede die Jezus belooft?",
+     "herkenning": "Voor iedereen die op zoek is naar innerlijke rust.",
+     "uitdaging": "Zoek vandaag diep in jezelf naar die innerlijke rust.",
+     "rustig": "De vrede die Jezus belooft."
+    },
+    "tags": [
+     "#bijbeltekst",
+     "#geloof",
+     "#bemoediging"
+    ],
+    "ref": "Johannes 14:27"
+   },
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-22T14:27+00:00"
+  },
+  "Proverbs-6-6-6": {
+   "e": {
+    "kw": "mier",
+    "uitleg": "De mier wordt aangezet als voorbeeld voor hard werken.",
+    "betekenis": "Deze tekst wijst erop dat we moeten zien hoe anderen hard werken en daar wijzer van kunnen worden. De mier is een voorbeeld van iemand die hard werkt, zelfs als het moeilijk is.",
+    "toepassing": "Vandaag neem je een halfuurtje om een taak af te ronden die je al een tijd uitstelde.",
+    "verhaal": "De mier is hard aan het werk, terwijl de luiaard nog in bed ligt.",
+    "zin": "De mier weet hoe je hard moet werken.",
+    "vraag": "Wat is er een voorbeeld van hard werken in jouw leven?",
+    "hooks": {
+     "vraag": "Waar ben jij vandaag een mier in plaats van een luiaard?",
+     "herkenning": "Voor iedereen die zichzelf een luiaard vindt.",
+     "uitdaging": "Begin vandaag een taak die je al een tijd uitstelde.",
+     "rustig": "De mier is al aan het werk."
+    },
+    "tags": [
+     "#mier",
+     "#spreuken",
+     "#bijbeltekst"
+    ],
+    "ref": "Spreuken 6:6"
+   },
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-22T14:27+00:00"
+  },
+  "Colossians-3-15-15": {
+   "e": {
+    "kw": "vrede",
+    "uitleg": "De vrede van God moet in je hart heersen en daar dankbaar voor zijn.",
+    "betekenis": "Paulus benadrukt dat de vrede die God in je hart brengt, een geschenk is voor het hele lichaam van gelovigen. Het is een gevoel dat je dankbaar voor moet zijn.",
+    "toepassing": "Vandaag neem je een moment om God te bedanken voor de innerlijke rust die Hij in je leven brengt.",
+    "verhaal": "De vrede die God in je hart brengt, is een geschenk voor het hele geloofsverband.",
+    "zin": "Dankbaar zijn voor Gods innerlijke vrede.",
+    "vraag": "Waar ben jij dankbaar voor in je leven?",
+    "hooks": {
+     "vraag": "Ben jij vandaag dankbaar voor Gods vrede?",
+     "herkenning": "Voor iedereen die zoekt naar innerlijke rust.",
+     "uitdaging": "Bedank God vandaag voor Zijn vrede.",
+     "rustig": "De vrede die Gods geschenk is."
+    },
+    "tags": [
+     "#dankbaarheid",
+     "#kolossenzen",
+     "#bijbeltekst"
+    ],
+    "ref": "Kolossenzen 3:15"
+   },
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-22T14:27+00:00"
+  },
+  "Romans-8-18-18": {
+   "e": {
+    "kw": "waarderen",
+    "uitleg": "Het lijden is niet te waarderen tegen de toekomstige heerlijkheid.",
+    "betekenis": "Paulus legt uit dat het lijden dat we nu ervaren, niet te vergelijken is met de toekomstige heerlijkheid. De beloofde heerlijkheid is veel groter.",
+    "toepassing": "Schrijf vandaag een gedachte omtrent de uitdagingen die je tegenkomt en hoe ze in het grotere beeld ervan zouden kunnen staan.",
+    "verhaal": "Paulus spreekt over de onvergelijkbare heerlijkheid die ons te wachten staat.",
+    "zin": "De toekomstige heerlijkheid is onvoorstelbaar.",
+    "vraag": "Wat is je grootste uitdaging vandaag? Hoe zou die eruit zien in een groter beeld?",
+    "hooks": {
+     "vraag": "Hoe zou je uitdagingen eruit zien in een groter beeld?",
+     "herkenning": "Voor iedereen die vandaag uitdagingen ervaart.",
+     "uitdaging": "Schrijf een gedachte over je uitdagingen.",
+     "rustig": "De toekomstige heerlijkheid is onvoorstelbaar."
+    },
+    "tags": [
+     "#troost",
+     "#bijbeltekst",
+     "#geloof"
+    ],
+    "ref": "Romeinen 8:18"
+   },
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-22T14:27+00:00"
+  },
+  "Micah-7-8-8": {
+   "e": {
+    "kw": "opstaan",
+    "uitleg": "Niet vreugde uiten over iemands val, want diegene zal weer opstaan.",
+    "betekenis": "Micha herinnert de mensen eraan dat zelfs in het diepste dal kan God je helpen op te staan. Zelfs als alles lijkt te mislukken, blijft God aan je zijde.",
+    "toepassing": "Vandaag, als je tegen een tegenslag aanloopt, herinner je eraan dat je niet alleen bent.",
+    "verhaal": "Er zijn momenten dat je denkt dat het nooit beter kan worden.",
+    "zin": "God helpt je op te staan, zelfs in het donker.",
+    "vraag": "Waar ben je vandaag weer opgestaan van?",
+    "hooks": {
+     "vraag": "Waar voel je je vandaag 'gevallen'?",
+     "herkenning": "Voor iedereen die vandaag weer op moet staan.",
+     "uitdaging": "Herinner je eraan dat God bij je is.",
+     "rustig": "God helpt je op te staan."
+    },
+    "tags": [
+     "#moed",
+     "#bijbeltekst",
+     "#geloof"
+    ],
+    "ref": "Micha 7:8"
+   },
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-22T14:27+00:00"
+  },
+  "Ephesians-3-17-18": {
+   "e": {
+    "kw": "begrijpen",
+    "uitleg": "We proberen te begrijpen hoe groot de liefde van Christus is.",
+    "betekenis": "Paulus wil dat we de liefde van Christus kunnen begrijpen. Als we dat doen, begrijpen we dat Gods liefde breed, lang, diep en hoog is. Zijn liefde is onmetelijk.",
+    "toepassing": "Neem een minuut om stil te staan bij hoe groot Gods liefde is. Probeer het te voelen.",
+    "verhaal": "Gods liefde is zo groot dat we het moeilijk kunnen begrijpen.",
+    "zin": "Groots als Gods liefde is, kan het moeilijk zijn te begrijpen.",
+    "vraag": "Waar ben je vandaag vanaf in Gods liefde?",
+    "hooks": {
+     "vraag": "Kan je de grootte van Gods liefde begrijpen?",
+     "herkenning": "Voor iedereen die zich afvraagt hoe diep Gods liefde gaat.",
+     "uitdaging": "Zeg vandaag één ding dat je over Gods liefde leert.",
+     "rustig": "Groots als Gods liefde is."
+    },
+    "tags": [
+     "#liefde",
+     "#bijbeltekst",
+     "#geloof"
+    ],
+    "ref": "Efeze 3:17-18"
+   },
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-22T14:27+00:00"
+  },
+  "Ephesians-5-2-2": {
+   "e": {
+    "kw": "liefde",
+    "uitleg": "Christus heeft zichzelf voor ons geofferd, net zoals iemand die zijn leven voor een ander neemt.",
+    "betekenis": "Dit vers herinnert ons aan Christus’ groot offer om ons te redden. Zijn liefde is de grootste liefde die er bestaat, die zichzelf voor de ander overgave.",
+    "toepassing": "Bedenk één persoon die je kunt helpen of voor wie je kunt opkomen, net zoals Jezus voor ons deed.",
+    "verhaal": "Ken je het verhaal van Jezus die zichzelf voor ons gaf?",
+    "zin": "Christus’ liefde voor ons is de grootste liefde.",
+    "vraag": "Wie in je leven kun je vandaag helpen, net als Jezus?",
+    "hooks": {
+     "vraag": "Wie kun jij helpen?",
+     "herkenning": "Voor iedereen die weet wat het is om lief gehad te worden.",
+     "uitdaging": "Zoek vandaag iemand om te helpen.",
+     "rustig": "Zijn liefde is onvoorstelbaar."
+    },
+    "tags": [
+     "#liefde",
+     "#jezus",
+     "#bijbeltekst"
+    ],
+    "ref": "Efeze 5:2"
+   },
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-22T14:27+00:00"
   }
  },
  "afgekeurd": [],
