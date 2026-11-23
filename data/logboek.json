@@ -2,11 +2,6 @@
  {
   "t": "2026-11-11T14:35:31",
   "soort": "info",
-  "tekst": "Materiaalrepo niet gekloond in deze run (add_repo ontbreekt); geen gevolgen, posts waren al gemaakt"
- },
- {
-  "t": "2026-11-11T14:35:31",
-  "soort": "info",
   "tekst": "Reserveverzen gekozen en geschreven voor 12 en 13 november; hook van 13-11 12:15 aangepast aan het tijdstip"
  },
  {
@@ -2546,5 +2541,10 @@
   "t": "2026-11-23T22:04:36",
   "soort": "info",
   "tekst": "2026-11-23-2 online op instagram: Psalm 30:6"
+ },
+ {
+  "t": "2026-11-23T23:15:45",
+  "soort": "info",
+  "tekst": "Eerste-uurcijfers van 4 posts vastgelegd"
  }
 ]
