@@ -343,6 +343,16 @@
      "tekst": "De regen spoelt de lucht netjes. Een rustig binnenblijven?",
      "model": "Qwen2.5-14B-Instruct-4bit",
      "t": "2026-11-23T02:47+00:00"
+    },
+    {
+     "tekst": "Buiten de regen valt. Een perfect excuus om binnen te blijven en te lezen.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-23T09:27+00:00"
+    },
+    {
+     "tekst": "Bij regen weer: de natuur die zich verfrist en verkwikt.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-23T09:27+00:00"
     }
    ],
    "sintmaarten": [
@@ -422,6 +432,11 @@
      "tekst": "Sinterklaas aan zee, een uniek Nederlands feestje.",
      "model": "Qwen2.5-14B-Instruct-4bit",
      "t": "2026-11-23T02:47+00:00"
+    },
+    {
+     "tekst": "De Sint is er. Welke oude herinnering brengt jou het meest terug?",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-23T09:27+00:00"
     }
    ],
    "sport": [
@@ -454,6 +469,21 @@
      "tekst": "Slaapjes maken na een harde wedstrijd. Zelfs de beste spelen vallen uit.",
      "model": "Qwen2.5-14B-Instruct-4bit",
      "t": "2026-11-23T02:47+00:00"
+    },
+    {
+     "tekst": "De sportvelden gloeien van energie. Misschien gebeurt vandaag iets onvergetelijks.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-23T09:27+00:00"
+    },
+    {
+     "tekst": "Gelach klinkt over het veld. Sport brengt ons samen.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-23T09:27+00:00"
+    },
+    {
+     "tekst": "Scoren is geweldig, maar wat is echt winst voor je leven?",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-23T09:27+00:00"
     }
    ],
    "drukte": [
@@ -491,6 +521,11 @@
      "tekst": "Wachten en wachten, maar rust is voor iedereen.",
      "model": "Qwen2.5-14B-Instruct-4bit",
      "t": "2026-11-23T02:47+00:00"
+    },
+    {
+     "tekst": "Drukke straten en lang wachten. Misschien ontdek je iets nieuws terwijl je wacht.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-23T09:27+00:00"
     }
    ],
    "examens": [
@@ -649,6 +684,21 @@
      "tekst": "Een nieuwe maandag, een nieuwe kans om te beginnen. Geniet ervan!",
      "model": "Qwen2.5-14B-Instruct-4bit",
      "t": "2026-11-22T20:09+00:00"
+    },
+    {
+     "tekst": "Eerste werkdag van de nieuwe week: een nieuwe kans om te beginnen.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-23T09:27+00:00"
+    },
+    {
+     "tekst": "Een nieuwe week opent zich, kijk uit naar de mooie momentjes.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-23T09:27+00:00"
+    },
+    {
+     "tekst": "Na een weekend vol rust: de energie om de nieuwe week aan te kunnen.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-23T09:27+00:00"
     }
    ]
   },
