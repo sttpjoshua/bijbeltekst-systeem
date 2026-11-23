@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-23T14:31",
+ "gegenereerd": "2026-11-23T14:34",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -838,7 +838,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Psalm 118:14",
    "caption": "Goedemorgen. Dit is voor jou, vandaag.\n\n\"Wat buigt gij u neder, o mijn ziel! en zijt onrustig in mij? Hoop op God, want ik zal Hem nog loven voor de verlossingen Zijns aangezichts.\"\nPsalm 42:6\n\nJe mag somber zijn en toch hopen.",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-25-5-1.jpg",
@@ -930,7 +930,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Romeinen 5:5",
    "caption": "Zoals een moeder.\n\n\"Als een, dien zijn moeder troost, alzo zal Ik u troosten; ja, gij zult te Jeruzalem getroost worden.\"\nJesaja 66:13\n\nGod troost je teder en dichtbij.\n\nWie troostte jou vroeger als je verdriet had?",
    "uitleg": "Zoals een moeder haar kind troost, zo zal Ik jullie troosten.",
    "media": "docs/media/2026-11/2026-11-25-4.mp4",
@@ -1019,7 +1019,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Mattheüs 6:33",
    "caption": "Voor iedereen die zoekt naar wie hij echt is.\n\n\"Ik ben met Christus gekruist; en ik leef, doch niet meer ik, maar Christus leeft in mij; en hetgeen ik nu in het vlees leef, dat leef ik door het geloof des Zoons van God, Die mij liefgehad heeft, en Zichzelven voor mij overgegeven heeft.\"\nGalaten 2:20\n\nJe leeft uit Gods liefde, niet uit eigen kracht.",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-25-3-1.jpg",
@@ -1110,7 +1110,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Deuteronomium 31:8",
    "caption": "\"Zie, Ik heb u in de beide handpalmen gegraveerd; uw muren zijn steeds voor Mij.\"\nJesaja 49:16\n\nGod kan je niet vergeten.\n\nHoe voelt het om nooit vergeten te worden?",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-25-2.mp4",
@@ -1199,7 +1199,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Psalm 37:3",
    "caption": "\"Zo dan, gij zijt niet meer een dienstknecht, maar een zoon; en indien gij een zoon zijt, zo zijt gij ook een erfgenaam van God door Christus.\"\nGalaten 4:7\n\nJe bent Gods kind en erfgenaam.\n\nHoe zou je leven als je echt wist dat je Gods kind bent?",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-25-1.mp4",
@@ -16190,16 +16190,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-21T12:16:33",
-   "soort": "info",
-   "tekst": "2026-11-21-5 ook als story geplaatst"
-  },
-  {
-   "t": "2026-11-21T12:16:33",
-   "soort": "info",
-   "tekst": "2026-11-21-5 online op instagram: Hebreeën 6:19"
-  },
-  {
    "t": "2026-11-21T12:16:41",
    "soort": "info",
    "tekst": "2026-11-21-1 online op facebook: Psalm 100:4"
@@ -16494,6 +16484,16 @@
    "t": "2026-11-23T13:30:57",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-23T14:33:26",
+   "soort": "info",
+   "tekst": "Materiaal-repo niet gekloond (add_repo ontbreekt in deze sessie); GitHub Actions vult muziek aan"
+  },
+  {
+   "t": "2026-11-23T14:34:15",
+   "soort": "info",
+   "tekst": "Dagelijkse run (zelfstandig): 10 posts voor 24 en 25 nov gecontroleerd, reserveteksten voor 25 nov ingevuld"
   }
  ],
  "recente_fouten": [
@@ -16694,7 +16694,7 @@
    "detail": "18 onderdelen gemaakt en gecontroleerd"
   },
   "dagelijks": {
-   "ok": "2026-11-22T14:35",
+   "ok": "2026-11-23T14:34",
    "laatst_ok": true,
    "detail": "10 posts voor MORGEN en OVERMORGEN klaargezet"
   },
@@ -21121,7 +21121,7 @@
   ],
   "zonder_tekst": 301,
   "mac": {
-   "t": "2026-11-23T09:27+00:00",
+   "t": "2026-11-23T13:16+00:00",
    "model": "Qwen2.5-14B-Instruct-4bit",
    "versie": "4",
    "laatste_ronde": {
