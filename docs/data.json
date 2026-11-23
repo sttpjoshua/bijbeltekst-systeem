@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-23T05:01",
+ "gegenereerd": "2026-11-23T05:15",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1662,8 +1662,26 @@
    "links": {
     "instagram": "https://www.instagram.com/p/DgEXfYQjDaS/"
    },
-   "totaal": {},
-   "per_platform": {},
+   "totaal": {
+    "views": 0,
+    "reach": 0,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0
+   },
+   "per_platform": {
+    "instagram": {
+     "views": 0,
+     "reach": 0,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": 0,
+     "t": null
+    }
+   },
    "score": {},
    "keuzebron": {
     "huisstijl": "ochtend",
@@ -1690,7 +1708,19 @@
     "tijdslot": "reeks",
     "video_uitleg": "n.v.t."
    },
-   "momenten": {},
+   "momenten": {
+    "instagram": {
+     "1u": {
+      "views": 0,
+      "reach": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0
+     }
+    }
+   },
    "pub": {
     "instagram": "2026-11-23T04:01+01:00"
    },
@@ -15650,11 +15680,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-20T23:15:48",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
    "t": "2026-11-21T04:02:20",
    "soort": "info",
    "tekst": "2026-11-21-4 ook als story geplaatst"
@@ -15954,6 +15979,11 @@
    "t": "2026-11-23T04:01:56",
    "soort": "info",
    "tekst": "2026-11-23-1 online op instagram: Jesaja 40:29"
+  },
+  {
+   "t": "2026-11-23T05:15:49",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
   }
  ],
  "recente_fouten": [
