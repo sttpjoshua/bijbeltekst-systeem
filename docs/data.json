@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-23T14:34",
+ "gegenereerd": "2026-11-23T14:35",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -16190,26 +16190,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-21T12:16:41",
-   "soort": "info",
-   "tekst": "2026-11-21-1 online op facebook: Psalm 100:4"
-  },
-  {
-   "t": "2026-11-21T13:15:41",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
-  },
-  {
-   "t": "2026-11-21T13:30:55",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
-   "t": "2026-11-21T13:36:19",
-   "soort": "info",
-   "tekst": "Statistieken opgehaald voor 17 posts"
-  },
-  {
    "t": "2026-11-21T13:37:28",
    "soort": "info",
    "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
@@ -16494,6 +16474,26 @@
    "t": "2026-11-23T14:34:15",
    "soort": "info",
    "tekst": "Dagelijkse run (zelfstandig): 10 posts voor 24 en 25 nov gecontroleerd, reserveteksten voor 25 nov ingevuld"
+  },
+  {
+   "t": "2026-11-23T14:34:57",
+   "soort": "info",
+   "tekst": "Verbinding met Instagram werkt (@bibleverse_nl)"
+  },
+  {
+   "t": "2026-11-23T14:34:58",
+   "soort": "info",
+   "tekst": "Token heeft alle rechten, ook voor statistieken"
+  },
+  {
+   "t": "2026-11-23T14:34:59",
+   "soort": "info",
+   "tekst": "Verbinding met Facebook-pagina werkt (Bibleversenl)"
+  },
+  {
+   "t": "2026-11-23T14:35:01",
+   "soort": "info",
+   "tekst": "Statistieken lezen werkt"
   }
  ],
  "recente_fouten": [
@@ -16650,20 +16650,20 @@
    "detail": "1 Korinthe 15:58 geplaatst"
   },
   "instagram_lezen": {
-   "ok": "2026-11-22T13:35",
+   "ok": "2026-11-23T14:35",
    "laatst_ok": true,
    "detail": "7 volgers"
   },
   "sleutel_instagram": {
    "verloopt": "nooit",
    "geldig": true,
-   "ok": "2026-11-22T13:35",
+   "ok": "2026-11-23T14:35",
    "laatst_ok": true
   },
   "sleutel_facebook": {
    "verloopt": "nooit",
    "geldig": true,
-   "ok": "2026-11-22T13:35",
+   "ok": "2026-11-23T14:35",
    "laatst_ok": true
   },
   "materiaal_actions": {
@@ -16689,7 +16689,7 @@
    "detail": "22 nieuwe metingen"
   },
   "zelftest": {
-   "ok": "2026-11-22T15:26",
+   "ok": "2026-11-23T14:35",
    "laatst_ok": true,
    "detail": "18 onderdelen gemaakt en gecontroleerd"
   },
@@ -16825,6 +16825,12 @@
    "datum": "2026-11-22",
    "instagram": 7,
    "ig_posts": 74,
+   "facebook": 0
+  },
+  {
+   "datum": "2026-11-23",
+   "instagram": 7,
+   "ig_posts": 79,
    "facebook": 0
   }
  ],
@@ -20298,9 +20304,7 @@
      "ref": "1 Johannes 4:18"
     },
     "t": "2026-11-22T14:02+00:00",
-    "fouten": [
-     "hashtag #vrees bestaat niet of is te vaag"
-    ]
+    "fouten": []
    },
    {
     "id": "II_Timothy-1-7-7",
@@ -20329,9 +20333,7 @@
      "ref": "2 Timotheüs 1:7"
     },
     "t": "2026-11-22T14:02+00:00",
-    "fouten": [
-     "hashtag #vrees bestaat niet of is te vaag"
-    ]
+    "fouten": []
    },
    {
     "id": "Isaiah-43-19-19",
@@ -20472,9 +20474,7 @@
      "ref": "Spreuken 15:1"
     },
     "t": "2026-11-22T14:02+00:00",
-    "fouten": [
-     "hashtag #reactie bestaat niet of is te vaag"
-    ]
+    "fouten": []
    }
   ],
   "nieuws": [

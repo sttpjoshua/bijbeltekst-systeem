@@ -1,31 +1,5 @@
 [
  {
-  "t": "2026-11-11T12:01:02",
-  "soort": "fout",
-  "tekst": "Politiek nieuws (NOS): \"Raad van State: minister van Asiel moet veiligheid Syrië opnieuw beoordelen\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
-  "code": "nieuws_voorstel",
-  "post": "n111112010",
-  "opgelost": true
- },
- {
-  "t": "2026-11-11T12:01:02",
-  "soort": "fout",
-  "tekst": "Zwaar nieuws (NOS): \"Vijf jaar The Kyiv Independent: hoe bedrijf je journalistiek in een land in oorlog?\". Wil je er een troostende post over? Die gaat dan pas 6 uur na het nieuws online.",
-  "code": "nieuws_voorstel",
-  "post": "n111112011",
-  "opgelost": true
- },
- {
-  "t": "2026-11-11T12:16:10",
-  "soort": "info",
-  "tekst": "2026-11-11-n1215 ook als story geplaatst"
- },
- {
-  "t": "2026-11-11T12:16:10",
-  "soort": "info",
-  "tekst": "2026-11-11-n1215 online op instagram: Jeremia 17:7"
- },
- {
   "t": "2026-11-11T12:16:19",
   "soort": "info",
   "tekst": "2026-11-11-n1215 online op facebook: Jeremia 17:7"
@@ -2552,5 +2526,25 @@
   "t": "2026-11-23T14:34:15",
   "soort": "info",
   "tekst": "Dagelijkse run (zelfstandig): 10 posts voor 24 en 25 nov gecontroleerd, reserveteksten voor 25 nov ingevuld"
+ },
+ {
+  "t": "2026-11-23T14:34:57",
+  "soort": "info",
+  "tekst": "Verbinding met Instagram werkt (@bibleverse_nl)"
+ },
+ {
+  "t": "2026-11-23T14:34:58",
+  "soort": "info",
+  "tekst": "Token heeft alle rechten, ook voor statistieken"
+ },
+ {
+  "t": "2026-11-23T14:34:59",
+  "soort": "info",
+  "tekst": "Verbinding met Facebook-pagina werkt (Bibleversenl)"
+ },
+ {
+  "t": "2026-11-23T14:35:01",
+  "soort": "info",
+  "tekst": "Statistieken lezen werkt"
  }
 ]
