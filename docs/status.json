@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T20:45:53",
+ "updated": "2026-11-23T20:49:26",
  "agents": {
   "verskiezer": {
    "t": "2026-11-23T09:02:53",
@@ -123,8 +123,8 @@
   },
   {
    "naam": "Avondcontrole",
-   "kleur": "oranje",
-   "tekst": "te lang stil"
+   "kleur": "groen",
+   "tekst": "ok"
   },
   {
    "naam": "Statistieken",
