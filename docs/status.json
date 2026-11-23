@@ -1,19 +1,19 @@
 {
- "updated": "2026-11-23T09:01:29",
+ "updated": "2026-11-23T09:03:40",
  "agents": {
   "verskiezer": {
-   "t": "2026-11-22T09:02:46",
-   "task": "Koos Jesaja 43:4, 2 Korinthe 12:9, 2 Timotheüs 4:7, Psalm 31:15-16, Psalm 91:1-2",
+   "t": "2026-11-23T09:02:53",
+   "task": "Koos Galaten 4:7, Jesaja 49:16, Galaten 2:20, Jesaja 66:13, Hebreeën 10:23",
    "state": "done"
   },
   "designer": {
-   "t": "2026-11-22T09:03:20",
-   "task": "Ontwierp Psalm 91:1-2 in stijl zand",
+   "t": "2026-11-23T09:03:39",
+   "task": "Ontwierp Psalm 42:6 in stijl zonsopgang",
    "state": "done"
   },
   "video": {
-   "t": "2026-11-22T09:03:19",
-   "task": "Monteerde video Psalm 31:15-16 met muziek",
+   "t": "2026-11-23T09:03:38",
+   "task": "Monteerde video Jesaja 66:13 met muziek",
    "state": "done"
   },
   "dispatcher": {
@@ -57,6 +57,10 @@
  ],
  "log": [
   {
+   "t": "09:03",
+   "msg": "Zelfstandig 5 posts klaargezet voor 2026-11-25 (teksten uit de tekstbank)."
+  },
+  {
    "t": "07:01",
    "msg": "Politiek nieuws (NOS): \"Ook pand in Winschoten dicht na neonazistische kooigevechten in Finsterwolde\". Neutral"
   },
@@ -99,10 +103,6 @@
   {
    "t": "20:32",
    "msg": "2026-11-22-2 online op instagram: Psalm 18:3"
-  },
-  {
-   "t": "20:32",
-   "msg": "2026-11-22-2 ook als story geplaatst"
   }
  ],
  "lampen": [

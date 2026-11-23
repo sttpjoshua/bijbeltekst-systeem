@@ -1,17 +1,17 @@
 {
  "verskiezer": {
-  "t": "2026-11-22T09:02:46",
-  "task": "Koos Jesaja 43:4, 2 Korinthe 12:9, 2 Timotheüs 4:7, Psalm 31:15-16, Psalm 91:1-2",
+  "t": "2026-11-23T09:02:53",
+  "task": "Koos Galaten 4:7, Jesaja 49:16, Galaten 2:20, Jesaja 66:13, Hebreeën 10:23",
   "state": "done"
  },
  "designer": {
-  "t": "2026-11-22T09:03:20",
-  "task": "Ontwierp Psalm 91:1-2 in stijl zand",
+  "t": "2026-11-23T09:03:39",
+  "task": "Ontwierp Psalm 42:6 in stijl zonsopgang",
   "state": "done"
  },
  "video": {
-  "t": "2026-11-22T09:03:19",
-  "task": "Monteerde video Psalm 31:15-16 met muziek",
+  "t": "2026-11-23T09:03:38",
+  "task": "Monteerde video Jesaja 66:13 met muziek",
   "state": "done"
  },
  "dispatcher": {
@@ -20,7 +20,7 @@
   "state": "done"
  },
  "controller": {
-  "t": "2026-11-22T09:03:20",
+  "t": "2026-11-23T09:03:39",
   "task": "Posts klaargezet uit de tekstbank",
   "state": "done"
  },

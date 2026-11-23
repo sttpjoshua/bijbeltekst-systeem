@@ -1,10 +1,5 @@
 [
  {
-  "t": "2026-11-11T07:31:31",
-  "soort": "info",
-  "tekst": "2026-11-11-n0730 online op instagram: Jesaja 32:17"
- },
- {
   "t": "2026-11-11T07:31:40",
   "soort": "info",
   "tekst": "2026-11-11-n0730 online op facebook: Jesaja 32:17"
@@ -2554,5 +2549,10 @@
   "tekst": "Politiek nieuws (NOS): \"Ook pand in Winschoten dicht na neonazistische kooigevechten in Finsterwolde\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
   "code": "nieuws_voorstel",
   "post": "n112307010"
+ },
+ {
+  "t": "2026-11-23T09:03:39",
+  "soort": "info",
+  "tekst": "Zelfstandig 5 posts klaargezet voor 2026-11-25 (teksten uit de tekstbank)."
  }
 ]
