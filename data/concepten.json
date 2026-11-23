@@ -437,6 +437,26 @@
      "tekst": "De Sint is er. Welke oude herinnering brengt jou het meest terug?",
      "model": "Qwen2.5-14B-Instruct-4bit",
      "t": "2026-11-23T09:27+00:00"
+    },
+    {
+     "tekst": "Sinterklaas is bijna hier. Een magische tijd voor kinderen en volwassenen.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-23T15:27+00:00"
+    },
+    {
+     "tekst": "Boekenmanden, krullen en rijmpjes. Sinterklaas brengt een wonderlijke sfeer.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-23T15:27+00:00"
+    },
+    {
+     "tekst": "Klerken en peren. Sinterklaas brengt een speciale tijd van vreugde.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-23T15:27+00:00"
+    },
+    {
+     "tekst": "Sinterklaas is er weer. Een tijd van verhalen, gedichten en magie.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-23T15:27+00:00"
     }
    ],
    "sport": [
