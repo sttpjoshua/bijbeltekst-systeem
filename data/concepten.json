@@ -217,6 +217,11 @@
      "tekst": "De storm fluit door de bomen. Lijkt het stil in jouw huis?",
      "model": "Qwen2.5-14B-Instruct-4bit",
      "t": "2026-11-22T20:09+00:00"
+    },
+    {
+     "tekst": "Buiten stormt het. Binnen lezen we een geruststellend vers.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-23T02:47+00:00"
     }
    ],
    "winter": [
@@ -249,6 +254,16 @@
      "tekst": "Deze koude wind benadrukt hoe fijn het is om binnen te zijn. Komt jou ook zo voor?",
      "model": "Qwen2.5-14B-Instruct-4bit",
      "t": "2026-11-22T20:09+00:00"
+    },
+    {
+     "tekst": "Sneeuwbedekte straten: een sprookjesachtig uitzicht vandaag.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-23T02:47+00:00"
+    },
+    {
+     "tekst": "Buiten koud, binnen warm. Juist nu ervaar je de waarde van een gezellig thuis.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-23T02:47+00:00"
     }
    ],
    "hitte": [
@@ -281,6 +296,16 @@
      "tekst": "Tussen hitte en schaduw: waar ruim je je het beste uit?",
      "model": "Qwen2.5-14B-Instruct-4bit",
      "t": "2026-11-22T20:09+00:00"
+    },
+    {
+     "tekst": "De zon schijnt fel. Ga maar een ijsje pakken.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-23T02:47+00:00"
+    },
+    {
+     "tekst": "De thermometer gaat omhoog. Rust even in de schaduw.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-23T02:47+00:00"
     }
    ],
    "regen": [
@@ -313,6 +338,11 @@
      "tekst": "Een regenachtige ochtend: de natuur drinkt in alle rust.",
      "model": "Qwen2.5-14B-Instruct-4bit",
      "t": "2026-11-22T20:09+00:00"
+    },
+    {
+     "tekst": "De regen spoelt de lucht netjes. Een rustig binnenblijven?",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-23T02:47+00:00"
     }
    ],
    "sintmaarten": [
@@ -350,6 +380,21 @@
      "tekst": "Sint-Maarten toont ons hoe we elkaar kunnen verwarmen.",
      "model": "Qwen2.5-14B-Instruct-4bit",
      "t": "2026-11-22T20:09+00:00"
+    },
+    {
+     "tekst": "Sint-Maarten, een nacht om lampionnen mee te lichten.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-23T02:47+00:00"
+    },
+    {
+     "tekst": "Sint-Maarten: de pret is er, maar ook de mooie verhalen.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-23T02:47+00:00"
+    },
+    {
+     "tekst": "Vanavond lopen glimlachende kinderen mee met lampionnen.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-23T02:47+00:00"
     }
    ],
    "sinterklaas": [
@@ -372,6 +417,11 @@
      "tekst": "Klusjes doen voor Sinterklaas. Een gave voor de hele familie.",
      "model": "Qwen2.5-14B-Instruct-4bit",
      "t": "2026-11-22T20:09+00:00"
+    },
+    {
+     "tekst": "Sinterklaas aan zee, een uniek Nederlands feestje.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-23T02:47+00:00"
     }
    ],
    "sport": [
@@ -399,6 +449,11 @@
      "tekst": "Een speler springt van vreugde. Jouw leven is vol redenen om te springen.",
      "model": "Qwen2.5-14B-Instruct-4bit",
      "t": "2026-11-22T20:09+00:00"
+    },
+    {
+     "tekst": "Slaapjes maken na een harde wedstrijd. Zelfs de beste spelen vallen uit.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-23T02:47+00:00"
     }
    ],
    "drukte": [
@@ -426,6 +481,16 @@
      "tekst": "Wachten op de bus? Dan zijn het deze woorden die bij je wachten passen.",
      "model": "Qwen2.5-14B-Instruct-4bit",
      "t": "2026-11-22T20:09+00:00"
+    },
+    {
+     "tekst": "File na file sinds vanmorgen. Nog een reden voor een diepe ademhaling.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-23T02:47+00:00"
+    },
+    {
+     "tekst": "Wachten en wachten, maar rust is voor iedereen.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-23T02:47+00:00"
     }
    ],
    "examens": [
@@ -453,6 +518,21 @@
      "tekst": "De bibliotheek is rustiger dan ooit, iedereen studeert in stilte.",
      "model": "Qwen2.5-14B-Instruct-4bit",
      "t": "2026-11-22T20:09+00:00"
+    },
+    {
+     "tekst": "De examens naderen en de lucht is gevuld met spanning en hoop.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-23T02:47+00:00"
+    },
+    {
+     "tekst": "De schooltorens klokken het einde van een leerjaar in, tijd om te toetsen.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-23T02:47+00:00"
+    },
+    {
+     "tekst": "De klokken van het schoolplein tikken rustig aan, terwijl leerlingen zich voorbereiden.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-23T02:47+00:00"
     }
    ],
    "klok": [
@@ -490,6 +570,11 @@
      "tekst": "De klok springt vooruit. Wat maakt jou zo blij vandaag?",
      "model": "Qwen2.5-14B-Instruct-4bit",
      "t": "2026-11-22T20:09+00:00"
+    },
+    {
+     "tekst": "De klok is verzet: wat ga jij vandaag uitvoeren?",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-23T02:47+00:00"
     }
    ],
    "koopjes": [
@@ -522,6 +607,16 @@
      "tekst": "Iedereen zoekt het beste deal. Is dit echt de beste?",
      "model": "Qwen2.5-14B-Instruct-4bit",
      "t": "2026-11-22T20:09+00:00"
+    },
+    {
+     "tekst": "Koopjesjacht is aan de gang. Wat hadden wij al weer op het oog?",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-23T02:47+00:00"
+    },
+    {
+     "tekst": "Overal zijn kortingen. Wat is jouw echte koopje?",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-23T02:47+00:00"
     }
    ],
    "maandag": [
@@ -580,6 +675,16 @@
      "tekst": "Te warm? Een ijsje opsnuiven helpt.",
      "model": "Qwen2.5-14B-Instruct-4bit",
      "t": "2026-11-22T20:09+00:00"
+    },
+    {
+     "tekst": "Warme dagen roepen naar koelte.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-23T02:47+00:00"
+    },
+    {
+     "tekst": "IJs is een fijn verzetje tegen de hitte.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-23T02:47+00:00"
     }
    ],
    "sintmaarten": [
@@ -616,6 +721,16 @@
      "tekst": "In het sportverhaal: waar we trots op zijn.",
      "model": "Qwen2.5-14B-Instruct-4bit",
      "t": "2026-11-22T20:09+00:00"
+    },
+    {
+     "tekst": "Na een wedstrijd: rust en herstel.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-23T02:47+00:00"
+    },
+    {
+     "tekst": "Vieren is een teamsport.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-23T02:47+00:00"
     }
    ],
    "examens": [
@@ -645,6 +760,11 @@
      "tekst": "Tijd voor verandering: de klok wijst het aan.",
      "model": "Qwen2.5-14B-Instruct-4bit",
      "t": "2026-11-22T20:09+00:00"
+    },
+    {
+     "tekst": "Klok verzet: dagjes korter of langer.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-23T02:47+00:00"
     }
    ],
    "koopjes": [
@@ -671,6 +791,16 @@
      "tekst": "Zelfs in de storm vindt men rust.",
      "model": "Qwen2.5-14B-Instruct-4bit",
      "t": "2026-11-22T20:09+00:00"
+    },
+    {
+     "tekst": "Versen bieden rust in stormen.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-23T02:47+00:00"
+    },
+    {
+     "tekst": "In onrust zoekt men vaak naar geruststelling.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-23T02:47+00:00"
     }
    ],
    "regen": [
@@ -683,6 +813,13 @@
      "tekst": "Water dat valt, biedt rust en kalmte aan.",
      "model": "Qwen2.5-14B-Instruct-4bit",
      "t": "2026-11-22T20:09+00:00"
+    }
+   ],
+   "drukte": [
+    {
+     "tekst": "Wachtende momenten voor iedereen.",
+     "model": "Qwen2.5-14B-Instruct-4bit",
+     "t": "2026-11-23T02:47+00:00"
     }
    ]
   }
