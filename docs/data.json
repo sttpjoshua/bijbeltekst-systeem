@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-22T22:04",
+ "gegenereerd": "2026-11-23T04:01",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1656,8 +1656,12 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-23-1-3.jpg"
    ],
    "thumb": "thumbs/2026-11-23-1.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "instagram"
+   ],
+   "links": {
+    "instagram": "https://www.instagram.com/p/DgEXfYQjDaS/"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -1687,11 +1691,13 @@
     "video_uitleg": "n.v.t."
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "instagram": "2026-11-23T04:01+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": null,
-   "online": null
+   "online": "2026-11-23T04:01+01:00"
   },
   {
    "id": "2026-11-22-5",
@@ -1903,8 +1909,8 @@
     "instagram": "https://www.instagram.com/reel/DgDueoeFKB0/"
    },
    "totaal": {
-    "views": 0,
-    "reach": 0,
+    "views": 8,
+    "reach": 5,
     "likes": 0,
     "comments": 0,
     "shares": 0,
@@ -1920,6 +1926,16 @@
      "saves": null,
      "follows": null,
      "t": "2026-11-22T22:01+01:00"
+    },
+    "instagram": {
+     "views": 8,
+     "reach": 5,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "t": null
     }
    },
    "score": {},
@@ -1957,6 +1973,17 @@
       "comments": null,
       "shares": null,
       "saves": null,
+      "follows": null
+     }
+    },
+    "instagram": {
+     "1u": {
+      "views": 8,
+      "reach": 5,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
       "follows": null
      }
     }
@@ -15623,21 +15650,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-20T22:03:17",
-   "soort": "info",
-   "tekst": "2026-11-20-4 online op facebook: Psalm 131:2"
-  },
-  {
-   "t": "2026-11-20T22:04:21",
-   "soort": "info",
-   "tekst": "2026-11-20-5 ook als story geplaatst"
-  },
-  {
-   "t": "2026-11-20T22:04:21",
-   "soort": "info",
-   "tekst": "2026-11-20-5 online op instagram: Micha 6:8"
-  },
-  {
    "t": "2026-11-20T23:15:48",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
@@ -15927,6 +15939,21 @@
    "t": "2026-11-22T22:04:16",
    "soort": "info",
    "tekst": "2026-11-22-4 online op instagram: 2 Korinthe 4:8-9"
+  },
+  {
+   "t": "2026-11-22T23:15:42",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-23T04:01:56",
+   "soort": "info",
+   "tekst": "2026-11-23-1 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-23T04:01:56",
+   "soort": "info",
+   "tekst": "2026-11-23-1 online op instagram: Jesaja 40:29"
   }
  ],
  "recente_fouten": [
@@ -16078,9 +16105,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-22T22:04",
+   "ok": "2026-11-23T04:01",
    "laatst_ok": true,
-   "detail": "2 Korinthe 4:8-9 geplaatst"
+   "detail": "Jesaja 40:29 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-22T13:35",
@@ -16109,7 +16136,7 @@
    "ok": "2026-11-20T08:01",
    "laatst_ok": false,
    "detail": "400: {\"error\":{\"message\":\"Unsupported get request. Object with ID '18646160734043579' does not exist, cannot be loaded due to missing permissions, or does not s",
-   "fout": "2026-11-22T22:01"
+   "fout": "2026-11-22T23:01"
   },
   "facebook": {
    "ok": "2026-11-22T20:32",
@@ -16263,19 +16290,19 @@
  ],
  "weken": {
   "deze": {
-   "posts": 35,
-   "reach": 861,
-   "views": 926,
-   "likes": 24,
+   "posts": 30,
+   "reach": 826,
+   "views": 887,
+   "likes": 22,
    "comments": 0,
    "saves": 2,
    "shares": 0
   },
   "vorige": {
    "posts": 35,
-   "reach": 544,
-   "views": 629,
-   "likes": 21,
+   "reach": 574,
+   "views": 655,
+   "likes": 19,
    "comments": 0,
    "saves": 1,
    "shares": 0
@@ -16868,7 +16895,7 @@
  "snel_leren": {
   "start": "2026-11-16",
   "tot": "2026-11-30",
-  "dag": 7,
+  "dag": 8,
   "dagen": 14,
   "online": 35,
   "gemeten": 17
@@ -20388,7 +20415,7 @@
   ],
   "zonder_tekst": 301,
   "mac": {
-   "t": "2026-11-22T20:09+00:00",
+   "t": "2026-11-22T23:50+00:00",
    "model": "Qwen2.5-14B-Instruct-4bit",
    "versie": "4",
    "laatste_ronde": {
