@@ -15122,7 +15122,20 @@
   "media": "docs/media/2026-11/2026-11-23-2.mp4",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-23-2.mp4",
   "metricool": {},
-  "stats": {},
+  "stats": {
+   "facebook": {
+    "1u": {
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "avg_watch_ms": null
+    }
+   }
+  },
   "beeld": "pexels-cacito-10020710.jpg",
   "muziek": "ES_A Marvelous Companion - Rachel Sandy.mp3",
   "geluid": "ES_Ambience, Lakeside, Spring Day, Italy, Lake, Calm, Birds, Wood, Creaks 01 - Epidemic Sound.mp3",
@@ -15247,7 +15260,20 @@
   "media": "docs/media/2026-11/2026-11-23-3.mp4",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-23-3.mp4",
   "metricool": {},
-  "stats": {},
+  "stats": {
+   "instagram": {
+    "1u": {
+     "views": 6,
+     "reach": 2,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "avg_watch_ms": 8751
+    }
+   }
+  },
   "beeld": null,
   "muziek": "ES_Dunes - Valante.mp3",
   "geluid": null,
