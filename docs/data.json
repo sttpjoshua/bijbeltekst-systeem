@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-23T14:35",
+ "gegenereerd": "2026-11-23T14:45",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -20304,7 +20304,9 @@
      "ref": "1 Johannes 4:18"
     },
     "t": "2026-11-22T14:02+00:00",
-    "fouten": []
+    "fouten": [
+     "hashtag #vrees bestaat niet of is te vaag"
+    ]
    },
    {
     "id": "II_Timothy-1-7-7",
@@ -20333,7 +20335,9 @@
      "ref": "2 Timotheüs 1:7"
     },
     "t": "2026-11-22T14:02+00:00",
-    "fouten": []
+    "fouten": [
+     "hashtag #vrees bestaat niet of is te vaag"
+    ]
    },
    {
     "id": "Isaiah-43-19-19",
@@ -20474,7 +20478,9 @@
      "ref": "Spreuken 15:1"
     },
     "t": "2026-11-22T14:02+00:00",
-    "fouten": []
+    "fouten": [
+     "hashtag #reactie bestaat niet of is te vaag"
+    ]
    }
   ],
   "nieuws": [
