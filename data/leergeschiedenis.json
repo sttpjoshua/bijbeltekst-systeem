@@ -964,5 +964,143 @@
     "22:00": 1.0
    }
   }
+ },
+ {
+  "datum": "2026-11-23",
+  "versie": 9,
+  "gewichten": {
+   "huisstijl": {
+    "avond": 0.35,
+    "zand": 1.0,
+    "salie": 1.0,
+    "zonsopgang": 1.0,
+    "hemelsblauw": 1.0,
+    "paars": 1.0,
+    "roze": 1.0,
+    "bosgroen": 1.0,
+    "mint": 1.0,
+    "perzik": 1.0,
+    "papier_rood": 1.0,
+    "papier_groen": 1.0,
+    "papier_blauw": 1.0,
+    "schaduw_rood": 0.94,
+    "schaduw_groen": 1.0,
+    "schaduw_blauw": 1.0
+   },
+   "thema": {
+    "troost": 1.0,
+    "moed": 1.0,
+    "liefde": 1.0,
+    "hoop": 1.0,
+    "vertrouwen": 1.0,
+    "wijsheid": 1.0,
+    "humor_herkenbaar": 0.881,
+    "dankbaarheid": 1.0,
+    "identiteit": 1.0,
+    "vrede_rust": 0.88
+   },
+   "hook_stijl": {
+    "vraag": 0.955,
+    "herkenning": 1.231,
+    "uitdaging": 0.982,
+    "rustig": 1.0,
+    "geen": 1.057
+   },
+   "formaat": {
+    "video": 1.083,
+    "carrousel": 1.0
+   },
+   "uitleg_op_beeld": {
+    "True": 0.787,
+    "False": 1.294
+   },
+   "achtergrondbron": {
+    "verloop": 1.079,
+    "beeld": 1.067
+   },
+   "boekgroep": {
+    "psalmen": 1.12,
+    "spreuken": 1.0,
+    "wijsheid": 1.0,
+    "profeten": 1.0,
+    "evangelien": 1.0,
+    "brieven": 1.33
+   },
+   "lengte": {
+    "kort": 0.93,
+    "middel": 1.04,
+    "lang": 1.0
+   },
+   "bron": {
+    "bekend": 1.072,
+    "ontdekking": 1.0
+   },
+   "vraag_onderaan": {
+    "True": 0.995,
+    "False": 1.06
+   },
+   "reel_stijl": {
+    "klassiek": 1.0,
+    "kinetisch": 1.0,
+    "beeld": 1.0,
+    "situatie": 0.984,
+    "markeren": 1.152
+   },
+   "carrousel_stijl": {
+    "standaard": 1.0,
+    "markeren": 1.0
+   },
+   "reel_kleur": {
+    "abrikoos": 1.0,
+    "mint": 1.0,
+    "hemel": 1.0,
+    "roze": 1.0,
+    "goud": 1.0
+   },
+   "markeer_achtergrond": {
+    "kleur": 1.0,
+    "papier": 1.0,
+    "schaduw": 1.0,
+    "foto": 1.0
+   },
+   "markeer_streep": {
+    "regel": 1.0,
+    "woord": 1.0
+   },
+   "markeer_opening": {
+    "vers": 1.0,
+    "sterk": 1.0
+   },
+   "reel_plaatsing": {
+    "midden": 1.05,
+    "boven": 0.94
+   },
+   "reel_scene": {
+    "natuur": 1.0,
+    "dichtbij": 1.032,
+    "onderweg": 1.007
+   },
+   "reel_haak": {
+    "geen": 1.066,
+    "vraag": 1.0
+   },
+   "opening": {
+    "vers": 1.0,
+    "stopper": 1.0,
+    "verhaal": 1.0
+   },
+   "hashtag_stijl": {
+    "mix": 0.992,
+    "zoekwoord": 1.169,
+    "zonder": 0.972
+   },
+   "tijdslot": {
+    "04:00": 1.0,
+    "12:15": 0.82,
+    "17:45": 1.168,
+    "20:30": 1.226,
+    "22:00": 1.0
+   }
+  }
  }
 ]

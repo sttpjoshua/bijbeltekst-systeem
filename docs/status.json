@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T15:30:51",
+ "updated": "2026-11-23T15:36:53",
  "agents": {
   "verskiezer": {
    "t": "2026-11-23T09:02:53",
@@ -27,8 +27,8 @@
    "state": "error"
   },
   "analist": {
-   "t": "2026-11-22T13:35:37",
-   "task": "Weekanalyse: strategie v8",
+   "t": "2026-11-23T15:36:52",
+   "task": "Weekanalyse: strategie v9",
    "state": "done"
   },
   "community": {
@@ -40,13 +40,13 @@
  "stats": {
   "posts_today": 1,
   "posts_total": 77,
-  "reach_7d": 680,
+  "reach_7d": 823,
   "best_time": "20:30",
   "next_post": "2026-11-23T12:15:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
-  "instagram": 1296,
+  "instagram": 1439,
   "facebook": 4,
   "youtube": 0,
   "tiktok": 0
@@ -56,6 +56,14 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "15:36",
+   "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
+  },
+  {
+   "t": "15:33",
+   "msg": "Statistieken opgehaald voor 21 posts"
+  },
   {
    "t": "14:35",
    "msg": "Statistieken lezen werkt"
@@ -95,14 +103,6 @@
   {
    "t": "12:17",
    "msg": "2026-11-23-5 ook als story geplaatst"
-  },
-  {
-   "t": "12:15",
-   "msg": "2026-11-23-1 online op facebook: Jesaja 40:29"
-  },
-  {
-   "t": "12:02",
-   "msg": "Politiek nieuws (NOS): \"Duitse minister van Onderwijs (CDU) spreekt zich uit voor AfD-verbod\". Neutrale post e"
   }
  ],
  "lampen": [
@@ -165,9 +165,9 @@
   ]
  },
  "top_post": {
-  "ref": "Openbaring 21:4",
-  "thumb": "thumbs/2026-11-18-5.jpg",
-  "bereik": 83,
+  "ref": "Lukas 10:41-42",
+  "thumb": "thumbs/2026-11-21-2.jpg",
+  "bereik": 103,
   "score": 3.0,
   "formaat": "video"
  },

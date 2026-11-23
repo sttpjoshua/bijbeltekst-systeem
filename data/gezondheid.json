@@ -5,20 +5,20 @@
   "detail": "1 Korinthe 15:58 geplaatst"
  },
  "instagram_lezen": {
-  "ok": "2026-11-23T14:35",
+  "ok": "2026-11-23T15:36",
   "laatst_ok": true,
   "detail": "7 volgers"
  },
  "sleutel_instagram": {
   "verloopt": "nooit",
   "geldig": true,
-  "ok": "2026-11-23T14:35",
+  "ok": "2026-11-23T15:36",
   "laatst_ok": true
  },
  "sleutel_facebook": {
   "verloopt": "nooit",
   "geldig": true,
-  "ok": "2026-11-23T14:35",
+  "ok": "2026-11-23T15:36",
   "laatst_ok": true
  },
  "materiaal_actions": {
@@ -31,7 +31,7 @@
   "ok": "2026-11-20T08:01",
   "laatst_ok": false,
   "detail": "400: {\"error\":{\"message\":\"Unsupported get request. Object with ID '18646160734043579' does not exist, cannot be loaded due to missing permissions, or does not s",
-  "fout": "2026-11-23T15:01"
+  "fout": "2026-11-23T15:36"
  },
  "facebook": {
   "ok": "2026-11-23T12:15",
@@ -39,9 +39,9 @@
   "detail": "Jesaja 40:29 geplaatst"
  },
  "statistieken": {
-  "ok": "2026-11-22T13:35",
+  "ok": "2026-11-23T15:36",
   "laatst_ok": true,
-  "detail": "22 nieuwe metingen"
+  "detail": "21 nieuwe metingen"
  },
  "zelftest": {
   "ok": "2026-11-23T14:35",
@@ -75,7 +75,7 @@
   "detail": "alles klopte"
  },
  "leren": {
-  "ok": "2026-11-22T13:35",
+  "ok": "2026-11-23T15:36",
   "laatst_ok": true,
   "detail": "dagelijks (snel leren)"
  },
