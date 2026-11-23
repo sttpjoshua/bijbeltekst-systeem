@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-23T12:01",
+ "gegenereerd": "2026-11-23T12:17",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1748,8 +1748,12 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-23-5.mp4"
    ],
    "thumb": "thumbs/2026-11-23-5.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "instagram"
+   ],
+   "links": {
+    "instagram": "https://www.instagram.com/reel/DgFQEmMNryA/"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -1779,11 +1783,13 @@
     "video_uitleg": "vaste regel"
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "instagram": "2026-11-23T12:17+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": null,
-   "online": null
+   "online": "2026-11-23T12:17+01:00"
   },
   {
    "id": "2026-11-23-4",
@@ -2058,7 +2064,7 @@
    "ref": "Jesaja 40:29",
    "tekst": "Hij geeft den moeden kracht, en Hij vermenigvuldigt de sterkte dien, die geen krachten heeft.",
    "hook": "Moed voor de week. Goedemorgen. Begin je dag hiermee.",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "perzik",
     "thema": "moed",
@@ -2107,10 +2113,12 @@
    ],
    "thumb": "thumbs/2026-11-23-1.jpg",
    "platformen": [
-    "instagram"
+    "instagram",
+    "facebook"
    ],
    "links": {
-    "instagram": "https://www.instagram.com/p/DgEXfYQjDaS/"
+    "instagram": "https://www.instagram.com/p/DgEXfYQjDaS/",
+    "facebook": "https://www.facebook.com/1015160368352770_122135476874879910"
    },
    "totaal": {
     "views": 1,
@@ -2172,7 +2180,8 @@
     }
    },
    "pub": {
-    "instagram": "2026-11-23T04:01+01:00"
+    "instagram": "2026-11-23T04:01+01:00",
+    "facebook": "2026-11-23T12:15+01:00"
    },
    "gemist": [],
    "nood": false,
@@ -16130,30 +16139,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-21T05:15:39",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
-  },
-  {
-   "t": "2026-11-21T07:01:18",
-   "soort": "fout",
-   "tekst": "Politiek nieuws (NOS): \"Amerikaanse rechter keurt miljardenschikking Bayer over Roundup goed\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
-   "code": "nieuws_voorstel",
-   "post": "n112107010"
-  },
-  {
-   "t": "2026-11-21T07:01:20",
-   "soort": "fout",
-   "tekst": "Zwaar nieuws (NOS): \"Denemarken zet Russische gezant uit na verijdelde aanslag op Oekraïense rapper\". Wil je er een troostende post over? Die gaat dan pas 6 uur na het nieuws online.",
-   "code": "nieuws_voorstel",
-   "post": "n112107011"
-  },
-  {
-   "t": "2026-11-21T09:03:44",
-   "soort": "info",
-   "tekst": "Zelfstandig 5 posts klaargezet voor 2026-11-23 (teksten uit de tekstbank)."
-  },
-  {
    "t": "2026-11-21T12:02:00",
    "soort": "info",
    "tekst": "Nieuwspost: 1 Korinthe 13:13 vervangen door Psalm 100:4 (aanleiding: winter, NOS)"
@@ -16436,6 +16421,28 @@
    "t": "2026-11-23T09:03:39",
    "soort": "info",
    "tekst": "Zelfstandig 5 posts klaargezet voor 2026-11-25 (teksten uit de tekstbank)."
+  },
+  {
+   "t": "2026-11-23T12:02:01",
+   "soort": "fout",
+   "tekst": "Politiek nieuws (NOS): \"Duitse minister van Onderwijs (CDU) spreekt zich uit voor AfD-verbod\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
+   "code": "nieuws_voorstel",
+   "post": "n112312020"
+  },
+  {
+   "t": "2026-11-23T12:15:54",
+   "soort": "info",
+   "tekst": "2026-11-23-1 online op facebook: Jesaja 40:29"
+  },
+  {
+   "t": "2026-11-23T12:17:02",
+   "soort": "info",
+   "tekst": "2026-11-23-5 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-23T12:17:02",
+   "soort": "info",
+   "tekst": "2026-11-23-5 online op instagram: 1 Korinthe 15:58"
   }
  ],
  "recente_fouten": [
@@ -16452,6 +16459,13 @@
    "tekst": "Politiek nieuws (NOS): \"Ook pand in Winschoten dicht na neonazistische kooigevechten in Finsterwolde\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
    "code": "nieuws_voorstel",
    "post": "n112307010"
+  },
+  {
+   "t": "2026-11-23T12:02:01",
+   "soort": "fout",
+   "tekst": "Politiek nieuws (NOS): \"Duitse minister van Onderwijs (CDU) spreekt zich uit voor AfD-verbod\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
+   "code": "nieuws_voorstel",
+   "post": "n112312020"
   }
  ],
  "versen_totaal": 300,
@@ -16580,9 +16594,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-23T04:01",
+   "ok": "2026-11-23T12:17",
    "laatst_ok": true,
-   "detail": "Jesaja 40:29 geplaatst"
+   "detail": "1 Korinthe 15:58 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-22T13:35",
@@ -16614,9 +16628,9 @@
    "fout": "2026-11-23T12:01"
   },
   "facebook": {
-   "ok": "2026-11-22T20:32",
+   "ok": "2026-11-23T12:15",
    "laatst_ok": true,
-   "detail": "Psalm 18:3 geplaatst"
+   "detail": "Jesaja 40:29 geplaatst"
   },
   "statistieken": {
    "ok": "2026-11-22T13:35",
@@ -16637,12 +16651,12 @@
    "fout": "2026-11-11T13:49",
    "laatst_ok": true,
    "detail": "1 bericht(en) verstuurd",
-   "ok": "2026-11-23T07:30"
+   "ok": "2026-11-23T12:02"
   },
   "nieuws": {
-   "ok": "2026-11-23T07:01",
+   "ok": "2026-11-23T12:02",
    "laatst_ok": true,
-   "detail": "2 nieuwe aanleidingen"
+   "detail": "1 nieuwe aanleidingen"
   },
   "maken": {
    "ok": "2026-11-23T09:03",
@@ -16765,9 +16779,9 @@
  ],
  "weken": {
   "deze": {
-   "posts": 30,
-   "reach": 853,
-   "views": 914,
+   "posts": 31,
+   "reach": 854,
+   "views": 915,
    "likes": 23,
    "comments": 0,
    "saves": 2,
@@ -17372,7 +17386,7 @@
   "tot": "2026-11-30",
   "dag": 8,
   "dagen": 14,
-  "online": 35,
+  "online": 36,
   "gemeten": 17
  },
  "voorraad": {
@@ -21073,6 +21087,70 @@
   },
   "recent": [
    {
+    "id": "n112312020",
+    "t": "2026-11-23T11:15+01:00",
+    "bron": "NOS",
+    "kop": "Duitse minister van Onderwijs (CDU) spreekt zich uit voor AfD-verbod",
+    "link": "https://nos.nl/l/2640689",
+    "categorie": "politiek",
+    "zwaar": false,
+    "status": "voorstel",
+    "post": null,
+    "opties": [
+     {
+      "vers_id": "Ecclesiastes-4-9-10",
+      "ref": "Prediker 4:9-10",
+      "tekst": "Twee zijn beter dan een; want zij hebben een goede beloning van hun arbeid; Want indien zij vallen, de een richt zijn metgezel op; maar wee den ene, die gevallen is, want er is geen tweede om hem op te helpen.",
+      "zin": "Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.",
+      "kernwoord": "Twee",
+      "betekenis": "Prediker ziet het nut van samen. Alleen kom je minder ver. En als je valt, heb je iemand nodig die je overeind helpt. Vriendschap is geen luxe.",
+      "toepassing": "Bel of app vandaag iemand die alleen is.",
+      "brug": "Een vast punt in veel geluid.",
+      "caption": "Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.\n\n\"Twee zijn beter dan een; want zij hebben een goede beloning van hun arbeid; Want indien zij vallen, de een richt zijn metgezel op; maar wee den ene, die gevallen is, want er is geen tweede om hem op te helpen.\"\nPrediker 4:9-10\n\nEen vast punt in veel geluid. We hebben elkaar nodig.\n\nWie helpt jou overeind als je valt?",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112312020-1-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112312020-1-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112312020-1-3.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112312020-1-4.jpg"
+      ]
+     },
+     {
+      "vers_id": "Psalms-37-7-7",
+      "ref": "Psalm 37:7",
+      "tekst": "Zwijg den HEERE, en verbeid Hem; ontsteek u niet over dengene, wiens weg voorspoedig is; over een man, die listige aanslagen uitvoert.",
+      "zin": "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.",
+      "kernwoord": "Zwijg",
+      "betekenis": "David zegt: kijk niet steeds naar anderen die het zogenaamd beter hebben. Word stil voor God en wacht op Hem. Vergelijken maakt onrustig.",
+      "toepassing": "Merk je vandaag dat je jezelf vergelijkt? Stop en word even stil.",
+      "brug": "Bij alle onrust: wat blijft staan.",
+      "caption": "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.\n\n\"Zwijg den HEERE, en verbeid Hem; ontsteek u niet over dengene, wiens weg voorspoedig is; over een man, die listige aanslagen uitvoert.\"\nPsalm 37:7\n\nBij alle onrust: wat blijft staan. Stil worden bij God geeft meer rust dan vergelijken.\n\nMet wie vergelijk jij jezelf weleens?",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112312020-2-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112312020-2-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112312020-2-3.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112312020-2-4.jpg"
+      ]
+     },
+     {
+      "vers_id": "James-1-19-19",
+      "ref": "Jakobus 1:19",
+      "tekst": "Zo dan, mijn geliefde broeders, een iegelijk mens zij ras om te horen, traag om te spreken, traag tot toorn.",
+      "zin": "Veel meningen, veel onrust. Even terug naar wat vaststaat.",
+      "kernwoord": "horen",
+      "betekenis": "Jakobus geeft drie korte tips voor elk gesprek. Luister eerst, praat later, en word niet snel boos. Simpel om te lezen, moeilijk om te doen.",
+      "toepassing": "Probeer vandaag in elk gesprek de ander eerst helemaal uit te laten praten.",
+      "brug": "Een vast punt in veel geluid.",
+      "caption": "Veel meningen, veel onrust. Even terug naar wat vaststaat.\n\n\"Zo dan, mijn geliefde broeders, een iegelijk mens zij ras om te horen, traag om te spreken, traag tot toorn.\"\nJakobus 1:19\n\nEen vast punt in veel geluid. Eerst luisteren, dan praten.\n\nWelke van de drie vind jij het moeilijkst?",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112312020-3-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112312020-3-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112312020-3-3.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112312020-3-4.jpg"
+      ]
+     }
+    ]
+   },
+   {
     "id": "n112307011",
     "t": "2026-11-22T17:33+01:00",
     "bron": "NOS",
@@ -22131,18 +22209,6 @@
     "status": "overgeslagen",
     "post": null,
     "opties": null
-   },
-   {
-    "id": "n111407011",
-    "t": "2026-11-14T06:30+01:00",
-    "bron": "NU.nl",
-    "kop": "Steeds meer glutenvrije pieten bij intocht: 'Lullig als jij wordt overgeslagen'",
-    "link": "https://www.nu.nl/binnenland/6416351/steeds-meer-glutenvrije-pieten-bij-intocht-lullig-als-jij-wordt-overgeslagen.html",
-    "categorie": "sinterklaas",
-    "zwaar": false,
-    "status": "overgeslagen",
-    "post": null,
-    "opties": null
    }
   ]
  },
@@ -22269,8 +22335,8 @@
      },
      {
       "optie": "perzik",
-      "online": 1,
-      "gepland": 3,
+      "online": 2,
+      "gepland": 2,
       "n": 2,
       "gem": 1.92,
       "oordeel": "weinig data"
@@ -22338,19 +22404,6 @@
    }
   ],
   "komend": [
-   {
-    "id": "2026-11-23-5",
-    "ref": "1 Korinthe 15:58",
-    "datum": "2026-11-23",
-    "tijdslot": "12:15",
-    "tests": [
-     {
-      "dimensie": "huisstijl",
-      "optie": "perzik",
-      "bron": "experiment"
-     }
-    ]
-   },
    {
     "id": "2026-11-23-4",
     "ref": "Psalm 139:14",
@@ -22505,6 +22558,24 @@
      {
       "dimensie": "huisstijl",
       "optie": "bosgroen",
+      "bron": "experiment"
+     },
+     {
+      "dimensie": "reel_stijl",
+      "optie": "markeren",
+      "bron": "test markeren"
+     }
+    ]
+   },
+   {
+    "id": "2026-11-25-1",
+    "ref": "Galaten 4:7",
+    "datum": "2026-11-25",
+    "tijdslot": "20:30",
+    "tests": [
+     {
+      "dimensie": "huisstijl",
+      "optie": "zand",
       "bron": "experiment"
      },
      {

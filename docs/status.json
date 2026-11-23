@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T12:01:54",
+ "updated": "2026-11-23T12:17:02",
  "agents": {
   "verskiezer": {
    "t": "2026-11-23T09:02:53",
@@ -17,13 +17,13 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-23T04:01:56",
-   "task": "Postte Jesaja 40:29 op instagram",
+   "t": "2026-11-23T12:17:02",
+   "task": "Postte 1 Korinthe 15:58 op instagram",
    "state": "done"
   },
   "controller": {
-   "t": "2026-11-23T07:01:29",
-   "task": "Politiek nieuws (NOS): \"Ook pand in Winschoten dicht na neonazistische",
+   "t": "2026-11-23T12:02:01",
+   "task": "Politiek nieuws (NOS): \"Duitse minister van Onderwijs (CDU) spreekt zi",
    "state": "error"
   },
   "analist": {
@@ -38,11 +38,11 @@
   }
  },
  "stats": {
-  "posts_today": 0,
-  "posts_total": 76,
+  "posts_today": 1,
+  "posts_total": 77,
   "reach_7d": 680,
   "best_time": "20:30",
-  "next_post": "2026-11-23T04:00:00"
+  "next_post": "2026-11-23T12:15:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
@@ -56,6 +56,22 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "12:17",
+   "msg": "2026-11-23-5 online op instagram: 1 Korinthe 15:58"
+  },
+  {
+   "t": "12:17",
+   "msg": "2026-11-23-5 ook als story geplaatst"
+  },
+  {
+   "t": "12:15",
+   "msg": "2026-11-23-1 online op facebook: Jesaja 40:29"
+  },
+  {
+   "t": "12:02",
+   "msg": "Politiek nieuws (NOS): \"Duitse minister van Onderwijs (CDU) spreekt zich uit voor AfD-verbod\". Neutrale post e"
+  },
   {
    "t": "09:03",
    "msg": "Zelfstandig 5 posts klaargezet voor 2026-11-25 (teksten uit de tekstbank)."
@@ -87,22 +103,6 @@
   {
    "t": "22:04",
    "msg": "2026-11-22-4 ook als story geplaatst"
-  },
-  {
-   "t": "21:45",
-   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
-   "t": "21:30",
-   "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
-  },
-  {
-   "t": "20:32",
-   "msg": "2026-11-22-2 online op facebook: Psalm 18:3"
-  },
-  {
-   "t": "20:32",
-   "msg": "2026-11-22-2 online op instagram: Psalm 18:3"
   }
  ],
  "lampen": [
