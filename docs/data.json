@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-23T04:01",
+ "gegenereerd": "2026-11-23T04:15",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -19994,6 +19994,11 @@
    },
    {
     "soort": "zinnen",
+    "cat": "storm",
+    "tekst": "Buiten stormt het. Binnen lezen we een geruststellend vers."
+   },
+   {
+    "soort": "zinnen",
     "cat": "winter",
     "tekst": "Sneeuw bedekt de straten. Een witte kerst komt eraan."
    },
@@ -20021,6 +20026,16 @@
     "soort": "zinnen",
     "cat": "winter",
     "tekst": "Deze koude wind benadrukt hoe fijn het is om binnen te zijn. Komt jou ook zo voor?"
+   },
+   {
+    "soort": "zinnen",
+    "cat": "winter",
+    "tekst": "Sneeuwbedekte straten: een sprookjesachtig uitzicht vandaag."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "winter",
+    "tekst": "Buiten koud, binnen warm. Juist nu ervaar je de waarde van een gezellig thuis."
    },
    {
     "soort": "zinnen",
@@ -20054,6 +20069,16 @@
    },
    {
     "soort": "zinnen",
+    "cat": "hitte",
+    "tekst": "De zon schijnt fel. Ga maar een ijsje pakken."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "hitte",
+    "tekst": "De thermometer gaat omhoog. Rust even in de schaduw."
+   },
+   {
+    "soort": "zinnen",
     "cat": "regen",
     "tekst": "Grijze regendruppels op het raam. Een rustig moment om te bidden."
    },
@@ -20081,6 +20106,11 @@
     "soort": "zinnen",
     "cat": "regen",
     "tekst": "Een regenachtige ochtend: de natuur drinkt in alle rust."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "regen",
+    "tekst": "De regen spoelt de lucht netjes. Een rustig binnenblijven?"
    },
    {
     "soort": "zinnen",
@@ -20119,6 +20149,21 @@
    },
    {
     "soort": "zinnen",
+    "cat": "sintmaarten",
+    "tekst": "Sint-Maarten, een nacht om lampionnen mee te lichten."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "sintmaarten",
+    "tekst": "Sint-Maarten: de pret is er, maar ook de mooie verhalen."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "sintmaarten",
+    "tekst": "Vanavond lopen glimlachende kinderen mee met lampionnen."
+   },
+   {
+    "soort": "zinnen",
     "cat": "sinterklaas",
     "tekst": "Sinterklaas is er weer. Heel de straat klinkt vol muziek."
    },
@@ -20136,6 +20181,11 @@
     "soort": "zinnen",
     "cat": "sinterklaas",
     "tekst": "Klusjes doen voor Sinterklaas. Een gave voor de hele familie."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "sinterklaas",
+    "tekst": "Sinterklaas aan zee, een uniek Nederlands feestje."
    },
    {
     "soort": "zinnen",
@@ -20164,6 +20214,11 @@
    },
    {
     "soort": "zinnen",
+    "cat": "sport",
+    "tekst": "Slaapjes maken na een harde wedstrijd. Zelfs de beste spelen vallen uit."
+   },
+   {
+    "soort": "zinnen",
     "cat": "drukte",
     "tekst": "Verstopt zich in de rij, vinden rust in het gedrang."
    },
@@ -20189,6 +20244,16 @@
    },
    {
     "soort": "zinnen",
+    "cat": "drukte",
+    "tekst": "File na file sinds vanmorgen. Nog een reden voor een diepe ademhaling."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "drukte",
+    "tekst": "Wachten en wachten, maar rust is voor iedereen."
+   },
+   {
+    "soort": "zinnen",
     "cat": "examens",
     "tekst": "Papiertjes in de lucht voor het grote examen?"
    },
@@ -20211,6 +20276,21 @@
     "soort": "zinnen",
     "cat": "examens",
     "tekst": "De bibliotheek is rustiger dan ooit, iedereen studeert in stilte."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "examens",
+    "tekst": "De examens naderen en de lucht is gevuld met spanning en hoop."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "examens",
+    "tekst": "De schooltorens klokken het einde van een leerjaar in, tijd om te toetsen."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "examens",
+    "tekst": "De klokken van het schoolplein tikken rustig aan, terwijl leerlingen zich voorbereiden."
    },
    {
     "soort": "zinnen",
@@ -20249,6 +20329,11 @@
    },
    {
     "soort": "zinnen",
+    "cat": "klok",
+    "tekst": "De klok is verzet: wat ga jij vandaag uitvoeren?"
+   },
+   {
+    "soort": "zinnen",
     "cat": "koopjes",
     "tekst": "Koopjesweek: vrije hand in de winkel is een droom."
    },
@@ -20276,6 +20361,16 @@
     "soort": "zinnen",
     "cat": "koopjes",
     "tekst": "Iedereen zoekt het beste deal. Is dit echt de beste?"
+   },
+   {
+    "soort": "zinnen",
+    "cat": "koopjes",
+    "tekst": "Koopjesjacht is aan de gang. Wat hadden wij al weer op het oog?"
+   },
+   {
+    "soort": "zinnen",
+    "cat": "koopjes",
+    "tekst": "Overal zijn kortingen. Wat is jouw echte koopje?"
    },
    {
     "soort": "zinnen",
@@ -20329,6 +20424,16 @@
    },
    {
     "soort": "bruggen",
+    "cat": "hitte",
+    "tekst": "Warme dagen roepen naar koelte."
+   },
+   {
+    "soort": "bruggen",
+    "cat": "hitte",
+    "tekst": "IJs is een fijn verzetje tegen de hitte."
+   },
+   {
+    "soort": "bruggen",
     "cat": "sintmaarten",
     "tekst": "Delen van liefde, net als Sint-Maarten"
    },
@@ -20359,6 +20464,16 @@
    },
    {
     "soort": "bruggen",
+    "cat": "sport",
+    "tekst": "Na een wedstrijd: rust en herstel."
+   },
+   {
+    "soort": "bruggen",
+    "cat": "sport",
+    "tekst": "Vieren is een teamsport."
+   },
+   {
+    "soort": "bruggen",
     "cat": "examens",
     "tekst": "Een examen is geen eindstreep, maar een stap."
    },
@@ -20384,6 +20499,11 @@
    },
    {
     "soort": "bruggen",
+    "cat": "klok",
+    "tekst": "Klok verzet: dagjes korter of langer."
+   },
+   {
+    "soort": "bruggen",
     "cat": "koopjes",
     "tekst": "Kans om jouw favorieten te bezitten."
    },
@@ -20404,6 +20524,16 @@
    },
    {
     "soort": "bruggen",
+    "cat": "storm",
+    "tekst": "Versen bieden rust in stormen."
+   },
+   {
+    "soort": "bruggen",
+    "cat": "storm",
+    "tekst": "In onrust zoekt men vaak naar geruststelling."
+   },
+   {
+    "soort": "bruggen",
     "cat": "regen",
     "tekst": "Regen brengt rust en kalme ogenblikken."
    },
@@ -20411,11 +20541,16 @@
     "soort": "bruggen",
     "cat": "regen",
     "tekst": "Water dat valt, biedt rust en kalmte aan."
+   },
+   {
+    "soort": "bruggen",
+    "cat": "drukte",
+    "tekst": "Wachtende momenten voor iedereen."
    }
   ],
   "zonder_tekst": 301,
   "mac": {
-   "t": "2026-11-22T23:50+00:00",
+   "t": "2026-11-23T02:47+00:00",
    "model": "Qwen2.5-14B-Instruct-4bit",
    "versie": "4",
    "laatste_ronde": {
