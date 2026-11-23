@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-23T10:30",
+ "gegenereerd": "2026-11-23T10:45",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -20589,6 +20589,16 @@
    },
    {
     "soort": "zinnen",
+    "cat": "regen",
+    "tekst": "Buiten de regen valt. Een perfect excuus om binnen te blijven en te lezen."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "regen",
+    "tekst": "Bij regen weer: de natuur die zich verfrist en verkwikt."
+   },
+   {
+    "soort": "zinnen",
     "cat": "sintmaarten",
     "tekst": "Sint-Maarten: lampionnen zweven in de nacht."
    },
@@ -20664,6 +20674,11 @@
    },
    {
     "soort": "zinnen",
+    "cat": "sinterklaas",
+    "tekst": "De Sint is er. Welke oude herinnering brengt jou het meest terug?"
+   },
+   {
+    "soort": "zinnen",
     "cat": "sport",
     "tekst": "Bij de basketbalwedstrijd: zoete overwinning. Wat is jouw zoete overwinning vandaag?"
    },
@@ -20691,6 +20706,21 @@
     "soort": "zinnen",
     "cat": "sport",
     "tekst": "Slaapjes maken na een harde wedstrijd. Zelfs de beste spelen vallen uit."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "sport",
+    "tekst": "De sportvelden gloeien van energie. Misschien gebeurt vandaag iets onvergetelijks."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "sport",
+    "tekst": "Gelach klinkt over het veld. Sport brengt ons samen."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "sport",
+    "tekst": "Scoren is geweldig, maar wat is echt winst voor je leven?"
    },
    {
     "soort": "zinnen",
@@ -20726,6 +20756,11 @@
     "soort": "zinnen",
     "cat": "drukte",
     "tekst": "Wachten en wachten, maar rust is voor iedereen."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "drukte",
+    "tekst": "Drukke straten en lang wachten. Misschien ontdek je iets nieuws terwijl je wacht."
    },
    {
     "soort": "zinnen",
@@ -20878,6 +20913,21 @@
     "tekst": "Een nieuwe maandag, een nieuwe kans om te beginnen. Geniet ervan!"
    },
    {
+    "soort": "zinnen",
+    "cat": "maandag",
+    "tekst": "Eerste werkdag van de nieuwe week: een nieuwe kans om te beginnen."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "maandag",
+    "tekst": "Een nieuwe week opent zich, kijk uit naar de mooie momentjes."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "maandag",
+    "tekst": "Na een weekend vol rust: de energie om de nieuwe week aan te kunnen."
+   },
+   {
     "soort": "bruggen",
     "cat": "winter",
     "tekst": "Winter biedt gelegenheid tot knusse momenten."
@@ -21025,7 +21075,7 @@
   ],
   "zonder_tekst": 301,
   "mac": {
-   "t": "2026-11-23T06:27+00:00",
+   "t": "2026-11-23T09:27+00:00",
    "model": "Qwen2.5-14B-Instruct-4bit",
    "versie": "4",
    "laatste_ronde": {
