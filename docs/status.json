@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T21:45:42",
+ "updated": "2026-11-23T22:04:36",
  "agents": {
   "verskiezer": {
    "t": "2026-11-23T09:02:53",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-23T20:32:12",
-   "task": "Postte Psalm 30:6 op facebook",
+   "t": "2026-11-23T22:04:36",
+   "task": "Postte Psalm 30:6 op instagram",
    "state": "done"
   },
   "controller": {
@@ -38,11 +38,11 @@
   }
  },
  "stats": {
-  "posts_today": 1,
-  "posts_total": 77,
+  "posts_today": 5,
+  "posts_total": 81,
   "reach_7d": 823,
   "best_time": "20:30",
-  "next_post": "2026-11-23T12:15:00"
+  "next_post": "2026-11-24T04:00:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
@@ -56,6 +56,26 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "22:04",
+   "msg": "2026-11-23-2 online op instagram: Psalm 30:6"
+  },
+  {
+   "t": "22:04",
+   "msg": "2026-11-23-2 ook als story geplaatst"
+  },
+  {
+   "t": "22:03",
+   "msg": "2026-11-23-3 online op facebook: Openbaring 7:17"
+  },
+  {
+   "t": "22:03",
+   "msg": "2026-11-23-4 online op facebook: Psalm 139:14"
+  },
+  {
+   "t": "22:03",
+   "msg": "2026-11-23-5 online op facebook: 1 Korinthe 15:58"
+  },
   {
    "t": "21:45",
    "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
@@ -83,26 +103,6 @@
   {
    "t": "17:48",
    "msg": "2026-11-23-4 ook als story geplaatst"
-  },
-  {
-   "t": "15:36",
-   "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
-  },
-  {
-   "t": "15:33",
-   "msg": "Statistieken opgehaald voor 21 posts"
-  },
-  {
-   "t": "14:35",
-   "msg": "Statistieken lezen werkt"
-  },
-  {
-   "t": "14:34",
-   "msg": "Verbinding met Facebook-pagina werkt (Bibleversenl)"
-  },
-  {
-   "t": "14:34",
-   "msg": "Token heeft alle rechten, ook voor statistieken"
   }
  ],
  "lampen": [
