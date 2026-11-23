@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-23T07:30",
+ "gegenereerd": "2026-11-23T07:45",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -16187,7 +16187,7 @@
    "fout": "2026-11-11T13:49",
    "laatst_ok": true,
    "detail": "1 bericht(en) verstuurd",
-   "ok": "2026-11-22T21:30"
+   "ok": "2026-11-23T07:30"
   },
   "nieuws": {
    "ok": "2026-11-23T07:01",
@@ -20575,7 +20575,7 @@
   ],
   "zonder_tekst": 301,
   "mac": {
-   "t": "2026-11-23T02:47+00:00",
+   "t": "2026-11-23T06:27+00:00",
    "model": "Qwen2.5-14B-Instruct-4bit",
    "versie": "4",
    "laatste_ronde": {
