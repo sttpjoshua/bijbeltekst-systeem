@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-23T11:30",
+ "gegenereerd": "2026-11-23T11:45",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -17655,12 +17655,6 @@
    "t": "2026-11-16T12:00",
    "probleem": "Geen post klaar voor 2026-11-16 17:45",
    "actie": "noodpost Romeinen 15:13 ingezet om 17:45",
-   "ok": true
-  },
-  {
-   "t": "2026-11-16T11:44",
-   "probleem": "Geen post klaar voor 2026-11-16 12:15",
-   "actie": "noodpost 1 Johannes 4:18 ingezet om 12:15",
    "ok": true
   }
  ],
