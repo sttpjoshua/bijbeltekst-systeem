@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-23T16:30",
+ "gegenereerd": "2026-11-23T16:45",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -21068,6 +21068,26 @@
    },
    {
     "soort": "zinnen",
+    "cat": "sinterklaas",
+    "tekst": "Sinterklaas is bijna hier. Een magische tijd voor kinderen en volwassenen."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "sinterklaas",
+    "tekst": "Boekenmanden, krullen en rijmpjes. Sinterklaas brengt een wonderlijke sfeer."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "sinterklaas",
+    "tekst": "Klerken en peren. Sinterklaas brengt een speciale tijd van vreugde."
+   },
+   {
+    "soort": "zinnen",
+    "cat": "sinterklaas",
+    "tekst": "Sinterklaas is er weer. Een tijd van verhalen, gedichten en magie."
+   },
+   {
+    "soort": "zinnen",
     "cat": "sport",
     "tekst": "Bij de basketbalwedstrijd: zoete overwinning. Wat is jouw zoete overwinning vandaag?"
    },
@@ -21464,7 +21484,7 @@
   ],
   "zonder_tekst": 301,
   "mac": {
-   "t": "2026-11-23T13:16+00:00",
+   "t": "2026-11-23T15:27+00:00",
    "model": "Qwen2.5-14B-Instruct-4bit",
    "versie": "4",
    "laatste_ronde": {
