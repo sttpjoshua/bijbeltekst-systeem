@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-24T19:15",
+ "gegenereerd": "2026-11-24T19:30",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -18213,9 +18213,9 @@
   },
   "whatsapp": {
    "fout": "2026-11-24T19:03",
-   "laatst_ok": false,
-   "detail": "<urlopen error [Errno 104] Connection reset by peer>",
-   "ok": "2026-11-24T12:02"
+   "laatst_ok": true,
+   "detail": "1 bericht(en) verstuurd",
+   "ok": "2026-11-24T19:15"
   },
   "nieuws": {
    "ok": "2026-11-24T17:01",
