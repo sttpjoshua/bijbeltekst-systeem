@@ -1,15 +1,5 @@
 [
  {
-  "t": "2026-11-11T20:31:47",
-  "soort": "info",
-  "tekst": "2026-11-11-n2030 ook als story geplaatst"
- },
- {
-  "t": "2026-11-11T20:31:47",
-  "soort": "info",
-  "tekst": "2026-11-11-n2030 online op instagram: Spreuken 23:18"
- },
- {
   "t": "2026-11-11T20:31:59",
   "soort": "info",
   "tekst": "2026-11-11-n2030 online op facebook: Spreuken 23:18"
@@ -2546,5 +2536,19 @@
   "t": "2026-11-24T05:15:42",
   "soort": "info",
   "tekst": "Eerste-uurcijfers van 3 posts vastgelegd"
+ },
+ {
+  "t": "2026-11-24T07:01:51",
+  "soort": "fout",
+  "tekst": "Politiek nieuws (NOS): \"NAVO stuurt radarvliegtuig naar Polen na vondst van resten Russische raketten\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
+  "code": "nieuws_voorstel",
+  "post": "n112407010"
+ },
+ {
+  "t": "2026-11-24T07:01:51",
+  "soort": "fout",
+  "tekst": "Zwaar nieuws (NOS): \"Milieuramp in Straat van Hormuz: 'Effecten olievervuiling over veertig jaar nog zichtbaar'\". Wil je er een troostende post over? Die gaat dan pas 6 uur na het nieuws online.",
+  "code": "nieuws_voorstel",
+  "post": "n112407011"
  }
 ]

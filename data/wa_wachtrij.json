@@ -1,1 +1,98 @@
-[]
+[
+ {
+  "t": "2026-11-24T07:01+01:00",
+  "soort": "direct",
+  "tekst": "📰 *Nieuwsvoorstel* (politiek, altijd neutraal)\nNOS: NAVO stuurt radarvliegtuig naar Polen na vondst van resten Russische raketten\n\n*Optie 1:* Psalm 46:11\nOpening: \"Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.\"\n*Optie 2:* 2 Korinthe 5:7\nOpening: \"Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.\"\n*Optie 3:* 1 Petrus 5:6\nOpening: \"Veel meningen, veel onrust. Even terug naar wat vaststaat.\"\n\nKies een optie, of pas de openingszin aan in het dashboard.",
+  "sleutel": "nieuws:n112407010",
+  "knoppen": [
+   [
+    [
+     "Optie 1",
+     {
+      "actie": "nieuws_maken",
+      "id": "n112407010",
+      "keuze": 0
+     }
+    ],
+    [
+     "Optie 2",
+     {
+      "actie": "nieuws_maken",
+      "id": "n112407010",
+      "keuze": 1
+     }
+    ],
+    [
+     "Optie 3",
+     {
+      "actie": "nieuws_maken",
+      "id": "n112407010",
+      "keuze": 2
+     }
+    ]
+   ],
+   [
+    [
+     "Negeren",
+     {
+      "actie": "nieuws_negeren",
+      "id": "n112407010"
+     }
+    ]
+   ]
+  ],
+  "fotos": [
+   "docs/media/nieuws/n112407010-1-1.jpg",
+   "docs/media/nieuws/n112407010-2-1.jpg",
+   "docs/media/nieuws/n112407010-3-1.jpg"
+  ]
+ },
+ {
+  "t": "2026-11-24T07:01+01:00",
+  "soort": "direct",
+  "tekst": "📰 *Nieuwsvoorstel* (zwaar nieuws, gaat pas 6 uur na het nieuws online)\nNOS: Milieuramp in Straat van Hormuz: 'Effecten olievervuiling over veertig jaar nog zichtbaar'\n\n*Optie 1:* Johannes 16:33\nOpening: \"Er gebeurt veel in de wereld dat zwaar is. Even stil, samen.\"\n*Optie 2:* Jesaja 54:10\nOpening: \"Soms is het nieuws te zwaar voor woorden. Dan is er dit.\"\n*Optie 3:* Klaagliederen 3:31-32\nOpening: \"Voor iedereen die vandaag geraakt is door wat er gebeurde.\"\n\nKies een optie, of pas de openingszin aan in het dashboard.",
+  "sleutel": "nieuws:n112407011",
+  "knoppen": [
+   [
+    [
+     "Optie 1",
+     {
+      "actie": "nieuws_maken",
+      "id": "n112407011",
+      "keuze": 0
+     }
+    ],
+    [
+     "Optie 2",
+     {
+      "actie": "nieuws_maken",
+      "id": "n112407011",
+      "keuze": 1
+     }
+    ],
+    [
+     "Optie 3",
+     {
+      "actie": "nieuws_maken",
+      "id": "n112407011",
+      "keuze": 2
+     }
+    ]
+   ],
+   [
+    [
+     "Negeren",
+     {
+      "actie": "nieuws_negeren",
+      "id": "n112407011"
+     }
+    ]
+   ]
+  ],
+  "fotos": [
+   "docs/media/nieuws/n112407011-1-1.jpg",
+   "docs/media/nieuws/n112407011-2-1.jpg",
+   "docs/media/nieuws/n112407011-3-1.jpg"
+  ]
+ }
+]
