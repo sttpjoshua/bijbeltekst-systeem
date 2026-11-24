@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-24T07:01",
+ "gegenereerd": "2026-11-24T07:15",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -17270,16 +17270,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-22T12:17:52",
-   "soort": "info",
-   "tekst": "2026-11-22-5 online op instagram: Sefanja 3:17"
-  },
-  {
-   "t": "2026-11-22T12:17:59",
-   "soort": "info",
-   "tekst": "2026-11-22-5 online op facebook: Sefanja 3:17"
-  },
-  {
    "t": "2026-11-22T13:15:41",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
@@ -17572,16 +17562,23 @@
    "t": "2026-11-24T05:15:42",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 3 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-24T07:01:51",
+   "soort": "fout",
+   "tekst": "Politiek nieuws (NOS): \"NAVO stuurt radarvliegtuig naar Polen na vondst van resten Russische raketten\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
+   "code": "nieuws_voorstel",
+   "post": "n112407010"
+  },
+  {
+   "t": "2026-11-24T07:01:51",
+   "soort": "fout",
+   "tekst": "Zwaar nieuws (NOS): \"Milieuramp in Straat van Hormuz: 'Effecten olievervuiling over veertig jaar nog zichtbaar'\". Wil je er een troostende post over? Die gaat dan pas 6 uur na het nieuws online.",
+   "code": "nieuws_voorstel",
+   "post": "n112407011"
   }
  ],
  "recente_fouten": [
-  {
-   "t": "2026-11-22T07:01:26",
-   "soort": "fout",
-   "tekst": "Politiek nieuws (NOS): \"Premier Jetten en Britse premier Burnham dineren in Rijksmuseum, praten over Oekraïne\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
-   "code": "nieuws_voorstel",
-   "post": "n112207011"
-  },
   {
    "t": "2026-11-23T07:01:29",
    "soort": "fout",
@@ -17595,6 +17592,20 @@
    "tekst": "Politiek nieuws (NOS): \"Duitse minister van Onderwijs (CDU) spreekt zich uit voor AfD-verbod\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
    "code": "nieuws_voorstel",
    "post": "n112312020"
+  },
+  {
+   "t": "2026-11-24T07:01:51",
+   "soort": "fout",
+   "tekst": "Politiek nieuws (NOS): \"NAVO stuurt radarvliegtuig naar Polen na vondst van resten Russische raketten\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
+   "code": "nieuws_voorstel",
+   "post": "n112407010"
+  },
+  {
+   "t": "2026-11-24T07:01:51",
+   "soort": "fout",
+   "tekst": "Zwaar nieuws (NOS): \"Milieuramp in Straat van Hormuz: 'Effecten olievervuiling over veertig jaar nog zichtbaar'\". Wil je er een troostende post over? Die gaat dan pas 6 uur na het nieuws online.",
+   "code": "nieuws_voorstel",
+   "post": "n112407011"
   }
  ],
  "versen_totaal": 300,
@@ -17783,7 +17794,7 @@
    "ok": "2026-11-23T21:30"
   },
   "nieuws": {
-   "ok": "2026-11-23T17:01",
+   "ok": "2026-11-24T07:01",
    "laatst_ok": true,
    "detail": "2 nieuwe aanleidingen"
   },
@@ -22248,6 +22259,133 @@
   },
   "recent": [
    {
+    "id": "n112407011",
+    "t": "2026-11-23T20:26+01:00",
+    "bron": "NOS",
+    "kop": "Milieuramp in Straat van Hormuz: 'Effecten olievervuiling over veertig jaar nog zichtbaar'",
+    "link": "https://nos.nl/l/2640760",
+    "categorie": "zwaar",
+    "zwaar": true,
+    "status": "voorstel",
+    "post": null,
+    "opties": [
+     {
+      "vers_id": "John-16-33-33",
+      "ref": "Johannes 16:33",
+      "tekst": "Deze dingen heb Ik tot u gesproken, opdat gij in Mij vrede hebt. In de wereld zult gij verdrukking hebben, maar hebt goeden moed, Ik heb de wereld overwonnen.",
+      "zin": "Er gebeurt veel in de wereld dat zwaar is. Even stil, samen.",
+      "kernwoord": "overwonnen",
+      "betekenis": "Jezus belooft geen makkelijk leven. Hij zegt eerlijk: je zult het zwaar hebben. Maar Hij geeft ook moed: Hij heeft de wereld al overwonnen. Bij Hem is vrede.",
+      "toepassing": "Wat is zwaar op dit moment? Zeg vandaag: Jezus heeft dit al overwonnen.",
+      "brug": "Bij zwaar nieuws: troost die er is.",
+      "caption": "Er gebeurt veel in de wereld dat zwaar is. Even stil, samen.\n\n\"Deze dingen heb Ik tot u gesproken, opdat gij in Mij vrede hebt. In de wereld zult gij verdrukking hebben, maar hebt goeden moed, Ik heb de wereld overwonnen.\"\nJohannes 16:33\n\nBij zwaar nieuws: troost die er is. Het is zwaar, maar Jezus heeft gewonnen.",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112407011-1-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112407011-1-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112407011-1-3.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112407011-1-4.jpg"
+      ]
+     },
+     {
+      "vers_id": "Isaiah-54-10-10",
+      "ref": "Jesaja 54:10",
+      "tekst": "Want bergen zullen wijken, en heuvelen wankelen; maar Mijn goedertierenheid zal van u niet wijken, en het verbond Mijns vredes zal niet wankelen, zegt de HEERE, uw Ontfermer.",
+      "zin": "Soms is het nieuws te zwaar voor woorden. Dan is er dit.",
+      "kernwoord": "wijken",
+      "betekenis": "God zegt: zelfs als de bergen verdwijnen, blijft Mijn liefde. Er is niets zo vast als Gods trouw. Niet de bergen, niet de heuvels, maar Zijn liefde.",
+      "toepassing": "Wat voelt vandaag wankel? Zeg erbij: Gods liefde wijkt niet.",
+      "brug": "Bij zwaar nieuws: troost die er is.",
+      "caption": "Soms is het nieuws te zwaar voor woorden. Dan is er dit.\n\n\"Want bergen zullen wijken, en heuvelen wankelen; maar Mijn goedertierenheid zal van u niet wijken, en het verbond Mijns vredes zal niet wankelen, zegt de HEERE, uw Ontfermer.\"\nJesaja 54:10\n\nBij zwaar nieuws: troost die er is. Gods liefde voor jou blijft altijd.",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112407011-2-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112407011-2-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112407011-2-3.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112407011-2-4.jpg"
+      ]
+     },
+     {
+      "vers_id": "Lamentations-3-31-32",
+      "ref": "Klaagliederen 3:31-32",
+      "tekst": "Want de Heere zal niet verstoten in eeuwigheid. Maar als Hij bedroefd heeft, zo zal Hij Zich ontfermen, naar de grootheid Zijner goedertierenheden.",
+      "zin": "Voor iedereen die vandaag geraakt is door wat er gebeurde.",
+      "kernwoord": "ontfermen",
+      "betekenis": "Klaagliederen is geschreven in een tijd van diepe ellende. Toch zegt de schrijver: God verstoot niet voor altijd. Ook als het zwaar is, komt Zijn medeleven terug, groot en rijk.",
+      "toepassing": "Zit je in een zware periode? Houd vandaag vast aan dit ene woord: Hij zal Zich ontfermen.",
+      "brug": "Bij zwaar nieuws: troost die er is.",
+      "caption": "Voor iedereen die vandaag geraakt is door wat er gebeurde.\n\n\"Want de Heere zal niet verstoten in eeuwigheid. Maar als Hij bedroefd heeft, zo zal Hij Zich ontfermen, naar de grootheid Zijner goedertierenheden.\"\nKlaagliederen 3:31-32\n\nBij zwaar nieuws: troost die er is. Na verdriet komt Gods ontferming.",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112407011-3-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112407011-3-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112407011-3-3.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112407011-3-4.jpg"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "n112407010",
+    "t": "2026-11-23T22:19+01:00",
+    "bron": "NOS",
+    "kop": "NAVO stuurt radarvliegtuig naar Polen na vondst van resten Russische raketten",
+    "link": "https://nos.nl/l/2640773",
+    "categorie": "politiek",
+    "zwaar": false,
+    "status": "voorstel",
+    "post": null,
+    "opties": [
+     {
+      "vers_id": "Psalms-46-11-11",
+      "ref": "Psalm 46:11",
+      "tekst": "Laat af, en weet, dat Ik God ben; Ik zal verhoogd worden onder de heidenen, Ik zal verhoogd worden op de aarde. De HEERE der heirscharen is met ons; de God van Jakob is ons een Hoog Vertrek. Sela.",
+      "zin": "Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.",
+      "kernwoord": "Laat",
+      "betekenis": "God spreekt midden in onrust en oorlog. Laat af, stop met vechten, word stil. Weet dat Ik God ben. Niet jij hoeft alles te regelen. Hij is God.",
+      "toepassing": "Stop vandaag even met alles. Zeg langzaam: U bent God, ik niet.",
+      "brug": "Bij alle onrust: wat blijft staan.",
+      "caption": "Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.\n\n\"Laat af, en weet, dat Ik God ben; Ik zal verhoogd worden onder de heidenen, Ik zal verhoogd worden op de aarde. De HEERE der heirscharen is met ons; de God van Jakob is ons een Hoog Vertrek. Sela.\"\nPsalm 46:11\n\nBij alle onrust: wat blijft staan. Je hoeft niet alles zelf te regelen. Hij is God.",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112407010-1-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112407010-1-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112407010-1-3.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112407010-1-4.jpg"
+      ]
+     },
+     {
+      "vers_id": "II_Corinthians-5-7-7",
+      "ref": "2 Korinthe 5:7",
+      "tekst": "Want wij wandelen door geloof en niet door aanschouwen.",
+      "zin": "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.",
+      "kernwoord": "geloof",
+      "betekenis": "Veel van wat we hopen zien we nog niet. Paulus zegt: dat is precies wat geloof is. Je zet stappen op Gods woord, ook als je het eind van de weg niet ziet.",
+      "toepassing": "Zet vandaag één stap waarvan je het resultaat nog niet kunt zien.",
+      "brug": "Bij alle onrust: wat blijft staan.",
+      "caption": "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.\n\n\"Want wij wandelen door geloof en niet door aanschouwen.\"\n2 Korinthe 5:7\n\nBij alle onrust: wat blijft staan. Wandelen door geloof.",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112407010-2-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112407010-2-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112407010-2-3.jpg"
+      ]
+     },
+     {
+      "vers_id": "I_Peter-5-6-6",
+      "ref": "1 Petrus 5:6",
+      "tekst": "Vernedert u dan onder de krachtige hand Gods, opdat Hij u verhoge te Zijner tijd.",
+      "zin": "Veel meningen, veel onrust. Even terug naar wat vaststaat.",
+      "kernwoord": "verhoge",
+      "betekenis": "Petrus vraagt om nederigheid: niet jezelf op de voorgrond zetten, maar je onder Gods hand plaatsen. God ziet je, en Hij tilt je op wanneer de tijd daar is.",
+      "toepassing": "Laat vandaag een keer de eer aan een ander, en vertrouw dat God jou ziet.",
+      "brug": "Een vast punt in veel geluid.",
+      "caption": "Veel meningen, veel onrust. Even terug naar wat vaststaat.\n\n\"Vernedert u dan onder de krachtige hand Gods, opdat Hij u verhoge te Zijner tijd.\"\n1 Petrus 5:6\n\nEen vast punt in veel geluid. God tilt je op, op Zijn tijd.",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112407010-3-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112407010-3-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112407010-3-3.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112407010-3-4.jpg"
+      ]
+     }
+    ]
+   },
+   {
     "id": "n112317011",
     "t": "2026-11-23T13:28+01:00",
     "bron": "NOS",
@@ -23191,133 +23329,6 @@
     "status": "overgeslagen",
     "post": null,
     "opties": null
-   },
-   {
-    "id": "n111512011",
-    "t": "2026-11-15T07:15+01:00",
-    "bron": "NOS",
-    "kop": "Crisisoverleg D66, VVD en CDA vanochtend verder in Hilversum",
-    "link": "https://nos.nl/l/2639537",
-    "categorie": "politiek",
-    "zwaar": false,
-    "status": "voorstel",
-    "post": null,
-    "opties": [
-     {
-      "vers_id": "Psalms-125-1-1",
-      "ref": "Psalm 125:1",
-      "tekst": "Die op den HEERE vertrouwen, zijn als de berg Sion, die niet wankelt, maar blijft in eeuwigheid.",
-      "zin": "Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.",
-      "kernwoord": "wankelt",
-      "betekenis": "De dichter kijkt naar de berg Sion. Die staat er al eeuwen en beweegt niet. Zo stevig sta je als je op God vertrouwt. Niet omdat je zelf zo sterk bent.",
-      "toepassing": "Wat brengt je aan het wankelen? Zeg vandaag: ik sta vast door God.",
-      "brug": "Een vast punt in veel geluid.",
-      "caption": "Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.\n\n\"Die op den HEERE vertrouwen, zijn als de berg Sion, die niet wankelt, maar blijft in eeuwigheid.\"\nPsalm 125:1\n\nEen vast punt in veel geluid. Vertrouwen op God geeft je vaste grond.",
-      "media": [
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111512011-1-1.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111512011-1-2.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111512011-1-3.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111512011-1-4.jpg"
-      ]
-     },
-     {
-      "vers_id": "Nahum-1-7-7",
-      "ref": "Nahum 1:7",
-      "tekst": "De HEERE is goed, Hij is ter sterkte in den dag der benauwdheid, en Hij kent hen, die op Hem betrouwen.",
-      "zin": "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.",
-      "kernwoord": "goed",
-      "betekenis": "Nahum is een streng boek, maar midden erin staat dit vers. God is goed. In benauwde tijden is Hij een vesting, en Hij kent iedereen die op Hem vertrouwt persoonlijk.",
-      "toepassing": "Zeg vandaag als het tegenzit: God is goed, en Hij kent mij.",
-      "brug": "Bij alle onrust: wat blijft staan.",
-      "caption": "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.\n\n\"De HEERE is goed, Hij is ter sterkte in den dag der benauwdheid, en Hij kent hen, die op Hem betrouwen.\"\nNahum 1:7\n\nBij alle onrust: wat blijft staan. God kent wie op Hem vertrouwt.",
-      "media": [
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111512011-2-1.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111512011-2-2.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111512011-2-3.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111512011-2-4.jpg"
-      ]
-     },
-     {
-      "vers_id": "Micah-6-8-8",
-      "ref": "Micha 6:8",
-      "tekst": "Hij heeft u bekend gemaakt, o mens! wat goed is; en wat eist de HEERE van u, dan recht te doen, en weldadigheid lief te hebben, en ootmoediglijk te wandelen met uw God?",
-      "zin": "Veel meningen, veel onrust. Even terug naar wat vaststaat.",
-      "kernwoord": "ootmoediglijk",
-      "betekenis": "Micha vat samen wat God vraagt. Geen grote offers of indrukwekkende dingen, maar drie eenvoudige dingen: eerlijk zijn, goed zijn voor anderen, en bescheiden met God leven.",
-      "toepassing": "Kies vandaag één van de drie en doe het bewust.",
-      "brug": "Een vast punt in veel geluid.",
-      "caption": "Veel meningen, veel onrust. Even terug naar wat vaststaat.\n\n\"Hij heeft u bekend gemaakt, o mens! wat goed is; en wat eist de HEERE van u, dan recht te doen, en weldadigheid lief te hebben, en ootmoediglijk te wandelen met uw God?\"\nMicha 6:8\n\nEen vast punt in veel geluid. Recht doen, trouw liefhebben, nederig wandelen.",
-      "media": [
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111512011-3-1.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111512011-3-2.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111512011-3-3.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111512011-3-4.jpg"
-      ]
-     }
-    ]
-   },
-   {
-    "id": "n111512010",
-    "t": "2026-11-15T10:48+01:00",
-    "bron": "NOS",
-    "kop": "Doodstraf voor plegers fatale aanslag op kerk Jordanië",
-    "link": "https://nos.nl/l/2639558",
-    "categorie": "zwaar",
-    "zwaar": true,
-    "status": "genegeerd",
-    "post": null,
-    "opties": [
-     {
-      "vers_id": "Matthew-11-28-28",
-      "ref": "Mattheüs 11:28",
-      "tekst": "Komt herwaarts tot Mij, allen die vermoeid en belast zijt, en Ik zal u rust geven.",
-      "zin": "Er gebeurt veel in de wereld dat zwaar is. Even stil, samen.",
-      "kernwoord": "rust",
-      "betekenis": "Jezus nodigt iedereen uit die moe is. Er zijn geen voorwaarden. Je hoeft je eerst niet beter te voelen. Je mag komen zoals je bent.",
-      "toepassing": "Neem vandaag tien minuten zonder scherm en breng je vermoeidheid bij Jezus.",
-      "brug": "Als er geen woorden zijn: dit.",
-      "caption": "Er gebeurt veel in de wereld dat zwaar is. Even stil, samen.\n\n\"Komt herwaarts tot Mij, allen die vermoeid en belast zijt, en Ik zal u rust geven.\"\nMattheüs 11:28\n\nAls er geen woorden zijn: dit. Je mag moe bij Jezus komen.",
-      "media": [
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111512010-1-1.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111512010-1-2.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111512010-1-3.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111512010-1-4.jpg"
-      ]
-     },
-     {
-      "vers_id": "Isaiah-55-12-12",
-      "ref": "Jesaja 55:12",
-      "tekst": "Want in blijdschap zult gijlieden uittrekken, en met vrede voortgeleid worden; de bergen en heuvelen zullen geschal maken met vrolijk gezang voor uw aangezicht, en alle bomen des velds zullen de handen samenklappen.",
-      "zin": "Soms is het nieuws te zwaar voor woorden. Dan is er dit.",
-      "kernwoord": "vrede",
-      "betekenis": "Jesaja beschrijft een feest: mensen trekken blij en vredig verder, en zelfs de bergen en bomen doen mee. Een prachtig beeld van hoe God ons naar huis leidt.",
-      "toepassing": "Ga vandaag even naar buiten en kijk naar de natuur. Zie het als een groet van God.",
-      "brug": "Bij zwaar nieuws: troost die er is.",
-      "caption": "Soms is het nieuws te zwaar voor woorden. Dan is er dit.\n\n\"Want in blijdschap zult gijlieden uittrekken, en met vrede voortgeleid worden; de bergen en heuvelen zullen geschal maken met vrolijk gezang voor uw aangezicht, en alle bomen des velds zullen de handen samenklappen.\"\nJesaja 55:12\n\nBij zwaar nieuws: troost die er is. God leidt je in vrede en vreugde.",
-      "media": [
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111512010-2-1.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111512010-2-2.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111512010-2-3.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111512010-2-4.jpg"
-      ]
-     },
-     {
-      "vers_id": "Psalms-130-5-5",
-      "ref": "Psalm 130:5",
-      "tekst": "Ik verwacht den HEERE; mijn ziel verwacht, en ik hoop op Zijn Woord.",
-      "zin": "Voor iedereen die vandaag geraakt is door wat er gebeurde.",
-      "kernwoord": "verwacht",
-      "betekenis": "De dichter wacht op God, zoals een wachter op de ochtend wacht. Wachten is moeilijk, maar hij weet dat God komt. Zijn hoop rust op wat God beloofd heeft.",
-      "toepassing": "Waar wacht je op? Lees vandaag een belofte uit de Bijbel en houd die vast.",
-      "brug": "Als er geen woorden zijn: dit.",
-      "caption": "Voor iedereen die vandaag geraakt is door wat er gebeurde.\n\n\"Ik verwacht den HEERE; mijn ziel verwacht, en ik hoop op Zijn Woord.\"\nPsalm 130:5\n\nAls er geen woorden zijn: dit. Wachten op God is wachten met hoop.",
-      "media": [
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111512010-3-1.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111512010-3-2.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111512010-3-3.jpg"
-      ]
-     }
-    ]
    }
   ]
  },

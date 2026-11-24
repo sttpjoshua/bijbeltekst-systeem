@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T07:01:44",
+ "updated": "2026-11-24T07:15:39",
  "agents": {
   "verskiezer": {
    "t": "2026-11-24T01:04:11",
@@ -22,8 +22,8 @@
    "state": "done"
   },
   "controller": {
-   "t": "2026-11-23T12:02:01",
-   "task": "Politiek nieuws (NOS): \"Duitse minister van Onderwijs (CDU) spreekt zi",
+   "t": "2026-11-24T07:01:51",
+   "task": "Zwaar nieuws (NOS): \"Milieuramp in Straat van Hormuz: 'Effecten olieve",
    "state": "error"
   },
   "analist": {
@@ -56,6 +56,14 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "07:01",
+   "msg": "Zwaar nieuws (NOS): \"Milieuramp in Straat van Hormuz: 'Effecten olievervuiling over veertig jaar nog zichtbaar"
+  },
+  {
+   "t": "07:01",
+   "msg": "Politiek nieuws (NOS): \"NAVO stuurt radarvliegtuig naar Polen na vondst van resten Russische raketten\". Neutra"
+  },
   {
    "t": "05:15",
    "msg": "Eerste-uurcijfers van 3 posts vastgelegd"
@@ -95,14 +103,6 @@
   {
    "t": "22:03",
    "msg": "2026-11-23-3 online op facebook: Openbaring 7:17"
-  },
-  {
-   "t": "22:03",
-   "msg": "2026-11-23-4 online op facebook: Psalm 139:14"
-  },
-  {
-   "t": "22:03",
-   "msg": "2026-11-23-5 online op facebook: 1 Korinthe 15:58"
   }
  ],
  "lampen": [
