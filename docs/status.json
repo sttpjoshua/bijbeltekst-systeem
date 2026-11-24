@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T15:46:09",
+ "updated": "2026-11-24T15:51:26",
  "agents": {
   "verskiezer": {
    "t": "2026-11-24T01:04:11",
@@ -27,8 +27,8 @@
    "state": "error"
   },
   "analist": {
-   "t": "2026-11-23T15:36:52",
-   "task": "Weekanalyse: strategie v9",
+   "t": "2026-11-24T15:51:26",
+   "task": "Weekanalyse: strategie v10",
    "state": "done"
   },
   "community": {
@@ -40,13 +40,13 @@
  "stats": {
   "posts_today": 2,
   "posts_total": 83,
-  "reach_7d": 783,
+  "reach_7d": 855,
   "best_time": "20:30",
   "next_post": "2026-11-24T17:45:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
-  "instagram": 1439,
+  "instagram": 1511,
   "facebook": 4,
   "youtube": 0,
   "tiktok": 0
@@ -56,6 +56,14 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "15:51",
+   "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
+  },
+  {
+   "t": "15:50",
+   "msg": "Statistieken opgehaald voor 17 posts"
+  },
   {
    "t": "14:35",
    "msg": "Dagelijkse run: 5 posts voor morgen (25 nov) en 5 voor overmorgen (26 nov) staan klaar (door het systeem gemaa"
@@ -95,14 +103,6 @@
   {
    "t": "07:01",
    "msg": "Politiek nieuws (NOS): \"NAVO stuurt radarvliegtuig naar Polen na vondst van resten Russische raketten\". Neutra"
-  },
-  {
-   "t": "05:15",
-   "msg": "Eerste-uurcijfers van 3 posts vastgelegd"
-  },
-  {
-   "t": "04:02",
-   "msg": "2026-11-24-5 online op facebook: Psalm 91:1-2"
   }
  ],
  "lampen": [
@@ -153,13 +153,13 @@
    3,
    3,
    3,
-   3,
    4,
    5,
    5,
    5,
    5,
    6,
+   7,
    7,
    7
   ]
