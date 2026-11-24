@@ -2,11 +2,6 @@
  {
   "t": "2026-11-12T09:06:20",
   "soort": "info",
-  "tekst": "Nieuwspost: Psalm 119:99 vervangen door Psalm 20:8 (aanleiding: politiek, NOS)"
- },
- {
-  "t": "2026-11-12T09:06:20",
-  "soort": "info",
   "tekst": "Bediening: Nieuwspost klaargezet: Psalm 20:8 op 2026-11-12 om 17:45"
  },
  {
@@ -2549,5 +2544,10 @@
   "t": "2026-11-24T17:46:48",
   "soort": "info",
   "tekst": "2026-11-24-3 online op facebook: 2 Timotheüs 4:7"
+ },
+ {
+  "t": "2026-11-24T19:03:42",
+  "soort": "info",
+  "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
  }
 ]

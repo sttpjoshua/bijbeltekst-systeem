@@ -31,7 +31,7 @@
   "ok": "2026-11-20T08:01",
   "laatst_ok": false,
   "detail": "400: {\"error\":{\"message\":\"Unsupported get request. Object with ID '18646160734043579' does not exist, cannot be loaded due to missing permissions, or does not s",
-  "fout": "2026-11-24T18:01"
+  "fout": "2026-11-24T19:01"
  },
  "facebook": {
   "ok": "2026-11-24T17:46",
@@ -54,9 +54,9 @@
   "detail": "10 posts voor MORGEN en OVERMORGEN klaargezet"
  },
  "whatsapp": {
-  "fout": "2026-11-11T13:49",
-  "laatst_ok": true,
-  "detail": "1 bericht(en) verstuurd",
+  "fout": "2026-11-24T19:03",
+  "laatst_ok": false,
+  "detail": "<urlopen error [Errno 104] Connection reset by peer>",
   "ok": "2026-11-24T12:02"
  },
  "nieuws": {
