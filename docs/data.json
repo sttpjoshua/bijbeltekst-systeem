@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-24T17:30",
+ "gegenereerd": "2026-11-24T17:46",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1700,7 +1700,7 @@
    "ref": "Psalm 91:1-2",
    "tekst": "Die in de schuilplaats des Allerhoogsten is gezeten, die zal vernachten in de schaduw des Almachtigen. Ik zal tot den HEERE zeggen: Mijn Toevlucht en mijn Burg! mijn God, op Welken ik vertrouw!",
    "hook": "Een schuilplaats, dicht bij God.",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "zand",
     "thema": "vertrouwen",
@@ -1749,10 +1749,12 @@
    ],
    "thumb": "thumbs/2026-11-24-5.jpg",
    "platformen": [
-    "facebook"
+    "facebook",
+    "instagram"
    ],
    "links": {
-    "facebook": "https://www.facebook.com/1015160368352770_122135539034879910"
+    "facebook": "https://www.facebook.com/1015160368352770_122135539034879910",
+    "instagram": "https://www.instagram.com/p/DgIaqP2lwsc/"
    },
    "totaal": {
     "views": 0,
@@ -1814,7 +1816,8 @@
     }
    },
    "pub": {
-    "facebook": "2026-11-24T04:02+01:00"
+    "facebook": "2026-11-24T04:02+01:00",
+    "instagram": "2026-11-24T17:46+01:00"
    },
    "gemist": [],
    "nood": false,
@@ -2022,8 +2025,12 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-24-3.mp4"
    ],
    "thumb": "thumbs/2026-11-24-3.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "facebook"
+   ],
+   "links": {
+    "facebook": "https://www.facebook.com/2084056342298128"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -2053,11 +2060,13 @@
     "video_uitleg": "vaste regel"
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "facebook": "2026-11-24T17:46+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": null,
-   "online": null
+   "online": "2026-11-24T17:46+01:00"
   },
   {
    "id": "2026-11-24-2",
@@ -17625,21 +17634,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-22T19:03:07",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
-   "t": "2026-11-22T20:30:59",
-   "soort": "info",
-   "tekst": "2026-11-22-1 online op facebook: Filippenzen 1:6"
-  },
-  {
-   "t": "2026-11-22T20:32:24",
-   "soort": "info",
-   "tekst": "2026-11-22-2 ook als story geplaatst"
-  },
-  {
    "t": "2026-11-22T20:32:24",
    "soort": "info",
    "tekst": "2026-11-22-2 online op instagram: Psalm 18:3"
@@ -17933,6 +17927,21 @@
    "t": "2026-11-24T15:51:26",
    "soort": "info",
    "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
+  },
+  {
+   "t": "2026-11-24T17:46:35",
+   "soort": "info",
+   "tekst": "2026-11-24-5 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-24T17:46:35",
+   "soort": "info",
+   "tekst": "2026-11-24-5 online op instagram: Psalm 91:1-2"
+  },
+  {
+   "t": "2026-11-24T17:46:48",
+   "soort": "info",
+   "tekst": "2026-11-24-3 online op facebook: 2 Timotheüs 4:7"
   }
  ],
  "recente_fouten": [
@@ -18098,9 +18107,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-24T12:18",
+   "ok": "2026-11-24T17:46",
    "laatst_ok": true,
-   "detail": "Psalm 31:15-16 geplaatst"
+   "detail": "Psalm 91:1-2 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-24T15:51",
@@ -18132,9 +18141,9 @@
    "fout": "2026-11-24T17:01"
   },
   "facebook": {
-   "ok": "2026-11-24T12:18",
+   "ok": "2026-11-24T17:46",
    "laatst_ok": true,
-   "detail": "Psalm 31:15-16 geplaatst"
+   "detail": "2 Timotheüs 4:7 geplaatst"
   },
   "statistieken": {
    "ok": "2026-11-24T15:51",
@@ -18295,7 +18304,7 @@
  ],
  "weken": {
   "deze": {
-   "posts": 32,
+   "posts": 33,
    "reach": 755,
    "views": 825,
    "likes": 20,
@@ -18908,7 +18917,7 @@
   "tot": "2026-11-30",
   "dag": 9,
   "dagen": 14,
-  "online": 42,
+  "online": 43,
   "gemeten": 21
  },
  "voorraad": {
@@ -23812,8 +23821,8 @@
      },
      {
       "optie": "zand",
-      "online": 4,
-      "gepland": 7,
+      "online": 5,
+      "gepland": 6,
       "n": 2,
       "gem": 1.82,
       "oordeel": "weinig data"
@@ -23955,24 +23964,6 @@
       "dimensie": "huisstijl",
       "optie": "papier_groen",
       "bron": "experiment"
-     }
-    ]
-   },
-   {
-    "id": "2026-11-24-3",
-    "ref": "2 Timotheüs 4:7",
-    "datum": "2026-11-24",
-    "tijdslot": "22:00",
-    "tests": [
-     {
-      "dimensie": "huisstijl",
-      "optie": "zand",
-      "bron": "experiment"
-     },
-     {
-      "dimensie": "reel_stijl",
-      "optie": "markeren",
-      "bron": "test markeren"
      }
     ]
    },

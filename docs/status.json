@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T17:30:48",
+ "updated": "2026-11-24T17:46:48",
  "agents": {
   "verskiezer": {
    "t": "2026-11-24T01:04:11",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-24T12:18:25",
-   "task": "Postte Psalm 31:15-16 op facebook",
+   "t": "2026-11-24T17:46:48",
+   "task": "Postte 2 Timotheüs 4:7 op facebook",
    "state": "done"
   },
   "controller": {
@@ -38,11 +38,11 @@
   }
  },
  "stats": {
-  "posts_today": 2,
-  "posts_total": 83,
+  "posts_today": 3,
+  "posts_total": 84,
   "reach_7d": 855,
   "best_time": "20:30",
-  "next_post": "2026-11-24T17:45:00"
+  "next_post": "2026-11-24T20:30:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
@@ -56,6 +56,18 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "17:46",
+   "msg": "2026-11-24-3 online op facebook: 2 Timotheüs 4:7"
+  },
+  {
+   "t": "17:46",
+   "msg": "2026-11-24-5 online op instagram: Psalm 91:1-2"
+  },
+  {
+   "t": "17:46",
+   "msg": "2026-11-24-5 ook als story geplaatst"
+  },
   {
    "t": "15:51",
    "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
@@ -91,18 +103,6 @@
   {
    "t": "12:18",
    "msg": "2026-11-24-4 ook als story geplaatst"
-  },
-  {
-   "t": "12:02",
-   "msg": "Politiek nieuws (NOS): \"Natuurijsbanen geopend: marathonschaatsster verpulvert werelduurrecord\". Neutrale post"
-  },
-  {
-   "t": "07:01",
-   "msg": "Zwaar nieuws (NOS): \"Milieuramp in Straat van Hormuz: 'Effecten olievervuiling over veertig jaar nog zichtbaar"
-  },
-  {
-   "t": "07:01",
-   "msg": "Politiek nieuws (NOS): \"NAVO stuurt radarvliegtuig naar Polen na vondst van resten Russische raketten\". Neutra"
   }
  ],
  "lampen": [
