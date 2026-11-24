@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-24T21:30",
+ "gegenereerd": "2026-11-24T21:45",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -2179,8 +2179,26 @@
    "links": {
     "instagram": "https://www.instagram.com/p/DgItj7yEuyt/"
    },
-   "totaal": {},
-   "per_platform": {},
+   "totaal": {
+    "views": 2,
+    "reach": 1,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0
+   },
+   "per_platform": {
+    "instagram": {
+     "views": 2,
+     "reach": 1,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": 0,
+     "t": null
+    }
+   },
    "score": {},
    "keuzebron": {
     "huisstijl": "experiment",
@@ -2207,7 +2225,19 @@
     "tijdslot": "experiment",
     "video_uitleg": "n.v.t."
    },
-   "momenten": {},
+   "momenten": {
+    "instagram": {
+     "1u": {
+      "views": 2,
+      "reach": 1,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0
+     }
+    }
+   },
    "pub": {
     "instagram": "2026-11-24T20:31+01:00"
    },
@@ -17691,11 +17721,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-22T21:45:44",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
    "t": "2026-11-22T22:04:16",
    "soort": "info",
    "tekst": "2026-11-22-4 ook als story geplaatst"
@@ -17999,6 +18024,11 @@
    "t": "2026-11-24T20:31:43",
    "soort": "info",
    "tekst": "2026-11-24-2 online op instagram: 2 Korinthe 12:9"
+  },
+  {
+   "t": "2026-11-24T21:45:35",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
   }
  ],
  "recente_fouten": [
@@ -18221,7 +18251,7 @@
    "fout": "2026-11-24T19:03",
    "laatst_ok": true,
    "detail": "1 bericht(en) verstuurd",
-   "ok": "2026-11-24T19:15"
+   "ok": "2026-11-24T21:30"
   },
   "nieuws": {
    "ok": "2026-11-24T17:01",
