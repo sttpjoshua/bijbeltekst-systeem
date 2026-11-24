@@ -178,16 +178,33 @@ def ophalen():
     return uit
 
 
+# Korte woorden (nsc, navo, iran) alleen aan het begin van een woord, en geen 'partij' in steek-/vechtpartij:
+# eerder werden 'marathonschaatsster', 'Winschoten' en 'miljardenschikking' als politiek gezien (zat 'nsc' in).
+_NIET_POLITIEK = ["steekpartij", "schietpartij", "vechtpartij", "knokpartij", "feestpartij", "partijtje"]
+
+
+def _politiek(k):
+    for w in _NIET_POLITIEK:
+        k = k.replace(w, " ")
+    for w in POLITIEK:
+        if len(w.strip()) <= 4:
+            if re.search(r"(?<![a-zà-ÿ0-9])" + re.escape(w), k):
+                return True
+        elif w in k:
+            return True
+    return False
+
+
 def indelen(kop):
     """(soort, categorie) of None. soort: 'licht' of 'zwaar'."""
     k = " " + kop.lower() + " "
     if any(w in k for w in ZWAAR_GROOT):
         return ("zwaar", "zwaar")
-    if any(w in k for w in POLITIEK):  # ook als er een zwaar woord in staat (bijv. vredesgesprekken over een oorlog)
+    if _politiek(k):  # ook als er een zwaar woord in staat (bijv. vredesgesprekken over een oorlog)
         return ("politiek", "politiek")
     if any(w in k for w in ZWAAR):  # klein zwaar nieuws (ongeluk, steekpartij): niets mee doen
         return None
-    if any(w in k for w in POLITIEK):
+    if _politiek(k):
         return ("politiek", "politiek")
     for cat, r in LICHT.items():
         if any(w in k for w in r["woorden"]):

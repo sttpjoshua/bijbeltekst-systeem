@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T14:31:05",
+ "updated": "2026-11-24T14:35:23",
  "agents": {
   "verskiezer": {
    "t": "2026-11-24T01:04:11",
@@ -57,6 +57,18 @@
  ],
  "log": [
   {
+   "t": "14:35",
+   "msg": "Dagelijkse run: 5 posts voor morgen (25 nov) en 5 voor overmorgen (26 nov) staan klaar (door het systeem gemaa"
+  },
+  {
+   "t": "14:34",
+   "msg": "Zelf opgelost: nieuws werd soms ten onrechte als politiek gezien omdat 'nsc' midden in woorden zat (marathonsc"
+  },
+  {
+   "t": "14:33",
+   "msg": "Materiaal-repo niet gekoppeld (add_repo ontbreekt in deze sessie); GitHub Actions vult muziek aan"
+  },
+  {
    "t": "13:30",
    "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
   },
@@ -91,18 +103,6 @@
   {
    "t": "04:02",
    "msg": "2026-11-24-5 online op facebook: Psalm 91:1-2"
-  },
-  {
-   "t": "04:02",
-   "msg": "2026-11-24-1 online op facebook: Jesaja 43:4"
-  },
-  {
-   "t": "04:02",
-   "msg": "2026-11-24-1 online op instagram: Jesaja 43:4"
-  },
-  {
-   "t": "04:02",
-   "msg": "2026-11-24-1 ook als story geplaatst"
   }
  ],
  "lampen": [

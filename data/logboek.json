@@ -1,23 +1,5 @@
 [
  {
-  "t": "2026-11-11T22:05:26",
-  "soort": "info",
-  "tekst": "2026-11-11-n2200 online op facebook: Romeinen 15:4"
- },
- {
-  "t": "2026-11-12T07:01:20",
-  "soort": "fout",
-  "tekst": "Politiek nieuws (NOS): \"Wekdienst 12/11: Erop of eronder voor kabinet • Hoger beroep tegen Erasmusschutter\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
-  "code": "nieuws_voorstel",
-  "post": "n111207010",
-  "opgelost": true
- },
- {
-  "t": "2026-11-12T07:01:23",
-  "soort": "info",
-  "tekst": "Nieuwspost: Habakuk 3:18 vervangen door Psalm 9:2 (aanleiding: hitte, NOS)"
- },
- {
   "t": "2026-11-12T07:31:39",
   "soort": "info",
   "tekst": "2026-11-12-1 ook als story geplaatst"
@@ -2552,5 +2534,20 @@
   "t": "2026-11-24T13:30:59",
   "soort": "info",
   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
+ },
+ {
+  "t": "2026-11-24T14:33:43",
+  "soort": "info",
+  "tekst": "Materiaal-repo niet gekoppeld (add_repo ontbreekt in deze sessie); GitHub Actions vult muziek aan"
+ },
+ {
+  "t": "2026-11-24T14:34:11",
+  "soort": "info",
+  "tekst": "Zelf opgelost: nieuws werd soms ten onrechte als politiek gezien omdat 'nsc' midden in woorden zat (marathonschaatsster, Winschoten, miljardenschikking) en 'partij' in steekpartij. Korte woorden tellen nu alleen aan het begin van een woord."
+ },
+ {
+  "t": "2026-11-24T14:35:23",
+  "soort": "info",
+  "tekst": "Dagelijkse run: 5 posts voor morgen (25 nov) en 5 voor overmorgen (26 nov) staan klaar (door het systeem gemaakt), reserveverzen voor 26 nov ingevuld"
  }
 ]

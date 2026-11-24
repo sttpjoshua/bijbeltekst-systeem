@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-24T14:31",
+ "gegenereerd": "2026-11-24T14:35",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -838,7 +838,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Psalm 28:7",
    "caption": "Even dit, voor je aan je dag begint.\n\n\"Maar gij zult ontvangen de kracht des Heiligen Geestes, Die over u komen zal; en gij zult Mijn getuigen zijn, zo te Jeruzalem, als in geheel Judea en Samaria, en tot aan het uiterste der aarde.\"\nHandelingen 1:8\n\nJe hoeft niet op eigen kracht te getuigen. God geeft de kracht die je nodig hebt.",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-26-5.mp4",
@@ -927,7 +927,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Hebreeën 11:6",
    "caption": "Welke zorg draag jij al te lang?\n\n\"Werpt al uw bekommernis op Hem, want Hij zorgt voor u.\"\n1 Petrus 5:7\n\nGod zorgt voor jou, ook vandaag.\n\nWelke zorg gooi jij vandaag op God?",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-26-4.mp4",
@@ -1016,7 +1016,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "1 Johannes 3:2",
    "caption": "Voor iedereen die opziet tegen een gesprek met iemand.\n\n\"Zodat wij vrijmoediglijk durven zeggen: De Heere is mij een Helper, en ik zal niet vrezen, wat mij een mens zal doen.\"\nHebreeën 13:6\n\nGod is mijn Helper.\n\nTegen welke ontmoeting zie jij op deze week?",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-26-3-1.jpg",
@@ -1107,7 +1107,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Mattheüs 6:27",
    "caption": "Lees dit vers en let op de woorden 'van dag tot dag'.\n\n\"Daarom vertragen wij niet; maar hoewel onze uitwendige mens verdorven wordt, zo wordt nochtans de inwendige vernieuwd van dag tot dag.\"\n2 Korinthe 4:16\n\nVan binnen word je elke dag vernieuwd.\n\nWat zou je van binnen vernieuwd willen zien?",
    "uitleg": "Ook als je lichaam zwakker wordt, wordt je binnenkant elke dag nieuw.",
    "media": "docs/media/2026-11/2026-11-26-2.mp4",
@@ -1196,7 +1196,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Efeze 2:19",
    "caption": "Een goede start begint hier.\n\n\"Immers is mijn ziel stil tot God; van Hem is mijn heil.\"\nPsalm 62:2\n\nBij God mag je ziel tot rust komen.",
    "uitleg": "Mijn ziel is stil bij God. Van Hem komt mijn redding.",
    "media": "docs/media/2026-11/2026-11-26-1-1.jpg",
@@ -17330,21 +17330,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-22T14:35:02",
-   "soort": "info",
-   "tekst": "Materiaal-repo niet gecloned (add_repo ontbreekt in deze sessie); GitHub Actions vult muziek zelf aan"
-  },
-  {
-   "t": "2026-11-22T14:35:02",
-   "soort": "info",
-   "tekst": "Dagelijkse run: 10 posts voor 23 en 24 nov gecontroleerd (zelfstandig gemaakt), reserveverzen ingevuld uit de tekstbank, tekstbank 36 dagen"
-  },
-  {
-   "t": "2026-11-22T17:46:18",
-   "soort": "info",
-   "tekst": "2026-11-22-1 ook als story geplaatst"
-  },
-  {
    "t": "2026-11-22T17:46:18",
    "soort": "info",
    "tekst": "2026-11-22-1 online op instagram: Filippenzen 1:6"
@@ -17638,6 +17623,21 @@
    "t": "2026-11-24T13:30:59",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-24T14:33:43",
+   "soort": "info",
+   "tekst": "Materiaal-repo niet gekoppeld (add_repo ontbreekt in deze sessie); GitHub Actions vult muziek aan"
+  },
+  {
+   "t": "2026-11-24T14:34:11",
+   "soort": "info",
+   "tekst": "Zelf opgelost: nieuws werd soms ten onrechte als politiek gezien omdat 'nsc' midden in woorden zat (marathonschaatsster, Winschoten, miljardenschikking) en 'partij' in steekpartij. Korte woorden tellen nu alleen aan het begin van een woord."
+  },
+  {
+   "t": "2026-11-24T14:35:23",
+   "soort": "info",
+   "tekst": "Dagelijkse run: 5 posts voor morgen (25 nov) en 5 voor overmorgen (26 nov) staan klaar (door het systeem gemaakt), reserveverzen voor 26 nov ingevuld"
   }
  ],
  "recente_fouten": [
@@ -17847,12 +17847,12 @@
    "detail": "21 nieuwe metingen"
   },
   "zelftest": {
-   "ok": "2026-11-23T14:35",
+   "ok": "2026-11-24T14:35",
    "laatst_ok": true,
    "detail": "18 onderdelen gemaakt en gecontroleerd"
   },
   "dagelijks": {
-   "ok": "2026-11-23T14:34",
+   "ok": "2026-11-24T14:35",
    "laatst_ok": true,
    "detail": "10 posts voor MORGEN en OVERMORGEN klaargezet"
   },
