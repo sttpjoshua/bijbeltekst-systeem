@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-24T20:15",
+ "gegenereerd": "2026-11-24T20:31",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -2173,8 +2173,12 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-24-2-3.jpg"
    ],
    "thumb": "thumbs/2026-11-24-2.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "instagram"
+   ],
+   "links": {
+    "instagram": "https://www.instagram.com/p/DgItj7yEuyt/"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -2204,11 +2208,13 @@
     "video_uitleg": "n.v.t."
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "instagram": "2026-11-24T20:31+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": null,
-   "online": null
+   "online": "2026-11-24T20:31+01:00"
   },
   {
    "id": "2026-11-24-1",
@@ -17685,16 +17691,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-22T20:32:32",
-   "soort": "info",
-   "tekst": "2026-11-22-2 online op facebook: Psalm 18:3"
-  },
-  {
-   "t": "2026-11-22T21:30:55",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
-  },
-  {
    "t": "2026-11-22T21:45:44",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
@@ -17993,6 +17989,16 @@
    "t": "2026-11-24T19:03:42",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-24T20:31:43",
+   "soort": "info",
+   "tekst": "2026-11-24-2 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-24T20:31:43",
+   "soort": "info",
+   "tekst": "2026-11-24-2 online op instagram: 2 Korinthe 12:9"
   }
  ],
  "recente_fouten": [
@@ -18158,9 +18164,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-24T17:46",
+   "ok": "2026-11-24T20:31",
    "laatst_ok": true,
-   "detail": "Psalm 91:1-2 geplaatst"
+   "detail": "2 Korinthe 12:9 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-24T15:51",
@@ -24005,19 +24011,6 @@
    }
   ],
   "komend": [
-   {
-    "id": "2026-11-24-2",
-    "ref": "2 Korinthe 12:9",
-    "datum": "2026-11-24",
-    "tijdslot": "20:30",
-    "tests": [
-     {
-      "dimensie": "huisstijl",
-      "optie": "papier_groen",
-      "bron": "experiment"
-     }
-    ]
-   },
    {
     "id": "2026-11-25-5",
     "ref": "Psalm 42:6",
