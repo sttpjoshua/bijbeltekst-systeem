@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T21:45:36",
+ "updated": "2026-11-24T22:04:59",
  "agents": {
   "verskiezer": {
    "t": "2026-11-24T01:04:11",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-24T20:31:43",
-   "task": "Postte 2 Korinthe 12:9 op instagram",
+   "t": "2026-11-24T22:04:59",
+   "task": "Postte 2 Timotheüs 4:7 op instagram",
    "state": "done"
   },
   "controller": {
@@ -38,11 +38,11 @@
   }
  },
  "stats": {
-  "posts_today": 3,
-  "posts_total": 84,
+  "posts_today": 5,
+  "posts_total": 86,
   "reach_7d": 855,
   "best_time": "20:30",
-  "next_post": "2026-11-24T20:30:00"
+  "next_post": "2026-11-25T04:00:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
@@ -56,6 +56,18 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "22:04",
+   "msg": "2026-11-24-3 online op instagram: 2 Timotheüs 4:7"
+  },
+  {
+   "t": "22:04",
+   "msg": "2026-11-24-3 ook als story geplaatst"
+  },
+  {
+   "t": "22:03",
+   "msg": "2026-11-24-2 online op facebook: 2 Korinthe 12:9"
+  },
   {
    "t": "21:45",
    "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
@@ -91,18 +103,6 @@
   {
    "t": "15:50",
    "msg": "Statistieken opgehaald voor 17 posts"
-  },
-  {
-   "t": "14:35",
-   "msg": "Dagelijkse run: 5 posts voor morgen (25 nov) en 5 voor overmorgen (26 nov) staan klaar (door het systeem gemaa"
-  },
-  {
-   "t": "14:34",
-   "msg": "Zelf opgelost: nieuws werd soms ten onrechte als politiek gezien omdat 'nsc' midden in woorden zat (marathonsc"
-  },
-  {
-   "t": "14:33",
-   "msg": "Materiaal-repo niet gekoppeld (add_repo ontbreekt in deze sessie); GitHub Actions vult muziek aan"
   }
  ],
  "lampen": [

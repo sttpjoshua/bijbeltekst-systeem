@@ -1,8 +1,8 @@
 {
  "instagram": {
-  "ok": "2026-11-24T20:31",
+  "ok": "2026-11-24T22:04",
   "laatst_ok": true,
-  "detail": "2 Korinthe 12:9 geplaatst"
+  "detail": "2 Timotheüs 4:7 geplaatst"
  },
  "instagram_lezen": {
   "ok": "2026-11-24T15:51",
@@ -31,12 +31,12 @@
   "ok": "2026-11-20T08:01",
   "laatst_ok": false,
   "detail": "400: {\"error\":{\"message\":\"Unsupported get request. Object with ID '18646160734043579' does not exist, cannot be loaded due to missing permissions, or does not s",
-  "fout": "2026-11-24T21:01"
+  "fout": "2026-11-24T22:01"
  },
  "facebook": {
-  "ok": "2026-11-24T17:46",
+  "ok": "2026-11-24T22:03",
   "laatst_ok": true,
-  "detail": "2 Timotheüs 4:7 geplaatst"
+  "detail": "2 Korinthe 12:9 geplaatst"
  },
  "statistieken": {
   "ok": "2026-11-24T15:51",
