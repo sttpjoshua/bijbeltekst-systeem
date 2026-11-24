@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T01:05:01",
+ "updated": "2026-11-24T04:02:31",
  "agents": {
   "verskiezer": {
    "t": "2026-11-24T01:04:11",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-23T22:04:36",
-   "task": "Postte Psalm 30:6 op instagram",
+   "t": "2026-11-24T04:02:31",
+   "task": "Postte Psalm 91:1-2 op facebook",
    "state": "done"
   },
   "controller": {
@@ -38,11 +38,11 @@
   }
  },
  "stats": {
-  "posts_today": 0,
-  "posts_total": 81,
+  "posts_today": 1,
+  "posts_total": 82,
   "reach_7d": 783,
   "best_time": "20:30",
-  "next_post": "2026-11-24T04:00:00"
+  "next_post": "2026-11-24T12:15:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
@@ -56,6 +56,22 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "04:02",
+   "msg": "2026-11-24-5 online op facebook: Psalm 91:1-2"
+  },
+  {
+   "t": "04:02",
+   "msg": "2026-11-24-1 online op facebook: Jesaja 43:4"
+  },
+  {
+   "t": "04:02",
+   "msg": "2026-11-24-1 online op instagram: Jesaja 43:4"
+  },
+  {
+   "t": "04:02",
+   "msg": "2026-11-24-1 ook als story geplaatst"
+  },
   {
    "t": "01:05",
    "msg": "Zelfstandig 5 posts klaargezet voor 2026-11-26 (teksten uit de tekstbank)."
@@ -87,22 +103,6 @@
   {
    "t": "21:45",
    "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
-   "t": "20:32",
-   "msg": "2026-11-23-2 online op facebook: Psalm 30:6"
-  },
-  {
-   "t": "20:32",
-   "msg": "2026-11-23-3 online op instagram: Openbaring 7:17"
-  },
-  {
-   "t": "20:32",
-   "msg": "2026-11-23-3 ook als story geplaatst"
-  },
-  {
-   "t": "19:03",
-   "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
   }
  ],
  "lampen": [
