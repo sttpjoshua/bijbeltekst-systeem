@@ -16275,11 +16275,31 @@
      "saves": 0,
      "follows": null,
      "avg_watch_ms": 15288
+    },
+    "1u": {
+     "views": 1,
+     "reach": 1,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "avg_watch_ms": 15288
     }
    },
    "facebook": {
     "laatst": {
      "t": "2026-11-24T13:02+01:00",
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "avg_watch_ms": null
+    },
+    "1u": {
      "views": 0,
      "reach": null,
      "likes": null,

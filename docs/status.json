@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T13:16:04",
+ "updated": "2026-11-24T13:31:00",
  "agents": {
   "verskiezer": {
    "t": "2026-11-24T01:04:11",
@@ -57,6 +57,10 @@
  ],
  "log": [
   {
+   "t": "13:30",
+   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
+  {
    "t": "12:18",
    "msg": "2026-11-24-4 online op facebook: Psalm 31:15-16"
   },
@@ -99,10 +103,6 @@
   {
    "t": "04:02",
    "msg": "2026-11-24-1 ook als story geplaatst"
-  },
-  {
-   "t": "01:05",
-   "msg": "Zelfstandig 5 posts klaargezet voor 2026-11-26 (teksten uit de tekstbank)."
   }
  ],
  "lampen": [
