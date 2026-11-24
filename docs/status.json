@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T12:01:54",
+ "updated": "2026-11-24T12:18:25",
  "agents": {
   "verskiezer": {
    "t": "2026-11-24T01:04:11",
@@ -17,13 +17,13 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-24T04:02:31",
-   "task": "Postte Psalm 91:1-2 op facebook",
+   "t": "2026-11-24T12:18:25",
+   "task": "Postte Psalm 31:15-16 op facebook",
    "state": "done"
   },
   "controller": {
-   "t": "2026-11-24T07:01:51",
-   "task": "Zwaar nieuws (NOS): \"Milieuramp in Straat van Hormuz: 'Effecten olieve",
+   "t": "2026-11-24T12:02:02",
+   "task": "Politiek nieuws (NOS): \"Natuurijsbanen geopend: marathonschaatsster ve",
    "state": "error"
   },
   "analist": {
@@ -38,11 +38,11 @@
   }
  },
  "stats": {
-  "posts_today": 1,
-  "posts_total": 82,
+  "posts_today": 2,
+  "posts_total": 83,
   "reach_7d": 783,
   "best_time": "20:30",
-  "next_post": "2026-11-24T12:15:00"
+  "next_post": "2026-11-24T17:45:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
@@ -56,6 +56,22 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "12:18",
+   "msg": "2026-11-24-4 online op facebook: Psalm 31:15-16"
+  },
+  {
+   "t": "12:18",
+   "msg": "2026-11-24-4 online op instagram: Psalm 31:15-16"
+  },
+  {
+   "t": "12:18",
+   "msg": "2026-11-24-4 ook als story geplaatst"
+  },
+  {
+   "t": "12:02",
+   "msg": "Politiek nieuws (NOS): \"Natuurijsbanen geopend: marathonschaatsster verpulvert werelduurrecord\". Neutrale post"
+  },
   {
    "t": "07:01",
    "msg": "Zwaar nieuws (NOS): \"Milieuramp in Straat van Hormuz: 'Effecten olievervuiling over veertig jaar nog zichtbaar"
@@ -87,22 +103,6 @@
   {
    "t": "01:05",
    "msg": "Zelfstandig 5 posts klaargezet voor 2026-11-26 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "23:15",
-   "msg": "Eerste-uurcijfers van 4 posts vastgelegd"
-  },
-  {
-   "t": "22:04",
-   "msg": "2026-11-23-2 online op instagram: Psalm 30:6"
-  },
-  {
-   "t": "22:04",
-   "msg": "2026-11-23-2 ook als story geplaatst"
-  },
-  {
-   "t": "22:03",
-   "msg": "2026-11-23-3 online op facebook: Openbaring 7:17"
   }
  ],
  "lampen": [

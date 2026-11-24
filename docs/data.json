@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-24T12:01",
+ "gegenereerd": "2026-11-24T12:18",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1827,7 +1827,7 @@
    "ref": "Psalm 31:15-16",
    "tekst": "Maar ik vertrouw op U, o HEERE! Ik zeg: Gij zijt mijn God. Mijn tijden zijn in Uw hand; red mij van de hand mijner vijanden, en van mijn vervolgers.",
    "hook": "",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "avond",
     "thema": "vertrouwen",
@@ -1873,8 +1873,14 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-24-4.mp4"
    ],
    "thumb": "thumbs/2026-11-24-4.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "instagram",
+    "facebook"
+   ],
+   "links": {
+    "instagram": "https://www.instagram.com/reel/DgH04TKs0Ct/",
+    "facebook": "https://www.facebook.com/1819485965924890"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -1904,11 +1910,14 @@
     "video_uitleg": "vaste regel"
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "instagram": "2026-11-24T12:18+01:00",
+    "facebook": "2026-11-24T12:18+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": null,
-   "online": null
+   "online": "2026-11-24T12:18+01:00"
   },
   {
    "id": "2026-11-24-3",
@@ -17270,26 +17279,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-22T13:15:41",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
-  },
-  {
-   "t": "2026-11-22T13:30:55",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
-   "t": "2026-11-22T13:33:37",
-   "soort": "info",
-   "tekst": "Statistieken opgehaald voor 22 posts"
-  },
-  {
-   "t": "2026-11-22T13:35:37",
-   "soort": "info",
-   "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
-  },
-  {
    "t": "2026-11-22T14:08:20",
    "soort": "info",
    "tekst": "Avondcontrole: morgen en overmorgen hebben elk 5 posts klaar. Tekstbank aangevuld met de 26 reeksverzen van Advent en Kerst (stonden er niet in, waardoor Advent vanaf 29 nov een willekeurig vers zou krijgen). Lokale AI schrijft voortaan eerst voor reeksverzen; planning 29 nov staat nu op Jesaja 40:3."
@@ -17576,6 +17565,28 @@
    "tekst": "Zwaar nieuws (NOS): \"Milieuramp in Straat van Hormuz: 'Effecten olievervuiling over veertig jaar nog zichtbaar'\". Wil je er een troostende post over? Die gaat dan pas 6 uur na het nieuws online.",
    "code": "nieuws_voorstel",
    "post": "n112407011"
+  },
+  {
+   "t": "2026-11-24T12:02:02",
+   "soort": "fout",
+   "tekst": "Politiek nieuws (NOS): \"Natuurijsbanen geopend: marathonschaatsster verpulvert werelduurrecord\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
+   "code": "nieuws_voorstel",
+   "post": "n112412020"
+  },
+  {
+   "t": "2026-11-24T12:18:10",
+   "soort": "info",
+   "tekst": "2026-11-24-4 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-24T12:18:10",
+   "soort": "info",
+   "tekst": "2026-11-24-4 online op instagram: Psalm 31:15-16"
+  },
+  {
+   "t": "2026-11-24T12:18:25",
+   "soort": "info",
+   "tekst": "2026-11-24-4 online op facebook: Psalm 31:15-16"
   }
  ],
  "recente_fouten": [
@@ -17606,6 +17617,13 @@
    "tekst": "Zwaar nieuws (NOS): \"Milieuramp in Straat van Hormuz: 'Effecten olievervuiling over veertig jaar nog zichtbaar'\". Wil je er een troostende post over? Die gaat dan pas 6 uur na het nieuws online.",
    "code": "nieuws_voorstel",
    "post": "n112407011"
+  },
+  {
+   "t": "2026-11-24T12:02:02",
+   "soort": "fout",
+   "tekst": "Politiek nieuws (NOS): \"Natuurijsbanen geopend: marathonschaatsster verpulvert werelduurrecord\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
+   "code": "nieuws_voorstel",
+   "post": "n112412020"
   }
  ],
  "versen_totaal": 300,
@@ -17734,9 +17752,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-24T04:02",
+   "ok": "2026-11-24T12:18",
    "laatst_ok": true,
-   "detail": "Jesaja 43:4 geplaatst"
+   "detail": "Psalm 31:15-16 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-23T15:36",
@@ -17768,9 +17786,9 @@
    "fout": "2026-11-24T12:01"
   },
   "facebook": {
-   "ok": "2026-11-24T04:02",
+   "ok": "2026-11-24T12:18",
    "laatst_ok": true,
-   "detail": "Psalm 91:1-2 geplaatst"
+   "detail": "Psalm 31:15-16 geplaatst"
   },
   "statistieken": {
    "ok": "2026-11-23T15:36",
@@ -17791,10 +17809,10 @@
    "fout": "2026-11-11T13:49",
    "laatst_ok": true,
    "detail": "1 bericht(en) verstuurd",
-   "ok": "2026-11-24T07:30"
+   "ok": "2026-11-24T12:02"
   },
   "nieuws": {
-   "ok": "2026-11-24T07:01",
+   "ok": "2026-11-24T12:02",
    "laatst_ok": true,
    "detail": "2 nieuwe aanleidingen"
   },
@@ -17925,7 +17943,7 @@
  ],
  "weken": {
   "deze": {
-   "posts": 31,
+   "posts": 32,
    "reach": 744,
    "views": 810,
    "likes": 20,
@@ -18538,7 +18556,7 @@
   "tot": "2026-11-30",
   "dag": 9,
   "dagen": 14,
-  "online": 41,
+  "online": 42,
   "gemeten": 19
  },
  "voorraad": {
@@ -22259,6 +22277,81 @@
   },
   "recent": [
    {
+    "id": "n112412021",
+    "t": "2026-11-24T10:06+01:00",
+    "bron": "NU.nl",
+    "kop": "Wereldrecord op natuurijs: Judith Krabbenborg schaatst bijna 35 kilometer in uur",
+    "link": "https://www.nu.nl/schaatsen/6417588/wereldrecord-op-natuurijs-judith-krabbenborg-schaatst-bijna-35-kilometer-in-uur.html",
+    "categorie": "winter",
+    "zwaar": false,
+    "status": "overgeslagen",
+    "post": null,
+    "opties": null
+   },
+   {
+    "id": "n112412020",
+    "t": "2026-11-24T09:48+01:00",
+    "bron": "NOS",
+    "kop": "Natuurijsbanen geopend: marathonschaatsster verpulvert werelduurrecord",
+    "link": "https://nos.nl/l/2640805",
+    "categorie": "politiek",
+    "zwaar": false,
+    "status": "voorstel",
+    "post": null,
+    "opties": [
+     {
+      "vers_id": "Psalms-46-11-11",
+      "ref": "Psalm 46:11",
+      "tekst": "Laat af, en weet, dat Ik God ben; Ik zal verhoogd worden onder de heidenen, Ik zal verhoogd worden op de aarde. De HEERE der heirscharen is met ons; de God van Jakob is ons een Hoog Vertrek. Sela.",
+      "zin": "Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.",
+      "kernwoord": "Laat",
+      "betekenis": "God spreekt midden in onrust en oorlog. Laat af, stop met vechten, word stil. Weet dat Ik God ben. Niet jij hoeft alles te regelen. Hij is God.",
+      "toepassing": "Stop vandaag even met alles. Zeg langzaam: U bent God, ik niet.",
+      "brug": "Bij alle onrust: wat blijft staan.",
+      "caption": "Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.\n\n\"Laat af, en weet, dat Ik God ben; Ik zal verhoogd worden onder de heidenen, Ik zal verhoogd worden op de aarde. De HEERE der heirscharen is met ons; de God van Jakob is ons een Hoog Vertrek. Sela.\"\nPsalm 46:11\n\nBij alle onrust: wat blijft staan. Je hoeft niet alles zelf te regelen. Hij is God.",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112412020-1-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112412020-1-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112412020-1-3.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112412020-1-4.jpg"
+      ]
+     },
+     {
+      "vers_id": "II_Corinthians-5-7-7",
+      "ref": "2 Korinthe 5:7",
+      "tekst": "Want wij wandelen door geloof en niet door aanschouwen.",
+      "zin": "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.",
+      "kernwoord": "geloof",
+      "betekenis": "Veel van wat we hopen zien we nog niet. Paulus zegt: dat is precies wat geloof is. Je zet stappen op Gods woord, ook als je het eind van de weg niet ziet.",
+      "toepassing": "Zet vandaag één stap waarvan je het resultaat nog niet kunt zien.",
+      "brug": "Bij alle onrust: wat blijft staan.",
+      "caption": "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.\n\n\"Want wij wandelen door geloof en niet door aanschouwen.\"\n2 Korinthe 5:7\n\nBij alle onrust: wat blijft staan. Wandelen door geloof.",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112412020-2-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112412020-2-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112412020-2-3.jpg"
+      ]
+     },
+     {
+      "vers_id": "I_Peter-5-6-6",
+      "ref": "1 Petrus 5:6",
+      "tekst": "Vernedert u dan onder de krachtige hand Gods, opdat Hij u verhoge te Zijner tijd.",
+      "zin": "Veel meningen, veel onrust. Even terug naar wat vaststaat.",
+      "kernwoord": "verhoge",
+      "betekenis": "Petrus vraagt om nederigheid: niet jezelf op de voorgrond zetten, maar je onder Gods hand plaatsen. God ziet je, en Hij tilt je op wanneer de tijd daar is.",
+      "toepassing": "Laat vandaag een keer de eer aan een ander, en vertrouw dat God jou ziet.",
+      "brug": "Een vast punt in veel geluid.",
+      "caption": "Veel meningen, veel onrust. Even terug naar wat vaststaat.\n\n\"Vernedert u dan onder de krachtige hand Gods, opdat Hij u verhoge te Zijner tijd.\"\n1 Petrus 5:6\n\nEen vast punt in veel geluid. God tilt je op, op Zijn tijd.",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112412020-3-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112412020-3-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112412020-3-3.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112412020-3-4.jpg"
+      ]
+     }
+    ]
+   },
+   {
     "id": "n112407011",
     "t": "2026-11-23T20:26+01:00",
     "bron": "NOS",
@@ -23305,30 +23398,6 @@
       ]
      }
     ]
-   },
-   {
-    "id": "n111517010",
-    "t": "2026-11-15T15:45+01:00",
-    "bron": "NOS",
-    "kop": "Pech bij Sint-intocht Amsterdam: stoomboot kan niet verder door kapotte brug",
-    "link": "https://nos.nl/l/2639593",
-    "categorie": "sinterklaas",
-    "zwaar": false,
-    "status": "overgeslagen",
-    "post": null,
-    "opties": null
-   },
-   {
-    "id": "n111512012",
-    "t": "2026-11-15T10:06+01:00",
-    "bron": "NU.nl",
-    "kop": "Ruim 2 miljoen mensen zagen Gijs Naber als nieuwe Sinterklaas bij intocht",
-    "link": "https://www.nu.nl/media/6416630/ruim-2-miljoen-mensen-zagen-gijs-naber-als-nieuwe-sinterklaas-bij-intocht.html",
-    "categorie": "sinterklaas",
-    "zwaar": false,
-    "status": "overgeslagen",
-    "post": null,
-    "opties": null
    }
   ]
  },
@@ -23383,8 +23452,8 @@
     "opties": [
      {
       "optie": "avond",
-      "online": 0,
-      "gepland": 1,
+      "online": 1,
+      "gepland": 0,
       "n": 0,
       "gem": null,
       "oordeel": "weinig data"
@@ -23524,19 +23593,6 @@
    }
   ],
   "komend": [
-   {
-    "id": "2026-11-24-4",
-    "ref": "Psalm 31:15-16",
-    "datum": "2026-11-24",
-    "tijdslot": "12:15",
-    "tests": [
-     {
-      "dimensie": "huisstijl",
-      "optie": "avond",
-      "bron": "experiment"
-     }
-    ]
-   },
    {
     "id": "2026-11-24-2",
     "ref": "2 Korinthe 12:9",
@@ -23707,6 +23763,24 @@
       "dimensie": "huisstijl",
       "optie": "schaduw_blauw",
       "bron": "experiment"
+     }
+    ]
+   },
+   {
+    "id": "2026-11-26-4",
+    "ref": "1 Petrus 5:7",
+    "datum": "2026-11-26",
+    "tijdslot": "22:00",
+    "tests": [
+     {
+      "dimensie": "huisstijl",
+      "optie": "schaduw_groen",
+      "bron": "experiment"
+     },
+     {
+      "dimensie": "reel_stijl",
+      "optie": "markeren",
+      "bron": "test markeren"
      }
     ]
    }

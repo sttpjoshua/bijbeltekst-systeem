@@ -1,20 +1,5 @@
 [
  {
-  "t": "2026-11-11T20:40:48",
-  "soort": "info",
-  "tekst": "Zelfstandig 10 posts klaargezet voor 2026-11-12, 2026-11-13 (teksten uit de tekstbank)."
- },
- {
-  "t": "2026-11-11T21:10:30",
-  "soort": "info",
-  "tekst": "Bediening: WhatsApp-testbericht klaargezet"
- },
- {
-  "t": "2026-11-11T22:05:18",
-  "soort": "info",
-  "tekst": "2026-11-11-n2200 ook als story geplaatst"
- },
- {
   "t": "2026-11-11T22:05:18",
   "soort": "info",
   "tekst": "2026-11-11-n2200 online op instagram: Romeinen 15:4"
@@ -2552,5 +2537,20 @@
   "tekst": "Politiek nieuws (NOS): \"Natuurijsbanen geopend: marathonschaatsster verpulvert werelduurrecord\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
   "code": "nieuws_voorstel",
   "post": "n112412020"
+ },
+ {
+  "t": "2026-11-24T12:18:10",
+  "soort": "info",
+  "tekst": "2026-11-24-4 ook als story geplaatst"
+ },
+ {
+  "t": "2026-11-24T12:18:10",
+  "soort": "info",
+  "tekst": "2026-11-24-4 online op instagram: Psalm 31:15-16"
+ },
+ {
+  "t": "2026-11-24T12:18:25",
+  "soort": "info",
+  "tekst": "2026-11-24-4 online op facebook: Psalm 31:15-16"
  }
 ]
