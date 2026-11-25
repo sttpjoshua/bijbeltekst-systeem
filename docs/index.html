@@ -414,7 +414,7 @@ html[data-thema=donker] .kpost .knws{background:#3a2e14;color:#ffd98a}
 <div id="lade" onclick="if(event.target===this)sluitLade()"><div class="ladebinnen" id="ladeBinnen"></div></div>
 <div id="galerij" onclick="if(event.target===this)this.style.display='none'"><button class="sluit" onclick="galerij.style.display='none'">✕</button><div class="galrij"></div><div class="tel"></div></div>
 <script>
-const NAMEN={huisstijl:"Huisstijl",thema:"Thema",hook_stijl:"Hook-stijl",formaat:"Formaat",uitleg_op_beeld:"Uitleg op beeld",achtergrondbron:"Achtergrond",boekgroep:"Bijbelboek",lengte:"Lengte vers",bron:"Bekend of ontdekking",vraag_onderaan:"Vraag onderaan",opening:"Eerste slide",tijdslot:"Tijdstip",reel_stijl:"Reelstijl",reel_plaatsing:"Tekst in reel",reel_scene:"Rustbeeld in reel",hashtag_stijl:"Soort hashtags",carrousel_stijl:"Carrouselstijl",reel_kleur:"Kleur meelees-stijl",markeer_achtergrond:"Achtergrond meelees-reel",markeer_streep:"Markeerstreep",markeer_opening:"Begin meelees-reel"};
+const NAMEN={toon:"Toon (persoonlijk of neutraal)",huisstijl:"Huisstijl",thema:"Thema",hook_stijl:"Hook-stijl",formaat:"Formaat",uitleg_op_beeld:"Uitleg op beeld",achtergrondbron:"Achtergrond",boekgroep:"Bijbelboek",lengte:"Lengte vers",bron:"Bekend of ontdekking",vraag_onderaan:"Vraag onderaan",opening:"Eerste slide",tijdslot:"Tijdstip",reel_stijl:"Reelstijl",reel_plaatsing:"Tekst in reel",reel_scene:"Rustbeeld in reel",hashtag_stijl:"Soort hashtags",carrousel_stijl:"Carrouselstijl",reel_kleur:"Kleur meelees-stijl",markeer_achtergrond:"Achtergrond meelees-reel",markeer_streep:"Markeerstreep",markeer_opening:"Begin meelees-reel"};
 const STATUS={wacht_op_tekst:"Wacht op tekst",gerenderd:"Klaar, gaat online",afgekeurd:"Overgeslagen door jou",overgeslagen:"Overgeslagen",gepubliceerd:"Gepubliceerd",fout:"Fout"};
 const fmt=n=>n==null?"–":Number(n).toLocaleString("nl-NL");
 const tip=document.getElementById("tip");
@@ -650,27 +650,28 @@ function bouwMaand(){
 }
 function bouwConcepten(){
   const el=document.getElementById("bConcepten");if(!el)return;
-  const A=D.lokale_ai||{verzen:[],nieuws:[],mac:{},zonder_tekst:0},mac=A.mac||{};
+  const A=D.lokale_ai||{verzen:[],noor:[],mac:{},zonder_tekst:0},mac=A.mac||{};
   const nu=Date.now(),t=mac.t?new Date(mac.t).getTime():0,uren=t?(nu-t)/36e5:null;
   const leeft=uren!==null&&uren<8;
   const status=!t?"Het Mac-programma heeft zich nog niet gemeld.":(leeft?`Mac-programma actief (laatst gezien ${Math.round(uren*10)/10<1?"minder dan een uur":Math.round(uren)+" uur"} geleden, ${esc(mac.model||"")}).`:`Mac-programma laatst gezien ${Math.round(uren)} uur geleden: staat je Mac uit? Het systeem draait gewoon door.`);
-  const V=A.verzen||[],N=A.nieuws||[],goed=V.filter(x=>!x.fouten.length).length;
+  const V=A.verzen||[],N=A.noor||[],goed=V.filter(x=>!x.fouten.length).length;
   const toon=V.slice(0,5);
   el.innerHTML=`<h3 style="margin:0 0 4px">Lokale AI: concepten ter goedkeuring</h3>
     <div class="sub">${status} ${A.zonder_tekst} verzen hebben nog geen tekst en kunnen daarom nog niet gekozen worden. Niets komt in de tekstbank zonder jouw akkoord.</div>
-    ${V.length||N.length?`<div class="sub" style="margin-top:6px"><b>${V.length}</b> teksten voor verzen (${goed} haalden de controle)${N.length?`, <b>${N.length}</b> nieuwszinnen`:""}.</div>`:`<div class="leeg">Geen concepten die wachten.</div>`}
+    ${V.length||N.length?`<div class="sub" style="margin-top:6px"><b>${V.length}</b> teksten voor verzen (${goed} haalden de controle)${N.length?`, <b>${N.length}</b> persoonlijke teksten`:""}.</div>`:`<div class="leeg">Geen concepten die wachten.</div>`}
     ${goed?`<div style="margin:8px 0"><button class="btn prim" data-cok-alles="1">Keur alle ${goed} goed die de controle haalden</button></div>`:""}
     ${toon.map(x=>`<div class="tbr"><div><b>${esc(x.ref)}</b><span class="kw">${esc(x.e.kw)}</span><div class="sub">${esc(x.tekst)}</div></div>
       <div style="font-size:13px"><b>Wat betekent dit?</b> ${esc(x.e.betekenis)}<br><b>Vandaag:</b> ${esc(x.e.toepassing)}<br><span class="sub">${esc(x.e.hooks.herkenning)} · ${esc((x.e.tags||[]).join(" "))}</span>${x.fouten.length?`<div class="sub" style="color:var(--rood,#c0392b)">Controle: ${esc(x.fouten.join("; "))}</div>`:""}</div>
       <div class="seg"><button class="btn prim" data-cok="${esc(x.id)}" ${x.fouten.length?"disabled":""}>Goed</button><button class="btn" data-cnee="${esc(x.id)}">Nee</button></div></div>`).join("")}
     ${V.length>toon.length?`<div class="sub">En nog ${V.length-toon.length} concepten; na het nakijken van deze komen de volgende.</div>`:""}
-    ${N.length?`<details style="margin-top:8px"><summary class="sub">Nieuwszinnen (${N.length})</summary>${N.slice(0,12).map(x=>`<div class="tbr"><div class="sub">${esc(x.cat)} · ${x.soort==="bruggen"?"brug":"opening"}</div><div style="font-size:13px">${esc(x.tekst)}</div><div class="seg"><button class="btn prim" data-nok="${esc(x.soort)}§§${esc(x.cat)}§§${esc(x.tekst)}">Goed</button><button class="btn" data-nnee="${esc(x.soort)}§§${esc(x.cat)}§§${esc(x.tekst)}">Nee</button></div></div>`).join("")}</details>`:""}`;
+    ${N.length?`<details style="margin-top:8px"><summary class="sub">Persoonlijke teksten (${N.length})</summary>${N.slice(0,10).map(x=>`<div class="tbr"><div><b>${esc(x.ref)}</b><div class="sub">${esc(x.tekst)}</div></div><div style="font-size:13px">${esc(x.e.verhaal)}<br>${esc(x.e.zin)}<br><span class="sub">${esc(x.e.herkenning)} · ${esc(x.e.vraag)}</span>${x.fouten.length?`<div class="sub" style="color:var(--rood,#c0392b)">Controle: ${esc(x.fouten.join("; "))}</div>`:""}</div><div class="seg"><button class="btn prim" data-nok="${esc(x.id)}" ${x.fouten.length?"disabled":""}>Goed</button><button class="btn" data-nnee="${esc(x.id)}">Nee</button></div></div>`).join("")}</details>`:""}`;
   const byId=id=>V.find(x=>x.id===id)||{};
   el.querySelectorAll("[data-cok]").forEach(b=>b.onclick=()=>stuur({actie:"concept_ok",vers_id:b.dataset.cok,ref:byId(b.dataset.cok).ref},b));
   el.querySelectorAll("[data-cnee]").forEach(b=>b.onclick=()=>stuur({actie:"concept_nee",vers_id:b.dataset.cnee,ref:byId(b.dataset.cnee).ref},b));
   el.querySelectorAll("[data-cok-alles]").forEach(b=>b.onclick=()=>stuur({actie:"concept_alles"},b));
-  el.querySelectorAll("[data-nok]").forEach(b=>{const [soort,cat,tekst]=b.dataset.nok.split("§§");b.onclick=()=>stuur({actie:"nieuws_concept_ok",soort,cat,tekst},b)});
-  el.querySelectorAll("[data-nnee]").forEach(b=>{const [soort,cat,tekst]=b.dataset.nnee.split("§§");b.onclick=()=>stuur({actie:"nieuws_concept_nee",soort,cat,tekst},b)});
+  const byN=id=>N.find(x=>x.id===id)||{};
+  el.querySelectorAll("[data-nok]").forEach(b=>b.onclick=()=>stuur({actie:"noor_ok",vers_id:b.dataset.nok,ref:byN(b.dataset.nok).ref},b));
+  el.querySelectorAll("[data-nnee]").forEach(b=>b.onclick=()=>stuur({actie:"noor_nee",vers_id:b.dataset.nnee,ref:byN(b.dataset.nnee).ref},b));
 }
 const TB={q:"",f:"alle",n:30,edit:null};
 function bouwTekstbank(){
@@ -764,12 +765,11 @@ function bouwBediening(){
       <button class="btn" data-vraagclaude="Vul de tekstbank aan met 60 nieuwe verzen (zie TAKEN.md, Tekstbank).">Vraag Claude om de tekstbank aan te vullen</button></div>
     <div class="sub" style="margin-top:8px">Elke ochtend vanaf 9:00 kiest het systeem zelf de posts voor morgen en overmorgen, vult de teksten in uit de tekstbank en maakt de beelden. Tekstbank: <b>${tb.verzen}</b> verzen, waarvan <b>${tb.vrij}</b> nog niet recent gebruikt: genoeg voor ongeveer <b style="color:${tb.dagen<10?"var(--rood,#c0392b)":"inherit"}">${tb.dagen} dagen</b>. Daarna herhaalt hij de verzen die het langst geleden zijn geplaatst.</div>`;
   const ni=(D.nieuws||{}).instelling||{aan:true,max_per_dag:2,licht_automatisch:true},nr=(D.nieuws||{}).recent||[];
-  const NST={gemaakt:"✅ post gemaakt",voorstel:"⏳ wacht op jou",genegeerd:"genegeerd",overgeslagen:"overgeslagen (al genoeg)",geen_plek:"geen plek vrij",gezien:"gezien"};
+  const NST={gemaakt:"✅ post gemaakt",voorstel:"⏳ wacht op jou",genegeerd:"genegeerd",overgeslagen:"overgeslagen (al genoeg)",geen_plek:"geen plek vrij",gezien:"gezien",schrijven:"✍️ wordt geschreven",verlopen:"verlopen"};
   document.getElementById("bNieuws").innerHTML=`<div class="seg">
       ${ni.aan?`<button class="btn aan" data-o='{"actie":"nieuws_instelling","sleutel":"aan","waarde":false}'>✓ Aan</button>`:`<button class="btn prim" data-o='{"actie":"nieuws_instelling","sleutel":"aan","waarde":true}'>Aanzetten</button>`}
-      ${ni.licht_automatisch?`<button class="btn aan" data-o='{"actie":"nieuws_instelling","sleutel":"licht_automatisch","waarde":false}' title="Uitzetten: dan vraagt hij ook bij licht nieuws eerst jouw akkoord">✓ Licht nieuws automatisch</button>`:`<button class="btn" data-o='{"actie":"nieuws_instelling","sleutel":"licht_automatisch","waarde":true}'>Licht nieuws automatisch</button>`}
       <span class="sub" style="align-self:center;margin:0 4px 0 8px">Max per dag:</span>${[1,2,3].map(k=>`<button class="btn ${ni.max_per_dag===k?"prim":""}" data-o='{"actie":"nieuws_instelling","sleutel":"max_per_dag","waarde":${k}}'>${k}</button>`).join("")}</div>
-    <div class="sub" style="margin-top:8px">Rond 7, 12 en 17 uur kijkt het systeem naar het nieuws (NOS en NU.nl). Licht nieuws (weer, Sinterklaas, sport, drukte) wordt vanzelf een post: de eerstvolgende carrousel krijgt een passend vers en een openingszin. Zwaar nieuws en politiek gaan nooit vanzelf: je krijgt een voorstel en het gaat alleen online met jouw akkoord (politiek altijd neutraal, nooit een partij of standpunt). In de post zelf komt nooit nieuwstekst.</div>
+    <div class="sub" style="margin-top:8px">Rond 7, 12 en 17 uur kijkt het systeem naar de koppen (NOS en NU.nl). De kop zelf komt nooit in de post. Het Mac-programma schrijft per kop hoe het bij het karakter binnenkomt en het systeem kiest daar een vers bij uit de tekstbank. Elk nieuwsvoorstel, ook licht nieuws, gaat alleen online met jouw akkoord. Staat je Mac uit, dan komt er geen nieuws.</div>
     ${nr.length?`<div style="margin-top:10px">${nr.slice(0,8).map(x=>`<div class="sub" style="padding:5px 0;border-top:1px solid var(--lijn)"><b>${esc(x.categorie)}</b>${x.zwaar?" · zwaar":""} · ${esc(x.bron)}: <a href="${esc(x.link||"#")}" target="_blank">${esc(x.kop)}</a> · ${NST[x.status]||x.status}${x.status==="voorstel"?` ${knop("Post maken",{actie:"nieuws_maken",id:x.id},"prim")} ${knop("Negeren",{actie:"nieuws_negeren",id:x.id})}`:""}</div>`).join("")}</div>`:""}`;
   const sit=c.reel_formaat==="situatie",ra=c.reel_aandeel;
   document.getElementById("bReels").innerHTML=`<div class="seg"><span class="sub" style="align-self:center;margin-right:6px">Soort reel:</span>
@@ -1179,7 +1179,7 @@ function bouwTop(){
   el.innerHTML=h+(met.length?"":'<div class="sub" style="margin-top:6px">Gesorteerd op bereik; de score komt zodra een post 20 of meer mensen heeft bereikt.</div>');
 }
 const OPTNAAM={afbeelding:"afbeeldingen",video:"video's",carrousel:"carrousels",verloop:"kleurverloop",beeld:"foto-achtergrond",true:"met uitleg op het beeld",false:"zonder uitleg",geen:"geen hook",vraag:"een vraag als hook",herkenning:"een herkenbare hook",uitdaging:"een uitdaging als hook",rustig:"een rustige hook",avond:"stijl avond",zand:"stijl zand",salie:"stijl salie",psalmen:"verzen uit de Psalmen",spreuken:"verzen uit Spreuken",wijsheid:"verzen uit Job, Prediker en Hooglied",profeten:"verzen uit de profeten",evangelien:"verzen uit de evangeliën",brieven:"verzen uit de brieven",kort:"korte verzen",middel:"middellange verzen",lang:"lange verzen",bekend:"bekende verzen",ontdekking:"minder bekende verzen"};
-Object.assign(OPTNAAM,{papier_rood:"papier, rood",papier_groen:"papier, groen",papier_blauw:"papier, blauw",schaduw_rood:"papier met schaduw, rood",schaduw_groen:"papier met schaduw, groen",schaduw_blauw:"papier met schaduw, blauw",mix:"vaste mix hashtags",zoekwoord:"zoekwoord-hashtags",zonder:"zonder hashtags",situatie:"herkenbare situatie",markeren:"meelees-stijl",standaard:"standaard carrousel",abrikoos:"abrikoos",mint:"mint",hemel:"hemelsblauw",roze:"roze",goud:"goud",klassiek:"klassieke reel",midden:"tekst in het midden",boven:"tekst boven",natuur:"natuurbeeld",dichtbij:"close-up beeld",onderweg:"beeld onderweg"});
+Object.assign(OPTNAAM,{noor:"persoonlijke toon",standaard:"neutrale toon",papier_rood:"papier, rood",papier_groen:"papier, groen",papier_blauw:"papier, blauw",schaduw_rood:"papier met schaduw, rood",schaduw_groen:"papier met schaduw, groen",schaduw_blauw:"papier met schaduw, blauw",mix:"vaste mix hashtags",zoekwoord:"zoekwoord-hashtags",zonder:"zonder hashtags",situatie:"herkenbare situatie",markeren:"meelees-stijl",standaard:"standaard carrousel",abrikoos:"abrikoos",mint:"mint",hemel:"hemelsblauw",roze:"roze",goud:"goud",klassiek:"klassieke reel",midden:"tekst in het midden",boven:"tekst boven",natuur:"natuurbeeld",dichtbij:"close-up beeld",onderweg:"beeld onderweg"});
 const on=o=>OPTNAAM[o]||String(o).replace("_"," ");
 function bouwExperimenten(){
   const el=document.getElementById("experimenten"),x=D.experimenten;if(!el||!x){return}

@@ -116,7 +116,7 @@ def main(raw):
             if q.get("vers_id") == o["vers_id"] and q["status"] in ("wacht_op_tekst", "klaar_voor_render"):
                 q["reel_herkenning"] = tekst
         melding = f"Herkenningszin van {o.get('ref', o['vers_id'])} aangepast (geldt voor reels die nog gemaakt worden)"
-    elif a in ("concept_ok", "concept_nee", "concept_alles", "nieuws_concept_ok", "nieuws_concept_nee"):
+    elif a in ("concept_ok", "concept_nee", "concept_alles", "noor_ok", "noor_nee"):
         import concepten as C
         if a == "concept_ok":
             ok, melding = C.goedkeuren(o["vers_id"])
@@ -131,13 +131,13 @@ def main(raw):
                 ok, _ = C.goedkeuren(vid)
                 n, skip = n + ok, skip + (not ok)
             melding = f"{n} concepten in de tekstbank gezet" + (f"; {skip} haalden de controle niet" if skip else "")
-        elif a == "nieuws_concept_ok":
-            ok, melding = C.nieuws_goedkeuren(o["soort"], o["cat"], o["tekst"])
+        elif a == "noor_ok":
+            ok, melding = C.noor_goedkeuren(o["vers_id"])
             if not ok:
                 raise SystemExit(melding)
         else:
-            C.nieuws_afkeuren(o["soort"], o["cat"], o["tekst"])
-            melding = "Nieuwszin afgekeurd"
+            C.noor_afkeuren(o["vers_id"])
+            melding = f"Persoonlijke teksten voor {o.get('ref', o['vers_id'])} afgekeurd"
     elif a == "leermodus":
         if o["aan"]:
             dagen = int(o.get("dagen", 14))
@@ -433,10 +433,6 @@ def main(raw):
                     l["opgelost"] = True
             S.bewaar("data/logboek.json", log)
         posts, cfg = S.laad("data/posts.json", []), S.laad("config.json")
-    elif a == "nieuws_herzien":
-        import nieuws
-        melding = nieuws.herzie_alle()
-        posts, cfg = S.laad("data/posts.json", []), S.laad("config.json")
     elif a == "nieuws_instelling":
         n = cfg.setdefault("nieuws", {})
         n[o["sleutel"]] = o["waarde"]
@@ -509,7 +505,7 @@ def main(raw):
                  "andere_stijl": "designer", "post_ander_vers": "verskiezer", "fouten_opgelost": "controller", "reactie_plaatsen": "community", "reactie_negeren": "community", "reactie_liken": "community",
                  "fout_opgelost": "controller", "post_opnieuw": "dispatcher", "post_nood": "controller", "nood_inzetten": "controller",
                  "muziek_toevoegen": "video", "statistieken_nu": "analist", "reacties_nu": "community", "zelftest_nu": "controller",
-                 "run": "dispatcher", "verzoek": "controller", "posts_maken": "verskiezer", "zelfstandig": "controller", "nieuws_maken": "verskiezer", "nieuws_negeren": "verskiezer", "nieuws_instelling": "verskiezer", "nieuws_herzien": "verskiezer", "nieuwe_reels": "video", "tekstbank_vers": "verskiezer", "tekstbank_hook": "verskiezer", "concept_ok": "verskiezer", "concept_nee": "verskiezer", "concept_alles": "verskiezer", "nieuws_concept_ok": "verskiezer", "nieuws_concept_nee": "verskiezer", "reel_tempo": "video", "reel_formaat": "video", "reel_aandeel": "video", "whatsapp_test": "controller", "whatsapp_instelling": "controller"}.get(a)
+                 "run": "dispatcher", "verzoek": "controller", "posts_maken": "verskiezer", "zelfstandig": "controller", "nieuws_maken": "verskiezer", "nieuws_negeren": "verskiezer", "nieuws_instelling": "verskiezer", "nieuwe_reels": "video", "tekstbank_vers": "verskiezer", "tekstbank_hook": "verskiezer", "concept_ok": "verskiezer", "concept_nee": "verskiezer", "concept_alles": "verskiezer", "noor_ok": "verskiezer", "noor_nee": "verskiezer", "reel_tempo": "video", "reel_formaat": "video", "reel_aandeel": "video", "whatsapp_test": "controller", "whatsapp_instelling": "controller"}.get(a)
         if a == "overslaan":
             agent = "video" if (vind(posts, o["post"])["variabelen"].get("formaat") == "video") else "designer"
         if agent:

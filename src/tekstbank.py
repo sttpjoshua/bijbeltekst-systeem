@@ -122,6 +122,16 @@ def vul_post(p, e, cfg, vermijd=()):
     """Vult een post (status wacht_op_tekst) met teksten uit de bank. Geeft True als het lukte.
     vermijd: hooks die de afgelopen 14 dagen al gebruikt zijn (die worden overgeslagen)."""
     v = p["variabelen"]
+    import noor
+    e_orig = e
+    # toon: 'noor' (persoonlijke stem, zie KARAKTER.md) of 'standaard'. Zonder Noor-teksten voor dit vers valt het terug.
+    if v.get("toon") == "noor":
+        en = noor.samenvoegen(e, p.get("vers_id") or "")
+        if en:
+            e = en
+        else:
+            v["toon"] = "standaard"
+            p.setdefault("keuzebron", {})["toon"] = "tekstbank"
     hooks = {k: h for k, h in (e.get("hooks") or {}).items() if h and h.strip() not in vermijd}
     stijl = v.get("hook_stijl")
     if stijl != "geen" and not hooks.get(stijl):
@@ -137,7 +147,9 @@ def vul_post(p, e, cfg, vermijd=()):
         label = p["reeks_label"].split("·")[0].strip().capitalize()
         dag = p["reeks_label"].split("·")[1].strip().lower() if "·" in p["reeks_label"] else ""
         hook = f"{label}{', ' + dag if dag else ''}: {hook}" if hook else f"{label}{', ' + dag if dag else ''}."
-    if is_ochtend(p):
+    if v.get("toon") == "noor":
+        hook = noor.opener(p)   # persoonlijke regel die klopt met tijdslot, dag en seizoen; nooit een naam
+    elif is_ochtend(p):
         hook = ochtend_opener(p)
         if p.get("reeks_label"):
             hook = f"{label}{', ' + dag if dag else ''}. {hook}"
@@ -163,6 +175,17 @@ def vul_post(p, e, cfg, vermijd=()):
         "reel_uitleg": e.get("uitleg", ""), "reel_vraag": (e.get("hooks") or {}).get("vraag", ""),
         "reel_herkenning": (e.get("hooks") or {}).get("herkenning", ""),
     })
+    p.pop("goedkeuring_nodig", None); p.pop("noor_gevoelig", None)
+    problemen, gevoelig = noor.controleer_post(p)
+    if v.get("toon") == "noor" and problemen:
+        # tegenstrijdig met de canon (bijvoorbeeld koffie in een avondpost): nooit door, de post krijgt de standaardtoon
+        v["toon"] = "standaard"
+        p.setdefault("keuzebron", {})["toon"] = f"canon: {'; '.join(problemen)[:80]}"
+        return vul_post(p, e_orig, cfg, vermijd)
+    if gevoelig:
+        # gevoelig onderwerp: niet geblokkeerd, maar nooit automatisch online; eerst Joshua
+        p["goedkeuring_nodig"] = True
+        p["noor_gevoelig"] = gevoelig
     return True
 
 

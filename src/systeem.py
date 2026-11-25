@@ -79,6 +79,7 @@ DIMENSIES = {
     "reel_haak": ["geen", "vraag"],  # alleen video: eerst 1,4 s een grote vraag in beeld
     "opening": ["vers", "stopper", "verhaal"],  # carrousel: slide 1 het hele vers, een korte grote 'stopper', of eerst de uitleg als haak ('verhaal eerst')
     "hashtag_stijl": ["mix", "zoekwoord", "zonder"],  # mix = vaste tags uit de tekstbank; zoekwoord = kernwoord, boek en #bijbelvers
+    "toon": ["standaard", "noor"],  # tekststem: standaard of de persoonlijke stem (src/noor.py); alleen mogelijk voor verzen met Noor-teksten
     "tijdslot": ["04:00", "12:15", "17:45", "20:30", "22:00"],  # eerste post van de dag standaard 04:00 (Joshua, 14 nov; was 07:30)
 }
 
@@ -376,6 +377,11 @@ def kies_posts(datum, cfg, strat, posts, verzen, mat, n_start, n, gebruikte_slot
         bank = _bank(cfg)
         if bank is not None:  # zelfstandig: alleen verzen waarvoor de teksten al klaarstaan
             vrij = [x for x in vrij if x["id"] in bank] or _oudste_bankverzen(bank, posts + nieuw, cfg)
+        if v.get("toon") == "noor":  # persoonlijke toon: bij voorkeur verzen waarvoor Noor-teksten klaarstaan
+            import noor as _noor
+            nv = [x for x in vrij if _noor.beschikbaar(x["id"])]
+            if nv:
+                vrij = nv
         import tekstbank as _tb
         if v["tijdslot"] < "10:00":  # ochtend: alleen verzen voor een goede start van de dag
             och = [x for x in vrij if x["id"] in _tb.OCHTEND_VERZEN]
@@ -1777,10 +1783,9 @@ def _lokale_ai():
     """Concepten van de lokale AI op de Mac (zie src/concepten.py). Nooit een reden dat het dashboard faalt."""
     try:
         import concepten
-        concepten.voorbeelden_schrijven()
         return concepten.dashboard()
     except Exception as ex:
-        return {"verzen": [], "nieuws": [], "zonder_tekst": 0, "mac": {}, "fout": str(ex)[:120]}
+        return {"verzen": [], "noor": [], "zonder_tekst": 0, "mac": {}, "fout": str(ex)[:120]}
 
 def _bank_lijst(cfg, posts):
     """Voor het dashboard: alle verzen in de tekstbank met herkenningszin, laatst geplaatst en of ze uit staan."""

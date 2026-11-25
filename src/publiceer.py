@@ -295,6 +295,8 @@ def cmd_posten():
             p["status"] = "overgeslagen"
             S.cmd_log(f"{p['id']} ({p['ref']}) niet geplaatst: het tijdstip is meer dan 8 uur gemist", "fout", code="post_gemist", post=p["id"]); continue
         g = cfg.get("goedkeuren") or {}
+        if p.get("goedkeuring_nodig") and p.get("goedgekeurd") is not True:
+            print(p["id"], "gevoelig onderwerp, wacht op goedkeuring van Joshua"); continue
         if g.get("aan") and g.get("zonder_reactie") == "overslaan" and p.get("goedgekeurd") is not True:
             print(p["id"], "wacht op goedkeuring"); continue  # na 8 uur zonder goedkeuring vervalt hij hierboven vanzelf
         if vandaag_online >= cfg["max_posts_per_dag"]:

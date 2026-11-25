@@ -209,3 +209,9 @@ Carrousel in de meelees-stijl (12 nov): dimensie `carrousel_stijl` (standaard | 
 - Taalcontrole lokale AI (22 nov): src/taalcontrole.py keurt concepten af met verkeerd gespelde namen (Pauwels, Sinterklas), niet-bestaande woorden (wordfreq), vaste fouten ('regent over', 'deze passage') en verzonnen hashtags. Het Mac-programma (versie 3) haalt dit bestand elke ronde op, schoont hashtags zelf op en probeert het opnieuw met de foutmelding. Nieuwe vaste fouten voeg je toe aan VASTE_FOUTEN of VERKEERD.
 - Eindredactie lokale AI (22 nov, versie 4): na de controle leest het model zijn eigen tekst na als strenge eindredacteur (klopt het met het vers, is het natuurlijk Nederlands) en verbetert foute velden; de verbeterde versie wordt nog een keer nagekeken. Nieuwszinnen gaan ook langs de eindredactie. Concepten hebben `nagekeken: true` in data/concepten.json.
 - Reels zonder gezichten (20 nov): clips met gezicht worden overgeslagen (OpenCV), anders zwaar geblurd; geplande reels opnieuw gemaakt.
+
+
+## Karakter en nieuws (25 nov 2026)
+- Gebouwd: src/noor.py, data/noor.json (teksten per vers), toon-dimensie, nieuws vanuit het karakter, goedkeuringspoort, Mac-helper v5 (nieuwsconcepten en persoonlijke teksten ter goedkeuring).
+- Nog te doen: persoonlijke teksten schrijven voor de rest van de tekstbank (Claude voor komende verzen, Mac-model later met goedkeuring); reactieantwoorden en Telegramteksten in de stem.
+- Joshua: GitHub-sleutel maken en install.sh draaien (zie TAKEN.md, Mac-programma).

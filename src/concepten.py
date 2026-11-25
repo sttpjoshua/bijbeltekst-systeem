@@ -6,8 +6,8 @@ in het dashboard (of, later, automatisch als hij dat aanzet en het concept de co
 data/concepten.json:
   verzen    {vers_id: {"e": bankitem, "model": .., "t": ..}}   concepten voor de tekstbank
   afgekeurd [vers_id, ...]                                     door Joshua afgekeurd, de AI probeert die niet opnieuw
-  nieuws    {"zinnen": {cat: [{"tekst","model","t"}]}, "bruggen": {cat: [...]}}
-data/nieuws_extra.json (goedgekeurd) {"zinnen": {cat: [tekst]}, "bruggen": {cat: [tekst]}}, gebruikt door nieuws.py
+  noor      {vers_id: {"verhaal","zin","vraag","herkenning","model","t"}}   persoonlijke teksten (het karakter), na goedkeuring in data/noor.json
+Nieuwsconcepten staan apart in data/nieuws_concepten.json (alleen het Mac-programma schrijft), en gaan via het nieuwsvoorstel.
 data/lokale_ai.json: hartslag van het Mac-programma (laatst gezien, model, tellers)
 """
 import json, os, re
@@ -16,8 +16,6 @@ import tekstbank
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PAD = os.path.join(ROOT, "data", "concepten.json")
-EXTRA = os.path.join(ROOT, "data", "nieuws_extra.json")
-VOORBEELD = os.path.join(ROOT, "data", "nieuws_voorbeelden.json")
 STREEP = re.compile("[—–]")
 CJK = re.compile("[぀-ヿ㐀-鿿가-힯]")
 
@@ -33,20 +31,12 @@ def laad():
     c = _json(PAD, {})
     c.setdefault("verzen", {})
     c.setdefault("afgekeurd", [])
-    c.setdefault("nieuws", {}).setdefault("zinnen", {})
-    c["nieuws"].setdefault("bruggen", {})
+    c.setdefault("noor", {})
     return c
 
 
 def bewaar(c):
     json.dump(c, open(PAD, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-
-
-def extra():
-    e = _json(EXTRA, {})
-    e.setdefault("zinnen", {})
-    e.setdefault("bruggen", {})
-    return e
 
 
 def bank_tags():
@@ -113,44 +103,45 @@ def afkeuren(vid):
     bewaar(c)
 
 
-def nieuws_goedkeuren(soort, cat, tekst):
-    """soort: 'zinnen' of 'bruggen'. Streepjes en te lange bruggen worden geweigerd."""
-    c, x = laad(), extra()
-    lijst = c["nieuws"][soort].get(cat, [])
-    k = next((q for q in lijst if q["tekst"] == tekst), None)
+NOOR_VELDEN = ("verhaal", "zin", "vraag", "herkenning")
+NOOR_LENGTE = {"verhaal": (15, 200), "zin": (20, 200), "vraag": (8, 120), "herkenning": (8, 90)}
+
+
+def noor_problemen(e):
+    uit = []
+    for v in NOOR_VELDEN:
+        t = str(e.get(v, "")).strip()
+        lo, hi = NOOR_LENGTE[v]
+        if not lo <= len(t) <= hi:
+            uit.append(f"{v}: {len(t)} tekens (moet {lo} tot {hi})")
+        if STREEP.search(t) or CJK.search(t):
+            uit.append(f"{v}: streepje of vreemde tekens")
+        if re.search(r"\bnoor\b", t, re.I):
+            uit.append(f"{v}: de naam mag nooit in een tekst staan")
+    return uit
+
+
+def noor_goedkeuren(vid):
+    c = laad()
+    k = c["noor"].get(vid)
     if not k:
         return False, "Dit concept bestaat niet meer"
-    if STREEP.search(tekst) or CJK.search(tekst) or (soort == "bruggen" and len(tekst) > 45) or not 10 <= len(tekst) <= 140:
-        return False, "Controle faalt (lengte of streepje)"
-    try:
-        import taalcontrole
-        fout = taalcontrole.zin_problemen(tekst)
-    except Exception:
-        fout = []
-    if fout:
-        return False, "Controle faalt: " + "; ".join(fout)
-    x[soort].setdefault(cat, [])
-    if tekst not in x[soort][cat]:
-        x[soort][cat].append(tekst)
-    json.dump(x, open(EXTRA, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    lijst.remove(k)
+    fouten = noor_problemen(k)
+    if fouten:
+        return False, "Controle faalt: " + "; ".join(fouten)
+    pad = os.path.join(ROOT, "data", "noor.json")
+    d = _json(pad, {})
+    d[vid] = {v: str(k[v]).strip() for v in NOOR_VELDEN}
+    json.dump(d, open(pad, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    c["noor"].pop(vid)
     bewaar(c)
-    return True, "Toegevoegd aan de nieuwszinnen"
+    return True, "Persoonlijke teksten staan klaar voor dit vers"
 
 
-def nieuws_afkeuren(soort, cat, tekst):
+def noor_afkeuren(vid):
     c = laad()
-    c["nieuws"][soort][cat] = [q for q in c["nieuws"][soort].get(cat, []) if q["tekst"] != tekst]
+    c["noor"].pop(vid, None)
     bewaar(c)
-
-
-def voorbeelden_schrijven():
-    """Zet de huidige nieuwszinnen per categorie neer, zodat de AI in dezelfde toon schrijft."""
-    import nieuws
-    uit = {}
-    for cat, d in nieuws.LICHT.items():
-        uit[cat] = {"zinnen": list(d["zinnen"])[:6], "bruggen": list(nieuws.BRUGGEN.get(cat, []))}
-    json.dump(uit, open(VOORBEELD, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 
 
 def dashboard():
@@ -167,9 +158,9 @@ def dashboard():
             continue
         lijst.append({"id": vid, "ref": v["ref"], "tekst": v["tekst"], "e": k["e"], "t": k.get("t", ""),
                       "fouten": controle(vid, k["e"], v["tekst"])})
-    nieuws = [{"soort": s, "cat": cat, "tekst": q["tekst"]}
-              for s in ("zinnen", "bruggen") for cat, qs in c["nieuws"][s].items() for q in qs]
+    noor = [{"id": vid, "ref": verzen[vid]["ref"], "tekst": verzen[vid]["tekst"], "e": {v: k.get(v, "") for v in NOOR_VELDEN},
+             "fouten": noor_problemen(k)} for vid, k in c["noor"].items() if vid in verzen]
     bank = tekstbank.laad()
     zonder = sum(1 for v in verzen.values() if v["id"] not in bank)
-    return {"verzen": sorted(lijst, key=lambda x: x["ref"]), "nieuws": nieuws, "zonder_tekst": zonder,
+    return {"verzen": sorted(lijst, key=lambda x: x["ref"]), "noor": sorted(noor, key=lambda x: x["ref"]), "zonder_tekst": zonder,
             "mac": _json(os.path.join(ROOT, "data", "lokale_ai.json"), {})}

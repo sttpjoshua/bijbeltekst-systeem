@@ -2,8 +2,9 @@
 
 Een klein taalmodel (Qwen 2.5 via mlx-lm, eenmalig gedownload) schrijft CONCEPTEN en niets anders:
 1. Teksten voor de tekstbank, voor verzen die nog geen tekst hebben (uitleg, betekenis, vandaag, hooks, hashtags).
-2. Nieuwe openingszinnen en bruggen voor lichte nieuwsposts, per categorie (nooit voor zwaar nieuws of politiek).
-De concepten komen in data/concepten.json. Joshua keurt ze goed in het dashboard; pas dan gebruikt het systeem ze.
+2. Voor nieuwskoppen: per kandidaatvers een zin die zegt hoe het nieuws bij het karakter binnenkomt (data/nieuws_concepten.json).
+3. Persoonlijke teksten voor verzen in de tekstbank (data/concepten.json, veld "noor").
+De concepten komen in data/concepten.json; nieuwsvoorstellen gaan via Telegram en het dashboard. Joshua keurt ze goed in het dashboard; pas dan gebruikt het systeem ze.
 Het model kiest en citeert nooit een vers: de verstekst komt uit de repo.
 
 De GitHub-sleutel staat in de sleutelhanger (service "bibleverse-mac"), nooit in een bestand.
@@ -24,13 +25,13 @@ from pathlib import Path
 
 REPO = "sttpjoshua/bijbeltekst-systeem"
 API = f"https://api.github.com/repos/{REPO}"
-VERSION = "4"
+VERSION = "5"
 MODEL_BIG = "mlx-community/Qwen2.5-14B-Instruct-4bit"
 MODEL_SMALL = "mlx-community/Qwen2.5-7B-Instruct-4bit"
 VERZEN_PER_RONDE = 10
 MAX_OPEN_CONCEPTEN = 60          # genoeg om door te nemen; daarna wacht de AI tot Joshua goedkeurt
-NIEUWS_ELKE_UUR = 6
-MAX_NIEUWS_PER_CAT = 8
+MAX_OPEN_NOOR = 30
+NOOR_PER_RONDE = 5
 STATE = Path.home() / "Library/Application Support/Bibleverse/state.json"
 STREEP = re.compile("[—–]")
 CJK = re.compile("[぀-ヿ㐀-鿿가-힯]")
@@ -300,43 +301,86 @@ def schrijf_vers(vers, bank):
     return None, fouten
 
 
-# ---------- nieuws ----------
-SYSTEEM_NIEUWS = """Je schrijft korte Nederlandse zinnen voor een bijbelvers-kanaal dat meeleeft met lichte nieuwsmomenten (weer, feestdagen, sport, drukte).
-Elke zin is warm en luchtig, noemt het moment en trekt geen conclusies. Geen politiek, geen zwaar nieuws, geen namen van mensen of partijen.
-Geen streepjes (— of –), geen emoji. Antwoord met alleen JSON: {"zinnen": [...], "bruggen": [...]}.
-zinnen: 4 openingszinnen van 40 tot 110 tekens. bruggen: 3 korte zinnen van maximaal 45 tekens die uitleggen waarom het vers bij dit moment past."""
+# ---------- het karakter (naam nooit zichtbaar, nergens) ----------
+STEM = """Je schrijft als een vrouw van 31 die een bijbelvers deelt met een vriend(in). Ze woont in een kleine stad aan de IJssel, is vormgever, piekeraar en regelaar, en leert in kleine stapjes loslaten. Ze is onderweg, geen deskundige.
+Stijl: 'ik' en 'jij', korte zinnen, zachte humor, nooit sarcastisch, gewoon hedendaags Nederlands zonder kerkjargon.
+Ze vertelt nooit over ziekte, verlies, scheiding, geld, therapie, politiek of wonderen als haar eigen ervaring. Geen beloftes die niet in het vers staan.
+Nooit een naam noemen (ook niet de hare), geen streepjes (— of –), geen emoji, geen "Voor iedereen die"."""
+
+SYSTEEM_NIEUWS_STEM = STEM + """
+Je krijgt een nieuwskop. Schrijf ALLEEN hoe het nieuws bij haar binnenkomt, in een of twee korte zinnen (40 tot 140 tekens).
+Noem geen details, plaatsen, namen, cijfers of oorzaken uit de kop, en neem geen standpunt in. Bij zwaar nieuws: stil, bescheiden, geen oplossing.
+De zin moet aansluiten op het vers dat erbij hoort. Antwoord met alleen JSON: {"zin": "..."}"""
+
+SYSTEEM_NOOR_TEKST = STEM + """
+Je krijgt een bijbelvers (Statenvertaling). Schrijf haar persoonlijke teksten erbij, in algemene taal, zonder verzonnen gebeurtenissen.
+Velden (alle verplicht): verhaal (openingszin, 40 tot 130 tekens), zin (onder de post, hoogstens 160 tekens, wat het vers met haar doet),
+vraag (oprechte open vraag, eindigt op ?, hoogstens 100 tekens), herkenning (korte herkenbare zin, 10 tot 85 tekens, begint niet met 'Voor iedereen').
+Antwoord met alleen JSON met precies die vier velden."""
 
 
-SYSTEEM_NAKIJK_ZIN = """Je bent een strenge Nederlandse eindredacteur. Je krijgt korte zinnen voor een bijbelvers-kanaal bij een licht nieuwsmoment.
-Een zin is fout als hij geen natuurlijk, correct Nederlands is, onzin of verzonnen woorden bevat, niet bij de categorie past,
-een spelfout heeft of vreemd klinkt. Twijfel je, dan is hij fout.
-Antwoord met alleen JSON: {"fout": [de foute zinnen, letterlijk overgenomen]}."""
-
-
-def nieuws_schrijven(cat, vb, bestaand):
-    user = (f"Categorie: {cat}\nVoorbeelden openingszinnen: {json.dumps(vb.get('zinnen', []), ensure_ascii=False)}\n"
-            f"Voorbeelden bruggen: {json.dumps(vb.get('bruggen', []), ensure_ascii=False)}\nSchrijf nieuwe, andere zinnen in dezelfde toon.")
-    d = als_json(vraag(SYSTEEM_NIEUWS, user, max_tokens=900, temp=0.8)) or {}
-    # eindredactie: alleen zinnen die natuurlijk Nederlands zijn en kloppen
-    alle = [str(t).strip() for soort in ("zinnen", "bruggen") for t in d.get(soort, []) if str(t).strip()]
-    if alle:
-        oordeel = als_json(vraag(SYSTEEM_NAKIJK_ZIN, json.dumps({"categorie": cat, "zinnen": alle}, ensure_ascii=False) + "\nJSON:",
-                                 max_tokens=600, temp=0.2)) or {}
-        slecht = {str(t).strip() for t in oordeel.get("fout") or []}
-        if not isinstance(oordeel.get("fout"), list):
-            slecht = set(alle)  # geen geldig oordeel: niets doorlaten
-        for soort in ("zinnen", "bruggen"):
-            d[soort] = [t for t in d.get(soort, []) if str(t).strip() not in slecht]
-    uit = {"zinnen": [], "bruggen": []}
-    for soort, lo, hi in (("zinnen", 25, 120), ("bruggen", 10, 45)):
-        for t in d.get(soort, []):
-            t = str(t).strip()
-            T = taal()
-            if T and T["zin_problemen"](t):
-                continue
-            if lo <= len(t) <= hi and not STREEP.search(t) and not CJK.search(t) and t not in bestaand and t not in uit[soort]:
-                uit[soort].append(t)
+def nieuws_zin_problemen(zin, kop):
+    uit = []
+    if not 15 <= len(zin) <= 160:
+        uit.append("lengte")
+    if STREEP.search(zin) or CJK.search(zin):
+        uit.append("streepje of vreemde tekens")
+    if re.search(r"\bnoor\b", zin, re.I) or re.search(r"\d", zin):
+        uit.append("naam of cijfer")
+    kopwoorden = {w.strip(".,:;!?\"'()").lower() for w in kop.split() if len(w) > 4}
+    if sum(1 for w in woorden(zin) if w in kopwoorden) >= 2:
+        uit.append("neemt details uit de kop over")
+    T = taal()
+    if T:
+        uit += list(T["zin_problemen"](zin))
     return uit
+
+
+def nieuws_stem_schrijven(e):
+    """Per kandidaatvers een openingszin vanuit het karakter. Het model kiest en verzint nooit een vers."""
+    zinnen = {}
+    for k in e.get("kandidaten", []):
+        user = (f"Kop (alleen voor jouw gevoel, niet noemen): {e['kop']}\nSoort: {'zwaar nieuws' if e.get('zwaar') else e.get('categorie', '')}\n"
+                f"Vers dat erbij hoort: {k['ref']}: {k['tekst']}\nJSON:")
+        fouten = []
+        for poging in range(3):
+            extra = "" if not fouten else "\nVorige poging faalde op: " + "; ".join(fouten)
+            d = als_json(vraag(SYSTEEM_NIEUWS_STEM, user + extra, max_tokens=300, temp=0.6 + 0.1 * poging))
+            zin = str((d or {}).get("zin", "")).strip()
+            fouten = nieuws_zin_problemen(zin, e["kop"]) if zin else ["geen zin"]
+            if not fouten:
+                zinnen[k["vers_id"]] = zin
+                break
+    return zinnen
+
+
+def noor_tekst_schrijven(vers):
+    user = f"Vers: {vers['ref']}\nTekst: {vers['tekst']}\nJSON:"
+    fouten = []
+    for poging in range(3):
+        extra = "" if not fouten else "\nVorige poging faalde op: " + "; ".join(fouten)
+        d = als_json(vraag(SYSTEEM_NOOR_TEKST, user + extra, max_tokens=500, temp=0.6 + 0.1 * poging))
+        if not isinstance(d, dict):
+            fouten = ["geen geldig JSON"]
+            continue
+        e = {k: str(d.get(k, "")).strip() for k in ("verhaal", "zin", "vraag", "herkenning")}
+        fouten = []
+        for k, (lo, hi) in {"verhaal": (15, 200), "zin": (20, 200), "vraag": (8, 120), "herkenning": (8, 90)}.items():
+            if not lo <= len(e[k]) <= hi:
+                fouten.append(f"{k}: lengte {len(e[k])}")
+            if STREEP.search(e[k]) or CJK.search(e[k]) or re.search(r"\bnoor\b", e[k], re.I):
+                fouten.append(f"{k}: streepje, vreemde tekens of naam")
+        if not e["vraag"].endswith("?"):
+            fouten.append("vraag eindigt niet op ?")
+        if e["herkenning"].lower().startswith("voor iedereen"):
+            fouten.append("herkenning mag niet beginnen met 'Voor iedereen'")
+        T = taal()
+        if T and not fouten:
+            for k in ("verhaal", "zin", "vraag", "herkenning"):
+                fouten += [f"{k}: {x}" for x in T["zin_problemen"](e[k])]
+        if not fouten:
+            return e
+    return None
 
 
 # ---------- werk ----------
@@ -364,8 +408,7 @@ def werk():
     conc = lees("data/concepten.json", {})
     conc.setdefault("verzen", {})
     conc.setdefault("afgekeurd", [])
-    conc.setdefault("nieuws", {}).setdefault("zinnen", {})
-    conc["nieuws"].setdefault("bruggen", {})
+    conc.setdefault("noor", {})
     s = state()
     nu = datetime.now(timezone.utc)
     gewijzigd = False
@@ -400,24 +443,40 @@ def werk():
                 tellers["mislukt"] += 1
                 log("  mislukt:", "; ".join(fouten))
 
-    # 2. nieuwszinnen (elke paar uur)
-    laatste = s.get("nieuws_t")
-    if not laatste or (nu - datetime.fromisoformat(laatste)).total_seconds() > NIEUWS_ELKE_UUR * 3600:
-        vb = lees("data/nieuws_voorbeelden.json", {})
-        extra = lees("data/nieuws_extra.json", {})
-        for cat, d in vb.items():
-            nu_n = len(conc["nieuws"]["zinnen"].get(cat, []))
-            if nu_n >= MAX_NIEUWS_PER_CAT:
+    # 2. nieuwsconcepten vanuit het karakter: voor elke kop die op een zin wacht (status "schrijven")
+    nlog = lees("data/nieuws.json", [])
+    nc = lees("data/nieuws_concepten.json", {})
+    nc_nieuw = False
+    for e in nlog:
+        if e.get("status") == "schrijven" and e["id"] not in nc and e.get("kandidaten"):
+            log("nieuws:", e["kop"][:60])
+            zinnen = nieuws_stem_schrijven(e)
+            if zinnen:
+                nc[e["id"]] = {"zinnen": zinnen, "t": nu.isoformat(timespec="minutes")}
+                nc_nieuw = True
+                tellers["nieuws"] = tellers.get("nieuws", 0) + 1
+    if nc_nieuw:
+        for _ in range(3):
+            if schrijf("data/nieuws_concepten.json", nc, "Lokale AI: nieuwsconcepten"):
+                break
+            nc = {**lees("data/nieuws_concepten.json", {}), **nc}
+
+    # 3. persoonlijke teksten voor verzen in de tekstbank die ze nog niet hebben (ter goedkeuring)
+    noor = lees("data/noor.json", {})
+    open_noor = conc.setdefault("noor", {})
+    if len(open_noor) < MAX_OPEN_NOOR:
+        verzen = {v["id"]: v for v in lees("data/verzen.json", [])}
+        for vid in bank:
+            if len(open_noor) >= MAX_OPEN_NOOR or tellers.get("noor", 0) >= NOOR_PER_RONDE:
+                break
+            if vid in noor or vid in open_noor or vid in conc["afgekeurd"] or vid not in verzen:
                 continue
-            bestaand = set(d.get("zinnen", []) + d.get("bruggen", []) + (extra.get("zinnen", {}).get(cat, [])) + (extra.get("bruggen", {}).get(cat, [])))
-            bestaand |= {q["tekst"] for soort in ("zinnen", "bruggen") for q in conc["nieuws"][soort].get(cat, [])}
-            log("nieuwszinnen:", cat)
-            nieuw = nieuws_schrijven(cat, d, bestaand)
-            for soort in ("zinnen", "bruggen"):
-                for t in nieuw[soort]:
-                    conc["nieuws"][soort].setdefault(cat, []).append({"tekst": t, "model": model()[0].split("/")[-1], "t": nu.isoformat(timespec="minutes")})
-                    gewijzigd = True
-        s["nieuws_t"] = nu.isoformat(timespec="minutes")
+            log("persoonlijke tekst:", verzen[vid]["ref"])
+            e = noor_tekst_schrijven(verzen[vid])
+            if e:
+                open_noor[vid] = dict(e, model=model()[0].split("/")[-1], t=nu.isoformat(timespec="minutes"))
+                tellers["noor"] = tellers.get("noor", 0) + 1
+                gewijzigd = True
 
     if gewijzigd:
         # bij een gelijktijdige wijziging (Joshua keurde net iets goed) nieuw ophalen en samenvoegen
@@ -427,11 +486,7 @@ def werk():
             nieuw_conc = lees("data/concepten.json", {})
             nieuw_conc.setdefault("verzen", {}).update({k: v for k, v in conc["verzen"].items() if k not in nieuw_conc["verzen"] and k not in nieuw_conc.get("afgekeurd", [])})
             nieuw_conc.setdefault("afgekeurd", [])
-            nieuw_conc.setdefault("nieuws", {"zinnen": {}, "bruggen": {}})
-            for soort in ("zinnen", "bruggen"):
-                for cat, qs in conc["nieuws"][soort].items():
-                    have = {q["tekst"] for q in nieuw_conc["nieuws"][soort].get(cat, [])}
-                    nieuw_conc["nieuws"][soort].setdefault(cat, []).extend(q for q in qs if q["tekst"] not in have)
+            nieuw_conc.setdefault("noor", {}).update({k: v for k, v in conc["noor"].items() if k not in nieuw_conc["noor"]})
             conc = nieuw_conc
 
     # hartslag: hooguit elke 3 uur, zodat het dashboard laat zien dat het programma leeft
