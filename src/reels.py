@@ -271,9 +271,9 @@ def _band(plaatsing):
     import numpy as np
     y = np.linspace(0, 1, H)[:, None]
     if plaatsing == "onder":
-        a = np.clip((y - 0.42) / 0.40, 0, 1) ** 1.3 * 190
+        a = np.clip((y - 0.40) / 0.38, 0, 1) ** 1.2 * 215
     elif plaatsing == "boven":
-        a = np.clip((0.66 - y) / 0.44, 0, 1) ** 1.3 * 190
+        a = np.clip((0.68 - y) / 0.44, 0, 1) ** 1.2 * 215
     else:
         a = 70 + 90 * np.exp(-((y - 0.46) / 0.22) ** 2)
     a = np.repeat(a, B, axis=1).astype("uint8")
@@ -310,11 +310,12 @@ def _tekstvlak(post, regels_spec, plaatsing):
             f = R._font("montserrat" if soort == "hook" else serif, 72 if soort == "hook" else 58)
             rg = R._wrap(tekst, f, int(B * 0.82), d)
             blokken.append((soort, rg, f, int(f.size * 1.3)))
-        else:
-            f = R._klein_font({"label": 30, "ref": 34, "merk": 26}[soort], b"SemiBold" if soort != "merk" else b"Medium")
+        else:  # label, ref en merk in haar handschrift
+            f = R._hand({"label": 74, "ref": 72, "merk": 58}[soort])
+            tekst = {"label": "wat dit betekent", "ref": post["ref"], "merk": "bibleverse  \u00b7  @bibleverse_nl"}[soort]
             if soort == "ref":
                 blokken.append(("ruimte", [""], f, 26))
-            blokken.append((soort, [tekst], f, int(f.size * 1.9)))
+            blokken.append((soort, [tekst], f, int(f.size * 1.5)))
     hoogte = sum(lh * len(rg) for _, rg, _, lh in blokken)
     y = int(H * PLAATSING[plaatsing] - hoogte / 2)
     # veilige zone van Instagram: niet onder de knoppen bovenin (tot 17%) en niet in de onderkant met naam en bijschrift (vanaf 74%)
@@ -368,7 +369,7 @@ def maak_situatie(post, pad, clips, plaatsing="onder", openingszin=False):
     pe = os.path.join(tmp, "eind.png"); eind.save(pe)
     segs.append((pe, t1 + lees + t_uit, t_eind))
 
-    vul = "scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,setsar=1,fps=30,eq=saturation=0.92:brightness=-0.03"
+    vul = "scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,setsar=1,fps=30,gblur=sigma=18,eq=saturation=0.92:brightness=-0.07"
     cmd = ["ffmpeg", "-y", "-loglevel", "error",
            "-stream_loop", "-1", "-t", str(max(wissel, 0.5) + 0.5), "-i", a,
            "-stream_loop", "-1", "-t", str(duur - wissel + 0.6), "-i", b]
@@ -424,6 +425,27 @@ LOOKS = {  # variant: (achtergrond boven, onder, tekst, accent, markeerstreep, l
     "roze":     ((255, 248, 248), (250, 220, 226), (62, 36, 44), (170, 66, 98), (246, 196, 208, 170), "cormorant_cursief"),
     "goud":     ((255, 252, 238), (250, 234, 186), (54, 42, 22), (156, 96, 18), (250, 220, 120, 175), "montserrat"),
 }
+
+
+def _potlood_streep(d, x0, x1, yc, h, kleur, seed):
+    """Markering met potlood: dunne, schuine arceerlijntjes onder het woord, zoals oma het in de kantlijn deed."""
+    rnd = random.Random(seed)
+    top, bot = yc - h * 0.40, yc + h * 0.46
+    x = x0 - 2
+    while x < x1 + 2:
+        xa = x + rnd.uniform(-1.5, 1.5)
+        l = rnd.uniform(0.85, 1.0)
+        d.line([(xa, bot + rnd.uniform(-1.5, 1.5)), (xa + h * 0.34 * l, bot - (bot - top) * l + rnd.uniform(-1.5, 1.5))],
+               fill=(74, 66, 62, rnd.choice((46, 54, 62))), width=2)
+        x += rnd.uniform(8, 11)
+    # een dunne potloodlijn onderlangs
+    pts = []
+    xx = x0 - 4
+    while xx < x1 + 4:
+        pts.append((xx, bot + 3 + rnd.uniform(-1.4, 1.4))); xx += max(16, (x1 - x0) / 9)
+    pts.append((x1 + 4, bot + 3 + rnd.uniform(-1.4, 1.4)))
+    if len(pts) > 1:
+        d.line(pts, fill=(74, 66, 62, 90), width=2, joint="curve")
 
 
 def _achtergrond(boven=(253, 248, 238), onder=(250, 228, 205)):
@@ -492,6 +514,8 @@ def maak_markeren(post, pad):
     # varianten (Joshua, 15 nov): achtergrond kleur | papier | schaduw | foto, streep per regel of per woord,
     # opening meteen het vers of eerst kort het sterkste stukje groot
     ag = v.get("markeer_achtergrond") or "kleur"
+    if ag == "kleur":  # geen gladde kleurverlopen meer: altijd papier (haar notitieboekje)
+        ag = "papier"
     per_woord = (v.get("markeer_streep") or "regel") == "woord"
     sterk = (v.get("markeer_opening") or "vers") == "sterk"
     if ag in ("papier", "schaduw"):
@@ -507,6 +531,8 @@ def maak_markeren(post, pad):
     else:
         bg = _achtergrond(bgb, bgo)
     inkt, dim, accent = ik + (255,), ik + (70,), ac + (255,)
+    persoonlijk = ag in ("papier", "schaduw")
+    streepfn = _potlood_streep if persoonlijk else _streep
     hook = ""  # de reel begint meteen met het vers (Joshua, 12 nov); een groet staat in de caption
     uitleg = (post.get("uitleg") or post.get("reel_uitleg") or "").strip()
     meet = ImageDraw.Draw(Image.new("RGBA", (B, 10)))
@@ -550,17 +576,28 @@ def maak_markeren(post, pad):
     ink_l = laag(inkt, accent)
     ref = Image.new("RGBA", (B, H), (0, 0, 0, 0)); dr = ImageDraw.Draw(ref)
     yb = y0 + len(rg) * lh + 50
-    dr.text((B // 2, yb), post["ref"].upper(), font=R._klein_font(36, b"SemiBold"), fill=accent, anchor="ma")
+    if persoonlijk:
+        dr.text((B // 2, yb - 8), post["ref"], font=R._hand(66), fill=accent, anchor="ma")
+    else:
+        dr.text((B // 2, yb), post["ref"].upper(), font=R._klein_font(36, b"SemiBold"), fill=accent, anchor="ma")
     uit = Image.new("RGBA", (B, H), (0, 0, 0, 0)); du = ImageDraw.Draw(uit)
     if uitleg:
         fu = R._font(serif, 56); ru = R._wrap(uitleg, fu, int(B * 0.80), du)
         yu = int(H * 0.40 - len(ru) * 76 / 2)
-        du.text((B // 2, yu - 90), "WAT BETEKENT DIT?", font=R._klein_font(32, b"SemiBold"), fill=accent, anchor="ma")
+        if persoonlijk:
+            du.text((B // 2, yu - 120), "wat dit betekent", font=R._hand(78), fill=accent, anchor="ma")
+        else:
+            du.text((B // 2, yu - 90), "WAT BETEKENT DIT?", font=R._klein_font(32, b"SemiBold"), fill=accent, anchor="ma")
         for i, r in enumerate(ru):
             du.text((B // 2, yu + i * 76), r, font=fu, fill=inkt, anchor="ma")
     eind = Image.new("RGBA", (B, H), (0, 0, 0, 0)); de = ImageDraw.Draw(eind)
-    de.text((B // 2, int(H * 0.40)), post["ref"].upper(), font=R._klein_font(44, b"SemiBold"), fill=accent, anchor="ma")
-    de.text((B // 2, int(H * 0.40) + 90), "BIBLEVERSE  ·  @bibleverse_nl", font=R._klein_font(28, b"Medium"), fill=(100, 88, 80, 255), anchor="ma")
+    if persoonlijk:
+        de.text((B // 2, int(H * 0.40)), post["ref"], font=R._hand(92), fill=accent, anchor="ma")
+        de.text((B // 2, int(H * 0.40) + 120), "bibleverse", font=R._hand(64), fill=(100, 88, 80, 220), anchor="ma")
+        de.text((B // 2, int(H * 0.40) + 200), "@bibleverse_nl", font=R._klein_font(26, b"Medium"), fill=(100, 88, 80, 150), anchor="ma")
+    else:
+        de.text((B // 2, int(H * 0.40)), post["ref"].upper(), font=R._klein_font(44, b"SemiBold"), fill=accent, anchor="ma")
+        de.text((B // 2, int(H * 0.40) + 90), "BIBLEVERSE  ·  @bibleverse_nl", font=R._klein_font(28, b"Medium"), fill=(100, 88, 80, 255), anchor="ma")
     hk = Image.new("RGBA", (B, H), (0, 0, 0, 0)); dh = ImageDraw.Draw(hk)
     if sterk and kern:
         frag = R.stopper_fragment(post["tekst"], kern)
@@ -617,12 +654,12 @@ def maak_markeren(post, pad):
                 for i, (w, xa, xb, yy, kk) in enumerate(woorden):
                     p = _ease((tv - starts[i]) / tempo)
                     if p > 0:
-                        _streep(ds, xa + 4, xa + 4 + (xb - xa - 8) * p, yy + g * 0.6, g * 0.92, strook, 300 + i)
+                        streepfn(ds, xa + 4, xa + 4 + (xb - xa - 8) * p, yy + g * 0.6, g * 0.92, strook, 300 + i)
             else:
                 for i, (xa, xb, yc, s0, s1) in enumerate(lijnen):
                     p = max(0.0, min(1.0, (tv - s0) / max(0.3, s1 - s0)))  # gelijkmatig, op leestempo
                     if p > 0:
-                        _streep(ds, xa, xa + (xb - xa) * p, yc, g * 1.02, strook, 100 + i)
+                        streepfn(ds, xa, xa + (xb - xa) * p, yc, g * 1.02, strook, 100 + i)
             laag_nu = Image.alpha_composite(st, ink_l)
             laag_nu.alpha_composite(ref)
             fr = mix(fr, laag_nu, a)
