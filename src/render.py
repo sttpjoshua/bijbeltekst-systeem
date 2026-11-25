@@ -25,6 +25,10 @@ PALETTEN = {
     "bosgroen":        ("#58a874", "#1f5a3d", "#f1fff4", "#d8f5c8"),
     "mint":            ("#e3fcf4", "#8fdcc7", "#0f4a3c", "#1f7a63"),
     "perzik":          ("#fff6cc", "#ffc28b", "#5a3008", "#b8571a"),
+    # Zachte paletten (25 nov): persoonlijker, passend bij het karakter
+    "hemel_zacht":     ("#e4f1fb", "#a9cfe9", "#1d3550", "#2f6d9f"),
+    "bos_zacht":       ("#e6efe2", "#9fc2a4", "#1d3b2a", "#3a7a55"),
+    "zonsopgang_zacht": ("#fde3c4", "#f2a98f", "#3a2218", "#8a3b24"),
     # Papierstijl: crème papier met diepe inkt (naar een voorbeeld dat Joshua liet zien)
     "papier_rood":     ("#f5f1e6", "#f1ece0", "#9b2a40", "#7d1d33"),
     "papier_groen":    ("#f4f1e4", "#eeeadb", "#2f5a41", "#1f4630"),
@@ -40,6 +44,11 @@ VERLOPEN = {
     "mint":            (165, ["#e3fcf4", "#8fdcc7"], [0, 1]),
     "perzik":          (150, ["#fff6cc", "#ffd59e", "#ffb38a"], [0, .5, 1]),
 }
+VERLOPEN.update({
+    "hemel_zacht":      (180, ["#e8f3fc", "#a9cfe9"], [0, 1]),
+    "bos_zacht":        (170, ["#e9f1e5", "#9fc2a4"], [0, 1]),
+    "zonsopgang_zacht": (165, ["#ffe7c7", "#f8c3a0", "#eba0a0"], [0, .55, 1]),
+})
 RADIAAL = {"diep_paars": ((0.25, 0.15), ["#8a5ae0", "#2a1650"], 0.75)}
 
 LETTERTYPES = {
@@ -51,6 +60,7 @@ LETTERTYPES = {
     "montserrat": ("Montserrat.ttf", b"SemiBold"),
     "montserrat_zwaar": ("Montserrat.ttf", b"ExtraBold"),
     "cormorant_cursief": ("CormorantGaramond-Italic.ttf", b"Medium Italic"),
+    "caveat": ("Caveat.ttf", None),
     "lora_half": ("Lora.ttf", b"Medium"),
 }
 
@@ -68,6 +78,9 @@ def _font(naam, grootte, gewicht=None):
     return f
 
 _GEWICHTEN = [b"Thin", b"ExtraLight", b"Light", b"Regular", b"Medium", b"SemiBold", b"Bold", b"ExtraBold", b"Black"]
+
+def _hand(grootte):
+    return ImageFont.truetype(os.path.join(FONTS, "Caveat.ttf"), int(grootte))
 
 def _vet(f):
     """Een dikkere versie van hetzelfde lettertype (twee stappen zwaarder). Geeft (font, extra_dikte) terug."""
@@ -298,7 +311,7 @@ def kernwoord(post):
 def _kernstaat(post, kleur, accent, plain=False):
     """Hoe het kernwoord opvalt: dikker, en in de accentkleur. Lijkt de accentkleur te veel op de tekstkleur,
     dan een diepe tint van de achtergrond (of warm goud op een foto). Nooit een vakje of balk eromheen."""
-    st = {"kern": kernwoord(post), "kleur": accent, "plain": plain}
+    st = {"kern": kernwoord(post), "kleur": accent, "plain": plain, "hand": bool(post["variabelen"].get("accent_hand"))}
     if sum(abs(x - y) for x, y in zip(kleur[:3], accent[:3])) < 120:
         if post["variabelen"].get("achtergrondbron") == "beeld":
             st["kleur"] = (255, 214, 140, 255)
@@ -326,7 +339,10 @@ def _regel(d, x, y, r, f, kleur, accent, staat, links):
                 voor = " ".join(ws[:i]) + (" " if i else "") + m.group(1)
                 na = m.group(3) + (" " if i < len(ws) - 1 else "") + " ".join(ws[i + 1:])
                 fv, rand = _vet(f)
-                bw = d.textlength(m.group(2), font=fv) + 2 * rand
+                extra = 0
+                if staat.get("hand"):  # handschrift-accent: een rustig handgeschreven kernwoord
+                    fv, rand, extra = _hand(f.size * 1.25), 0, int(f.size * 0.1)
+                bw = d.textlength(m.group(2), font=fv) + 2 * rand + extra
                 w = d.textlength(voor, font=f) + bw + d.textlength(na, font=f)
                 x0 = x if links else x - w / 2
                 d.text((x0, y), voor, font=f, fill=kleur, anchor="la")
@@ -488,6 +504,8 @@ def tekstlaag(b, h, post, ruimte_boven=0, ruimte_onder=0, geo=None, kern_info=No
     reftekst = (post["ref"] + ("  \u00b7  NBV21" if post.get("vertaling") == "NBV21" else "")).upper()
     if post.get("_stopper"):
         reftekst = post["ref"].upper() + "  \u00b7  LEES VERDER \u2192"
+    if v.get("accent_hand"):
+        rf, reftekst = _hand(b * 0.032 * 1.45), reftekst.title().replace("  ·  Nbv21", "  ·  NBV21").replace("  ·  Lees Verder →", "  ·  lees verder")
     if links:
         d.text((tx, ry), reftekst, font=rf, fill=accent + (255,), anchor="la")
     else:
@@ -516,6 +534,8 @@ def tekstlaag(b, h, post, ruimte_boven=0, ruimte_onder=0, geo=None, kern_info=No
 
 def _woordmerk(d, cx, y, tekst, font, kleur, spatie):
     """Tekst met extra letterafstand, gecentreerd rond cx, met een klein punt-accent ervoor."""
+    if tekst == "BIBLEVERSE":  # stil merk: klein, lichter, geen bedrijfsstempel
+        font, kleur, spatie, tekst, y = _klein_font(int(font.size * 0.82), b"Medium"), kleur[:3] + (140,), int(spatie * 0.6), "bibleverse", y + 4
     breedtes = [d.textlength(c, font=font) for c in tekst]
     totaal = sum(breedtes) + spatie * (len(tekst) - 1)
     x = cx - totaal / 2

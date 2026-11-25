@@ -37,11 +37,11 @@ HUISSTIJLEN = {
     "zand":   {"palet": "zand",  "lettertype": "dmserif",   "layout": "centraal", "achtergrond": "verloop"},
     "salie":  {"palet": "salie", "lettertype": "cormorant", "layout": "kader",    "achtergrond": "effen"},
     # Frisse stijlen (naar de voorbeelddesigns)
-    "zonsopgang":  {"palet": "zonsopgang_fris", "lettertype": "lora",              "layout": "links",    "achtergrond": "diagonaal"},
-    "hemelsblauw": {"palet": "hemelsblauw",     "lettertype": "montserrat_zwaar",  "layout": "links",    "achtergrond": "diagonaal"},
+    "zonsopgang":  {"palet": "zonsopgang_zacht", "lettertype": "cormorant",        "layout": "links",    "achtergrond": "diagonaal"},
+    "hemelsblauw": {"palet": "hemel_zacht",     "lettertype": "cormorant",         "layout": "links",    "achtergrond": "diagonaal", "accent_hand": True},
     "paars":       {"palet": "diep_paars",      "lettertype": "lora",              "layout": "links",    "achtergrond": "radiaal"},
     "roze":        {"palet": "zachtroze",       "lettertype": "cormorant_cursief", "layout": "links",    "achtergrond": "diagonaal"},
-    "bosgroen":    {"palet": "bosgroen",        "lettertype": "montserrat_zwaar",  "layout": "links",    "achtergrond": "diagonaal"},
+    "bosgroen":    {"palet": "bos_zacht",       "lettertype": "cormorant",         "layout": "links",    "achtergrond": "diagonaal", "accent_hand": True},
     "mint":        {"palet": "mint",            "lettertype": "dmserif",           "layout": "centraal", "achtergrond": "diagonaal"},
     "perzik":      {"palet": "perzik",          "lettertype": "playfair",          "layout": "citaat",   "achtergrond": "diagonaal"},
     # Papierstijl: crème papier, klassieke serif, links, diepe inkt (wisselt per post van kleur)
