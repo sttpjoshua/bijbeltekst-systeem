@@ -301,14 +301,14 @@ def _tekstvlak(post, regels_spec, plaatsing):
         if soort == "vers":
             g = 74
             while True:
-                f = R._font(serif, g); rg = R._wrap(tekst, f, int(B * 0.82), d)
-                if len(rg) * g * 1.3 <= H * 0.36 or g <= 40:
+                f = R._font(serif, g); rg = R._wrap(tekst, f, int(B * 0.76), d)
+                if len(rg) * g * 1.3 <= H * 0.34 or g <= 40:
                     break
                 g -= 4
             blokken.append(("vers", rg, f, int(g * 1.3)))
         elif soort in ("hook", "uitleg"):
             f = R._font("montserrat" if soort == "hook" else serif, 72 if soort == "hook" else 58)
-            rg = R._wrap(tekst, f, int(B * 0.82), d)
+            rg = R._wrap(tekst, f, int(B * 0.76), d)
             blokken.append((soort, rg, f, int(f.size * 1.3)))
         else:  # label, ref en merk in haar handschrift
             f = R._hand({"label": 74, "ref": 72, "merk": 58}[soort])
@@ -319,7 +319,7 @@ def _tekstvlak(post, regels_spec, plaatsing):
     hoogte = sum(lh * len(rg) for _, rg, _, lh in blokken)
     y = int(H * PLAATSING[plaatsing] - hoogte / 2)
     # veilige zone van Instagram: niet onder de knoppen bovenin (tot 17%) en niet in de onderkant met naam en bijschrift (vanaf 74%)
-    y = max(int(H * 0.17), min(y, int(H * 0.74 - hoogte)))
+    y = max(int(H * 0.16), min(y, int(H * 0.66 - hoogte)))
     staat = R._kernstaat(post, wit[:3], goud[:3])
     for soort, rg, f, lh in blokken:
         for r in rg:
@@ -479,7 +479,7 @@ def _sterk_beeld(d, frag, kern, serif, inkt, accent, strook):
     meet = d
     g = 120
     while True:
-        f = R._font(serif, g); rg = R._wrap(frag, f, int(B * 0.84), meet)
+        f = R._font(serif, g); rg = R._wrap(frag, f, int(B * 0.76), meet)
         if len(rg) * g * 1.25 <= H * 0.42 or g <= 64:
             break
         g -= 6
@@ -538,12 +538,12 @@ def maak_markeren(post, pad):
     meet = ImageDraw.Draw(Image.new("RGBA", (B, 10)))
     g = 92 if serif.startswith("cormorant") else 80  # Cormorant valt kleiner uit
     while True:
-        f = R._font(serif, g); rg = R._wrap(post["tekst"], f, int(B * 0.80), meet)
-        if len(rg) * g * 1.5 <= H * 0.46 or g <= 44:
+        f = R._font(serif, g); rg = R._wrap(post["tekst"], f, int(B * 0.76), meet)
+        if len(rg) * g * 1.5 <= H * 0.40 or g <= 44:
             break
         g -= 4
     lh = int(g * 1.5)
-    y0 = int(H * 0.40 - len(rg) * lh / 2)
+    y0 = int(H * 0.38 - len(rg) * lh / 2)
     fv, rand = R._vet(f)
     kern = R._kernstaat(post, inkt[:3], accent[:3]).get("kern")
     kern_klaar = False
@@ -582,7 +582,7 @@ def maak_markeren(post, pad):
         dr.text((B // 2, yb), post["ref"].upper(), font=R._klein_font(36, b"SemiBold"), fill=accent, anchor="ma")
     uit = Image.new("RGBA", (B, H), (0, 0, 0, 0)); du = ImageDraw.Draw(uit)
     if uitleg:
-        fu = R._font(serif, 56); ru = R._wrap(uitleg, fu, int(B * 0.80), du)
+        fu = R._font(serif, 56); ru = R._wrap(uitleg, fu, int(B * 0.76), du)
         yu = int(H * 0.40 - len(ru) * 76 / 2)
         if persoonlijk:
             du.text((B // 2, yu - 120), "wat dit betekent", font=R._hand(78), fill=accent, anchor="ma")
@@ -605,7 +605,7 @@ def maak_markeren(post, pad):
             _sterk_beeld(dh, frag, kern, serif, inkt, accent, strook)
             hook = frag
     elif hook:
-        fh = R._font(serif, 70); rh = R._wrap(hook, fh, int(B * 0.80), dh)
+        fh = R._font(serif, 70); rh = R._wrap(hook, fh, int(B * 0.76), dh)
         for i, r in enumerate(rh):
             dh.text((B // 2, int(H * 0.40) - len(rh) * 46 + i * 92), r, font=fh, fill=inkt, anchor="ma")
     # tempo: ruim 2 woorden per seconde, extra rust bij leestekens
