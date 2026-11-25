@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T18:30:49",
+ "updated": "2026-11-25T18:45:42",
  "agents": {
   "verskiezer": {
    "t": "2026-11-25T13:53:17",
@@ -57,6 +57,10 @@
  ],
  "log": [
   {
+   "t": "18:45",
+   "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
+  },
+  {
    "t": "17:47",
    "msg": "2026-11-25-2 online op instagram: Jesaja 49:16"
   },
@@ -99,10 +103,6 @@
   {
    "t": "13:30",
    "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
-   "t": "12:17",
-   "msg": "2026-11-25-1 online op facebook: Galaten 4:7"
   }
  ],
  "lampen": [
