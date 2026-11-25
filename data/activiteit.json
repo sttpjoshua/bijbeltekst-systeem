@@ -1,17 +1,17 @@
 {
  "verskiezer": {
-  "t": "2026-11-25T07:01:24",
-  "task": "Nieuwspost gemaakt: Spreuken 12:15",
+  "t": "2026-11-25T09:02:49",
+  "task": "Koos Hebreeën 4:15, Jesaja 43:1, Psalm 145:18, Mattheüs 7:3, Psalm 138:3",
   "state": "done"
  },
  "designer": {
-  "t": "2026-11-25T07:01:24",
-  "task": "Ontwierp Spreuken 12:15 in stijl papier_groen",
+  "t": "2026-11-25T09:04:24",
+  "task": "Ontwierp Psalm 138:3 in stijl zand",
   "state": "done"
  },
  "video": {
-  "t": "2026-11-24T01:05:01",
-  "task": "Monteerde video Handelingen 1:8 met muziek",
+  "t": "2026-11-25T09:04:24",
+  "task": "Monteerde video Psalm 138:3 met muziek",
   "state": "done"
  },
  "dispatcher": {
@@ -20,7 +20,7 @@
   "state": "done"
  },
  "controller": {
-  "t": "2026-11-24T01:05:01",
+  "t": "2026-11-25T09:04:24",
   "task": "Posts klaargezet uit de tekstbank",
   "state": "done"
  },
