@@ -934,6 +934,46 @@
    "herkenning": "Zout maakt elk gesprek aangenaam.",
    "model": "Qwen2.5-14B-Instruct-4bit",
    "t": "2026-11-25T08:21+00:00"
+  },
+  "Deuteronomy-31-6-6": {
+   "verhaal": "Bij elke nieuwe klus moet ik mezelf eraan herinneren",
+   "zin": "Dit vers helpt me moediger te zijn, ook als nieuwe uitdagingen opduiken",
+   "vraag": "Hoe help jij mij moediger te blijven in moeilijke tijden?",
+   "herkenning": "Het leven heeft zijn uitdagingen",
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-25T09:07+00:00"
+  },
+  "Deuteronomy-31-8-8": {
+   "verhaal": "Ik loop vandaag weer een keer wat onzeker, maar deze woorden helpen om rustiger te blijven.",
+   "zin": "De HEERE zal met mij zijn en niet toestaan dat ik me alleen voel.",
+   "vraag": "Hoe kan ik in moeilijke tijden beter op deze belofte vertrouwen?",
+   "herkenning": "Ik voel me rustiger en sterker.",
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-25T09:07+00:00"
+  },
+  "Ecclesiastes-1-9-9": {
+   "verhaal": "Bij een wandeling langs de IJssel zag ik hoe de rivier stroomt, net zoals altijd.",
+   "zin": "Elke dag dat ik opnieuw bezig ben, herhaal ik de lessen uit het verleden.",
+   "vraag": "Hoe kan ik de herhaling van ervaringen op een nieuwe manier zien?",
+   "herkenning": "Het gaat om nieuwe inzichten uit oude situaties.",
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-25T09:07+00:00"
+  },
+  "Ecclesiastes-10-18-18": {
+   "verhaal": "Soms ben ik zo moe dat ik niet eens de trap naar boven kan op.",
+   "zin": "Deze woorden doen me beseffen dat ik niet mag roesten op mijn lol.",
+   "vraag": "Hoe kan ik mezelf aanmoedigen om actief te blijven, ook als ik moe ben?",
+   "herkenning": "Zelfs klein werk kan een groot verschil maken.",
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-25T09:07+00:00"
+  },
+  "Ecclesiastes-11-4-4": {
+   "verhaal": "Bij de planning voor een nieuwe vormgeving project, kreeg ik weer te horen dat ik te veel op de nieuwsgierigheid van de klant moest afgaan.",
+   "zin": "Dit vers herinnert mij eraan dat ik af en toe te veel op de wind acht, in plaats van te focussen op mijn eigen werk en de klusjes die ik moet doen.",
+   "vraag": "Hoe kan ik beter mijn eigen taken afmaken zonder te veel op de reacties van anderen te wachten?",
+   "herkenning": "Ik moet mijn eigen zaadje planten en niet te veel op de wind letten.",
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-25T09:07+00:00"
   }
  }
 }
