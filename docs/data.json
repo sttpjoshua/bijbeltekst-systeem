@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-25T09:31",
+ "gegenereerd": "2026-11-25T09:45",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -45,17 +45,18 @@
     "salie": 1.0,
     "zonsopgang": 1.0,
     "hemelsblauw": 1.0,
-    "paars": 1.0,
-    "roze": 1.0,
+    "paars": 0.6,
+    "roze": 0.6,
     "bosgroen": 1.0,
     "mint": 1.0,
     "perzik": 1.0,
-    "papier_rood": 1.0,
-    "papier_groen": 1.0,
-    "papier_blauw": 1.0,
-    "schaduw_rood": 0.88,
-    "schaduw_groen": 1.0,
-    "schaduw_blauw": 1.0
+    "papier_rood": 1.3,
+    "papier_groen": 1.3,
+    "papier_blauw": 1.3,
+    "schaduw_rood": 1.2,
+    "schaduw_groen": 1.3,
+    "schaduw_blauw": 1.3,
+    "postit": 1.3
    },
    "thema": {
     "troost": 1.0,
@@ -189,7 +190,8 @@
     "papier_blauw": 2,
     "schaduw_rood": 5,
     "schaduw_groen": 0,
-    "schaduw_blauw": 1
+    "schaduw_blauw": 1,
+    "postit": 0
    },
    "thema": {
     "troost": 2,
@@ -22622,15 +22624,77 @@
     ]
    }
   ],
-  "noor": [],
+  "noor": [
+   {
+    "id": "Colossians-2-7-7",
+    "ref": "Kolossenzen 2:7",
+    "tekst": "Geworteld en opgebouwd in Hem, en bevestigd in het geloof, gelijkerwijs gij geleerd zijt, overvloedig zijnde in hetzelve, met dankzegging.",
+    "e": {
+     "verhaal": "Ik zit vandaag weer aan mijn tafel, kijk rond en denk na over al die dingen die ik geleerd heb",
+     "zin": "Dit vers herinnert me eraan dat ik steeds dieper in Hem kan wortelen en opbouwen, wat rust geeft",
+     "vraag": "Hoe snijd ik de ruimte om te groeien in mijn leven in, zonder te veel lastige dingen te willen oplossen?",
+     "herkenning": "Deze dag breekt ik weer nieuwe grond om dieper te wortelen"
+    },
+    "fouten": []
+   },
+   {
+    "id": "Colossians-3-12-12",
+    "ref": "Kolossenzen 3:12",
+    "tekst": "Zo doet dan aan, als uitverkorenen Gods, heiligen en beminden, de innerlijke bewegingen der barmhartigheid, goedertierenheid, ootmoedigheid, zachtmoedigheid, lankmoedigheid.",
+    "e": {
+     "verhaal": "Ik ben bezig met een project dat mij uitdagend vindt, en vandaag voel ik deze woorden extra dichtbij.",
+     "zin": "Dit vers helpt me om vriendelijker te zijn tegen mezelf en anderen, ook als het moeilijk is.",
+     "vraag": "Hoe kan ik dit karakter in mezelf dieper ontwikkelen?",
+     "herkenning": "Deze woorden spelen ook in mijn dagelijkse leven."
+    },
+    "fouten": []
+   },
+   {
+    "id": "Colossians-3-14-14",
+    "ref": "Kolossenzen 3:14",
+    "tekst": "En boven dit alles doet aan de liefde, dewelke is de band der volmaaktheid.",
+    "e": {
+     "verhaal": "Vandaag las ik over liefde als de band die alles samenbindt.",
+     "zin": "Dit vers helpt me eraan te herinneren dat liefde de kracht heeft om de meest verschillende mensen en dingen samen te binden.",
+     "vraag": "Hoe kan ik meer van die liefde laten zien in mijn leven?",
+     "herkenning": "Liefde bindt alles samen."
+    },
+    "fouten": []
+   },
+   {
+    "id": "Colossians-3-2-2",
+    "ref": "Kolossenzen 3:2",
+    "tekst": "Bedenkt de dingen, die boven zijn, niet die op de aarde zijn.",
+    "e": {
+     "verhaal": "Ik ben vandaag weer eens aan het piekeren over dingen die ik moet doen en over overbodige zorgen",
+     "zin": "Dit vers helpt me om te focussen op wat echt belangrijk is in plaats van mezelf bezig te houden met onzinnige gedachten",
+     "vraag": "Welke dingen op de aarde ben ik eigenlijk aan het zoeken in plaats van omhoog te kijken?",
+     "herkenning": "Ik moet echt beter opletten welke gedachten ik opvat"
+    },
+    "fouten": []
+   },
+   {
+    "id": "Colossians-4-6-6",
+    "ref": "Kolossenzen 4:6",
+    "tekst": "Uw woord zij te allen tijde in aangenaamheid, met zout besprengd, opdat gij moogt weten, hoe gij een iegelijk moet antwoorden.",
+    "e": {
+     "verhaal": "Vandaag leer ik hoe ik mijn woorden scherper maak, zonder prikkelend te zijn.",
+     "zin": "Dit vers helpt me om vriendelijk en respectvol te blijven, ook als ik tegengesproken word.",
+     "vraag": "Hoe kan ik mijn antwoorden zorgvuldiger bepalen om anderen te helpen?",
+     "herkenning": "Zout maakt elk gesprek aangenaam."
+    },
+    "fouten": []
+   }
+  ],
   "zonder_tekst": 301,
   "mac": {
-   "t": "2026-11-25T08:01+00:00",
+   "t": "2026-11-25T08:21+00:00",
    "model": "Qwen2.5-14B-Instruct-4bit",
-   "versie": "4",
+   "versie": "5",
    "laatste_ronde": {
     "concepten": 0,
-    "mislukt": 10
+    "mislukt": 10,
+    "noor": 5
    }
   }
  },
