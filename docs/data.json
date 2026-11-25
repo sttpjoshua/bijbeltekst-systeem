@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-25T16:30",
+ "gegenereerd": "2026-11-25T16:45",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -23930,13 +23930,12 @@
   ],
   "zonder_tekst": 301,
   "mac": {
-   "t": "2026-11-25T12:16+00:00",
+   "t": "2026-11-25T15:16+00:00",
    "model": "Qwen2.5-14B-Instruct-4bit",
    "versie": "5",
    "laatste_ronde": {
     "concepten": 0,
-    "mislukt": 10,
-    "noor": 5
+    "mislukt": 10
    }
   }
  },
