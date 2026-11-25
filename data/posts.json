@@ -17057,19 +17057,19 @@
   "id": "2026-11-25-3",
   "datum": "2026-11-25",
   "status": "gerenderd",
-  "vers_id": "Galatians-2-20-20",
-  "ref": "Galaten 2:20",
-  "tekst": "Ik ben met Christus gekruist; en ik leef, doch niet meer ik, maar Christus leeft in mij; en hetgeen ik nu in het vlees leef, dat leef ik door het geloof des Zoons van God, Die mij liefgehad heeft, en Zichzelven voor mij overgegeven heeft.",
+  "vers_id": "Proverbs-12-15-15",
+  "ref": "Spreuken 12:15",
+  "tekst": "De weg des dwazen is recht in zijn ogen; maar die naar raad hoort, is wijs.",
   "vertaling": "SV",
   "variabelen": {
    "huisstijl": "papier_groen",
-   "thema": "identiteit",
+   "thema": "wijsheid",
    "hook_stijl": "herkenning",
    "formaat": "carrousel",
    "uitleg_op_beeld": false,
    "achtergrondbron": "verloop",
-   "boekgroep": "brieven",
-   "lengte": "lang",
+   "boekgroep": "spreuken",
+   "lengte": "kort",
    "bron": "bekend",
    "vraag_onderaan": false,
    "reel_stijl": null,
@@ -17081,7 +17081,7 @@
    "reel_plaatsing": null,
    "reel_scene": null,
    "reel_haak": null,
-   "opening": "vers",
+   "opening": "verhaal",
    "hashtag_stijl": "zoekwoord",
    "tijdslot": "22:00",
    "tijdslot_fb": "04:00",
@@ -17090,7 +17090,7 @@
    "layout": "links",
    "achtergrond": "papier",
    "hook_op_beeld": false,
-   "aanleiding": "tijdloos",
+   "aanleiding": "nieuws",
    "video_uitleg": null
   },
   "keuzebron": {
@@ -17113,24 +17113,25 @@
    "reel_plaatsing": "n.v.t.",
    "reel_scene": "n.v.t.",
    "reel_haak": "n.v.t.",
-   "opening": "stijl markeren",
+   "opening": "nieuws",
    "hashtag_stijl": "experiment",
    "tijdslot": "experiment",
-   "video_uitleg": "n.v.t."
+   "video_uitleg": "n.v.t.",
+   "aanleiding": "nieuws"
   },
-  "hook": "Voor iedereen die zoekt naar wie hij echt is.",
+  "hook": "Winterweer vandaag. Een goed moment om even stil te staan.",
   "beeld_hook": "",
-  "caption": "Voor iedereen die zoekt naar wie hij echt is.\n\n\"Ik ben met Christus gekruist; en ik leef, doch niet meer ik, maar Christus leeft in mij; en hetgeen ik nu in het vlees leef, dat leef ik door het geloof des Zoons van God, Die mij liefgehad heeft, en Zichzelven voor mij overgegeven heeft.\"\nGalaten 2:20\n\nJe leeft uit Gods liefde, niet uit eigen kracht.",
+  "caption": "Winterweer vandaag. Een goed moment om even stil te staan.\n\n\"De weg des dwazen is recht in zijn ogen; maar die naar raad hoort, is wijs.\"\nSpreuken 12:15\n\nIn de winterkou: warmte van binnen. Wie naar raad luistert, is wijs.",
   "hashtags": [
    "#bijbelvers",
-   "#identiteit",
-   "#galaten"
+   "#wijsheid",
+   "#spreuken"
   ],
   "uitleg": "",
-  "betekenis": "Paulus beschrijft een nieuwe identiteit. Zijn oude leven is voorbij. Nu leeft hij uit geloof in Jezus, die van hem houdt en zichzelf voor hem gaf.",
-  "toepassing": "Vraag jezelf vandaag bij een keuze af: wat zou Jezus hier doen?",
-  "kernwoord": "leeft",
-  "verhaal_hook": "Wie ben jij als Jezus in je leeft?",
+  "betekenis": "We denken allemaal snel dat onze eigen manier de goede is. Spreuken zegt: wijs is wie bereid is te luisteren naar het advies van anderen.",
+  "toepassing": "Vraag vandaag iemand om zijn mening over iets waar je mee bezig bent.",
+  "kernwoord": "raad",
+  "verhaal_hook": "Winterweer vandaag. Een goed moment om even stil te staan.",
   "media": "docs/media/2026-11/2026-11-25-3-1.jpg",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-25-3-1.jpg",
   "metricool": {},
@@ -17152,9 +17153,9 @@
   "muziek": null,
   "geluid": null,
   "tekstbron": "tekstbank",
-  "reel_uitleg": "Ik leef, maar niet meer ik: Christus leeft in mij.",
-  "reel_vraag": "Wie leeft er in jouw leven op de eerste plaats?",
-  "reel_herkenning": "Voor iedereen die zoekt naar wie hij echt is.",
+  "reel_uitleg": "Een dwaas denkt dat hij altijd gelijk heeft. Een wijze luistert naar raad.",
+  "reel_vraag": "Naar wie luister jij?",
+  "reel_herkenning": "Voor iedereen die het liefst alles zelf uitzoekt.",
   "handle": "@bibleverse_nl",
   "media_extra": [
    "docs/media/2026-11/2026-11-25-3-2.jpg",
@@ -17196,6 +17197,14 @@
     "url": "https://www.facebook.com/1015160368352770_122135636798879910",
     "t": "2026-11-25T04:01+01:00"
    }
+  },
+  "nieuws_brug": "In de winterkou: warmte van binnen.",
+  "nieuws": {
+   "categorie": "winter",
+   "kop": "Gewapende mannen gijzelen zeker 25 mensen in Colombiaanse stad Cartagena",
+   "bron": "NOS",
+   "link": "https://nos.nl/l/2640884",
+   "zwaar": false
   }
  },
  {
