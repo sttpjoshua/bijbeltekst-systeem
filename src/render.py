@@ -1,7 +1,7 @@
 """Maakt een afbeelding (1080x1350) of video (1080x1920, 9 s) van een vers.
 Alle ontwerpkeuzes komen binnen als variabelen, zodat het leersysteem ze kan vergelijken.
 """
-import os, re, random, subprocess, tempfile, math
+import os, random, re, random, subprocess, tempfile, math
 from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageChops
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -438,6 +438,25 @@ def stopper_fragment(tekst, kern, max_w=10):
         frag += "\u2026"
     return frag
 
+def _golf(d, pts, kleur, breedte, rnd, wiebel=1.6):
+    pts = [(x + rnd.uniform(-wiebel, wiebel), y + rnd.uniform(-wiebel, wiebel)) for x, y in pts]
+    d.line(pts, fill=kleur, width=breedte, joint="curve")
+
+def _potlood(d, post, pos, kleur, marge, y0, blok_h, links):
+    """Oma's potloodstreepjes: onderstreping onder het kernwoord en een streepje in de kantlijn."""
+    rnd = random.Random(post["id"] + "potlood")
+    pot = kleur[:3] + (170,)
+    fv, x, y = pos["font"], pos["x"], pos["y"]
+    w = d.textlength(pos["woord"], font=fv)
+    yl = y + int(fv.size * 1.06)
+    n = max(6, int(w / 14))
+    _golf(d, [(x - 4 + (w + 8) * i / n, yl + rnd.uniform(-1.5, 1.5)) for i in range(n + 1)], pot, 3, rnd)
+    _golf(d, [(x + 2 + (w - 6) * i / n, yl + 6 + rnd.uniform(-1.5, 1.5)) for i in range(n + 1)], kleur[:3] + (110,), 2, rnd)
+    if links:
+        xm = marge - int(marge * 0.28)
+        n = 14
+        _golf(d, [(xm + rnd.uniform(-1.2, 1.2), y0 + 8 + (blok_h - 16) * i / n) for i in range(n + 1)], kleur[:3] + (120,), 3, rnd, 0.8)
+
 def tekstlaag(b, h, post, ruimte_boven=0, ruimte_onder=0, geo=None, kern_info=None):
     """Transparante laag met vers, referentie, optionele hook-regel en handle."""
     v = post["variabelen"]
@@ -511,6 +530,8 @@ def tekstlaag(b, h, post, ruimte_boven=0, ruimte_onder=0, geo=None, kern_info=No
     else:
         d.line([b // 2 - 40, ry - int(b * 0.02), b // 2 + 40, ry - int(b * 0.02)], fill=accent + (255,), width=3)
         d.text((b // 2, ry), reftekst, font=rf, fill=accent + (255,), anchor="ma")
+    if v.get("potlood") and staat.get("pos"):
+        _potlood(d, post, staat["pos"], kleur, marge, y0, blok_h, links)
     if uitleg_regels:
         uy = ry + int(b * 0.075)
         for i, r in enumerate(uitleg_regels):
@@ -534,8 +555,10 @@ def tekstlaag(b, h, post, ruimte_boven=0, ruimte_onder=0, geo=None, kern_info=No
 
 def _woordmerk(d, cx, y, tekst, font, kleur, spatie):
     """Tekst met extra letterafstand, gecentreerd rond cx, met een klein punt-accent ervoor."""
-    if tekst == "BIBLEVERSE":  # stil merk: klein, lichter, geen bedrijfsstempel
-        font, kleur, spatie, tekst, y = _klein_font(int(font.size * 0.82), b"Medium"), kleur[:3] + (140,), int(spatie * 0.6), "bibleverse", y + 4
+    if tekst == "BIBLEVERSE":  # geen bedrijfsstempel: een klein handschriftje
+        hf = _hand(font.size * 1.55)
+        d.text((cx, y - 2), "bibleverse", font=hf, fill=kleur[:3] + (175,), anchor="ma")
+        return
     breedtes = [d.textlength(c, font=font) for c in tekst]
     totaal = sum(breedtes) + spatie * (len(tekst) - 1)
     x = cx - totaal / 2
@@ -545,10 +568,74 @@ def _woordmerk(d, cx, y, tekst, font, kleur, spatie):
         d.text((x, y), c, font=font, fill=kleur, anchor="la")
         x += w + spatie
 
+def _tape(b, h, rnd, kleur=(236, 224, 186)):
+    t = Image.new("RGBA", (260, 70), (0, 0, 0, 0))
+    ImageDraw.Draw(t).polygon([(0, 6), (258, 0), (252, 34), (260, 66), (4, 70), (10, 34)], fill=kleur + (150,))
+    return t.rotate(rnd.uniform(-9, 9), expand=True, resample=Image.BICUBIC)
+
+def _onvolmaakt(img, post):
+    """Gebruikt papier: een tapestrookje en een koffievlek; de tekst staat een fractie scheef."""
+    b, h = img.size
+    rnd = random.Random(post["id"] + "onvolmaakt")
+    ring = Image.new("RGBA", (b, h), (0, 0, 0, 0)); d = ImageDraw.Draw(ring)
+    cx, cy = int(b * rnd.uniform(0.74, 0.86)), int(h * rnd.uniform(0.76, 0.86))
+    r = int(b * 0.075)
+    for dr, a in ((0, 46), (3, 30), (6, 16)):
+        d.ellipse([cx - r - dr, cy - r - dr * 0.8, cx + r + dr, cy + r + dr * 0.8], outline=(120, 82, 46, a), width=5)
+    img.alpha_composite(ring.filter(ImageFilter.GaussianBlur(1.6)))
+    t = _tape(b, h, rnd)
+    img.alpha_composite(t, (int(b * 0.04) - 30, int(h * 0.035)))
+    return img
+
+def _postit(post, bg):
+    """Haar koelkast: een geel post-it met het vers in haar handschrift, tape erboven, een eigen regel ernaast."""
+    b, h = 1080, 1350
+    img = bg.convert("RGBA")
+    rnd = random.Random(post["id"] + "postit")
+    kl = 700
+    blad = Image.new("RGBA", (kl + 80, kl + 80), (0, 0, 0, 0)); d = ImageDraw.Draw(blad)
+    d.rectangle([48, 52, 48 + kl, 52 + kl], fill=(0, 0, 0, 55)); blad = blad.filter(ImageFilter.GaussianBlur(14))
+    d = ImageDraw.Draw(blad)
+    d.rectangle([40, 40, 40 + kl, 40 + kl], fill=(255, 238, 150, 255))
+    for i in range(0, kl, 5):  # zachte lichtval over het papier
+        d.line([(40, 40 + i), (40 + kl, 40 + i)], fill=(255, 255, 255, int(26 * (1 - i / kl))))
+    inkt = (46, 52, 70, 255)
+    tekst = post["tekst"]
+    gr = 66
+    while gr > 30:
+        f = _hand(gr)
+        regels = _wrap(tekst, f, kl - 110, d)
+        if len(regels) * int(gr * 1.12) <= kl - 190:
+            break
+        gr -= 2
+    lh = int(gr * 1.12)
+    y = 40 + 64 + max(0, (kl - 190 - len(regels) * lh) // 2)
+    for r in regels:
+        d.text((40 + 56, y), r, font=f, fill=inkt, anchor="la"); y += lh
+    d.text((40 + 56, 40 + kl - 78), post["ref"], font=_hand(gr * 0.82), fill=(150, 60, 50, 255), anchor="la")
+    blad = blad.rotate(rnd.uniform(-3.2, -1.4), expand=True, resample=Image.BICUBIC)
+    bx, by = (b - blad.width) // 2, int(h * 0.30)
+    img.alpha_composite(blad, (bx, by))
+    img.alpha_composite(_tape(b, h, rnd, (240, 230, 200)), (b // 2 - 130, by - 5))
+    d = ImageDraw.Draw(img)
+    intro = post.get("postit_intro") or rnd.choice(["dit nam ik vandaag mee", "even met jou delen", "mijn post-it van vandaag", "dit hing op mijn koelkast", "voor jou, vandaag"])
+    _, accent = _kleuren(post)
+    d.text((b // 2, int(h * 0.15)), intro, font=_hand(b * 0.056), fill=_kleuren(post)[0] + (235,), anchor="ma")
+    _woordmerk(d, b // 2, h - int(h * 0.085), "BIBLEVERSE", _klein_font(26, b"Bold"), accent + (235,), 8)
+    return img
+
 def maak_afbeelding(post, pad, bg=None):
     b, h = 1080, 1350
+    if post["variabelen"].get("layout") == "postit":
+        _postit(post, (bg or _bg(post, b, h))).convert("RGB").save(pad, quality=93)
+        return pad
     img = (bg or _bg(post, b, h)).convert("RGBA")
-    img.alpha_composite(tekstlaag(b, h, post))
+    laag = tekstlaag(b, h, post)
+    if post["variabelen"].get("onvolmaakt"):
+        laag = laag.rotate(-0.7, resample=Image.BICUBIC, center=(b // 2, h // 2))
+    img.alpha_composite(laag)
+    if post["variabelen"].get("onvolmaakt"):
+        _onvolmaakt(img, post)
     img.convert("RGB").save(pad, quality=93)
     return pad
 

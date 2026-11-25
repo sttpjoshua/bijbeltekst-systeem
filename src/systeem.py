@@ -34,8 +34,8 @@ def bewaar(pad, data):
 # Zo test het systeem 3 opties in plaats van honderden combinaties en blijft het account herkenbaar.
 HUISSTIJLEN = {
     "avond":  {"palet": "nacht", "lettertype": "playfair",  "layout": "citaat",   "achtergrond": "licht"},
-    "zand":   {"palet": "zand",  "lettertype": "dmserif",   "layout": "centraal", "achtergrond": "verloop"},
-    "salie":  {"palet": "salie", "lettertype": "cormorant", "layout": "kader",    "achtergrond": "effen"},
+    "zand":   {"palet": "zand",  "lettertype": "dmserif",   "layout": "centraal", "achtergrond": "verloop", "potlood": True},
+    "salie":  {"palet": "salie", "lettertype": "cormorant", "layout": "kader",    "achtergrond": "effen", "potlood": True},
     # Frisse stijlen (naar de voorbeelddesigns)
     "zonsopgang":  {"palet": "zonsopgang_zacht", "lettertype": "cormorant",        "layout": "links",    "achtergrond": "diagonaal"},
     "hemelsblauw": {"palet": "hemel_zacht",     "lettertype": "cormorant",         "layout": "links",    "achtergrond": "diagonaal", "accent_hand": True},
@@ -45,16 +45,18 @@ HUISSTIJLEN = {
     "mint":        {"palet": "mint",            "lettertype": "dmserif",           "layout": "centraal", "achtergrond": "diagonaal"},
     "perzik":      {"palet": "perzik",          "lettertype": "playfair",          "layout": "citaat",   "achtergrond": "diagonaal"},
     # Papierstijl: crème papier, klassieke serif, links, diepe inkt (wisselt per post van kleur)
-    "papier_rood":   {"palet": "papier_rood",   "lettertype": "cormorant", "layout": "links", "achtergrond": "papier"},
-    "papier_groen":  {"palet": "papier_groen",  "lettertype": "cormorant", "layout": "links", "achtergrond": "papier"},
-    "papier_blauw":  {"palet": "papier_blauw",  "lettertype": "cormorant", "layout": "links", "achtergrond": "papier"},
+    # Haar koelkast: post-it met het vers in handschrift
+    "postit":      {"palet": "zand", "lettertype": "caveat", "layout": "postit", "achtergrond": "verloop"},
+    "papier_rood":   {"palet": "papier_rood",   "lettertype": "cormorant", "layout": "links", "achtergrond": "papier", "potlood": True},
+    "papier_groen":  {"palet": "papier_groen",  "lettertype": "cormorant", "layout": "links", "achtergrond": "papier", "potlood": True, "onvolmaakt": True},
+    "papier_blauw":  {"palet": "papier_blauw",  "lettertype": "cormorant", "layout": "links", "achtergrond": "papier", "potlood": True, "onvolmaakt": True},
     # Zelfde, met zonlicht en bladschaduw over het papier
-    "schaduw_rood":  {"palet": "papier_rood",   "lettertype": "cormorant", "layout": "links", "achtergrond": "papier_schaduw"},
-    "schaduw_groen": {"palet": "papier_groen",  "lettertype": "cormorant", "layout": "links", "achtergrond": "papier_schaduw"},
-    "schaduw_blauw": {"palet": "papier_blauw",  "lettertype": "cormorant", "layout": "links", "achtergrond": "papier_schaduw"},
+    "schaduw_rood":  {"palet": "papier_rood",   "lettertype": "cormorant", "layout": "links", "achtergrond": "papier_schaduw", "potlood": True, "onvolmaakt": True},
+    "schaduw_groen": {"palet": "papier_groen",  "lettertype": "cormorant", "layout": "links", "achtergrond": "papier_schaduw", "potlood": True, "onvolmaakt": True},
+    "schaduw_blauw": {"palet": "papier_blauw",  "lettertype": "cormorant", "layout": "links", "achtergrond": "papier_schaduw", "potlood": True, "onvolmaakt": True},
 }
 
-LICHTE_STIJLEN = ("zonsopgang", "hemelsblauw", "mint", "perzik", "roze", "zand", "papier_rood", "papier_groen", "papier_blauw")
+LICHTE_STIJLEN = ("postit", "zonsopgang", "hemelsblauw", "mint", "perzik", "roze", "zand", "papier_rood", "papier_groen", "papier_blauw")
 
 DIMENSIES = {
     "huisstijl": list(HUISSTIJLEN),
