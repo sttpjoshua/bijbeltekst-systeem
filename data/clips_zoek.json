@@ -457,7 +457,7 @@
   ]
  },
  "alarm clock": {
-  "t": "2026-11-11",
+  "t": "2026-11-25",
   "hits": [
    {
     "id": "K7ha0mUURG",
@@ -488,7 +488,7 @@
     ],
     "is_vertical": false,
     "duration": "11.387000",
-    "downloads": 6259,
+    "downloads": 6370,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-nap-timer-hourglass-5921/1080p.mp4",
@@ -499,11 +499,11 @@
   ]
  },
  "awake night": {
-  "t": "2026-11-11",
+  "t": "2026-11-25",
   "hits": []
  },
  "night bed": {
-  "t": "2026-11-11",
+  "t": "2026-11-25",
   "hits": [
    {
     "id": "tlXcXdBMcx",
@@ -530,7 +530,7 @@
     ],
     "is_vertical": false,
     "duration": "16.000000",
-    "downloads": 5323,
+    "downloads": 5428,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-touch-lamp-6697/1080p.mp4",
@@ -566,7 +566,7 @@
     ],
     "is_vertical": false,
     "duration": "14.014000",
-    "downloads": 7751,
+    "downloads": 7893,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-person-in-bed-on-their-iphone-3025/1080p.mp4",
@@ -607,7 +607,7 @@
     ],
     "is_vertical": false,
     "duration": "21.291016",
-    "downloads": 9629,
+    "downloads": 9728,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-hotel-room-tour-9612/1080p.mp4",
@@ -642,7 +642,7 @@
     ],
     "is_vertical": true,
     "duration": "15.041667",
-    "downloads": 407,
+    "downloads": 472,
     "aspect_ratio": "9:16",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/user-ai-generation-6S6P6mbb24ym/1080p.mp4",
@@ -1056,7 +1056,7 @@
   ]
  },
  "exhausted": {
-  "t": "2026-11-11",
+  "t": "2026-11-25",
   "hits": [
    {
     "id": "BA5vRvQH3E",
@@ -1077,7 +1077,7 @@
     ],
     "is_vertical": false,
     "duration": "29.379350",
-    "downloads": 4214,
+    "downloads": 4289,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-dog-sleeping-on-the-floor-5220/1080p.mp4",
@@ -2019,7 +2019,7 @@
   ]
  },
  "waking up": {
-  "t": "2026-11-11",
+  "t": "2026-11-25",
   "hits": [
    {
     "id": "Rpv1QpABdN",
@@ -2050,7 +2050,7 @@
     ],
     "is_vertical": false,
     "duration": "46.250000",
-    "downloads": 34201,
+    "downloads": 34309,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-girl-waking-up-and-using-phone-2292/1080p.mp4",
@@ -2082,7 +2082,7 @@
     ],
     "is_vertical": false,
     "duration": "10.260250",
-    "downloads": 9443,
+    "downloads": 9490,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-a-man-waking-up-in-a-field-of-dry-grass-with-a-girl-in-the-background-6169/1080p.mp4",
@@ -2116,7 +2116,7 @@
     ],
     "is_vertical": false,
     "duration": "22.397375",
-    "downloads": 50755,
+    "downloads": 50870,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-man-putting-on-a-shirt-while-walking-in-the-street-4889/1080p.mp4",
@@ -2155,7 +2155,7 @@
     ],
     "is_vertical": false,
     "duration": "16.083333",
-    "downloads": 12070,
+    "downloads": 12102,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-walking-down-a-road-in-the-mountains-4740/1080p.mp4",
@@ -2186,7 +2186,7 @@
     ],
     "is_vertical": false,
     "duration": "14.389375",
-    "downloads": 9311,
+    "downloads": 9352,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-a-man-getting-his-phone-from-his-pocket-while-walking-along-a-street-9431/1080p.mp4",
@@ -2216,7 +2216,7 @@
     ],
     "is_vertical": false,
     "duration": "11.933984",
-    "downloads": 8513,
+    "downloads": 8589,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-walking-in-the-rain-7027/1080p.mp4",
@@ -2247,7 +2247,7 @@
     ],
     "is_vertical": false,
     "duration": "24.458333",
-    "downloads": 6474,
+    "downloads": 6505,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-guy-walking-through-a-field-while-holding-a-skateboard-898/1080p.mp4",
@@ -2285,7 +2285,7 @@
     ],
     "is_vertical": false,
     "duration": "19.000000",
-    "downloads": 5667,
+    "downloads": 5719,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-walking-along-a-road-in-the-mountains-7250/1080p.mp4",
@@ -2320,7 +2320,7 @@
     ],
     "is_vertical": false,
     "duration": "15.720000",
-    "downloads": 5401,
+    "downloads": 5453,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-walking-in-the-city-9037/1080p.mp4",
@@ -2354,7 +2354,7 @@
     ],
     "is_vertical": false,
     "duration": "18.160000",
-    "downloads": 4454,
+    "downloads": 4490,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-walking-past-christmas-lights-6435/1080p.mp4",
@@ -2385,7 +2385,7 @@
     ],
     "is_vertical": false,
     "duration": "11.136000",
-    "downloads": 4263,
+    "downloads": 4306,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-pov-walking-down-the-street-1894/1080p.mp4",
@@ -2422,7 +2422,7 @@
     ],
     "is_vertical": false,
     "duration": "9.966992",
-    "downloads": 4072,
+    "downloads": 4091,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-walking-through-the-forest-2015/1080p.mp4",
@@ -2433,7 +2433,7 @@
   ]
  },
  "morning bed": {
-  "t": "2026-11-11",
+  "t": "2026-11-25",
   "hits": [
    {
     "id": "hcO8grNtRt",
@@ -2464,7 +2464,7 @@
     ],
     "is_vertical": false,
     "duration": "18.541667",
-    "downloads": 4020,
+    "downloads": 4076,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-mom-getting-breakfast-in-bed-from-her-daughter-9197/1080p.mp4",
@@ -2505,7 +2505,7 @@
     ],
     "is_vertical": false,
     "duration": "18.666667",
-    "downloads": 6328,
+    "downloads": 6408,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-daughter-surprising-mom-on-mother-s-day-8214/1080p.mp4",
@@ -2542,7 +2542,7 @@
     ],
     "is_vertical": false,
     "duration": "46.250000",
-    "downloads": 34201,
+    "downloads": 34309,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-girl-waking-up-and-using-phone-2292/1080p.mp4",
@@ -2553,7 +2553,7 @@
   ]
  },
  "bedroom morning": {
-  "t": "2026-11-11",
+  "t": "2026-11-25",
   "hits": [
    {
     "id": "MWvUvsFvY5",
@@ -2588,7 +2588,7 @@
     ],
     "is_vertical": false,
     "duration": "18.666667",
-    "downloads": 6328,
+    "downloads": 6408,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-daughter-surprising-mom-on-mother-s-day-8214/1080p.mp4",
@@ -2625,7 +2625,7 @@
     ],
     "is_vertical": false,
     "duration": "18.541667",
-    "downloads": 4020,
+    "downloads": 4076,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-mom-getting-breakfast-in-bed-from-her-daughter-9197/1080p.mp4",
@@ -2662,7 +2662,7 @@
     ],
     "is_vertical": false,
     "duration": "46.250000",
-    "downloads": 34201,
+    "downloads": 34309,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-girl-waking-up-and-using-phone-2292/1080p.mp4",
@@ -2673,7 +2673,7 @@
   ]
  },
  "mountains": {
-  "t": "2026-11-11",
+  "t": "2026-11-25",
   "hits": [
    {
     "id": "Q0cBJUPQo6",
@@ -2720,7 +2720,7 @@
     ],
     "is_vertical": false,
     "duration": "15.240000",
-    "downloads": 163820,
+    "downloads": 164916,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-walking-to-the-mountain-top-8360/1080p.mp4",
@@ -2764,7 +2764,7 @@
     ],
     "is_vertical": false,
     "duration": "22.647625",
-    "downloads": 61293,
+    "downloads": 61360,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-mountains-in-the-fog-2696/1080p.mp4",
@@ -2806,7 +2806,7 @@
     ],
     "is_vertical": false,
     "duration": "18.125000",
-    "downloads": 37456,
+    "downloads": 37606,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-remnants-of-snow-on-mountains-6750/1080p.mp4",
@@ -2857,7 +2857,7 @@
     ],
     "is_vertical": false,
     "duration": "25.900875",
-    "downloads": 36473,
+    "downloads": 36525,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-igloo-tents-near-the-mountains-7765/1080p.mp4",
@@ -2888,7 +2888,7 @@
     ],
     "is_vertical": false,
     "duration": "38.083333",
-    "downloads": 25711,
+    "downloads": 25804,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-mountain-top-trail-9791/1080p.mp4",
@@ -2936,7 +2936,7 @@
     ],
     "is_vertical": false,
     "duration": "19.686333",
-    "downloads": 20931,
+    "downloads": 21045,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-edge-of-a-rocky-mountain-7100/1080p.mp4",
@@ -2986,7 +2986,7 @@
     ],
     "is_vertical": false,
     "duration": "26.920000",
-    "downloads": 19783,
+    "downloads": 19917,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-overlooking-the-mountains-8002/1080p.mp4",
@@ -3043,7 +3043,7 @@
     ],
     "is_vertical": false,
     "duration": "34.617917",
-    "downloads": 18576,
+    "downloads": 18752,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-mountain-valley-landscape-9973/1080p.mp4",
@@ -3084,7 +3084,7 @@
     ],
     "is_vertical": false,
     "duration": "22.666992",
-    "downloads": 16076,
+    "downloads": 16164,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-volcano-beyond-the-trees-3903/1080p.mp4",
@@ -3139,7 +3139,7 @@
     ],
     "is_vertical": false,
     "duration": "17.320000",
-    "downloads": 14869,
+    "downloads": 14946,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-hiking-through-the-mountains-1755/1080p.mp4",
@@ -3174,7 +3174,7 @@
     ],
     "is_vertical": false,
     "duration": "18.083333",
-    "downloads": 14326,
+    "downloads": 14418,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-rocky-mountains-partially-covered-by-snow-9754/1080p.mp4",
@@ -3221,7 +3221,7 @@
     ],
     "is_vertical": false,
     "duration": "47.964583",
-    "downloads": 12544,
+    "downloads": 12599,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-town-near-the-sea-in-portugal-2672/1080p.mp4",
@@ -3232,7 +3232,7 @@
   ]
  },
  "insomnia": {
-  "t": "2026-11-11",
+  "t": "2026-11-25",
   "hits": [
    {
     "id": "ge03iaulhv",
@@ -3304,7 +3304,7 @@
     ],
     "is_vertical": false,
     "duration": "12.760000",
-    "downloads": 5680,
+    "downloads": 5874,
     "aspect_ratio": "256:135",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-conference-seats-2895/1080p.mp4",
@@ -3315,7 +3315,7 @@
   ]
  },
  "phone bed": {
-  "t": "2026-11-11",
+  "t": "2026-11-25",
   "hits": [
    {
     "id": "RFaXIGvJE9",
@@ -3343,7 +3343,7 @@
     ],
     "is_vertical": false,
     "duration": "34.000000",
-    "downloads": 4128,
+    "downloads": 4198,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-girl-laughing-at-her-phone-in-bed-8622/1080p.mp4",
@@ -3373,7 +3373,7 @@
     ],
     "is_vertical": false,
     "duration": "24.083333",
-    "downloads": 2866,
+    "downloads": 2920,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-girl-using-iphone-in-bed-3230/1080p.mp4",
@@ -3407,7 +3407,7 @@
     ],
     "is_vertical": false,
     "duration": "29.375000",
-    "downloads": 2777,
+    "downloads": 2821,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-girl-using-iphone-in-bed-2346/1080p.mp4",
@@ -3444,7 +3444,7 @@
     ],
     "is_vertical": false,
     "duration": "46.250000",
-    "downloads": 34201,
+    "downloads": 34309,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-girl-waking-up-and-using-phone-2292/1080p.mp4",
@@ -3480,7 +3480,7 @@
     ],
     "is_vertical": false,
     "duration": "14.014000",
-    "downloads": 7751,
+    "downloads": 7893,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-person-in-bed-on-their-iphone-3025/1080p.mp4",
@@ -3510,7 +3510,7 @@
     ],
     "is_vertical": false,
     "duration": "19.291667",
-    "downloads": 4479,
+    "downloads": 4564,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-old-man-putting-headphones-on-5840/1080p.mp4",
@@ -3552,7 +3552,7 @@
     ],
     "is_vertical": false,
     "duration": "26.109417",
-    "downloads": 836,
+    "downloads": 848,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-an-adult-man-putting-on-his-vr-glasses-9099/1080p.mp4",
@@ -3966,7 +3966,7 @@
   ]
  },
  "tired": {
-  "t": "2026-11-11",
+  "t": "2026-11-25",
   "hits": [
    {
     "id": "BA5vRvQH3E",
@@ -3987,7 +3987,7 @@
     ],
     "is_vertical": false,
     "duration": "29.379350",
-    "downloads": 4214,
+    "downloads": 4289,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-dog-sleeping-on-the-floor-5220/1080p.mp4",
@@ -4018,7 +4018,7 @@
     ],
     "is_vertical": false,
     "duration": "12.041667",
-    "downloads": 3208,
+    "downloads": 3289,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-tired-student-talking-to-her-friend-3234/1080p.mp4",
@@ -4047,7 +4047,7 @@
     ],
     "is_vertical": false,
     "duration": "16.375000",
-    "downloads": 7397,
+    "downloads": 7508,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-stretching-at-the-desk-1142/1080p.mp4",
@@ -4085,7 +4085,7 @@
     ],
     "is_vertical": false,
     "duration": "19.227542",
-    "downloads": 14985,
+    "downloads": 15086,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-a-girl-working-at-her-office-desk-feeling-tired-2989/1080p.mp4",
@@ -4122,7 +4122,7 @@
     ],
     "is_vertical": false,
     "duration": "15.306958",
-    "downloads": 13762,
+    "downloads": 13864,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-a-woman-working-on-her-computer-late-at-night-3699/1080p.mp4",
@@ -4162,7 +4162,7 @@
     ],
     "is_vertical": false,
     "duration": "28.016667",
-    "downloads": 3441,
+    "downloads": 3500,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-moving-bicycle-tire-4710/1080p.mp4",
@@ -4199,7 +4199,7 @@
     ],
     "is_vertical": false,
     "duration": "24.333333",
-    "downloads": 6454,
+    "downloads": 6530,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-man-rolling-a-tire-in-the-gym-8853/1080p.mp4",
@@ -4237,7 +4237,7 @@
     ],
     "is_vertical": false,
     "duration": "13.083333",
-    "downloads": 5416,
+    "downloads": 5519,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-man-standing-in-an-empty-bathroom-1659/1080p.mp4",
@@ -4273,7 +4273,7 @@
     ],
     "is_vertical": false,
     "duration": "19.166667",
-    "downloads": 3437,
+    "downloads": 3480,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-tire-flip-exercise-302/1080p.mp4",
@@ -4310,7 +4310,7 @@
     ],
     "is_vertical": false,
     "duration": "18.291667",
-    "downloads": 2853,
+    "downloads": 2896,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-athlete-doing-a-tire-flip-exercise-6897/1080p.mp4",
@@ -4346,7 +4346,7 @@
     ],
     "is_vertical": false,
     "duration": "12.541667",
-    "downloads": 2758,
+    "downloads": 2814,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-standing-in-a-bathroom-9748/1080p.mp4",
@@ -4382,7 +4382,7 @@
     ],
     "is_vertical": false,
     "duration": "12.708333",
-    "downloads": 2551,
+    "downloads": 2586,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-rolling-a-tire-in-the-gym-5278/1080p.mp4",
@@ -4397,7 +4397,7 @@
   "hits": []
  },
  "overwhelmed": {
-  "t": "2026-11-11",
+  "t": "2026-11-25",
   "hits": []
  },
  "scrolling phone": {
@@ -16263,7 +16263,7 @@
   ]
  },
  "sunset": {
-  "t": "2026-11-17",
+  "t": "2026-11-25",
   "hits": [
    {
     "id": "3fEc2z2GpH",
@@ -16298,7 +16298,7 @@
     ],
     "is_vertical": false,
     "duration": "25.191833",
-    "downloads": 45304,
+    "downloads": 45317,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-a-woman-photographs-her-boyfriend-on-the-beach-282/1080p.mp4",
@@ -16333,7 +16333,7 @@
     ],
     "is_vertical": false,
     "duration": "10.969292",
-    "downloads": 22067,
+    "downloads": 22304,
     "aspect_ratio": "256:135",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-sunset-in-indonesia-3381/1080p.mp4",
@@ -16381,7 +16381,7 @@
     ],
     "is_vertical": false,
     "duration": "12.645967",
-    "downloads": 15183,
+    "downloads": 15216,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-beach-landscape-3248/1080p.mp4",
@@ -16434,7 +16434,7 @@
     ],
     "is_vertical": false,
     "duration": "15.366667",
-    "downloads": 12592,
+    "downloads": 12635,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-timelapse-of-manhattan-at-sunset-1213/1080p.mp4",
@@ -16463,7 +16463,7 @@
     ],
     "is_vertical": false,
     "duration": "10.666667",
-    "downloads": 11090,
+    "downloads": 11099,
     "aspect_ratio": "5:3",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-temp-uuwygen-3-alpha-3366463484-over-the-shoulder-sh-mp4-7806/1080p.mp4",
@@ -16502,7 +16502,7 @@
     ],
     "is_vertical": false,
     "duration": "13.054708",
-    "downloads": 10297,
+    "downloads": 10322,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-purple-flowers-at-sunset-9528/1080p.mp4",
@@ -16544,7 +16544,7 @@
     ],
     "is_vertical": false,
     "duration": "9.884875",
-    "downloads": 10142,
+    "downloads": 10190,
     "aspect_ratio": "256:135",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-palm-tree-at-sunset-5006/1080p.mp4",
@@ -16592,7 +16592,7 @@
     ],
     "is_vertical": false,
     "duration": "10.143467",
-    "downloads": 8995,
+    "downloads": 9015,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-sunset-in-costa-rica-5323/1080p.mp4",
@@ -16625,7 +16625,7 @@
     ],
     "is_vertical": false,
     "duration": "10.720000",
-    "downloads": 8745,
+    "downloads": 8778,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-sunset-on-the-beach-8361/1080p.mp4",
@@ -16662,7 +16662,7 @@
     ],
     "is_vertical": false,
     "duration": "12.360000",
-    "downloads": 8341,
+    "downloads": 8353,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-sunset-through-the-plants-8722/1080p.mp4",
@@ -16699,7 +16699,7 @@
     ],
     "is_vertical": false,
     "duration": "39.750000",
-    "downloads": 8166,
+    "downloads": 8182,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-sunset-on-sayulita-beach-in-mexico-7250/1080p.mp4",
@@ -16741,7 +16741,7 @@
     ],
     "is_vertical": false,
     "duration": "13.680333",
-    "downloads": 7085,
+    "downloads": 7100,
     "aspect_ratio": "16:9",
     "urls": {
      "mp4": "https://cdn.coverr.co/videos/coverr-surfing-as-the-sunsets-7531/1080p.mp4",
@@ -25503,6 +25503,1139 @@
      "mp4": "https://cdn.coverr.co/videos/coverr-close-up-of-christmas-decorations-2038/1080p.mp4",
      "mp4_download": "https://cdn.coverr.co/videos/coverr-close-up-of-christmas-decorations-2038/1080p.mp4?download=true",
      "mp4_preview": "https://cdn.coverr.co/videos/coverr-close-up-of-christmas-decorations-2038/360p.mp4"
+    }
+   }
+  ]
+ },
+ "curtains morning": {
+  "t": "2026-11-25",
+  "hits": []
+ },
+ "sunrise window": {
+  "t": "2026-11-25",
+  "hits": [
+   {
+    "id": "Ak073dfaaU",
+    "title": "Swinging microphone",
+    "description": "A close-up shot of a swinging microphone in front of a window as the sunsets. ",
+    "tags": [
+     "microphone",
+     "swinging",
+     "sun",
+     "sunrise",
+     "sunlight",
+     "sun rays",
+     "morning",
+     "sky",
+     "cord",
+     "glass",
+     "sound waves",
+     "sound system",
+     "sound producer",
+     "sound engineering",
+     "soundtrack",
+     "music",
+     "artist",
+     "artistic",
+     "artsy",
+     "creative",
+     "left",
+     "right",
+     "swing",
+     "recording",
+     "background",
+     "loop"
+    ],
+    "is_vertical": false,
+    "duration": "30.033333",
+    "downloads": 7722,
+    "aspect_ratio": "16:9",
+    "urls": {
+     "mp4": "https://cdn.coverr.co/videos/coverr-swinging-microphone-7144/1080p.mp4",
+     "mp4_download": "https://cdn.coverr.co/videos/coverr-swinging-microphone-7144/1080p.mp4?download=true",
+     "mp4_preview": "https://cdn.coverr.co/videos/coverr-swinging-microphone-7144/360p.mp4"
+    }
+   },
+   {
+    "id": "zsuAOfVwoB",
+    "title": "Skyscrapers in Buenos Aires ",
+    "description": "Aerial shot of skyscrapers in Buenos Aires, Argentina. ",
+    "tags": [
+     "sunrise",
+     "skyscrapers",
+     "buenos aires",
+     "glass",
+     "windows",
+     "beautiful",
+     "aerial",
+     "shot",
+     "drone",
+     "sky",
+     "modern",
+     "architecture",
+     "city",
+     "city life",
+     "road",
+     "street",
+     "empty",
+     "bus",
+     "driving",
+     "argentina",
+     "sun rays",
+     "sunset",
+     "urban",
+     "background"
+    ],
+    "is_vertical": false,
+    "duration": "16.116100",
+    "downloads": 3266,
+    "aspect_ratio": "16:9",
+    "urls": {
+     "mp4": "https://cdn.coverr.co/videos/coverr-skyscrapers-in-buenos-aires-5763/1080p.mp4",
+     "mp4_download": "https://cdn.coverr.co/videos/coverr-skyscrapers-in-buenos-aires-5763/1080p.mp4?download=true",
+     "mp4_preview": "https://cdn.coverr.co/videos/coverr-skyscrapers-in-buenos-aires-5763/360p.mp4"
+    }
+   },
+   {
+    "id": "V1evD8TvpQ",
+    "title": "Glass skyscrapers in Buenos Aires ",
+    "description": "Aerial shot of the empty roads and skyscrapers in Buenos Aires.",
+    "tags": [
+     "empty",
+     "road",
+     "street",
+     "skyscrapers",
+     "glass",
+     "windows",
+     "buenos aires",
+     "city",
+     "city life",
+     "modern",
+     "architecture",
+     "sun rays",
+     "sunrise",
+     "sunset",
+     "bus",
+     "driving",
+     "traffic lights",
+     "lamp post",
+     "walking",
+     "silence",
+     "covid-19",
+     "quarantine",
+     "social distance",
+     "urban",
+     "background",
+     "aerial"
+    ],
+    "is_vertical": false,
+    "duration": "15.849167",
+    "downloads": 3420,
+    "aspect_ratio": "16:9",
+    "urls": {
+     "mp4": "https://cdn.coverr.co/videos/coverr-glass-skyscrapers-in-buenos-aires-8218/1080p.mp4",
+     "mp4_download": "https://cdn.coverr.co/videos/coverr-glass-skyscrapers-in-buenos-aires-8218/1080p.mp4?download=true",
+     "mp4_preview": "https://cdn.coverr.co/videos/coverr-glass-skyscrapers-in-buenos-aires-8218/360p.mp4"
+    }
+   },
+   {
+    "id": "SBVcvxwlNM",
+    "title": "Timelapse of Buenos Aires ",
+    "description": "Timelapse, aerial footage of the city of Buenos Aires in Argentina. ",
+    "tags": [
+     "empty",
+     "street",
+     "road",
+     "buenos aires",
+     "argentina",
+     "timelapse",
+     "car",
+     "bus",
+     "driving",
+     "silence",
+     "covid-19",
+     "quarantine",
+     "social distance",
+     "city",
+     "city life",
+     "skyscrapers",
+     "modern",
+     "architecture",
+     "glass",
+     "windows",
+     "skyline",
+     "sunrise",
+     "sunset",
+     "sky",
+     "urban",
+     "background"
+    ],
+    "is_vertical": false,
+    "duration": "17.784433",
+    "downloads": 5227,
+    "aspect_ratio": "16:9",
+    "urls": {
+     "mp4": "https://cdn.coverr.co/videos/coverr-timelapse-of-buenos-aires-5977/1080p.mp4",
+     "mp4_download": "https://cdn.coverr.co/videos/coverr-timelapse-of-buenos-aires-5977/1080p.mp4?download=true",
+     "mp4_preview": "https://cdn.coverr.co/videos/coverr-timelapse-of-buenos-aires-5977/360p.mp4"
+    }
+   }
+  ]
+ },
+ "lake": {
+  "t": "2026-11-25",
+  "hits": [
+   {
+    "id": "SzbwQXG2Vc",
+    "title": "Rocks by the lake ",
+    "description": "Breathtaking shot of rocks and mountains by the lake. ",
+    "tags": [
+     "lake",
+     "mountains",
+     "coast",
+     "coastline",
+     "landscape",
+     "outside",
+     "outdoor",
+     "hill",
+     "wood",
+     "forest",
+     "rest",
+     "relaxing",
+     "trees",
+     "rocks",
+     "green screen",
+     "nature",
+     "greenery",
+     "beautiful",
+     "colorful",
+     "stones",
+     "pebbles",
+     "water",
+     "peaceful",
+     "scenery",
+     "bushes",
+     "background",
+     "loop",
+     "still shot",
+     "paradise",
+     "travel",
+     "zoom background",
+     "zoom virtual background",
+     "virtual background"
+    ],
+    "is_vertical": false,
+    "duration": "9.976633",
+    "downloads": 51159,
+    "aspect_ratio": "16:9",
+    "urls": {
+     "mp4": "https://cdn.coverr.co/videos/coverr-rocks-by-the-lake-5494/1080p.mp4",
+     "mp4_download": "https://cdn.coverr.co/videos/coverr-rocks-by-the-lake-5494/1080p.mp4?download=true",
+     "mp4_preview": "https://cdn.coverr.co/videos/coverr-rocks-by-the-lake-5494/360p.mp4"
+    }
+   },
+   {
+    "id": "Bqjj6OVNHd",
+    "title": "Lake in Queenstown, New Zealand ",
+    "description": "Aerial shot of a lake in Queenstown, New Zealand.",
+    "tags": [
+     "lake",
+     "queenstown",
+     "nz",
+     "new zealand",
+     "south island",
+     "beautiful",
+     "peaceful",
+     "scenery",
+     "sky",
+     "cloudscape",
+     "mountains",
+     "autumn",
+     "colorful",
+     "trees",
+     "greenery",
+     "travel",
+     "holiday",
+     "vacation",
+     "aerial",
+     "nature",
+     "background"
+    ],
+    "is_vertical": false,
+    "duration": "19.666667",
+    "downloads": 18839,
+    "aspect_ratio": "16:9",
+    "urls": {
+     "mp4": "https://cdn.coverr.co/videos/coverr-lake-in-queenstown-new-zealand-7432/1080p.mp4",
+     "mp4_download": "https://cdn.coverr.co/videos/coverr-lake-in-queenstown-new-zealand-7432/1080p.mp4?download=true",
+     "mp4_preview": "https://cdn.coverr.co/videos/coverr-lake-in-queenstown-new-zealand-7432/360p.mp4"
+    }
+   },
+   {
+    "id": "O0OkodPlBb",
+    "title": "Village resort ",
+    "description": "Drone footage showing palm trees and a village resort by a lake.",
+    "tags": [
+     "lake",
+     "aerial",
+     "drone",
+     "palm",
+     "palm tree",
+     "trees",
+     "blue sky",
+     "mood",
+     "vacation",
+     "sumlang lake",
+     "building",
+     "house",
+     "nature",
+     "greenery",
+     "beautiful",
+     "landscape",
+     "environment",
+     "resort",
+     "holiday",
+     "trip",
+     "travel",
+     "peaceful",
+     "scenery",
+     "background"
+    ],
+    "is_vertical": false,
+    "duration": "11.208984",
+    "downloads": 14220,
+    "aspect_ratio": "16:9",
+    "urls": {
+     "mp4": "https://cdn.coverr.co/videos/coverr-village-resort-2283/1080p.mp4",
+     "mp4_download": "https://cdn.coverr.co/videos/coverr-village-resort-2283/1080p.mp4?download=true",
+     "mp4_preview": "https://cdn.coverr.co/videos/coverr-village-resort-2283/360p.mp4"
+    }
+   },
+   {
+    "id": "y1yBShzUTZ",
+    "title": "Lago Di Braies",
+    "description": "Aerial shot of Lago Di Braies in Italy.",
+    "tags": [
+     "lake",
+     "italy",
+     "snow",
+     "mountains",
+     "water",
+     "cold",
+     "trees",
+     "drone",
+     "drone view",
+     "aerial",
+     "calm",
+     "outdoors",
+     "travel",
+     "travelling",
+     "nature",
+     "beautiful",
+     "scenery",
+     "peaceful",
+     "vacation",
+     "holiday",
+     "greenery",
+     "foggy weather",
+     "foggy",
+     "crystal clear",
+     "adventure",
+     "exploring",
+     "lago di braies",
+     "italian",
+     "tourist"
+    ],
+    "is_vertical": false,
+    "duration": "15.716000",
+    "downloads": 12805,
+    "aspect_ratio": "16:9",
+    "urls": {
+     "mp4": "https://cdn.coverr.co/videos/coverr-lago-di-braies-4640/1080p.mp4",
+     "mp4_download": "https://cdn.coverr.co/videos/coverr-lago-di-braies-4640/1080p.mp4?download=true",
+     "mp4_preview": "https://cdn.coverr.co/videos/coverr-lago-di-braies-4640/360p.mp4"
+    }
+   },
+   {
+    "id": "kwLPECiFOf",
+    "title": "Lago Di Braies reflection",
+    "description": "A cinematic shot of Lago Di Braies and its reflection in the lake.",
+    "tags": [
+     "lake",
+     "italy",
+     "snow",
+     "trees",
+     "aerial",
+     "winter",
+     "cold",
+     "frozen",
+     "water",
+     "nature",
+     "beautiful",
+     "winter wonderland",
+     "greenery",
+     "boat",
+     "peaceful",
+     "scenery",
+     "lago di braies",
+     "travel",
+     "holiday",
+     "bucket list",
+     "sights",
+     "background",
+     "travelling"
+    ],
+    "is_vertical": false,
+    "duration": "14.227000",
+    "downloads": 10892,
+    "aspect_ratio": "16:9",
+    "urls": {
+     "mp4": "https://cdn.coverr.co/videos/coverr-lago-di-braies-reflection-1734/1080p.mp4",
+     "mp4_download": "https://cdn.coverr.co/videos/coverr-lago-di-braies-reflection-1734/1080p.mp4?download=true",
+     "mp4_preview": "https://cdn.coverr.co/videos/coverr-lago-di-braies-reflection-1734/360p.mp4"
+    }
+   },
+   {
+    "id": "GPfWh8WOtG",
+    "title": "Rocks in Lofoten ",
+    "description": "An aerial shot of a car driving on a road by the coast of Lofoten, that's surrounded by rocks. ",
+    "tags": [
+     "lake",
+     "mountains",
+     "rocks",
+     "stones",
+     "hills",
+     "water",
+     "road",
+     "car",
+     "campervan",
+     "roadside",
+     "coast",
+     "sky",
+     "skyline",
+     "clouds",
+     "grass",
+     "nature",
+     "lofoten",
+     "norway",
+     "outdoor",
+     "outside",
+     "landscape",
+     "drone",
+     "drone view",
+     "top view"
+    ],
+    "is_vertical": false,
+    "duration": "10.927583",
+    "downloads": 10410,
+    "aspect_ratio": "16:9",
+    "urls": {
+     "mp4": "https://cdn.coverr.co/videos/coverr-rocks-in-lofoten-3707/1080p.mp4",
+     "mp4_download": "https://cdn.coverr.co/videos/coverr-rocks-in-lofoten-3707/1080p.mp4?download=true",
+     "mp4_preview": "https://cdn.coverr.co/videos/coverr-rocks-in-lofoten-3707/360p.mp4"
+    }
+   },
+   {
+    "id": "9urji5XG8p",
+    "title": "Lake Tekapo in New Zealand ",
+    "description": "Cinematic, aerial shot of Lake Tekapo in New Zealand. ",
+    "tags": [
+     "lake",
+     "tekapo",
+     "lake tekapo",
+     "nz",
+     "new zealand",
+     "south island",
+     "summer",
+     "beautiful",
+     "mesmerizing",
+     "water",
+     "perfection",
+     "mountains",
+     "greenery",
+     "cloudscape",
+     "sky",
+     "deep blue",
+     "paradise",
+     "travel",
+     "holiday",
+     "vacation",
+     "aerial",
+     "nature",
+     "background"
+    ],
+    "is_vertical": false,
+    "duration": "19.250000",
+    "downloads": 8229,
+    "aspect_ratio": "16:9",
+    "urls": {
+     "mp4": "https://cdn.coverr.co/videos/coverr-lake-tekapo-in-new-zealand-424/1080p.mp4",
+     "mp4_download": "https://cdn.coverr.co/videos/coverr-lake-tekapo-in-new-zealand-424/1080p.mp4?download=true",
+     "mp4_preview": "https://cdn.coverr.co/videos/coverr-lake-tekapo-in-new-zealand-424/360p.mp4"
+    }
+   },
+   {
+    "id": "lEMJdmCAHP",
+    "title": "Mountains in Senja",
+    "description": "Aerial shot of mountains and a lake in Senja, Norway.",
+    "tags": [
+     "lake",
+     "mountains",
+     "sky",
+     "clouds",
+     "hills",
+     "wood",
+     "forest",
+     "norway",
+     "senja",
+     "grass",
+     "rocks",
+     "coast",
+     "coastline",
+     "drone",
+     "drone view",
+     "mood",
+     "autumn",
+     "trees",
+     "landscape",
+     "outdoor",
+     "outside",
+     "nature",
+     "paradise",
+     "cinematic",
+     "beautiful",
+     "peaceful",
+     "scenery",
+     "calm",
+     "colorful",
+     "cloudscape",
+     "background"
+    ],
+    "is_vertical": false,
+    "duration": "16.725042",
+    "downloads": 5762,
+    "aspect_ratio": "16:9",
+    "urls": {
+     "mp4": "https://cdn.coverr.co/videos/coverr-mountains-in-senja-9544/1080p.mp4",
+     "mp4_download": "https://cdn.coverr.co/videos/coverr-mountains-in-senja-9544/1080p.mp4?download=true",
+     "mp4_preview": "https://cdn.coverr.co/videos/coverr-mountains-in-senja-9544/360p.mp4"
+    }
+   },
+   {
+    "id": "MllVPFoYnh",
+    "title": "RV near the lake",
+    "description": "A traveling shot of a woman getting out of her RV and walking towards the lake. ",
+    "tags": [
+     "lake",
+     "water",
+     "mountains",
+     "hills",
+     "sky",
+     "clouds",
+     "nature",
+     "rocks",
+     "sun",
+     "sunset",
+     "coast",
+     "coastline",
+     "car",
+     "road trip",
+     "trip",
+     "review",
+     "landscape",
+     "outdoor",
+     "outside",
+     "norway",
+     "lofoten",
+     "people",
+     "woman",
+     "enjoyment",
+     "happiness",
+     "fresh air",
+     "cinematic",
+     "beautiful",
+     "peaceful",
+     "scenery",
+     "travel",
+     "holiday",
+     "vacation",
+     "travelling",
+     "background"
+    ],
+    "is_vertical": false,
+    "duration": "21.646625",
+    "downloads": 5440,
+    "aspect_ratio": "16:9",
+    "urls": {
+     "mp4": "https://cdn.coverr.co/videos/coverr-rv-near-the-lake-1310/1080p.mp4",
+     "mp4_download": "https://cdn.coverr.co/videos/coverr-rv-near-the-lake-1310/1080p.mp4?download=true",
+     "mp4_preview": "https://cdn.coverr.co/videos/coverr-rv-near-the-lake-1310/360p.mp4"
+    }
+   },
+   {
+    "id": "bjowJz19xR",
+    "title": "Lake in Queenstown, New Zealand",
+    "description": "Aerial shot of a beautiful lake in Queenstown, New Zealand. ",
+    "tags": [
+     "lake",
+     "queenstown",
+     "nz",
+     "new zealand",
+     "paradise",
+     "beautiful",
+     "perfect",
+     "mountains",
+     "greenery",
+     "autumn",
+     "trees",
+     "colorful",
+     "sky",
+     "deep blue",
+     "travel",
+     "holiday",
+     "vacation",
+     "trip",
+     "peaceful",
+     "scenery",
+     "aerial",
+     "nature",
+     "background"
+    ],
+    "is_vertical": false,
+    "duration": "23.125000",
+    "downloads": 5148,
+    "aspect_ratio": "16:9",
+    "urls": {
+     "mp4": "https://cdn.coverr.co/videos/coverr-lake-in-queenstown-new-zealand-4722/1080p.mp4",
+     "mp4_download": "https://cdn.coverr.co/videos/coverr-lake-in-queenstown-new-zealand-4722/1080p.mp4?download=true",
+     "mp4_preview": "https://cdn.coverr.co/videos/coverr-lake-in-queenstown-new-zealand-4722/360p.mp4"
+    }
+   },
+   {
+    "id": "BP5zhVHKMD",
+    "title": "Woman looking at the lake",
+    "description": "A cinematic shot of a woman looking at a lake and smiling. ",
+    "tags": [
+     "lake",
+     "water",
+     "mountains",
+     "hills",
+     "sky",
+     "clouds",
+     "nature",
+     "review",
+     "landscape",
+     "coast",
+     "coastline",
+     "car",
+     "road trip",
+     "trip",
+     "outdoor",
+     "outside",
+     "norway",
+     "lofoten",
+     "people",
+     "woman",
+     "enjoyment",
+     "joy",
+     "happiness",
+     "peaceful",
+     "scenery",
+     "freedom",
+     "travel",
+     "vacation",
+     "holiday",
+     "sunset",
+     "background"
+    ],
+    "is_vertical": false,
+    "duration": "8.925583",
+    "downloads": 5050,
+    "aspect_ratio": "16:9",
+    "urls": {
+     "mp4": "https://cdn.coverr.co/videos/coverr-woman-looking-at-the-lake-9031/1080p.mp4",
+     "mp4_download": "https://cdn.coverr.co/videos/coverr-woman-looking-at-the-lake-9031/1080p.mp4?download=true",
+     "mp4_preview": "https://cdn.coverr.co/videos/coverr-woman-looking-at-the-lake-9031/360p.mp4"
+    }
+   },
+   {
+    "id": "kFhNUVmh6A",
+    "title": "Lake in Raglan, New Zealand ",
+    "description": "Aerial shot of a lake surrounded by trees in Raglan, New Zealand.",
+    "tags": [
+     "lake",
+     "green screen",
+     "raglan",
+     "nz",
+     "new zealand",
+     "trees",
+     "mountains",
+     "beautiful",
+     "peaceful",
+     "scenery",
+     "cloudy weather",
+     "cloudscape",
+     "travel",
+     "holiday",
+     "vacation",
+     "fresh air",
+     "aerial",
+     "nature",
+     "background"
+    ],
+    "is_vertical": false,
+    "duration": "15.916667",
+    "downloads": 4548,
+    "aspect_ratio": "16:9",
+    "urls": {
+     "mp4": "https://cdn.coverr.co/videos/coverr-lake-in-raglan-new-zealand-7639/1080p.mp4",
+     "mp4_download": "https://cdn.coverr.co/videos/coverr-lake-in-raglan-new-zealand-7639/1080p.mp4?download=true",
+     "mp4_preview": "https://cdn.coverr.co/videos/coverr-lake-in-raglan-new-zealand-7639/360p.mp4"
+    }
+   }
+  ]
+ },
+ "moon": {
+  "t": "2026-11-25",
+  "hits": [
+   {
+    "id": "E0Zj8lC3HQ",
+    "title": "The moon during the day ",
+    "description": "An astonishing timelapse of the daytime sky, with the moon revealing itself. ",
+    "tags": [
+     "moon",
+     "timelapse",
+     "shot",
+     "clouds",
+     "white",
+     "galaxy",
+     "background",
+     "loop",
+     "beautiful",
+     "cloudscape",
+     "freedom",
+     "lunar",
+     "moonlight",
+     "divine",
+     "day"
+    ],
+    "is_vertical": false,
+    "duration": "10.000000",
+    "downloads": 7034,
+    "aspect_ratio": "16:9",
+    "urls": {
+     "mp4": "https://cdn.coverr.co/videos/coverr-the-moon-during-the-day-5565/1080p.mp4",
+     "mp4_download": "https://cdn.coverr.co/videos/coverr-the-moon-during-the-day-5565/1080p.mp4?download=true",
+     "mp4_preview": "https://cdn.coverr.co/videos/coverr-the-moon-during-the-day-5565/360p.mp4"
+    }
+   },
+   {
+    "id": "uENJvel2vl",
+    "title": "Sunset in Indonesia",
+    "description": "Cinematic shot of the sunset in Indonesia. ",
+    "tags": [
+     "sunset",
+     "moon",
+     "sea",
+     "yellow",
+     "clouds",
+     "ocean",
+     "indonesia",
+     "majestic",
+     "amazing",
+     "natural",
+     "beauty",
+     "skyline",
+     "boat",
+     "wave",
+     "static shot",
+     "nature",
+     "outdoors",
+     "outside",
+     "fresh air"
+    ],
+    "is_vertical": false,
+    "duration": "10.969292",
+    "downloads": 22304,
+    "aspect_ratio": "256:135",
+    "urls": {
+     "mp4": "https://cdn.coverr.co/videos/coverr-sunset-in-indonesia-3381/1080p.mp4",
+     "mp4_download": "https://cdn.coverr.co/videos/coverr-sunset-in-indonesia-3381/1080p.mp4?download=true",
+     "mp4_preview": "https://cdn.coverr.co/videos/coverr-sunset-in-indonesia-3381/360p.mp4"
+    }
+   },
+   {
+    "id": "FQOKPvw1KT",
+    "title": "Piha Moon Beach in New Zealand ",
+    "description": "Aerial shot of Piha Moon Beach in New Zealand. ",
+    "tags": [
+     "piha beach",
+     "moon",
+     "nz",
+     "new zealand",
+     "colorful",
+     "vivid",
+     "water",
+     "deep blue",
+     "green screen",
+     "stones",
+     "mountains",
+     "travel",
+     "holiday",
+     "vacation",
+     "oceanic",
+     "paradise",
+     "beautiful",
+     "peaceful",
+     "scenery",
+     "aerial",
+     "nature",
+     "background"
+    ],
+    "is_vertical": false,
+    "duration": "23.541667",
+    "downloads": 6184,
+    "aspect_ratio": "16:9",
+    "urls": {
+     "mp4": "https://cdn.coverr.co/videos/coverr-piha-moon-beach-in-new-zealand-2056/1080p.mp4",
+     "mp4_download": "https://cdn.coverr.co/videos/coverr-piha-moon-beach-in-new-zealand-2056/1080p.mp4?download=true",
+     "mp4_preview": "https://cdn.coverr.co/videos/coverr-piha-moon-beach-in-new-zealand-2056/360p.mp4"
+    }
+   },
+   {
+    "id": "MsZyBam70M",
+    "title": "Palm trees at night",
+    "description": "Panning shot of palm trees at night. ",
+    "tags": [
+     "palm tree",
+     "noon",
+     "moon",
+     "sky",
+     "palm springs",
+     "california",
+     "coconut tree",
+     "exotic",
+     "tropical",
+     "relax",
+     "peaceful",
+     "resort",
+     "summer",
+     "plant",
+     "greenery",
+     "landscape",
+     "scenery",
+     "outdoors",
+     "outside",
+     "fresh air",
+     "nature",
+     "united states",
+     "usa"
+    ],
+    "is_vertical": false,
+    "duration": "6.798458",
+    "downloads": 5320,
+    "aspect_ratio": "256:135",
+    "urls": {
+     "mp4": "https://cdn.coverr.co/videos/coverr-palm-trees-at-night-821/1080p.mp4",
+     "mp4_download": "https://cdn.coverr.co/videos/coverr-palm-trees-at-night-821/1080p.mp4?download=true",
+     "mp4_preview": "https://cdn.coverr.co/videos/coverr-palm-trees-at-night-821/360p.mp4"
+    }
+   },
+   {
+    "id": "cTf5tzBJvw",
+    "title": "Sunset in Moon Beach, New Zealand ",
+    "description": "Aerial shot of the sun setting in Moon Beach, New Zealand. ",
+    "tags": [
+     "orange",
+     "sunset",
+     "hollow",
+     "wave",
+     "moon beach",
+     "beach",
+     "nz",
+     "new zealand",
+     "paradise",
+     "stones",
+     "rocks",
+     "sand",
+     "beautiful",
+     "peaceful",
+     "scenery",
+     "cinematic",
+     "travel",
+     "holiday",
+     "vacation",
+     "aerial",
+     "nature",
+     "background",
+     "zoom background",
+     "zoom virtual background",
+     "virtual background"
+    ],
+    "is_vertical": false,
+    "duration": "28.750000",
+    "downloads": 31693,
+    "aspect_ratio": "16:9",
+    "urls": {
+     "mp4": "https://cdn.coverr.co/videos/coverr-sunset-in-moon-beach-new-zealand-7543/1080p.mp4",
+     "mp4_download": "https://cdn.coverr.co/videos/coverr-sunset-in-moon-beach-new-zealand-7543/1080p.mp4?download=true",
+     "mp4_preview": "https://cdn.coverr.co/videos/coverr-sunset-in-moon-beach-new-zealand-7543/360p.mp4"
+    }
+   },
+   {
+    "id": "xmNWFiRQQa",
+    "title": "Woman in front of the clouds",
+    "description": "Blurred shot of a woman in front of the clouds. ",
+    "tags": [
+     "silhouette",
+     "girl",
+     "dusk",
+     "night",
+     "evening",
+     "cloudy",
+     "moon",
+     "moonlight",
+     "beautiful",
+     "alone",
+     "shadow",
+     "twilight",
+     "sky",
+     "nature",
+     "people",
+     "outdoors",
+     "outside",
+     "fresh air"
+    ],
+    "is_vertical": false,
+    "duration": "8.717042",
+    "downloads": 10659,
+    "aspect_ratio": "256:135",
+    "urls": {
+     "mp4": "https://cdn.coverr.co/videos/coverr-woman-in-front-of-the-clouds-5888/1080p.mp4",
+     "mp4_download": "https://cdn.coverr.co/videos/coverr-woman-in-front-of-the-clouds-5888/1080p.mp4?download=true",
+     "mp4_preview": "https://cdn.coverr.co/videos/coverr-woman-in-front-of-the-clouds-5888/360p.mp4"
+    }
+   },
+   {
+    "id": "0hZMk8adGi",
+    "title": "Futuristic Female Astronaut Standing in White Salt Flats",
+    "description": "A confident woman in a sleek white futuristic flight suit holds a space helmet while standing on a cracked salt flat beneath a clear blue sky; a massive moon-like planet looms on the horizon in a cinematic sci-fi portrait.",
+    "tags": [
+     "female astronaut",
+     "futuristic",
+     "spacesuit",
+     "space helmet",
+     "salt flat",
+     "desert landscape",
+     "moon",
+     "planet",
+     "sci-fi",
+     "cinematic portrait",
+     "full body",
+     "standing",
+     "hero pose",
+     "blue sky",
+     "isolated landscape",
+     "conceptual",
+     "future technology",
+     "wide shot",
+     "white suit",
+     "adventure"
+    ],
+    "is_vertical": true,
+    "duration": "5.100000",
+    "downloads": 697,
+    "aspect_ratio": "22:39",
+    "urls": {
+     "mp4": "https://cdn.coverr.co/videos/user-ai-generation-I9XJsneIs04M/1080p.mp4",
+     "mp4_download": "https://cdn.coverr.co/videos/user-ai-generation-I9XJsneIs04M/1080p.mp4?download=true",
+     "mp4_preview": "https://cdn.coverr.co/videos/user-ai-generation-I9XJsneIs04M/360p.mp4"
+    }
+   },
+   {
+    "id": "A4PqMvgf6i",
+    "title": "Ornate Coffin in Moonlit Cemetery with Eerie Fog Scene",
+    "description": "A richly carved antique wooden coffin sits among weathered gravestones in a moonlit cemetery as cold mist and drifting spirits swirl around, creating a cinematic, eerie nighttime atmosphere perfect for horror or supernatural scenes.",
+    "tags": [
+     "ornate coffin",
+     "wooden coffin",
+     "antique casket",
+     "cemetery",
+     "graveyard",
+     "gravestones",
+     "tombstones",
+     "moonlight",
+     "full moon",
+     "night scene",
+     "fog",
+     "mist",
+     "ethereal smoke",
+     "eerie atmosphere",
+     "spooky",
+     "supernatural",
+     "horror",
+     "cinematic",
+     "moody lighting",
+     "low angle shot",
+     "wide shot",
+     "autumn leaves",
+     "mysterious",
+     "period prop",
+     "paranormal"
+    ],
+    "is_vertical": false,
+    "duration": "4.000000",
+    "downloads": 392,
+    "aspect_ratio": "16:9",
+    "urls": {
+     "mp4": "https://cdn.coverr.co/videos/user-ai-generation-WX5byJcsEkpa/1080p.mp4",
+     "mp4_download": "https://cdn.coverr.co/videos/user-ai-generation-WX5byJcsEkpa/1080p.mp4?download=true",
+     "mp4_preview": "https://cdn.coverr.co/videos/user-ai-generation-WX5byJcsEkpa/360p.mp4"
+    }
+   },
+   {
+    "id": "vvvynaD2v9",
+    "title": "Man digging in the sand",
+    "description": "Still shot of a man digging in the sand, by the ocean, at night.",
+    "tags": [
+     "dawn",
+     "india",
+     "man",
+     "working man",
+     "digging",
+     "dig",
+     "sand",
+     "worker",
+     "sea",
+     "water",
+     "port",
+     "beach",
+     "sailboat",
+     "exploring",
+     "searching",
+     "moon",
+     "moonlight",
+     "treasure",
+     "hunting"
+    ],
+    "is_vertical": false,
+    "duration": "16.400000",
+    "downloads": 5005,
+    "aspect_ratio": "16:9",
+    "urls": {
+     "mp4": "https://cdn.coverr.co/videos/coverr-man-digging-in-the-sand-969/1080p.mp4",
+     "mp4_download": "https://cdn.coverr.co/videos/coverr-man-digging-in-the-sand-969/1080p.mp4?download=true",
+     "mp4_preview": "https://cdn.coverr.co/videos/coverr-man-digging-in-the-sand-969/360p.mp4"
+    }
+   },
+   {
+    "id": "LviCUH3V0W",
+    "title": "Silhouette of a girl dancing",
+    "description": "Slow-motion, silhouette shot of a girl dancing. ",
+    "tags": [
+     "sea",
+     "dance",
+     "silhouette",
+     "recreation",
+     "outdoors",
+     "outside",
+     "motion",
+     "spinning",
+     "hotel",
+     "people",
+     "girl",
+     "rest",
+     "tropical",
+     "villa",
+     "palm tree",
+     "blue sky",
+     "fool moon",
+     "action",
+     "night",
+     "relax",
+     "vacation",
+     "exotic",
+     "dusk",
+     "twilight",
+     "fresh air",
+     "evening",
+     "resort"
+    ],
+    "is_vertical": false,
+    "duration": "8.967292",
+    "downloads": 10414,
+    "aspect_ratio": "256:135",
+    "urls": {
+     "mp4": "https://cdn.coverr.co/videos/coverr-silhouette-of-a-girl-dancing-7294/1080p.mp4",
+     "mp4_download": "https://cdn.coverr.co/videos/coverr-silhouette-of-a-girl-dancing-7294/1080p.mp4?download=true",
+     "mp4_preview": "https://cdn.coverr.co/videos/coverr-silhouette-of-a-girl-dancing-7294/360p.mp4"
+    }
+   },
+   {
+    "id": "eOzZ3ePEur",
+    "title": "Mysterious Figure Under a Starlit Sky",
+    "description": "A captivating scene features a lone figure in a red kimono standing amidst a field of vibrant flowers, illuminated by the full moon and twinkling stars above, creating an enchanting night atmosphere.",
+    "tags": [
+     "night",
+     "moonlight",
+     "starlit sky",
+     "kimono",
+     "flower",
+     "mystical",
+     "landscape",
+     "fantasy",
+     "cinematic"
+    ],
+    "is_vertical": false,
+    "duration": "8.000000",
+    "downloads": 1055,
+    "aspect_ratio": "16:9",
+    "urls": {
+     "mp4": "https://cdn.coverr.co/videos/user-ai-generation-0b4ZdNtmzT9q/1080p.mp4",
+     "mp4_download": "https://cdn.coverr.co/videos/user-ai-generation-0b4ZdNtmzT9q/1080p.mp4?download=true",
+     "mp4_preview": "https://cdn.coverr.co/videos/user-ai-generation-0b4ZdNtmzT9q/360p.mp4"
+    }
+   },
+   {
+    "id": "2SfgPpUUvB",
+    "title": "Sunset over the mountains",
+    "description": "A cinematic shot of the sun setting over the mountains.",
+    "tags": [
+     "mood",
+     "aerial",
+     "drone view",
+     "drone",
+     "landscape",
+     "mountains",
+     "sky",
+     "clouds",
+     "sun",
+     "sunset",
+     "sun rays",
+     "sunshine",
+     "hills",
+     "wood",
+     "forest",
+     "trees",
+     "woodland",
+     "outdoor",
+     "outside",
+     "nature",
+     "cloudscape",
+     "paradise",
+     "silence",
+     "calm",
+     "serenity",
+     "background"
+    ],
+    "is_vertical": false,
+    "duration": "14.931583",
+    "downloads": 9460,
+    "aspect_ratio": "16:9",
+    "urls": {
+     "mp4": "https://cdn.coverr.co/videos/coverr-sunset-over-the-mountains-8528/1080p.mp4",
+     "mp4_download": "https://cdn.coverr.co/videos/coverr-sunset-over-the-mountains-8528/1080p.mp4?download=true",
+     "mp4_preview": "https://cdn.coverr.co/videos/coverr-sunset-over-the-mountains-8528/360p.mp4"
     }
    }
   ]

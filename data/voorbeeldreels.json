@@ -9,21 +9,23 @@
    "plaatsing": "boven",
    "clips": [
     {
-     "id": "Rpv1QpABdN",
-     "term": "morning bed",
-     "titel": "Girl waking up and using phone",
+     "id": "Ak073dfaaU",
+     "term": "sunrise window (sfeer)",
+     "titel": "Swinging microphone",
      "staand": false,
+     "blur": false,
      "post": "voorbeeld-1"
     },
     {
-     "id": "27KwMoV3Hn",
-     "term": "mountains",
-     "titel": "Mountains in the fog",
+     "id": "SzbwQXG2Vc",
+     "term": "lake",
+     "titel": "Rocks by the lake ",
      "staand": false,
+     "blur": false,
      "post": "voorbeeld-1"
     }
    ],
-   "duur": 19.62
+   "duur": 15.82
   },
   {
    "bestand": "docs/media/voorbeelden/situatie-2-dichtbij-midden.mp4",
@@ -32,21 +34,23 @@
    "plaatsing": "midden",
    "clips": [
     {
-     "id": "prMnnHapxD",
-     "term": "night bed",
-     "titel": "Person in bed on their iPhone",
+     "id": "cTf5tzBJvw",
+     "term": "moon (sfeer)",
+     "titel": "Sunset in Moon Beach, New Zealand ",
      "staand": false,
+     "blur": false,
      "post": "voorbeeld-2"
     },
     {
-     "id": "DJLiEDq9gl",
-     "term": "tea",
-     "titel": "Woman soaking a tea bag in a cup",
+     "id": "SseVqevlcp",
+     "term": "candle",
+     "titel": "Bokeh lit candle ",
      "staand": false,
+     "blur": false,
      "post": "voorbeeld-2"
     }
    ],
-   "duur": 22.0
+   "duur": 18.2
   },
   {
    "bestand": "docs/media/voorbeelden/situatie-3-onderweg-boven.mp4",
@@ -55,10 +59,11 @@
    "plaatsing": "boven",
    "clips": [
     {
-     "id": "uDybSbfx4A",
+     "id": "vStGMJfQPs",
      "term": "tired",
-     "titel": "A girl working at her office desk feeling tired",
+     "titel": "Stretching at the desk",
      "staand": false,
+     "blur": false,
      "post": "voorbeeld-3"
     },
     {
@@ -66,10 +71,11 @@
      "term": "city night",
      "titel": "Gloomy city at night",
      "staand": false,
+     "blur": false,
      "post": "voorbeeld-3"
     }
    ],
-   "duur": 19.31
+   "duur": 15.51
   },
   {
    "bestand": "docs/media/voorbeelden/situatie-4-natuur-midden.mp4",
@@ -78,21 +84,23 @@
    "plaatsing": "midden",
    "clips": [
     {
-     "id": "prMnnHapxD",
-     "term": "night bed",
-     "titel": "Person in bed on their iPhone",
+     "id": "HmGS6pHYvl",
+     "term": "city night (sfeer)",
+     "titel": "Nights in the city ",
      "staand": false,
+     "blur": false,
      "post": "voorbeeld-4"
     },
     {
-     "id": "xqjInIc3Ng",
-     "term": "sunrise",
-     "titel": "Sun shining on leaves",
+     "id": "A22SRO662u",
+     "term": "mountains",
+     "titel": "Remnants of snow on mountains",
      "staand": false,
+     "blur": false,
      "post": "voorbeeld-4"
     }
    ],
-   "duur": 17.0
+   "duur": 13.2
   }
  ],
  "zoektermen": {
@@ -101,16 +109,22 @@
   "waking up": 12,
   "morning bed": 3,
   "bedroom morning": 3,
-  "mountains": 12,
+  "curtains morning": 0,
+  "sunrise window": 4,
+  "sunset": 11,
+  "forest": 12,
+  "lake": 12,
   "insomnia": 2,
   "night bed": 4,
   "awake night": 0,
   "phone bed": 7,
-  "tea": 12,
+  "moon": 12,
+  "candle": 12,
   "tired": 12,
   "exhausted": 1,
   "stress": 0,
   "overwhelmed": 0,
-  "city night": 11
+  "city night": 11,
+  "mountains": 12
  }
 }
