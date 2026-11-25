@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-25T11:01",
+ "gegenereerd": "2026-11-25T11:15",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -22734,6 +22734,18 @@
     "fouten": []
    },
    {
+    "id": "Ecclesiastes-12-12-12",
+    "ref": "Prediker 12:12",
+    "tekst": "En wat boven dezelve is, mijn zoon! wees gewaarschuwd; van vele boeken te maken is geen einde, en veel lezens is vermoeiing des vleses.",
+    "e": {
+     "verhaal": "Ik zit hier weer voor mijn boekenkast te piekeren over wat ik nog niet gelezen heb.",
+     "zin": "Dit vers herinnerde me eraan dat ik soms te veel probeer te lezen.",
+     "vraag": "Hoe weet ik wanneer ik genoeg heb gelezen en moet stoppen?",
+     "herkenning": "Ik ben een echte boekenworm, maar soms moet ik mezelf eraan herinneren om rust te nemen."
+    },
+    "fouten": []
+   },
+   {
     "id": "Ecclesiastes-1-9-9",
     "ref": "Prediker 1:9",
     "tekst": "Hetgeen er geweest is, hetzelve zal er zijn, en hetgeen er gedaan is, hetzelve zal er gedaan worden; zodat er niets nieuws is onder de zon.",
@@ -22744,11 +22756,59 @@
      "herkenning": "Het gaat om nieuwe inzichten uit oude situaties."
     },
     "fouten": []
+   },
+   {
+    "id": "Ecclesiastes-3-1-1",
+    "ref": "Prediker 3:1",
+    "tekst": "Alles heeft een bestemden tijd, en alle voornemen onder den hemel heeft zijn tijd.",
+    "e": {
+     "verhaal": "Ik sta vandaag weer voor de keuze hoe ik mijn tijd besteed, wat urenlang kan duren",
+     "zin": "Dit vers herinnert me eraan dat er een redelijke tijd is voor alles, zelfs voor piekeren",
+     "vraag": "Hoe leer jij om te genieten van de momenten die je nu leeft?",
+     "herkenning": "Er is een tijd voor alles"
+    },
+    "fouten": []
+   },
+   {
+    "id": "Ecclesiastes-4-6-6",
+    "ref": "Prediker 4:6",
+    "tekst": "Een hand vol met rust is beter, dan beide de vuisten vol met arbeid en kwelling des geestes.",
+    "e": {
+     "verhaal": "Vandaag ben ik bezig geweest met een project dat ik al een tijdje uitstelde.",
+     "zin": "Dit vers herinnert me eraan dat rust even belangrijk is als harde werk.",
+     "vraag": "Hoe weet jij wanneer je moet stoppen en rust nemen?",
+     "herkenning": "Ik voel me zo overwerkt."
+    },
+    "fouten": []
+   },
+   {
+    "id": "Ecclesiastes-4-9-10",
+    "ref": "Prediker 4:9-10",
+    "tekst": "Twee zijn beter dan een; want zij hebben een goede beloning van hun arbeid; Want indien zij vallen, de een richt zijn metgezel op; maar wee den ene, die gevallen is, want er is geen tweede om hem op te helpen.",
+    "e": {
+     "verhaal": "Ik ben blij dat ik iemand heb die naast me loopt, een partner in alles.",
+     "zin": "Dit vers herinnert me eraan hoe belangrijk het is om elkaar te steunen.",
+     "vraag": "Hoe help jij je metgezel als die in moeilijke tijden valt?",
+     "herkenning": "Twee zijn beter dan een."
+    },
+    "fouten": []
+   },
+   {
+    "id": "Ecclesiastes-9-10-10",
+    "ref": "Prediker 9:10",
+    "tekst": "Alles, wat uw hand vindt om te doen, doe dat met uw macht; want er is geen werk, noch verzinning, noch wetenschap, noch wijsheid in het graf, daar gij heengaat.",
+    "e": {
+     "verhaal": "Bij elke nieuwe dag leer ik dat ik mijn tijd hier moet benutten, want de dagen buiten zijn anders.",
+     "zin": "Dit vers herinnert me eraan dat ik mijn energie nu moet richten op wat ik kan doen, niet op wat ik niet kan veranderen.",
+     "vraag": "Hoe richten jij je energie vandaag op het nuttige doen?",
+     "herkenning": "Er is niets te doen in het graf."
+    },
+    "fouten": []
    }
   ],
   "zonder_tekst": 301,
   "mac": {
-   "t": "2026-11-25T09:07+00:00",
+   "t": "2026-11-25T09:57+00:00",
    "model": "Qwen2.5-14B-Instruct-4bit",
    "versie": "5",
    "laatste_ronde": {
