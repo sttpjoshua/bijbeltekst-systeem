@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-24T22:04",
+ "gegenereerd": "2026-11-25T04:01",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1299,8 +1299,12 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-25-5-4.jpg"
    ],
    "thumb": "thumbs/2026-11-25-5.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "instagram"
+   ],
+   "links": {
+    "instagram": "https://www.instagram.com/p/DgJhEBqmmA_/"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -1330,11 +1334,13 @@
     "video_uitleg": "n.v.t."
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "instagram": "2026-11-25T04:01+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": null,
-   "online": null
+   "online": "2026-11-25T04:01+01:00"
   },
   {
    "id": "2026-11-25-4",
@@ -1479,8 +1485,12 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-25-3-3.jpg"
    ],
    "thumb": "thumbs/2026-11-25-3.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "facebook"
+   ],
+   "links": {
+    "facebook": "https://www.facebook.com/1015160368352770_122135636798879910"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -1510,11 +1520,13 @@
     "video_uitleg": "n.v.t."
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "facebook": "2026-11-25T04:01+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": null,
-   "online": null
+   "online": "2026-11-25T04:01+01:00"
   },
   {
    "id": "2026-11-25-2",
@@ -2055,8 +2067,8 @@
     "instagram": "https://www.instagram.com/reel/DgI4KJ_NLjW/"
    },
    "totaal": {
-    "views": 0,
-    "reach": 0,
+    "views": 11,
+    "reach": 7,
     "likes": 0,
     "comments": 0,
     "shares": 0,
@@ -2072,6 +2084,16 @@
      "saves": null,
      "follows": null,
      "t": "2026-11-24T22:01+01:00"
+    },
+    "instagram": {
+     "views": 11,
+     "reach": 7,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "t": null
     }
    },
    "score": {},
@@ -2109,6 +2131,17 @@
       "comments": null,
       "shares": null,
       "saves": null,
+      "follows": null
+     }
+    },
+    "instagram": {
+     "1u": {
+      "views": 11,
+      "reach": 7,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
       "follows": null
      }
     }
@@ -2202,6 +2235,16 @@
      "saves": 0,
      "follows": 0,
      "t": "2026-11-24T22:01+01:00"
+    },
+    "facebook": {
+     "views": null,
+     "reach": null,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": null,
+     "follows": null,
+     "t": null
     }
    },
    "score": {},
@@ -2240,6 +2283,17 @@
       "shares": 0,
       "saves": 0,
       "follows": 0
+     }
+    },
+    "facebook": {
+     "1u": {
+      "views": null,
+      "reach": null,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": null,
+      "follows": null
      }
     }
    },
@@ -17727,28 +17781,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-23T04:01:56",
-   "soort": "info",
-   "tekst": "2026-11-23-1 ook als story geplaatst"
-  },
-  {
-   "t": "2026-11-23T04:01:56",
-   "soort": "info",
-   "tekst": "2026-11-23-1 online op instagram: Jesaja 40:29"
-  },
-  {
-   "t": "2026-11-23T05:15:49",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
-  },
-  {
-   "t": "2026-11-23T07:01:29",
-   "soort": "fout",
-   "tekst": "Politiek nieuws (NOS): \"Ook pand in Winschoten dicht na neonazistische kooigevechten in Finsterwolde\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
-   "code": "nieuws_voorstel",
-   "post": "n112307010"
-  },
-  {
    "t": "2026-11-23T09:03:39",
    "soort": "info",
    "tekst": "Zelfstandig 5 posts klaargezet voor 2026-11-25 (teksten uit de tekstbank)."
@@ -18035,6 +18067,26 @@
    "t": "2026-11-24T22:04:59",
    "soort": "info",
    "tekst": "2026-11-24-3 online op instagram: 2 Timotheüs 4:7"
+  },
+  {
+   "t": "2026-11-24T23:15:39",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-25T04:01:48",
+   "soort": "info",
+   "tekst": "2026-11-25-5 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-25T04:01:48",
+   "soort": "info",
+   "tekst": "2026-11-25-5 online op instagram: Psalm 42:6"
+  },
+  {
+   "t": "2026-11-25T04:01:58",
+   "soort": "info",
+   "tekst": "2026-11-25-3 online op facebook: Galaten 2:20"
   }
  ],
  "recente_fouten": [
@@ -18200,9 +18252,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-24T22:04",
+   "ok": "2026-11-25T04:01",
    "laatst_ok": true,
-   "detail": "2 Timotheüs 4:7 geplaatst"
+   "detail": "Psalm 42:6 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-24T15:51",
@@ -18231,12 +18283,12 @@
    "ok": "2026-11-20T08:01",
    "laatst_ok": false,
    "detail": "400: {\"error\":{\"message\":\"Unsupported get request. Object with ID '18646160734043579' does not exist, cannot be loaded due to missing permissions, or does not s",
-   "fout": "2026-11-24T22:01"
+   "fout": "2026-11-24T23:01"
   },
   "facebook": {
-   "ok": "2026-11-24T22:03",
+   "ok": "2026-11-25T04:01",
    "laatst_ok": true,
-   "detail": "2 Korinthe 12:9 geplaatst"
+   "detail": "Galaten 2:20 geplaatst"
   },
   "statistieken": {
    "ok": "2026-11-24T15:51",
@@ -18397,21 +18449,21 @@
  ],
  "weken": {
   "deze": {
-   "posts": 35,
-   "reach": 784,
-   "views": 856,
-   "likes": 21,
+   "posts": 30,
+   "reach": 620,
+   "views": 682,
+   "likes": 15,
    "comments": 0,
-   "saves": 2,
+   "saves": 0,
    "shares": 0
   },
   "vorige": {
    "posts": 35,
-   "reach": 706,
-   "views": 773,
-   "likes": 19,
+   "reach": 869,
+   "views": 940,
+   "likes": 22,
    "comments": 0,
-   "saves": 1,
+   "saves": 3,
    "shares": 0
   }
  },
@@ -19008,7 +19060,7 @@
  "snel_leren": {
   "start": "2026-11-16",
   "tot": "2026-11-30",
-  "dag": 9,
+  "dag": 10,
   "dagen": 14,
   "online": 45,
   "gemeten": 21
@@ -22714,7 +22766,7 @@
   ],
   "zonder_tekst": 301,
   "mac": {
-   "t": "2026-11-24T15:13+00:00",
+   "t": "2026-11-24T21:28+00:00",
    "model": "Qwen2.5-14B-Instruct-4bit",
    "versie": "4",
    "laatste_ronde": {
@@ -24048,19 +24100,6 @@
   ],
   "komend": [
    {
-    "id": "2026-11-25-5",
-    "ref": "Psalm 42:6",
-    "datum": "2026-11-25",
-    "tijdslot": "04:00",
-    "tests": [
-     {
-      "dimensie": "huisstijl",
-      "optie": "zonsopgang",
-      "bron": "experiment"
-     }
-    ]
-   },
-   {
     "id": "2026-11-25-4",
     "ref": "Jesaja 66:13",
     "datum": "2026-11-25",
@@ -24111,19 +24150,6 @@
       "dimensie": "reel_stijl",
       "optie": "markeren",
       "bron": "test markeren"
-     }
-    ]
-   },
-   {
-    "id": "2026-11-25-3",
-    "ref": "Galaten 2:20",
-    "datum": "2026-11-25",
-    "tijdslot": "22:00",
-    "tests": [
-     {
-      "dimensie": "huisstijl",
-      "optie": "papier_groen",
-      "bron": "experiment"
      }
     ]
    },
