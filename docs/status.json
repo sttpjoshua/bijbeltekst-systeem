@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T21:45:42",
+ "updated": "2026-11-25T22:03:42",
  "agents": {
   "verskiezer": {
    "t": "2026-11-25T13:53:17",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-25T20:32:40",
-   "task": "Postte Galaten 4:7 op instagram",
+   "t": "2026-11-25T22:03:42",
+   "task": "Postte Spreuken 12:15 op instagram",
    "state": "done"
   },
   "controller": {
@@ -38,11 +38,11 @@
   }
  },
  "stats": {
-  "posts_today": 3,
-  "posts_total": 89,
+  "posts_today": 5,
+  "posts_total": 91,
   "reach_7d": 755,
   "best_time": "20:30",
-  "next_post": "2026-11-25T17:45:00"
+  "next_post": "2026-11-26T04:00:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
@@ -56,6 +56,18 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "22:03",
+   "msg": "2026-11-25-3 online op instagram: Spreuken 12:15"
+  },
+  {
+   "t": "22:03",
+   "msg": "2026-11-25-3 ook als story geplaatst"
+  },
+  {
+   "t": "22:02",
+   "msg": "2026-11-25-2 online op facebook: Jesaja 49:16"
+  },
   {
    "t": "21:45",
    "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
@@ -91,18 +103,6 @@
   {
    "t": "17:45",
    "msg": "2026-11-25-5 online op facebook: Psalm 42:6"
-  },
-  {
-   "t": "15:19",
-   "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
-  },
-  {
-   "t": "15:18",
-   "msg": "Statistieken opgehaald voor 25 posts"
-  },
-  {
-   "t": "14:35",
-   "msg": "Dagelijkse run: 10 posts gecontroleerd voor 26 en 27 nov (al gemaakt door het systeem), reserveverzen voor 27 "
   }
  ],
  "lampen": [
