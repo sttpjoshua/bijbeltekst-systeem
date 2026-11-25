@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-25T12:01",
+ "gegenereerd": "2026-11-25T12:17",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1874,8 +1874,12 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-25-4.mp4"
    ],
    "thumb": "thumbs/2026-11-25-4.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "instagram"
+   ],
+   "links": {
+    "instagram": "https://www.instagram.com/reel/DgKZqf9zFcx/"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -1905,11 +1909,13 @@
     "video_uitleg": "vaste regel"
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "instagram": "2026-11-25T12:17+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": null,
-   "online": null
+   "online": "2026-11-25T12:17+01:00"
   },
   {
    "id": "2026-11-25-3",
@@ -2186,8 +2192,12 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-25-1.mp4"
    ],
    "thumb": "thumbs/2026-11-25-1.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "facebook"
+   ],
+   "links": {
+    "facebook": "https://www.facebook.com/1806209137097407"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -2217,11 +2227,13 @@
     "video_uitleg": "vaste regel"
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "facebook": "2026-11-25T12:17+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": null,
-   "online": null
+   "online": "2026-11-25T12:17+01:00"
   },
   {
    "id": "2026-11-24-5",
@@ -18298,21 +18310,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-23T12:17:02",
-   "soort": "info",
-   "tekst": "2026-11-23-5 online op instagram: 1 Korinthe 15:58"
-  },
-  {
-   "t": "2026-11-23T13:15:52",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
-  },
-  {
-   "t": "2026-11-23T13:30:57",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
-  },
-  {
    "t": "2026-11-23T14:33:26",
    "soort": "info",
    "tekst": "Materiaal-repo niet gekloond (add_repo ontbreekt in deze sessie); GitHub Actions vult muziek aan"
@@ -18604,16 +18601,24 @@
    "t": "2026-11-25T09:04:24",
    "soort": "info",
    "tekst": "Zelfstandig 5 posts klaargezet voor 2026-11-27 (teksten uit de tekstbank)."
+  },
+  {
+   "t": "2026-11-25T12:17:08",
+   "soort": "info",
+   "tekst": "2026-11-25-4 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-25T12:17:08",
+   "soort": "info",
+   "tekst": "2026-11-25-4 online op instagram: Jesaja 66:13"
+  },
+  {
+   "t": "2026-11-25T12:17:16",
+   "soort": "info",
+   "tekst": "2026-11-25-1 online op facebook: Galaten 4:7"
   }
  ],
  "recente_fouten": [
-  {
-   "t": "2026-11-23T12:02:01",
-   "soort": "fout",
-   "tekst": "Politiek nieuws (NOS): \"Duitse minister van Onderwijs (CDU) spreekt zich uit voor AfD-verbod\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
-   "code": "nieuws_voorstel",
-   "post": "n112312020"
-  },
   {
    "t": "2026-11-24T07:01:51",
    "soort": "fout",
@@ -18769,9 +18774,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-25T04:01",
+   "ok": "2026-11-25T12:17",
    "laatst_ok": true,
-   "detail": "Psalm 42:6 geplaatst"
+   "detail": "Jesaja 66:13 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-24T15:51",
@@ -18803,9 +18808,9 @@
    "fout": "2026-11-25T12:01"
   },
   "facebook": {
-   "ok": "2026-11-25T04:01",
+   "ok": "2026-11-25T12:17",
    "laatst_ok": true,
-   "detail": "Galaten 2:20 geplaatst"
+   "detail": "Galaten 4:7 geplaatst"
   },
   "statistieken": {
    "ok": "2026-11-24T15:51",
@@ -18829,9 +18834,9 @@
    "ok": "2026-11-25T07:30"
   },
   "nieuws": {
-   "ok": "2026-11-25T07:01",
+   "ok": "2026-11-25T12:01",
    "laatst_ok": true,
-   "detail": "3 nieuwe aanleidingen"
+   "detail": "1 nieuwe aanleidingen, 0 voorstellen"
   },
   "maken": {
    "ok": "2026-11-25T09:04",
@@ -22650,6 +22655,66 @@
     "fouten": []
    },
    {
+    "id": "Ephesians-2-10-10",
+    "ref": "Efeze 2:10",
+    "tekst": "Want wij zijn Zijn maaksel, geschapen in Christus Jezus tot goede werken, welke God voorbereid heeft, opdat wij in dezelve zouden wandelen.",
+    "e": {
+     "verhaal": "Ik ben bezig met een nieuw ontwerp en denk vaak over hoe ik dit werk aanpak.",
+     "zin": "Dit vers herinnerde me eraan dat mijn creatieve taken een belangrijk deel van mijn roeping zijn.",
+     "vraag": "Hoe helpen jouw dagelijkse taken jou bij je roeping?",
+     "herkenning": "Soms ben ik afgeleid door kleinigheden."
+    },
+    "fouten": []
+   },
+   {
+    "id": "Ephesians-2-19-19",
+    "ref": "Efeze 2:19",
+    "tekst": "Zo zijt gij dan niet meer vreemdelingen en bijwoners, maar medeburgers der heiligen, en huisgenoten Gods.",
+    "e": {
+     "verhaal": "Voelde me vandaag een beetje opzij geduwd in een gesprek, maar dit vers herinnerde me eraan dat ik een echte deelgenoot ben.",
+     "zin": "Dit vers helpt me om me te herinneren dat ik geen buitenstaander ben in deze gemeenschap.",
+     "vraag": "Hoe help jij mij om me meer thuis te voelen in moeilijke situaties?",
+     "herkenning": "Ik ben een medeburger in deze gemeenschap."
+    },
+    "fouten": []
+   },
+   {
+    "id": "Ephesians-4-2-2",
+    "ref": "Efeze 4:2",
+    "tekst": "Met alle ootmoedigheid en zachtmoedigheid, met lankmoedigheid, verdragende elkander in liefde.",
+    "e": {
+     "verhaal": "Gisteren was ik in een uitdagend gesprek met een klant die ik moeilijk vond om te bedienen.",
+     "zin": "Dit vers herinnert me eraan hoe belangrijk het is om rustig en behoedzaam te blijven, ook in moeilijke situaties.",
+     "vraag": "Hoe verdrag jij mensen die je lastig vinden?",
+     "herkenning": "Het is moeilijk om rustig te blijven."
+    },
+    "fouten": []
+   },
+   {
+    "id": "Ephesians-5-20-20",
+    "ref": "Efeze 5:20",
+    "tekst": "Dankende te allen tijd over alle dingen God en den Vader, in den Naam van onzen Heere Jezus Christus.",
+    "e": {
+     "verhaal": "Ik zit hier met een kop koffie en sta versteld van hoeveel kleine dingen er zijn die ik kan bedenken om te danken voor.",
+     "zin": "Dit vers helpt me om alledaagse momenten ook te zien als momenten om te danken.",
+     "vraag": "Waar ben jij dankbaar voor in dit moment?",
+     "herkenning": "De kleine dingen tellen ook."
+    },
+    "fouten": []
+   },
+   {
+    "id": "Ephesians-6-10-10",
+    "ref": "Efeze 6:10",
+    "tekst": "Voorts, mijn broeders, wordt krachtig in den Heere, en in de sterkte Zijner macht.",
+    "e": {
+     "verhaal": "Bij elke ochtendwandeling langs de IJssel voel ik hoe sterk ik eigenlijk ben.",
+     "zin": "Dit vers helpt me om weer te geloven in mijn innerlijke kracht.",
+     "vraag": "Hoe kun je je sterkte in de Heer het beste benutten?",
+     "herkenning": "Ik ben weer een nieuwe stap verder in loslaten."
+    },
+    "fouten": []
+   },
+   {
     "id": "Colossians-2-7-7",
     "ref": "Kolossenzen 2:7",
     "tekst": "Geworteld en opgebouwd in Hem, en bevestigd in het geloof, gelijkerwijs gij geleerd zijt, overvloedig zijnde in hetzelve, met dankzegging.",
@@ -22808,7 +22873,7 @@
   ],
   "zonder_tekst": 301,
   "mac": {
-   "t": "2026-11-25T09:57+00:00",
+   "t": "2026-11-25T10:44+00:00",
    "model": "Qwen2.5-14B-Instruct-4bit",
    "versie": "5",
    "laatste_ronde": {
@@ -22825,6 +22890,18 @@
    "licht_automatisch": true
   },
   "recent": [
+   {
+    "id": "n112512010",
+    "t": "2026-11-24T14:27+01:00",
+    "bron": "NOS",
+    "kop": "24/11 in Nieuwsuur: Reconstructie Nvidia • Partij voor de Dieren bestaat 20 jaar • Gokken op einde der tijden",
+    "link": "https://nos.nl/l/2640829",
+    "categorie": "politiek",
+    "zwaar": false,
+    "status": "overgeslagen",
+    "post": null,
+    "opties": null
+   },
    {
     "id": "n112507012",
     "t": "2026-11-25T06:56+01:00",
@@ -22996,7 +23073,7 @@
     "link": "https://nos.nl/l/2640760",
     "categorie": "zwaar",
     "zwaar": true,
-    "status": "voorstel",
+    "status": "verlopen",
     "post": null,
     "opties": [
      {
@@ -23060,7 +23137,7 @@
     "link": "https://nos.nl/l/2640773",
     "categorie": "politiek",
     "zwaar": false,
-    "status": "voorstel",
+    "status": "verlopen",
     "post": null,
     "opties": [
      {
@@ -23147,7 +23224,7 @@
     "link": "https://nos.nl/l/2640689",
     "categorie": "politiek",
     "zwaar": false,
-    "status": "voorstel",
+    "status": "verlopen",
     "post": null,
     "opties": [
      {
@@ -23223,7 +23300,7 @@
     "link": "https://nos.nl/l/2640644",
     "categorie": "politiek",
     "zwaar": false,
-    "status": "voorstel",
+    "status": "verlopen",
     "post": null,
     "opties": [
      {
@@ -23299,7 +23376,7 @@
     "link": "https://nos.nl/l/2640510",
     "categorie": "politiek",
     "zwaar": false,
-    "status": "voorstel",
+    "status": "verlopen",
     "post": null,
     "opties": [
      {
@@ -23387,7 +23464,7 @@
     "link": "https://nos.nl/l/2640346",
     "categorie": "zwaar",
     "zwaar": true,
-    "status": "voorstel",
+    "status": "verlopen",
     "post": null,
     "opties": [
      {
@@ -23449,7 +23526,7 @@
     "link": "https://nos.nl/l/2640358",
     "categorie": "politiek",
     "zwaar": false,
-    "status": "voorstel",
+    "status": "verlopen",
     "post": null,
     "opties": [
      {
@@ -23512,7 +23589,7 @@
     "link": "https://nos.nl/l/2640219",
     "categorie": "politiek",
     "zwaar": false,
-    "status": "voorstel",
+    "status": "verlopen",
     "post": null,
     "opties": [
      {
@@ -23651,7 +23728,7 @@
     "link": "https://nos.nl/l/2639978",
     "categorie": "politiek",
     "zwaar": false,
-    "status": "voorstel",
+    "status": "verlopen",
     "post": null,
     "opties": [
      {
@@ -23777,7 +23854,7 @@
     "link": "https://nos.nl/l/2639924",
     "categorie": "politiek",
     "zwaar": false,
-    "status": "voorstel",
+    "status": "verlopen",
     "post": null,
     "opties": [
      {
@@ -23831,18 +23908,6 @@
       ]
      }
     ]
-   },
-   {
-    "id": "n111712010",
-    "t": "2026-11-17T09:37+01:00",
-    "bron": "NOS",
-    "kop": "Oudste sinterklaasgedicht van rond 1640 ontdekt: 'Beetje knullige rijm'",
-    "link": "https://nos.nl/l/2639838",
-    "categorie": "sinterklaas",
-    "zwaar": false,
-    "status": "geen_plek",
-    "post": null,
-    "opties": null
    }
   ]
  },
@@ -24047,24 +24112,6 @@
   ],
   "komend": [
    {
-    "id": "2026-11-25-4",
-    "ref": "Jesaja 66:13",
-    "datum": "2026-11-25",
-    "tijdslot": "12:15",
-    "tests": [
-     {
-      "dimensie": "huisstijl",
-      "optie": "zand",
-      "bron": "experiment"
-     },
-     {
-      "dimensie": "reel_stijl",
-      "optie": "markeren",
-      "bron": "test markeren"
-     }
-    ]
-   },
-   {
     "id": "2026-11-25-2",
     "ref": "Jesaja 49:16",
     "datum": "2026-11-25",
@@ -24073,24 +24120,6 @@
      {
       "dimensie": "huisstijl",
       "optie": "bosgroen",
-      "bron": "experiment"
-     },
-     {
-      "dimensie": "reel_stijl",
-      "optie": "markeren",
-      "bron": "test markeren"
-     }
-    ]
-   },
-   {
-    "id": "2026-11-25-1",
-    "ref": "Galaten 4:7",
-    "datum": "2026-11-25",
-    "tijdslot": "20:30",
-    "tests": [
-     {
-      "dimensie": "huisstijl",
-      "optie": "zand",
       "bron": "experiment"
      },
      {

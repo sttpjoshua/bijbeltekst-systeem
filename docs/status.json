@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T12:01:44",
+ "updated": "2026-11-25T12:17:17",
  "agents": {
   "verskiezer": {
    "t": "2026-11-25T09:02:49",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-25T04:01:58",
-   "task": "Postte Galaten 2:20 op facebook",
+   "t": "2026-11-25T12:17:16",
+   "task": "Postte Galaten 4:7 op facebook",
    "state": "done"
   },
   "controller": {
@@ -57,6 +57,18 @@
  ],
  "log": [
   {
+   "t": "12:17",
+   "msg": "2026-11-25-1 online op facebook: Galaten 4:7"
+  },
+  {
+   "t": "12:17",
+   "msg": "2026-11-25-4 online op instagram: Jesaja 66:13"
+  },
+  {
+   "t": "12:17",
+   "msg": "2026-11-25-4 ook als story geplaatst"
+  },
+  {
    "t": "09:04",
    "msg": "Zelfstandig 5 posts klaargezet voor 2026-11-27 (teksten uit de tekstbank)."
   },
@@ -91,18 +103,6 @@
   {
    "t": "22:04",
    "msg": "2026-11-24-3 online op instagram: 2 Timotheüs 4:7"
-  },
-  {
-   "t": "22:04",
-   "msg": "2026-11-24-3 ook als story geplaatst"
-  },
-  {
-   "t": "22:03",
-   "msg": "2026-11-24-2 online op facebook: 2 Korinthe 12:9"
-  },
-  {
-   "t": "21:45",
-   "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
   }
  ],
  "lampen": [
