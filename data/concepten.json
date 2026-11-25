@@ -1094,6 +1094,46 @@
    "herkenning": "God heeft ons beiden naar Zijn beeld geschapen, ongeacht onze verschillen.",
    "model": "Qwen2.5-14B-Instruct-4bit",
    "t": "2026-11-25T11:31+00:00"
+  },
+  "Habakkuk-3-18-18": {
+   "verhaal": "Vandaag voelde ik de neiging om me te treuren, maar dit vers helpt me om mijn focus te verzetten.",
+   "zin": "Dit vers helpt me om te zien dat ik ondanks alles redenen heb om vreugde te hebben.",
+   "vraag": "Waar ben ik dankbaar voor, wat ik gemakkelijk over het hoofd zie?",
+   "herkenning": "Ik zie dat ik al die kleine zonnen in mijn leven heb.",
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-25T12:16+00:00"
+  },
+  "Hebrews-10-23-23": {
+   "verhaal": "Ik zit vandaag weer in mijn atelier, ernaast het raam open om de rustige geluiden van de IJssel binnen te laten.",
+   "zin": "Dit vers helpt me om vast te houden aan mijn dromen, hoe moeilijk het soms ook lijkt.",
+   "vraag": "Hoe hou jij je vast aan dingen die je belangrijk vindt?",
+   "herkenning": "Het leven kan soms zo onvoorspelbaar zijn.",
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-25T12:16+00:00"
+  },
+  "Hebrews-11-1-1": {
+   "verhaal": "Ik loop vandaag weer over een brug die ik niet kan zien, maar die er wel is.",
+   "zin": "Dit vers helpt me om te rusten in de onzichtbare dingen die ik hoop en waar ik in geloof.",
+   "vraag": "Wat is jouw meest onzichtbare hoop waarin je gelooft?",
+   "herkenning": "Ik ben blij als ik kan zien wat ik hoop.",
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-25T12:16+00:00"
+  },
+  "Hebrews-11-6-6": {
+   "verhaal": "Vandaag ben ik weer in gedachten verzonken, piekerend over mijn nieuwe project.",
+   "zin": "Dit vers herinnert mij eraan dat ik moet geloven dat er een oplossing is, ook al zie ik dat niet direct.",
+   "vraag": "Hoe kan ik mezelf ertoe bewegen om echt te geloven, ook wanneer ik het moeilijk zie?",
+   "herkenning": "Geloof is belangrijk om te geloven in een uitweg.",
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-25T12:16+00:00"
+  },
+  "Hebrews-4-9-9": {
+   "verhaal": "Deze dag voel ik mezelf als een van diegenen die rust zoekt in het leven.",
+   "zin": "Dit vers herinnert me eraan dat rust in mijn leven nog steeds een mogelijkheid is.",
+   "vraag": "Hoe zoek jij rust in een hectisch leven?",
+   "herkenning": "Soms voel ik me net zo overweldigd als iedereen anders.",
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-25T12:16+00:00"
   }
  }
 }
