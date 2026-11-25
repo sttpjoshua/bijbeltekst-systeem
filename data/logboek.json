@@ -1,10 +1,5 @@
 [
  {
-  "t": "2026-11-12T13:05:10",
-  "soort": "info",
-  "tekst": "Nieuwspost aangepast: Psalm 20:8 is nu Psalm 20:8 (politiek): Veel meningen, veel onrust. Even terug naar wat vaststaat."
- },
- {
   "t": "2026-11-12T13:05:11",
   "soort": "info",
   "tekst": "Nieuwspost aangepast: Psalm 92:2 is nu 1 Johannes 3:1 (sinterklaas): Het is bijna intocht. Wat is het mooiste cadeau dat je ooit kreeg?"
@@ -2549,5 +2544,10 @@
   "t": "2026-11-25T04:01:58",
   "soort": "info",
   "tekst": "2026-11-25-3 online op facebook: Galaten 2:20"
+ },
+ {
+  "t": "2026-11-25T05:15:38",
+  "soort": "info",
+  "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
  }
 ]
