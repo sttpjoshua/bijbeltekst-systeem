@@ -974,6 +974,46 @@
    "herkenning": "Ik moet mijn eigen zaadje planten en niet te veel op de wind letten.",
    "model": "Qwen2.5-14B-Instruct-4bit",
    "t": "2026-11-25T09:07+00:00"
+  },
+  "Ecclesiastes-12-12-12": {
+   "verhaal": "Ik zit hier weer voor mijn boekenkast te piekeren over wat ik nog niet gelezen heb.",
+   "zin": "Dit vers herinnerde me eraan dat ik soms te veel probeer te lezen.",
+   "vraag": "Hoe weet ik wanneer ik genoeg heb gelezen en moet stoppen?",
+   "herkenning": "Ik ben een echte boekenworm, maar soms moet ik mezelf eraan herinneren om rust te nemen.",
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-25T09:57+00:00"
+  },
+  "Ecclesiastes-3-1-1": {
+   "verhaal": "Ik sta vandaag weer voor de keuze hoe ik mijn tijd besteed, wat urenlang kan duren",
+   "zin": "Dit vers herinnert me eraan dat er een redelijke tijd is voor alles, zelfs voor piekeren",
+   "vraag": "Hoe leer jij om te genieten van de momenten die je nu leeft?",
+   "herkenning": "Er is een tijd voor alles",
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-25T09:57+00:00"
+  },
+  "Ecclesiastes-4-6-6": {
+   "verhaal": "Vandaag ben ik bezig geweest met een project dat ik al een tijdje uitstelde.",
+   "zin": "Dit vers herinnert me eraan dat rust even belangrijk is als harde werk.",
+   "vraag": "Hoe weet jij wanneer je moet stoppen en rust nemen?",
+   "herkenning": "Ik voel me zo overwerkt.",
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-25T09:57+00:00"
+  },
+  "Ecclesiastes-4-9-10": {
+   "verhaal": "Ik ben blij dat ik iemand heb die naast me loopt, een partner in alles.",
+   "zin": "Dit vers herinnert me eraan hoe belangrijk het is om elkaar te steunen.",
+   "vraag": "Hoe help jij je metgezel als die in moeilijke tijden valt?",
+   "herkenning": "Twee zijn beter dan een.",
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-25T09:57+00:00"
+  },
+  "Ecclesiastes-9-10-10": {
+   "verhaal": "Bij elke nieuwe dag leer ik dat ik mijn tijd hier moet benutten, want de dagen buiten zijn anders.",
+   "zin": "Dit vers herinnert me eraan dat ik mijn energie nu moet richten op wat ik kan doen, niet op wat ik niet kan veranderen.",
+   "vraag": "Hoe richten jij je energie vandaag op het nuttige doen?",
+   "herkenning": "Er is niets te doen in het graf.",
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-25T09:57+00:00"
   }
  }
 }
