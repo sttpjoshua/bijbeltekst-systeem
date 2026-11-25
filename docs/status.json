@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T15:15:41",
+ "updated": "2026-11-25T15:19:24",
  "agents": {
   "verskiezer": {
    "t": "2026-11-25T13:53:17",
@@ -27,8 +27,8 @@
    "state": "error"
   },
   "analist": {
-   "t": "2026-11-24T15:51:26",
-   "task": "Weekanalyse: strategie v10",
+   "t": "2026-11-25T15:19:23",
+   "task": "Weekanalyse: strategie v11",
    "state": "done"
   },
   "community": {
@@ -40,13 +40,13 @@
  "stats": {
   "posts_today": 0,
   "posts_total": 86,
-  "reach_7d": 677,
+  "reach_7d": 755,
   "best_time": "20:30",
   "next_post": "2026-11-25T04:00:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
-  "instagram": 1511,
+  "instagram": 1594,
   "facebook": 4,
   "youtube": 0,
   "tiktok": 0
@@ -56,6 +56,14 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "15:19",
+   "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
+  },
+  {
+   "t": "15:18",
+   "msg": "Statistieken opgehaald voor 25 posts"
+  },
   {
    "t": "14:35",
    "msg": "Dagelijkse run: 10 posts gecontroleerd voor 26 en 27 nov (al gemaakt door het systeem), reserveverzen voor 27 "
@@ -95,14 +103,6 @@
   {
    "t": "07:01",
    "msg": "Nieuwspost: Galaten 2:20 vervangen door Spreuken 12:15 (aanleiding: winter, NOS)"
-  },
-  {
-   "t": "07:01",
-   "msg": "Politiek nieuws (NOS): \"Wekdienst 25/11: NAVO-chef Rutte praat met Trump • Strafeis mishandeling Plein Den Haa"
-  },
-  {
-   "t": "05:15",
-   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
   }
  ],
  "lampen": [
@@ -152,13 +152,13 @@
    3,
    3,
    3,
-   3,
    4,
    5,
    5,
    5,
    5,
    6,
+   7,
    7,
    7,
    7

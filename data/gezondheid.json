@@ -5,20 +5,20 @@
   "detail": "Jesaja 66:13 geplaatst"
  },
  "instagram_lezen": {
-  "ok": "2026-11-24T15:51",
+  "ok": "2026-11-25T15:19",
   "laatst_ok": true,
   "detail": "7 volgers"
  },
  "sleutel_instagram": {
   "verloopt": "nooit",
   "geldig": true,
-  "ok": "2026-11-24T15:51",
+  "ok": "2026-11-25T15:19",
   "laatst_ok": true
  },
  "sleutel_facebook": {
   "verloopt": "nooit",
   "geldig": true,
-  "ok": "2026-11-24T15:51",
+  "ok": "2026-11-25T15:19",
   "laatst_ok": true
  },
  "materiaal_actions": {
@@ -31,7 +31,7 @@
   "ok": "2026-11-20T08:01",
   "laatst_ok": false,
   "detail": "400: {\"error\":{\"message\":\"Unsupported get request. Object with ID '18646160734043579' does not exist, cannot be loaded due to missing permissions, or does not s",
-  "fout": "2026-11-25T15:01"
+  "fout": "2026-11-25T15:19"
  },
  "facebook": {
   "ok": "2026-11-25T12:17",
@@ -39,9 +39,9 @@
   "detail": "Galaten 4:7 geplaatst"
  },
  "statistieken": {
-  "ok": "2026-11-24T15:51",
+  "ok": "2026-11-25T15:19",
   "laatst_ok": true,
-  "detail": "17 nieuwe metingen"
+  "detail": "25 nieuwe metingen"
  },
  "zelftest": {
   "ok": "2026-11-25T14:34",
@@ -75,7 +75,7 @@
   "detail": "alles klopte"
  },
  "leren": {
-  "ok": "2026-11-24T15:51",
+  "ok": "2026-11-25T15:19",
   "laatst_ok": true,
   "detail": "dagelijks (snel leren)"
  },
