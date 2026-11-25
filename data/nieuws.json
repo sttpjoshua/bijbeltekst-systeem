@@ -403,7 +403,7 @@
   "id": "n111512011",
   "categorie": "politiek",
   "zwaar": false,
-  "status": "voorstel",
+  "status": "verlopen",
   "opties": [
    {
     "vers_id": "Psalms-125-1-1",
@@ -549,7 +549,7 @@
   "id": "n111612020",
   "categorie": "politiek",
   "zwaar": false,
-  "status": "voorstel",
+  "status": "verlopen",
   "opties": [
    {
     "vers_id": "Proverbs-19-21-21",
@@ -612,7 +612,7 @@
   "id": "n111707010",
   "categorie": "politiek",
   "zwaar": false,
-  "status": "voorstel",
+  "status": "verlopen",
   "opties": [
    {
     "vers_id": "James-1-5-5",
@@ -685,7 +685,7 @@
   "id": "n111807010",
   "categorie": "politiek",
   "zwaar": false,
-  "status": "voorstel",
+  "status": "verlopen",
   "opties": [
    {
     "vers_id": "Philippians-4-6-7",
@@ -809,7 +809,7 @@
   "id": "n111812021",
   "categorie": "politiek",
   "zwaar": false,
-  "status": "voorstel",
+  "status": "verlopen",
   "opties": [
    {
     "vers_id": "Psalms-62-2-2",
@@ -943,7 +943,7 @@
   "id": "n112007010",
   "categorie": "politiek",
   "zwaar": false,
-  "status": "voorstel",
+  "status": "verlopen",
   "opties": [
    {
     "vers_id": "Proverbs-17-22-22",
@@ -1006,7 +1006,7 @@
   "id": "n112107010",
   "categorie": "politiek",
   "zwaar": false,
-  "status": "voorstel",
+  "status": "verlopen",
   "opties": [
    {
     "vers_id": "Proverbs-2-6-6",
@@ -1068,7 +1068,7 @@
   "id": "n112107011",
   "categorie": "zwaar",
   "zwaar": true,
-  "status": "voorstel",
+  "status": "verlopen",
   "opties": [
    {
     "vers_id": "Hebrews-4-15-15",
@@ -1150,7 +1150,7 @@
   "id": "n112207011",
   "categorie": "politiek",
   "zwaar": false,
-  "status": "voorstel",
+  "status": "verlopen",
   "opties": [
    {
     "vers_id": "Psalms-143-8-8",
@@ -1223,7 +1223,7 @@
   "id": "n112307010",
   "categorie": "politiek",
   "zwaar": false,
-  "status": "voorstel",
+  "status": "verlopen",
   "opties": [
    {
     "vers_id": "Ecclesiastes-4-9-10",
@@ -1296,7 +1296,7 @@
   "id": "n112312020",
   "categorie": "politiek",
   "zwaar": false,
-  "status": "voorstel",
+  "status": "verlopen",
   "opties": [
    {
     "vers_id": "Ecclesiastes-4-9-10",
@@ -1379,7 +1379,7 @@
   "id": "n112407010",
   "categorie": "politiek",
   "zwaar": false,
-  "status": "voorstel",
+  "status": "verlopen",
   "opties": [
    {
     "vers_id": "Psalms-46-11-11",
@@ -1441,7 +1441,7 @@
   "id": "n112407011",
   "categorie": "zwaar",
   "zwaar": true,
-  "status": "voorstel",
+  "status": "verlopen",
   "opties": [
    {
     "vers_id": "John-16-33-33",
@@ -1649,6 +1649,16 @@
   "t": "2026-11-25T06:56+01:00",
   "id": "n112507012",
   "categorie": "regen",
+  "zwaar": false,
+  "status": "overgeslagen"
+ },
+ {
+  "bron": "NOS",
+  "kop": "24/11 in Nieuwsuur: Reconstructie Nvidia • Partij voor de Dieren bestaat 20 jaar • Gokken op einde der tijden",
+  "link": "https://nos.nl/l/2640829",
+  "t": "2026-11-24T14:27+01:00",
+  "id": "n112512010",
+  "categorie": "politiek",
   "zwaar": false,
   "status": "overgeslagen"
  }
