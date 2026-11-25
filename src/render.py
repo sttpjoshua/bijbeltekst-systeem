@@ -902,13 +902,18 @@ def _tekstslide(post, titel, body, pad, nummer, bg=None, groot=False):
     if v["layout"] == "kader":
         p = int(b * 0.06)
         d.rectangle([p, p, b - p, h - p], outline=accent + (200,), width=3)
-    if titel:
+    persoonlijk = bool(v.get("potlood") or v.get("accent_hand"))
+    hand_groot = groot and persoonlijk  # de openingszin in haar handschrift
+    if titel and persoonlijk:  # koppen in haar woorden en handschrift
+        kop = {"WAT BETEKENT DIT?": "wat dit betekent", "VANDAAG": "voor vandaag"}.get(titel, titel.lower())
+        d.text((b // 2, int(h * 0.14)), kop, font=_hand(b * 0.07), fill=accent + (255,), anchor="ma")
+    elif titel:
         tf = _klein_font(int(b * 0.03), b"Bold")
         _woordmerk(d, b // 2, int(h * 0.16), titel, tf, accent + (255,), int(b * 0.008))
     grootte = int(b * (0.085 if groot else 0.058))
     ruimte = 0.62 if groot else 0.55
     while grootte > 26:
-        f = _font(v["lettertype"], grootte)
+        f = _hand(grootte * 1.3) if hand_groot else _font(v["lettertype"], grootte)
         regels = _wrap(body, f, b - 2 * marge, d)
         lh = int(grootte * (1.28 if groot else 1.38))
         if lh * len(regels) <= h * ruimte:
@@ -917,7 +922,7 @@ def _tekstslide(post, titel, body, pad, nummer, bg=None, groot=False):
     y0 = int(h * (0.18 if groot else 0.27)) + (int(h * ruimte) - lh * len(regels)) // 2
     links = v["layout"] == "links"
     staat = _kernstaat(post, kleur, accent)
-    if str(v.get("achtergrond", "")).startswith("papier"):  # papierstijl: cursief voor nuance
+    if str(v.get("achtergrond", "")).startswith("papier") and not hand_groot:  # papierstijl: cursief voor nuance
         cur = _cursief_woorden(body, staat.get("kern"))
         fi = _font("cormorant_cursief", grootte)
         n0 = 0
@@ -931,12 +936,18 @@ def _tekstslide(post, titel, body, pad, nummer, bg=None, groot=False):
         d.text((b // 2, int(h * 0.86)), "swipe  \u2192", font=_klein_font(int(b * 0.03), b"SemiBold"), fill=accent + (230,), anchor="ma")
     rf = _klein_font(int(b * 0.026), b"SemiBold")
     if not groot:
-        d.text((b // 2, int(h * 0.85)), (post["ref"] + ("  \u00b7  NBV21" if post.get("vertaling") == "NBV21" else "")).upper(), font=rf, fill=accent + (220,), anchor="ma")
+        reftxt = (post["ref"] + ("  \u00b7  NBV21" if post.get("vertaling") == "NBV21" else ""))
+        if v.get("accent_hand"):
+            d.text((b // 2, int(h * 0.845)), reftxt, font=_hand(b * 0.042), fill=accent + (230,), anchor="ma")
+        else:
+            d.text((b // 2, int(h * 0.85)), reftxt.upper(), font=rf, fill=accent + (220,), anchor="ma")
     hy = h - int(h * (0.115 if v["layout"] == "kader" else 0.085))
     _woordmerk(d, b // 2, hy, "BIBLEVERSE", _klein_font(int(b * 0.024), b"Bold"), accent + (235,), int(b * 0.009))
     if post.get("handle"):
         d.text((b // 2, hy + int(b * 0.034)), post["handle"], font=_klein_font(int(b * 0.022), b"Regular"), fill=kleur + (140,), anchor="ma")
     img.alpha_composite(laag)
+    if v.get("onvolmaakt"):
+        _onvolmaakt(img, dict(post, id=f"{post['id']}-s{nummer}"))
     img.convert("RGB").save(pad, quality=93)
     return pad
 
@@ -1003,7 +1014,7 @@ def maak_carrousel(post, basis):
     return paden
 
 
-def maak_story(slide1, pad):
+def maak_story(slide1, pad, regel=None):
     """Story-versie (1080x1920) van slide 1: de slide in het midden op een vervaagde versie van zichzelf."""
     im = Image.open(slide1).convert("RGB")
     b, h = 1080, 1920
@@ -1019,6 +1030,15 @@ def maak_story(slide1, pad):
     ImageDraw.Draw(masker).rounded_rectangle([0, 0, kaart.width, kaart.height], 24, fill=255)
     achter.paste(kaart, (x, y), masker)
     d = ImageDraw.Draw(achter)
+    rnd = random.Random(slide1)
+    if regel:  # haar regel boven de kaart, een tapestrookje op de kaart, en een persoonlijk onderschrift
+        achter = achter.convert("RGBA")
+        achter.alpha_composite(_tape(b, h, rnd, (240, 230, 200)), (b // 2 - 130, y - 38))
+        d = ImageDraw.Draw(achter)
+        d.text((b // 2, max(70, y - 150)), regel, font=_hand(76), fill=(255, 255, 255, 245), anchor="ma")
+        d.text((b // 2, y + kaart.height + 60), "de rest staat op mijn profiel", font=_hand(60), fill=(255, 255, 255, 235), anchor="ma")
+        achter.convert("RGB").save(pad, quality=92)
+        return pad
     d.text((b // 2, y + kaart.height + 70), "Nieuwe post · bekijk het profiel", font=_klein_font(36, b"SemiBold"), fill=(255, 255, 255), anchor="ma")
     achter.save(pad, quality=92)
     return pad

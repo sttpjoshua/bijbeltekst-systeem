@@ -603,7 +603,10 @@ def render_een(p, cfg, map_rel):
     p["thumb"] = maak_thumb(P(p["media"]), p["id"], (p.get("cover_ms") or 4000) / 1000)
     if fmt == "carrousel":
         from render import maak_story
-        p["story"] = os.path.relpath(maak_story(P(p["media"]), P(rel).replace(".jpg", "-story.jpg")), ROOT)
+        _ts = p["variabelen"].get("tijdslot") or "12:15"
+        _regel = ("goedemorgen" if _ts < "10:00" else "even tussendoor" if _ts < "15:00" else "de dag loopt af" if _ts < "20:00" else "dit hoort bij de avond") \
+            if p["variabelen"].get("toon") == "noor" or p["variabelen"].get("potlood") or p["variabelen"].get("accent_hand") else None
+        p["story"] = os.path.relpath(maak_story(P(p["media"]), P(rel).replace(".jpg", "-story.jpg"), _regel), ROOT)
     for k in ("beeld_pad", "muziek_pad", "geluid_pad"):
         p.pop(k, None)
     if cfg.get("github_repo"):
