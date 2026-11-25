@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-25T10:15",
+ "gegenereerd": "2026-11-25T10:30",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -22626,6 +22626,30 @@
   ],
   "noor": [
    {
+    "id": "Deuteronomy-31-6-6",
+    "ref": "Deuteronomium 31:6",
+    "tekst": "Weest sterk en hebt goeden moed, en vreest niet, en verschrikt niet voor hun aangezicht; want het is de HEERE, uw God, Die met u gaat; Hij zal u niet begeven, noch u verlaten.",
+    "e": {
+     "verhaal": "Bij elke nieuwe klus moet ik mezelf eraan herinneren",
+     "zin": "Dit vers helpt me moediger te zijn, ook als nieuwe uitdagingen opduiken",
+     "vraag": "Hoe help jij mij moediger te blijven in moeilijke tijden?",
+     "herkenning": "Het leven heeft zijn uitdagingen"
+    },
+    "fouten": []
+   },
+   {
+    "id": "Deuteronomy-31-8-8",
+    "ref": "Deuteronomium 31:8",
+    "tekst": "De HEERE nu is Degene, Die voor uw aangezicht gaat; Die zal met u zijn; Hij zal u niet begeven, noch u verlaten; vrees niet, en ontzet u niet.",
+    "e": {
+     "verhaal": "Ik loop vandaag weer een keer wat onzeker, maar deze woorden helpen om rustiger te blijven.",
+     "zin": "De HEERE zal met mij zijn en niet toestaan dat ik me alleen voel.",
+     "vraag": "Hoe kan ik in moeilijke tijden beter op deze belofte vertrouwen?",
+     "herkenning": "Ik voel me rustiger en sterker."
+    },
+    "fouten": []
+   },
+   {
     "id": "Colossians-2-7-7",
     "ref": "Kolossenzen 2:7",
     "tekst": "Geworteld en opgebouwd in Hem, en bevestigd in het geloof, gelijkerwijs gij geleerd zijt, overvloedig zijnde in hetzelve, met dankzegging.",
@@ -22684,11 +22708,47 @@
      "herkenning": "Zout maakt elk gesprek aangenaam."
     },
     "fouten": []
+   },
+   {
+    "id": "Ecclesiastes-10-18-18",
+    "ref": "Prediker 10:18",
+    "tekst": "Door grote luiheid verzwakt het gebint, en door slapheid der handen wordt het huis doorlekkende.",
+    "e": {
+     "verhaal": "Soms ben ik zo moe dat ik niet eens de trap naar boven kan op.",
+     "zin": "Deze woorden doen me beseffen dat ik niet mag roesten op mijn lol.",
+     "vraag": "Hoe kan ik mezelf aanmoedigen om actief te blijven, ook als ik moe ben?",
+     "herkenning": "Zelfs klein werk kan een groot verschil maken."
+    },
+    "fouten": []
+   },
+   {
+    "id": "Ecclesiastes-11-4-4",
+    "ref": "Prediker 11:4",
+    "tekst": "Wie op den wind acht geeft, die zal niet zaaien, en wie op de wolken ziet, die zal niet maaien.",
+    "e": {
+     "verhaal": "Bij de planning voor een nieuwe vormgeving project, kreeg ik weer te horen dat ik te veel op de nieuwsgierigheid van de klant moest afgaan.",
+     "zin": "Dit vers herinnert mij eraan dat ik af en toe te veel op de wind acht, in plaats van te focussen op mijn eigen werk en de klusjes die ik moet doen.",
+     "vraag": "Hoe kan ik beter mijn eigen taken afmaken zonder te veel op de reacties van anderen te wachten?",
+     "herkenning": "Ik moet mijn eigen zaadje planten en niet te veel op de wind letten."
+    },
+    "fouten": []
+   },
+   {
+    "id": "Ecclesiastes-1-9-9",
+    "ref": "Prediker 1:9",
+    "tekst": "Hetgeen er geweest is, hetzelve zal er zijn, en hetgeen er gedaan is, hetzelve zal er gedaan worden; zodat er niets nieuws is onder de zon.",
+    "e": {
+     "verhaal": "Bij een wandeling langs de IJssel zag ik hoe de rivier stroomt, net zoals altijd.",
+     "zin": "Elke dag dat ik opnieuw bezig ben, herhaal ik de lessen uit het verleden.",
+     "vraag": "Hoe kan ik de herhaling van ervaringen op een nieuwe manier zien?",
+     "herkenning": "Het gaat om nieuwe inzichten uit oude situaties."
+    },
+    "fouten": []
    }
   ],
   "zonder_tekst": 301,
   "mac": {
-   "t": "2026-11-25T08:21+00:00",
+   "t": "2026-11-25T09:07+00:00",
    "model": "Qwen2.5-14B-Instruct-4bit",
    "versie": "5",
    "laatste_ronde": {
