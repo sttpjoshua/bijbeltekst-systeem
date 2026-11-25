@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-25T20:15",
+ "gegenereerd": "2026-11-25T20:32",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -2738,7 +2738,7 @@
    "ref": "Galaten 4:7",
    "tekst": "Zo dan, gij zijt niet meer een dienstknecht, maar een zoon; en indien gij een zoon zijt, zo zijt gij ook een erfgenaam van God door Christus.",
    "hook": "",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "zand",
     "thema": "identiteit",
@@ -2785,10 +2785,12 @@
    ],
    "thumb": "thumbs/2026-11-25-1.jpg",
    "platformen": [
-    "facebook"
+    "facebook",
+    "instagram"
    ],
    "links": {
-    "facebook": "https://www.facebook.com/1806209137097407"
+    "facebook": "https://www.facebook.com/1806209137097407",
+    "instagram": "https://www.instagram.com/reel/DgLSTU1O1P5/"
    },
    "totaal": {
     "views": 0,
@@ -2850,7 +2852,8 @@
     }
    },
    "pub": {
-    "facebook": "2026-11-25T12:17+01:00"
+    "facebook": "2026-11-25T12:17+01:00",
+    "instagram": "2026-11-25T20:32+01:00"
    },
    "gemist": [],
    "nood": false,
@@ -19325,16 +19328,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-23T20:32:12",
-   "soort": "info",
-   "tekst": "2026-11-23-2 online op facebook: Psalm 30:6"
-  },
-  {
-   "t": "2026-11-23T21:45:41",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
    "t": "2026-11-23T22:03:10",
    "soort": "info",
    "tekst": "2026-11-23-5 online op facebook: 1 Korinthe 15:58"
@@ -19631,6 +19624,16 @@
    "t": "2026-11-25T19:02:37",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-25T20:32:40",
+   "soort": "info",
+   "tekst": "2026-11-25-1 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-25T20:32:40",
+   "soort": "info",
+   "tekst": "2026-11-25-1 online op instagram: Galaten 4:7"
   }
  ],
  "recente_fouten": [
@@ -19789,9 +19792,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-25T17:47",
+   "ok": "2026-11-25T20:32",
    "laatst_ok": true,
-   "detail": "Jesaja 49:16 geplaatst"
+   "detail": "Galaten 4:7 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-25T15:19",
@@ -19992,7 +19995,7 @@
  ],
  "weken": {
   "deze": {
-   "posts": 32,
+   "posts": 33,
    "reach": 652,
    "views": 710,
    "likes": 16,
@@ -20610,7 +20613,7 @@
   "tot": "2026-11-30",
   "dag": 10,
   "dagen": 14,
-  "online": 47,
+  "online": 48,
   "gemeten": 22
  },
  "voorraad": {
@@ -25110,8 +25113,8 @@
      },
      {
       "optie": "zand",
-      "online": 7,
-      "gepland": 9,
+      "online": 8,
+      "gepland": 8,
       "n": 3,
       "gem": 1.47,
       "oordeel": "weinig data"

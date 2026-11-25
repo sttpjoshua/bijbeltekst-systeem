@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T20:15:39",
+ "updated": "2026-11-25T20:32:40",
  "agents": {
   "verskiezer": {
    "t": "2026-11-25T13:53:17",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-25T17:47:40",
-   "task": "Postte Jesaja 49:16 op instagram",
+   "t": "2026-11-25T20:32:40",
+   "task": "Postte Galaten 4:7 op instagram",
    "state": "done"
   },
   "controller": {
@@ -38,8 +38,8 @@
   }
  },
  "stats": {
-  "posts_today": 2,
-  "posts_total": 88,
+  "posts_today": 3,
+  "posts_total": 89,
   "reach_7d": 755,
   "best_time": "20:30",
   "next_post": "2026-11-25T17:45:00"
@@ -56,6 +56,14 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "20:32",
+   "msg": "2026-11-25-1 online op instagram: Galaten 4:7"
+  },
+  {
+   "t": "20:32",
+   "msg": "2026-11-25-1 ook als story geplaatst"
+  },
   {
    "t": "19:02",
    "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
@@ -95,14 +103,6 @@
   {
    "t": "14:35",
    "msg": "Zelf opgelost: nieuws verving op 25 nov post 2026-11-25-3 (Galaten 2:20) terwijl die al op Facebook stond. Nie"
-  },
-  {
-   "t": "14:35",
-   "msg": "Materiaal-repo niet gekoppeld in deze run (add_repo ontbreekt); GitHub Actions vult muziek zo nodig aan."
-  },
-  {
-   "t": "13:53",
-   "msg": "Zelfstandig 5 posts klaargezet voor 2026-11-28 (teksten uit de tekstbank)."
   }
  ],
  "lampen": [
