@@ -1,14 +1,14 @@
 {
- "updated": "2026-11-25T07:01:15",
+ "updated": "2026-11-25T07:15:30",
  "agents": {
   "verskiezer": {
-   "t": "2026-11-24T01:04:11",
-   "task": "Koos Psalm 62:2, 2 Korinthe 4:16, Hebreeën 13:6, 1 Petrus 5:7, Handelingen 1:8",
+   "t": "2026-11-25T07:01:24",
+   "task": "Nieuwspost gemaakt: Spreuken 12:15",
    "state": "done"
   },
   "designer": {
-   "t": "2026-11-24T01:05:01",
-   "task": "Ontwierp Handelingen 1:8 in stijl zand",
+   "t": "2026-11-25T07:01:24",
+   "task": "Ontwierp Spreuken 12:15 in stijl papier_groen",
    "state": "done"
   },
   "video": {
@@ -22,8 +22,8 @@
    "state": "done"
   },
   "controller": {
-   "t": "2026-11-24T12:02:02",
-   "task": "Politiek nieuws (NOS): \"Natuurijsbanen geopend: marathonschaatsster ve",
+   "t": "2026-11-25T07:01:22",
+   "task": "Politiek nieuws (NOS): \"Wekdienst 25/11: NAVO-chef Rutte praat met Tru",
    "state": "error"
   },
   "analist": {
@@ -56,6 +56,14 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "07:01",
+   "msg": "Nieuwspost: Galaten 2:20 vervangen door Spreuken 12:15 (aanleiding: winter, NOS)"
+  },
+  {
+   "t": "07:01",
+   "msg": "Politiek nieuws (NOS): \"Wekdienst 25/11: NAVO-chef Rutte praat met Trump • Strafeis mishandeling Plein Den Haa"
+  },
   {
    "t": "05:15",
    "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
@@ -95,14 +103,6 @@
   {
    "t": "20:31",
    "msg": "2026-11-24-2 online op instagram: 2 Korinthe 12:9"
-  },
-  {
-   "t": "20:31",
-   "msg": "2026-11-24-2 ook als story geplaatst"
-  },
-  {
-   "t": "19:03",
-   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
   }
  ],
  "lampen": [

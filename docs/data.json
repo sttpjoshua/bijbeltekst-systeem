@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-25T07:01",
+ "gegenereerd": "2026-11-25T07:15",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1464,19 +1464,19 @@
   {
    "id": "2026-11-25-3",
    "datum": "2026-11-25",
-   "ref": "Galaten 2:20",
-   "tekst": "Ik ben met Christus gekruist; en ik leef, doch niet meer ik, maar Christus leeft in mij; en hetgeen ik nu in het vlees leef, dat leef ik door het geloof des Zoons van God, Die mij liefgehad heeft, en Zichzelven voor mij overgegeven heeft.",
-   "hook": "Voor iedereen die zoekt naar wie hij echt is.",
+   "ref": "Spreuken 12:15",
+   "tekst": "De weg des dwazen is recht in zijn ogen; maar die naar raad hoort, is wijs.",
+   "hook": "Winterweer vandaag. Een goed moment om even stil te staan.",
    "status": "gerenderd",
    "variabelen": {
     "huisstijl": "papier_groen",
-    "thema": "identiteit",
+    "thema": "wijsheid",
     "hook_stijl": "herkenning",
     "formaat": "carrousel",
     "uitleg_op_beeld": false,
     "achtergrondbron": "verloop",
-    "boekgroep": "brieven",
-    "lengte": "lang",
+    "boekgroep": "spreuken",
+    "lengte": "kort",
     "bron": "bekend",
     "vraag_onderaan": false,
     "reel_stijl": null,
@@ -1488,7 +1488,7 @@
     "reel_plaatsing": null,
     "reel_scene": null,
     "reel_haak": null,
-    "opening": "vers",
+    "opening": "verhaal",
     "hashtag_stijl": "zoekwoord",
     "tijdslot": "22:00",
     "tijdslot_fb": "04:00",
@@ -1497,15 +1497,15 @@
     "layout": "links",
     "achtergrond": "papier",
     "hook_op_beeld": false,
-    "aanleiding": "tijdloos",
+    "aanleiding": "nieuws",
     "video_uitleg": null
    },
-   "vers_id": "Galatians-2-20-20",
+   "vers_id": "Proverbs-12-15-15",
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
    "reserve_ref": "Mattheüs 6:33",
-   "caption": "Voor iedereen die zoekt naar wie hij echt is.\n\n\"Ik ben met Christus gekruist; en ik leef, doch niet meer ik, maar Christus leeft in mij; en hetgeen ik nu in het vlees leef, dat leef ik door het geloof des Zoons van God, Die mij liefgehad heeft, en Zichzelven voor mij overgegeven heeft.\"\nGalaten 2:20\n\nJe leeft uit Gods liefde, niet uit eigen kracht.",
+   "caption": "Winterweer vandaag. Een goed moment om even stil te staan.\n\n\"De weg des dwazen is recht in zijn ogen; maar die naar raad hoort, is wijs.\"\nSpreuken 12:15\n\nIn de winterkou: warmte van binnen. Wie naar raad luistert, is wijs.",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-25-3-1.jpg",
    "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-25-3-1.jpg",
@@ -1562,10 +1562,11 @@
     "reel_plaatsing": "n.v.t.",
     "reel_scene": "n.v.t.",
     "reel_haak": "n.v.t.",
-    "opening": "stijl markeren",
+    "opening": "nieuws",
     "hashtag_stijl": "experiment",
     "tijdslot": "experiment",
-    "video_uitleg": "n.v.t."
+    "video_uitleg": "n.v.t.",
+    "aanleiding": "nieuws"
    },
    "momenten": {
     "facebook": {
@@ -1585,7 +1586,13 @@
    },
    "gemist": [],
    "nood": false,
-   "nieuws": null,
+   "nieuws": {
+    "categorie": "winter",
+    "kop": "Gewapende mannen gijzelen zeker 25 mensen in Colombiaanse stad Cartagena",
+    "bron": "NOS",
+    "link": "https://nos.nl/l/2640884",
+    "zwaar": false
+   },
    "online": "2026-11-25T04:01+01:00"
   },
   {
@@ -17841,18 +17848,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-23T12:02:01",
-   "soort": "fout",
-   "tekst": "Politiek nieuws (NOS): \"Duitse minister van Onderwijs (CDU) spreekt zich uit voor AfD-verbod\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
-   "code": "nieuws_voorstel",
-   "post": "n112312020"
-  },
-  {
-   "t": "2026-11-23T12:15:54",
-   "soort": "info",
-   "tekst": "2026-11-23-1 online op facebook: Jesaja 40:29"
-  },
-  {
    "t": "2026-11-23T12:17:02",
    "soort": "info",
    "tekst": "2026-11-23-5 ook als story geplaatst"
@@ -18147,16 +18142,21 @@
    "t": "2026-11-25T05:15:38",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-25T07:01:22",
+   "soort": "fout",
+   "tekst": "Politiek nieuws (NOS): \"Wekdienst 25/11: NAVO-chef Rutte praat met Trump • Strafeis mishandeling Plein Den Haag\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
+   "code": "nieuws_voorstel",
+   "post": "n112507010"
+  },
+  {
+   "t": "2026-11-25T07:01:24",
+   "soort": "info",
+   "tekst": "Nieuwspost: Galaten 2:20 vervangen door Spreuken 12:15 (aanleiding: winter, NOS)"
   }
  ],
  "recente_fouten": [
-  {
-   "t": "2026-11-23T07:01:29",
-   "soort": "fout",
-   "tekst": "Politiek nieuws (NOS): \"Ook pand in Winschoten dicht na neonazistische kooigevechten in Finsterwolde\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
-   "code": "nieuws_voorstel",
-   "post": "n112307010"
-  },
   {
    "t": "2026-11-23T12:02:01",
    "soort": "fout",
@@ -18184,6 +18184,13 @@
    "tekst": "Politiek nieuws (NOS): \"Natuurijsbanen geopend: marathonschaatsster verpulvert werelduurrecord\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
    "code": "nieuws_voorstel",
    "post": "n112412020"
+  },
+  {
+   "t": "2026-11-25T07:01:22",
+   "soort": "fout",
+   "tekst": "Politiek nieuws (NOS): \"Wekdienst 25/11: NAVO-chef Rutte praat met Trump • Strafeis mishandeling Plein Den Haag\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
+   "code": "nieuws_voorstel",
+   "post": "n112507010"
   }
  ],
  "versen_totaal": 300,
@@ -18372,9 +18379,9 @@
    "ok": "2026-11-24T21:30"
   },
   "nieuws": {
-   "ok": "2026-11-24T17:01",
+   "ok": "2026-11-25T07:01",
    "laatst_ok": true,
-   "detail": "0 nieuwe aanleidingen"
+   "detail": "3 nieuwe aanleidingen"
   },
   "maken": {
    "ok": "2026-11-24T01:05",
@@ -19154,8 +19161,8 @@
    },
    "wijsheid": {
     "totaal": 92,
-    "beschikbaar": 85,
-    "nooit": 85
+    "beschikbaar": 84,
+    "nooit": 84
    },
    "humor_herkenbaar": {
     "totaal": 30,
@@ -19169,8 +19176,8 @@
    },
    "identiteit": {
     "totaal": 33,
-    "beschikbaar": 24,
-    "nooit": 24
+    "beschikbaar": 25,
+    "nooit": 25
    },
    "vrede_rust": {
     "totaal": 42,
@@ -19610,8 +19617,8 @@
    "kw": "leeft",
    "herkenning": "Voor iedereen die zoekt naar wie hij echt is.",
    "uit": false,
-   "laatst": "2026-11-25",
-   "n": 1
+   "laatst": null,
+   "n": 0
   },
   {
    "id": "Galatians-3-26-26",
@@ -20843,8 +20850,8 @@
    "kw": "raad",
    "herkenning": "Voor iedereen die het liefst alles zelf uitzoekt.",
    "uit": false,
-   "laatst": null,
-   "n": 0
+   "laatst": "2026-11-25",
+   "n": 1
   },
   {
    "id": "Proverbs-12-16-16",
@@ -22843,6 +22850,94 @@
   },
   "recent": [
    {
+    "id": "n112507012",
+    "t": "2026-11-25T06:56+01:00",
+    "bron": "NU.nl",
+    "kop": "26 mijnwerkers na hevige regenval vast in ondergelopen mijn Indonesië",
+    "link": "https://www.nu.nl/buitenland/6417694/26-mijnwerkers-na-hevige-regenval-vast-in-ondergelopen-mijn-indonesie.html",
+    "categorie": "regen",
+    "zwaar": false,
+    "status": "overgeslagen",
+    "post": null,
+    "opties": null
+   },
+   {
+    "id": "n112507011",
+    "t": "2026-11-24T21:03+01:00",
+    "bron": "NOS",
+    "kop": "Gewapende mannen gijzelen zeker 25 mensen in Colombiaanse stad Cartagena",
+    "link": "https://nos.nl/l/2640884",
+    "categorie": "winter",
+    "zwaar": false,
+    "status": "gemaakt",
+    "post": "2026-11-25-3",
+    "opties": null
+   },
+   {
+    "id": "n112507010",
+    "t": "2026-11-25T06:48+01:00",
+    "bron": "NOS",
+    "kop": "Wekdienst 25/11: NAVO-chef Rutte praat met Trump • Strafeis mishandeling Plein Den Haag",
+    "link": "https://nos.nl/l/2640913",
+    "categorie": "politiek",
+    "zwaar": false,
+    "status": "voorstel",
+    "post": null,
+    "opties": [
+     {
+      "vers_id": "Proverbs-16-9-9",
+      "ref": "Spreuken 16:9",
+      "tekst": "Het hart des mensen overdenkt zijn weg; maar de HEERE stiert zijn gang.",
+      "zin": "Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.",
+      "kernwoord": "gang",
+      "betekenis": "Spreuken zegt: plannen maken is goed. Maar uiteindelijk stuurt God je stappen. Dat kan geruststellen: niet alles hangt van jou af.",
+      "toepassing": "Leg vandaag je plannen voor deze week bij God neer.",
+      "brug": "Bij alle onrust: wat blijft staan.",
+      "caption": "Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.\n\n\"Het hart des mensen overdenkt zijn weg; maar de HEERE stiert zijn gang.\"\nSpreuken 16:9\n\nBij alle onrust: wat blijft staan. Niet alles hangt van jou af.",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112507010-1-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112507010-1-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112507010-1-3.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112507010-1-4.jpg"
+      ]
+     },
+     {
+      "vers_id": "Psalms-125-1-1",
+      "ref": "Psalm 125:1",
+      "tekst": "Die op den HEERE vertrouwen, zijn als de berg Sion, die niet wankelt, maar blijft in eeuwigheid.",
+      "zin": "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.",
+      "kernwoord": "wankelt",
+      "betekenis": "De dichter kijkt naar de berg Sion. Die staat er al eeuwen en beweegt niet. Zo stevig sta je als je op God vertrouwt. Niet omdat je zelf zo sterk bent.",
+      "toepassing": "Wat brengt je aan het wankelen? Zeg vandaag: ik sta vast door God.",
+      "brug": "Een vast punt in veel geluid.",
+      "caption": "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.\n\n\"Die op den HEERE vertrouwen, zijn als de berg Sion, die niet wankelt, maar blijft in eeuwigheid.\"\nPsalm 125:1\n\nEen vast punt in veel geluid. Vertrouwen op God geeft je vaste grond.",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112507010-2-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112507010-2-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112507010-2-3.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112507010-2-4.jpg"
+      ]
+     },
+     {
+      "vers_id": "Proverbs-17-22-22",
+      "ref": "Spreuken 17:22",
+      "tekst": "Een blij hart zal een medicijn goed maken; maar een verslagen geest zal het gebeente verdrogen.",
+      "zin": "Veel meningen, veel onrust. Even terug naar wat vaststaat.",
+      "kernwoord": "blij",
+      "betekenis": "Spreuken wist al wat we nu ook weten: blijdschap is goed voor je. Lachen en vreugde helpen je, ook als het zwaar is.",
+      "toepassing": "Zoek vandaag iets om om te lachen, en deel het met iemand.",
+      "brug": "Een vast punt in veel geluid.",
+      "caption": "Veel meningen, veel onrust. Even terug naar wat vaststaat.\n\n\"Een blij hart zal een medicijn goed maken; maar een verslagen geest zal het gebeente verdrogen.\"\nSpreuken 17:22\n\nEen vast punt in veel geluid. Blijdschap is een cadeautje voor jezelf en anderen.",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112507010-3-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112507010-3-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112507010-3-3.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112507010-3-4.jpg"
+      ]
+     }
+    ]
+   },
+   {
     "id": "n112412021",
     "t": "2026-11-24T10:06+01:00",
     "bron": "NU.nl",
@@ -23772,198 +23867,6 @@
     "status": "geen_plek",
     "post": null,
     "opties": null
-   },
-   {
-    "id": "n111707010",
-    "t": "2026-11-17T06:34+01:00",
-    "bron": "NOS",
-    "kop": "Biden in memoires fel over einde campagne: ‘Had Trump kunnen verslaan’",
-    "link": "https://nos.nl/l/2639821",
-    "categorie": "politiek",
-    "zwaar": false,
-    "status": "voorstel",
-    "post": null,
-    "opties": [
-     {
-      "vers_id": "James-1-5-5",
-      "ref": "Jakobus 1:5",
-      "tekst": "En indien iemand van u wijsheid ontbreekt, dat hij ze van God begere, Die een iegelijk mildelijk geeft, en niet verwijt; en zij zal hem gegeven worden.",
-      "zin": "Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.",
-      "kernwoord": "wijsheid",
-      "betekenis": "Jakobus zegt: weet je het niet? Vraag het God. Hij geeft royaal en verwijt je niets. Je hoeft je niet te schamen dat je het niet weet.",
-      "toepassing": "Vraag God vandaag om wijsheid voor één concrete beslissing.",
-      "brug": "Een vast punt in veel geluid.",
-      "caption": "Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.\n\n\"En indien iemand van u wijsheid ontbreekt, dat hij ze van God begere, Die een iegelijk mildelijk geeft, en niet verwijt; en zij zal hem gegeven worden.\"\nJakobus 1:5\n\nEen vast punt in veel geluid. God geeft graag wijsheid aan wie erom vraagt.\n\nWaar heb jij wijsheid voor nodig?",
-      "media": [
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111707010-1-1.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111707010-1-2.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111707010-1-3.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111707010-1-4.jpg"
-      ]
-     },
-     {
-      "vers_id": "Isaiah-30-15-15",
-      "ref": "Jesaja 30:15",
-      "tekst": "Want alzo zegt de Heere HEERE, de Heilige Israels: Door wederkering en rust zoudt gijlieden behouden worden, in stilheid en in vertrouwen zou uw sterkte zijn; doch gij hebt niet gewild.",
-      "zin": "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.",
-      "kernwoord": "stilheid",
-      "betekenis": "God zegt tegen Zijn volk dat ze niet sterk worden door druk te doen, maar door terug te keren naar Hem en stil te worden. Kracht zit in rust en vertrouwen.",
-      "toepassing": "Zoek vandaag één moment om helemaal niets te doen en alleen stil te zijn bij God.",
-      "brug": "Bij alle onrust: wat blijft staan.",
-      "caption": "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.\n\n\"Want alzo zegt de Heere HEERE, de Heilige Israels: Door wederkering en rust zoudt gijlieden behouden worden, in stilheid en in vertrouwen zou uw sterkte zijn; doch gij hebt niet gewild.\"\nJesaja 30:15\n\nBij alle onrust: wat blijft staan. In stilte en vertrouwen vind je kracht.\n\nWaar haal jij je kracht vandaan?",
-      "media": [
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111707010-2-1.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111707010-2-2.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111707010-2-3.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111707010-2-4.jpg"
-      ]
-     },
-     {
-      "vers_id": "Psalms-9-11-11",
-      "ref": "Psalm 9:11",
-      "tekst": "En die Uw Naam kennen, zullen op U vertrouwen, omdat Gij, HEERE, niet hebt verlaten degenen, die U zoeken.",
-      "zin": "Veel meningen, veel onrust. Even terug naar wat vaststaat.",
-      "kernwoord": "verlaten",
-      "betekenis": "David zegt: wie God echt leert kennen, gaat Hem vertrouwen. Want God laat mensen die Hem zoeken nooit alleen. Vertrouwen groeit door Hem te leren kennen.",
-      "toepassing": "Neem vandaag tien minuten om iets over God te lezen of te leren.",
-      "brug": "Bij alle onrust: wat blijft staan.",
-      "caption": "Veel meningen, veel onrust. Even terug naar wat vaststaat.\n\n\"En die Uw Naam kennen, zullen op U vertrouwen, omdat Gij, HEERE, niet hebt verlaten degenen, die U zoeken.\"\nPsalm 9:11\n\nBij alle onrust: wat blijft staan. Hoe beter je God kent, hoe meer je Hem vertrouwt.\n\nHoe leer jij God beter kennen?",
-      "media": [
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111707010-3-1.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111707010-3-2.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111707010-3-3.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111707010-3-4.jpg"
-      ]
-     }
-    ]
-   },
-   {
-    "id": "n111612020",
-    "t": "2026-11-16T11:13+01:00",
-    "bron": "NOS",
-    "kop": "Oekraïne valt Krimbrug aan, grote droneaanval op Rusland",
-    "link": "https://nos.nl/l/2639696",
-    "categorie": "politiek",
-    "zwaar": false,
-    "status": "voorstel",
-    "post": null,
-    "opties": [
-     {
-      "vers_id": "Proverbs-19-21-21",
-      "ref": "Spreuken 19:21",
-      "tekst": "In het hart des mans zijn veel gedachten; maar de raad des HEEREN, die zal bestaan.",
-      "zin": "Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.",
-      "kernwoord": "raad",
-      "betekenis": "Spreuken zegt: je hebt duizend ideeën en plannen. Prima. Maar uiteindelijk gebeurt wat God wil. Dat is geen bedreiging, maar een geruststelling.",
-      "toepassing": "Schrijf je grootste plan op en bid erbij: Uw wil gebeure.",
-      "brug": "Bij alle onrust: wat blijft staan.",
-      "caption": "Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.\n\n\"In het hart des mans zijn veel gedachten; maar de raad des HEEREN, die zal bestaan.\"\nSpreuken 19:21\n\nBij alle onrust: wat blijft staan. Gods plan gaat door. Dat geeft rust.\n\nWelk plan leg jij bij God neer?",
-      "media": [
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111612020-1-1.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111612020-1-2.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111612020-1-3.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111612020-1-4.jpg"
-      ]
-     },
-     {
-      "vers_id": "Psalms-9-11-11",
-      "ref": "Psalm 9:11",
-      "tekst": "En die Uw Naam kennen, zullen op U vertrouwen, omdat Gij, HEERE, niet hebt verlaten degenen, die U zoeken.",
-      "zin": "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.",
-      "kernwoord": "verlaten",
-      "betekenis": "David zegt: wie God echt leert kennen, gaat Hem vertrouwen. Want God laat mensen die Hem zoeken nooit alleen. Vertrouwen groeit door Hem te leren kennen.",
-      "toepassing": "Neem vandaag tien minuten om iets over God te lezen of te leren.",
-      "brug": "Een vast punt in veel geluid.",
-      "caption": "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.\n\n\"En die Uw Naam kennen, zullen op U vertrouwen, omdat Gij, HEERE, niet hebt verlaten degenen, die U zoeken.\"\nPsalm 9:11\n\nEen vast punt in veel geluid. Hoe beter je God kent, hoe meer je Hem vertrouwt.\n\nHoe leer jij God beter kennen?",
-      "media": [
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111612020-2-1.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111612020-2-2.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111612020-2-3.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111612020-2-4.jpg"
-      ]
-     },
-     {
-      "vers_id": "Proverbs-30-5-5",
-      "ref": "Spreuken 30:5",
-      "tekst": "Alle rede Gods is doorlouterd; Hij is een Schild dengenen, die op Hem betrouwen.",
-      "zin": "Veel meningen, veel onrust. Even terug naar wat vaststaat.",
-      "kernwoord": "Schild",
-      "betekenis": "Spreuken zegt dat Gods woorden betrouwbaar zijn, gezuiverd zoals goud in vuur. En God zelf beschermt wie op Hem vertrouwt.",
-      "toepassing": "Kies vandaag een woord van God om op te vertrouwen en houd het de hele dag vast.",
-      "brug": "Een vast punt in veel geluid.",
-      "caption": "Veel meningen, veel onrust. Even terug naar wat vaststaat.\n\n\"Alle rede Gods is doorlouterd; Hij is een Schild dengenen, die op Hem betrouwen.\"\nSpreuken 30:5\n\nEen vast punt in veel geluid. Gods woorden zijn betrouwbaar.\n\nWelk woord van God vertrouw jij?",
-      "media": [
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111612020-3-1.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111612020-3-2.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111612020-3-3.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111612020-3-4.jpg"
-      ]
-     }
-    ]
-   },
-   {
-    "id": "n111607010",
-    "t": "2026-11-16T06:29+01:00",
-    "bron": "NOS",
-    "kop": "Wekdienst 16/11: Coalitie verder met crisisoverleg • Interland Duitsland-Nederland",
-    "link": "https://nos.nl/l/2639666",
-    "categorie": "politiek",
-    "zwaar": false,
-    "status": "genegeerd",
-    "post": null,
-    "opties": [
-     {
-      "vers_id": "Proverbs-19-21-21",
-      "ref": "Spreuken 19:21",
-      "tekst": "In het hart des mans zijn veel gedachten; maar de raad des HEEREN, die zal bestaan.",
-      "zin": "Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.",
-      "kernwoord": "raad",
-      "betekenis": "Spreuken zegt: je hebt duizend ideeën en plannen. Prima. Maar uiteindelijk gebeurt wat God wil. Dat is geen bedreiging, maar een geruststelling.",
-      "toepassing": "Schrijf je grootste plan op en bid erbij: Uw wil gebeure.",
-      "brug": "Bij alle onrust: wat blijft staan.",
-      "caption": "Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.\n\n\"In het hart des mans zijn veel gedachten; maar de raad des HEEREN, die zal bestaan.\"\nSpreuken 19:21\n\nBij alle onrust: wat blijft staan. Gods plan gaat door. Dat geeft rust.",
-      "media": [
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111607010-1-1.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111607010-1-2.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111607010-1-3.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111607010-1-4.jpg"
-      ]
-     },
-     {
-      "vers_id": "Psalms-9-11-11",
-      "ref": "Psalm 9:11",
-      "tekst": "En die Uw Naam kennen, zullen op U vertrouwen, omdat Gij, HEERE, niet hebt verlaten degenen, die U zoeken.",
-      "zin": "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.",
-      "kernwoord": "verlaten",
-      "betekenis": "David zegt: wie God echt leert kennen, gaat Hem vertrouwen. Want God laat mensen die Hem zoeken nooit alleen. Vertrouwen groeit door Hem te leren kennen.",
-      "toepassing": "Neem vandaag tien minuten om iets over God te lezen of te leren.",
-      "brug": "Bij alle onrust: wat blijft staan.",
-      "caption": "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.\n\n\"En die Uw Naam kennen, zullen op U vertrouwen, omdat Gij, HEERE, niet hebt verlaten degenen, die U zoeken.\"\nPsalm 9:11\n\nBij alle onrust: wat blijft staan. Hoe beter je God kent, hoe meer je Hem vertrouwt.",
-      "media": [
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111607010-2-1.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111607010-2-2.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111607010-2-3.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111607010-2-4.jpg"
-      ]
-     },
-     {
-      "vers_id": "Proverbs-29-25-25",
-      "ref": "Spreuken 29:25",
-      "tekst": "De siddering des mensen legt een strik; maar die op den HEERE vertrouwt, zal in een hoog vertrek gesteld worden.",
-      "zin": "Veel meningen, veel onrust. Even terug naar wat vaststaat.",
-      "kernwoord": "strik",
-      "betekenis": "Spreuken zegt dat bang zijn voor wat anderen vinden je vastzet. Je durft niet meer jezelf te zijn. Wie op God vertrouwt, wordt daar vrij van.",
-      "toepassing": "Doe vandaag iets wat goed is, ook als je bang bent voor wat anderen ervan vinden.",
-      "brug": "Een vast punt in veel geluid.",
-      "caption": "Veel meningen, veel onrust. Even terug naar wat vaststaat.\n\n\"De siddering des mensen legt een strik; maar die op den HEERE vertrouwt, zal in een hoog vertrek gesteld worden.\"\nSpreuken 29:25\n\nEen vast punt in veel geluid. Vertrouwen op God maakt je vrij van mensenvrees.",
-      "media": [
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111607010-3-1.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111607010-3-2.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111607010-3-3.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111607010-3-4.jpg"
-      ]
-     }
-    ]
    }
   ]
  },
