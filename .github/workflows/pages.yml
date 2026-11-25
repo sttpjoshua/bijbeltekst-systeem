@@ -33,4 +33,15 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: docs
-      - uses: actions/deploy-pages@v4
+      - name: Even wachten tot GitHub het bestand ziet
+        run: sleep 45
+      - name: Website live zetten
+        id: eerste
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+      - name: Tweede poging
+        if: steps.eerste.outcome == 'failure'
+        run: sleep 90
+      - name: Website live zetten (tweede poging)
+        if: steps.eerste.outcome == 'failure'
+        uses: actions/deploy-pages@v4
