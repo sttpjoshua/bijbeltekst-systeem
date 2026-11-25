@@ -1,17 +1,17 @@
 {
  "verskiezer": {
-  "t": "2026-11-25T09:02:49",
-  "task": "Koos Hebreeën 4:15, Jesaja 43:1, Psalm 145:18, Mattheüs 7:3, Psalm 138:3",
+  "t": "2026-11-25T13:53:17",
+  "task": "Koos Romeinen 5:5, Psalm 112:7, 2 Kronieken 20:15, Mattheüs 5:4, Jesaja 43:2",
   "state": "done"
  },
  "designer": {
-  "t": "2026-11-25T09:04:24",
-  "task": "Ontwierp Psalm 138:3 in stijl zand",
+  "t": "2026-11-25T13:53:41",
+  "task": "Ontwierp Jesaja 43:2 in stijl zand",
   "state": "done"
  },
  "video": {
-  "t": "2026-11-25T09:04:24",
-  "task": "Monteerde video Psalm 138:3 met muziek",
+  "t": "2026-11-25T13:53:41",
+  "task": "Monteerde video Mattheüs 5:4 met muziek",
   "state": "done"
  },
  "dispatcher": {
@@ -20,7 +20,7 @@
   "state": "done"
  },
  "controller": {
-  "t": "2026-11-25T09:04:24",
+  "t": "2026-11-25T13:53:41",
   "task": "Posts klaargezet uit de tekstbank",
   "state": "done"
  },

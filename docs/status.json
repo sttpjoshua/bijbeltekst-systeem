@@ -1,19 +1,19 @@
 {
- "updated": "2026-11-25T13:45:41",
+ "updated": "2026-11-25T13:53:42",
  "agents": {
   "verskiezer": {
-   "t": "2026-11-25T09:02:49",
-   "task": "Koos Hebreeën 4:15, Jesaja 43:1, Psalm 145:18, Mattheüs 7:3, Psalm 138:3",
+   "t": "2026-11-25T13:53:17",
+   "task": "Koos Romeinen 5:5, Psalm 112:7, 2 Kronieken 20:15, Mattheüs 5:4, Jesaja 43:2",
    "state": "done"
   },
   "designer": {
-   "t": "2026-11-25T09:04:24",
-   "task": "Ontwierp Psalm 138:3 in stijl zand",
+   "t": "2026-11-25T13:53:41",
+   "task": "Ontwierp Jesaja 43:2 in stijl zand",
    "state": "done"
   },
   "video": {
-   "t": "2026-11-25T09:04:24",
-   "task": "Monteerde video Psalm 138:3 met muziek",
+   "t": "2026-11-25T13:53:41",
+   "task": "Monteerde video Mattheüs 5:4 met muziek",
    "state": "done"
   },
   "dispatcher": {
@@ -57,6 +57,10 @@
  ],
  "log": [
   {
+   "t": "13:53",
+   "msg": "Zelfstandig 5 posts klaargezet voor 2026-11-28 (teksten uit de tekstbank)."
+  },
+  {
    "t": "13:30",
    "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
   },
@@ -99,10 +103,6 @@
   {
    "t": "04:01",
    "msg": "2026-11-25-5 ook als story geplaatst"
-  },
-  {
-   "t": "23:15",
-   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
   }
  ],
  "lampen": [
