@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-25T13:30",
+ "gegenereerd": "2026-11-25T13:45",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -22835,6 +22835,66 @@
     "fouten": []
    },
    {
+    "id": "Habakkuk-3-18-18",
+    "ref": "Habakuk 3:18",
+    "tekst": "Zo zal ik nochtans in den HEERE van vreugde opspringen, ik zal mij verheugen in den God mijns heils.",
+    "e": {
+     "verhaal": "Vandaag voelde ik de neiging om me te treuren, maar dit vers helpt me om mijn focus te verzetten.",
+     "zin": "Dit vers helpt me om te zien dat ik ondanks alles redenen heb om vreugde te hebben.",
+     "vraag": "Waar ben ik dankbaar voor, wat ik gemakkelijk over het hoofd zie?",
+     "herkenning": "Ik zie dat ik al die kleine zonnen in mijn leven heb."
+    },
+    "fouten": []
+   },
+   {
+    "id": "Hebrews-10-23-23",
+    "ref": "Hebreeën 10:23",
+    "tekst": "Laat ons de onwankelbare belijdenis der hoop vast houden; (want Die het beloofd heeft, is getrouw).",
+    "e": {
+     "verhaal": "Ik zit vandaag weer in mijn atelier, ernaast het raam open om de rustige geluiden van de IJssel binnen te laten.",
+     "zin": "Dit vers helpt me om vast te houden aan mijn dromen, hoe moeilijk het soms ook lijkt.",
+     "vraag": "Hoe hou jij je vast aan dingen die je belangrijk vindt?",
+     "herkenning": "Het leven kan soms zo onvoorspelbaar zijn."
+    },
+    "fouten": []
+   },
+   {
+    "id": "Hebrews-11-1-1",
+    "ref": "Hebreeën 11:1",
+    "tekst": "Het geloof nu is een vaste grond der dingen, die men hoopt, en een bewijs der zaken, die men niet ziet.",
+    "e": {
+     "verhaal": "Ik loop vandaag weer over een brug die ik niet kan zien, maar die er wel is.",
+     "zin": "Dit vers helpt me om te rusten in de onzichtbare dingen die ik hoop en waar ik in geloof.",
+     "vraag": "Wat is jouw meest onzichtbare hoop waarin je gelooft?",
+     "herkenning": "Ik ben blij als ik kan zien wat ik hoop."
+    },
+    "fouten": []
+   },
+   {
+    "id": "Hebrews-11-6-6",
+    "ref": "Hebreeën 11:6",
+    "tekst": "Maar zonder geloof is het onmogelijk Gode te behagen. Want die tot God komt, moet geloven, dat Hij is, en een Beloner is dergenen, die Hem zoeken.",
+    "e": {
+     "verhaal": "Vandaag ben ik weer in gedachten verzonken, piekerend over mijn nieuwe project.",
+     "zin": "Dit vers herinnert mij eraan dat ik moet geloven dat er een oplossing is, ook al zie ik dat niet direct.",
+     "vraag": "Hoe kan ik mezelf ertoe bewegen om echt te geloven, ook wanneer ik het moeilijk zie?",
+     "herkenning": "Geloof is belangrijk om te geloven in een uitweg."
+    },
+    "fouten": []
+   },
+   {
+    "id": "Hebrews-4-9-9",
+    "ref": "Hebreeën 4:9",
+    "tekst": "Er blijft dan een rust over voor het volk Gods.",
+    "e": {
+     "verhaal": "Deze dag voel ik mezelf als een van diegenen die rust zoekt in het leven.",
+     "zin": "Dit vers herinnert me eraan dat rust in mijn leven nog steeds een mogelijkheid is.",
+     "vraag": "Hoe zoek jij rust in een hectisch leven?",
+     "herkenning": "Soms voel ik me net zo overweldigd als iedereen anders."
+    },
+    "fouten": []
+   },
+   {
     "id": "Colossians-2-7-7",
     "ref": "Kolossenzen 2:7",
     "tekst": "Geworteld en opgebouwd in Hem, en bevestigd in het geloof, gelijkerwijs gij geleerd zijt, overvloedig zijnde in hetzelve, met dankzegging.",
@@ -22993,7 +23053,7 @@
   ],
   "zonder_tekst": 301,
   "mac": {
-   "t": "2026-11-25T11:31+00:00",
+   "t": "2026-11-25T12:16+00:00",
    "model": "Qwen2.5-14B-Instruct-4bit",
    "versie": "5",
    "laatste_ronde": {
