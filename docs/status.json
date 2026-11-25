@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T14:30:52",
+ "updated": "2026-11-25T14:35:40",
  "agents": {
   "verskiezer": {
    "t": "2026-11-25T13:53:17",
@@ -57,6 +57,18 @@
  ],
  "log": [
   {
+   "t": "14:35",
+   "msg": "Dagelijkse run: 10 posts gecontroleerd voor 26 en 27 nov (al gemaakt door het systeem), reserveverzen voor 27 "
+  },
+  {
+   "t": "14:35",
+   "msg": "Zelf opgelost: nieuws verving op 25 nov post 2026-11-25-3 (Galaten 2:20) terwijl die al op Facebook stond. Nie"
+  },
+  {
+   "t": "14:35",
+   "msg": "Materiaal-repo niet gekoppeld in deze run (add_repo ontbreekt); GitHub Actions vult muziek zo nodig aan."
+  },
+  {
    "t": "13:53",
    "msg": "Zelfstandig 5 posts klaargezet voor 2026-11-28 (teksten uit de tekstbank)."
   },
@@ -91,18 +103,6 @@
   {
    "t": "05:15",
    "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
-   "t": "04:01",
-   "msg": "2026-11-25-3 online op facebook: Galaten 2:20"
-  },
-  {
-   "t": "04:01",
-   "msg": "2026-11-25-5 online op instagram: Psalm 42:6"
-  },
-  {
-   "t": "04:01",
-   "msg": "2026-11-25-5 ook als story geplaatst"
   }
  ],
  "lampen": [

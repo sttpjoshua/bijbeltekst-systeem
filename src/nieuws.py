@@ -124,8 +124,12 @@ def _doelpost(posts, nu, na=None):
         v = p["variabelen"]
         if p["status"] != "gerenderd" or v.get("formaat") != "carrousel" or p.get("reeks") or v.get("aanleiding") == "nieuws":
             continue
+        if p.get("gepubliceerd"):  # al op een platform online (bijv. Facebook eerder dan Instagram): niet meer vervangen
+            continue
         try:
             t = dt.datetime.fromisoformat(f"{p['datum']}T{v['tijdslot']}")
+            if v.get("tijdslot_fb"):  # Facebook heeft een eigen tijdstip; het vroegste telt
+                t = min(t, dt.datetime.fromisoformat(f"{p['datum']}T{v['tijdslot_fb']}"))
         except (ValueError, TypeError):
             continue
         if grens <= t <= nu + dt.timedelta(hours=36):

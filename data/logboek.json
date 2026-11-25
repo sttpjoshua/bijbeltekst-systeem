@@ -1,20 +1,5 @@
 [
  {
-  "t": "2026-11-12T14:31:18",
-  "soort": "info",
-  "tekst": "Zelfherstel: Geen post klaar voor 2026-11-12 22:00 → noodpost Efeze 2:10 ingezet om 22:00"
- },
- {
-  "t": "2026-11-12T14:31:25",
-  "soort": "info",
-  "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
- },
- {
-  "t": "2026-11-12T14:34:40",
-  "soort": "info",
-  "tekst": "Materiaal-repo niet gekloond (add_repo ontbreekt in deze sessie); Actions vult muziek aan"
- },
- {
   "t": "2026-11-12T14:36:59",
   "soort": "info",
   "tekst": "Zelf opgelost: post 22:00 van vandaag (1 Johannes 4:7, gekozen reservevers) bleef op 'klaar_voor_render' staan met het kernwoord van het oude vers. Kernwoord, openingszin en reelteksten hersteld en opnieuw gemaakt. Bediening neemt bij 'ander vers' nu ook het kernwoord en de openingszin mee. De noodpost (Efeze 2:10, morgen al gepland) is teruggezet in de noodvoorraad; zelfherstel maakt zo'n post voortaan eerst af en kiest geen noodvers dat al gepland staat."
@@ -2551,5 +2536,20 @@
   "t": "2026-11-25T13:53:41",
   "soort": "info",
   "tekst": "Zelfstandig 5 posts klaargezet voor 2026-11-28 (teksten uit de tekstbank)."
+ },
+ {
+  "t": "2026-11-25T14:35:39",
+  "soort": "info",
+  "tekst": "Materiaal-repo niet gekoppeld in deze run (add_repo ontbreekt); GitHub Actions vult muziek zo nodig aan."
+ },
+ {
+  "t": "2026-11-25T14:35:39",
+  "soort": "info",
+  "tekst": "Zelf opgelost: nieuws verving op 25 nov post 2026-11-25-3 (Galaten 2:20) terwijl die al op Facebook stond. Nieuws kiest nu geen post meer die al ergens online staat, en kijkt ook naar het Facebook-tijdstip. Let op: de Facebook-cijfers van die post horen bij Galaten 2:20, niet bij Spreuken 12:15."
+ },
+ {
+  "t": "2026-11-25T14:35:39",
+  "soort": "info",
+  "tekst": "Dagelijkse run: 10 posts gecontroleerd voor 26 en 27 nov (al gemaakt door het systeem), reserveverzen voor 27 nov geschreven"
  }
 ]

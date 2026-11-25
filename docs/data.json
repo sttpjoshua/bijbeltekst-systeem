@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-25T14:30",
+ "gegenereerd": "2026-11-25T14:35",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1293,7 +1293,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Spreuken 3:5-6",
    "caption": "\"Ten dage, als ik riep, zo hebt Gij mij verhoord; Gij hebt mij versterkt met kracht in mijn ziel.\"\nPsalm 138:3\n\nGod geeft kracht als je roept.",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-27-5.mp4",
@@ -1382,7 +1382,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "1 Samuël 16:7",
    "caption": "Voor iedereen die net iets van een ander vond.\n\n\"En wat ziet gij den splinter, die in het oog uws broeders is, maar den balk, die in uw oog is, merkt gij niet?\"\nMattheüs 7:3\n\nKijk eerst naar jezelf, dan naar een ander.",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-27-4.mp4",
@@ -1471,7 +1471,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "1 Korinthe 16:13",
    "caption": "Hij is dichtbij.\n\n\"De HEERE is nabij allen, die Hem aanroepen, allen, die Hem aanroepen in der waarheid.\"\nPsalm 145:18\n\nGod is dichtbij wie eerlijk roept.",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-27-3.mp4",
@@ -1560,7 +1560,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Psalm 119:105",
    "caption": "Goedemorgen. Mag deze dag goed beginnen.\n\n\"Maar nu, alzo zegt de HEERE, uw Schepper, o Jakob! en uw Formeerder, o Israel! vrees niet, want Ik heb u verlost; Ik heb u bij uw naam geroepen, gij zijt Mijn.\"\nJesaja 43:1\n\nJe bent bij God geen nummer. Hij kent je naam.",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-27-2-1.jpg",
@@ -1652,7 +1652,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Markus 6:31",
    "caption": "Voor iedereen die zich vandaag zwak voelt.\n\n\"Want wij hebben geen hogepriester, die niet kan medelijden hebben met onze zwakheden, maar Die in alle dingen, gelijk als wij, is verzocht geweest, doch zonder zonde.\"\nHebreeën 4:15\n\nJezus begrijpt hoe het voelt.",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-27-1.mp4",
@@ -18823,21 +18823,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-23T14:34:57",
-   "soort": "info",
-   "tekst": "Verbinding met Instagram werkt (@bibleverse_nl)"
-  },
-  {
-   "t": "2026-11-23T14:34:58",
-   "soort": "info",
-   "tekst": "Token heeft alle rechten, ook voor statistieken"
-  },
-  {
-   "t": "2026-11-23T14:34:59",
-   "soort": "info",
-   "tekst": "Verbinding met Facebook-pagina werkt (Bibleversenl)"
-  },
-  {
    "t": "2026-11-23T14:35:01",
    "soort": "info",
    "tekst": "Statistieken lezen werkt"
@@ -19129,6 +19114,21 @@
    "t": "2026-11-25T13:53:41",
    "soort": "info",
    "tekst": "Zelfstandig 5 posts klaargezet voor 2026-11-28 (teksten uit de tekstbank)."
+  },
+  {
+   "t": "2026-11-25T14:35:39",
+   "soort": "info",
+   "tekst": "Materiaal-repo niet gekoppeld in deze run (add_repo ontbreekt); GitHub Actions vult muziek zo nodig aan."
+  },
+  {
+   "t": "2026-11-25T14:35:39",
+   "soort": "info",
+   "tekst": "Zelf opgelost: nieuws verving op 25 nov post 2026-11-25-3 (Galaten 2:20) terwijl die al op Facebook stond. Nieuws kiest nu geen post meer die al ergens online staat, en kijkt ook naar het Facebook-tijdstip. Let op: de Facebook-cijfers van die post horen bij Galaten 2:20, niet bij Spreuken 12:15."
+  },
+  {
+   "t": "2026-11-25T14:35:39",
+   "soort": "info",
+   "tekst": "Dagelijkse run: 10 posts gecontroleerd voor 26 en 27 nov (al gemaakt door het systeem), reserveverzen voor 27 nov geschreven"
   }
  ],
  "recente_fouten": [
@@ -19331,12 +19331,12 @@
    "detail": "17 nieuwe metingen"
   },
   "zelftest": {
-   "ok": "2026-11-24T14:35",
+   "ok": "2026-11-25T14:34",
    "laatst_ok": true,
-   "detail": "18 onderdelen gemaakt en gecontroleerd"
+   "detail": "19 onderdelen gemaakt en gecontroleerd"
   },
   "dagelijks": {
-   "ok": "2026-11-24T14:35",
+   "ok": "2026-11-25T14:35",
    "laatst_ok": true,
    "detail": "10 posts voor MORGEN en OVERMORGEN klaargezet"
   },
