@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-25T13:53",
+ "gegenereerd": "2026-11-25T14:01",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -19318,7 +19318,7 @@
    "ok": "2026-11-20T08:01",
    "laatst_ok": false,
    "detail": "400: {\"error\":{\"message\":\"Unsupported get request. Object with ID '18646160734043579' does not exist, cannot be loaded due to missing permissions, or does not s",
-   "fout": "2026-11-25T13:01"
+   "fout": "2026-11-25T14:01"
   },
   "facebook": {
    "ok": "2026-11-25T12:17",
@@ -22963,7 +22963,9 @@
      "ref": "1 Johannes 4:18"
     },
     "t": "2026-11-22T14:02+00:00",
-    "fouten": []
+    "fouten": [
+     "hashtag #vrees bestaat niet of is te vaag"
+    ]
    },
    {
     "id": "II_Timothy-1-7-7",
@@ -22992,7 +22994,9 @@
      "ref": "2 Timotheüs 1:7"
     },
     "t": "2026-11-22T14:02+00:00",
-    "fouten": []
+    "fouten": [
+     "hashtag #vrees bestaat niet of is te vaag"
+    ]
    },
    {
     "id": "Isaiah-43-19-19",
@@ -23133,7 +23137,9 @@
      "ref": "Spreuken 15:1"
     },
     "t": "2026-11-22T14:02+00:00",
-    "fouten": []
+    "fouten": [
+     "hashtag #reactie bestaat niet of is te vaag"
+    ]
    }
   ],
   "noor": [
