@@ -1054,6 +1054,46 @@
    "herkenning": "Ik ben weer een nieuwe stap verder in loslaten.",
    "model": "Qwen2.5-14B-Instruct-4bit",
    "t": "2026-11-25T10:44+00:00"
+  },
+  "Exodus-14-14-14": {
+   "verhaal": "Vanmorgen zag ik een vogel die rustig op een tak zat, hoewel stormachtige winden rondom woedden.",
+   "zin": "De HEERE zal voor ulieden strijden, en gij zult stil zijn. Dat is geruststellend voor mijn bezorgdheid.",
+   "vraag": "Hoe kan ik rustiger zijn in tijden van stress?",
+   "herkenning": "De winden van het leven kunnen opeens uitbarsten.",
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-25T11:31+00:00"
+  },
+  "Galatians-2-20-20": {
+   "verhaal": "Deze dag voel ik mezelf stukje bij beetje loslaten aan wat ik zelf denk te moeten doen en te zijn.",
+   "zin": "Dit vers helpt me om te beseffen dat ik niet alleen maar moet leven voor mezelf, maar ook voor anderen.",
+   "vraag": "Hoe kan ik beter luisteren naar wat Christus in mij wil doen?",
+   "herkenning": "Er is iets groots aan de gang in mijn leven.",
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-25T11:31+00:00"
+  },
+  "Galatians-3-26-26": {
+   "verhaal": "Ik stond vandaag voor de spiegel en zag mezelf anders dan andersom.",
+   "zin": "Dit vers helpt me eraan herinneren dat ik, ondanks al mijn fouten en onzekerheden, een kind van God ben.",
+   "vraag": "Hoe zie jij jezelf wanneer je naar de spiegel kijkt?",
+   "herkenning": "Ik ben een kind Gods, net als jij.",
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-25T11:31+00:00"
+  },
+  "Galatians-4-7-7": {
+   "verhaal": "Onderweg denk ik vaak over mijn leven na te gaan en hoe ik kan leven als een zoon van God.",
+   "zin": "Dit vers helpt mij te begrijpen dat ik niet langer een dienstknecht ben, maar een erfgenaam.",
+   "vraag": "Hoe leer ik dit in mijn dagelijks leven omzetten?",
+   "herkenning": "Ik ben geen dienstknecht meer, maar een erfgenaam.",
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-25T11:31+00:00"
+  },
+  "Genesis-1-27-27": {
+   "verhaal": "Vandaag las ik opnieuw hoe God ons beiden, man en vrouw, naar Zijn beeld heeft geschapen.",
+   "zin": "Dit vers herinnert mij eraan dat we al onze verschillen delen in ons mens-zijn, een geschenk.",
+   "vraag": "Hoe herken jij Gods beeld in elkaar?",
+   "herkenning": "God heeft ons beiden naar Zijn beeld geschapen, ongeacht onze verschillen.",
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-25T11:31+00:00"
   }
  }
 }
