@@ -17366,6 +17366,18 @@
      "follows": null,
      "avg_watch_ms": 1577
     }
+   },
+   "facebook": {
+    "1u": {
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "avg_watch_ms": null
+    }
    }
   },
   "beeld": null,
@@ -17523,6 +17535,18 @@
      "shares": 0,
      "saves": null,
      "follows": null,
+     "avg_watch_ms": null
+    }
+   },
+   "instagram": {
+    "1u": {
+     "views": 0,
+     "reach": 0,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": 0,
      "avg_watch_ms": null
     }
    }
