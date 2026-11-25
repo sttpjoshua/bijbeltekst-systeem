@@ -1,12 +1,236 @@
 {
- "Psalms-62-2-2": {"verhaal": "Stil worden is voor mij het moeilijkste. Dit vers helpt.", "zin": "Stil worden is mijn moeilijkste les, en dit vers brengt me er steeds weer naar terug.", "vraag": "Wat helpt jou om stil te worden?", "herkenning": "Ken je dat? Van binnen is het nooit stil."},
- "Hebrews-13-6-6": {"verhaal": "Ik zie weleens op tegen een gesprek. Dit vers neem ik dan mee.", "zin": "Ik zeg dit vers soms hardop voor ik een lastig gesprek in ga.", "vraag": "Tegen welk gesprek zie jij deze week op?", "herkenning": "Zie jij ook op tegen een gesprek? Dit is voor jou."},
- "I_Peter-5-7-7": {"verhaal": "Dit vers lees ik vaak twee keer. Ik ben nogal een piekeraar.", "zin": "Petrus zegt niet: leg het voorzichtig neer. Hij zegt: werp het. Dat woord helpt mij.", "vraag": "Welke zorg gooi jij vandaag van je af?", "herkenning": "Lag jij vannacht ook te malen? Dit is voor jou."},
- "Acts-1-8-8": {"verhaal": "Ik hoef het niet op eigen kracht te doen. Dat is een opluchting.", "zin": "Er staat niet dat je het zelf moet kunnen. Dat lucht mij op.", "vraag": "Waar heb jij vandaag hulp bij nodig?", "herkenning": "Voel je je te klein voor wat er vandaag van je gevraagd wordt?"},
- "Hebrews-4-15-15": {"verhaal": "Soms wil je gewoon dat iemand begrijpt hoe het voelt.", "zin": "Hij weet hoe het voelt. Dat is voor mij genoeg om het Hem te vertellen.", "vraag": "Wat zou jij Hem willen vertellen?", "herkenning": "Voel je je vandaag zwak? Dit is voor jou."},
- "Isaiah-43-1-1": {"verhaal": "Hij kent mijn naam. Niet mijn nummer, mijn naam.", "zin": "Ik lees dit vers en zeg mijn eigen naam erbij. Probeer het eens.", "vraag": "Wat doet het met jou als je je eigen naam erbij zegt?", "herkenning": "Voel je je vandaag onzichtbaar? Dit is voor jou."},
- "Psalms-145-18-18": {"verhaal": "Je hoeft geen mooie woorden te hebben. Dat vind ik geruststellend.", "zin": "Eerlijk roepen is genoeg. Ik oefen dat nog elke dag.", "vraag": "Wat zou jij eerlijk willen zeggen?", "herkenning": "Denk je weleens dat God ver weg is? Lees dit."},
- "Matthew-7-3-3": {"verhaal": "Jezus kon ook grappig zijn. Dit vers prikt mij elke keer.", "zin": "Ik vind altijd eerst iets van een ander. Dit vers zet me weer op mijn plek.", "vraag": "Welke balk zie jij in je eigen oog?", "herkenning": "Net iets van iemand gevonden? Ik ook. Lees dit."},
- "Psalms-138-3-3": {"verhaal": "Soms verandert niet de situatie, maar krijg je kracht om erdoor te komen.", "zin": "Soms is kracht van binnen het enige antwoord, en dat is genoeg.", "vraag": "Wanneer kreeg jij kracht toen je die niet meer had?", "herkenning": "Ben je op, maar moet je nog door? Dit is voor jou."},
- "II_Corinthians-4-16-16": {"verhaal": "Soms voel je dat je op raakt. Dit vers zegt dat er van binnen elke dag iets nieuw wordt.", "zin": "Ik lees dit op de dagen dat ik op ben. Van binnen wordt het elke dag vernieuwd.", "vraag": "Wat zou jij van binnen vernieuwd willen zien?", "herkenning": "Moe, en toch door? Dit is voor jou."}
+ "Psalms-62-2-2": {
+  "verhaal": "Stil worden is voor mij het moeilijkste. Dit vers helpt.",
+  "zin": "Stil worden is mijn moeilijkste les, en dit vers brengt me er steeds weer naar terug.",
+  "vraag": "Wat helpt jou om stil te worden?",
+  "herkenning": "Ken je dat? Van binnen is het nooit stil."
+ },
+ "Hebrews-13-6-6": {
+  "verhaal": "Ik zie weleens op tegen een gesprek. Dit vers neem ik dan mee.",
+  "zin": "Ik zeg dit vers soms hardop voor ik een lastig gesprek in ga.",
+  "vraag": "Tegen welk gesprek zie jij deze week op?",
+  "herkenning": "Zie jij ook op tegen een gesprek? Dit is voor jou."
+ },
+ "I_Peter-5-7-7": {
+  "verhaal": "Dit vers lees ik vaak twee keer. Ik ben nogal een piekeraar.",
+  "zin": "Petrus zegt niet: leg het voorzichtig neer. Hij zegt: werp het. Dat woord helpt mij.",
+  "vraag": "Welke zorg gooi jij vandaag van je af?",
+  "herkenning": "Lag jij vannacht ook te malen? Dit is voor jou."
+ },
+ "Acts-1-8-8": {
+  "verhaal": "Ik hoef het niet op eigen kracht te doen. Dat is een opluchting.",
+  "zin": "Er staat niet dat je het zelf moet kunnen. Dat lucht mij op.",
+  "vraag": "Waar heb jij vandaag hulp bij nodig?",
+  "herkenning": "Voel je je te klein voor wat er vandaag van je gevraagd wordt?"
+ },
+ "Hebrews-4-15-15": {
+  "verhaal": "Soms wil je gewoon dat iemand begrijpt hoe het voelt.",
+  "zin": "Hij weet hoe het voelt. Dat is voor mij genoeg om het Hem te vertellen.",
+  "vraag": "Wat zou jij Hem willen vertellen?",
+  "herkenning": "Voel je je vandaag zwak? Dit is voor jou."
+ },
+ "Isaiah-43-1-1": {
+  "verhaal": "Hij kent mijn naam. Niet mijn nummer, mijn naam.",
+  "zin": "Ik lees dit vers en zeg mijn eigen naam erbij. Probeer het eens.",
+  "vraag": "Wat doet het met jou als je je eigen naam erbij zegt?",
+  "herkenning": "Voel je je vandaag onzichtbaar? Dit is voor jou."
+ },
+ "Psalms-145-18-18": {
+  "verhaal": "Je hoeft geen mooie woorden te hebben. Dat vind ik geruststellend.",
+  "zin": "Eerlijk roepen is genoeg. Ik oefen dat nog elke dag.",
+  "vraag": "Wat zou jij eerlijk willen zeggen?",
+  "herkenning": "Denk je weleens dat God ver weg is? Lees dit."
+ },
+ "Matthew-7-3-3": {
+  "verhaal": "Jezus kon ook grappig zijn. Dit vers prikt mij elke keer.",
+  "zin": "Ik vind altijd eerst iets van een ander. Dit vers zet me weer op mijn plek.",
+  "vraag": "Welke balk zie jij in je eigen oog?",
+  "herkenning": "Net iets van iemand gevonden? Ik ook. Lees dit."
+ },
+ "Psalms-138-3-3": {
+  "verhaal": "Soms verandert niet de situatie, maar krijg je kracht om erdoor te komen.",
+  "zin": "Soms is kracht van binnen het enige antwoord, en dat is genoeg.",
+  "vraag": "Wanneer kreeg jij kracht toen je die niet meer had?",
+  "herkenning": "Ben je op, maar moet je nog door? Dit is voor jou."
+ },
+ "II_Corinthians-4-16-16": {
+  "verhaal": "Soms voel je dat je op raakt. Dit vers zegt dat er van binnen elke dag iets nieuw wordt.",
+  "zin": "Ik lees dit op de dagen dat ik op ben. Van binnen wordt het elke dag vernieuwd.",
+  "vraag": "Wat zou jij van binnen vernieuwd willen zien?",
+  "herkenning": "Moe, en toch door? Dit is voor jou."
+ },
+ "Psalms-23-1-1": {
+  "verhaal": "Mij zal niets ontbreken. Ik lees dit en merk hoeveel ik eigenlijk al heb.",
+  "zin": "Ik ben goed in zien wat er nog mist. Dit vers laat me eerst zien wat er is.",
+  "vraag": "Wat heb jij vandaag al, zonder dat je erbij stilstond?",
+  "herkenning": "Ken je dat? Je ziet alleen wat er nog niet klaar is."
+ },
+ "Matthew-11-28-28": {
+  "verhaal": "Dit vers begint met 'kom'. Dat vind ik al een opluchting.",
+  "zin": "Hij vraagt niet eerst of je het hebt afgemaakt. Hij zegt: kom maar.",
+  "vraag": "Wat zou jij vandaag willen neerleggen?",
+  "herkenning": "Moe van alles wat nog moet? Dit is voor jou."
+ },
+ "Isaiah-41-10-10": {
+  "verhaal": "Ik lees dit vers op dagen dat ik tegen iets opzie.",
+  "zin": "Er staat niet dat het niet eng is. Er staat: Ik ben met je.",
+  "vraag": "Waar zie jij tegen op?",
+  "herkenning": "Tegen iets opzien en het toch doen. Ken je dat?"
+ },
+ "Matthew-6-34-34": {
+  "verhaal": "Mijn hoofd is al bij morgen, terwijl het nog vandaag is.",
+  "zin": "Morgen zorgt voor zichzelf. Ik oefen daar nog elke dag op.",
+  "vraag": "Waar ben jij met je gedachten al bij morgen?",
+  "herkenning": "Lig je te denken aan wat er morgen allemaal moet? Dit is voor jou."
+ },
+ "Philippians-4-6-7": {
+  "verhaal": "In geen ding bezorgd. Dat is makkelijker gezegd dan gedaan, ik weet het.",
+  "zin": "Ik maak er soms een lijstje van: wat vertel ik vandaag eerst aan God?",
+  "vraag": "Wat zet jij bovenaan je lijstje?",
+  "herkenning": "Heb je het gevoel dat je alles zelf moet dragen? Lees dit."
+ },
+ "Matthew-6-26-26": {
+  "verhaal": "Dit vers zet me stil. Vogels hebben ook geen agenda.",
+  "zin": "Ik kijk naar een vogel en merk dat ik me druk maak om dingen die ik niet in de hand heb.",
+  "vraag": "Wat zie jij vandaag buiten dat je even tot rust brengt?",
+  "herkenning": "Druk in je hoofd? Kijk eens naar buiten."
+ },
+ "Matthew-6-27-27": {
+  "verhaal": "Piekeren levert niks op. Dat weet ik, en toch doe ik het.",
+  "zin": "Er is geen centimeter bij te piekeren, zegt dit vers. Ik lach er een beetje om, want hij heeft gelijk.",
+  "vraag": "Waar pieker jij over, terwijl je er niets mee opschiet?",
+  "herkenning": "Dit vers ziet jou, piekeraar. Ik ook."
+ },
+ "Luke-10-41-42": {
+  "verhaal": "Ik ben vaker Martha dan Maria. Eerlijk.",
+  "zin": "Martha deed niets fout, maar ze miste wel iets. Dat herken ik.",
+  "vraag": "Wat laat jij liggen omdat je druk bent?",
+  "herkenning": "Altijd bezig, nooit klaar? Dit is voor jou."
+ },
+ "Psalms-127-2-2": {
+  "verhaal": "Dit vers geeft me toestemming om niet alles te doen.",
+  "zin": "Hij geeft het de zijnen slapende. Ik moet dat nog leren geloven.",
+  "vraag": "Wat mag jij vandaag laten liggen?",
+  "herkenning": "Heb je het gevoel dat rust niet mag? Lees dit."
+ },
+ "Mark-6-31-31": {
+  "verhaal": "Rust een weinig. Het staat er echt.",
+  "zin": "Zelfs Jezus zei het: kom, rust een beetje. Dan mag ik dat ook.",
+  "vraag": "Wanneer heb jij voor het laatst echt gerust?",
+  "herkenning": "Geen tijd om te eten of even te zitten? Dit is voor jou."
+ },
+ "Psalms-23-2-3": {
+  "verhaal": "Dit is een vers om langzaam te lezen. Ik doe het zelfs hardop.",
+  "zin": "Hij doet me liggen en leidt me langs stil water. Ik hoef niet zelf de weg te zoeken.",
+  "vraag": "Waar word jij rustig van?",
+  "herkenning": "Even niets hoeven? Dit vers is voor jou."
+ },
+ "Proverbs-3-5-6": {
+  "verhaal": "Steun niet op je eigen verstand. Dat is lastig voor iemand die alles wil plannen.",
+  "zin": "Ik wil altijd eerst het hele plan zien. Dit vers vraagt me eerst te vertrouwen.",
+  "vraag": "Wat wil jij nog zelf regelen terwijl je het eigenlijk wilt loslaten?",
+  "herkenning": "Wil jij ook alles in de hand houden? Ik ken het."
+ },
+ "Proverbs-15-1-1": {
+  "verhaal": "Een zacht antwoord. Soms duurt het even voor ik dat weet te geven.",
+  "zin": "Ik tel soms tot drie voor ik antwoord. Dit vers is de reden.",
+  "vraag": "Aan wie wil jij een zacht antwoord geven?",
+  "herkenning": "Net iets scherps gezegd? Ik ook weleens."
+ },
+ "Proverbs-17-28-28": {
+  "verhaal": "Soms is zwijgen het slimste wat je kunt doen. Ik heb het niet altijd door.",
+  "zin": "Dit vers is de reden dat ik mijn bericht nog een keer lees voor ik het verstuur.",
+  "vraag": "Wanneer was zwijgen voor jou de goede keuze?",
+  "herkenning": "Net te snel gereageerd? Dit is voor jou."
+ },
+ "James-1-19-19": {
+  "verhaal": "Snel horen, traag spreken. Ik doe vaak precies andersom.",
+  "zin": "Ik ben goed in luisteren om te kunnen antwoorden. Dit vers vraagt iets anders.",
+  "vraag": "Naar wie wil jij deze week echt luisteren?",
+  "herkenning": "Ben je ook zo snel met je mening? Ik herken het."
+ },
+ "Psalms-118-24-24": {
+  "verhaal": "Dit is de dag. Niet gisteren, niet morgen. Vandaag.",
+  "zin": "Ik zeg dit vers soms hardop als de dag nog niet goed begint.",
+  "vraag": "Waar kun jij vandaag blij mee zijn, hoe klein ook?",
+  "herkenning": "Zit de dag niet mee? Lees dit toch even."
+ },
+ "Psalms-103-2-2": {
+  "verhaal": "Vergeet geen van Zijn weldaden. Ik schrijf er daarom een paar op.",
+  "zin": "Ik zet drie dingen in mijn notitie-app waar ik dankbaar voor ben. Het is een klein begin.",
+  "vraag": "Wat zou jij vandaag opschrijven?",
+  "herkenning": "Zie je vooral wat er mis ging? Probeer eens drie dingen."
+ },
+ "Psalms-90-12-12": {
+  "verhaal": "Onze dagen tellen. Het klinkt zwaar, maar het maakt me juist rustiger.",
+  "zin": "Mijn dagen zijn niet oneindig. Dat zet mijn to-do-lijst even in perspectief.",
+  "vraag": "Wat wil jij met deze week echt doen?",
+  "herkenning": "Zit je vol met dingen die wel kunnen wachten? Dit is voor jou."
+ },
+ "Psalms-119-105-105": {
+  "verhaal": "Een lamp voor mijn voet, niet voor de hele weg. Dat helpt me.",
+  "zin": "Ik hoef niet de hele route te zien, alleen de volgende stap.",
+  "vraag": "Wat is jouw volgende kleine stap?",
+  "herkenning": "Zie je het einde nog niet? Het hoeft ook niet."
+ },
+ "Ecclesiastes-3-1-1": {
+  "verhaal": "Alles heeft een tijd. Ook het wachten.",
+  "zin": "Ik wil dat alles nu klaar is. Dit vers zegt dat het zijn tijd heeft.",
+  "vraag": "Waar moet jij nog even op wachten?",
+  "herkenning": "Duurt iets langer dan je hoopte? Dit is voor jou."
+ },
+ "Proverbs-16-9-9": {
+  "verhaal": "Ik plan veel. Dit vers lacht er vriendelijk om.",
+  "zin": "Het hart overdenkt zijn weg, maar Hij stuurt de gang. Dat haalt druk van de plannen.",
+  "vraag": "Welk plan mag jij een beetje loslaten?",
+  "herkenning": "Gaat het anders dan je had gepland? Ken je dat?"
+ },
+ "Psalms-56-4-4": {
+  "verhaal": "Als ik bang ben, dan is dit het vers dat ik terugzeg.",
+  "zin": "Het vers zegt niet dat je niet bang bent. Het zegt wat je dan doet.",
+  "vraag": "Wat doe jij als je bang bent?",
+  "herkenning": "Heb je vandaag iets waar je tegenop ziet? Dit is voor jou."
+ },
+ "Psalms-46-2-2": {
+  "verhaal": "Een toevlucht, een plek om heen te gaan. Dat vind ik een mooi woord.",
+  "zin": "Ik denk bij 'toevlucht' aan een deur die altijd openstaat.",
+  "vraag": "Waar ga jij heen als het te veel wordt?",
+  "herkenning": "Is het even te veel? Er is een plek om heen te gaan."
+ },
+ "Psalms-37-5-5": {
+  "verhaal": "Wentel je weg op de Heer. Ik zie het voor me als een zware kar die je niet alleen hoeft te duwen.",
+  "zin": "Wentelen, rollen, loslaten. Ik zeg het mezelf voor.",
+  "vraag": "Wat wil jij vandaag uit je handen laten rollen?",
+  "herkenning": "Draag je iets te lang alleen? Dit is voor jou."
+ },
+ "Joshua-1-9-9": {
+  "verhaal": "Heb Ik het u niet bevolen? Dat is een vriendelijke herinnering, vind ik.",
+  "zin": "Moed is voor mij geen groot gebaar. Het is vaak gewoon beginnen.",
+  "vraag": "Wat is jouw eerste stap vandaag?",
+  "herkenning": "Twijfel je of je het kunt? Begin klein."
+ },
+ "Isaiah-40-31-31": {
+  "verhaal": "Wachten kost me moeite. Dit vers maakt er iets moois van.",
+  "zin": "Er staat dat wie wacht nieuwe kracht krijgt. Ik probeer te wachten zonder me te haasten.",
+  "vraag": "Waar wacht jij op?",
+  "herkenning": "Is het wachten zwaar? Je bent niet de enige."
+ },
+ "Proverbs-20-13-13": {
+  "verhaal": "Dit vers is een grapje voor mensen die moeilijk uit bed komen. Ik lach mee.",
+  "zin": "Open je ogen en eet iets. Zo simpel kan een vers zijn.",
+  "vraag": "Wat is jouw makkelijkste manier om de dag te beginnen?",
+  "herkenning": "Snooze je ook drie keer? Dit is voor jou."
+ },
+ "Psalms-143-8-8": {
+  "verhaal": "Laat mij Uw goedertierenheid horen. Ik wil dit vers als eerste lezen, voor de rest van de dag.",
+  "zin": "Ik begin de dag liever met een vers dan met mijn telefoon. Het lukt niet altijd.",
+  "vraag": "Hoe begin jij je dag?",
+  "herkenning": "Pak jij ook meteen je telefoon? Probeer eens dit."
+ },
+ "Psalms-94-19-19": {
+  "verhaal": "Als mijn gedachten zich vermenigvuldigen. Dat is precies hoe het voelt.",
+  "zin": "Mijn hoofd is soms een drukke kamer. Dit vers zegt dat troost de rust kan brengen.",
+  "vraag": "Wat maakt jouw hoofd het drukst?",
+  "herkenning": "Veel gedachten in je hoofd? Dit is voor jou."
+ }
 }
