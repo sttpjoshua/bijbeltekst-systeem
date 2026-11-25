@@ -1014,6 +1014,46 @@
    "herkenning": "Er is niets te doen in het graf.",
    "model": "Qwen2.5-14B-Instruct-4bit",
    "t": "2026-11-25T09:57+00:00"
+  },
+  "Ephesians-2-10-10": {
+   "verhaal": "Ik ben bezig met een nieuw ontwerp en denk vaak over hoe ik dit werk aanpak.",
+   "zin": "Dit vers herinnerde me eraan dat mijn creatieve taken een belangrijk deel van mijn roeping zijn.",
+   "vraag": "Hoe helpen jouw dagelijkse taken jou bij je roeping?",
+   "herkenning": "Soms ben ik afgeleid door kleinigheden.",
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-25T10:44+00:00"
+  },
+  "Ephesians-2-19-19": {
+   "verhaal": "Voelde me vandaag een beetje opzij geduwd in een gesprek, maar dit vers herinnerde me eraan dat ik een echte deelgenoot ben.",
+   "zin": "Dit vers helpt me om me te herinneren dat ik geen buitenstaander ben in deze gemeenschap.",
+   "vraag": "Hoe help jij mij om me meer thuis te voelen in moeilijke situaties?",
+   "herkenning": "Ik ben een medeburger in deze gemeenschap.",
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-25T10:44+00:00"
+  },
+  "Ephesians-4-2-2": {
+   "verhaal": "Gisteren was ik in een uitdagend gesprek met een klant die ik moeilijk vond om te bedienen.",
+   "zin": "Dit vers herinnert me eraan hoe belangrijk het is om rustig en behoedzaam te blijven, ook in moeilijke situaties.",
+   "vraag": "Hoe verdrag jij mensen die je lastig vinden?",
+   "herkenning": "Het is moeilijk om rustig te blijven.",
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-25T10:44+00:00"
+  },
+  "Ephesians-5-20-20": {
+   "verhaal": "Ik zit hier met een kop koffie en sta versteld van hoeveel kleine dingen er zijn die ik kan bedenken om te danken voor.",
+   "zin": "Dit vers helpt me om alledaagse momenten ook te zien als momenten om te danken.",
+   "vraag": "Waar ben jij dankbaar voor in dit moment?",
+   "herkenning": "De kleine dingen tellen ook.",
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-25T10:44+00:00"
+  },
+  "Ephesians-6-10-10": {
+   "verhaal": "Bij elke ochtendwandeling langs de IJssel voel ik hoe sterk ik eigenlijk ben.",
+   "zin": "Dit vers helpt me om weer te geloven in mijn innerlijke kracht.",
+   "vraag": "Hoe kun je je sterkte in de Heer het beste benutten?",
+   "herkenning": "Ik ben weer een nieuwe stap verder in loslaten.",
+   "model": "Qwen2.5-14B-Instruct-4bit",
+   "t": "2026-11-25T10:44+00:00"
   }
  }
 }
