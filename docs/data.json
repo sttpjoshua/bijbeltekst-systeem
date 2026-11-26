@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-26T13:15",
+ "gegenereerd": "2026-11-26T13:31",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1840,8 +1840,28 @@
     "video_uitleg": "vaste regel"
    },
    "momenten": {
-    "instagram": {},
-    "facebook": {}
+    "instagram": {
+     "1u": {
+      "views": 2,
+      "reach": 1,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": null
+     }
+    },
+    "facebook": {
+     "1u": {
+      "views": 0,
+      "reach": null,
+      "likes": null,
+      "comments": null,
+      "shares": null,
+      "saves": null,
+      "follows": null
+     }
+    }
    },
    "pub": {
     "instagram": "2026-11-26T12:16+01:00",
@@ -1957,7 +1977,17 @@
     "video_uitleg": "vaste regel"
    },
    "momenten": {
-    "facebook": {}
+    "facebook": {
+     "1u": {
+      "views": 0,
+      "reach": null,
+      "likes": null,
+      "comments": null,
+      "shares": null,
+      "saves": null,
+      "follows": null
+     }
+    }
    },
    "pub": {
     "facebook": "2026-11-26T12:17+01:00"
@@ -2163,7 +2193,17 @@
     "video_uitleg": "vaste regel"
    },
    "momenten": {
-    "facebook": {}
+    "facebook": {
+     "1u": {
+      "views": 0,
+      "reach": null,
+      "likes": null,
+      "comments": null,
+      "shares": null,
+      "saves": null,
+      "follows": null
+     }
+    }
    },
    "pub": {
     "facebook": "2026-11-26T12:17+01:00"
@@ -19525,13 +19565,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-24T12:02:02",
-   "soort": "fout",
-   "tekst": "Politiek nieuws (NOS): \"Natuurijsbanen geopend: marathonschaatsster verpulvert werelduurrecord\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
-   "code": "nieuws_voorstel",
-   "post": "n112412020"
-  },
-  {
    "t": "2026-11-24T12:18:10",
    "soort": "info",
    "tekst": "2026-11-24-4 ook als story geplaatst"
@@ -19829,6 +19862,11 @@
    "t": "2026-11-26T12:17:14",
    "soort": "info",
    "tekst": "2026-11-26-4 online op facebook: 1 Petrus 5:7"
+  },
+  {
+   "t": "2026-11-26T13:31:08",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 4 posts vastgelegd"
   }
  ],
  "recente_fouten": [

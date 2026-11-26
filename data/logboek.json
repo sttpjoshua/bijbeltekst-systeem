@@ -1,10 +1,5 @@
 [
  {
-  "t": "2026-11-13T07:33:16",
-  "soort": "info",
-  "tekst": "2026-11-13-5 online op instagram: Psalm 46:2"
- },
- {
   "t": "2026-11-13T07:33:24",
   "soort": "info",
   "tekst": "2026-11-13-4 online op facebook: Efeze 2:10"
@@ -2550,5 +2545,10 @@
   "t": "2026-11-26T12:17:14",
   "soort": "info",
   "tekst": "2026-11-26-4 online op facebook: 1 Petrus 5:7"
+ },
+ {
+  "t": "2026-11-26T13:31:08",
+  "soort": "info",
+  "tekst": "Eerste-uurcijfers van 4 posts vastgelegd"
  }
 ]
