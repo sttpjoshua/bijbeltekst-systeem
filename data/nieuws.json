@@ -1504,7 +1504,7 @@
   "id": "n112412020",
   "categorie": "politiek",
   "zwaar": false,
-  "status": "voorstel",
+  "status": "verlopen",
   "opties": [
    {
     "vers_id": "Psalms-46-11-11",
@@ -1658,6 +1658,83 @@
   "link": "https://nos.nl/l/2640829",
   "t": "2026-11-24T14:27+01:00",
   "id": "n112512010",
+  "categorie": "politiek",
+  "zwaar": false,
+  "status": "overgeslagen"
+ },
+ {
+  "bron": "NOS",
+  "kop": "Onvrede binnen VVD over dubbelfunctie Yesilgöz, zegt oud-partijvoorzitter Van der Wal",
+  "link": "https://nos.nl/l/2641036",
+  "t": "2026-11-26T00:56+01:00",
+  "id": "n112607010",
+  "categorie": "politiek",
+  "zwaar": false,
+  "status": "schrijven",
+  "kandidaten": [
+   {
+    "vers_id": "Ecclesiastes-9-10-10",
+    "ref": "Prediker 9:10",
+    "tekst": "Alles, wat uw hand vindt om te doen, doe dat met uw macht; want er is geen werk, noch verzinning, noch wetenschap, noch wijsheid in het graf, daar gij heengaat."
+   },
+   {
+    "vers_id": "Isaiah-26-12-12",
+    "ref": "Jesaja 26:12",
+    "tekst": "HEERE! Gij zult ons vrede bestellen, want Gij hebt ons ook al onze zaken uitgericht."
+   },
+   {
+    "vers_id": "James-1-5-5",
+    "ref": "Jakobus 1:5",
+    "tekst": "En indien iemand van u wijsheid ontbreekt, dat hij ze van God begere, Die een iegelijk mildelijk geeft, en niet verwijt; en zij zal hem gegeven worden."
+   }
+  ]
+ },
+ {
+  "bron": "NOS",
+  "kop": "Twee Libische officieren overleden na aanval Oekraïne, in Kyiv dode na Russische aanval",
+  "link": "https://nos.nl/l/2641025",
+  "t": "2026-11-25T22:12+01:00",
+  "id": "n112607011",
+  "categorie": "politiek",
+  "zwaar": false,
+  "status": "overgeslagen"
+ },
+ {
+  "bron": "NOS",
+  "kop": "OM eist tot 5 jaar cel voor fatale mishandeling Somalische asielzoeker in Den Haag",
+  "link": "https://nos.nl/l/2641015",
+  "t": "2026-11-25T19:20+01:00",
+  "id": "n112607012",
+  "categorie": "politiek",
+  "zwaar": false,
+  "status": "overgeslagen"
+ },
+ {
+  "bron": "NOS",
+  "kop": "25/11 in Nieuwsuur: Crackproblemen • Aanpak neonazi's • EU-top over begroting",
+  "link": "https://nos.nl/l/2640974",
+  "t": "2026-11-25T14:22+01:00",
+  "id": "n112607013",
+  "categorie": "politiek",
+  "zwaar": false,
+  "status": "overgeslagen"
+ },
+ {
+  "bron": "NU.nl",
+  "kop": "Rutte en Trump roepen Rusland op om de oorlog in Oekraïne niet groter te maken",
+  "link": "https://www.nu.nl/spanningen-oekraine/6417817/rutte-en-trump-roepen-rusland-op-om-de-oorlog-in-oekraine-niet-groter-te-maken.html",
+  "t": "2026-11-26T05:52+01:00",
+  "id": "n112607014",
+  "categorie": "politiek",
+  "zwaar": false,
+  "status": "overgeslagen"
+ },
+ {
+  "bron": "NU.nl",
+  "kop": "Zelfs Vredesraad van Trump is niet optimistisch over vredesproces in Gaza",
+  "link": "https://www.nu.nl/midden-oostenconflict/6417765/zelfs-vredesraad-van-trump-is-niet-optimistisch-over-vredesproces-in-gaza.html",
+  "t": "2026-11-26T04:57+01:00",
+  "id": "n112607015",
   "categorie": "politiek",
   "zwaar": false,
   "status": "overgeslagen"
