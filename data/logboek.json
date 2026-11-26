@@ -1,10 +1,5 @@
 [
  {
-  "t": "2026-11-12T22:02:17",
-  "soort": "info",
-  "tekst": "2026-11-12-2 online op facebook: Psalm 9:2"
- },
- {
   "t": "2026-11-12T22:03:20",
   "soort": "info",
   "tekst": "2026-11-12-5 ook als story geplaatst"
@@ -2551,5 +2546,12 @@
   "t": "2026-11-26T05:15:39",
   "soort": "info",
   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
+ },
+ {
+  "t": "2026-11-26T12:02:20",
+  "soort": "fout",
+  "tekst": "Nieuws (politiek, NOS): \"Onvrede binnen VVD over dubbelfunctie Yesilgöz, zegt oud-partijvoorzitter Van der Wal\". Voorstel in de persoonlijke stem staat klaar; gaat alleen online met jouw akkoord.",
+  "code": "nieuws_voorstel",
+  "post": "n112607010"
  }
 ]
