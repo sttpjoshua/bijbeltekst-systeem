@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-26T14:31",
+ "gegenereerd": "2026-11-26T14:34",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -865,7 +865,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Jakobus 1:19",
    "caption": "Voor iedereen die nu door diep water gaat.\n\n\"Wanneer gij zult gaan door het water, Ik zal bij u zijn, en door de rivieren, zij zullen u niet overstromen; wanneer gij door het vuur zult gaan, zult gij niet verbranden, en de vlam zal u niet aansteken.\"\nJesaja 43:2\n\nGod is bij je, ook in het zwaarst.",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-28-5-1.jpg",
@@ -956,7 +956,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Klaagliederen 3:22-23",
    "caption": "Voor iedereen die iemand mist.\n\n\"Zalig zijn die treuren; want zij zullen vertroost worden.\"\nMattheüs 5:4\n\nWie verdriet heeft, krijgt troost.",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-28-4.mp4",
@@ -1045,7 +1045,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Psalm 94:19",
    "caption": "\"En hij zeide: Merkt op, geheel Juda, en gij, inwoners van Jeruzalem, en gij, koning Josafat! Alzo zegt de HEERE tot ulieden: Vreest gijlieden niet, en wordt niet ontzet vanwege deze grote menigte; want de strijd is niet uwe, maar Gods.\"\n2 Kronieken 20:15\n\nDe strijd is niet van jou, maar van God.",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-28-3-1.jpg",
@@ -1137,7 +1137,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Psalm 118:24",
    "caption": "Voor iedereen die onrustig wordt van het nieuws.\n\n\"Hij zal voor geen kwaad gerucht vrezen; zijn hart is vast, betrouwende op den HEERE.\"\nPsalm 112:7\n\nEen hart dat op God vertrouwt, blijft vast.\n\nHoe ga jij om met slecht nieuws?",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-28-2.mp4",
@@ -1226,7 +1226,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Psalm 90:12",
    "caption": "Vandaag is een nieuwe kans. Lees dit eerst.\n\n\"En de hoop beschaamt niet, omdat de liefde Gods in onze harten uitgestort is door den Heiligen Geest, Die ons is gegeven.\"\nRomeinen 5:5\n\nHoop op God loopt nooit uit op teleurstelling.\n\nWaardoor ben jij teleurgesteld geraakt?",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-28-1-1.jpg",
@@ -19565,16 +19565,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-24T12:18:10",
-   "soort": "info",
-   "tekst": "2026-11-24-4 ook als story geplaatst"
-  },
-  {
-   "t": "2026-11-24T12:18:10",
-   "soort": "info",
-   "tekst": "2026-11-24-4 online op instagram: Psalm 31:15-16"
-  },
-  {
    "t": "2026-11-24T12:18:25",
    "soort": "info",
    "tekst": "2026-11-24-4 online op facebook: Psalm 31:15-16"
@@ -19867,6 +19857,16 @@
    "t": "2026-11-26T13:31:08",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 4 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-26T14:33:18",
+   "soort": "info",
+   "tekst": "Materiaal-repo niet gekloond in deze sessie (add_repo ontbreekt); GitHub Actions vult muziek aan"
+  },
+  {
+   "t": "2026-11-26T14:34:09",
+   "soort": "info",
+   "tekst": "Dagelijkse run: 10 posts voor 27 en 28 nov gecontroleerd (gemaakt door automaak), reserveteksten voor 28 nov geschreven"
   }
  ],
  "recente_fouten": [
@@ -20060,7 +20060,7 @@
    "detail": "19 onderdelen gemaakt en gecontroleerd"
   },
   "dagelijks": {
-   "ok": "2026-11-25T14:35",
+   "ok": "2026-11-26T14:34",
    "laatst_ok": true,
    "detail": "10 posts voor MORGEN en OVERMORGEN klaargezet"
   },

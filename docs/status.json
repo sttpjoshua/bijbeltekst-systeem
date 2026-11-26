@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T14:31:00",
+ "updated": "2026-11-26T14:34:09",
  "agents": {
   "verskiezer": {
    "t": "2026-11-25T13:53:17",
@@ -57,6 +57,14 @@
  ],
  "log": [
   {
+   "t": "14:34",
+   "msg": "Dagelijkse run: 10 posts voor 27 en 28 nov gecontroleerd (gemaakt door automaak), reserveteksten voor 28 nov g"
+  },
+  {
+   "t": "14:33",
+   "msg": "Materiaal-repo niet gekloond in deze sessie (add_repo ontbreekt); GitHub Actions vult muziek aan"
+  },
+  {
    "t": "13:31",
    "msg": "Eerste-uurcijfers van 4 posts vastgelegd"
   },
@@ -95,14 +103,6 @@
   {
    "t": "04:01",
    "msg": "2026-11-26-1 ook als story geplaatst"
-  },
-  {
-   "t": "23:15",
-   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
-   "t": "22:03",
-   "msg": "2026-11-25-3 online op instagram: Spreuken 12:15"
   }
  ],
  "lampen": [
