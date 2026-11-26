@@ -1,0 +1,689 @@
+{
+ "datum": "2026-11-26",
+ "aantal_metingen": 32,
+ "dimensies": {
+  "huisstijl": {
+   "avond": {
+    "n": 0,
+    "gem": null,
+    "oordeel": "weinig data",
+    "oud": 0.35,
+    "nieuw": 0.35
+   },
+   "zand": {
+    "n": 4,
+    "gem": 1.38,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   },
+   "salie": {
+    "n": 2,
+    "gem": 1.39,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   },
+   "zonsopgang": {
+    "n": 1,
+    "gem": 0.65,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   },
+   "hemelsblauw": {
+    "n": 2,
+    "gem": 0.87,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   },
+   "paars": {
+    "n": 2,
+    "gem": 0.75,
+    "oordeel": "weinig data",
+    "oud": 0.6,
+    "nieuw": 0.6
+   },
+   "roze": {
+    "n": 2,
+    "gem": 1.75,
+    "oordeel": "weinig data",
+    "oud": 0.6,
+    "nieuw": 0.6
+   },
+   "bosgroen": {
+    "n": 1,
+    "gem": 1.77,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   },
+   "mint": {
+    "n": 2,
+    "gem": 1.09,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   },
+   "perzik": {
+    "n": 3,
+    "gem": 1.47,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   },
+   "postit": {
+    "n": 0,
+    "gem": null,
+    "oordeel": "weinig data",
+    "oud": 1.3,
+    "nieuw": 1.3
+   },
+   "papier_rood": {
+    "n": 2,
+    "gem": 1.01,
+    "oordeel": "weinig data",
+    "oud": 1.3,
+    "nieuw": 1.3
+   },
+   "papier_groen": {
+    "n": 3,
+    "gem": 0.82,
+    "oordeel": "weinig data",
+    "oud": 1.3,
+    "nieuw": 1.3
+   },
+   "papier_blauw": {
+    "n": 2,
+    "gem": 1.03,
+    "oordeel": "weinig data",
+    "oud": 1.3,
+    "nieuw": 1.3
+   },
+   "schaduw_rood": {
+    "n": 5,
+    "gem": 0.59,
+    "oordeel": "waarschijnlijk slechter",
+    "oud": 1.14,
+    "nieuw": 1.08
+   },
+   "schaduw_groen": {
+    "n": 0,
+    "gem": null,
+    "oordeel": "weinig data",
+    "oud": 1.3,
+    "nieuw": 1.3
+   },
+   "schaduw_blauw": {
+    "n": 1,
+    "gem": 0.88,
+    "oordeel": "weinig data",
+    "oud": 1.3,
+    "nieuw": 1.3
+   }
+  },
+  "thema": {
+   "troost": {
+    "n": 3,
+    "gem": 1.94,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   },
+   "moed": {
+    "n": 5,
+    "gem": 1.44,
+    "oordeel": "geen duidelijk verschil",
+    "oud": 1.0,
+    "nieuw": 1.06
+   },
+   "liefde": {
+    "n": 3,
+    "gem": 1.17,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   },
+   "hoop": {
+    "n": 4,
+    "gem": 0.94,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   },
+   "vertrouwen": {
+    "n": 1,
+    "gem": 2.07,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   },
+   "wijsheid": {
+    "n": 2,
+    "gem": 0.18,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   },
+   "humor_herkenbaar": {
+    "n": 6,
+    "gem": 0.82,
+    "oordeel": "geen duidelijk verschil",
+    "oud": 0.885,
+    "nieuw": 0.892
+   },
+   "dankbaarheid": {
+    "n": 1,
+    "gem": 0.25,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   },
+   "identiteit": {
+    "n": 2,
+    "gem": 1.57,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   },
+   "vrede_rust": {
+    "n": 5,
+    "gem": 0.66,
+    "oordeel": "geen duidelijk verschil",
+    "oud": 0.798,
+    "nieuw": 0.813
+   }
+  },
+  "hook_stijl": {
+   "vraag": {
+    "n": 6,
+    "gem": 0.99,
+    "oordeel": "geen duidelijk verschil",
+    "oud": 0.978,
+    "nieuw": 0.995
+   },
+   "herkenning": {
+    "n": 9,
+    "gem": 1.22,
+    "oordeel": "geen duidelijk verschil",
+    "oud": 1.111,
+    "nieuw": 1.156
+   },
+   "uitdaging": {
+    "n": 7,
+    "gem": 0.99,
+    "oordeel": "geen duidelijk verschil",
+    "oud": 0.96,
+    "nieuw": 0.992
+   },
+   "rustig": {
+    "n": 3,
+    "gem": 1.11,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   },
+   "geen": {
+    "n": 7,
+    "gem": 1.04,
+    "oordeel": "geen duidelijk verschil",
+    "oud": 1.011,
+    "nieuw": 1.023
+   }
+  },
+  "formaat": {
+   "video": {
+    "n": 32,
+    "gem": 1.08,
+    "oordeel": "geen duidelijk verschil",
+    "oud": 1.034,
+    "nieuw": 1.068
+   },
+   "carrousel": {
+    "n": 0,
+    "gem": null,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   }
+  },
+  "uitleg_op_beeld": {
+   "True": {
+    "n": 11,
+    "gem": 0.78,
+    "oordeel": "geen duidelijk verschil",
+    "oud": 0.782,
+    "nieuw": 0.838
+   },
+   "False": {
+    "n": 21,
+    "gem": 1.23,
+    "oordeel": "geen duidelijk verschil",
+    "oud": 1.174,
+    "nieuw": 1.192
+   }
+  },
+  "achtergrondbron": {
+   "verloop": {
+    "n": 19,
+    "gem": 1.07,
+    "oordeel": "geen duidelijk verschil",
+    "oud": 1.047,
+    "nieuw": 1.058
+   },
+   "beeld": {
+    "n": 13,
+    "gem": 1.09,
+    "oordeel": "geen duidelijk verschil",
+    "oud": 1.01,
+    "nieuw": 1.067
+   }
+  },
+  "boekgroep": {
+   "psalmen": {
+    "n": 7,
+    "gem": 1.27,
+    "oordeel": "geen duidelijk verschil",
+    "oud": 1.165,
+    "nieuw": 1.174
+   },
+   "spreuken": {
+    "n": 4,
+    "gem": 0.23,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   },
+   "wijsheid": {
+    "n": 2,
+    "gem": 0.17,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   },
+   "profeten": {
+    "n": 3,
+    "gem": 0.67,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   },
+   "evangelien": {
+    "n": 2,
+    "gem": 1.19,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   },
+   "brieven": {
+    "n": 13,
+    "gem": 1.31,
+    "oordeel": "geen duidelijk verschil",
+    "oud": 1.224,
+    "nieuw": 1.235
+   }
+  },
+  "lengte": {
+   "kort": {
+    "n": 9,
+    "gem": 0.92,
+    "oordeel": "geen duidelijk verschil",
+    "oud": 0.928,
+    "nieuw": 0.944
+   },
+   "middel": {
+    "n": 17,
+    "gem": 0.99,
+    "oordeel": "geen duidelijk verschil",
+    "oud": 0.959,
+    "nieuw": 0.995
+   },
+   "lang": {
+    "n": 5,
+    "gem": 1.27,
+    "oordeel": "geen duidelijk verschil",
+    "oud": 1.06,
+    "nieuw": 1.12
+   }
+  },
+  "bron": {
+   "bekend": {
+    "n": 29,
+    "gem": 1.02,
+    "oordeel": "geen duidelijk verschil",
+    "oud": 0.976,
+    "nieuw": 1.015
+   },
+   "ontdekking": {
+    "n": 2,
+    "gem": 1.03,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   }
+  },
+  "vraag_onderaan": {
+   "True": {
+    "n": 19,
+    "gem": 0.96,
+    "oordeel": "geen duidelijk verschil",
+    "oud": 0.922,
+    "nieuw": 0.97
+   },
+   "False": {
+    "n": 12,
+    "gem": 1.1,
+    "oordeel": "geen duidelijk verschil",
+    "oud": 1.067,
+    "nieuw": 1.078
+   }
+  },
+  "reel_stijl": {
+   "klassiek": {
+    "n": 0,
+    "gem": null,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   },
+   "kinetisch": {
+    "n": 0,
+    "gem": null,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   },
+   "beeld": {
+    "n": 0,
+    "gem": null,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   },
+   "situatie": {
+    "n": 16,
+    "gem": 1.0,
+    "oordeel": "geen duidelijk verschil",
+    "oud": 0.969,
+    "nieuw": 1.002
+   },
+   "markeren": {
+    "n": 14,
+    "gem": 1.11,
+    "oordeel": "geen duidelijk verschil",
+    "oud": 1.054,
+    "nieuw": 1.083
+   }
+  },
+  "carrousel_stijl": {
+   "standaard": {
+    "n": 0,
+    "gem": null,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   },
+   "markeren": {
+    "n": 0,
+    "gem": null,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   }
+  },
+  "reel_kleur": {
+   "abrikoos": {
+    "n": 3,
+    "gem": 1.05,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   },
+   "mint": {
+    "n": 1,
+    "gem": 1.13,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   },
+   "hemel": {
+    "n": 5,
+    "gem": 1.28,
+    "oordeel": "geen duidelijk verschil",
+    "oud": 1.12,
+    "nieuw": 1.154
+   },
+   "roze": {
+    "n": 3,
+    "gem": 1.03,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   },
+   "goud": {
+    "n": 2,
+    "gem": 0.87,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   }
+  },
+  "markeer_achtergrond": {
+   "kleur": {
+    "n": 1,
+    "gem": 0.88,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   },
+   "papier": {
+    "n": 5,
+    "gem": 1.13,
+    "oordeel": "geen duidelijk verschil",
+    "oud": 1.007,
+    "nieuw": 1.067
+   },
+   "schaduw": {
+    "n": 1,
+    "gem": 0.86,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   },
+   "foto": {
+    "n": 2,
+    "gem": 0.39,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   }
+  },
+  "markeer_streep": {
+   "regel": {
+    "n": 4,
+    "gem": 0.94,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   },
+   "woord": {
+    "n": 5,
+    "gem": 0.88,
+    "oordeel": "geen duidelijk verschil",
+    "oud": 1.0,
+    "nieuw": 0.94
+   }
+  },
+  "markeer_opening": {
+   "vers": {
+    "n": 4,
+    "gem": 0.7,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   },
+   "sterk": {
+    "n": 5,
+    "gem": 1.07,
+    "oordeel": "geen duidelijk verschil",
+    "oud": 0.974,
+    "nieuw": 1.034
+   }
+  },
+  "reel_plaatsing": {
+   "midden": {
+    "n": 10,
+    "gem": 1.08,
+    "oordeel": "geen duidelijk verschil",
+    "oud": 1.025,
+    "nieuw": 1.058
+   },
+   "boven": {
+    "n": 6,
+    "gem": 0.87,
+    "oordeel": "waarschijnlijk slechter",
+    "oud": 0.902,
+    "nieuw": 0.923
+   }
+  },
+  "reel_scene": {
+   "natuur": {
+    "n": 4,
+    "gem": 0.85,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   },
+   "dichtbij": {
+    "n": 5,
+    "gem": 0.99,
+    "oordeel": "geen duidelijk verschil",
+    "oud": 0.977,
+    "nieuw": 0.996
+   },
+   "onderweg": {
+    "n": 7,
+    "gem": 1.1,
+    "oordeel": "geen duidelijk verschil",
+    "oud": 1.032,
+    "nieuw": 1.063
+   }
+  },
+  "reel_haak": {
+   "geen": {
+    "n": 30,
+    "gem": 1.05,
+    "oordeel": "geen duidelijk verschil",
+    "oud": 1.009,
+    "nieuw": 1.045
+   },
+   "vraag": {
+    "n": 0,
+    "gem": null,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   }
+  },
+  "opening": {
+   "vers": {
+    "n": 0,
+    "gem": null,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   },
+   "stopper": {
+    "n": 0,
+    "gem": null,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   },
+   "verhaal": {
+    "n": 0,
+    "gem": null,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   }
+  },
+  "hashtag_stijl": {
+   "mix": {
+    "n": 11,
+    "gem": 1.02,
+    "oordeel": "geen duidelijk verschil",
+    "oud": 0.994,
+    "nieuw": 1.016
+   },
+   "zoekwoord": {
+    "n": 12,
+    "gem": 1.11,
+    "oordeel": "geen duidelijk verschil",
+    "oud": 1.062,
+    "nieuw": 1.083
+   },
+   "zonder": {
+    "n": 7,
+    "gem": 1.0,
+    "oordeel": "geen duidelijk verschil",
+    "oud": 0.945,
+    "nieuw": 0.998
+   }
+  },
+  "toon": {
+   "standaard": {
+    "n": 0,
+    "gem": null,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   },
+   "noor": {
+    "n": 0,
+    "gem": null,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   }
+  },
+  "tijdslot": {
+   "04:00": {
+    "n": 3,
+    "gem": 1.23,
+    "oordeel": "weinig data",
+    "oud": 1.0,
+    "nieuw": 1.0
+   },
+   "12:15": {
+    "n": 6,
+    "gem": 0.52,
+    "oordeel": "waarschijnlijk slechter",
+    "oud": 0.703,
+    "nieuw": 0.713
+   },
+   "17:45": {
+    "n": 7,
+    "gem": 1.32,
+    "oordeel": "geen duidelijk verschil",
+    "oud": 1.153,
+    "nieuw": 1.203
+   },
+   "20:30": {
+    "n": 9,
+    "gem": 1.3,
+    "oordeel": "geen duidelijk verschil",
+    "oud": 1.189,
+    "nieuw": 1.21
+   },
+   "22:00": {
+    "n": 6,
+    "gem": 1.01,
+    "oordeel": "geen duidelijk verschil",
+    "oud": 1.0,
+    "nieuw": 1.008
+   }
+  }
+ }
+}

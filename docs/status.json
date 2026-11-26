@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T14:45:56",
+ "updated": "2026-11-26T14:53:49",
  "agents": {
   "verskiezer": {
    "t": "2026-11-25T13:53:17",
@@ -27,8 +27,8 @@
    "state": "error"
   },
   "analist": {
-   "t": "2026-11-25T15:19:23",
-   "task": "Weekanalyse: strategie v11",
+   "t": "2026-11-26T14:53:49",
+   "task": "Weekanalyse: strategie v12",
    "state": "done"
   },
   "community": {
@@ -40,13 +40,13 @@
  "stats": {
   "posts_today": 1,
   "posts_total": 92,
-  "reach_7d": 612,
+  "reach_7d": 664,
   "best_time": "20:30",
   "next_post": "2026-11-26T04:00:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
-  "instagram": 1594,
+  "instagram": 1674,
   "facebook": 4,
   "youtube": 0,
   "tiktok": 0
@@ -56,6 +56,14 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "14:53",
+   "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
+  },
+  {
+   "t": "14:51",
+   "msg": "Statistieken opgehaald voor 19 posts"
+  },
   {
    "t": "14:34",
    "msg": "Dagelijkse run: 10 posts voor 27 en 28 nov gecontroleerd (gemaakt door automaak), reserveteksten voor 28 nov g"
@@ -95,14 +103,6 @@
   {
    "t": "05:15",
    "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
-  },
-  {
-   "t": "04:01",
-   "msg": "2026-11-26-1 online op instagram: Psalm 62:2"
-  },
-  {
-   "t": "04:01",
-   "msg": "2026-11-26-1 ook als story geplaatst"
   }
  ],
  "lampen": [
@@ -151,13 +151,13 @@
    3,
    3,
    3,
-   3,
    4,
    5,
    5,
    5,
    5,
    6,
+   7,
    7,
    7,
    7,
