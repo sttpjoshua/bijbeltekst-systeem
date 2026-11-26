@@ -1576,7 +1576,7 @@
   "id": "n112507010",
   "categorie": "politiek",
   "zwaar": false,
-  "status": "voorstel",
+  "status": "verlopen",
   "opties": [
    {
     "vers_id": "Proverbs-16-9-9",
@@ -1826,5 +1826,52 @@
   "categorie": "winter",
   "zwaar": false,
   "status": "overgeslagen"
+ },
+ {
+  "bron": "NOS",
+  "kop": "Spanjaard Hernández de Cos wordt president ECB, Klaas Knot grijpt naast Europese topfunctie",
+  "link": "https://nos.nl/l/2641111",
+  "t": "2026-11-26T14:57+01:00",
+  "id": "n112617010",
+  "categorie": "politiek",
+  "zwaar": false,
+  "status": "overgeslagen"
+ },
+ {
+  "bron": "NOS",
+  "kop": "Kamer wil 10 miljoen euro voor winternoodpakket Gaza, kabinet heeft geen bezwaar",
+  "link": "https://nos.nl/l/2641107",
+  "t": "2026-11-26T14:27+01:00",
+  "id": "n112617011",
+  "categorie": "politiek",
+  "zwaar": false,
+  "status": "overgeslagen"
+ },
+ {
+  "bron": "NOS",
+  "kop": "Twee Irakezen opgepakt in Duitsland voor voorbereiden terroristische aanslagen",
+  "link": "https://nos.nl/l/2641105",
+  "t": "2026-11-26T14:15+01:00",
+  "id": "n112617012",
+  "categorie": "zwaar",
+  "zwaar": true,
+  "status": "schrijven",
+  "kandidaten": [
+   {
+    "vers_id": "Isaiah-40-8-8",
+    "ref": "Jesaja 40:8",
+    "tekst": "Het gras verdort, de bloem valt af; maar het Woord onzes Gods bestaat in der eeuwigheid."
+   },
+   {
+    "vers_id": "Psalms-127-2-2",
+    "ref": "Psalm 127:2",
+    "tekst": "Het is tevergeefs, dat gijlieden vroeg opstaat, laat opblijft, eet brood der smarten; het is alzo, dat Hij het Zijn beminden als in den slaap geeft."
+   },
+   {
+    "vers_id": "Psalms-130-5-5",
+    "ref": "Psalm 130:5",
+    "tekst": "Ik verwacht den HEERE; mijn ziel verwacht, en ik hoop op Zijn Woord."
+   }
+  ]
  }
 ]
