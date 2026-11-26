@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T22:03:42",
+ "updated": "2026-11-26T04:01:56",
  "agents": {
   "verskiezer": {
    "t": "2026-11-25T13:53:17",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-25T22:03:42",
-   "task": "Postte Spreuken 12:15 op instagram",
+   "t": "2026-11-26T04:01:56",
+   "task": "Postte Psalm 62:2 op instagram",
    "state": "done"
   },
   "controller": {
@@ -38,9 +38,9 @@
   }
  },
  "stats": {
-  "posts_today": 5,
+  "posts_today": 0,
   "posts_total": 91,
-  "reach_7d": 755,
+  "reach_7d": 612,
   "best_time": "20:30",
   "next_post": "2026-11-26T04:00:00"
  },
@@ -56,6 +56,18 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "04:01",
+   "msg": "2026-11-26-1 online op instagram: Psalm 62:2"
+  },
+  {
+   "t": "04:01",
+   "msg": "2026-11-26-1 ook als story geplaatst"
+  },
+  {
+   "t": "23:15",
+   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
   {
    "t": "22:03",
    "msg": "2026-11-25-3 online op instagram: Spreuken 12:15"
@@ -91,18 +103,6 @@
   {
    "t": "17:47",
    "msg": "2026-11-25-2 online op instagram: Jesaja 49:16"
-  },
-  {
-   "t": "17:47",
-   "msg": "2026-11-25-2 ook als story geplaatst"
-  },
-  {
-   "t": "17:46",
-   "msg": "2026-11-25-4 online op facebook: Jesaja 66:13"
-  },
-  {
-   "t": "17:45",
-   "msg": "2026-11-25-5 online op facebook: Psalm 42:6"
   }
  ],
  "lampen": [
@@ -172,7 +172,7 @@
   "formaat": "video"
  },
  "snel_leren": {
-  "dag": 10,
+  "dag": 11,
   "dagen": 14,
   "tot": "2026-11-30"
  }
