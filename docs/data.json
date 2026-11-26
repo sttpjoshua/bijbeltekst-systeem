@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-26T07:01",
+ "gegenereerd": "2026-11-26T07:15",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -19743,20 +19743,6 @@
  ],
  "recente_fouten": [
   {
-   "t": "2026-11-24T07:01:51",
-   "soort": "fout",
-   "tekst": "Politiek nieuws (NOS): \"NAVO stuurt radarvliegtuig naar Polen na vondst van resten Russische raketten\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
-   "code": "nieuws_voorstel",
-   "post": "n112407010"
-  },
-  {
-   "t": "2026-11-24T07:01:51",
-   "soort": "fout",
-   "tekst": "Zwaar nieuws (NOS): \"Milieuramp in Straat van Hormuz: 'Effecten olievervuiling over veertig jaar nog zichtbaar'\". Wil je er een troostende post over? Die gaat dan pas 6 uur na het nieuws online.",
-   "code": "nieuws_voorstel",
-   "post": "n112407011"
-  },
-  {
    "t": "2026-11-24T12:02:02",
    "soort": "fout",
    "tekst": "Politiek nieuws (NOS): \"Natuurijsbanen geopend: marathonschaatsster verpulvert werelduurrecord\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
@@ -19957,9 +19943,9 @@
    "ok": "2026-11-25T21:30"
   },
   "nieuws": {
-   "ok": "2026-11-25T12:01",
+   "ok": "2026-11-26T07:01",
    "laatst_ok": true,
-   "detail": "1 nieuwe aanleidingen, 0 voorstellen"
+   "detail": "6 nieuwe aanleidingen, 0 voorstellen"
   },
   "maken": {
    "ok": "2026-11-25T13:53",
@@ -24139,6 +24125,78 @@
   },
   "recent": [
    {
+    "id": "n112607015",
+    "t": "2026-11-26T04:57+01:00",
+    "bron": "NU.nl",
+    "kop": "Zelfs Vredesraad van Trump is niet optimistisch over vredesproces in Gaza",
+    "link": "https://www.nu.nl/midden-oostenconflict/6417765/zelfs-vredesraad-van-trump-is-niet-optimistisch-over-vredesproces-in-gaza.html",
+    "categorie": "politiek",
+    "zwaar": false,
+    "status": "overgeslagen",
+    "post": null,
+    "opties": null
+   },
+   {
+    "id": "n112607014",
+    "t": "2026-11-26T05:52+01:00",
+    "bron": "NU.nl",
+    "kop": "Rutte en Trump roepen Rusland op om de oorlog in Oekraïne niet groter te maken",
+    "link": "https://www.nu.nl/spanningen-oekraine/6417817/rutte-en-trump-roepen-rusland-op-om-de-oorlog-in-oekraine-niet-groter-te-maken.html",
+    "categorie": "politiek",
+    "zwaar": false,
+    "status": "overgeslagen",
+    "post": null,
+    "opties": null
+   },
+   {
+    "id": "n112607013",
+    "t": "2026-11-25T14:22+01:00",
+    "bron": "NOS",
+    "kop": "25/11 in Nieuwsuur: Crackproblemen • Aanpak neonazi's • EU-top over begroting",
+    "link": "https://nos.nl/l/2640974",
+    "categorie": "politiek",
+    "zwaar": false,
+    "status": "overgeslagen",
+    "post": null,
+    "opties": null
+   },
+   {
+    "id": "n112607012",
+    "t": "2026-11-25T19:20+01:00",
+    "bron": "NOS",
+    "kop": "OM eist tot 5 jaar cel voor fatale mishandeling Somalische asielzoeker in Den Haag",
+    "link": "https://nos.nl/l/2641015",
+    "categorie": "politiek",
+    "zwaar": false,
+    "status": "overgeslagen",
+    "post": null,
+    "opties": null
+   },
+   {
+    "id": "n112607011",
+    "t": "2026-11-25T22:12+01:00",
+    "bron": "NOS",
+    "kop": "Twee Libische officieren overleden na aanval Oekraïne, in Kyiv dode na Russische aanval",
+    "link": "https://nos.nl/l/2641025",
+    "categorie": "politiek",
+    "zwaar": false,
+    "status": "overgeslagen",
+    "post": null,
+    "opties": null
+   },
+   {
+    "id": "n112607010",
+    "t": "2026-11-26T00:56+01:00",
+    "bron": "NOS",
+    "kop": "Onvrede binnen VVD over dubbelfunctie Yesilgöz, zegt oud-partijvoorzitter Van der Wal",
+    "link": "https://nos.nl/l/2641036",
+    "categorie": "politiek",
+    "zwaar": false,
+    "status": "schrijven",
+    "post": null,
+    "opties": null
+   },
+   {
     "id": "n112512010",
     "t": "2026-11-24T14:27+01:00",
     "bron": "NOS",
@@ -24258,7 +24316,7 @@
     "link": "https://nos.nl/l/2640805",
     "categorie": "politiek",
     "zwaar": false,
-    "status": "voorstel",
+    "status": "verlopen",
     "post": null,
     "opties": [
      {
@@ -24825,334 +24883,6 @@
        "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112107010-3-2.jpg",
        "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112107010-3-3.jpg",
        "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112107010-3-4.jpg"
-      ]
-     }
-    ]
-   },
-   {
-    "id": "n112007010",
-    "t": "2026-11-20T04:28+01:00",
-    "bron": "NOS",
-    "kop": "Hoogste cyberadviseur Trump vertrekt na reeks technische storingen",
-    "link": "https://nos.nl/l/2640219",
-    "categorie": "politiek",
-    "zwaar": false,
-    "status": "verlopen",
-    "post": null,
-    "opties": [
-     {
-      "vers_id": "Proverbs-17-22-22",
-      "ref": "Spreuken 17:22",
-      "tekst": "Een blij hart zal een medicijn goed maken; maar een verslagen geest zal het gebeente verdrogen.",
-      "zin": "Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.",
-      "kernwoord": "blij",
-      "betekenis": "Spreuken wist al wat we nu ook weten: blijdschap is goed voor je. Lachen en vreugde helpen je, ook als het zwaar is.",
-      "toepassing": "Zoek vandaag iets om om te lachen, en deel het met iemand.",
-      "brug": "Bij alle onrust: wat blijft staan.",
-      "caption": "Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.\n\n\"Een blij hart zal een medicijn goed maken; maar een verslagen geest zal het gebeente verdrogen.\"\nSpreuken 17:22\n\nBij alle onrust: wat blijft staan. Blijdschap is een cadeautje voor jezelf en anderen.",
-      "media": [
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112007010-1-1.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112007010-1-2.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112007010-1-3.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112007010-1-4.jpg"
-      ]
-     },
-     {
-      "vers_id": "James-3-17-17",
-      "ref": "Jakobus 3:17",
-      "tekst": "Maar de wijsheid, die van boven is, die is ten eerste zuiver, daarna vreedzaam, bescheiden, gezeggelijk, vol van barmhartigheid en van goede vruchten, niet partijdig oordelende, en ongeveinsd.",
-      "zin": "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.",
-      "kernwoord": "vreedzaam",
-      "betekenis": "Jakobus beschrijft hoe echte wijsheid eruitziet. Het is niet slim praten of gelijk krijgen, maar zuiver, vredig, mild en vol goede daden. Je herkent haar aan de vruchten.",
-      "toepassing": "Kies vandaag één eigenschap uit dit vers en oefen erin.",
-      "brug": "Een vast punt in veel geluid.",
-      "caption": "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.\n\n\"Maar de wijsheid, die van boven is, die is ten eerste zuiver, daarna vreedzaam, bescheiden, gezeggelijk, vol van barmhartigheid en van goede vruchten, niet partijdig oordelende, en ongeveinsd.\"\nJakobus 3:17\n\nEen vast punt in veel geluid. Echte wijsheid is vreedzaam en zacht.",
-      "media": [
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112007010-2-1.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112007010-2-2.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112007010-2-3.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112007010-2-4.jpg"
-      ]
-     },
-     {
-      "vers_id": "Psalms-91-1-2",
-      "ref": "Psalm 91:1-2",
-      "tekst": "Die in de schuilplaats des Allerhoogsten is gezeten, die zal vernachten in de schaduw des Almachtigen. Ik zal tot den HEERE zeggen: Mijn Toevlucht en mijn Burg! mijn God, op Welken ik vertrouw!",
-      "zin": "Veel meningen, veel onrust. Even terug naar wat vaststaat.",
-      "kernwoord": "schuilplaats",
-      "betekenis": "Deze psalm beschrijft God als een veilige schuilplaats, een plek waar je mag wonen. Wie dicht bij God blijft, is beschermd. Het begint met uitspreken dat je Hem vertrouwt.",
-      "toepassing": "Zeg vandaag hardop de tweede zin van dit vers als een gebed.",
-      "brug": "Een vast punt in veel geluid.",
-      "caption": "Veel meningen, veel onrust. Even terug naar wat vaststaat.\n\n\"Die in de schuilplaats des Allerhoogsten is gezeten, die zal vernachten in de schaduw des Almachtigen. Ik zal tot den HEERE zeggen: Mijn Toevlucht en mijn Burg! mijn God, op Welken ik vertrouw!\"\nPsalm 91:1-2\n\nEen vast punt in veel geluid. Bij God ben je veilig.",
-      "media": [
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112007010-3-1.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112007010-3-2.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112007010-3-3.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112007010-3-4.jpg"
-      ]
-     }
-    ]
-   },
-   {
-    "id": "n111907011",
-    "t": "2026-11-18T22:58+01:00",
-    "bron": "NU.nl",
-    "kop": "Stunt op Grand Slam of Darts: Wattimena stuurt wereldkampioen Littler naar huis",
-    "link": "https://www.nu.nl/darts/6417028/stunt-op-grand-slam-of-darts-wattimena-stuurt-wereldkampioen-littler-naar-huis.html",
-    "categorie": "sport",
-    "zwaar": false,
-    "status": "geen_plek",
-    "post": null,
-    "opties": null
-   },
-   {
-    "id": "n111907010",
-    "t": "2026-11-19T06:45+01:00",
-    "bron": "NOS",
-    "kop": "Wekdienst 19/11: Xi, Poetin en Trump met elkaar om tafel • Uitspraak in genocidezaak Myanmar",
-    "link": "https://nos.nl/l/2640096",
-    "categorie": "politiek",
-    "zwaar": false,
-    "status": "genegeerd",
-    "post": null,
-    "opties": [
-     {
-      "vers_id": "Hebrews-4-9-9",
-      "ref": "Hebreeën 4:9",
-      "tekst": "Er blijft dan een rust over voor het volk Gods.",
-      "zin": "Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.",
-      "kernwoord": "rust",
-      "betekenis": "De schrijver van Hebreeën zegt dat Gods rust niet voorbij is. Er wacht een diepe rust voor wie bij God hoort, en daar mag je nu al iets van proeven.",
-      "toepassing": "Plan vandaag een rustmoment, en zie het als een voorproefje van Gods rust.",
-      "brug": "Een vast punt in veel geluid.",
-      "caption": "Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.\n\n\"Er blijft dan een rust over voor het volk Gods.\"\nHebreeën 4:9\n\nEen vast punt in veel geluid. Er is rust voor jou.",
-      "media": [
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111907010-1-1.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111907010-1-2.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111907010-1-3.jpg"
-      ]
-     },
-     {
-      "vers_id": "Proverbs-16-32-32",
-      "ref": "Spreuken 16:32",
-      "tekst": "De lankmoedige is beter dan de sterke; en die heerst over zijn geest, dan die een stad inneemt.",
-      "zin": "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.",
-      "kernwoord": "lankmoedige",
-      "betekenis": "Kracht zit niet in spierballen of overwinningen. Spreuken zegt: wie geduld heeft en zijn eigen boosheid kan beheersen, is echt sterk.",
-      "toepassing": "Kies vandaag bij een ergernis bewust voor rust in plaats van een snelle reactie.",
-      "brug": "Bij alle onrust: wat blijft staan.",
-      "caption": "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.\n\n\"De lankmoedige is beter dan de sterke; en die heerst over zijn geest, dan die een stad inneemt.\"\nSpreuken 16:32\n\nBij alle onrust: wat blijft staan. Geduld is sterker dan kracht.",
-      "media": [
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111907010-2-1.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111907010-2-2.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111907010-2-3.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111907010-2-4.jpg"
-      ]
-     },
-     {
-      "vers_id": "Psalms-116-7-7",
-      "ref": "Psalm 116:7",
-      "tekst": "Mijn ziel! keer weder tot uw rust, want de HEERE heeft aan u welgedaan.",
-      "zin": "Veel meningen, veel onrust. Even terug naar wat vaststaat.",
-      "kernwoord": "rust",
-      "betekenis": "De dichter was in grote nood, maar God hielp hem. Nu zegt hij tegen zichzelf: kom tot rust. Je mag ophouden met piekeren, want God heeft het goed gemaakt.",
-      "toepassing": "Zeg vanavond voor het slapengaan: mijn ziel, kom tot rust.",
-      "brug": "Bij alle onrust: wat blijft staan.",
-      "caption": "Veel meningen, veel onrust. Even terug naar wat vaststaat.\n\n\"Mijn ziel! keer weder tot uw rust, want de HEERE heeft aan u welgedaan.\"\nPsalm 116:7\n\nBij alle onrust: wat blijft staan. Je ziel mag tot rust komen bij God.",
-      "media": [
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111907010-3-1.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111907010-3-2.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111907010-3-3.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111907010-3-4.jpg"
-      ]
-     }
-    ]
-   },
-   {
-    "id": "n111812021",
-    "t": "2026-11-18T09:43+01:00",
-    "bron": "NOS",
-    "kop": "Kabinet is na afwenden crisis 'terug bij af', weeffout niet hersteld",
-    "link": "https://nos.nl/l/2639978",
-    "categorie": "politiek",
-    "zwaar": false,
-    "status": "verlopen",
-    "post": null,
-    "opties": [
-     {
-      "vers_id": "Psalms-62-2-2",
-      "ref": "Psalm 62:2",
-      "tekst": "Immers is mijn ziel stil tot God; van Hem is mijn heil.",
-      "zin": "Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.",
-      "kernwoord": "stil",
-      "betekenis": "David is omringd door onrust, maar hij vindt rust bij God. Hij hoeft zichzelf niet te redden. Zijn redding komt van God, en daarom kan hij stil zijn.",
-      "toepassing": "Neem vandaag vijf minuten stilte zonder telefoon, alleen bij God.",
-      "brug": "Bij alle onrust: wat blijft staan.",
-      "caption": "Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.\n\n\"Immers is mijn ziel stil tot God; van Hem is mijn heil.\"\nPsalm 62:2\n\nBij alle onrust: wat blijft staan. Bij God mag je ziel tot rust komen.",
-      "media": [
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812021-1-1.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812021-1-2.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812021-1-3.jpg"
-      ]
-     },
-     {
-      "vers_id": "Ecclesiastes-4-9-10",
-      "ref": "Prediker 4:9-10",
-      "tekst": "Twee zijn beter dan een; want zij hebben een goede beloning van hun arbeid; Want indien zij vallen, de een richt zijn metgezel op; maar wee den ene, die gevallen is, want er is geen tweede om hem op te helpen.",
-      "zin": "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.",
-      "kernwoord": "Twee",
-      "betekenis": "Prediker ziet het nut van samen. Alleen kom je minder ver. En als je valt, heb je iemand nodig die je overeind helpt. Vriendschap is geen luxe.",
-      "toepassing": "Bel of app vandaag iemand die alleen is.",
-      "brug": "Bij alle onrust: wat blijft staan.",
-      "caption": "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.\n\n\"Twee zijn beter dan een; want zij hebben een goede beloning van hun arbeid; Want indien zij vallen, de een richt zijn metgezel op; maar wee den ene, die gevallen is, want er is geen tweede om hem op te helpen.\"\nPrediker 4:9-10\n\nBij alle onrust: wat blijft staan. We hebben elkaar nodig.",
-      "media": [
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812021-2-1.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812021-2-2.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812021-2-3.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812021-2-4.jpg"
-      ]
-     },
-     {
-      "vers_id": "James-3-17-17",
-      "ref": "Jakobus 3:17",
-      "tekst": "Maar de wijsheid, die van boven is, die is ten eerste zuiver, daarna vreedzaam, bescheiden, gezeggelijk, vol van barmhartigheid en van goede vruchten, niet partijdig oordelende, en ongeveinsd.",
-      "zin": "Veel meningen, veel onrust. Even terug naar wat vaststaat.",
-      "kernwoord": "vreedzaam",
-      "betekenis": "Jakobus beschrijft hoe echte wijsheid eruitziet. Het is niet slim praten of gelijk krijgen, maar zuiver, vredig, mild en vol goede daden. Je herkent haar aan de vruchten.",
-      "toepassing": "Kies vandaag één eigenschap uit dit vers en oefen erin.",
-      "brug": "Een vast punt in veel geluid.",
-      "caption": "Veel meningen, veel onrust. Even terug naar wat vaststaat.\n\n\"Maar de wijsheid, die van boven is, die is ten eerste zuiver, daarna vreedzaam, bescheiden, gezeggelijk, vol van barmhartigheid en van goede vruchten, niet partijdig oordelende, en ongeveinsd.\"\nJakobus 3:17\n\nEen vast punt in veel geluid. Echte wijsheid is vreedzaam en zacht.",
-      "media": [
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812021-3-1.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812021-3-2.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812021-3-3.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812021-3-4.jpg"
-      ]
-     }
-    ]
-   },
-   {
-    "id": "n111812020",
-    "t": "2026-11-18T09:54+01:00",
-    "bron": "NOS",
-    "kop": "Man krijgt 27 jaar cel voor beramen van moordaanslag op Trump",
-    "link": "https://nos.nl/l/2639980",
-    "categorie": "zwaar",
-    "zwaar": true,
-    "status": "genegeerd",
-    "post": null,
-    "opties": [
-     {
-      "vers_id": "Psalms-130-5-5",
-      "ref": "Psalm 130:5",
-      "tekst": "Ik verwacht den HEERE; mijn ziel verwacht, en ik hoop op Zijn Woord.",
-      "zin": "Er gebeurt veel in de wereld dat zwaar is. Even stil, samen.",
-      "kernwoord": "verwacht",
-      "betekenis": "De dichter wacht op God, zoals een wachter op de ochtend wacht. Wachten is moeilijk, maar hij weet dat God komt. Zijn hoop rust op wat God beloofd heeft.",
-      "toepassing": "Waar wacht je op? Lees vandaag een belofte uit de Bijbel en houd die vast.",
-      "brug": "Als er geen woorden zijn: dit.",
-      "caption": "Er gebeurt veel in de wereld dat zwaar is. Even stil, samen.\n\n\"Ik verwacht den HEERE; mijn ziel verwacht, en ik hoop op Zijn Woord.\"\nPsalm 130:5\n\nAls er geen woorden zijn: dit. Wachten op God is wachten met hoop.",
-      "media": [
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812020-1-1.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812020-1-2.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812020-1-3.jpg"
-      ]
-     },
-     {
-      "vers_id": "John-16-33-33",
-      "ref": "Johannes 16:33",
-      "tekst": "Deze dingen heb Ik tot u gesproken, opdat gij in Mij vrede hebt. In de wereld zult gij verdrukking hebben, maar hebt goeden moed, Ik heb de wereld overwonnen.",
-      "zin": "Soms is het nieuws te zwaar voor woorden. Dan is er dit.",
-      "kernwoord": "overwonnen",
-      "betekenis": "Jezus belooft geen makkelijk leven. Hij zegt eerlijk: je zult het zwaar hebben. Maar Hij geeft ook moed: Hij heeft de wereld al overwonnen. Bij Hem is vrede.",
-      "toepassing": "Wat is zwaar op dit moment? Zeg vandaag: Jezus heeft dit al overwonnen.",
-      "brug": "Als er geen woorden zijn: dit.",
-      "caption": "Soms is het nieuws te zwaar voor woorden. Dan is er dit.\n\n\"Deze dingen heb Ik tot u gesproken, opdat gij in Mij vrede hebt. In de wereld zult gij verdrukking hebben, maar hebt goeden moed, Ik heb de wereld overwonnen.\"\nJohannes 16:33\n\nAls er geen woorden zijn: dit. Het is zwaar, maar Jezus heeft gewonnen.",
-      "media": [
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812020-2-1.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812020-2-2.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812020-2-3.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812020-2-4.jpg"
-      ]
-     },
-     {
-      "vers_id": "Psalms-23-2-3",
-      "ref": "Psalm 23:2-3",
-      "tekst": "Hij doet mij nederliggen in grazige weiden; Hij voert mij zachtjes aan zeer stille wateren. Hij verkwikt mijn ziel; Hij leidt mij in het spoor der gerechtigheid, om Zijns Naams wil.",
-      "zin": "Voor iedereen die vandaag geraakt is door wat er gebeurde.",
-      "kernwoord": "verkwikt",
-      "betekenis": "David ziet God als een herder die precies weet wat zijn schapen nodig hebben: rust, eten, stil water. God zorgt voor je, ook voor je ziel.",
-      "toepassing": "Zoek vandaag een rustige plek buiten en sta even stil bij Gods zorg.",
-      "brug": "Bij zwaar nieuws: troost die er is.",
-      "caption": "Voor iedereen die vandaag geraakt is door wat er gebeurde.\n\n\"Hij doet mij nederliggen in grazige weiden; Hij voert mij zachtjes aan zeer stille wateren. Hij verkwikt mijn ziel; Hij leidt mij in het spoor der gerechtigheid, om Zijns Naams wil.\"\nPsalm 23:2-3\n\nBij zwaar nieuws: troost die er is. God weet wat jouw ziel nodig heeft.",
-      "media": [
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812020-3-1.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812020-3-2.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812020-3-3.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111812020-3-4.jpg"
-      ]
-     }
-    ]
-   },
-   {
-    "id": "n111807010",
-    "t": "2026-11-17T19:45+01:00",
-    "bron": "NOS",
-    "kop": "Verdachte dodelijke steekpartij Amsterdam tijdens strafzaak aangevallen in rechtszaal",
-    "link": "https://nos.nl/l/2639924",
-    "categorie": "politiek",
-    "zwaar": false,
-    "status": "verlopen",
-    "post": null,
-    "opties": [
-     {
-      "vers_id": "Philippians-4-6-7",
-      "ref": "Filippenzen 4:6-7",
-      "tekst": "Weest in geen ding bezorgd; maar laat uw begeerten in alles, door bidden en smeken, met dankzegging bekend worden bij God; En de vrede Gods, die alle verstand te boven gaat, zal uw harten en uw zinnen bewaren in Christus Jezus.",
-      "zin": "Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.",
-      "kernwoord": "bezorgd",
-      "betekenis": "Paulus geeft een recept tegen zorgen: bid, vraag, en dank. Dan geeft God vrede die je niet kunt uitleggen. Die vrede bewaakt je hart en je gedachten.",
-      "toepassing": "Schrijf je grootste zorg op, bid erover, en noem er één ding bij waar je dankbaar voor bent.",
-      "brug": "Bij alle onrust: wat blijft staan.",
-      "caption": "Er wordt veel gesproken en besloten deze dagen. Bid voor wijsheid bij wie leiding geeft.\n\n\"Weest in geen ding bezorgd; maar laat uw begeerten in alles, door bidden en smeken, met dankzegging bekend worden bij God; En de vrede Gods, die alle verstand te boven gaat, zal uw harten en uw zinnen bewaren in Christus Jezus.\"\nFilippenzen 4:6-7\n\nBij alle onrust: wat blijft staan. Zorgen mag je omzetten in gebed.\n\nWelke zorg breng jij vandaag bij God?",
-      "media": [
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111807010-1-1.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111807010-1-2.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111807010-1-3.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111807010-1-4.jpg"
-      ]
-     },
-     {
-      "vers_id": "Psalms-62-2-2",
-      "ref": "Psalm 62:2",
-      "tekst": "Immers is mijn ziel stil tot God; van Hem is mijn heil.",
-      "zin": "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.",
-      "kernwoord": "stil",
-      "betekenis": "David is omringd door onrust, maar hij vindt rust bij God. Hij hoeft zichzelf niet te redden. Zijn redding komt van God, en daarom kan hij stil zijn.",
-      "toepassing": "Neem vandaag vijf minuten stilte zonder telefoon, alleen bij God.",
-      "brug": "Bij alle onrust: wat blijft staan.",
-      "caption": "Wat er ook gebeurt in Den Haag of in de wereld, dit blijft staan.\n\n\"Immers is mijn ziel stil tot God; van Hem is mijn heil.\"\nPsalm 62:2\n\nBij alle onrust: wat blijft staan. Bij God mag je ziel tot rust komen.\n\nWat helpt jou om stil te worden?",
-      "media": [
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111807010-2-1.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111807010-2-2.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111807010-2-3.jpg"
-      ]
-     },
-     {
-      "vers_id": "James-3-17-17",
-      "ref": "Jakobus 3:17",
-      "tekst": "Maar de wijsheid, die van boven is, die is ten eerste zuiver, daarna vreedzaam, bescheiden, gezeggelijk, vol van barmhartigheid en van goede vruchten, niet partijdig oordelende, en ongeveinsd.",
-      "zin": "Veel meningen, veel onrust. Even terug naar wat vaststaat.",
-      "kernwoord": "vreedzaam",
-      "betekenis": "Jakobus beschrijft hoe echte wijsheid eruitziet. Het is niet slim praten of gelijk krijgen, maar zuiver, vredig, mild en vol goede daden. Je herkent haar aan de vruchten.",
-      "toepassing": "Kies vandaag één eigenschap uit dit vers en oefen erin.",
-      "brug": "Bij alle onrust: wat blijft staan.",
-      "caption": "Veel meningen, veel onrust. Even terug naar wat vaststaat.\n\n\"Maar de wijsheid, die van boven is, die is ten eerste zuiver, daarna vreedzaam, bescheiden, gezeggelijk, vol van barmhartigheid en van goede vruchten, niet partijdig oordelende, en ongeveinsd.\"\nJakobus 3:17\n\nBij alle onrust: wat blijft staan. Echte wijsheid is vreedzaam en zacht.\n\nWelke eigenschap uit dit vers zou jij willen groeien?",
-      "media": [
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111807010-3-1.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111807010-3-2.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111807010-3-3.jpg",
-       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n111807010-3-4.jpg"
       ]
      }
     ]
