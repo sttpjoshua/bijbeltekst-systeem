@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-26T20:15",
+ "gegenereerd": "2026-11-26T20:31",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -2003,7 +2003,7 @@
    "ref": "Hebreeën 13:6",
    "tekst": "Zodat wij vrijmoediglijk durven zeggen: De Heere is mij een Helper, en ik zal niet vrezen, wat mij een mens zal doen.",
    "hook": "Voor iedereen die opziet tegen een gesprek met iemand.",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "schaduw_blauw",
     "thema": "moed",
@@ -2051,8 +2051,14 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-26-3-3.jpg"
    ],
    "thumb": "thumbs/2026-11-26-3.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "instagram",
+    "facebook"
+   ],
+   "links": {
+    "instagram": "https://www.instagram.com/p/DgN3JgvEbpf/",
+    "facebook": "https://www.facebook.com/1015160368352770_122135793902879910"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -2082,11 +2088,14 @@
     "video_uitleg": "n.v.t."
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "instagram": "2026-11-26T20:31+01:00",
+    "facebook": "2026-11-26T20:31+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": null,
-   "online": null
+   "online": "2026-11-26T20:31+01:00"
   },
   {
    "id": "2026-11-26-2",
@@ -19905,21 +19914,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-24T15:50:10",
-   "soort": "info",
-   "tekst": "Statistieken opgehaald voor 17 posts"
-  },
-  {
-   "t": "2026-11-24T15:51:26",
-   "soort": "info",
-   "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
-  },
-  {
-   "t": "2026-11-24T17:46:35",
-   "soort": "info",
-   "tekst": "2026-11-24-5 ook als story geplaatst"
-  },
-  {
    "t": "2026-11-24T17:46:35",
    "soort": "info",
    "tekst": "2026-11-24-5 online op instagram: Psalm 91:1-2"
@@ -20207,6 +20201,21 @@
    "t": "2026-11-26T19:02:45",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-26T20:31:48",
+   "soort": "info",
+   "tekst": "2026-11-26-3 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-26T20:31:48",
+   "soort": "info",
+   "tekst": "2026-11-26-3 online op instagram: Hebreeën 13:6"
+  },
+  {
+   "t": "2026-11-26T20:31:56",
+   "soort": "info",
+   "tekst": "2026-11-26-3 online op facebook: Hebreeën 13:6"
   }
  ],
  "recente_fouten": [
@@ -20351,9 +20360,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-26T17:47",
+   "ok": "2026-11-26T20:31",
    "laatst_ok": true,
-   "detail": "2 Korinthe 4:16 geplaatst"
+   "detail": "Hebreeën 13:6 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-26T14:53",
@@ -20385,9 +20394,9 @@
    "fout": "2026-11-26T20:01"
   },
   "facebook": {
-   "ok": "2026-11-26T12:17",
+   "ok": "2026-11-26T20:31",
    "laatst_ok": true,
-   "detail": "1 Petrus 5:7 geplaatst"
+   "detail": "Hebreeën 13:6 geplaatst"
   },
   "statistieken": {
    "ok": "2026-11-26T14:53",
@@ -20560,7 +20569,7 @@
  ],
  "weken": {
   "deze": {
-   "posts": 32,
+   "posts": 33,
    "reach": 576,
    "views": 627,
    "likes": 17,
@@ -21184,7 +21193,7 @@
   "tot": "2026-11-30",
   "dag": 11,
   "dagen": 14,
-  "online": 52,
+  "online": 53,
   "gemeten": 23
  },
  "voorraad": {
@@ -24588,7 +24597,7 @@
   ],
   "zonder_tekst": 301,
   "mac": {
-   "t": "2026-11-26T15:38+00:00",
+   "t": "2026-11-26T19:13+00:00",
    "model": "Qwen2.5-14B-Instruct-4bit",
    "versie": "5",
    "laatste_ronde": {
@@ -25376,8 +25385,8 @@
      },
      {
       "optie": "schaduw_blauw",
-      "online": 0,
-      "gepland": 1,
+      "online": 1,
+      "gepland": 0,
       "n": 1,
       "gem": 0.88,
       "oordeel": "weinig data"
@@ -25397,19 +25406,6 @@
    }
   ],
   "komend": [
-   {
-    "id": "2026-11-26-3",
-    "ref": "Hebreeën 13:6",
-    "datum": "2026-11-26",
-    "tijdslot": "20:30",
-    "tests": [
-     {
-      "dimensie": "huisstijl",
-      "optie": "schaduw_blauw",
-      "bron": "experiment"
-     }
-    ]
-   },
    {
     "id": "2026-11-27-5",
     "ref": "Psalm 138:3",

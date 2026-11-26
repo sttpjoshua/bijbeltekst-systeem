@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T20:15:36",
+ "updated": "2026-11-26T20:31:56",
  "agents": {
   "verskiezer": {
    "t": "2026-11-25T13:53:17",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-26T17:47:54",
-   "task": "Postte 2 Korinthe 4:16 op instagram",
+   "t": "2026-11-26T20:31:56",
+   "task": "Postte Hebreeën 13:6 op facebook",
    "state": "done"
   },
   "controller": {
@@ -38,8 +38,8 @@
   }
  },
  "stats": {
-  "posts_today": 2,
-  "posts_total": 93,
+  "posts_today": 3,
+  "posts_total": 94,
   "reach_7d": 664,
   "best_time": "20:30",
   "next_post": "2026-11-26T04:00:00"
@@ -56,6 +56,18 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "20:31",
+   "msg": "2026-11-26-3 online op facebook: Hebreeën 13:6"
+  },
+  {
+   "t": "20:31",
+   "msg": "2026-11-26-3 online op instagram: Hebreeën 13:6"
+  },
+  {
+   "t": "20:31",
+   "msg": "2026-11-26-3 ook als story geplaatst"
+  },
   {
    "t": "19:02",
    "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
@@ -91,18 +103,6 @@
   {
    "t": "12:17",
    "msg": "2026-11-26-4 online op facebook: 1 Petrus 5:7"
-  },
-  {
-   "t": "12:17",
-   "msg": "2026-11-26-2 online op facebook: 2 Korinthe 4:16"
-  },
-  {
-   "t": "12:16",
-   "msg": "2026-11-26-5 online op facebook: Handelingen 1:8"
-  },
-  {
-   "t": "12:16",
-   "msg": "2026-11-26-5 online op instagram: Handelingen 1:8"
   }
  ],
  "lampen": [
