@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-26T17:30",
+ "gegenereerd": "2026-11-26T17:47",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -2094,7 +2094,7 @@
    "ref": "2 Korinthe 4:16",
    "tekst": "Daarom vertragen wij niet; maar hoewel onze uitwendige mens verdorven wordt, zo wordt nochtans de inwendige vernieuwd van dag tot dag.",
    "hook": "Lees dit vers en let op de woorden 'van dag tot dag'.",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "zand",
     "thema": "troost",
@@ -2141,10 +2141,12 @@
    ],
    "thumb": "thumbs/2026-11-26-2.jpg",
    "platformen": [
-    "facebook"
+    "facebook",
+    "instagram"
    ],
    "links": {
-    "facebook": "https://www.facebook.com/1362041885946329"
+    "facebook": "https://www.facebook.com/1362041885946329",
+    "instagram": "https://www.instagram.com/reel/DgNkQxsBeUm/"
    },
    "totaal": {
     "views": 0,
@@ -2206,7 +2208,8 @@
     }
    },
    "pub": {
-    "facebook": "2026-11-26T12:17+01:00"
+    "facebook": "2026-11-26T12:17+01:00",
+    "instagram": "2026-11-26T17:47+01:00"
    },
    "gemist": [],
    "nood": false,
@@ -19881,16 +19884,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-24T14:33:43",
-   "soort": "info",
-   "tekst": "Materiaal-repo niet gekoppeld (add_repo ontbreekt in deze sessie); GitHub Actions vult muziek aan"
-  },
-  {
-   "t": "2026-11-24T14:34:11",
-   "soort": "info",
-   "tekst": "Zelf opgelost: nieuws werd soms ten onrechte als politiek gezien omdat 'nsc' midden in woorden zat (marathonschaatsster, Winschoten, miljardenschikking) en 'partij' in steekpartij. Korte woorden tellen nu alleen aan het begin van een woord."
-  },
-  {
    "t": "2026-11-24T14:35:23",
    "soort": "info",
    "tekst": "Dagelijkse run: 5 posts voor morgen (25 nov) en 5 voor overmorgen (26 nov) staan klaar (door het systeem gemaakt), reserveverzen voor 26 nov ingevuld"
@@ -20183,6 +20176,16 @@
    "t": "2026-11-26T14:53:49",
    "soort": "info",
    "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
+  },
+  {
+   "t": "2026-11-26T17:47:54",
+   "soort": "info",
+   "tekst": "2026-11-26-2 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-26T17:47:54",
+   "soort": "info",
+   "tekst": "2026-11-26-2 online op instagram: 2 Korinthe 4:16"
   }
  ],
  "recente_fouten": [
@@ -20327,9 +20330,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-26T12:16",
+   "ok": "2026-11-26T17:47",
    "laatst_ok": true,
-   "detail": "Handelingen 1:8 geplaatst"
+   "detail": "2 Korinthe 4:16 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-26T14:53",
@@ -20536,7 +20539,7 @@
  ],
  "weken": {
   "deze": {
-   "posts": 31,
+   "posts": 32,
    "reach": 576,
    "views": 627,
    "likes": 17,
@@ -21160,7 +21163,7 @@
   "tot": "2026-11-30",
   "dag": 11,
   "dagen": 14,
-  "online": 51,
+  "online": 52,
   "gemeten": 23
  },
  "voorraad": {
@@ -25232,8 +25235,8 @@
      },
      {
       "optie": "zand",
-      "online": 9,
-      "gepland": 7,
+      "online": 10,
+      "gepland": 6,
       "n": 4,
       "gem": 1.38,
       "oordeel": "weinig data"

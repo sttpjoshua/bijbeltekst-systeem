@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T17:30:49",
+ "updated": "2026-11-26T17:47:54",
  "agents": {
   "verskiezer": {
    "t": "2026-11-25T13:53:17",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-26T12:17:14",
-   "task": "Postte 1 Petrus 5:7 op facebook",
+   "t": "2026-11-26T17:47:54",
+   "task": "Postte 2 Korinthe 4:16 op instagram",
    "state": "done"
   },
   "controller": {
@@ -38,8 +38,8 @@
   }
  },
  "stats": {
-  "posts_today": 1,
-  "posts_total": 92,
+  "posts_today": 2,
+  "posts_total": 93,
   "reach_7d": 664,
   "best_time": "20:30",
   "next_post": "2026-11-26T04:00:00"
@@ -56,6 +56,14 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "17:47",
+   "msg": "2026-11-26-2 online op instagram: 2 Korinthe 4:16"
+  },
+  {
+   "t": "17:47",
+   "msg": "2026-11-26-2 ook als story geplaatst"
+  },
   {
    "t": "14:53",
    "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
@@ -95,14 +103,6 @@
   {
    "t": "12:16",
    "msg": "2026-11-26-5 ook als story geplaatst"
-  },
-  {
-   "t": "12:02",
-   "msg": "Nieuws (politiek, NOS): \"Onvrede binnen VVD over dubbelfunctie Yesilgöz, zegt oud-partijvoorzitter Van der Wal"
-  },
-  {
-   "t": "05:15",
-   "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
   }
  ],
  "lampen": [
