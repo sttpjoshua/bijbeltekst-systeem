@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-26T05:00",
+ "gegenereerd": "2026-11-26T05:15",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -2141,8 +2141,26 @@
    "links": {
     "instagram": "https://www.instagram.com/p/DgMF35cms8K/"
    },
-   "totaal": {},
-   "per_platform": {},
+   "totaal": {
+    "views": 0,
+    "reach": 0,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0
+   },
+   "per_platform": {
+    "instagram": {
+     "views": 0,
+     "reach": 0,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": 0,
+     "t": null
+    }
+   },
    "score": {},
    "keuzebron": {
     "huisstijl": "experiment",
@@ -2169,7 +2187,19 @@
     "tijdslot": "experiment",
     "video_uitleg": "n.v.t."
    },
-   "momenten": {},
+   "momenten": {
+    "instagram": {
+     "1u": {
+      "views": 0,
+      "reach": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0
+     }
+    }
+   },
    "pub": {
     "instagram": "2026-11-26T04:01+01:00"
    },
@@ -19405,11 +19435,6 @@
   {
    "t": "2026-11-24T04:02:09",
    "soort": "info",
-   "tekst": "2026-11-24-1 ook als story geplaatst"
-  },
-  {
-   "t": "2026-11-24T04:02:09",
-   "soort": "info",
    "tekst": "2026-11-24-1 online op instagram: Jesaja 43:4"
   },
   {
@@ -19709,6 +19734,11 @@
    "t": "2026-11-26T04:01:56",
    "soort": "info",
    "tekst": "2026-11-26-1 online op instagram: Psalm 62:2"
+  },
+  {
+   "t": "2026-11-26T05:15:39",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
   }
  ],
  "recente_fouten": [
