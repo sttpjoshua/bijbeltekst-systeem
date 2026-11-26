@@ -1,33 +1,5 @@
 [
  {
-  "t": "2026-11-12T22:03:20",
-  "soort": "info",
-  "tekst": "2026-11-12-5 ook als story geplaatst"
- },
- {
-  "t": "2026-11-12T22:03:20",
-  "soort": "info",
-  "tekst": "2026-11-12-5 online op instagram: 1 Johannes 4:7"
- },
- {
-  "t": "2026-11-12T23:15:45",
-  "soort": "info",
-  "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
- },
- {
-  "t": "2026-11-13T07:01:26",
-  "soort": "fout",
-  "tekst": "Politiek nieuws (NOS): \"Crisisoverleg Jetten over toekomst coalitie, wachten op duidelijkheid VVD\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
-  "code": "nieuws_voorstel",
-  "post": "n111307010",
-  "opgelost": true
- },
- {
-  "t": "2026-11-13T07:33:16",
-  "soort": "info",
-  "tekst": "2026-11-13-5 ook als story geplaatst"
- },
- {
   "t": "2026-11-13T07:33:16",
   "soort": "info",
   "tekst": "2026-11-13-5 online op instagram: Psalm 46:2"
@@ -2553,5 +2525,30 @@
   "tekst": "Nieuws (politiek, NOS): \"Onvrede binnen VVD over dubbelfunctie Yesilgöz, zegt oud-partijvoorzitter Van der Wal\". Voorstel in de persoonlijke stem staat klaar; gaat alleen online met jouw akkoord.",
   "code": "nieuws_voorstel",
   "post": "n112607010"
+ },
+ {
+  "t": "2026-11-26T12:16:50",
+  "soort": "info",
+  "tekst": "2026-11-26-5 ook als story geplaatst"
+ },
+ {
+  "t": "2026-11-26T12:16:50",
+  "soort": "info",
+  "tekst": "2026-11-26-5 online op instagram: Handelingen 1:8"
+ },
+ {
+  "t": "2026-11-26T12:16:59",
+  "soort": "info",
+  "tekst": "2026-11-26-5 online op facebook: Handelingen 1:8"
+ },
+ {
+  "t": "2026-11-26T12:17:06",
+  "soort": "info",
+  "tekst": "2026-11-26-2 online op facebook: 2 Korinthe 4:16"
+ },
+ {
+  "t": "2026-11-26T12:17:14",
+  "soort": "info",
+  "tekst": "2026-11-26-4 online op facebook: 1 Petrus 5:7"
  }
 ]

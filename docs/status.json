@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T12:02:11",
+ "updated": "2026-11-26T12:17:14",
  "agents": {
   "verskiezer": {
    "t": "2026-11-25T13:53:17",
@@ -17,13 +17,13 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-26T04:01:56",
-   "task": "Postte Psalm 62:2 op instagram",
+   "t": "2026-11-26T12:17:14",
+   "task": "Postte 1 Petrus 5:7 op facebook",
    "state": "done"
   },
   "controller": {
-   "t": "2026-11-25T07:01:22",
-   "task": "Politiek nieuws (NOS): \"Wekdienst 25/11: NAVO-chef Rutte praat met Tru",
+   "t": "2026-11-26T12:02:20",
+   "task": "Nieuws (politiek, NOS): \"Onvrede binnen VVD over dubbelfunctie Yesilgö",
    "state": "error"
   },
   "analist": {
@@ -38,8 +38,8 @@
   }
  },
  "stats": {
-  "posts_today": 0,
-  "posts_total": 91,
+  "posts_today": 1,
+  "posts_total": 92,
   "reach_7d": 612,
   "best_time": "20:30",
   "next_post": "2026-11-26T04:00:00"
@@ -56,6 +56,30 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "12:17",
+   "msg": "2026-11-26-4 online op facebook: 1 Petrus 5:7"
+  },
+  {
+   "t": "12:17",
+   "msg": "2026-11-26-2 online op facebook: 2 Korinthe 4:16"
+  },
+  {
+   "t": "12:16",
+   "msg": "2026-11-26-5 online op facebook: Handelingen 1:8"
+  },
+  {
+   "t": "12:16",
+   "msg": "2026-11-26-5 online op instagram: Handelingen 1:8"
+  },
+  {
+   "t": "12:16",
+   "msg": "2026-11-26-5 ook als story geplaatst"
+  },
+  {
+   "t": "12:02",
+   "msg": "Nieuws (politiek, NOS): \"Onvrede binnen VVD over dubbelfunctie Yesilgöz, zegt oud-partijvoorzitter Van der Wal"
+  },
   {
    "t": "05:15",
    "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
@@ -79,30 +103,6 @@
   {
    "t": "22:03",
    "msg": "2026-11-25-3 ook als story geplaatst"
-  },
-  {
-   "t": "22:02",
-   "msg": "2026-11-25-2 online op facebook: Jesaja 49:16"
-  },
-  {
-   "t": "21:45",
-   "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
-  },
-  {
-   "t": "20:32",
-   "msg": "2026-11-25-1 online op instagram: Galaten 4:7"
-  },
-  {
-   "t": "20:32",
-   "msg": "2026-11-25-1 ook als story geplaatst"
-  },
-  {
-   "t": "19:02",
-   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
-   "t": "18:45",
-   "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
   }
  ],
  "lampen": [
