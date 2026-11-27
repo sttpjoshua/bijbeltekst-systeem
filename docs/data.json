@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-27T17:31",
+ "gegenereerd": "2026-11-27T17:47",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1959,7 +1959,7 @@
    "ref": "Psalm 145:18",
    "tekst": "De HEERE is nabij allen, die Hem aanroepen, allen, die Hem aanroepen in der waarheid.",
    "hook": "Hij is dichtbij.",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "roze",
     "thema": "troost",
@@ -2006,10 +2006,12 @@
    ],
    "thumb": "thumbs/2026-11-27-3.jpg",
    "platformen": [
-    "facebook"
+    "facebook",
+    "instagram"
    ],
    "links": {
-    "facebook": "https://www.facebook.com/2679319629179501"
+    "facebook": "https://www.facebook.com/2679319629179501",
+    "instagram": "https://www.instagram.com/reel/DgQJALXqWAx/"
    },
    "totaal": {
     "views": 0,
@@ -2071,7 +2073,8 @@
     }
    },
    "pub": {
-    "facebook": "2026-11-27T12:17+01:00"
+    "facebook": "2026-11-27T12:17+01:00",
+    "instagram": "2026-11-27T17:46+01:00"
    },
    "gemist": [],
    "nood": false,
@@ -2282,8 +2285,12 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-27-1.mp4"
    ],
    "thumb": "thumbs/2026-11-27-1.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "facebook"
+   ],
+   "links": {
+    "facebook": "https://www.facebook.com/1728770825335196"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -2313,11 +2320,13 @@
     "video_uitleg": "vaste regel"
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "facebook": "2026-11-27T17:47+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": null,
-   "online": null
+   "online": "2026-11-27T17:47+01:00"
   },
   {
    "id": "2026-11-26-5",
@@ -20923,21 +20932,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-25T13:53:41",
-   "soort": "info",
-   "tekst": "Zelfstandig 5 posts klaargezet voor 2026-11-28 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "2026-11-25T14:35:39",
-   "soort": "info",
-   "tekst": "Materiaal-repo niet gekoppeld in deze run (add_repo ontbreekt); GitHub Actions vult muziek zo nodig aan."
-  },
-  {
-   "t": "2026-11-25T14:35:39",
-   "soort": "info",
-   "tekst": "Zelf opgelost: nieuws verving op 25 nov post 2026-11-25-3 (Galaten 2:20) terwijl die al op Facebook stond. Nieuws kiest nu geen post meer die al ergens online staat, en kijkt ook naar het Facebook-tijdstip. Let op: de Facebook-cijfers van die post horen bij Galaten 2:20, niet bij Spreuken 12:15."
-  },
-  {
    "t": "2026-11-25T14:35:39",
    "soort": "info",
    "tekst": "Dagelijkse run: 10 posts gecontroleerd voor 26 en 27 nov (al gemaakt door het systeem), reserveverzen voor 27 nov geschreven"
@@ -21227,6 +21221,21 @@
    "t": "2026-11-27T14:53:13",
    "soort": "info",
    "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
+  },
+  {
+   "t": "2026-11-27T17:46:51",
+   "soort": "info",
+   "tekst": "2026-11-27-3 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-27T17:46:51",
+   "soort": "info",
+   "tekst": "2026-11-27-3 online op instagram: Psalm 145:18"
+  },
+  {
+   "t": "2026-11-27T17:47:04",
+   "soort": "info",
+   "tekst": "2026-11-27-1 online op facebook: Hebreeën 4:15"
   }
  ],
  "recente_fouten": [
@@ -21378,9 +21387,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-27T12:16",
+   "ok": "2026-11-27T17:46",
    "laatst_ok": true,
-   "detail": "Psalm 138:3 geplaatst"
+   "detail": "Psalm 145:18 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-27T14:52",
@@ -21412,9 +21421,9 @@
    "fout": "2026-11-27T17:01"
   },
   "facebook": {
-   "ok": "2026-11-27T12:17",
+   "ok": "2026-11-27T17:47",
    "laatst_ok": true,
-   "detail": "Psalm 145:18 geplaatst"
+   "detail": "Hebreeën 4:15 geplaatst"
   },
   "statistieken": {
    "ok": "2026-11-27T14:53",
@@ -21593,7 +21602,7 @@
  ],
  "weken": {
   "deze": {
-   "posts": 31,
+   "posts": 32,
    "reach": 461,
    "views": 505,
    "likes": 14,
@@ -22217,7 +22226,7 @@
   "tot": "2026-11-30",
   "dag": 12,
   "dagen": 14,
-  "online": 56,
+  "online": 57,
   "gemeten": 23
  },
  "voorraad": {
@@ -26270,8 +26279,8 @@
      },
      {
       "optie": "roze",
-      "online": 0,
-      "gepland": 2,
+      "online": 1,
+      "gepland": 1,
       "n": 2,
       "gem": 1.75,
       "oordeel": "weinig data"
@@ -26371,24 +26380,6 @@
    }
   ],
   "komend": [
-   {
-    "id": "2026-11-27-1",
-    "ref": "Hebreeën 4:15",
-    "datum": "2026-11-27",
-    "tijdslot": "20:30",
-    "tests": [
-     {
-      "dimensie": "huisstijl",
-      "optie": "avond",
-      "bron": "experiment"
-     },
-     {
-      "dimensie": "reel_stijl",
-      "optie": "markeren",
-      "bron": "test markeren"
-     }
-    ]
-   },
    {
     "id": "2026-11-27-4",
     "ref": "Mattheüs 7:3",

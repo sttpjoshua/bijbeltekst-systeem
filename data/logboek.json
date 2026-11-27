@@ -1,23 +1,5 @@
 [
  {
-  "t": "2026-11-14T07:01:23",
-  "soort": "fout",
-  "tekst": "Politiek nieuws (NOS): \"Italiaanse minister: scholen niet meteen dicht na een bommelding\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
-  "code": "nieuws_voorstel",
-  "post": "n111407010",
-  "opgelost": true
- },
- {
-  "t": "2026-11-14T07:32:13",
-  "soort": "info",
-  "tekst": "2026-11-14-2 ook als story geplaatst"
- },
- {
-  "t": "2026-11-14T07:32:13",
-  "soort": "info",
-  "tekst": "2026-11-14-2 online op instagram: Sefanja 3:17"
- },
- {
   "t": "2026-11-14T07:32:22",
   "soort": "info",
   "tekst": "2026-11-14-1 online op facebook: Spreuken 4:7"
@@ -2552,5 +2534,20 @@
   "t": "2026-11-27T14:53:13",
   "soort": "info",
   "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
+ },
+ {
+  "t": "2026-11-27T17:46:51",
+  "soort": "info",
+  "tekst": "2026-11-27-3 ook als story geplaatst"
+ },
+ {
+  "t": "2026-11-27T17:46:51",
+  "soort": "info",
+  "tekst": "2026-11-27-3 online op instagram: Psalm 145:18"
+ },
+ {
+  "t": "2026-11-27T17:47:04",
+  "soort": "info",
+  "tekst": "2026-11-27-1 online op facebook: Hebreeën 4:15"
  }
 ]
