@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-27T04:45",
+ "gegenereerd": "2026-11-27T05:01",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1603,8 +1603,26 @@
    "links": {
     "instagram": "https://www.instagram.com/p/DgOqou8lWn3/"
    },
-   "totaal": {},
-   "per_platform": {},
+   "totaal": {
+    "views": 0,
+    "reach": 0,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0
+   },
+   "per_platform": {
+    "instagram": {
+     "views": 0,
+     "reach": 0,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": 0,
+     "t": null
+    }
+   },
    "score": {},
    "keuzebron": {
     "huisstijl": "ochtend",
@@ -1631,7 +1649,19 @@
     "tijdslot": "experiment",
     "video_uitleg": "n.v.t."
    },
-   "momenten": {},
+   "momenten": {
+    "instagram": {
+     "1u": {
+      "views": 0,
+      "reach": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0
+     }
+    }
+   },
    "pub": {
     "instagram": "2026-11-27T04:01+01:00"
    },
@@ -20021,11 +20051,6 @@
   {
    "t": "2026-11-24T22:04:59",
    "soort": "info",
-   "tekst": "2026-11-24-3 ook als story geplaatst"
-  },
-  {
-   "t": "2026-11-24T22:04:59",
-   "soort": "info",
    "tekst": "2026-11-24-3 online op instagram: 2 Timotheüs 4:7"
   },
   {
@@ -20321,6 +20346,11 @@
    "t": "2026-11-27T04:01:30",
    "soort": "info",
    "tekst": "2026-11-27-2 online op instagram: Jesaja 43:1"
+  },
+  {
+   "t": "2026-11-27T05:01:10",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
   }
  ],
  "recente_fouten": [
