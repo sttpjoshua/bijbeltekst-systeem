@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-27T21:30",
+ "gegenereerd": "2026-11-27T21:41",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -2315,8 +2315,8 @@
     "instagram": "https://www.instagram.com/reel/DgQcAWpSmQ2/"
    },
    "totaal": {
-    "views": 0,
-    "reach": 0,
+    "views": 2,
+    "reach": 1,
     "likes": 0,
     "comments": 0,
     "shares": 0,
@@ -2332,6 +2332,16 @@
      "saves": null,
      "follows": null,
      "t": "2026-11-27T19:01+01:00"
+    },
+    "instagram": {
+     "views": 2,
+     "reach": 1,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "t": null
     }
    },
    "score": {},
@@ -2369,6 +2379,17 @@
       "comments": null,
       "shares": null,
       "saves": null,
+      "follows": null
+     }
+    },
+    "instagram": {
+     "1u": {
+      "views": 2,
+      "reach": 1,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
       "follows": null
      }
     }
@@ -20986,11 +21007,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-25T17:45:56",
-   "soort": "info",
-   "tekst": "2026-11-25-5 online op facebook: Psalm 42:6"
-  },
-  {
    "t": "2026-11-25T17:46:02",
    "soort": "info",
    "tekst": "2026-11-25-4 online op facebook: Jesaja 66:13"
@@ -21290,6 +21306,11 @@
    "t": "2026-11-27T20:33:03",
    "soort": "info",
    "tekst": "2026-11-27-1 online op instagram: Hebreeën 4:15"
+  },
+  {
+   "t": "2026-11-27T21:41:39",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
   }
  ],
  "recente_fouten": [
@@ -21498,7 +21519,7 @@
    "fout": "2026-11-24T19:03",
    "laatst_ok": true,
    "detail": "1 bericht(en) verstuurd",
-   "ok": "2026-11-27T12:01"
+   "ok": "2026-11-27T21:30"
   },
   "nieuws": {
    "ok": "2026-11-27T17:02",
@@ -21657,8 +21678,8 @@
  "weken": {
   "deze": {
    "posts": 33,
-   "reach": 465,
-   "views": 509,
+   "reach": 466,
+   "views": 511,
    "likes": 14,
    "comments": 0,
    "saves": 0,
