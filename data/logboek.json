@@ -1,15 +1,5 @@
 [
  {
-  "t": "2026-11-13T18:45:56",
-  "soort": "info",
-  "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
- },
- {
-  "t": "2026-11-13T19:02:29",
-  "soort": "info",
-  "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
- },
- {
   "t": "2026-11-13T20:31:05",
   "soort": "info",
   "tekst": "2026-11-13-1 online op facebook: Psalm 29:11"
@@ -2550,5 +2540,19 @@
   "t": "2026-11-27T09:03:23",
   "soort": "info",
   "tekst": "Zelfstandig 5 posts klaargezet voor 2026-11-29 (teksten uit de tekstbank)."
+ },
+ {
+  "t": "2026-11-27T12:01:23",
+  "soort": "fout",
+  "tekst": "Nieuws (politiek, NOS): \"Definitieve uitslag verkiezingen Nieuw-Zeeland: geen meerderheid voor links of rechts\". Voorstel in de persoonlijke stem staat klaar; gaat alleen online met jouw akkoord.",
+  "code": "nieuws_voorstel",
+  "post": "n112707010"
+ },
+ {
+  "t": "2026-11-27T12:01:24",
+  "soort": "fout",
+  "tekst": "Nieuws (koopjes, NU.nl): \"Black Friday na 10 jaar: wat is er nog over van de echte gouden dealtjes?\". Voorstel in de persoonlijke stem staat klaar; gaat alleen online met jouw akkoord.",
+  "code": "nieuws_voorstel",
+  "post": "n112707014"
  }
 ]

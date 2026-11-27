@@ -1882,7 +1882,7 @@
   "id": "n112707010",
   "categorie": "politiek",
   "zwaar": false,
-  "status": "schrijven",
+  "status": "voorstel",
   "kandidaten": [
    {
     "vers_id": "Proverbs-16-32-32",
@@ -1898,6 +1898,60 @@
     "vers_id": "Psalms-127-2-2",
     "ref": "Psalm 127:2",
     "tekst": "Het is tevergeefs, dat gijlieden vroeg opstaat, laat opblijft, eet brood der smarten; het is alzo, dat Hij het Zijn beminden als in den slaap geeft."
+   }
+  ],
+  "concept": {
+   "Proverbs-16-32-32": "De uitslag laat zien dat vaak geduld en lankmoedige overleg beter is dan een snelle overwinning.",
+   "Hebrews-4-9-9": "De verkiezingen zijn nog steeds niet duidelijk, net als soms de weg die ik moet gaan in mijn leven.",
+   "Psalms-127-2-2": "De uitslag is er, maar geen partij heeft een duidelijke winst. Alsof we allemaal een nachtje hebben liggen draaien."
+  },
+  "opties": [
+   {
+    "vers_id": "Proverbs-16-32-32",
+    "ref": "Spreuken 16:32",
+    "tekst": "De lankmoedige is beter dan de sterke; en die heerst over zijn geest, dan die een stad inneemt.",
+    "zin": "De uitslag laat zien dat vaak geduld en lankmoedige overleg beter is dan een snelle overwinning.",
+    "kernwoord": "lankmoedige",
+    "betekenis": "Kracht zit niet in spierballen of overwinningen. Spreuken zegt: wie geduld heeft en zijn eigen boosheid kan beheersen, is echt sterk.",
+    "toepassing": "Kies vandaag bij een ergernis bewust voor rust in plaats van een snelle reactie.",
+    "caption": "De uitslag laat zien dat vaak geduld en lankmoedige overleg beter is dan een snelle overwinning.\n\n\"De lankmoedige is beter dan de sterke; en die heerst over zijn geest, dan die een stad inneemt.\"\nSpreuken 16:32\n\nGeduld is sterker dan kracht.\n\nWaar kost zelfbeheersing jou de meeste moeite?",
+    "media": [
+     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707010-1-1.jpg",
+     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707010-1-2.jpg",
+     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707010-1-3.jpg",
+     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707010-1-4.jpg"
+    ]
+   },
+   {
+    "vers_id": "Hebrews-4-9-9",
+    "ref": "Hebreeën 4:9",
+    "tekst": "Er blijft dan een rust over voor het volk Gods.",
+    "zin": "De verkiezingen zijn nog steeds niet duidelijk, net als soms de weg die ik moet gaan in mijn leven.",
+    "kernwoord": "rust",
+    "betekenis": "De schrijver van Hebreeën zegt dat Gods rust niet voorbij is. Er wacht een diepe rust voor wie bij God hoort, en daar mag je nu al iets van proeven.",
+    "toepassing": "Plan vandaag een rustmoment, en zie het als een voorproefje van Gods rust.",
+    "caption": "De verkiezingen zijn nog steeds niet duidelijk, net als soms de weg die ik moet gaan in mijn leven.\n\n\"Er blijft dan een rust over voor het volk Gods.\"\nHebreeën 4:9\n\nEr is rust voor jou.\n\nWat geeft jou echte rust?",
+    "media": [
+     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707010-2-1.jpg",
+     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707010-2-2.jpg",
+     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707010-2-3.jpg"
+    ]
+   },
+   {
+    "vers_id": "Psalms-127-2-2",
+    "ref": "Psalm 127:2",
+    "tekst": "Het is tevergeefs, dat gijlieden vroeg opstaat, laat opblijft, eet brood der smarten; het is alzo, dat Hij het Zijn beminden als in den slaap geeft.",
+    "zin": "De uitslag is er, maar geen partij heeft een duidelijke winst. Alsof we allemaal een nachtje hebben liggen draaien.",
+    "kernwoord": "slaap",
+    "betekenis": "De dichter zegt dat je met eindeloos zwoegen niet verder komt. God zorgt voor je, ook terwijl je slaapt. Rust is geen tijdverspilling, het is vertrouwen.",
+    "toepassing": "Ga vanavond op tijd naar bed en vertrouw de rest aan God toe.",
+    "caption": "De uitslag is er, maar geen partij heeft een duidelijke winst. Alsof we allemaal een nachtje hebben liggen draaien.\n\n\"Het is tevergeefs, dat gijlieden vroeg opstaat, laat opblijft, eet brood der smarten; het is alzo, dat Hij het Zijn beminden als in den slaap geeft.\"\nPsalm 127:2\n\nHij geeft het de zijnen slapende. Ik moet dat nog leren geloven.\n\nWat mag jij vandaag laten liggen?",
+    "media": [
+     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707010-3-1.jpg",
+     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707010-3-2.jpg",
+     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707010-3-3.jpg",
+     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707010-3-4.jpg"
+    ]
    }
   ]
  },
@@ -1939,7 +1993,7 @@
   "id": "n112707014",
   "categorie": "koopjes",
   "zwaar": false,
-  "status": "schrijven",
+  "status": "voorstel",
   "kandidaten": [
    {
     "vers_id": "Philippians-4-19-19",
@@ -1955,6 +2009,60 @@
     "vers_id": "Proverbs-20-14-14",
     "ref": "Spreuken 20:14",
     "tekst": "Het is kwaad, het is kwaad! zal de koper zeggen; maar als hij weggegaan is, dan zal hij zich beroemen."
+   }
+  ],
+  "concept": {
+   "Philippians-4-19-19": "Vandaag opnieuw op pad om te zoeken naar mooie kleine deals, dank Jezus voor de mogelijkheden om te delen.",
+   "Philippians-4-4-4": "Vandaag zie ik weer al die aanbiedingen en deals, maar ik probeer me te verblijden in wat ik al heb.",
+   "Proverbs-20-14-14": "Terwijl de advertenties roepen over de beste prijzen, voel ik die innerlijke strijd tussen koopjesjager en degene die weet dat 'kwaad, kwaad' mag zijn."
+  },
+  "opties": [
+   {
+    "vers_id": "Philippians-4-19-19",
+    "ref": "Filippenzen 4:19",
+    "tekst": "Doch mijn God zal naar Zijn rijkdom vervullen al uw nooddruft, in heerlijkheid, door Christus Jezus.",
+    "zin": "Vandaag opnieuw op pad om te zoeken naar mooie kleine deals, dank Jezus voor de mogelijkheden om te delen.",
+    "kernwoord": "nooddruft",
+    "betekenis": "Paulus schrijft dit aan mensen die zelf ruimhartig gaven. Hij belooft niet dat je alles krijgt wat je wilt, maar dat God zorgt voor wat je nodig hebt, uit Zijn rijkdom.",
+    "toepassing": "Bedenk vandaag waar God al voor je gezorgd heeft, en zeg dank.",
+    "caption": "Vandaag opnieuw op pad om te zoeken naar mooie kleine deals, dank Jezus voor de mogelijkheden om te delen.\n\n\"Doch mijn God zal naar Zijn rijkdom vervullen al uw nooddruft, in heerlijkheid, door Christus Jezus.\"\nFilippenzen 4:19\n\nGod zorgt voor wat je nodig hebt.\n\nWat heb jij op dit moment echt nodig?",
+    "media": [
+     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707014-1-1.jpg",
+     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707014-1-2.jpg",
+     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707014-1-3.jpg",
+     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707014-1-4.jpg"
+    ]
+   },
+   {
+    "vers_id": "Philippians-4-4-4",
+    "ref": "Filippenzen 4:4",
+    "tekst": "Verblijdt u in den Heere te allen tijd; wederom zeg ik: Verblijdt u.",
+    "zin": "Vandaag zie ik weer al die aanbiedingen en deals, maar ik probeer me te verblijden in wat ik al heb.",
+    "kernwoord": "Verblijdt",
+    "betekenis": "Paulus schreef dit vanuit de gevangenis. Zijn blijdschap hing dus niet af van zijn omstandigheden, maar van God. Hij herhaalt het zelfs, zo belangrijk vond hij het.",
+    "toepassing": "Zoek vandaag drie dingen waar je blij om kunt zijn, hoe klein ook.",
+    "caption": "Vandaag zie ik weer al die aanbiedingen en deals, maar ik probeer me te verblijden in wat ik al heb.\n\n\"Verblijdt u in den Heere te allen tijd; wederom zeg ik: Verblijdt u.\"\nFilippenzen 4:4\n\nWees altijd blij in de Heer.\n\nWaar ben jij vandaag blij om?",
+    "media": [
+     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707014-2-1.jpg",
+     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707014-2-2.jpg",
+     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707014-2-3.jpg"
+    ]
+   },
+   {
+    "vers_id": "Proverbs-20-14-14",
+    "ref": "Spreuken 20:14",
+    "tekst": "Het is kwaad, het is kwaad! zal de koper zeggen; maar als hij weggegaan is, dan zal hij zich beroemen.",
+    "zin": "Terwijl de advertenties roepen over de beste prijzen, voel ik die innerlijke strijd tussen koopjesjager en degene die weet dat 'kwaad, kwaad' mag zijn.",
+    "kernwoord": "koper",
+    "betekenis": "Spreuken beschrijft iets wat al duizenden jaren gebeurt: afdingen. Eerst zeggen dat het niets waard is, en daarna opscheppen over je goede deal. Eerlijkheid is ook bij handel belangrijk.",
+    "toepassing": "Wees vandaag eerlijk bij een aankoop of verkoop, ook als je er minder aan verdient.",
+    "caption": "Terwijl de advertenties roepen over de beste prijzen, voel ik die innerlijke strijd tussen koopjesjager en degene die weet dat 'kwaad, kwaad' mag zijn.\n\n\"Het is kwaad, het is kwaad! zal de koper zeggen; maar als hij weggegaan is, dan zal hij zich beroemen.\"\nSpreuken 20:14\n\nEerlijk zijn geldt ook als je iets koopt.\n\nWat was jouw beste koopje ooit?",
+    "media": [
+     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707014-3-1.jpg",
+     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707014-3-2.jpg",
+     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707014-3-3.jpg",
+     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707014-3-4.jpg"
+    ]
    }
   ]
  }
