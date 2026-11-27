@@ -1,10 +1,5 @@
 [
  {
-  "t": "2026-11-14T14:33:27",
-  "soort": "info",
-  "tekst": "Materiaal-repo niet gekoppeld (add_repo ontbreekt in deze sessie); muziek wordt door GitHub Actions aangevuld"
- },
- {
   "t": "2026-11-14T14:35:57",
   "soort": "info",
   "tekst": "Zelf opgelost: de Moed voor de week-post van 16 nov stond nog op 07:30 omdat de oude planning (van voor de wissel naar 04:00) werd gevolgd. Verplaatst naar 04:00, en kies zet een verouderd ochtendslot uit een oude planning voortaan zelf om naar het huidige."
@@ -2549,5 +2544,10 @@
   "t": "2026-11-27T22:04:15",
   "soort": "info",
   "tekst": "2026-11-27-4 online op facebook: Mattheüs 7:3"
+ },
+ {
+  "t": "2026-11-27T23:15:47",
+  "soort": "info",
+  "tekst": "Eerste-uurcijfers van 3 posts vastgelegd"
  }
 ]
