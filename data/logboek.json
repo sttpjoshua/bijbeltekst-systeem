@@ -1,10 +1,5 @@
 [
  {
-  "t": "2026-11-13T22:02:46",
-  "soort": "info",
-  "tekst": "2026-11-13-3 online op facebook: Spreuken 17:28"
- },
- {
   "t": "2026-11-13T22:03:28",
   "soort": "info",
   "tekst": "2026-11-13-2 ook als story geplaatst"
@@ -2554,5 +2549,10 @@
   "t": "2026-11-27T13:15:45",
   "soort": "info",
   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
+ },
+ {
+  "t": "2026-11-27T13:30:57",
+  "soort": "info",
+  "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
  }
 ]

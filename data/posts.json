@@ -19488,6 +19488,16 @@
      "saves": null,
      "follows": null,
      "avg_watch_ms": null
+    },
+    "1u": {
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "avg_watch_ms": null
     }
    }
   },
@@ -19738,6 +19748,16 @@
    "instagram": {
     "laatst": {
      "t": "2026-11-27T13:01+01:00",
+     "views": 0,
+     "reach": 0,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "avg_watch_ms": 0
+    },
+    "1u": {
      "views": 0,
      "reach": 0,
      "likes": 0,

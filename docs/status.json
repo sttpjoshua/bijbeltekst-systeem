@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T13:15:45",
+ "updated": "2026-11-27T13:30:58",
  "agents": {
   "verskiezer": {
    "t": "2026-11-27T09:02:46",
@@ -57,6 +57,10 @@
  ],
  "log": [
   {
+   "t": "13:30",
+   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
+  {
    "t": "13:15",
    "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
   },
@@ -99,10 +103,6 @@
   {
    "t": "04:01",
    "msg": "2026-11-27-2 ook als story geplaatst"
-  },
-  {
-   "t": "23:15",
-   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
   }
  ],
  "lampen": [
