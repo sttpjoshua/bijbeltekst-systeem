@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-27T14:30",
+ "gegenereerd": "2026-11-27T14:34",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -867,7 +867,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Psalm 34:19",
    "caption": "Even tussendoor. Dit vers wilde ik met je delen.\n\n\"Als mijn gedachten binnen in mij vermenigvuldigd werden, hebben Uw vertroostingen mijn ziel verkwikt.\"\nPsalm 94:19\n\nMijn hoofd is soms een drukke kamer. Dit vers zegt dat troost de rust kan brengen.\n\nWat maakt jouw hoofd het drukst?",
    "uitleg": "Toen mijn hoofd vol zorgen zat, gaf Uw troost me nieuwe moed.",
    "media": "docs/media/2026-11/2026-11-29-5.mp4",
@@ -958,7 +958,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Spreuken 29:25",
    "caption": "Zondag. Mijn moeder belt straks, en dit vers ligt al klaar.\n\n\"Het is tevergeefs, dat gijlieden vroeg opstaat, laat opblijft, eet brood der smarten; het is alzo, dat Hij het Zijn beminden als in den slaap geeft.\"\nPsalm 127:2\n\nHij geeft het de zijnen slapende. Ik moet dat nog leren geloven.",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-29-4-1.jpg",
@@ -1052,7 +1052,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Klaagliederen 3:31-32",
    "caption": "Voor iedereen die een relatie wil versterken.\n\n\"En boven dit alles doet aan de liefde, dewelke is de band der volmaaktheid.\"\nKolossenzen 3:14\n\nLiefde houdt alles bij elkaar.\n\nWat houdt jouw relaties bij elkaar?",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-29-3-1.jpg",
@@ -1145,7 +1145,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Spreuken 16:9",
    "caption": "Voor iedereen die zich vandaag een beetje alleen voelt.\n\n\"Ik zal u geen wezen laten; Ik kom weder tot u.\"\nJohannes 14:18\n\nJezus laat je niet alleen.\n\nWanneer voel jij je het meest alleen?",
    "uitleg": "Jezus laat je niet alleen achter. Hij komt terug bij je.",
    "media": "docs/media/2026-11/2026-11-29-2.mp4",
@@ -20609,16 +20609,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-25T12:17:08",
-   "soort": "info",
-   "tekst": "2026-11-25-4 ook als story geplaatst"
-  },
-  {
-   "t": "2026-11-25T12:17:08",
-   "soort": "info",
-   "tekst": "2026-11-25-4 online op instagram: Jesaja 66:13"
-  },
-  {
    "t": "2026-11-25T12:17:16",
    "soort": "info",
    "tekst": "2026-11-25-1 online op facebook: Galaten 4:7"
@@ -20913,6 +20903,16 @@
    "t": "2026-11-27T13:30:57",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-27T14:34:41",
+   "soort": "info",
+   "tekst": "Materiaal-repo niet gekoppeld in deze run (add_repo ontbrak); posts stonden al klaar, GitHub Actions vult muziek aan"
+  },
+  {
+   "t": "2026-11-27T14:34:41",
+   "soort": "info",
+   "tekst": "Dagelijkse run (zelfstandig): 5 posts voor 28 nov en 5 voor 29 nov gecontroleerd, reserveverzen voor 29 nov ingevuld"
   }
  ],
  "recente_fouten": [
@@ -21113,7 +21113,7 @@
    "detail": "19 onderdelen gemaakt en gecontroleerd"
   },
   "dagelijks": {
-   "ok": "2026-11-26T14:34",
+   "ok": "2026-11-27T14:34",
    "laatst_ok": true,
    "detail": "10 posts voor MORGEN en OVERMORGEN klaargezet"
   },

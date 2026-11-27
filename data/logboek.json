@@ -1,15 +1,5 @@
 [
  {
-  "t": "2026-11-13T22:03:28",
-  "soort": "info",
-  "tekst": "2026-11-13-2 ook als story geplaatst"
- },
- {
-  "t": "2026-11-13T22:03:28",
-  "soort": "info",
-  "tekst": "2026-11-13-2 online op instagram: Mattheüs 10:30-31"
- },
- {
   "t": "2026-11-13T23:15:54",
   "soort": "info",
   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
@@ -2554,5 +2544,15 @@
   "t": "2026-11-27T13:30:57",
   "soort": "info",
   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
+ },
+ {
+  "t": "2026-11-27T14:34:41",
+  "soort": "info",
+  "tekst": "Materiaal-repo niet gekoppeld in deze run (add_repo ontbrak); posts stonden al klaar, GitHub Actions vult muziek aan"
+ },
+ {
+  "t": "2026-11-27T14:34:41",
+  "soort": "info",
+  "tekst": "Dagelijkse run (zelfstandig): 5 posts voor 28 nov en 5 voor 29 nov gecontroleerd, reserveverzen voor 29 nov ingevuld"
  }
 ]
