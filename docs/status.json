@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T21:45:37",
+ "updated": "2026-11-27T22:04:15",
  "agents": {
   "verskiezer": {
    "t": "2026-11-27T09:02:46",
@@ -17,8 +17,8 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-27T20:33:03",
-   "task": "Postte Hebreeën 4:15 op instagram",
+   "t": "2026-11-27T22:04:15",
+   "task": "Postte Mattheüs 7:3 op facebook",
    "state": "done"
   },
   "controller": {
@@ -38,11 +38,11 @@
   }
  },
  "stats": {
-  "posts_today": 3,
-  "posts_total": 99,
+  "posts_today": 5,
+  "posts_total": 101,
   "reach_7d": 575,
   "best_time": "20:30",
-  "next_post": "2026-11-27T12:15:00"
+  "next_post": "2026-11-28T04:00:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
@@ -56,6 +56,22 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "22:04",
+   "msg": "2026-11-27-4 online op facebook: Mattheüs 7:3"
+  },
+  {
+   "t": "22:04",
+   "msg": "2026-11-27-4 online op instagram: Mattheüs 7:3"
+  },
+  {
+   "t": "22:04",
+   "msg": "2026-11-27-4 ook als story geplaatst"
+  },
+  {
+   "t": "22:03",
+   "msg": "2026-11-27-5 online op facebook: Psalm 138:3"
+  },
   {
    "t": "21:41",
    "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
@@ -87,22 +103,6 @@
   {
    "t": "14:53",
    "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
-  },
-  {
-   "t": "14:49",
-   "msg": "Statistieken opgehaald voor 19 posts"
-  },
-  {
-   "t": "14:34",
-   "msg": "Dagelijkse run (zelfstandig): 5 posts voor 28 nov en 5 voor 29 nov gecontroleerd, reserveverzen voor 29 nov in"
-  },
-  {
-   "t": "14:34",
-   "msg": "Materiaal-repo niet gekoppeld in deze run (add_repo ontbrak); posts stonden al klaar, GitHub Actions vult muzi"
-  },
-  {
-   "t": "13:30",
-   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
   }
  ],
  "lampen": [

@@ -1,25 +1,5 @@
 [
  {
-  "t": "2026-11-14T12:16:08",
-  "soort": "info",
-  "tekst": "2026-11-14-1 online op instagram: Spreuken 4:7"
- },
- {
-  "t": "2026-11-14T12:26:24",
-  "soort": "info",
-  "tekst": "Statistieken opgehaald voor 10 posts"
- },
- {
-  "t": "2026-11-14T12:27:45",
-  "soort": "info",
-  "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
- },
- {
-  "t": "2026-11-14T13:31:07",
-  "soort": "info",
-  "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
- },
- {
   "t": "2026-11-14T14:33:27",
   "soort": "info",
   "tekst": "Materiaal-repo niet gekoppeld (add_repo ontbreekt in deze sessie); muziek wordt door GitHub Actions aangevuld"
@@ -2549,5 +2529,25 @@
   "t": "2026-11-27T21:41:39",
   "soort": "info",
   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
+ },
+ {
+  "t": "2026-11-27T22:03:01",
+  "soort": "info",
+  "tekst": "2026-11-27-5 online op facebook: Psalm 138:3"
+ },
+ {
+  "t": "2026-11-27T22:04:09",
+  "soort": "info",
+  "tekst": "2026-11-27-4 ook als story geplaatst"
+ },
+ {
+  "t": "2026-11-27T22:04:09",
+  "soort": "info",
+  "tekst": "2026-11-27-4 online op instagram: Mattheüs 7:3"
+ },
+ {
+  "t": "2026-11-27T22:04:15",
+  "soort": "info",
+  "tekst": "2026-11-27-4 online op facebook: Mattheüs 7:3"
  }
 ]
