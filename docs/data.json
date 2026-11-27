@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-27T20:15",
+ "gegenereerd": "2026-11-27T20:33",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -2260,7 +2260,7 @@
    "ref": "Hebreeën 4:15",
    "tekst": "Want wij hebben geen hogepriester, die niet kan medelijden hebben met onze zwakheden, maar Die in alle dingen, gelijk als wij, is verzocht geweest, doch zonder zonde.",
    "hook": "Voor iedereen die zich vandaag zwak voelt.",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "avond",
     "thema": "troost",
@@ -2307,10 +2307,12 @@
    ],
    "thumb": "thumbs/2026-11-27-1.jpg",
    "platformen": [
-    "facebook"
+    "facebook",
+    "instagram"
    ],
    "links": {
-    "facebook": "https://www.facebook.com/1728770825335196"
+    "facebook": "https://www.facebook.com/1728770825335196",
+    "instagram": "https://www.instagram.com/reel/DgQcAWpSmQ2/"
    },
    "totaal": {
     "views": 0,
@@ -2372,7 +2374,8 @@
     }
    },
    "pub": {
-    "facebook": "2026-11-27T17:47+01:00"
+    "facebook": "2026-11-27T17:47+01:00",
+    "instagram": "2026-11-27T20:33+01:00"
    },
    "gemist": [],
    "nood": false,
@@ -20983,16 +20986,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-25T15:18:08",
-   "soort": "info",
-   "tekst": "Statistieken opgehaald voor 25 posts"
-  },
-  {
-   "t": "2026-11-25T15:19:23",
-   "soort": "info",
-   "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
-  },
-  {
    "t": "2026-11-25T17:45:56",
    "soort": "info",
    "tekst": "2026-11-25-5 online op facebook: Psalm 42:6"
@@ -21287,6 +21280,16 @@
    "t": "2026-11-27T19:04:12",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-27T20:33:03",
+   "soort": "info",
+   "tekst": "2026-11-27-1 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-27T20:33:03",
+   "soort": "info",
+   "tekst": "2026-11-27-1 online op instagram: Hebreeën 4:15"
   }
  ],
  "recente_fouten": [
@@ -21438,9 +21441,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-27T17:46",
+   "ok": "2026-11-27T20:33",
    "laatst_ok": true,
-   "detail": "Psalm 145:18 geplaatst"
+   "detail": "Hebreeën 4:15 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-27T14:52",
@@ -21653,7 +21656,7 @@
  ],
  "weken": {
   "deze": {
-   "posts": 32,
+   "posts": 33,
    "reach": 465,
    "views": 509,
    "likes": 14,
@@ -22277,7 +22280,7 @@
   "tot": "2026-11-30",
   "dag": 12,
   "dagen": 14,
-  "online": 57,
+  "online": 58,
   "gemeten": 23
  },
  "voorraad": {
@@ -26282,8 +26285,8 @@
     "opties": [
      {
       "optie": "avond",
-      "online": 1,
-      "gepland": 2,
+      "online": 2,
+      "gepland": 1,
       "n": 0,
       "gem": null,
       "oordeel": "weinig data"
