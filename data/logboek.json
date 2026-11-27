@@ -1,17 +1,5 @@
 [
  {
-  "t": "2026-11-13T23:15:54",
-  "soort": "info",
-  "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
- },
- {
-  "t": "2026-11-14T07:01:23",
-  "soort": "fout",
-  "tekst": "Politiek nieuws (NOS): \"Italiaanse minister: scholen niet meteen dicht na een bommelding\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
-  "code": "nieuws_voorstel",
-  "post": "n111407010"
- },
- {
   "t": "2026-11-14T07:01:23",
   "soort": "fout",
   "tekst": "Politiek nieuws (NOS): \"Italiaanse minister: scholen niet meteen dicht na een bommelding\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
@@ -2554,5 +2542,15 @@
   "t": "2026-11-27T14:34:41",
   "soort": "info",
   "tekst": "Dagelijkse run (zelfstandig): 5 posts voor 28 nov en 5 voor 29 nov gecontroleerd, reserveverzen voor 29 nov ingevuld"
+ },
+ {
+  "t": "2026-11-27T14:49:43",
+  "soort": "info",
+  "tekst": "Statistieken opgehaald voor 19 posts"
+ },
+ {
+  "t": "2026-11-27T14:53:13",
+  "soort": "info",
+  "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
  }
 ]

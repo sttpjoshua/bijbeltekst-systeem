@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T14:46:03",
+ "updated": "2026-11-27T14:53:14",
  "agents": {
   "verskiezer": {
    "t": "2026-11-27T09:02:46",
@@ -27,8 +27,8 @@
    "state": "error"
   },
   "analist": {
-   "t": "2026-11-26T14:53:49",
-   "task": "Weekanalyse: strategie v12",
+   "t": "2026-11-27T14:53:13",
+   "task": "Weekanalyse: strategie v13",
    "state": "done"
   },
   "community": {
@@ -40,13 +40,13 @@
  "stats": {
   "posts_today": 1,
   "posts_total": 97,
-  "reach_7d": 558,
+  "reach_7d": 575,
   "best_time": "20:30",
   "next_post": "2026-11-27T12:15:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
-  "instagram": 1674,
+  "instagram": 1691,
   "facebook": 4,
   "youtube": 0,
   "tiktok": 0
@@ -56,6 +56,14 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "14:53",
+   "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
+  },
+  {
+   "t": "14:49",
+   "msg": "Statistieken opgehaald voor 19 posts"
+  },
   {
    "t": "14:34",
    "msg": "Dagelijkse run (zelfstandig): 5 posts voor 28 nov en 5 voor 29 nov gecontroleerd, reserveverzen voor 29 nov in"
@@ -95,14 +103,6 @@
   {
    "t": "12:01",
    "msg": "Nieuws (politiek, NOS): \"Definitieve uitslag verkiezingen Nieuw-Zeeland: geen meerderheid voor links of rechts"
-  },
-  {
-   "t": "09:03",
-   "msg": "Zelfstandig 5 posts klaargezet voor 2026-11-29 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "05:01",
-   "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
   }
  ],
  "lampen": [
@@ -150,13 +150,13 @@
   "reeks": [
    3,
    3,
-   3,
    4,
    5,
    5,
    5,
    5,
    6,
+   7,
    7,
    7,
    7,
