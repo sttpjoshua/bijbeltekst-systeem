@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-27T12:01",
+ "gegenereerd": "2026-11-27T12:17",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1791,8 +1791,12 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-27-5.mp4"
    ],
    "thumb": "thumbs/2026-11-27-5.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "instagram"
+   ],
+   "links": {
+    "instagram": "https://www.instagram.com/reel/DgPjPcFheqb/"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -1822,11 +1826,13 @@
     "video_uitleg": "vaste regel"
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "instagram": "2026-11-27T12:16+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": null,
-   "online": null
+   "online": "2026-11-27T12:16+01:00"
   },
   {
    "id": "2026-11-27-4",
@@ -1969,8 +1975,12 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-27-3.mp4"
    ],
    "thumb": "thumbs/2026-11-27-3.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "facebook"
+   ],
+   "links": {
+    "facebook": "https://www.facebook.com/2679319629179501"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -2000,11 +2010,13 @@
     "video_uitleg": "vaste regel"
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "facebook": "2026-11-27T12:17+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": null,
-   "online": null
+   "online": "2026-11-27T12:17+01:00"
   },
   {
    "id": "2026-11-27-2",
@@ -2012,7 +2024,7 @@
    "ref": "Jesaja 43:1",
    "tekst": "Maar nu, alzo zegt de HEERE, uw Schepper, o Jakob! en uw Formeerder, o Israel! vrees niet, want Ik heb u verlost; Ik heb u bij uw naam geroepen, gij zijt Mijn.",
    "hook": "Goedemorgen. Mag deze dag goed beginnen.",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "hemelsblauw",
     "thema": "identiteit",
@@ -2062,10 +2074,12 @@
    ],
    "thumb": "thumbs/2026-11-27-2.jpg",
    "platformen": [
-    "instagram"
+    "instagram",
+    "facebook"
    ],
    "links": {
-    "instagram": "https://www.instagram.com/p/DgOqou8lWn3/"
+    "instagram": "https://www.instagram.com/p/DgOqou8lWn3/",
+    "facebook": "https://www.facebook.com/1015160368352770_122135852456879910"
    },
    "totaal": {
     "views": 0,
@@ -2127,7 +2141,8 @@
     }
    },
    "pub": {
-    "instagram": "2026-11-27T04:01+01:00"
+    "instagram": "2026-11-27T04:01+01:00",
+    "facebook": "2026-11-27T12:15+01:00"
    },
    "gemist": [],
    "nood": false,
@@ -20513,38 +20528,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-24T23:15:39",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
-   "t": "2026-11-25T04:01:48",
-   "soort": "info",
-   "tekst": "2026-11-25-5 ook als story geplaatst"
-  },
-  {
-   "t": "2026-11-25T04:01:48",
-   "soort": "info",
-   "tekst": "2026-11-25-5 online op instagram: Psalm 42:6"
-  },
-  {
-   "t": "2026-11-25T04:01:58",
-   "soort": "info",
-   "tekst": "2026-11-25-3 online op facebook: Galaten 2:20"
-  },
-  {
-   "t": "2026-11-25T05:15:38",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
-   "t": "2026-11-25T07:01:22",
-   "soort": "fout",
-   "tekst": "Politiek nieuws (NOS): \"Wekdienst 25/11: NAVO-chef Rutte praat met Trump • Strafeis mishandeling Plein Den Haag\". Neutrale post erover maken (geen partij of standpunt)? Gaat alleen online met jouw akkoord.",
-   "code": "nieuws_voorstel",
-   "post": "n112507010"
-  },
-  {
    "t": "2026-11-25T07:01:24",
    "soort": "info",
    "tekst": "Nieuwspost: Galaten 2:20 vervangen door Spreuken 12:15 (aanleiding: winter, NOS)"
@@ -20815,6 +20798,40 @@
    "t": "2026-11-27T09:03:23",
    "soort": "info",
    "tekst": "Zelfstandig 5 posts klaargezet voor 2026-11-29 (teksten uit de tekstbank)."
+  },
+  {
+   "t": "2026-11-27T12:01:23",
+   "soort": "fout",
+   "tekst": "Nieuws (politiek, NOS): \"Definitieve uitslag verkiezingen Nieuw-Zeeland: geen meerderheid voor links of rechts\". Voorstel in de persoonlijke stem staat klaar; gaat alleen online met jouw akkoord.",
+   "code": "nieuws_voorstel",
+   "post": "n112707010"
+  },
+  {
+   "t": "2026-11-27T12:01:24",
+   "soort": "fout",
+   "tekst": "Nieuws (koopjes, NU.nl): \"Black Friday na 10 jaar: wat is er nog over van de echte gouden dealtjes?\". Voorstel in de persoonlijke stem staat klaar; gaat alleen online met jouw akkoord.",
+   "code": "nieuws_voorstel",
+   "post": "n112707014"
+  },
+  {
+   "t": "2026-11-27T12:15:49",
+   "soort": "info",
+   "tekst": "2026-11-27-2 online op facebook: Jesaja 43:1"
+  },
+  {
+   "t": "2026-11-27T12:16:55",
+   "soort": "info",
+   "tekst": "2026-11-27-5 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-27T12:16:55",
+   "soort": "info",
+   "tekst": "2026-11-27-5 online op instagram: Psalm 138:3"
+  },
+  {
+   "t": "2026-11-27T12:17:02",
+   "soort": "info",
+   "tekst": "2026-11-27-3 online op facebook: Psalm 145:18"
   }
  ],
  "recente_fouten": [
@@ -20824,6 +20841,20 @@
    "tekst": "Nieuws (politiek, NOS): \"Onvrede binnen VVD over dubbelfunctie Yesilgöz, zegt oud-partijvoorzitter Van der Wal\". Voorstel in de persoonlijke stem staat klaar; gaat alleen online met jouw akkoord.",
    "code": "nieuws_voorstel",
    "post": "n112607010"
+  },
+  {
+   "t": "2026-11-27T12:01:23",
+   "soort": "fout",
+   "tekst": "Nieuws (politiek, NOS): \"Definitieve uitslag verkiezingen Nieuw-Zeeland: geen meerderheid voor links of rechts\". Voorstel in de persoonlijke stem staat klaar; gaat alleen online met jouw akkoord.",
+   "code": "nieuws_voorstel",
+   "post": "n112707010"
+  },
+  {
+   "t": "2026-11-27T12:01:24",
+   "soort": "fout",
+   "tekst": "Nieuws (koopjes, NU.nl): \"Black Friday na 10 jaar: wat is er nog over van de echte gouden dealtjes?\". Voorstel in de persoonlijke stem staat klaar; gaat alleen online met jouw akkoord.",
+   "code": "nieuws_voorstel",
+   "post": "n112707014"
   }
  ],
  "versen_totaal": 300,
@@ -20952,9 +20983,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-27T04:01",
+   "ok": "2026-11-27T12:16",
    "laatst_ok": true,
-   "detail": "Jesaja 43:1 geplaatst"
+   "detail": "Psalm 138:3 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-26T14:53",
@@ -20986,9 +21017,9 @@
    "fout": "2026-11-27T12:01"
   },
   "facebook": {
-   "ok": "2026-11-26T22:03",
+   "ok": "2026-11-27T12:17",
    "laatst_ok": true,
-   "detail": "Psalm 62:2 geplaatst"
+   "detail": "Psalm 145:18 geplaatst"
   },
   "statistieken": {
    "ok": "2026-11-26T14:53",
@@ -21009,12 +21040,12 @@
    "fout": "2026-11-24T19:03",
    "laatst_ok": true,
    "detail": "1 bericht(en) verstuurd",
-   "ok": "2026-11-26T21:30"
+   "ok": "2026-11-27T12:01"
   },
   "nieuws": {
-   "ok": "2026-11-27T07:01",
+   "ok": "2026-11-27T12:01",
    "laatst_ok": true,
-   "detail": "5 nieuwe aanleidingen, 0 voorstellen"
+   "detail": "0 nieuwe aanleidingen, 2 voorstellen"
   },
   "maken": {
    "ok": "2026-11-27T09:03",
@@ -21161,7 +21192,7 @@
  ],
  "weken": {
   "deze": {
-   "posts": 30,
+   "posts": 31,
    "reach": 456,
    "views": 499,
    "likes": 14,
@@ -21785,7 +21816,7 @@
   "tot": "2026-11-30",
   "dag": 12,
   "dagen": 14,
-  "online": 55,
+  "online": 56,
   "gemeten": 23
  },
  "voorraad": {
@@ -25213,9 +25244,57 @@
     "link": "https://www.nu.nl/economie/6417896/black-friday-na-10-jaar-wat-is-er-nog-over-van-de-echte-gouden-dealtjes.html",
     "categorie": "koopjes",
     "zwaar": false,
-    "status": "schrijven",
+    "status": "voorstel",
     "post": null,
-    "opties": null
+    "opties": [
+     {
+      "vers_id": "Philippians-4-19-19",
+      "ref": "Filippenzen 4:19",
+      "tekst": "Doch mijn God zal naar Zijn rijkdom vervullen al uw nooddruft, in heerlijkheid, door Christus Jezus.",
+      "zin": "Vandaag opnieuw op pad om te zoeken naar mooie kleine deals, dank Jezus voor de mogelijkheden om te delen.",
+      "kernwoord": "nooddruft",
+      "betekenis": "Paulus schrijft dit aan mensen die zelf ruimhartig gaven. Hij belooft niet dat je alles krijgt wat je wilt, maar dat God zorgt voor wat je nodig hebt, uit Zijn rijkdom.",
+      "toepassing": "Bedenk vandaag waar God al voor je gezorgd heeft, en zeg dank.",
+      "caption": "Vandaag opnieuw op pad om te zoeken naar mooie kleine deals, dank Jezus voor de mogelijkheden om te delen.\n\n\"Doch mijn God zal naar Zijn rijkdom vervullen al uw nooddruft, in heerlijkheid, door Christus Jezus.\"\nFilippenzen 4:19\n\nGod zorgt voor wat je nodig hebt.\n\nWat heb jij op dit moment echt nodig?",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707014-1-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707014-1-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707014-1-3.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707014-1-4.jpg"
+      ]
+     },
+     {
+      "vers_id": "Philippians-4-4-4",
+      "ref": "Filippenzen 4:4",
+      "tekst": "Verblijdt u in den Heere te allen tijd; wederom zeg ik: Verblijdt u.",
+      "zin": "Vandaag zie ik weer al die aanbiedingen en deals, maar ik probeer me te verblijden in wat ik al heb.",
+      "kernwoord": "Verblijdt",
+      "betekenis": "Paulus schreef dit vanuit de gevangenis. Zijn blijdschap hing dus niet af van zijn omstandigheden, maar van God. Hij herhaalt het zelfs, zo belangrijk vond hij het.",
+      "toepassing": "Zoek vandaag drie dingen waar je blij om kunt zijn, hoe klein ook.",
+      "caption": "Vandaag zie ik weer al die aanbiedingen en deals, maar ik probeer me te verblijden in wat ik al heb.\n\n\"Verblijdt u in den Heere te allen tijd; wederom zeg ik: Verblijdt u.\"\nFilippenzen 4:4\n\nWees altijd blij in de Heer.\n\nWaar ben jij vandaag blij om?",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707014-2-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707014-2-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707014-2-3.jpg"
+      ]
+     },
+     {
+      "vers_id": "Proverbs-20-14-14",
+      "ref": "Spreuken 20:14",
+      "tekst": "Het is kwaad, het is kwaad! zal de koper zeggen; maar als hij weggegaan is, dan zal hij zich beroemen.",
+      "zin": "Terwijl de advertenties roepen over de beste prijzen, voel ik die innerlijke strijd tussen koopjesjager en degene die weet dat 'kwaad, kwaad' mag zijn.",
+      "kernwoord": "koper",
+      "betekenis": "Spreuken beschrijft iets wat al duizenden jaren gebeurt: afdingen. Eerst zeggen dat het niets waard is, en daarna opscheppen over je goede deal. Eerlijkheid is ook bij handel belangrijk.",
+      "toepassing": "Wees vandaag eerlijk bij een aankoop of verkoop, ook als je er minder aan verdient.",
+      "caption": "Terwijl de advertenties roepen over de beste prijzen, voel ik die innerlijke strijd tussen koopjesjager en degene die weet dat 'kwaad, kwaad' mag zijn.\n\n\"Het is kwaad, het is kwaad! zal de koper zeggen; maar als hij weggegaan is, dan zal hij zich beroemen.\"\nSpreuken 20:14\n\nEerlijk zijn geldt ook als je iets koopt.\n\nWat was jouw beste koopje ooit?",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707014-3-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707014-3-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707014-3-3.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707014-3-4.jpg"
+      ]
+     }
+    ]
    },
    {
     "id": "n112707013",
@@ -25261,9 +25340,57 @@
     "link": "https://nos.nl/l/2641181",
     "categorie": "politiek",
     "zwaar": false,
-    "status": "schrijven",
+    "status": "voorstel",
     "post": null,
-    "opties": null
+    "opties": [
+     {
+      "vers_id": "Proverbs-16-32-32",
+      "ref": "Spreuken 16:32",
+      "tekst": "De lankmoedige is beter dan de sterke; en die heerst over zijn geest, dan die een stad inneemt.",
+      "zin": "De uitslag laat zien dat vaak geduld en lankmoedige overleg beter is dan een snelle overwinning.",
+      "kernwoord": "lankmoedige",
+      "betekenis": "Kracht zit niet in spierballen of overwinningen. Spreuken zegt: wie geduld heeft en zijn eigen boosheid kan beheersen, is echt sterk.",
+      "toepassing": "Kies vandaag bij een ergernis bewust voor rust in plaats van een snelle reactie.",
+      "caption": "De uitslag laat zien dat vaak geduld en lankmoedige overleg beter is dan een snelle overwinning.\n\n\"De lankmoedige is beter dan de sterke; en die heerst over zijn geest, dan die een stad inneemt.\"\nSpreuken 16:32\n\nGeduld is sterker dan kracht.\n\nWaar kost zelfbeheersing jou de meeste moeite?",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707010-1-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707010-1-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707010-1-3.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707010-1-4.jpg"
+      ]
+     },
+     {
+      "vers_id": "Hebrews-4-9-9",
+      "ref": "Hebreeën 4:9",
+      "tekst": "Er blijft dan een rust over voor het volk Gods.",
+      "zin": "De verkiezingen zijn nog steeds niet duidelijk, net als soms de weg die ik moet gaan in mijn leven.",
+      "kernwoord": "rust",
+      "betekenis": "De schrijver van Hebreeën zegt dat Gods rust niet voorbij is. Er wacht een diepe rust voor wie bij God hoort, en daar mag je nu al iets van proeven.",
+      "toepassing": "Plan vandaag een rustmoment, en zie het als een voorproefje van Gods rust.",
+      "caption": "De verkiezingen zijn nog steeds niet duidelijk, net als soms de weg die ik moet gaan in mijn leven.\n\n\"Er blijft dan een rust over voor het volk Gods.\"\nHebreeën 4:9\n\nEr is rust voor jou.\n\nWat geeft jou echte rust?",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707010-2-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707010-2-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707010-2-3.jpg"
+      ]
+     },
+     {
+      "vers_id": "Psalms-127-2-2",
+      "ref": "Psalm 127:2",
+      "tekst": "Het is tevergeefs, dat gijlieden vroeg opstaat, laat opblijft, eet brood der smarten; het is alzo, dat Hij het Zijn beminden als in den slaap geeft.",
+      "zin": "De uitslag is er, maar geen partij heeft een duidelijke winst. Alsof we allemaal een nachtje hebben liggen draaien.",
+      "kernwoord": "slaap",
+      "betekenis": "De dichter zegt dat je met eindeloos zwoegen niet verder komt. God zorgt voor je, ook terwijl je slaapt. Rust is geen tijdverspilling, het is vertrouwen.",
+      "toepassing": "Ga vanavond op tijd naar bed en vertrouw de rest aan God toe.",
+      "caption": "De uitslag is er, maar geen partij heeft een duidelijke winst. Alsof we allemaal een nachtje hebben liggen draaien.\n\n\"Het is tevergeefs, dat gijlieden vroeg opstaat, laat opblijft, eet brood der smarten; het is alzo, dat Hij het Zijn beminden als in den slaap geeft.\"\nPsalm 127:2\n\nHij geeft het de zijnen slapende. Ik moet dat nog leren geloven.\n\nWat mag jij vandaag laten liggen?",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707010-3-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707010-3-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707010-3-3.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112707010-3-4.jpg"
+      ]
+     }
+    ]
    },
    {
     "id": "n112617012",
@@ -25726,8 +25853,8 @@
      },
      {
       "optie": "hemelsblauw",
-      "online": 0,
-      "gepland": 1,
+      "online": 1,
+      "gepland": 0,
       "n": 2,
       "gem": 0.87,
       "oordeel": "weinig data"
@@ -25843,37 +25970,6 @@
    }
   ],
   "komend": [
-   {
-    "id": "2026-11-27-5",
-    "ref": "Psalm 138:3",
-    "datum": "2026-11-27",
-    "tijdslot": "12:15",
-    "tests": [
-     {
-      "dimensie": "huisstijl",
-      "optie": "zand",
-      "bron": "experiment"
-     },
-     {
-      "dimensie": "reel_stijl",
-      "optie": "markeren",
-      "bron": "test markeren"
-     }
-    ]
-   },
-   {
-    "id": "2026-11-27-3",
-    "ref": "Psalm 145:18",
-    "datum": "2026-11-27",
-    "tijdslot": "17:45",
-    "tests": [
-     {
-      "dimensie": "huisstijl",
-      "optie": "roze",
-      "bron": "experiment"
-     }
-    ]
-   },
    {
     "id": "2026-11-27-1",
     "ref": "Hebreeën 4:15",

@@ -1,25 +1,5 @@
 [
  {
-  "t": "2026-11-13T20:31:05",
-  "soort": "info",
-  "tekst": "2026-11-13-1 online op facebook: Psalm 29:11"
- },
- {
-  "t": "2026-11-13T20:32:14",
-  "soort": "info",
-  "tekst": "2026-11-13-3 ook als story geplaatst"
- },
- {
-  "t": "2026-11-13T20:32:14",
-  "soort": "info",
-  "tekst": "2026-11-13-3 online op instagram: Spreuken 17:28"
- },
- {
-  "t": "2026-11-13T20:32:22",
-  "soort": "info",
-  "tekst": "2026-11-13-2 online op facebook: Mattheüs 10:30-31"
- },
- {
   "t": "2026-11-13T21:45:44",
   "soort": "info",
   "tekst": "Eerste-uurcijfers van 3 posts vastgelegd"
@@ -2554,5 +2534,25 @@
   "tekst": "Nieuws (koopjes, NU.nl): \"Black Friday na 10 jaar: wat is er nog over van de echte gouden dealtjes?\". Voorstel in de persoonlijke stem staat klaar; gaat alleen online met jouw akkoord.",
   "code": "nieuws_voorstel",
   "post": "n112707014"
+ },
+ {
+  "t": "2026-11-27T12:15:49",
+  "soort": "info",
+  "tekst": "2026-11-27-2 online op facebook: Jesaja 43:1"
+ },
+ {
+  "t": "2026-11-27T12:16:55",
+  "soort": "info",
+  "tekst": "2026-11-27-5 ook als story geplaatst"
+ },
+ {
+  "t": "2026-11-27T12:16:55",
+  "soort": "info",
+  "tekst": "2026-11-27-5 online op instagram: Psalm 138:3"
+ },
+ {
+  "t": "2026-11-27T12:17:02",
+  "soort": "info",
+  "tekst": "2026-11-27-3 online op facebook: Psalm 145:18"
  }
 ]

@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T12:01:18",
+ "updated": "2026-11-27T12:17:02",
  "agents": {
   "verskiezer": {
    "t": "2026-11-27T09:02:46",
@@ -17,13 +17,13 @@
    "state": "done"
   },
   "dispatcher": {
-   "t": "2026-11-27T04:01:30",
-   "task": "Postte Jesaja 43:1 op instagram",
+   "t": "2026-11-27T12:17:02",
+   "task": "Postte Psalm 145:18 op facebook",
    "state": "done"
   },
   "controller": {
-   "t": "2026-11-26T12:02:20",
-   "task": "Nieuws (politiek, NOS): \"Onvrede binnen VVD over dubbelfunctie Yesilgö",
+   "t": "2026-11-27T12:01:24",
+   "task": "Nieuws (koopjes, NU.nl): \"Black Friday na 10 jaar: wat is er nog over ",
    "state": "error"
   },
   "analist": {
@@ -38,11 +38,11 @@
   }
  },
  "stats": {
-  "posts_today": 0,
-  "posts_total": 96,
+  "posts_today": 1,
+  "posts_total": 97,
   "reach_7d": 558,
   "best_time": "20:30",
-  "next_post": "2026-11-27T04:00:00"
+  "next_post": "2026-11-27T12:15:00"
  },
  "learned": "Na de eerste week met cijfers vertelt de Analist hier wat werkt.",
  "platforms": {
@@ -56,6 +56,30 @@
   "facebook"
  ],
  "log": [
+  {
+   "t": "12:17",
+   "msg": "2026-11-27-3 online op facebook: Psalm 145:18"
+  },
+  {
+   "t": "12:16",
+   "msg": "2026-11-27-5 online op instagram: Psalm 138:3"
+  },
+  {
+   "t": "12:16",
+   "msg": "2026-11-27-5 ook als story geplaatst"
+  },
+  {
+   "t": "12:15",
+   "msg": "2026-11-27-2 online op facebook: Jesaja 43:1"
+  },
+  {
+   "t": "12:01",
+   "msg": "Nieuws (koopjes, NU.nl): \"Black Friday na 10 jaar: wat is er nog over van de echte gouden dealtjes?\". Voorstel"
+  },
+  {
+   "t": "12:01",
+   "msg": "Nieuws (politiek, NOS): \"Definitieve uitslag verkiezingen Nieuw-Zeeland: geen meerderheid voor links of rechts"
+  },
   {
    "t": "09:03",
    "msg": "Zelfstandig 5 posts klaargezet voor 2026-11-29 (teksten uit de tekstbank)."
@@ -79,30 +103,6 @@
   {
    "t": "22:04",
    "msg": "2026-11-26-4 online op instagram: 1 Petrus 5:7"
-  },
-  {
-   "t": "22:04",
-   "msg": "2026-11-26-4 ook als story geplaatst"
-  },
-  {
-   "t": "22:03",
-   "msg": "2026-11-26-1 online op facebook: Psalm 62:2"
-  },
-  {
-   "t": "21:45",
-   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
-   "t": "20:31",
-   "msg": "2026-11-26-3 online op facebook: Hebreeën 13:6"
-  },
-  {
-   "t": "20:31",
-   "msg": "2026-11-26-3 online op instagram: Hebreeën 13:6"
-  },
-  {
-   "t": "20:31",
-   "msg": "2026-11-26-3 ook als story geplaatst"
   }
  ],
  "lampen": [
