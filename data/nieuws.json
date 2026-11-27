@@ -1670,7 +1670,7 @@
   "id": "n112607010",
   "categorie": "politiek",
   "zwaar": false,
-  "status": "voorstel",
+  "status": "verlopen",
   "kandidaten": [
    {
     "vers_id": "Ecclesiastes-9-10-10",
@@ -1855,7 +1855,7 @@
   "id": "n112617012",
   "categorie": "zwaar",
   "zwaar": true,
-  "status": "schrijven",
+  "status": "verlopen",
   "kandidaten": [
    {
     "vers_id": "Isaiah-40-8-8",
@@ -1871,6 +1871,90 @@
     "vers_id": "Psalms-130-5-5",
     "ref": "Psalm 130:5",
     "tekst": "Ik verwacht den HEERE; mijn ziel verwacht, en ik hoop op Zijn Woord."
+   }
+  ]
+ },
+ {
+  "bron": "NOS",
+  "kop": "Definitieve uitslag verkiezingen Nieuw-Zeeland: geen meerderheid voor links of rechts",
+  "link": "https://nos.nl/l/2641181",
+  "t": "2026-11-27T04:31+01:00",
+  "id": "n112707010",
+  "categorie": "politiek",
+  "zwaar": false,
+  "status": "schrijven",
+  "kandidaten": [
+   {
+    "vers_id": "Proverbs-16-32-32",
+    "ref": "Spreuken 16:32",
+    "tekst": "De lankmoedige is beter dan de sterke; en die heerst over zijn geest, dan die een stad inneemt."
+   },
+   {
+    "vers_id": "Hebrews-4-9-9",
+    "ref": "Hebreeën 4:9",
+    "tekst": "Er blijft dan een rust over voor het volk Gods."
+   },
+   {
+    "vers_id": "Psalms-127-2-2",
+    "ref": "Psalm 127:2",
+    "tekst": "Het is tevergeefs, dat gijlieden vroeg opstaat, laat opblijft, eet brood der smarten; het is alzo, dat Hij het Zijn beminden als in den slaap geeft."
+   }
+  ]
+ },
+ {
+  "bron": "NOS",
+  "kop": "Israëlische minister Katz voert druk op en dreigt met nieuw offensief in Gaza",
+  "link": "https://nos.nl/l/2641153",
+  "t": "2026-11-26T20:23+01:00",
+  "id": "n112707011",
+  "categorie": "politiek",
+  "zwaar": false,
+  "status": "overgeslagen"
+ },
+ {
+  "bron": "NOS",
+  "kop": "Meer kritische geluiden over VVD-leider Yesilgöz, maar niet uit fractie en kabinet",
+  "link": "https://nos.nl/l/2641140",
+  "t": "2026-11-26T18:24+01:00",
+  "id": "n112707012",
+  "categorie": "politiek",
+  "zwaar": false,
+  "status": "overgeslagen"
+ },
+ {
+  "bron": "NU.nl",
+  "kop": "Explainer | Hij staat plots in de spotlight: wie is deze man achter Melania Trump?",
+  "link": "https://www.nu.nl/332668/video/hij-staat-plots-in-de-spotlight-wie-is-deze-man-achter-melania-trump.html",
+  "t": "2026-11-27T06:34+01:00",
+  "id": "n112707013",
+  "categorie": "politiek",
+  "zwaar": false,
+  "status": "overgeslagen"
+ },
+ {
+  "bron": "NU.nl",
+  "kop": "Black Friday na 10 jaar: wat is er nog over van de echte gouden dealtjes?",
+  "link": "https://www.nu.nl/economie/6417896/black-friday-na-10-jaar-wat-is-er-nog-over-van-de-echte-gouden-dealtjes.html",
+  "t": "2026-11-27T05:03+01:00",
+  "id": "n112707014",
+  "categorie": "koopjes",
+  "zwaar": false,
+  "status": "schrijven",
+  "kandidaten": [
+   {
+    "vers_id": "Philippians-4-19-19",
+    "ref": "Filippenzen 4:19",
+    "tekst": "Doch mijn God zal naar Zijn rijkdom vervullen al uw nooddruft, in heerlijkheid, door Christus Jezus."
+   },
+   {
+    "vers_id": "Philippians-4-4-4",
+    "ref": "Filippenzen 4:4",
+    "tekst": "Verblijdt u in den Heere te allen tijd; wederom zeg ik: Verblijdt u."
+   },
+   {
+    "vers_id": "Proverbs-20-14-14",
+    "ref": "Spreuken 20:14",
+    "tekst": "Het is kwaad, het is kwaad! zal de koper zeggen; maar als hij weggegaan is, dan zal hij zich beroemen."
    }
   ]
  }
