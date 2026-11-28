@@ -1882,7 +1882,7 @@
   "id": "n112707010",
   "categorie": "politiek",
   "zwaar": false,
-  "status": "voorstel",
+  "status": "verlopen",
   "kandidaten": [
    {
     "vers_id": "Proverbs-16-32-32",
@@ -1993,7 +1993,7 @@
   "id": "n112707014",
   "categorie": "koopjes",
   "zwaar": false,
-  "status": "voorstel",
+  "status": "verlopen",
   "kandidaten": [
    {
     "vers_id": "Philippians-4-19-19",
@@ -2074,7 +2074,7 @@
   "id": "n112807010",
   "categorie": "politiek",
   "zwaar": false,
-  "status": "schrijven",
+  "status": "voorstel",
   "kandidaten": [
    {
     "vers_id": "Psalms-143-8-8",
@@ -2090,6 +2090,59 @@
     "vers_id": "Hebrews-4-9-9",
     "ref": "Hebreeën 4:9",
     "tekst": "Er blijft dan een rust over voor het volk Gods."
+   }
+  ],
+  "concept": {
+   "Psalms-143-8-8": "Gisteren was er weer een congres van een politieke partij, terwijl ik me concentreer op het ontvangen van goedertierenheid in deze nieuwe morgen.",
+   "Psalms-90-12-12": "De updates over het partijcongres en de sportevenementen doen me nadenken over hoe ik mijn eigen tijd en energie besteed.",
+   "Hebrews-4-9-9": "De partijcongressen zijn hard werk, maar ik hou me aan mijn belofte om te blijven piekeren en los te laten over wat ik kan beïnvloeden."
+  },
+  "opties": [
+   {
+    "vers_id": "Psalms-143-8-8",
+    "ref": "Psalm 143:8",
+    "tekst": "Doe mij Uw goedertierenheid in den morgenstond horen, want ik betrouw op U; maak mij bekend den weg, dien ik te gaan heb, want ik hef mijn ziel tot U op.",
+    "zin": "Gisteren was er weer een congres van een politieke partij, terwijl ik me concentreer op het ontvangen van goedertierenheid in deze nieuwe morgen.",
+    "kernwoord": "morgenstond",
+    "betekenis": "David begint zijn dag met een gebed: laat me 's ochtends al horen dat U van mij houdt, en laat me zien welke kant ik op moet.",
+    "toepassing": "Bid morgen bij het opstaan dit vers als eerste gebed van de dag.",
+    "caption": "Gisteren was er weer een congres van een politieke partij, terwijl ik me concentreer op het ontvangen van goedertierenheid in deze nieuwe morgen.\n\n\"Doe mij Uw goedertierenheid in den morgenstond horen, want ik betrouw op U; maak mij bekend den weg, dien ik te gaan heb, want ik hef mijn ziel tot U op.\"\nPsalm 143:8\n\nIk begin de dag liever met een vers dan met mijn telefoon. Het lukt niet altijd.",
+    "media": [
+     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112807010-1-1.jpg",
+     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112807010-1-2.jpg",
+     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112807010-1-3.jpg",
+     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112807010-1-4.jpg"
+    ]
+   },
+   {
+    "vers_id": "Psalms-90-12-12",
+    "ref": "Psalm 90:12",
+    "tekst": "Leer ons alzo onze dagen tellen, dat wij een wijs hart bekomen.",
+    "zin": "De updates over het partijcongres en de sportevenementen doen me nadenken over hoe ik mijn eigen tijd en energie besteed.",
+    "kernwoord": "dagen",
+    "betekenis": "Mozes bidt dat we leren onze dagen te tellen. Niet uit angst, maar omdat het leven kostbaar is. Wie dat beseft, maakt wijzere keuzes.",
+    "toepassing": "Vraag jezelf vandaag af: waar wil ik deze dag echt aan besteden?",
+    "caption": "De updates over het partijcongres en de sportevenementen doen me nadenken over hoe ik mijn eigen tijd en energie besteed.\n\n\"Leer ons alzo onze dagen tellen, dat wij een wijs hart bekomen.\"\nPsalm 90:12\n\nMijn dagen zijn niet oneindig. Dat zet mijn to-do-lijst even in perspectief.",
+    "media": [
+     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112807010-2-1.jpg",
+     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112807010-2-2.jpg",
+     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112807010-2-3.jpg"
+    ]
+   },
+   {
+    "vers_id": "Hebrews-4-9-9",
+    "ref": "Hebreeën 4:9",
+    "tekst": "Er blijft dan een rust over voor het volk Gods.",
+    "zin": "De partijcongressen zijn hard werk, maar ik hou me aan mijn belofte om te blijven piekeren en los te laten over wat ik kan beïnvloeden.",
+    "kernwoord": "rust",
+    "betekenis": "De schrijver van Hebreeën zegt dat Gods rust niet voorbij is. Er wacht een diepe rust voor wie bij God hoort, en daar mag je nu al iets van proeven.",
+    "toepassing": "Plan vandaag een rustmoment, en zie het als een voorproefje van Gods rust.",
+    "caption": "De partijcongressen zijn hard werk, maar ik hou me aan mijn belofte om te blijven piekeren en los te laten over wat ik kan beïnvloeden.\n\n\"Er blijft dan een rust over voor het volk Gods.\"\nHebreeën 4:9\n\nEr is rust voor jou.",
+    "media": [
+     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112807010-3-1.jpg",
+     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112807010-3-2.jpg",
+     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112807010-3-3.jpg"
+    ]
    }
   ]
  },
@@ -2171,7 +2224,7 @@
   "id": "n112807018",
   "categorie": "winter",
   "zwaar": false,
-  "status": "schrijven",
+  "status": "verlopen",
   "kandidaten": [
    {
     "vers_id": "Proverbs-2-6-6",
@@ -2189,5 +2242,35 @@
     "tekst": "De vrees des HEEREN is het beginsel der wetenschap; de dwazen verachten wijsheid en tucht."
    }
   ]
+ },
+ {
+  "bron": "NOS",
+  "kop": "VVD-leden verdeeld over onrust in partij, spanning over toespraak Yesilgöz",
+  "link": "https://nos.nl/l/2641369",
+  "t": "2026-11-28T11:27+01:00",
+  "id": "n112812020",
+  "categorie": "politiek",
+  "zwaar": false,
+  "status": "overgeslagen"
+ },
+ {
+  "bron": "NOS",
+  "kop": "Rusland claimt neerhalen meer dan 1200 Oekraïense drones, deel bij Moskou",
+  "link": "https://nos.nl/l/2641366",
+  "t": "2026-11-28T11:09+01:00",
+  "id": "n112812021",
+  "categorie": "politiek",
+  "zwaar": false,
+  "status": "overgeslagen"
+ },
+ {
+  "bron": "NU.nl",
+  "kop": "Twee bewakers Artsen zonder Grenzen gedood bij Israëlische aanval op Gaza",
+  "link": "https://www.nu.nl/midden-oostenconflict/6418077/twee-bewakers-artsen-zonder-grenzen-gedood-bij-israelische-aanval-op-gaza.html",
+  "t": "2026-11-28T08:50+01:00",
+  "id": "n112812022",
+  "categorie": "politiek",
+  "zwaar": false,
+  "status": "overgeslagen"
  }
 ]

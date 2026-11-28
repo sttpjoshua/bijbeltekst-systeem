@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-28T11:45",
+ "gegenereerd": "2026-11-28T12:02",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -22077,7 +22077,7 @@
    "ok": "2026-11-20T08:01",
    "laatst_ok": false,
    "detail": "400: {\"error\":{\"message\":\"Unsupported get request. Object with ID '18646160734043579' does not exist, cannot be loaded due to missing permissions, or does not s",
-   "fout": "2026-11-28T11:01"
+   "fout": "2026-11-28T12:02"
   },
   "facebook": {
    "ok": "2026-11-27T22:04",
@@ -26289,12 +26289,13 @@
   ],
   "zonder_tekst": 301,
   "mac": {
-   "t": "2026-11-27T20:36+00:00",
+   "t": "2026-11-28T05:03+00:00",
    "model": "Qwen2.5-14B-Instruct-4bit",
    "versie": "5",
    "laatste_ronde": {
     "concepten": 0,
-    "mislukt": 10
+    "mislukt": 10,
+    "nieuws": 2
    }
   }
  },
