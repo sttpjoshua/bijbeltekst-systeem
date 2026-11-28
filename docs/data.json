@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-28T18:30",
+ "gegenereerd": "2026-11-28T18:45",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -2333,6 +2333,16 @@
      "saves": 0,
      "follows": 0,
      "t": "2026-11-28T16:01+01:00"
+    },
+    "facebook": {
+     "views": null,
+     "reach": null,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": null,
+     "follows": null,
+     "t": null
     }
    },
    "score": {},
@@ -2371,6 +2381,17 @@
       "shares": 0,
       "saves": 0,
       "follows": 0
+     }
+    },
+    "facebook": {
+     "1u": {
+      "views": null,
+      "reach": null,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": null,
+      "follows": null
      }
     }
    },
@@ -22060,11 +22081,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-26T14:51:58",
-   "soort": "info",
-   "tekst": "Statistieken opgehaald voor 19 posts"
-  },
-  {
    "t": "2026-11-26T14:53:49",
    "soort": "info",
    "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
@@ -22364,6 +22380,11 @@
    "t": "2026-11-28T17:47:04",
    "soort": "info",
    "tekst": "2026-11-28-2 online op facebook: Psalm 112:7"
+  },
+  {
+   "t": "2026-11-28T18:45:39",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
   }
  ],
  "recente_fouten": [
