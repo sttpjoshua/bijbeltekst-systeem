@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-28T18:45:40",
+ "updated": "2026-11-28T19:02:53",
  "agents": {
   "verskiezer": {
    "t": "2026-11-28T09:02:56",
@@ -57,6 +57,10 @@
  ],
  "log": [
   {
+   "t": "19:02",
+   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
+  {
    "t": "18:45",
    "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
   },
@@ -99,10 +103,6 @@
   {
    "t": "12:17",
    "msg": "2026-11-28-5 online op facebook: Jesaja 43:2"
-  },
-  {
-   "t": "12:17",
-   "msg": "2026-11-28-3 online op facebook: 2 Kronieken 20:15"
   }
  ],
  "lampen": [
