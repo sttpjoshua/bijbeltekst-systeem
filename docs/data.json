@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-27T22:04",
+ "gegenereerd": "2026-11-28T04:01",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1702,8 +1702,12 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-28-1-4.jpg"
    ],
    "thumb": "thumbs/2026-11-28-1.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "instagram"
+   ],
+   "links": {
+    "instagram": "https://www.instagram.com/p/DgRPbbZjwlB/"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -1733,11 +1737,13 @@
     "video_uitleg": "n.v.t."
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "instagram": "2026-11-28T04:01+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": null,
-   "online": null
+   "online": "2026-11-28T04:01+01:00"
   },
   {
    "id": "2026-11-27-5",
@@ -1817,6 +1823,16 @@
      "saves": 0,
      "follows": null,
      "t": "2026-11-27T22:01+01:00"
+    },
+    "facebook": {
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "t": null
     }
    },
    "score": {},
@@ -1854,6 +1870,17 @@
       "comments": 0,
       "shares": 0,
       "saves": 0,
+      "follows": null
+     }
+    },
+    "facebook": {
+     "1u": {
+      "views": 0,
+      "reach": null,
+      "likes": null,
+      "comments": null,
+      "shares": null,
+      "saves": null,
       "follows": null
      }
     }
@@ -1927,8 +1954,36 @@
     "instagram": "https://www.instagram.com/reel/DgQmcVVzCdY/",
     "facebook": "https://www.facebook.com/1482207457441224"
    },
-   "totaal": {},
-   "per_platform": {},
+   "totaal": {
+    "views": 20,
+    "reach": 12,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0
+   },
+   "per_platform": {
+    "instagram": {
+     "views": 20,
+     "reach": 12,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "t": null
+    },
+    "facebook": {
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "t": null
+    }
+   },
    "score": {},
    "keuzebron": {
     "huisstijl": "experiment",
@@ -1955,7 +2010,30 @@
     "tijdslot": "experiment",
     "video_uitleg": "vaste regel"
    },
-   "momenten": {},
+   "momenten": {
+    "instagram": {
+     "1u": {
+      "views": 20,
+      "reach": 12,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": null
+     }
+    },
+    "facebook": {
+     "1u": {
+      "views": 0,
+      "reach": null,
+      "likes": null,
+      "comments": null,
+      "shares": null,
+      "saves": null,
+      "follows": null
+     }
+    }
+   },
    "pub": {
     "instagram": "2026-11-27T22:04+01:00",
     "facebook": "2026-11-27T22:04+01:00"
@@ -21019,21 +21097,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-25T19:02:37",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
-   "t": "2026-11-25T20:32:40",
-   "soort": "info",
-   "tekst": "2026-11-25-1 ook als story geplaatst"
-  },
-  {
-   "t": "2026-11-25T20:32:40",
-   "soort": "info",
-   "tekst": "2026-11-25-1 online op instagram: Galaten 4:7"
-  },
-  {
    "t": "2026-11-25T21:45:40",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
@@ -21323,6 +21386,21 @@
    "t": "2026-11-27T22:04:15",
    "soort": "info",
    "tekst": "2026-11-27-4 online op facebook: Mattheüs 7:3"
+  },
+  {
+   "t": "2026-11-27T23:15:47",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 3 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-28T04:01:35",
+   "soort": "info",
+   "tekst": "2026-11-28-1 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-28T04:01:35",
+   "soort": "info",
+   "tekst": "2026-11-28-1 online op instagram: Romeinen 5:5"
   }
  ],
  "recente_fouten": [
@@ -21474,9 +21552,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-27T22:04",
+   "ok": "2026-11-28T04:01",
    "laatst_ok": true,
-   "detail": "Mattheüs 7:3 geplaatst"
+   "detail": "Romeinen 5:5 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-27T14:52",
@@ -21505,7 +21583,7 @@
    "ok": "2026-11-20T08:01",
    "laatst_ok": false,
    "detail": "400: {\"error\":{\"message\":\"Unsupported get request. Object with ID '18646160734043579' does not exist, cannot be loaded due to missing permissions, or does not s",
-   "fout": "2026-11-27T22:01"
+   "fout": "2026-11-27T23:01"
   },
   "facebook": {
    "ok": "2026-11-27T22:04",
@@ -21689,21 +21767,21 @@
  ],
  "weken": {
   "deze": {
-   "posts": 35,
-   "reach": 482,
-   "views": 525,
-   "likes": 14,
+   "posts": 30,
+   "reach": 299,
+   "views": 342,
+   "likes": 7,
    "comments": 0,
    "saves": 0,
    "shares": 0
   },
   "vorige": {
    "posts": 35,
-   "reach": 1037,
-   "views": 1117,
-   "likes": 22,
+   "reach": 1127,
+   "views": 1202,
+   "likes": 27,
    "comments": 0,
-   "saves": 3,
+   "saves": 2,
    "shares": 0
   }
  },
@@ -22311,7 +22389,7 @@
  "snel_leren": {
   "start": "2026-11-16",
   "tot": "2026-11-30",
-  "dag": 12,
+  "dag": 13,
   "dagen": 14,
   "online": 60,
   "gemeten": 23
@@ -25717,7 +25795,7 @@
   ],
   "zonder_tekst": 301,
   "mac": {
-   "t": "2026-11-27T12:36+00:00",
+   "t": "2026-11-27T20:36+00:00",
    "model": "Qwen2.5-14B-Instruct-4bit",
    "versie": "5",
    "laatste_ronde": {
