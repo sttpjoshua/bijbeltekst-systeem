@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-28T12:02",
+ "gegenereerd": "2026-11-28T12:17",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1804,8 +1804,12 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-28-5-3.jpg"
    ],
    "thumb": "thumbs/2026-11-28-5.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "facebook"
+   ],
+   "links": {
+    "facebook": "https://www.facebook.com/1015160368352770_122135948348879910"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -1835,11 +1839,13 @@
     "video_uitleg": "n.v.t."
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "facebook": "2026-11-28T12:17+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": null,
-   "online": null
+   "online": "2026-11-28T12:17+01:00"
   },
   {
    "id": "2026-11-28-4",
@@ -1847,7 +1853,7 @@
    "ref": "Mattheüs 5:4",
    "tekst": "Zalig zijn die treuren; want zij zullen vertroost worden.",
    "hook": "Voor iedereen die iemand mist.",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "zand",
     "thema": "troost",
@@ -1893,8 +1899,14 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-28-4.mp4"
    ],
    "thumb": "thumbs/2026-11-28-4.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "instagram",
+    "facebook"
+   ],
+   "links": {
+    "instagram": "https://www.instagram.com/reel/DgSIBROBm3V/",
+    "facebook": "https://www.facebook.com/2300085300714687"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -1924,11 +1936,14 @@
     "video_uitleg": "vaste regel"
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "instagram": "2026-11-28T12:16+01:00",
+    "facebook": "2026-11-28T12:16+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": null,
-   "online": null
+   "online": "2026-11-28T12:16+01:00"
   },
   {
    "id": "2026-11-28-3",
@@ -1985,8 +2000,12 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-28-3-4.jpg"
    ],
    "thumb": "thumbs/2026-11-28-3.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "facebook"
+   ],
+   "links": {
+    "facebook": "https://www.facebook.com/1015160368352770_122135948048879910"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -2016,11 +2035,13 @@
     "video_uitleg": "n.v.t."
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "facebook": "2026-11-28T12:17+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": null,
-   "online": null
+   "online": "2026-11-28T12:17+01:00"
   },
   {
    "id": "2026-11-28-2",
@@ -21591,36 +21612,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-25T22:03:42",
-   "soort": "info",
-   "tekst": "2026-11-25-3 ook als story geplaatst"
-  },
-  {
-   "t": "2026-11-25T22:03:42",
-   "soort": "info",
-   "tekst": "2026-11-25-3 online op instagram: Spreuken 12:15"
-  },
-  {
-   "t": "2026-11-25T23:15:56",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
-  },
-  {
-   "t": "2026-11-26T04:01:56",
-   "soort": "info",
-   "tekst": "2026-11-26-1 ook als story geplaatst"
-  },
-  {
-   "t": "2026-11-26T04:01:56",
-   "soort": "info",
-   "tekst": "2026-11-26-1 online op instagram: Psalm 62:2"
-  },
-  {
-   "t": "2026-11-26T05:15:39",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
-  },
-  {
    "t": "2026-11-26T12:02:20",
    "soort": "fout",
    "tekst": "Nieuws (politiek, NOS): \"Onvrede binnen VVD over dubbelfunctie Yesilgöz, zegt oud-partijvoorzitter Van der Wal\". Voorstel in de persoonlijke stem staat klaar; gaat alleen online met jouw akkoord.",
@@ -21895,16 +21886,41 @@
    "t": "2026-11-28T09:04:00",
    "soort": "info",
    "tekst": "Zelfstandig 5 posts klaargezet voor 2026-11-30 (teksten uit de tekstbank)."
+  },
+  {
+   "t": "2026-11-28T12:02:33",
+   "soort": "fout",
+   "tekst": "Nieuws (politiek, NOS): \"Wekdienst 28/11: Partijcongres VVD • World Tour shorttrack in Shanghai\". Voorstel in de persoonlijke stem staat klaar; gaat alleen online met jouw akkoord.",
+   "code": "nieuws_voorstel",
+   "post": "n112807010"
+  },
+  {
+   "t": "2026-11-28T12:16:49",
+   "soort": "info",
+   "tekst": "2026-11-28-4 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-28T12:16:49",
+   "soort": "info",
+   "tekst": "2026-11-28-4 online op instagram: Mattheüs 5:4"
+  },
+  {
+   "t": "2026-11-28T12:16:57",
+   "soort": "info",
+   "tekst": "2026-11-28-4 online op facebook: Mattheüs 5:4"
+  },
+  {
+   "t": "2026-11-28T12:17:04",
+   "soort": "info",
+   "tekst": "2026-11-28-3 online op facebook: 2 Kronieken 20:15"
+  },
+  {
+   "t": "2026-11-28T12:17:09",
+   "soort": "info",
+   "tekst": "2026-11-28-5 online op facebook: Jesaja 43:2"
   }
  ],
  "recente_fouten": [
-  {
-   "t": "2026-11-26T12:02:20",
-   "soort": "fout",
-   "tekst": "Nieuws (politiek, NOS): \"Onvrede binnen VVD over dubbelfunctie Yesilgöz, zegt oud-partijvoorzitter Van der Wal\". Voorstel in de persoonlijke stem staat klaar; gaat alleen online met jouw akkoord.",
-   "code": "nieuws_voorstel",
-   "post": "n112607010"
-  },
   {
    "t": "2026-11-27T12:01:23",
    "soort": "fout",
@@ -21918,6 +21934,13 @@
    "tekst": "Nieuws (koopjes, NU.nl): \"Black Friday na 10 jaar: wat is er nog over van de echte gouden dealtjes?\". Voorstel in de persoonlijke stem staat klaar; gaat alleen online met jouw akkoord.",
    "code": "nieuws_voorstel",
    "post": "n112707014"
+  },
+  {
+   "t": "2026-11-28T12:02:33",
+   "soort": "fout",
+   "tekst": "Nieuws (politiek, NOS): \"Wekdienst 28/11: Partijcongres VVD • World Tour shorttrack in Shanghai\". Voorstel in de persoonlijke stem staat klaar; gaat alleen online met jouw akkoord.",
+   "code": "nieuws_voorstel",
+   "post": "n112807010"
   }
  ],
  "versen_totaal": 300,
@@ -22046,9 +22069,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-28T04:01",
+   "ok": "2026-11-28T12:16",
    "laatst_ok": true,
-   "detail": "Romeinen 5:5 geplaatst"
+   "detail": "Mattheüs 5:4 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-27T14:52",
@@ -22080,9 +22103,9 @@
    "fout": "2026-11-28T12:02"
   },
   "facebook": {
-   "ok": "2026-11-27T22:04",
+   "ok": "2026-11-28T12:17",
    "laatst_ok": true,
-   "detail": "Mattheüs 7:3 geplaatst"
+   "detail": "Jesaja 43:2 geplaatst"
   },
   "statistieken": {
    "ok": "2026-11-27T14:53",
@@ -22103,12 +22126,12 @@
    "fout": "2026-11-24T19:03",
    "laatst_ok": true,
    "detail": "1 bericht(en) verstuurd",
-   "ok": "2026-11-27T21:30"
+   "ok": "2026-11-28T12:02"
   },
   "nieuws": {
-   "ok": "2026-11-28T07:01",
+   "ok": "2026-11-28T12:02",
    "laatst_ok": true,
-   "detail": "9 nieuwe aanleidingen, 0 voorstellen"
+   "detail": "3 nieuwe aanleidingen, 1 voorstellen"
   },
   "maken": {
    "ok": "2026-11-28T09:04",
@@ -22261,7 +22284,7 @@
  ],
  "weken": {
   "deze": {
-   "posts": 30,
+   "posts": 31,
    "reach": 359,
    "views": 398,
    "likes": 7,
@@ -22885,7 +22908,7 @@
   "tot": "2026-11-30",
   "dag": 13,
   "dagen": 14,
-  "online": 60,
+  "online": 61,
   "gemeten": 23
  },
  "voorraad": {
@@ -26307,6 +26330,42 @@
   },
   "recent": [
    {
+    "id": "n112812022",
+    "t": "2026-11-28T08:50+01:00",
+    "bron": "NU.nl",
+    "kop": "Twee bewakers Artsen zonder Grenzen gedood bij Israëlische aanval op Gaza",
+    "link": "https://www.nu.nl/midden-oostenconflict/6418077/twee-bewakers-artsen-zonder-grenzen-gedood-bij-israelische-aanval-op-gaza.html",
+    "categorie": "politiek",
+    "zwaar": false,
+    "status": "overgeslagen",
+    "post": null,
+    "opties": null
+   },
+   {
+    "id": "n112812021",
+    "t": "2026-11-28T11:09+01:00",
+    "bron": "NOS",
+    "kop": "Rusland claimt neerhalen meer dan 1200 Oekraïense drones, deel bij Moskou",
+    "link": "https://nos.nl/l/2641366",
+    "categorie": "politiek",
+    "zwaar": false,
+    "status": "overgeslagen",
+    "post": null,
+    "opties": null
+   },
+   {
+    "id": "n112812020",
+    "t": "2026-11-28T11:27+01:00",
+    "bron": "NOS",
+    "kop": "VVD-leden verdeeld over onrust in partij, spanning over toespraak Yesilgöz",
+    "link": "https://nos.nl/l/2641369",
+    "categorie": "politiek",
+    "zwaar": false,
+    "status": "overgeslagen",
+    "post": null,
+    "opties": null
+   },
+   {
     "id": "n112807018",
     "t": "2026-11-27T11:46+01:00",
     "bron": "NOS",
@@ -26314,7 +26373,7 @@
     "link": "https://nos.nl/l/2641224",
     "categorie": "winter",
     "zwaar": false,
-    "status": "schrijven",
+    "status": "verlopen",
     "post": null,
     "opties": null
    },
@@ -26410,9 +26469,56 @@
     "link": "https://nos.nl/l/2641337",
     "categorie": "politiek",
     "zwaar": false,
-    "status": "schrijven",
+    "status": "voorstel",
     "post": null,
-    "opties": null
+    "opties": [
+     {
+      "vers_id": "Psalms-143-8-8",
+      "ref": "Psalm 143:8",
+      "tekst": "Doe mij Uw goedertierenheid in den morgenstond horen, want ik betrouw op U; maak mij bekend den weg, dien ik te gaan heb, want ik hef mijn ziel tot U op.",
+      "zin": "Gisteren was er weer een congres van een politieke partij, terwijl ik me concentreer op het ontvangen van goedertierenheid in deze nieuwe morgen.",
+      "kernwoord": "morgenstond",
+      "betekenis": "David begint zijn dag met een gebed: laat me 's ochtends al horen dat U van mij houdt, en laat me zien welke kant ik op moet.",
+      "toepassing": "Bid morgen bij het opstaan dit vers als eerste gebed van de dag.",
+      "caption": "Gisteren was er weer een congres van een politieke partij, terwijl ik me concentreer op het ontvangen van goedertierenheid in deze nieuwe morgen.\n\n\"Doe mij Uw goedertierenheid in den morgenstond horen, want ik betrouw op U; maak mij bekend den weg, dien ik te gaan heb, want ik hef mijn ziel tot U op.\"\nPsalm 143:8\n\nIk begin de dag liever met een vers dan met mijn telefoon. Het lukt niet altijd.",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112807010-1-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112807010-1-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112807010-1-3.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112807010-1-4.jpg"
+      ]
+     },
+     {
+      "vers_id": "Psalms-90-12-12",
+      "ref": "Psalm 90:12",
+      "tekst": "Leer ons alzo onze dagen tellen, dat wij een wijs hart bekomen.",
+      "zin": "De updates over het partijcongres en de sportevenementen doen me nadenken over hoe ik mijn eigen tijd en energie besteed.",
+      "kernwoord": "dagen",
+      "betekenis": "Mozes bidt dat we leren onze dagen te tellen. Niet uit angst, maar omdat het leven kostbaar is. Wie dat beseft, maakt wijzere keuzes.",
+      "toepassing": "Vraag jezelf vandaag af: waar wil ik deze dag echt aan besteden?",
+      "caption": "De updates over het partijcongres en de sportevenementen doen me nadenken over hoe ik mijn eigen tijd en energie besteed.\n\n\"Leer ons alzo onze dagen tellen, dat wij een wijs hart bekomen.\"\nPsalm 90:12\n\nMijn dagen zijn niet oneindig. Dat zet mijn to-do-lijst even in perspectief.",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112807010-2-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112807010-2-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112807010-2-3.jpg"
+      ]
+     },
+     {
+      "vers_id": "Hebrews-4-9-9",
+      "ref": "Hebreeën 4:9",
+      "tekst": "Er blijft dan een rust over voor het volk Gods.",
+      "zin": "De partijcongressen zijn hard werk, maar ik hou me aan mijn belofte om te blijven piekeren en los te laten over wat ik kan beïnvloeden.",
+      "kernwoord": "rust",
+      "betekenis": "De schrijver van Hebreeën zegt dat Gods rust niet voorbij is. Er wacht een diepe rust voor wie bij God hoort, en daar mag je nu al iets van proeven.",
+      "toepassing": "Plan vandaag een rustmoment, en zie het als een voorproefje van Gods rust.",
+      "caption": "De partijcongressen zijn hard werk, maar ik hou me aan mijn belofte om te blijven piekeren en los te laten over wat ik kan beïnvloeden.\n\n\"Er blijft dan een rust over voor het volk Gods.\"\nHebreeën 4:9\n\nEr is rust voor jou.",
+      "media": [
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112807010-3-1.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112807010-3-2.jpg",
+       "https://sttpjoshua.github.io/bijbeltekst-systeem/media/nieuws/n112807010-3-3.jpg"
+      ]
+     }
+    ]
    },
    {
     "id": "n112707014",
@@ -26422,7 +26528,7 @@
     "link": "https://www.nu.nl/economie/6417896/black-friday-na-10-jaar-wat-is-er-nog-over-van-de-echte-gouden-dealtjes.html",
     "categorie": "koopjes",
     "zwaar": false,
-    "status": "voorstel",
+    "status": "verlopen",
     "post": null,
     "opties": [
      {
@@ -26518,7 +26624,7 @@
     "link": "https://nos.nl/l/2641181",
     "categorie": "politiek",
     "zwaar": false,
-    "status": "voorstel",
+    "status": "verlopen",
     "post": null,
     "opties": [
      {
@@ -26665,42 +26771,6 @@
     "status": "overgeslagen",
     "post": null,
     "opties": null
-   },
-   {
-    "id": "n112607015",
-    "t": "2026-11-26T04:57+01:00",
-    "bron": "NU.nl",
-    "kop": "Zelfs Vredesraad van Trump is niet optimistisch over vredesproces in Gaza",
-    "link": "https://www.nu.nl/midden-oostenconflict/6417765/zelfs-vredesraad-van-trump-is-niet-optimistisch-over-vredesproces-in-gaza.html",
-    "categorie": "politiek",
-    "zwaar": false,
-    "status": "overgeslagen",
-    "post": null,
-    "opties": null
-   },
-   {
-    "id": "n112607014",
-    "t": "2026-11-26T05:52+01:00",
-    "bron": "NU.nl",
-    "kop": "Rutte en Trump roepen Rusland op om de oorlog in Oekraïne niet groter te maken",
-    "link": "https://www.nu.nl/spanningen-oekraine/6417817/rutte-en-trump-roepen-rusland-op-om-de-oorlog-in-oekraine-niet-groter-te-maken.html",
-    "categorie": "politiek",
-    "zwaar": false,
-    "status": "overgeslagen",
-    "post": null,
-    "opties": null
-   },
-   {
-    "id": "n112607013",
-    "t": "2026-11-25T14:22+01:00",
-    "bron": "NOS",
-    "kop": "25/11 in Nieuwsuur: Crackproblemen • Aanpak neonazi's • EU-top over begroting",
-    "link": "https://nos.nl/l/2640974",
-    "categorie": "politiek",
-    "zwaar": false,
-    "status": "overgeslagen",
-    "post": null,
-    "opties": null
    }
   ]
  },
@@ -26763,8 +26833,8 @@
      },
      {
       "optie": "zand",
-      "online": 13,
-      "gepland": 6,
+      "online": 14,
+      "gepland": 5,
       "n": 4,
       "gem": 1.38,
       "oordeel": "weinig data"
@@ -26905,37 +26975,6 @@
   ],
   "komend": [
    {
-    "id": "2026-11-28-4",
-    "ref": "Mattheüs 5:4",
-    "datum": "2026-11-28",
-    "tijdslot": "12:15",
-    "tests": [
-     {
-      "dimensie": "huisstijl",
-      "optie": "zand",
-      "bron": "experiment"
-     },
-     {
-      "dimensie": "reel_stijl",
-      "optie": "markeren",
-      "bron": "test markeren"
-     }
-    ]
-   },
-   {
-    "id": "2026-11-28-3",
-    "ref": "2 Kronieken 20:15",
-    "datum": "2026-11-28",
-    "tijdslot": "17:45",
-    "tests": [
-     {
-      "dimensie": "huisstijl",
-      "optie": "roze",
-      "bron": "experiment"
-     }
-    ]
-   },
-   {
     "id": "2026-11-28-2",
     "ref": "Psalm 112:7",
     "datum": "2026-11-28",
@@ -26950,19 +26989,6 @@
       "dimensie": "reel_stijl",
       "optie": "markeren",
       "bron": "test markeren"
-     }
-    ]
-   },
-   {
-    "id": "2026-11-28-5",
-    "ref": "Jesaja 43:2",
-    "datum": "2026-11-28",
-    "tijdslot": "22:00",
-    "tests": [
-     {
-      "dimensie": "huisstijl",
-      "optie": "zand",
-      "bron": "experiment"
      }
     ]
    },
@@ -27071,6 +27097,19 @@
      {
       "dimensie": "huisstijl",
       "optie": "roze",
+      "bron": "experiment"
+     }
+    ]
+   },
+   {
+    "id": "2026-11-30-4",
+    "ref": "Mattheüs 6:33",
+    "datum": "2026-11-30",
+    "tijdslot": "22:00",
+    "tests": [
+     {
+      "dimensie": "huisstijl",
+      "optie": "zand",
       "bron": "experiment"
      }
     ]
