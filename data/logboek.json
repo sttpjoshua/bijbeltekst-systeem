@@ -1,15 +1,5 @@
 [
  {
-  "t": "2026-11-14T22:02:19",
-  "soort": "info",
-  "tekst": "2026-11-14-2 online op facebook: Sefanja 3:17"
- },
- {
-  "t": "2026-11-14T22:03:13",
-  "soort": "info",
-  "tekst": "2026-11-14-5 ook als story geplaatst"
- },
- {
   "t": "2026-11-14T22:03:13",
   "soort": "info",
   "tekst": "2026-11-14-5 online op instagram: Psalm 62:6"
@@ -2551,5 +2541,15 @@
   "t": "2026-11-28T13:30:54",
   "soort": "info",
   "tekst": "Eerste-uurcijfers van 4 posts vastgelegd"
+ },
+ {
+  "t": "2026-11-28T13:57:02",
+  "soort": "info",
+  "tekst": "Statistieken opgehaald voor 20 posts"
+ },
+ {
+  "t": "2026-11-28T13:58:48",
+  "soort": "info",
+  "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
  }
 ]
