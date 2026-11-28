@@ -20552,6 +20552,16 @@
      "saves": null,
      "follows": null,
      "avg_watch_ms": null
+    },
+    "1u": {
+     "views": null,
+     "reach": null,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": null,
+     "follows": null,
+     "avg_watch_ms": null
     }
    }
   },
@@ -20697,11 +20707,31 @@
      "saves": 0,
      "follows": null,
      "avg_watch_ms": 3456
+    },
+    "1u": {
+     "views": 6,
+     "reach": 4,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": null,
+     "avg_watch_ms": 2722
     }
    },
    "facebook": {
     "laatst": {
      "t": "2026-11-28T13:01+01:00",
+     "views": 0,
+     "reach": null,
+     "likes": null,
+     "comments": null,
+     "shares": null,
+     "saves": null,
+     "follows": null,
+     "avg_watch_ms": null
+    },
+    "1u": {
      "views": 0,
      "reach": null,
      "likes": null,
@@ -20851,6 +20881,16 @@
    "facebook": {
     "laatst": {
      "t": "2026-11-28T13:01+01:00",
+     "views": null,
+     "reach": null,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": null,
+     "follows": null,
+     "avg_watch_ms": null
+    },
+    "1u": {
      "views": null,
      "reach": null,
      "likes": 0,
