@@ -20224,7 +20224,20 @@
   "media": "docs/media/2026-11/2026-11-28-1-1.jpg",
   "media_url": "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-28-1-1.jpg",
   "metricool": {},
-  "stats": {},
+  "stats": {
+   "instagram": {
+    "1u": {
+     "views": 0,
+     "reach": 0,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": 0,
+     "avg_watch_ms": null
+    }
+   }
+  },
   "beeld": "pexels-alessandro-kelvin-1248577-2376272.jpg",
   "muziek": null,
   "geluid": null,

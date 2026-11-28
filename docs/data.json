@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-28T04:45",
+ "gegenereerd": "2026-11-28T05:01",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -1708,8 +1708,26 @@
    "links": {
     "instagram": "https://www.instagram.com/p/DgRPbbZjwlB/"
    },
-   "totaal": {},
-   "per_platform": {},
+   "totaal": {
+    "views": 0,
+    "reach": 0,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0
+   },
+   "per_platform": {
+    "instagram": {
+     "views": 0,
+     "reach": 0,
+     "likes": 0,
+     "comments": 0,
+     "shares": 0,
+     "saves": 0,
+     "follows": 0,
+     "t": null
+    }
+   },
    "score": {},
    "keuzebron": {
     "huisstijl": "ochtend",
@@ -1736,7 +1754,19 @@
     "tijdslot": "experiment",
     "video_uitleg": "n.v.t."
    },
-   "momenten": {},
+   "momenten": {
+    "instagram": {
+     "1u": {
+      "views": 0,
+      "reach": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "follows": 0
+     }
+    }
+   },
    "pub": {
     "instagram": "2026-11-28T04:01+01:00"
    },
@@ -21097,11 +21127,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-25T21:45:40",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
-  },
-  {
    "t": "2026-11-25T22:02:53",
    "soort": "info",
    "tekst": "2026-11-25-2 online op facebook: Jesaja 49:16"
@@ -21401,6 +21426,11 @@
    "t": "2026-11-28T04:01:35",
    "soort": "info",
    "tekst": "2026-11-28-1 online op instagram: Romeinen 5:5"
+  },
+  {
+   "t": "2026-11-28T05:01:06",
+   "soort": "info",
+   "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
   }
  ],
  "recente_fouten": [
