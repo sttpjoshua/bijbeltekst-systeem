@@ -2065,5 +2065,129 @@
     ]
    }
   ]
+ },
+ {
+  "bron": "NOS",
+  "kop": "Wekdienst 28/11: Partijcongres VVD • World Tour shorttrack in Shanghai",
+  "link": "https://nos.nl/l/2641337",
+  "t": "2026-11-28T06:41+01:00",
+  "id": "n112807010",
+  "categorie": "politiek",
+  "zwaar": false,
+  "status": "schrijven",
+  "kandidaten": [
+   {
+    "vers_id": "Psalms-143-8-8",
+    "ref": "Psalm 143:8",
+    "tekst": "Doe mij Uw goedertierenheid in den morgenstond horen, want ik betrouw op U; maak mij bekend den weg, dien ik te gaan heb, want ik hef mijn ziel tot U op."
+   },
+   {
+    "vers_id": "Psalms-90-12-12",
+    "ref": "Psalm 90:12",
+    "tekst": "Leer ons alzo onze dagen tellen, dat wij een wijs hart bekomen."
+   },
+   {
+    "vers_id": "Hebrews-4-9-9",
+    "ref": "Hebreeën 4:9",
+    "tekst": "Er blijft dan een rust over voor het volk Gods."
+   }
+  ]
+ },
+ {
+  "bron": "NOS",
+  "kop": "VVD kijkt vandaag naar Yesilgöz: welke petten kan een partijleider op?",
+  "link": "https://nos.nl/l/2641336",
+  "t": "2026-11-28T06:10+01:00",
+  "id": "n112807011",
+  "categorie": "politiek",
+  "zwaar": false,
+  "status": "overgeslagen"
+ },
+ {
+  "bron": "NOS",
+  "kop": "Bewakers Artsen zonder Grenzen gedood in Gaza, Israël spreekt van Hamas-leden",
+  "link": "https://nos.nl/l/2641333",
+  "t": "2026-11-28T02:11+01:00",
+  "id": "n112807012",
+  "categorie": "politiek",
+  "zwaar": false,
+  "status": "overgeslagen"
+ },
+ {
+  "bron": "NOS",
+  "kop": "Britse ITV News toont beelden van live aangestuurde aanslag in VK vanuit Irak",
+  "link": "https://nos.nl/l/2641328",
+  "t": "2026-11-27T23:27+01:00",
+  "id": "n112807013",
+  "categorie": "zwaar",
+  "zwaar": true,
+  "status": "overgeslagen"
+ },
+ {
+  "bron": "NOS",
+  "kop": "Servische Studentenlijst schuift scheikundehoogleraar naar voren als presidentskandidaat",
+  "link": "https://nos.nl/l/2641315",
+  "t": "2026-11-27T22:06+01:00",
+  "id": "n112807014",
+  "categorie": "politiek",
+  "zwaar": false,
+  "status": "overgeslagen"
+ },
+ {
+  "bron": "NOS",
+  "kop": "Na commotie eert Margraten zwarte bevrijders opnieuw: 'Nu nog op begraafplaats zelf'",
+  "link": "https://nos.nl/l/2641314",
+  "t": "2026-11-27T21:49+01:00",
+  "id": "n112807015",
+  "categorie": "politiek",
+  "zwaar": false,
+  "status": "overgeslagen"
+ },
+ {
+  "bron": "NOS",
+  "kop": "Van loze beloftes tot torenhoge huren: woningcrisis domineert Spaanse verkiezingen",
+  "link": "https://nos.nl/l/2641306",
+  "t": "2026-11-27T20:23+01:00",
+  "id": "n112807016",
+  "categorie": "politiek",
+  "zwaar": false,
+  "status": "overgeslagen"
+ },
+ {
+  "bron": "NOS",
+  "kop": "Rechter: Staat hoeft Gazanen niet te helpen om naar Nederland te komen",
+  "link": "https://nos.nl/l/2641243",
+  "t": "2026-11-27T13:38+01:00",
+  "id": "n112807017",
+  "categorie": "politiek",
+  "zwaar": false,
+  "status": "overgeslagen"
+ },
+ {
+  "bron": "NOS",
+  "kop": "Kou in Nederland: schaatsen op natuurijs, eerstedivisieduels en hockeyprogramma afgelast",
+  "link": "https://nos.nl/l/2641224",
+  "t": "2026-11-27T11:46+01:00",
+  "id": "n112807018",
+  "categorie": "winter",
+  "zwaar": false,
+  "status": "schrijven",
+  "kandidaten": [
+   {
+    "vers_id": "Proverbs-2-6-6",
+    "ref": "Spreuken 2:6",
+    "tekst": "Want de HEERE geeft wijsheid; uit Zijn mond komt kennis en verstand."
+   },
+   {
+    "vers_id": "James-1-5-5",
+    "ref": "Jakobus 1:5",
+    "tekst": "En indien iemand van u wijsheid ontbreekt, dat hij ze van God begere, Die een iegelijk mildelijk geeft, en niet verwijt; en zij zal hem gegeven worden."
+   },
+   {
+    "vers_id": "Proverbs-1-7-7",
+    "ref": "Spreuken 1:7",
+    "tekst": "De vrees des HEEREN is het beginsel der wetenschap; de dwazen verachten wijsheid en tucht."
+   }
+  ]
  }
 ]
