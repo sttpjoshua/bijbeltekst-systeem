@@ -2272,5 +2272,45 @@
   "categorie": "politiek",
   "zwaar": false,
   "status": "overgeslagen"
+ },
+ {
+  "bron": "NOS",
+  "kop": "Rijen sluiten zich bij VVD, Yesilgöz erkent fouten: 'Te fel geweest'",
+  "link": "https://nos.nl/l/2641401",
+  "t": "2026-11-28T15:39+01:00",
+  "id": "n112817010",
+  "categorie": "politiek",
+  "zwaar": false,
+  "status": "overgeslagen"
+ },
+ {
+  "bron": "NOS",
+  "kop": "In de toekomst weer uitfans bij de Klassieker? 'Partijen wijzen naar elkaar'",
+  "link": "https://nos.nl/l/2641397",
+  "t": "2026-11-28T15:28+01:00",
+  "id": "n112817011",
+  "categorie": "politiek",
+  "zwaar": false,
+  "status": "overgeslagen"
+ },
+ {
+  "bron": "NU.nl",
+  "kop": "Video | Boegeroep op VVD-congres na vraag aan Yesilgöz over partijleiderschap",
+  "link": "https://www.nu.nl/332724/video/boegeroep-op-vvd-congres-als-yesilgoz-vraag-krijgt-over-positie-als-partijleider.html",
+  "t": "2026-11-28T16:24+01:00",
+  "id": "n112817012",
+  "categorie": "politiek",
+  "zwaar": false,
+  "status": "overgeslagen"
+ },
+ {
+  "bron": "NU.nl",
+  "kop": "Yesilgöz blijft aan als VVD-leider, maar erkent dat ze fouten heeft gemaakt",
+  "link": "https://www.nu.nl/politiek/6418087/yesilgoz-blijft-aan-als-vvd-leider-maar-erkent-dat-ze-fouten-heeft-gemaakt.html",
+  "t": "2026-11-28T15:46+01:00",
+  "id": "n112817013",
+  "categorie": "politiek",
+  "zwaar": false,
+  "status": "overgeslagen"
  }
 ]
