@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-28T20:15",
+ "gegenereerd": "2026-11-28T20:32",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -2184,7 +2184,7 @@
    "ref": "Psalm 112:7",
    "tekst": "Hij zal voor geen kwaad gerucht vrezen; zijn hart is vast, betrouwende op den HEERE.",
    "hook": "Voor iedereen die onrustig wordt van het nieuws.",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "avond",
     "thema": "vertrouwen",
@@ -2231,10 +2231,12 @@
    ],
    "thumb": "thumbs/2026-11-28-2.jpg",
    "platformen": [
-    "facebook"
+    "facebook",
+    "instagram"
    ],
    "links": {
-    "facebook": "https://www.facebook.com/1408539384689089"
+    "facebook": "https://www.facebook.com/1408539384689089",
+    "instagram": "https://www.instagram.com/reel/DgTAruzBYaj/"
    },
    "totaal": {
     "views": 0,
@@ -2296,7 +2298,8 @@
     }
    },
    "pub": {
-    "facebook": "2026-11-28T17:47+01:00"
+    "facebook": "2026-11-28T17:47+01:00",
+    "instagram": "2026-11-28T20:32+01:00"
    },
    "gemist": [],
    "nood": false,
@@ -22132,16 +22135,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-26T17:47:54",
-   "soort": "info",
-   "tekst": "2026-11-26-2 ook als story geplaatst"
-  },
-  {
-   "t": "2026-11-26T17:47:54",
-   "soort": "info",
-   "tekst": "2026-11-26-2 online op instagram: 2 Korinthe 4:16"
-  },
-  {
    "t": "2026-11-26T19:02:45",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 1 posts vastgelegd"
@@ -22436,6 +22429,16 @@
    "t": "2026-11-28T19:02:52",
    "soort": "info",
    "tekst": "Eerste-uurcijfers van 2 posts vastgelegd"
+  },
+  {
+   "t": "2026-11-28T20:32:07",
+   "soort": "info",
+   "tekst": "2026-11-28-2 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-28T20:32:07",
+   "soort": "info",
+   "tekst": "2026-11-28-2 online op instagram: Psalm 112:7"
   }
  ],
  "recente_fouten": [
@@ -22587,9 +22590,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-28T17:46",
+   "ok": "2026-11-28T20:32",
    "laatst_ok": true,
-   "detail": "2 Kronieken 20:15 geplaatst"
+   "detail": "Psalm 112:7 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-28T13:58",
@@ -22808,7 +22811,7 @@
  ],
  "weken": {
   "deze": {
-   "posts": 33,
+   "posts": 34,
    "reach": 402,
    "views": 444,
    "likes": 9,
@@ -23438,7 +23441,7 @@
   "tot": "2026-11-30",
   "dag": 13,
   "dagen": 14,
-  "online": 63,
+  "online": 64,
   "gemeten": 24
  },
  "voorraad": {
@@ -27354,8 +27357,8 @@
     "opties": [
      {
       "optie": "avond",
-      "online": 2,
-      "gepland": 1,
+      "online": 3,
+      "gepland": 0,
       "n": 0,
       "gem": null,
       "oordeel": "weinig data"
