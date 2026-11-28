@@ -1,19 +1,19 @@
 {
- "updated": "2026-11-28T09:01:35",
+ "updated": "2026-11-28T09:04:01",
  "agents": {
   "verskiezer": {
-   "t": "2026-11-27T09:02:46",
-   "task": "Koos Jesaja 40:3, Johannes 14:18, Kolossenzen 3:14, Psalm 127:2, Psalm 94:19",
+   "t": "2026-11-28T09:02:56",
+   "task": "Koos Psalm 130:6, Spreuken 3:5-6, Psalm 39:8, Mattheüs 6:33, Psalm 147:3",
    "state": "done"
   },
   "designer": {
-   "t": "2026-11-27T09:03:23",
-   "task": "Ontwierp Psalm 94:19 in stijl zand",
+   "t": "2026-11-28T09:04:00",
+   "task": "Ontwierp Psalm 147:3 in stijl zand",
    "state": "done"
   },
   "video": {
-   "t": "2026-11-27T09:03:23",
-   "task": "Monteerde video Psalm 94:19 met muziek",
+   "t": "2026-11-28T09:03:58",
+   "task": "Monteerde video Spreuken 3:5-6 met muziek",
    "state": "done"
   },
   "dispatcher": {
@@ -57,6 +57,10 @@
  ],
  "log": [
   {
+   "t": "09:04",
+   "msg": "Zelfstandig 5 posts klaargezet voor 2026-11-30 (teksten uit de tekstbank)."
+  },
+  {
    "t": "05:01",
    "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
   },
@@ -99,10 +103,6 @@
   {
    "t": "20:33",
    "msg": "2026-11-27-1 ook als story geplaatst"
-  },
-  {
-   "t": "19:04",
-   "msg": "Eerste-uurcijfers van 2 posts vastgelegd"
   }
  ],
  "lampen": [
