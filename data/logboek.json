@@ -1,25 +1,5 @@
 [
  {
-  "t": "2026-11-14T23:15:29",
-  "soort": "info",
-  "tekst": "Eerste-uurcijfers van 3 posts vastgelegd"
- },
- {
-  "t": "2026-11-15T04:01:10",
-  "soort": "info",
-  "tekst": "Zelfherstel: 2026-11-15-2 op instagram mislukt (400: {\"error\":{\"message\":\"Only photo or video can be accepted as media type.\",\"code\":9004,\"type\":\"OA) → poging 1 van 3; probeert het over een kwartier opnieuw"
- },
- {
-  "t": "2026-11-15T04:01:25",
-  "soort": "info",
-  "tekst": "2026-11-15-1 online op facebook: Mattheüs 11:29-30"
- },
- {
-  "t": "2026-11-15T04:16:16",
-  "soort": "info",
-  "tekst": "2026-11-15-2 ook als story geplaatst"
- },
- {
   "t": "2026-11-15T04:16:16",
   "soort": "info",
   "tekst": "2026-11-15-2 online op instagram: Psalm 16:11"
@@ -2551,5 +2531,25 @@
   "t": "2026-11-28T14:34:56",
   "soort": "info",
   "tekst": "Dagelijkse run (zelfstandig): 5 posts voor 29 nov en 5 voor 30 nov gecontroleerd, reserveverzen voor 30 nov ingevuld"
+ },
+ {
+  "t": "2026-11-28T17:45:51",
+  "soort": "info",
+  "tekst": "2026-11-28-1 online op facebook: Romeinen 5:5"
+ },
+ {
+  "t": "2026-11-28T17:46:56",
+  "soort": "info",
+  "tekst": "2026-11-28-3 ook als story geplaatst"
+ },
+ {
+  "t": "2026-11-28T17:46:56",
+  "soort": "info",
+  "tekst": "2026-11-28-3 online op instagram: 2 Kronieken 20:15"
+ },
+ {
+  "t": "2026-11-28T17:47:04",
+  "soort": "info",
+  "tekst": "2026-11-28-2 online op facebook: Psalm 112:7"
  }
 ]

@@ -20383,7 +20383,7 @@
  {
   "id": "2026-11-28-1",
   "datum": "2026-11-28",
-  "status": "gerenderd",
+  "status": "gepubliceerd",
   "vers_id": "Romans-5-5-5",
   "ref": "Romeinen 5:5",
   "tekst": "En de hoop beschaamt niet, omdat de liefde Gods in onze harten uitgestort is door den Heiligen Geest, Die ons is gegeven.",
@@ -20532,6 +20532,11 @@
     "id": "18134563873814308",
     "url": "https://www.instagram.com/p/DgRPbbZjwlB/",
     "t": "2026-11-28T04:01+01:00"
+   },
+   "facebook": {
+    "id": "1015160368352770_122135970644879910",
+    "url": "https://www.facebook.com/1015160368352770_122135970644879910",
+    "t": "2026-11-28T17:45+01:00"
    }
   }
  },
@@ -20656,12 +20661,19 @@
    "betekenis": "De dichter ziet elke dag als een geschenk van God. Blijdschap begint niet bij hoe de dag loopt, maar bij Wie hem gemaakt heeft.",
    "toepassing": "Noem vanavond drie kleine dingen van vandaag waar je dankbaar voor bent.",
    "kernwoord": "verheugen"
+  },
+  "gepubliceerd": {
+   "facebook": {
+    "id": "1408539384689089",
+    "url": "https://www.facebook.com/1408539384689089",
+    "t": "2026-11-28T17:47+01:00"
+   }
   }
  },
  {
   "id": "2026-11-28-3",
   "datum": "2026-11-28",
-  "status": "gerenderd",
+  "status": "gepubliceerd",
   "vers_id": "II_Chronicles-20-15-15",
   "ref": "2 Kronieken 20:15",
   "tekst": "En hij zeide: Merkt op, geheel Juda, en gij, inwoners van Jeruzalem, en gij, koning Josafat! Alzo zegt de HEERE tot ulieden: Vreest gijlieden niet, en wordt niet ontzet vanwege deze grote menigte; want de strijd is niet uwe, maar Gods.",
@@ -20815,6 +20827,11 @@
     "id": "1015160368352770_122135948048879910",
     "url": "https://www.facebook.com/1015160368352770_122135948048879910",
     "t": "2026-11-28T12:17+01:00"
+   },
+   "instagram": {
+    "id": "18135296080773066",
+    "url": "https://www.instagram.com/p/DgSt4HWCaCj/",
+    "t": "2026-11-28T17:46+01:00"
    }
   }
  },

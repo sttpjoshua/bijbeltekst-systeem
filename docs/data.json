@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-28T17:30",
+ "gegenereerd": "2026-11-28T17:47",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -2032,7 +2032,7 @@
    "ref": "2 Kronieken 20:15",
    "tekst": "En hij zeide: Merkt op, geheel Juda, en gij, inwoners van Jeruzalem, en gij, koning Josafat! Alzo zegt de HEERE tot ulieden: Vreest gijlieden niet, en wordt niet ontzet vanwege deze grote menigte; want de strijd is niet uwe, maar Gods.",
    "hook": "",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "roze",
     "thema": "moed",
@@ -2082,10 +2082,12 @@
    ],
    "thumb": "thumbs/2026-11-28-3.jpg",
    "platformen": [
-    "facebook"
+    "facebook",
+    "instagram"
    ],
    "links": {
-    "facebook": "https://www.facebook.com/1015160368352770_122135948048879910"
+    "facebook": "https://www.facebook.com/1015160368352770_122135948048879910",
+    "instagram": "https://www.instagram.com/p/DgSt4HWCaCj/"
    },
    "totaal": {
     "views": 0,
@@ -2147,7 +2149,8 @@
     }
    },
    "pub": {
-    "facebook": "2026-11-28T12:17+01:00"
+    "facebook": "2026-11-28T12:17+01:00",
+    "instagram": "2026-11-28T17:46+01:00"
    },
    "gemist": [],
    "nood": false,
@@ -2206,8 +2209,12 @@
     "https://sttpjoshua.github.io/bijbeltekst-systeem/media/2026-11/2026-11-28-2.mp4"
    ],
    "thumb": "thumbs/2026-11-28-2.jpg",
-   "platformen": [],
-   "links": {},
+   "platformen": [
+    "facebook"
+   ],
+   "links": {
+    "facebook": "https://www.facebook.com/1408539384689089"
+   },
    "totaal": {},
    "per_platform": {},
    "score": {},
@@ -2237,11 +2244,13 @@
     "video_uitleg": "vaste regel"
    },
    "momenten": {},
-   "pub": {},
+   "pub": {
+    "facebook": "2026-11-28T17:47+01:00"
+   },
    "gemist": [],
    "nood": false,
    "nieuws": null,
-   "online": null
+   "online": "2026-11-28T17:47+01:00"
   },
   {
    "id": "2026-11-28-1",
@@ -2249,7 +2258,7 @@
    "ref": "Romeinen 5:5",
    "tekst": "En de hoop beschaamt niet, omdat de liefde Gods in onze harten uitgestort is door den Heiligen Geest, Die ons is gegeven.",
    "hook": "Vandaag is een nieuwe kans. Lees dit eerst.",
-   "status": "gerenderd",
+   "status": "gepubliceerd",
    "variabelen": {
     "huisstijl": "zand",
     "thema": "hoop",
@@ -2299,10 +2308,12 @@
    ],
    "thumb": "thumbs/2026-11-28-1.jpg",
    "platformen": [
-    "instagram"
+    "instagram",
+    "facebook"
    ],
    "links": {
-    "instagram": "https://www.instagram.com/p/DgRPbbZjwlB/"
+    "instagram": "https://www.instagram.com/p/DgRPbbZjwlB/",
+    "facebook": "https://www.facebook.com/1015160368352770_122135970644879910"
    },
    "totaal": {
     "views": 0,
@@ -2364,7 +2375,8 @@
     }
    },
    "pub": {
-    "instagram": "2026-11-28T04:01+01:00"
+    "instagram": "2026-11-28T04:01+01:00",
+    "facebook": "2026-11-28T17:45+01:00"
    },
    "gemist": [],
    "nood": false,
@@ -22048,26 +22060,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-26T12:17:14",
-   "soort": "info",
-   "tekst": "2026-11-26-4 online op facebook: 1 Petrus 5:7"
-  },
-  {
-   "t": "2026-11-26T13:31:08",
-   "soort": "info",
-   "tekst": "Eerste-uurcijfers van 4 posts vastgelegd"
-  },
-  {
-   "t": "2026-11-26T14:33:18",
-   "soort": "info",
-   "tekst": "Materiaal-repo niet gekloond in deze sessie (add_repo ontbreekt); GitHub Actions vult muziek aan"
-  },
-  {
-   "t": "2026-11-26T14:34:09",
-   "soort": "info",
-   "tekst": "Dagelijkse run: 10 posts voor 27 en 28 nov gecontroleerd (gemaakt door automaak), reserveteksten voor 28 nov geschreven"
-  },
-  {
    "t": "2026-11-26T14:51:58",
    "soort": "info",
    "tekst": "Statistieken opgehaald voor 19 posts"
@@ -22352,6 +22344,26 @@
    "t": "2026-11-28T14:34:56",
    "soort": "info",
    "tekst": "Dagelijkse run (zelfstandig): 5 posts voor 29 nov en 5 voor 30 nov gecontroleerd, reserveverzen voor 30 nov ingevuld"
+  },
+  {
+   "t": "2026-11-28T17:45:51",
+   "soort": "info",
+   "tekst": "2026-11-28-1 online op facebook: Romeinen 5:5"
+  },
+  {
+   "t": "2026-11-28T17:46:56",
+   "soort": "info",
+   "tekst": "2026-11-28-3 ook als story geplaatst"
+  },
+  {
+   "t": "2026-11-28T17:46:56",
+   "soort": "info",
+   "tekst": "2026-11-28-3 online op instagram: 2 Kronieken 20:15"
+  },
+  {
+   "t": "2026-11-28T17:47:04",
+   "soort": "info",
+   "tekst": "2026-11-28-2 online op facebook: Psalm 112:7"
   }
  ],
  "recente_fouten": [
@@ -22503,9 +22515,9 @@
  ],
  "gezondheid": {
   "instagram": {
-   "ok": "2026-11-28T12:16",
+   "ok": "2026-11-28T17:46",
    "laatst_ok": true,
-   "detail": "Mattheüs 5:4 geplaatst"
+   "detail": "2 Kronieken 20:15 geplaatst"
   },
   "instagram_lezen": {
    "ok": "2026-11-28T13:58",
@@ -22537,9 +22549,9 @@
    "fout": "2026-11-28T17:01"
   },
   "facebook": {
-   "ok": "2026-11-28T12:17",
+   "ok": "2026-11-28T17:47",
    "laatst_ok": true,
-   "detail": "Jesaja 43:2 geplaatst"
+   "detail": "Psalm 112:7 geplaatst"
   },
   "statistieken": {
    "ok": "2026-11-28T13:58",
@@ -22724,7 +22736,7 @@
  ],
  "weken": {
   "deze": {
-   "posts": 31,
+   "posts": 33,
    "reach": 388,
    "views": 432,
    "likes": 8,
@@ -23354,7 +23366,7 @@
   "tot": "2026-11-30",
   "dag": 13,
   "dagen": 14,
-  "online": 61,
+  "online": 63,
   "gemeten": 24
  },
  "voorraad": {
@@ -27278,8 +27290,8 @@
      },
      {
       "optie": "zand",
-      "online": 14,
-      "gepland": 5,
+      "online": 15,
+      "gepland": 4,
       "n": 4,
       "gem": 1.45,
       "oordeel": "weinig data"
@@ -27318,8 +27330,8 @@
      },
      {
       "optie": "roze",
-      "online": 1,
-      "gepland": 2,
+      "online": 2,
+      "gepland": 1,
       "n": 2,
       "gem": 1.84,
       "oordeel": "weinig data"
@@ -27419,24 +27431,6 @@
    }
   ],
   "komend": [
-   {
-    "id": "2026-11-28-2",
-    "ref": "Psalm 112:7",
-    "datum": "2026-11-28",
-    "tijdslot": "20:30",
-    "tests": [
-     {
-      "dimensie": "huisstijl",
-      "optie": "avond",
-      "bron": "experiment"
-     },
-     {
-      "dimensie": "reel_stijl",
-      "optie": "markeren",
-      "bron": "test markeren"
-     }
-    ]
-   },
    {
     "id": "2026-11-29-5",
     "ref": "Psalm 94:19",
