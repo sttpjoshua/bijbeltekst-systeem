@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-28T14:30",
+ "gegenereerd": "2026-11-28T14:34",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -867,7 +867,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Prediker 11:4",
    "caption": "Heb jij vandaag een gebroken hart?\n\n\"Hij geneest de gebrokenen van hart, en Hij verbindt hen in hun smarten.\"\nPsalm 147:3\n\nGod zorgt voor wie pijn heeft.\n\nWaar heb jij genezing nodig?",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-30-5-1.jpg",
@@ -961,7 +961,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Jesaja 49:15",
    "caption": "Voor iedereen die zich zorgen maakt over het dagelijks bestaan.\n\n\"Maar zoekt eerst het Koninkrijk Gods en Zijn gerechtigheid, en al deze dingen zullen u toegeworpen worden.\"\nMattheüs 6:33\n\nZoek eerst Gods koninkrijk.",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-30-4-1.jpg",
@@ -1054,7 +1054,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Psalm 23:2-3",
    "caption": "Voor iedereen die zich afvraagt waar het allemaal om draait.\n\n\"En nu, wat verwacht ik, o HEERE! Mijn hoop, die is op U.\"\nPsalm 39:8\n\nAls alles voorbijgaat, blijft hoop op God.",
    "uitleg": "Waar wacht ik nog op, Heer? Mijn hoop is op U.",
    "media": "docs/media/2026-11/2026-11-30-3-1.jpg",
@@ -1148,7 +1148,7 @@
    "goedgekeurd": null,
    "reeks": null,
    "reeks_label": null,
-   "reserve_ref": null,
+   "reserve_ref": "Psalm 119:50",
    "caption": "Onderweg naar huis dacht ik aan dit vers.\n\n\"Vertrouw op den HEERE met uw ganse hart, en steun op uw verstand niet. Ken Hem in al uw wegen, en Hij zal uw paden recht maken.\"\nSpreuken 3:5-6\n\nIk wil altijd eerst het hele plan zien. Dit vers vraagt me eerst te vertrouwen.\n\nWat wil jij nog zelf regelen terwijl je het eigenlijk wilt loslaten?",
    "uitleg": "",
    "media": "docs/media/2026-11/2026-11-30-2.mp4",
@@ -22048,16 +22048,6 @@
  },
  "logboek": [
   {
-   "t": "2026-11-26T12:16:59",
-   "soort": "info",
-   "tekst": "2026-11-26-5 online op facebook: Handelingen 1:8"
-  },
-  {
-   "t": "2026-11-26T12:17:06",
-   "soort": "info",
-   "tekst": "2026-11-26-2 online op facebook: 2 Korinthe 4:16"
-  },
-  {
    "t": "2026-11-26T12:17:14",
    "soort": "info",
    "tekst": "2026-11-26-4 online op facebook: 1 Petrus 5:7"
@@ -22352,6 +22342,16 @@
    "t": "2026-11-28T13:58:48",
    "soort": "info",
    "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
+  },
+  {
+   "t": "2026-11-28T14:34:56",
+   "soort": "info",
+   "tekst": "Materiaal-repo niet gekoppeld in deze run (add_repo ontbrak); posts stonden al klaar, GitHub Actions vult muziek aan"
+  },
+  {
+   "t": "2026-11-28T14:34:56",
+   "soort": "info",
+   "tekst": "Dagelijkse run (zelfstandig): 5 posts voor 29 nov en 5 voor 30 nov gecontroleerd, reserveverzen voor 30 nov ingevuld"
   }
  ],
  "recente_fouten": [
@@ -22552,7 +22552,7 @@
    "detail": "19 onderdelen gemaakt en gecontroleerd"
   },
   "dagelijks": {
-   "ok": "2026-11-27T14:34",
+   "ok": "2026-11-28T14:34",
    "laatst_ok": true,
    "detail": "10 posts voor MORGEN en OVERMORGEN klaargezet"
   },

@@ -1,15 +1,5 @@
 [
  {
-  "t": "2026-11-14T22:03:13",
-  "soort": "info",
-  "tekst": "2026-11-14-5 online op instagram: Psalm 62:6"
- },
- {
-  "t": "2026-11-14T22:03:20",
-  "soort": "info",
-  "tekst": "2026-11-14-5 online op facebook: Psalm 62:6"
- },
- {
   "t": "2026-11-14T23:15:29",
   "soort": "info",
   "tekst": "Eerste-uurcijfers van 3 posts vastgelegd"
@@ -2551,5 +2541,15 @@
   "t": "2026-11-28T13:58:48",
   "soort": "info",
   "tekst": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
+ },
+ {
+  "t": "2026-11-28T14:34:56",
+  "soort": "info",
+  "tekst": "Materiaal-repo niet gekoppeld in deze run (add_repo ontbrak); posts stonden al klaar, GitHub Actions vult muziek aan"
+ },
+ {
+  "t": "2026-11-28T14:34:56",
+  "soort": "info",
+  "tekst": "Dagelijkse run (zelfstandig): 5 posts voor 29 nov en 5 voor 30 nov gecontroleerd, reserveverzen voor 30 nov ingevuld"
  }
 ]

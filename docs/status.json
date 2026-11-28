@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-28T14:30:50",
+ "updated": "2026-11-28T14:34:57",
  "agents": {
   "verskiezer": {
    "t": "2026-11-28T09:02:56",
@@ -57,6 +57,14 @@
  ],
  "log": [
   {
+   "t": "14:34",
+   "msg": "Dagelijkse run (zelfstandig): 5 posts voor 29 nov en 5 voor 30 nov gecontroleerd, reserveverzen voor 30 nov in"
+  },
+  {
+   "t": "14:34",
+   "msg": "Materiaal-repo niet gekoppeld in deze run (add_repo ontbrak); posts stonden al klaar, GitHub Actions vult muzi"
+  },
+  {
    "t": "13:58",
    "msg": "Snel leren: strategie bijgewerkt met de cijfers van gisteren"
   },
@@ -95,14 +103,6 @@
   {
    "t": "09:04",
    "msg": "Zelfstandig 5 posts klaargezet voor 2026-11-30 (teksten uit de tekstbank)."
-  },
-  {
-   "t": "05:01",
-   "msg": "Eerste-uurcijfers van 1 posts vastgelegd"
-  },
-  {
-   "t": "04:01",
-   "msg": "2026-11-28-1 online op instagram: Romeinen 5:5"
   }
  ],
  "lampen": [
