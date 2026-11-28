@@ -1,5 +1,5 @@
 {
- "gegenereerd": "2026-11-28T17:01",
+ "gegenereerd": "2026-11-28T17:15",
  "repo": "sttpjoshua/bijbeltekst-systeem",
  "config": {
   "pauze": false,
@@ -22563,9 +22563,9 @@
    "ok": "2026-11-28T12:02"
   },
   "nieuws": {
-   "ok": "2026-11-28T12:02",
+   "ok": "2026-11-28T17:01",
    "laatst_ok": true,
-   "detail": "3 nieuwe aanleidingen, 1 voorstellen"
+   "detail": "4 nieuwe aanleidingen, 0 voorstellen"
   },
   "maken": {
    "ok": "2026-11-28T09:04",
@@ -26775,6 +26775,54 @@
   },
   "recent": [
    {
+    "id": "n112817013",
+    "t": "2026-11-28T15:46+01:00",
+    "bron": "NU.nl",
+    "kop": "Yesilgöz blijft aan als VVD-leider, maar erkent dat ze fouten heeft gemaakt",
+    "link": "https://www.nu.nl/politiek/6418087/yesilgoz-blijft-aan-als-vvd-leider-maar-erkent-dat-ze-fouten-heeft-gemaakt.html",
+    "categorie": "politiek",
+    "zwaar": false,
+    "status": "overgeslagen",
+    "post": null,
+    "opties": null
+   },
+   {
+    "id": "n112817012",
+    "t": "2026-11-28T16:24+01:00",
+    "bron": "NU.nl",
+    "kop": "Video | Boegeroep op VVD-congres na vraag aan Yesilgöz over partijleiderschap",
+    "link": "https://www.nu.nl/332724/video/boegeroep-op-vvd-congres-als-yesilgoz-vraag-krijgt-over-positie-als-partijleider.html",
+    "categorie": "politiek",
+    "zwaar": false,
+    "status": "overgeslagen",
+    "post": null,
+    "opties": null
+   },
+   {
+    "id": "n112817011",
+    "t": "2026-11-28T15:28+01:00",
+    "bron": "NOS",
+    "kop": "In de toekomst weer uitfans bij de Klassieker? 'Partijen wijzen naar elkaar'",
+    "link": "https://nos.nl/l/2641397",
+    "categorie": "politiek",
+    "zwaar": false,
+    "status": "overgeslagen",
+    "post": null,
+    "opties": null
+   },
+   {
+    "id": "n112817010",
+    "t": "2026-11-28T15:39+01:00",
+    "bron": "NOS",
+    "kop": "Rijen sluiten zich bij VVD, Yesilgöz erkent fouten: 'Te fel geweest'",
+    "link": "https://nos.nl/l/2641401",
+    "categorie": "politiek",
+    "zwaar": false,
+    "status": "overgeslagen",
+    "post": null,
+    "opties": null
+   },
+   {
     "id": "n112812022",
     "t": "2026-11-28T08:50+01:00",
     "bron": "NU.nl",
@@ -27164,54 +27212,6 @@
     "kop": "Video | Eerste waaghalzen schaatsen op krakend natuurijs in Friese polder",
     "link": "https://www.nu.nl/332651/video/eerste-waaghalzen-schaatsen-op-krakend-natuurijs-in-friese-polder.html",
     "categorie": "winter",
-    "zwaar": false,
-    "status": "overgeslagen",
-    "post": null,
-    "opties": null
-   },
-   {
-    "id": "n112612023",
-    "t": "2026-11-26T11:08+01:00",
-    "bron": "NU.nl",
-    "kop": "Kabinet haalt hard uit naar Amerikaans wetsvoorstel voor beperkingen ASML",
-    "link": "https://www.nu.nl/economie/6417853/kabinet-haalt-hard-uit-naar-amerikaans-wetsvoorstel-voor-beperkingen-asml.html",
-    "categorie": "politiek",
-    "zwaar": false,
-    "status": "overgeslagen",
-    "post": null,
-    "opties": null
-   },
-   {
-    "id": "n112612022",
-    "t": "2026-11-26T07:42+01:00",
-    "bron": "NOS",
-    "kop": "Paardenstallen branden volledig af in Fries dorp Twijzelerheide",
-    "link": "https://nos.nl/l/2641052",
-    "categorie": "winter",
-    "zwaar": false,
-    "status": "overgeslagen",
-    "post": null,
-    "opties": null
-   },
-   {
-    "id": "n112612021",
-    "t": "2026-11-26T11:24+01:00",
-    "bron": "NOS",
-    "kop": "Vrouw van in Rusland opgepakte Japanse journalist: 'Geef papa terug aan dochter'",
-    "link": "https://nos.nl/l/2641082",
-    "categorie": "politiek",
-    "zwaar": false,
-    "status": "overgeslagen",
-    "post": null,
-    "opties": null
-   },
-   {
-    "id": "n112612020",
-    "t": "2026-11-26T11:39+01:00",
-    "bron": "NOS",
-    "kop": "Kabinet over regels VS voor ASML: wij laten ons de wet niet voorschrijven",
-    "link": "https://nos.nl/l/2641087",
-    "categorie": "politiek",
     "zwaar": false,
     "status": "overgeslagen",
     "post": null,
